@@ -65,6 +65,9 @@ class Shop:
     
     def display(self):
         """ Display the shop's inventory """
+        total = 0
         for index, item in enumerate(self.stock):
             if item in self.stock[:index]: continue
+            total += item["Cost"]
             print(f'{self.stock.count(item)}x {item["Name"]}: {item["Cost"]}gp')
+        print(f'\nTotal: {total}gp')
