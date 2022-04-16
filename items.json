@@ -296,7 +296,7 @@
       "Weight": 0.5
     },
     {
-      "Name": "Spade or shovel",
+      "Name": "Shovel",
       "Cost": 2,
       "Weight": 3.5
     },
@@ -1524,7 +1524,7 @@
     {
       "Name": "Full plate",
       "Chance": 25,
-      "Cost": "1,500",
+      "Cost": 1500,
       "Armor/Shield Bonus": "+8",
       "Maximum Dex Bonus": "+1",
       "Armor Check Penalty": "-6",
@@ -3161,630 +3161,6 @@
       "Cost Modifier": 66000
     }
   ],
-  "Ring": [
-    {
-      "Name": "Protection +1",
-      "Minor": 18,
-      "Medium": 0,
-      "Major": 0,
-      "Cost": 2000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-protection"
-    },
-    {
-      "Name": "Feather falling",
-      "Minor": 10,
-      "Medium": 0,
-      "Major": 0,
-      "Cost": 2200,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-feather-falling"
-    },
-    {
-      "Name": "Sustenance",
-      "Minor": 8,
-      "Medium": 0,
-      "Major": 0,
-      "Cost": 2500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-sustenance"
-    },
-    {
-      "Name": "Climbing",
-      "Minor": 8,
-      "Medium": 0,
-      "Major": 0,
-      "Cost": 2500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-climbing"
-    },
-    {
-      "Name": "Jumping",
-      "Minor": 8,
-      "Medium": 0,
-      "Major": 0,
-      "Cost": 2500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-jumping"
-    },
-    {
-      "Name": "Swimming",
-      "Minor": 8,
-      "Medium": 0,
-      "Major": 0,
-      "Cost": 2500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-swimming"
-    },
-    {
-      "Name": "Counterspells",
-      "Minor": 10,
-      "Medium": 5,
-      "Major": 0,
-      "Cost": 4000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-counterspells"
-    },
-    {
-      "Name": "Mind shielding",
-      "Minor": 5,
-      "Medium": 3,
-      "Major": 0,
-      "Cost": 8000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-mind-shielding"
-    },
-    {
-      "Name": "Protection +2",
-      "Minor": 5,
-      "Medium": 10,
-      "Major": 0,
-      "Cost": 8000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-protection"
-    },
-    {
-      "Name": "Force shield",
-      "Minor": 5,
-      "Medium": 5,
-      "Major": 0,
-      "Cost": 8500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-force-shield"
-    },
-    {
-      "Name": "Ram",
-      "Minor": 5,
-      "Medium": 5,
-      "Major": 0,
-      "Cost": 8600,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-the-ram"
-    },
-    {
-      "Name": "Climbing, improved",
-      "Minor": 0,
-      "Medium": 6,
-      "Major": 0,
-      "Cost": 10000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-climbing-improved"
-    },
-    {
-      "Name": "Jumping, improved",
-      "Minor": 0,
-      "Medium": 6,
-      "Major": 0,
-      "Cost": 10000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-jumping-improved"
-    },
-    {
-      "Name": "Swimming, improved",
-      "Minor": 0,
-      "Medium": 6,
-      "Major": 0,
-      "Cost": 10000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-swimming-improved"
-    },
-    {
-      "Name": "Animal friendship",
-      "Minor": 3,
-      "Medium": 5,
-      "Major": 0,
-      "Cost": 10800,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-animal-friendship"
-    },
-    {
-      "Name": "Energy resistance, minor",
-      "Minor": 3,
-      "Medium": 7,
-      "Major": 2,
-      "Cost": 12000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-energy-resistance"
-    },
-    {
-      "Name": "Chameleon power",
-      "Minor": 2,
-      "Medium": 5,
-      "Major": 0,
-      "Cost": 12700,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-chameleon-power"
-    },
-    {
-      "Name": "Water walking",
-      "Minor": 2,
-      "Medium": 5,
-      "Major": 0,
-      "Cost": 15000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-water-walking"
-    },
-    {
-      "Name": "Protection +3",
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 5,
-      "Cost": 18000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-protection"
-    },
-    {
-      "Name": "Spell storing, minor",
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 3,
-      "Cost": 18000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-spell-storing-minor"
-    },
-    {
-      "Name": "Invisibility",
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 5,
-      "Cost": 20000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-invisibility"
-    },
-    {
-      "Name": "Wizardry (I)",
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 4,
-      "Cost": 20000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-wizardry"
-    },
-    {
-      "Name": "Evasion",
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 6,
-      "Cost": 25000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-evasion"
-    },
-    {
-      "Name": "X-ray vision",
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 3,
-      "Cost": 25000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-x-ray-vision"
-    },
-    {
-      "Name": "Blinking",
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 4,
-      "Cost": 27000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-blinking"
-    },
-    {
-      "Name": "Energy resistance, major",
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 7,
-      "Cost": 28000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-energy-resistance"
-    },
-    {
-      "Name": "Protection +4",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 10,
-      "Cost": 32000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-protection"
-    },
-    {
-      "Name": "Wizardry (II)",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 6,
-      "Cost": 40000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-wizardry"
-    },
-    {
-      "Name": "Freedom of movement",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Cost": 40000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-freedom-of-movement"
-    },
-    {
-      "Name": "Energy resistance, greater",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 3,
-      "Cost": 44000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-energy-resistance"
-    },
-    {
-      "Name": "Friend shield (pair)",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Cost": 50000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-friend-shield"
-    },
-    {
-      "Name": "Protection +5",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Cost": 50000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-protection"
-    },
-    {
-      "Name": "Shooting stars",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 4,
-      "Cost": 50000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-shooting-stars"
-    },
-    {
-      "Name": "Spell storing",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Cost": 50000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-spell-storing"
-    },
-    {
-      "Name": "Wizardry (III)",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 4,
-      "Cost": 70000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-wizardry"
-    },
-    {
-      "Name": "Telekinesis",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 3,
-      "Cost": 75000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-telekinesis"
-    },
-    {
-      "Name": "Regeneration",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Cost": 90000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-regeneration"
-    },
-    {
-      "Name": "Three wishes",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Cost": 97950,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-three-wishes"
-    },
-    {
-      "Name": "Spell turning",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 3,
-      "Cost": 98280,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-spell-turning"
-    },
-    {
-      "Name": "Wizardry (IV)",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Cost": 100000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-wizardry"
-    },
-    {
-      "Name": "Djinni calling",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Cost": 125000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-djinni-calling"
-    },
-    {
-      "Name": "Elemental command (air)",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Cost": 200000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-elemental-command"
-    },
-    {
-      "Name": "Elemental command (earth)",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Cost": 200000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-elemental-command"
-    },
-    {
-      "Name": "Elemental command (fire)",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Cost": 200000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-elemental-command"
-    },
-    {
-      "Name": "Elemental command (water)",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Cost": 200000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-elemental-command"
-    },
-    {
-      "Name": "Spell storing, major",
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Cost": 200000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-spell-storing"
-    }
-  ],
-  "Rod": [
-    {
-      "Name": "Rod of Metamagic, Enlarge, lesser",
-      "Medium": 7,
-      "Major": 0,
-      "Cost": 3000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-enlarge"
-    },
-    {
-      "Name": "Rod of Metamagic, Extend, lesser",
-      "Medium": 7,
-      "Major": 0,
-      "Cost": 3000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-extend"
-    },
-    {
-      "Name": "Rod of Metamagic, Silent, lesser",
-      "Medium": 7,
-      "Major": 0,
-      "Cost": 3000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-silent"
-    },
-    {
-      "Name": "Rod of Immovable",
-      "Medium": 7,
-      "Major": 0,
-      "Cost": 5000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#immovable-rod"
-    },
-    {
-      "Name": "Rod of Metamagic, Empower, lesser",
-      "Medium": 7,
-      "Major": 0,
-      "Cost": 9000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-empower"
-    },
-    {
-      "Name": "Rod of Metal and mineral detection",
-      "Medium": 7,
-      "Major": 0,
-      "Cost": 10500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metal-and-mineral-detection"
-    },
-    {
-      "Name": "Rod of Cancellation",
-      "Medium": 11,
-      "Major": 4,
-      "Cost": 11000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-cancellation"
-    },
-    {
-      "Name": "Rod of Metamagic, Enlarge",
-      "Medium": 4,
-      "Major": 2,
-      "Cost": 11000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-enlarge"
-    },
-    {
-      "Name": "Rod of Metamagic, Extend",
-      "Medium": 4,
-      "Major": 2,
-      "Cost": 11000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-extend"
-    },
-    {
-      "Name": "Rod of Metamagic, Silent",
-      "Medium": 4,
-      "Major": 2,
-      "Cost": 11000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-silent"
-    },
-    {
-      "Name": "Rod of Wonder",
-      "Medium": 6,
-      "Major": 4,
-      "Cost": 12000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-wonder"
-    },
-    {
-      "Name": "Rod of Python",
-      "Medium": 8,
-      "Major": 4,
-      "Cost": 13000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-the-python"
-    },
-    {
-      "Name": "Rod of Metamagic, Maximize, lesser",
-      "Medium": 4,
-      "Major": 0,
-      "Cost": 14000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-maximize"
-    },
-    {
-      "Name": "Rod of Flame extinguishing",
-      "Medium": 6,
-      "Major": 3,
-      "Cost": 15000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-flame-extinguishing"
-    },
-    {
-      "Name": "Rod of Viper",
-      "Medium": 8,
-      "Major": 4,
-      "Cost": 19000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-the-viper"
-    },
-    {
-      "Name": "Rod of Enemy detection",
-      "Medium": 0,
-      "Major": 5,
-      "Cost": 23500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-enemy-detection"
-    },
-    {
-      "Name": "Rod of Metamagic, Enlarge, greater",
-      "Medium": 0,
-      "Major": 6,
-      "Cost": 24500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-enlarge"
-    },
-    {
-      "Name": "Rod of Metamagic, Extend, greater",
-      "Medium": 0,
-      "Major": 6,
-      "Cost": 24500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-extend"
-    },
-    {
-      "Name": "Rod of Metamagic, Silent, greater",
-      "Medium": 0,
-      "Major": 6,
-      "Cost": 24500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-silent"
-    },
-    {
-      "Name": "Rod of Splendor",
-      "Medium": 0,
-      "Major": 5,
-      "Cost": 25000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-splendor"
-    },
-    {
-      "Name": "Rod of Withering",
-      "Medium": 0,
-      "Major": 5,
-      "Cost": 25000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-withering"
-    },
-    {
-      "Name": "Rod of Metamagic, Empower",
-      "Medium": 2,
-      "Major": 6,
-      "Cost": 32500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-empower"
-    },
-    {
-      "Name": "Rod of Thunder and lightning",
-      "Medium": 0,
-      "Major": 5,
-      "Cost": 33000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-thunder-and-lightning"
-    },
-    {
-      "Name": "Rod of Metamagic, Quicken, lesser",
-      "Medium": 1,
-      "Major": 4,
-      "Cost": 35000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-quicken"
-    },
-    {
-      "Name": "Rod of Negation",
-      "Medium": 0,
-      "Major": 4,
-      "Cost": 37000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-negation"
-    },
-    {
-      "Name": "Rod of Absorption",
-      "Medium": 0,
-      "Major": 3,
-      "Cost": 50000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-absorption"
-    },
-    {
-      "Name": "Rod of Flailing",
-      "Medium": 0,
-      "Major": 4,
-      "Cost": 50000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-flailing"
-    },
-    {
-      "Name": "Rod of Metamagic, Maximize",
-      "Medium": 0,
-      "Major": 2,
-      "Cost": 54000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-maximize"
-    },
-    {
-      "Name": "Rod of Rulership",
-      "Medium": 0,
-      "Major": 2,
-      "Cost": 60000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-rulership"
-    },
-    {
-      "Name": "Rod of Security",
-      "Medium": 0,
-      "Major": 2,
-      "Cost": 61000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-security"
-    },
-    {
-      "Name": "Rod of Lordly might",
-      "Medium": 0,
-      "Major": 2,
-      "Cost": 70000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-lordly-might"
-    },
-    {
-      "Name": "Rod of Metamagic, Empower, greater",
-      "Medium": 0,
-      "Major": 2,
-      "Cost": 73000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-empower"
-    },
-    {
-      "Name": "Rod of Metamagic, Quicken",
-      "Medium": 0,
-      "Major": 2,
-      "Cost": 75500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-quicken"
-    },
-    {
-      "Name": "Rod of Alertness",
-      "Medium": 0,
-      "Major": 2,
-      "Cost": 85000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-alertness"
-    },
-    {
-      "Name": "Rod of Metamagic, Maximize, greater",
-      "Medium": 0,
-      "Major": 1,
-      "Cost": 121500,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-maximize"
-    },
-    {
-      "Name": "Rod of Metamagic, Quicken, greater",
-      "Medium": 0,
-      "Major": 1,
-      "Cost": 170000,
-      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-quicken"
-    }
-  ],
   "Potion": [
     {
       "Name": "Potion of Cure light wounds",
@@ -4465,6 +3841,1429 @@
       "Major": 1,
       "Cost": 3000,
       "Link": "http://dndsrd.net/spellsMto.html#magic-vestment"
+    }
+  ],
+  "Ring": [
+    {
+      "Name": "Ring of Protection +1",
+      "Minor": 18,
+      "Medium": 0,
+      "Major": 0,
+      "Cost": 2000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-protection"
+    },
+    {
+      "Name": "Ring of Feather falling",
+      "Minor": 10,
+      "Medium": 0,
+      "Major": 0,
+      "Cost": 2200,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-feather-falling"
+    },
+    {
+      "Name": "Ring of Sustenance",
+      "Minor": 8,
+      "Medium": 0,
+      "Major": 0,
+      "Cost": 2500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-sustenance"
+    },
+    {
+      "Name": "Ring of Climbing",
+      "Minor": 8,
+      "Medium": 0,
+      "Major": 0,
+      "Cost": 2500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-climbing"
+    },
+    {
+      "Name": "Ring of Jumping",
+      "Minor": 8,
+      "Medium": 0,
+      "Major": 0,
+      "Cost": 2500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-jumping"
+    },
+    {
+      "Name": "Ring of Swimming",
+      "Minor": 8,
+      "Medium": 0,
+      "Major": 0,
+      "Cost": 2500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-swimming"
+    },
+    {
+      "Name": "Ring of Counterspells",
+      "Minor": 10,
+      "Medium": 5,
+      "Major": 0,
+      "Cost": 4000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-counterspells"
+    },
+    {
+      "Name": "Ring of Mind shielding",
+      "Minor": 5,
+      "Medium": 3,
+      "Major": 0,
+      "Cost": 8000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-mind-shielding"
+    },
+    {
+      "Name": "Ring of Protection +2",
+      "Minor": 5,
+      "Medium": 10,
+      "Major": 0,
+      "Cost": 8000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-protection"
+    },
+    {
+      "Name": "Ring of Force shield",
+      "Minor": 5,
+      "Medium": 5,
+      "Major": 0,
+      "Cost": 8500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-force-shield"
+    },
+    {
+      "Name": "Ring of Ram",
+      "Minor": 5,
+      "Medium": 5,
+      "Major": 0,
+      "Cost": 8600,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-the-ram"
+    },
+    {
+      "Name": "Ring of Climbing, improved",
+      "Minor": 0,
+      "Medium": 6,
+      "Major": 0,
+      "Cost": 10000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-climbing-improved"
+    },
+    {
+      "Name": "Ring of Jumping, improved",
+      "Minor": 0,
+      "Medium": 6,
+      "Major": 0,
+      "Cost": 10000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-jumping-improved"
+    },
+    {
+      "Name": "Ring of Swimming, improved",
+      "Minor": 0,
+      "Medium": 6,
+      "Major": 0,
+      "Cost": 10000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-swimming-improved"
+    },
+    {
+      "Name": "Ring of Animal friendship",
+      "Minor": 3,
+      "Medium": 5,
+      "Major": 0,
+      "Cost": 10800,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-animal-friendship"
+    },
+    {
+      "Name": "Ring of Energy resistance, minor",
+      "Minor": 3,
+      "Medium": 7,
+      "Major": 2,
+      "Cost": 12000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-energy-resistance"
+    },
+    {
+      "Name": "Ring of Chameleon power",
+      "Minor": 2,
+      "Medium": 5,
+      "Major": 0,
+      "Cost": 12700,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-chameleon-power"
+    },
+    {
+      "Name": "Ring of Water walking",
+      "Minor": 2,
+      "Medium": 5,
+      "Major": 0,
+      "Cost": 15000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-water-walking"
+    },
+    {
+      "Name": "Ring of Protection +3",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 5,
+      "Cost": 18000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-protection"
+    },
+    {
+      "Name": "Ring of Spell storing, minor",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 3,
+      "Cost": 18000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-spell-storing-minor"
+    },
+    {
+      "Name": "Ring of Invisibility",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 5,
+      "Cost": 20000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-invisibility"
+    },
+    {
+      "Name": "Ring of Wizardry (I)",
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 4,
+      "Cost": 20000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-wizardry"
+    },
+    {
+      "Name": "Ring of Evasion",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 6,
+      "Cost": 25000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-evasion"
+    },
+    {
+      "Name": "Ring of X-ray vision",
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 3,
+      "Cost": 25000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-x-ray-vision"
+    },
+    {
+      "Name": "Ring of Blinking",
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 4,
+      "Cost": 27000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-blinking"
+    },
+    {
+      "Name": "Ring of Energy resistance, major",
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 7,
+      "Cost": 28000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-energy-resistance"
+    },
+    {
+      "Name": "Ring of Protection +4",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 10,
+      "Cost": 32000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-protection"
+    },
+    {
+      "Name": "Ring of Wizardry (II)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 6,
+      "Cost": 40000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-wizardry"
+    },
+    {
+      "Name": "Ring of Freedom of movement",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Cost": 40000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-freedom-of-movement"
+    },
+    {
+      "Name": "Ring of Energy resistance, greater",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Cost": 44000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-energy-resistance"
+    },
+    {
+      "Name": "Ring of Friend shield (pair)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Cost": 50000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-friend-shield"
+    },
+    {
+      "Name": "Ring of Protection +5",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Cost": 50000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-protection"
+    },
+    {
+      "Name": "Ring of Shooting stars",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Cost": 50000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-shooting-stars"
+    },
+    {
+      "Name": "Ring of Spell storing",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Cost": 50000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-spell-storing"
+    },
+    {
+      "Name": "Ring of Wizardry (III)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Cost": 70000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-wizardry"
+    },
+    {
+      "Name": "Ring of Telekinesis",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Cost": 75000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-telekinesis"
+    },
+    {
+      "Name": "Ring of Regeneration",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Cost": 90000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-regeneration"
+    },
+    {
+      "Name": "Ring of Three wishes",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Cost": 97950,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-three-wishes"
+    },
+    {
+      "Name": "Ring of Spell turning",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Cost": 98280,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-spell-turning"
+    },
+    {
+      "Name": "Ring of Wizardry (IV)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Cost": 100000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-wizardry"
+    },
+    {
+      "Name": "Ring of Djinni calling",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Cost": 125000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-djinni-calling"
+    },
+    {
+      "Name": "Ring of Elemental command (air)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Cost": 200000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-elemental-command"
+    },
+    {
+      "Name": "Ring of Elemental command (earth)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Cost": 200000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-elemental-command"
+    },
+    {
+      "Name": "Ring of Elemental command (fire)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Cost": 200000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-elemental-command"
+    },
+    {
+      "Name": "Ring of Elemental command (water)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Cost": 200000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-elemental-command"
+    },
+    {
+      "Name": "Ring of Spell storing, major",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Cost": 200000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-spell-storing"
+    }
+  ],
+  "Rod": [
+    {
+      "Name": "Rod of Metamagic, Enlarge, lesser",
+      "Medium": 7,
+      "Major": 0,
+      "Cost": 3000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-enlarge"
+    },
+    {
+      "Name": "Rod of Metamagic, Extend, lesser",
+      "Medium": 7,
+      "Major": 0,
+      "Cost": 3000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-extend"
+    },
+    {
+      "Name": "Rod of Metamagic, Silent, lesser",
+      "Medium": 7,
+      "Major": 0,
+      "Cost": 3000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-silent"
+    },
+    {
+      "Name": "Rod of Immovable",
+      "Medium": 7,
+      "Major": 0,
+      "Cost": 5000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#immovable-rod"
+    },
+    {
+      "Name": "Rod of Metamagic, Empower, lesser",
+      "Medium": 7,
+      "Major": 0,
+      "Cost": 9000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-empower"
+    },
+    {
+      "Name": "Rod of Metal and mineral detection",
+      "Medium": 7,
+      "Major": 0,
+      "Cost": 10500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metal-and-mineral-detection"
+    },
+    {
+      "Name": "Rod of Cancellation",
+      "Medium": 11,
+      "Major": 4,
+      "Cost": 11000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-cancellation"
+    },
+    {
+      "Name": "Rod of Metamagic, Enlarge",
+      "Medium": 4,
+      "Major": 2,
+      "Cost": 11000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-enlarge"
+    },
+    {
+      "Name": "Rod of Metamagic, Extend",
+      "Medium": 4,
+      "Major": 2,
+      "Cost": 11000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-extend"
+    },
+    {
+      "Name": "Rod of Metamagic, Silent",
+      "Medium": 4,
+      "Major": 2,
+      "Cost": 11000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-silent"
+    },
+    {
+      "Name": "Rod of Wonder",
+      "Medium": 6,
+      "Major": 4,
+      "Cost": 12000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-wonder"
+    },
+    {
+      "Name": "Rod of Python",
+      "Medium": 8,
+      "Major": 4,
+      "Cost": 13000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-the-python"
+    },
+    {
+      "Name": "Rod of Metamagic, Maximize, lesser",
+      "Medium": 4,
+      "Major": 0,
+      "Cost": 14000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-maximize"
+    },
+    {
+      "Name": "Rod of Flame extinguishing",
+      "Medium": 6,
+      "Major": 3,
+      "Cost": 15000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-flame-extinguishing"
+    },
+    {
+      "Name": "Rod of Viper",
+      "Medium": 8,
+      "Major": 4,
+      "Cost": 19000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-the-viper"
+    },
+    {
+      "Name": "Rod of Enemy detection",
+      "Medium": 0,
+      "Major": 5,
+      "Cost": 23500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-enemy-detection"
+    },
+    {
+      "Name": "Rod of Metamagic, Enlarge, greater",
+      "Medium": 0,
+      "Major": 6,
+      "Cost": 24500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-enlarge"
+    },
+    {
+      "Name": "Rod of Metamagic, Extend, greater",
+      "Medium": 0,
+      "Major": 6,
+      "Cost": 24500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-extend"
+    },
+    {
+      "Name": "Rod of Metamagic, Silent, greater",
+      "Medium": 0,
+      "Major": 6,
+      "Cost": 24500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-silent"
+    },
+    {
+      "Name": "Rod of Splendor",
+      "Medium": 0,
+      "Major": 5,
+      "Cost": 25000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-splendor"
+    },
+    {
+      "Name": "Rod of Withering",
+      "Medium": 0,
+      "Major": 5,
+      "Cost": 25000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-withering"
+    },
+    {
+      "Name": "Rod of Metamagic, Empower",
+      "Medium": 2,
+      "Major": 6,
+      "Cost": 32500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-empower"
+    },
+    {
+      "Name": "Rod of Thunder and lightning",
+      "Medium": 0,
+      "Major": 5,
+      "Cost": 33000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-thunder-and-lightning"
+    },
+    {
+      "Name": "Rod of Metamagic, Quicken, lesser",
+      "Medium": 1,
+      "Major": 4,
+      "Cost": 35000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-quicken"
+    },
+    {
+      "Name": "Rod of Negation",
+      "Medium": 0,
+      "Major": 4,
+      "Cost": 37000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-negation"
+    },
+    {
+      "Name": "Rod of Absorption",
+      "Medium": 0,
+      "Major": 3,
+      "Cost": 50000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-absorption"
+    },
+    {
+      "Name": "Rod of Flailing",
+      "Medium": 0,
+      "Major": 4,
+      "Cost": 50000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-flailing"
+    },
+    {
+      "Name": "Rod of Metamagic, Maximize",
+      "Medium": 0,
+      "Major": 2,
+      "Cost": 54000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-maximize"
+    },
+    {
+      "Name": "Rod of Rulership",
+      "Medium": 0,
+      "Major": 2,
+      "Cost": 60000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-rulership"
+    },
+    {
+      "Name": "Rod of Security",
+      "Medium": 0,
+      "Major": 2,
+      "Cost": 61000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-security"
+    },
+    {
+      "Name": "Rod of Lordly might",
+      "Medium": 0,
+      "Major": 2,
+      "Cost": 70000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-lordly-might"
+    },
+    {
+      "Name": "Rod of Metamagic, Empower, greater",
+      "Medium": 0,
+      "Major": 2,
+      "Cost": 73000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-empower"
+    },
+    {
+      "Name": "Rod of Metamagic, Quicken",
+      "Medium": 0,
+      "Major": 2,
+      "Cost": 75500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-quicken"
+    },
+    {
+      "Name": "Rod of Alertness",
+      "Medium": 0,
+      "Major": 2,
+      "Cost": 85000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-alertness"
+    },
+    {
+      "Name": "Rod of Metamagic, Maximize, greater",
+      "Medium": 0,
+      "Major": 1,
+      "Cost": 121500,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-maximize"
+    },
+    {
+      "Name": "Rod of Metamagic, Quicken, greater",
+      "Medium": 0,
+      "Major": 1,
+      "Cost": 170000,
+      "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-quicken"
+    }
+  ],
+  "Staff": [
+    {
+      "Medium": 15,
+      "Major": 3,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-charming",
+      "Name": "Staff of Charming",
+      "Cost": 16500
+    },
+    {
+      "Medium": 15,
+      "Major": 6,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-fire",
+      "Name": "Staff of Fire",
+      "Cost": 17750
+    },
+    {
+      "Medium": 10,
+      "Major": 2,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-swarming-insects",
+      "Name": "Staff of Swarming insects",
+      "Cost": 24750
+    },
+    {
+      "Medium": 20,
+      "Major": 6,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-healing",
+      "Name": "Staff of Healing",
+      "Cost": 27750
+    },
+    {
+      "Medium": 15,
+      "Major": 2,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-size-alteration",
+      "Name": "Staff of Size alteration",
+      "Cost": 29000
+    },
+    {
+      "Medium": 15,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-illumination",
+      "Name": "Staff of Illumination",
+      "Cost": 48250
+    },
+    {
+      "Medium": 5,
+      "Major": 7,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-frost",
+      "Name": "Staff of Frost",
+      "Cost": 56250
+    },
+    {
+      "Medium": 5,
+      "Major": 7,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-defense",
+      "Name": "Staff of Defense",
+      "Cost": 58250
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-abjuration",
+      "Name": "Staff of Abjuration",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-conjuration",
+      "Name": "Staff of Conjuration",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-enchantment",
+      "Name": "Staff of Enchantment",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-evocation",
+      "Name": "Staff of Evocation",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-illusion",
+      "Name": "Staff of Illusion",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-necromancy",
+      "Name": "Staff of Necromancy",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-transmutation",
+      "Name": "Staff of Transmutation",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-divination",
+      "Name": "Staff of Divination",
+      "Cost": 73500
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-earth-and-stone",
+      "Name": "Staff of Earth and stone",
+      "Cost": 80500
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-woodlands",
+      "Name": "Staff of Woodlands",
+      "Cost": 101250
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-life",
+      "Name": "Staff of Life",
+      "Cost": 155750
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-passage",
+      "Name": "Staff of Passage",
+      "Cost": 170500
+    },
+    {
+      "Medium": 0,
+      "Major": 3,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-power",
+      "Name": "Staff of Power",
+      "Cost": 211000
+    }
+  ],
+  "Wand": [
+    {
+      "Minor": 2,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#detect-magic",
+      "Name": "Wand of Detect magic",
+      "Cost": 375
+    },
+    {
+      "Minor": 2,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsHtoL.html#light",
+      "Name": "Wand of Light",
+      "Cost": 375
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsAtoB.html#burning-hands",
+      "Name": "Wand of Burning hands",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#charm-animal",
+      "Name": "Wand of Charm animal",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#charm-person",
+      "Name": "Wand of Charm person",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#color-spray",
+      "Name": "Wand of Color spray",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#cure-light-wounds",
+      "Name": "Wand of Cure light wounds",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#detect-secret-doors",
+      "Name": "Wand of Detect secret doors",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#enlarge-person",
+      "Name": "Wand of Enlarge person",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+      "Name": "Wand of Magic missile (1st)",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsS.html#shocking-grasp",
+      "Name": "Wand of Shocking grasp",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsS.html#summon-monster-i",
+      "Name": "Wand of Summon monster I",
+      "Cost": 750
+    },
+    {
+      "Minor": 2,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+      "Name": "Wand of Magic missile (3rd)",
+      "Cost": 2250
+    },
+    {
+      "Minor": 1,
+      "Medium": 3,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+      "Name": "Wand of Magic missile (5th)",
+      "Cost": 3750
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsAtoB.html#bears-endurance",
+      "Name": "Wand of Bear's endurance",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsAtoB.html#bulls-strength",
+      "Name": "Wand of Bull's strength",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#cats-grace",
+      "Name": "Wand of Cat's grace",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 5,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#cure-moderate-wounds",
+      "Name": "Wand of Cure moderate wounds",
+      "Cost": 4500
+    },
+    {
+      "Minor": 2,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#darkness",
+      "Name": "Wand of Darkness",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#daylight",
+      "Name": "Wand of Daylight",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 3,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#delay-poison",
+      "Name": "Wand of Delay poison",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#eagles-splendor",
+      "Name": "Wand of Eagle's splendor",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsFtoG.html#false-life",
+      "Name": "Wand of False life",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsFtoG.html#foxs-cunning",
+      "Name": "Wand of Fox's cunning",
+      "Cost": 4500
+    },
+    {
+      "Minor": 2,
+      "Medium": 1,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsFtoG.html#ghoul-touch",
+      "Name": "Wand of Ghoul touch",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 1,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsHtoL.html#hold-person",
+      "Name": "Wand of Hold person",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 3,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsHtoL.html#invisibility",
+      "Name": "Wand of Invisibility",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsHtoL.html#knock",
+      "Name": "Wand of Knock",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 1,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsHtoL.html#levitate",
+      "Name": "Wand of Levitate",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsAtoB.html#acid-arrow",
+      "Name": "Wand of Acid arrow",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsMtoO.html#mirror-image",
+      "Name": "Wand of Mirror image",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsMtoO.html#owls-wisdom",
+      "Name": "Wand of Owl's wisdom",
+      "Cost": 4500
+    },
+    {
+      "Minor": 2,
+      "Medium": 1,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsS.html#shatter",
+      "Name": "Wand of Shatter",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsS.html#silence",
+      "Name": "Wand of Silence",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 1,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsS.html#summon-monster-ii",
+      "Name": "Wand of Summon monster II",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsTtoZ.html#web",
+      "Name": "Wand of Web",
+      "Cost": 4500
+    },
+    {
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+      "Name": "Wand of Magic missile (7th)",
+      "Cost": 5250
+    },
+    {
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+      "Name": "Wand of Magic missile (9th)",
+      "Cost": 6750
+    },
+    {
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsC.html#call-lightning",
+      "Name": "Wand of Call lightning (5th)",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 1,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsC.html#charm-person",
+      "Name": "Wand of Charm person, heightened (3rd-level spell)",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsC.html#contagion",
+      "Name": "Wand of Contagion",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsC.html#cure-serious-wounds",
+      "Name": "Wand of Cure serious wounds",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsDtoE.html#dispel-magic",
+      "Name": "Wand of Dispel magic",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
+      "Name": "Wand of Fireball (5th)",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsHtoL.html#keen-edge",
+      "Name": "Wand of Keen edge",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
+      "Name": "Wand of Lightning bolt (5th)",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsMtoO.html#major-image",
+      "Name": "Wand of Major image",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsS.html#slow",
+      "Name": "Wand of Slow",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsS.html#suggestion",
+      "Name": "Wand of Suggestion",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsS.html#summon-monster-iii",
+      "Name": "Wand of Summon monster III",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 1,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
+      "Name": "Wand of Fireball (6th)",
+      "Cost": 13500
+    },
+    {
+      "Minor": 0,
+      "Medium": 1,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
+      "Name": "Wand of Lightning bolt (6th)",
+      "Cost": 13500
+    },
+    {
+      "Minor": 0,
+      "Medium": 1,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsS.html#searing-light",
+      "Name": "Wand of Searing light (6th)",
+      "Cost": 13500
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsC.html#call-lightning",
+      "Name": "Wand of Call lightning (8th)",
+      "Cost": 18000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
+      "Name": "Wand of Fireball (8th)",
+      "Cost": 18000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
+      "Name": "Wand of Lightning bolt (8th)",
+      "Cost": 18000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/spellsC.html#charm-monster",
+      "Name": "Wand of Charm monster",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/spellsC.html#cure-critical-wounds",
+      "Name": "Wand of Cure critical wounds",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsDtoE.html#dimensional-anchor",
+      "Name": "Wand of Dimensional anchor",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsFtoG.html#fear",
+      "Name": "Wand of Fear",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/spellsFtoG.html#greater-invisibility",
+      "Name": "Wand of Greater invisibility",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsHtoL.html#hold-person",
+      "Name": "Wand of Hold person, heightened (4th level)",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/spellsHtoL.html#ice-storm",
+      "Name": "Wand of Ice storm",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsHtoL.html#inflict-critical-wounds",
+      "Name": "Wand of Inflict critical wounds",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/spellsMtoO.html#neutralize-poison",
+      "Name": "Wand of Neutralize poison",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsPtoR.html#poison",
+      "Name": "Wand of Poison",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsPtoR.html#polymorph",
+      "Name": "Wand of Polymorph",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsPtoR.html#ray-of-enfeeblement",
+      "Name": "Wand of Ray of enfeeblement, heightened (4th level)",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsS.html#suggestion",
+      "Name": "Wand of Suggestion, heightened (4th level)",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsS.html#summon-monster-iv",
+      "Name": "Wand of Summon monster IV",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-fire",
+      "Name": "Wand of Wall of fire",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-ice",
+      "Name": "Wand of Wall of ice",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsDtoE.html#dispel-magic",
+      "Name": "Wand of Dispel magic (10th)",
+      "Cost": 22500
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
+      "Name": "Wand of Fireball (10th)",
+      "Cost": 22500
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
+      "Name": "Wand of Lightning bolt (10th)",
+      "Cost": 22500
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsC.html#chaos-hammer",
+      "Name": "Wand of Chaos hammer (8th)",
+      "Cost": 24000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsHtoL.html#holy-smite",
+      "Name": "Wand of Holy smite (8th)",
+      "Cost": 24000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsMtoO.html#orders-wrath",
+      "Name": "Wand of Order's wrath (8th)",
+      "Cost": 24000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsTtoZ.html#unholy-blight",
+      "Name": "Wand of Unholy blight (8th)",
+      "Cost": 24000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsPtoR.html#restoration",
+      "Name": "Wand of Restoration",
+      "Cost": 26000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsS.html#stoneskin",
+      "Name": "Wand of Stoneskin",
+      "Cost": 33500
     }
   ],
   "Wondrous Item": [
@@ -6567,805 +7366,6 @@
       "Name": "Mirror of life trapping",
       "Cost": 200000,
       "Type": "Major"
-    }
-  ],
-  "Staff": [
-    {
-      "Medium": 15,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-charming",
-      "Name": "Staff of Charming",
-      "Cost": 16500
-    },
-    {
-      "Medium": 15,
-      "Major": 6,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-fire",
-      "Name": "Staff of Fire",
-      "Cost": 17750
-    },
-    {
-      "Medium": 10,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-swarming-insects",
-      "Name": "Staff of Swarming insects",
-      "Cost": 24750
-    },
-    {
-      "Medium": 20,
-      "Major": 6,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-healing",
-      "Name": "Staff of Healing",
-      "Cost": 27750
-    },
-    {
-      "Medium": 15,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-size-alteration",
-      "Name": "Staff of Size alteration",
-      "Cost": 29000
-    },
-    {
-      "Medium": 15,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-illumination",
-      "Name": "Staff of Illumination",
-      "Cost": 48250
-    },
-    {
-      "Medium": 5,
-      "Major": 7,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-frost",
-      "Name": "Staff of Frost",
-      "Cost": 56250
-    },
-    {
-      "Medium": 5,
-      "Major": 7,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-defense",
-      "Name": "Staff of Defense",
-      "Cost": 58250
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-abjuration",
-      "Name": "Staff of Abjuration",
-      "Cost": 65000
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-conjuration",
-      "Name": "Staff of Conjuration",
-      "Cost": 65000
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-enchantment",
-      "Name": "Staff of Enchantment",
-      "Cost": 65000
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-evocation",
-      "Name": "Staff of Evocation",
-      "Cost": 65000
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-illusion",
-      "Name": "Staff of Illusion",
-      "Cost": 65000
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-necromancy",
-      "Name": "Staff of Necromancy",
-      "Cost": 65000
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-transmutation",
-      "Name": "Staff of Transmutation",
-      "Cost": 65000
-    },
-    {
-      "Medium": 0,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-divination",
-      "Name": "Staff of Divination",
-      "Cost": 73500
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-earth-and-stone",
-      "Name": "Staff of Earth and stone",
-      "Cost": 80500
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-woodlands",
-      "Name": "Staff of Woodlands",
-      "Cost": 101250
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-life",
-      "Name": "Staff of Life",
-      "Cost": 155750
-    },
-    {
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-passage",
-      "Name": "Staff of Passage",
-      "Cost": 170500
-    },
-    {
-      "Medium": 0,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-power",
-      "Name": "Staff of Power",
-      "Cost": 211000
-    }
-  ],
-  "Wand": [
-    {
-      "Minor": 2,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsDtoE.html#detect-magic",
-      "Name": "Wand of Detect magic",
-      "Cost": 375
-    },
-    {
-      "Minor": 2,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsHtoL.html#light",
-      "Name": "Wand of Light",
-      "Cost": 375
-    },
-    {
-      "Minor": 3,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsAtoB.html#burning-hands",
-      "Name": "Wand of Burning hands",
-      "Cost": 750
-    },
-    {
-      "Minor": 3,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsC.html#charm-animal",
-      "Name": "Wand of Charm animal",
-      "Cost": 750
-    },
-    {
-      "Minor": 3,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsC.html#charm-person",
-      "Name": "Wand of Charm person",
-      "Cost": 750
-    },
-    {
-      "Minor": 3,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsC.html#color-spray",
-      "Name": "Wand of Color spray",
-      "Cost": 750
-    },
-    {
-      "Minor": 3,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsC.html#cure-light-wounds",
-      "Name": "Wand of Cure light wounds",
-      "Cost": 750
-    },
-    {
-      "Minor": 3,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsDtoE.html#detect-secret-doors",
-      "Name": "Wand of Detect secret doors",
-      "Cost": 750
-    },
-    {
-      "Minor": 3,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsDtoE.html#enlarge-person",
-      "Name": "Wand of Enlarge person",
-      "Cost": 750
-    },
-    {
-      "Minor": 3,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
-      "Name": "Wand of Magic missile (1st)",
-      "Cost": 750
-    },
-    {
-      "Minor": 3,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsS.html#shocking-grasp",
-      "Name": "Wand of Shocking grasp",
-      "Cost": 750
-    },
-    {
-      "Minor": 3,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsS.html#summon-monster-i",
-      "Name": "Wand of Summon monster I",
-      "Cost": 750
-    },
-    {
-      "Minor": 2,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
-      "Name": "Wand of Magic missile (3rd)",
-      "Cost": 2250
-    },
-    {
-      "Minor": 1,
-      "Medium": 3,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
-      "Name": "Wand of Magic missile (5th)",
-      "Cost": 3750
-    },
-    {
-      "Minor": 3,
-      "Medium": 4,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsAtoB.html#bears-endurance",
-      "Name": "Wand of Bear's endurance",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 4,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsAtoB.html#bulls-strength",
-      "Name": "Wand of Bull's strength",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 4,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsC.html#cats-grace",
-      "Name": "Wand of Cat's grace",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 5,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsC.html#cure-moderate-wounds",
-      "Name": "Wand of Cure moderate wounds",
-      "Cost": 4500
-    },
-    {
-      "Minor": 2,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsDtoE.html#darkness",
-      "Name": "Wand of Darkness",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsDtoE.html#daylight",
-      "Name": "Wand of Daylight",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 3,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsDtoE.html#delay-poison",
-      "Name": "Wand of Delay poison",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 4,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsDtoE.html#eagles-splendor",
-      "Name": "Wand of Eagle's splendor",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsFtoG.html#false-life",
-      "Name": "Wand of False life",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 4,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsFtoG.html#foxs-cunning",
-      "Name": "Wand of Fox's cunning",
-      "Cost": 4500
-    },
-    {
-      "Minor": 2,
-      "Medium": 1,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsFtoG.html#ghoul-touch",
-      "Name": "Wand of Ghoul touch",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 1,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsHtoL.html#hold-person",
-      "Name": "Wand of Hold person",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 3,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsHtoL.html#invisibility",
-      "Name": "Wand of Invisibility",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsHtoL.html#knock",
-      "Name": "Wand of Knock",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 1,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsHtoL.html#levitate",
-      "Name": "Wand of Levitate",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsAtoB.html#acid-arrow",
-      "Name": "Wand of Acid arrow",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsMtoO.html#mirror-image",
-      "Name": "Wand of Mirror image",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 4,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsMtoO.html#owls-wisdom",
-      "Name": "Wand of Owl's wisdom",
-      "Cost": 4500
-    },
-    {
-      "Minor": 2,
-      "Medium": 1,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsS.html#shatter",
-      "Name": "Wand of Shatter",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsS.html#silence",
-      "Name": "Wand of Silence",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 1,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsS.html#summon-monster-ii",
-      "Name": "Wand of Summon monster II",
-      "Cost": 4500
-    },
-    {
-      "Minor": 3,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/spellsTtoZ.html#web",
-      "Name": "Wand of Web",
-      "Cost": 4500
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
-      "Name": "Wand of Magic missile (7th)",
-      "Cost": 5250
-    },
-    {
-      "Minor": 0,
-      "Medium": 2,
-      "Major": 3,
-      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
-      "Name": "Wand of Magic missile (9th)",
-      "Cost": 6750
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsC.html#call-lightning",
-      "Name": "Wand of Call lightning (5th)",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 1,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsC.html#charm-person",
-      "Name": "Wand of Charm person, heightened (3rd-level spell)",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 2,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsC.html#contagion",
-      "Name": "Wand of Contagion",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 3,
-      "Link": "http://dndsrd.net/spellsC.html#cure-serious-wounds",
-      "Name": "Wand of Cure serious wounds",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsDtoE.html#dispel-magic",
-      "Name": "Wand of Dispel magic",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
-      "Name": "Wand of Fireball (5th)",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 2,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsHtoL.html#keen-edge",
-      "Name": "Wand of Keen edge",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
-      "Name": "Wand of Lightning bolt (5th)",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 2,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsMtoO.html#major-image",
-      "Name": "Wand of Major image",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 2,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsS.html#slow",
-      "Name": "Wand of Slow",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsS.html#suggestion",
-      "Name": "Wand of Suggestion",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsS.html#summon-monster-iii",
-      "Name": "Wand of Summon monster III",
-      "Cost": 11250
-    },
-    {
-      "Minor": 0,
-      "Medium": 1,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
-      "Name": "Wand of Fireball (6th)",
-      "Cost": 13500
-    },
-    {
-      "Minor": 0,
-      "Medium": 1,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
-      "Name": "Wand of Lightning bolt (6th)",
-      "Cost": 13500
-    },
-    {
-      "Minor": 0,
-      "Medium": 1,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsS.html#searing-light",
-      "Name": "Wand of Searing light (6th)",
-      "Cost": 13500
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsC.html#call-lightning",
-      "Name": "Wand of Call lightning (8th)",
-      "Cost": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
-      "Name": "Wand of Fireball (8th)",
-      "Cost": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
-      "Name": "Wand of Lightning bolt (8th)",
-      "Cost": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 4,
-      "Link": "http://dndsrd.net/spellsC.html#charm-monster",
-      "Name": "Wand of Charm monster",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/spellsC.html#cure-critical-wounds",
-      "Name": "Wand of Cure critical wounds",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsDtoE.html#dimensional-anchor",
-      "Name": "Wand of Dimensional anchor",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 3,
-      "Link": "http://dndsrd.net/spellsFtoG.html#fear",
-      "Name": "Wand of Fear",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 4,
-      "Link": "http://dndsrd.net/spellsFtoG.html#greater-invisibility",
-      "Name": "Wand of Greater invisibility",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsHtoL.html#hold-person",
-      "Name": "Wand of Hold person, heightened (4th level)",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/spellsHtoL.html#ice-storm",
-      "Name": "Wand of Ice storm",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 3,
-      "Link": "http://dndsrd.net/spellsHtoL.html#inflict-critical-wounds",
-      "Name": "Wand of Inflict critical wounds",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 4,
-      "Link": "http://dndsrd.net/spellsMtoO.html#neutralize-poison",
-      "Name": "Wand of Neutralize poison",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsPtoR.html#poison",
-      "Name": "Wand of Poison",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 3,
-      "Link": "http://dndsrd.net/spellsPtoR.html#polymorph",
-      "Name": "Wand of Polymorph",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsPtoR.html#ray-of-enfeeblement",
-      "Name": "Wand of Ray of enfeeblement, heightened (4th level)",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsS.html#suggestion",
-      "Name": "Wand of Suggestion, heightened (4th level)",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 3,
-      "Link": "http://dndsrd.net/spellsS.html#summon-monster-iv",
-      "Name": "Wand of Summon monster IV",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 4,
-      "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-fire",
-      "Name": "Wand of Wall of fire",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 4,
-      "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-ice",
-      "Name": "Wand of Wall of ice",
-      "Cost": 21000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsDtoE.html#dispel-magic",
-      "Name": "Wand of Dispel magic (10th)",
-      "Cost": 22500
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
-      "Name": "Wand of Fireball (10th)",
-      "Cost": 22500
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
-      "Name": "Wand of Lightning bolt (10th)",
-      "Cost": 22500
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsC.html#chaos-hammer",
-      "Name": "Wand of Chaos hammer (8th)",
-      "Cost": 24000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsHtoL.html#holy-smite",
-      "Name": "Wand of Holy smite (8th)",
-      "Cost": 24000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsMtoO.html#orders-wrath",
-      "Name": "Wand of Order's wrath (8th)",
-      "Cost": 24000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsTtoZ.html#unholy-blight",
-      "Name": "Wand of Unholy blight (8th)",
-      "Cost": 24000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/spellsPtoR.html#restoration",
-      "Name": "Wand of Restoration",
-      "Cost": 26000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/spellsS.html#stoneskin",
-      "Name": "Wand of Stoneskin",
-      "Cost": 33500
     }
   ]
 }
