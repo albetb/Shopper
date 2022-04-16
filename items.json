@@ -2777,288 +2777,252 @@
   ],
   "Rod": [
     {
-      "Name": "Metamagic, Enlarge, lesser",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Enlarge, lesser",
       "Medium": 7,
       "Major": 0,
       "Cost": 3000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-enlarge"
     },
     {
-      "Name": "Metamagic, Extend, lesser",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Extend, lesser",
       "Medium": 7,
       "Major": 0,
       "Cost": 3000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-extend"
     },
     {
-      "Name": "Metamagic, Silent, lesser",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Silent, lesser",
       "Medium": 7,
       "Major": 0,
       "Cost": 3000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-silent"
     },
     {
-      "Name": "Immovable",
-      "Minor": 0,
+      "Name": "Rod of Immovable",
       "Medium": 7,
       "Major": 0,
       "Cost": 5000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#immovable-rod"
     },
     {
-      "Name": "Metamagic, Empower, lesser",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Empower, lesser",
       "Medium": 7,
       "Major": 0,
       "Cost": 9000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-empower"
     },
     {
-      "Name": "Metal and mineral detection",
-      "Minor": 0,
+      "Name": "Rod of Metal and mineral detection",
       "Medium": 7,
       "Major": 0,
       "Cost": 10500,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metal-and-mineral-detection"
     },
     {
-      "Name": "Cancellation",
-      "Minor": 0,
+      "Name": "Rod of Cancellation",
       "Medium": 11,
       "Major": 4,
       "Cost": 11000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-cancellation"
     },
     {
-      "Name": "Metamagic, Enlarge",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Enlarge",
       "Medium": 4,
       "Major": 2,
       "Cost": 11000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-enlarge"
     },
     {
-      "Name": "Metamagic, Extend",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Extend",
       "Medium": 4,
       "Major": 2,
       "Cost": 11000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-extend"
     },
     {
-      "Name": "Metamagic, Silent",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Silent",
       "Medium": 4,
       "Major": 2,
       "Cost": 11000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-silent"
     },
     {
-      "Name": "Wonder",
-      "Minor": 0,
+      "Name": "Rod of Wonder",
       "Medium": 6,
       "Major": 4,
       "Cost": 12000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-wonder"
     },
     {
-      "Name": "Python",
-      "Minor": 0,
+      "Name": "Rod of Python",
       "Medium": 8,
       "Major": 4,
       "Cost": 13000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-the-python"
     },
     {
-      "Name": "Metamagic, Maximize, lesser",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Maximize, lesser",
       "Medium": 4,
       "Major": 0,
       "Cost": 14000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-maximize"
     },
     {
-      "Name": "Flame extinguishing",
-      "Minor": 0,
+      "Name": "Rod of Flame extinguishing",
       "Medium": 6,
       "Major": 3,
       "Cost": 15000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-flame-extinguishing"
     },
     {
-      "Name": "Viper",
-      "Minor": 0,
+      "Name": "Rod of Viper",
       "Medium": 8,
       "Major": 4,
       "Cost": 19000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-the-viper"
     },
     {
-      "Name": "Enemy detection",
-      "Minor": 0,
+      "Name": "Rod of Enemy detection",
       "Medium": 0,
       "Major": 5,
       "Cost": 23500,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-enemy-detection"
     },
     {
-      "Name": "Metamagic, Enlarge, greater",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Enlarge, greater",
       "Medium": 0,
       "Major": 6,
       "Cost": 24500,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-enlarge"
     },
     {
-      "Name": "Metamagic, Extend, greater",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Extend, greater",
       "Medium": 0,
       "Major": 6,
       "Cost": 24500,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-extend"
     },
     {
-      "Name": "Metamagic, Silent, greater",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Silent, greater",
       "Medium": 0,
       "Major": 6,
       "Cost": 24500,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-silent"
     },
     {
-      "Name": "Splendor",
-      "Minor": 0,
+      "Name": "Rod of Splendor",
       "Medium": 0,
       "Major": 5,
       "Cost": 25000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-splendor"
     },
     {
-      "Name": "Withering",
-      "Minor": 0,
+      "Name": "Rod of Withering",
       "Medium": 0,
       "Major": 5,
       "Cost": 25000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-withering"
     },
     {
-      "Name": "Metamagic, Empower",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Empower",
       "Medium": 2,
       "Major": 6,
       "Cost": 32500,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-empower"
     },
     {
-      "Name": "Thunder and lightning",
-      "Minor": 0,
+      "Name": "Rod of Thunder and lightning",
       "Medium": 0,
       "Major": 5,
       "Cost": 33000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-thunder-and-lightning"
     },
     {
-      "Name": "Metamagic, Quicken, lesser",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Quicken, lesser",
       "Medium": 1,
       "Major": 4,
       "Cost": 35000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-quicken"
     },
     {
-      "Name": "Negation",
-      "Minor": 0,
+      "Name": "Rod of Negation",
       "Medium": 0,
       "Major": 4,
       "Cost": 37000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-negation"
     },
     {
-      "Name": "Absorption",
-      "Minor": 0,
+      "Name": "Rod of Absorption",
       "Medium": 0,
       "Major": 3,
       "Cost": 50000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-absorption"
     },
     {
-      "Name": "Flailing",
-      "Minor": 0,
+      "Name": "Rod of Flailing",
       "Medium": 0,
       "Major": 4,
       "Cost": 50000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-flailing"
     },
     {
-      "Name": "Metamagic, Maximize",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Maximize",
       "Medium": 0,
       "Major": 2,
       "Cost": 54000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-maximize"
     },
     {
-      "Name": "Rulership",
-      "Minor": 0,
+      "Name": "Rod of Rulership",
       "Medium": 0,
       "Major": 2,
       "Cost": 60000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-rulership"
     },
     {
-      "Name": "Security",
-      "Minor": 0,
+      "Name": "Rod of Security",
       "Medium": 0,
       "Major": 2,
       "Cost": 61000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-security"
     },
     {
-      "Name": "Lordly might",
-      "Minor": 0,
+      "Name": "Rod of Lordly might",
       "Medium": 0,
       "Major": 2,
       "Cost": 70000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-lordly-might"
     },
     {
-      "Name": "Metamagic, Empower, greater",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Empower, greater",
       "Medium": 0,
       "Major": 2,
       "Cost": 73000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-empower"
     },
     {
-      "Name": "Metamagic, Quicken",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Quicken",
       "Medium": 0,
       "Major": 2,
       "Cost": 75500,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-quicken"
     },
     {
-      "Name": "Alertness",
-      "Minor": 0,
+      "Name": "Rod of Alertness",
       "Medium": 0,
       "Major": 2,
       "Cost": 85000,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-alertness"
     },
     {
-      "Name": "Metamagic, Maximize, greater",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Maximize, greater",
       "Medium": 0,
       "Major": 1,
       "Cost": 121500,
       "Link": "http://dndsrd.net/magicItemsPRR.html#rod-of-metamagic-maximize"
     },
     {
-      "Name": "Metamagic, Quicken, greater",
-      "Minor": 0,
+      "Name": "Rod of Metamagic, Quicken, greater",
       "Medium": 0,
       "Major": 1,
       "Cost": 170000,
@@ -3067,7 +3031,7 @@
   ],
   "Potion": [
     {
-      "Name": "Cure light wounds (potion)",
+      "Name": "Potion of Cure light wounds",
       "Minor": 10,
       "Medium": 0,
       "Major": 0,
@@ -3075,7 +3039,7 @@
       "Link": "http://dndsrd.net/spellsC.html#cure-light-wounds"
     },
     {
-      "Name": "Endure elements (potion)",
+      "Name": "Potion of Endure elements",
       "Minor": 3,
       "Medium": 0,
       "Major": 0,
@@ -3083,7 +3047,7 @@
       "Link": "http://dndsrd.net/spellsDtoE.html#endure-elements"
     },
     {
-      "Name": "Hide from animals (potion)",
+      "Name": "Potion of Hide from animals",
       "Minor": 2,
       "Medium": 0,
       "Major": 0,
@@ -3091,7 +3055,7 @@
       "Link": "http://dndsrd.net/spellsHtoL.html#hide-from-animals"
     },
     {
-      "Name": "Hide from undead (potion)",
+      "Name": "Potion of Hide from undead",
       "Minor": 2,
       "Medium": 0,
       "Major": 0,
@@ -3099,7 +3063,7 @@
       "Link": "http://dndsrd.net/spellsHtoL.html#hide-from-undead"
     },
     {
-      "Name": "Jump (potion)",
+      "Name": "Potion of Jump",
       "Minor": 2,
       "Medium": 0,
       "Major": 0,
@@ -3107,7 +3071,7 @@
       "Link": "http://dndsrd.net/spellsHtoL.html#jump"
     },
     {
-      "Name": "Mage armor (potion)",
+      "Name": "Potion of Mage armor",
       "Minor": 3,
       "Medium": 0,
       "Major": 0,
@@ -3115,7 +3079,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#mage-armor"
     },
     {
-      "Name": "Magic fang (potion)",
+      "Name": "Potion of Magic fang",
       "Minor": 3,
       "Medium": 0,
       "Major": 0,
@@ -3123,7 +3087,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#magic-fang"
     },
     {
-      "Name": "Magic stone (oil)",
+      "Name": "Oil of Magic stone",
       "Minor": 1,
       "Medium": 0,
       "Major": 0,
@@ -3131,7 +3095,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#magic-stone"
     },
     {
-      "Name": "Magic weapon (oil)",
+      "Name": "Oil of Magic weapon",
       "Minor": 3,
       "Medium": 0,
       "Major": 0,
@@ -3139,7 +3103,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#magic-weapon"
     },
     {
-      "Name": "Pass without trace (potion)",
+      "Name": "Potion of Pass without trace",
       "Minor": 1,
       "Medium": 0,
       "Major": 0,
@@ -3147,7 +3111,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#pass-without-trace"
     },
     {
-      "Name": "Protection from (alignment) (potion)",
+      "Name": "Potion of Protection from (alignment)",
       "Minor": 2,
       "Medium": 0,
       "Major": 0,
@@ -3155,7 +3119,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-evil"
     },
     {
-      "Name": "Remove fear (potion)",
+      "Name": "Potion of Remove fear",
       "Minor": 2,
       "Medium": 0,
       "Major": 0,
@@ -3163,7 +3127,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#remove-fear"
     },
     {
-      "Name": "Sanctuary (potion)",
+      "Name": "Potion of Sanctuary",
       "Minor": 1,
       "Medium": 0,
       "Major": 0,
@@ -3171,7 +3135,7 @@
       "Link": "http://dndsrd.net/spellsS.html#sanctuary"
     },
     {
-      "Name": "Shield of faith +2 (potion)",
+      "Name": "Potion of Shield of faith +2",
       "Minor": 3,
       "Medium": 0,
       "Major": 0,
@@ -3179,7 +3143,7 @@
       "Link": "http://dndsrd.net/spellsS.html#shield-of-faith"
     },
     {
-      "Name": "Shillelagh (oil)",
+      "Name": "Oil of Shillelagh",
       "Minor": 1,
       "Medium": 0,
       "Major": 0,
@@ -3187,7 +3151,7 @@
       "Link": "http://dndsrd.net/spellsS.html#shillelagh"
     },
     {
-      "Name": "Bless weapon (oil)",
+      "Name": "Oil of Bless weapon",
       "Minor": 2,
       "Medium": 2,
       "Major": 0,
@@ -3195,7 +3159,7 @@
       "Link": "http://dndsrd.net/spellsAtoB.htlm#bless-weapon"
     },
     {
-      "Name": "Enlarge person (potion)",
+      "Name": "Potion of Enlarge person",
       "Minor": 3,
       "Medium": 2,
       "Major": 0,
@@ -3203,7 +3167,7 @@
       "Link": "http://dndsrd.net/spellsDtoE.html#enlarge-person"
     },
     {
-      "Name": "Reduce person (potion)",
+      "Name": "Potion of Reduce person",
       "Minor": 1,
       "Medium": 1,
       "Major": 0,
@@ -3211,7 +3175,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#reduce-person"
     },
     {
-      "Name": "Aid (potion)",
+      "Name": "Potion of Aid",
       "Minor": 2,
       "Medium": 1,
       "Major": 0,
@@ -3219,7 +3183,7 @@
       "Link": "http://dndsrd.net/spellsAtoB.html#aid"
     },
     {
-      "Name": "Barkskin +2 (potion)",
+      "Name": "Potion of Barkskin +2",
       "Minor": 3,
       "Medium": 1,
       "Major": 0,
@@ -3227,7 +3191,7 @@
       "Link": "http://dndsrd.net/spellsAtoB.html#barkskin"
     },
     {
-      "Name": "Bear's endurance (potion)",
+      "Name": "Potion of Bear's endurance",
       "Minor": 3,
       "Medium": 3,
       "Major": 0,
@@ -3235,7 +3199,7 @@
       "Link": "http://dndsrd.net/spellsAtoB.html#bears-endurance"
     },
     {
-      "Name": "Blur (potion)",
+      "Name": "Potion of Blur",
       "Minor": 3,
       "Medium": 3,
       "Major": 2,
@@ -3243,7 +3207,7 @@
       "Link": "http://dndsrd.net/spellsAtoB.html#blur"
     },
     {
-      "Name": "Bull's strength (potion)",
+      "Name": "Potion of Bull's strength",
       "Minor": 3,
       "Medium": 3,
       "Major": 0,
@@ -3251,7 +3215,7 @@
       "Link": "http://dndsrd.net/spellsAtoB.html#bulls-strength"
     },
     {
-      "Name": "Cat's grace (potion)",
+      "Name": "Potion of Cat's grace",
       "Minor": 3,
       "Medium": 3,
       "Major": 0,
@@ -3259,7 +3223,7 @@
       "Link": "http://dndsrd.net/spellsC.html#cats-grace"
     },
     {
-      "Name": "Cure moderate wounds (potion)",
+      "Name": "Potion of Cure moderate wounds",
       "Minor": 5,
       "Medium": 8,
       "Major": 5,
@@ -3267,7 +3231,7 @@
       "Link": "http://dndsrd.net/spellsC.html#cure-moderate-wounds"
     },
     {
-      "Name": "Darkness (oil)",
+      "Name": "Oil of Darkness",
       "Minor": 1,
       "Medium": 1,
       "Major": 0,
@@ -3275,7 +3239,7 @@
       "Link": "http://dndsrd.net/spellsDtoE.html#darkness"
     },
     {
-      "Name": "Darkvision (potion)",
+      "Name": "Potion of Darkvision",
       "Minor": 3,
       "Medium": 2,
       "Major": 2,
@@ -3283,7 +3247,7 @@
       "Link": "http://dndsrd.net/spellsDtoE.html#darkvision"
     },
     {
-      "Name": "Delay poison (potion)",
+      "Name": "Potion of Delay poison",
       "Minor": 3,
       "Medium": 1,
       "Major": 0,
@@ -3291,7 +3255,7 @@
       "Link": "http://dndsrd.net/spellsDtoE.html#delay-poison"
     },
     {
-      "Name": "Eagle's splendor (potion)",
+      "Name": "Potion of Eagle's splendor",
       "Minor": 2,
       "Medium": 2,
       "Major": 0,
@@ -3299,7 +3263,7 @@
       "Link": "http://dndsrd.net/spellsDtoE.html#eagles-splendor"
     },
     {
-      "Name": "Fox's cunning (potion)",
+      "Name": "Potion of Fox's cunning",
       "Minor": 2,
       "Medium": 2,
       "Major": 0,
@@ -3307,7 +3271,7 @@
       "Link": "http://dndsrd.net/spellsFtoG.html#foxs-cunning"
     },
     {
-      "Name": "Invisibility (potion or oil)",
+      "Name": "Potion of Invisibility",
       "Minor": 3,
       "Medium": 2,
       "Major": 2,
@@ -3315,7 +3279,7 @@
       "Link": "http://dndsrd.net/spellsHtoL.html#invisibility"
     },
     {
-      "Name": "Lesser restoration (potion)",
+      "Name": "Potion of Lesser restoration",
       "Minor": 3,
       "Medium": 1,
       "Major": 1,
@@ -3323,7 +3287,7 @@
       "Link": "http://dndsrd.net/spellsHtoL.html#lesser-restoration"
     },
     {
-      "Name": "Levitate (potion or oil)",
+      "Name": "Potion of Levitate",
       "Minor": 2,
       "Medium": 1,
       "Major": 0,
@@ -3331,7 +3295,7 @@
       "Link": "http://dndsrd.net/spellsHtoL.html#levitate"
     },
     {
-      "Name": "Misdirection (potion)",
+      "Name": "Potion of Misdirection",
       "Minor": 1,
       "Medium": 1,
       "Major": 0,
@@ -3339,7 +3303,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#misdirection"
     },
     {
-      "Name": "Owl's wisdom (potion)",
+      "Name": "Potion of Owl's wisdom",
       "Minor": 2,
       "Medium": 2,
       "Major": 0,
@@ -3347,7 +3311,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#owls-wisdom"
     },
     {
-      "Name": "Protection from arrows 10/magic (potion)",
+      "Name": "Potion of Protection from arrows 10/magic",
       "Minor": 2,
       "Medium": 1,
       "Major": 0,
@@ -3355,7 +3319,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-arrows"
     },
     {
-      "Name": "Remove paralysis (potion)",
+      "Name": "Potion of Remove paralysis",
       "Minor": 2,
       "Medium": 1,
       "Major": 1,
@@ -3363,7 +3327,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#remove-paralysis"
     },
     {
-      "Name": "Resist energy (type) 10 (potion)",
+      "Name": "Potion of Resist energy (type) 10",
       "Minor": 3,
       "Medium": 2,
       "Major": 0,
@@ -3371,7 +3335,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
     },
     {
-      "Name": "Shield of faith +3 (potion)",
+      "Name": "Potion of Shield of faith +3",
       "Minor": 1,
       "Medium": 2,
       "Major": 1,
@@ -3379,7 +3343,7 @@
       "Link": "http://dndsrd.net/spellsS.html#shield-of-faith"
     },
     {
-      "Name": "Spider climb (potion)",
+      "Name": "Potion of Spider climb",
       "Minor": 2,
       "Medium": 1,
       "Major": 0,
@@ -3387,7 +3351,7 @@
       "Link": "http://dndsrd.net/spellsS.html#spider-climb"
     },
     {
-      "Name": "Undetectable alignment (potion)",
+      "Name": "Potion of Undetectable alignment",
       "Minor": 1,
       "Medium": 1,
       "Major": 1,
@@ -3395,7 +3359,7 @@
       "Link": "http://dndsrd.net/spells#TtoZ.html#undetectable-alignment"
     },
     {
-      "Name": "Barkskin +3 (potion)",
+      "Name": "Potion of Barkskin +3",
       "Minor": 0,
       "Medium": 1,
       "Major": 1,
@@ -3403,7 +3367,7 @@
       "Link": "http://dndsrd.net/spellsAtoB.html#barkskin"
     },
     {
-      "Name": "Shield of faith +4 (potion)",
+      "Name": "Potion of Shield of faith +4",
       "Minor": 0,
       "Medium": 1,
       "Major": 2,
@@ -3411,7 +3375,7 @@
       "Link": "http://dndsrd.net/spellsS.html#shield-of-faith"
     },
     {
-      "Name": "Resist energy (type) 20 (potion)",
+      "Name": "Potion of Resist energy (type) 20",
       "Minor": 0,
       "Medium": 3,
       "Major": 2,
@@ -3419,7 +3383,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
     },
     {
-      "Name": "Cure serious wounds (potion)",
+      "Name": "Potion of Cure serious wounds",
       "Minor": 0,
       "Medium": 5,
       "Major": 8,
@@ -3427,7 +3391,7 @@
       "Link": "http://dndsrd.net/spellsC.html#cure-serious-wounds"
     },
     {
-      "Name": "Daylight (oil)",
+      "Name": "Oil of Daylight",
       "Minor": 0,
       "Medium": 1,
       "Major": 1,
@@ -3435,7 +3399,7 @@
       "Link": "http://dndsrd.net/spellsDtoE.html#daylight"
     },
     {
-      "Name": "Displacement (potion)",
+      "Name": "Potion of Displacement",
       "Minor": 0,
       "Medium": 3,
       "Major": 3,
@@ -3443,7 +3407,7 @@
       "Link": "http://dndsrd.net/spellsDtoE.html#displacement"
     },
     {
-      "Name": "Flame arrow (oil)",
+      "Name": "Oil of Flame arrow",
       "Minor": 0,
       "Medium": 1,
       "Major": 1,
@@ -3451,7 +3415,7 @@
       "Link": "http://dndsrd.net/spellsFtoG.html#flame-arrow"
     },
     {
-      "Name": "Fly (potion)",
+      "Name": "Potion of Fly",
       "Minor": 0,
       "Medium": 3,
       "Major": 5,
@@ -3459,7 +3423,7 @@
       "Link": "http://dndsrd.net/spellsFtoG.html#fly"
     },
     {
-      "Name": "Gaseous form (potion)",
+      "Name": "Potion of Gaseous form",
       "Minor": 0,
       "Medium": 1,
       "Major": 1,
@@ -3467,7 +3431,7 @@
       "Link": "http://dndsrd.net/spellsFtoG.html#gaseous-form"
     },
     {
-      "Name": "Greater magic fang +1 (potion)",
+      "Name": "Potion of Greater magic fang +1",
       "Minor": 0,
       "Medium": 2,
       "Major": 0,
@@ -3475,7 +3439,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#greater-magic-fang"
     },
     {
-      "Name": "Greater magic weapon +1 (oil)",
+      "Name": "Oil of Greater magic weapon +1",
       "Minor": 0,
       "Medium": 2,
       "Major": 0,
@@ -3483,7 +3447,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#greater-magic-weapon"
     },
     {
-      "Name": "Haste (potion)",
+      "Name": "Potion of Haste",
       "Minor": 0,
       "Medium": 2,
       "Major": 2,
@@ -3491,7 +3455,7 @@
       "Link": "http://dndsrd.net/spellsHtoL.html#haste"
     },
     {
-      "Name": "Heroism (potion)",
+      "Name": "Potion of Heroism",
       "Minor": 0,
       "Medium": 3,
       "Major": 3,
@@ -3499,7 +3463,7 @@
       "Link": "http://dndsrd.net/spellsHtoL.html#heroism"
     },
     {
-      "Name": "Keen edge (oil)",
+      "Name": "Oil of Keen edge",
       "Minor": 0,
       "Medium": 2,
       "Major": 2,
@@ -3507,7 +3471,7 @@
       "Link": "http://dndsrd.net/spellsHtoL.html#keen-edge"
     },
     {
-      "Name": "Magic circle against (alignment) (potion)",
+      "Name": "Potion of Magic circle against (alignment)",
       "Minor": 0,
       "Medium": 1,
       "Major": 1,
@@ -3515,7 +3479,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#magic-circle-against-evil"
     },
     {
-      "Name": "Magic vestment +1 (oil)",
+      "Name": "Oil of Magic vestment +1",
       "Minor": 0,
       "Medium": 2,
       "Major": 0,
@@ -3523,7 +3487,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#magic-vestment"
     },
     {
-      "Name": "Neutralize poison (potion)",
+      "Name": "Potion of Neutralize poison",
       "Minor": 0,
       "Medium": 3,
       "Major": 3,
@@ -3531,7 +3495,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#neutralize-poison"
     },
     {
-      "Name": "Nondetection (potion)",
+      "Name": "Potion of Nondetection",
       "Minor": 0,
       "Medium": 2,
       "Major": 2,
@@ -3539,7 +3503,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#nondetection"
     },
     {
-      "Name": "Protection from energy (type) (potion)",
+      "Name": "Potion of Protection from energy (type)",
       "Minor": 0,
       "Medium": 3,
       "Major": 2,
@@ -3547,7 +3511,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
     },
     {
-      "Name": "Rage (potion)",
+      "Name": "Potion of Rage",
       "Minor": 0,
       "Medium": 2,
       "Major": 1,
@@ -3555,7 +3519,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#rage"
     },
     {
-      "Name": "Remove blindness/deafness (potion)",
+      "Name": "Potion of Remove blindness/deafness",
       "Minor": 0,
       "Medium": 1,
       "Major": 1,
@@ -3563,7 +3527,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#remove-blindness-deafness"
     },
     {
-      "Name": "Remove curse (potion)",
+      "Name": "Potion of Remove curse",
       "Minor": 0,
       "Medium": 1,
       "Major": 1,
@@ -3571,7 +3535,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#remove-curse"
     },
     {
-      "Name": "Remove disease (potion)",
+      "Name": "Potion of Remove disease",
       "Minor": 0,
       "Medium": 1,
       "Major": 1,
@@ -3579,7 +3543,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#remove-disease"
     },
     {
-      "Name": "Tongues (potion)",
+      "Name": "Potion of Tongues",
       "Minor": 0,
       "Medium": 1,
       "Major": 1,
@@ -3587,7 +3551,7 @@
       "Link": "http://dndsrd.net/spellsTtoZ.html#tongues"
     },
     {
-      "Name": "Water breathing (potion)",
+      "Name": "Potion of Water breathing",
       "Minor": 0,
       "Medium": 2,
       "Major": 1,
@@ -3595,7 +3559,7 @@
       "Link": "http://dndsrd.net/spellsTtoZ.html#water-breathing"
     },
     {
-      "Name": "Water walk (potion)",
+      "Name": "Potion of Water walk",
       "Minor": 0,
       "Medium": 1,
       "Major": 1,
@@ -3603,7 +3567,7 @@
       "Link": "http://dndsrd.net/spellsTtoZ.html#water-walk"
     },
     {
-      "Name": "Barkskin +4 (potion)",
+      "Name": "Potion of Barkskin +4",
       "Minor": 0,
       "Medium": 0,
       "Major": 2,
@@ -3611,7 +3575,7 @@
       "Link": "http://dndsrd.net/spellsAtoB.html#barkskin"
     },
     {
-      "Name": "Shield of faith +5 (potion)",
+      "Name": "Potion of Shield of faith +5",
       "Minor": 0,
       "Medium": 0,
       "Major": 1,
@@ -3619,7 +3583,7 @@
       "Link": "http://dndsrd.net/spellsS.html#shield-of-faith"
     },
     {
-      "Name": "Good hope (potion)",
+      "Name": "Potion of Good hope",
       "Minor": 0,
       "Medium": 0,
       "Major": 1,
@@ -3627,7 +3591,7 @@
       "Link": "http://dndsrd.net/spellsFtoG.html#good-hope"
     },
     {
-      "Name": "Resist energy (type) 30 (potion)",
+      "Name": "Potion of Resist energy (type) 30",
       "Minor": 0,
       "Medium": 0,
       "Major": 3,
@@ -3635,7 +3599,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
     },
     {
-      "Name": "Barkskin +5 (potion)",
+      "Name": "Potion of Barkskin +5",
       "Minor": 0,
       "Medium": 0,
       "Major": 1,
@@ -3643,7 +3607,7 @@
       "Link": "http://dndsrd.net/spellsAtoB.html#barkskin"
     },
     {
-      "Name": "Greater magic fang +2 (potion)",
+      "Name": "Potion of Greater magic fang +2",
       "Minor": 0,
       "Medium": 0,
       "Major": 4,
@@ -3651,7 +3615,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#greater-magic-fang"
     },
     {
-      "Name": "Greater magic weapon +2 (oil)",
+      "Name": "Oil of Greater magic weapon +2",
       "Minor": 0,
       "Medium": 0,
       "Major": 4,
@@ -3659,7 +3623,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#greater-magic-weapon"
     },
     {
-      "Name": "Magic vestment +2 (oil)",
+      "Name": "Oil of Magic vestment +2",
       "Minor": 0,
       "Medium": 0,
       "Major": 4,
@@ -3667,7 +3631,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#magic-vestment"
     },
     {
-      "Name": "Protection from arrows 15/magic (potion)",
+      "Name": "Potion of Protection from arrows 15/magic",
       "Minor": 0,
       "Medium": 0,
       "Major": 1,
@@ -3675,7 +3639,7 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-arrows"
     },
     {
-      "Name": "Greater magic fang +3 (potion)",
+      "Name": "Potion of Greater magic fang +3",
       "Minor": 0,
       "Medium": 0,
       "Major": 3,
@@ -3683,7 +3647,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#greater-magic-fang"
     },
     {
-      "Name": "Greater magic weapon +3 (oil)",
+      "Name": "Oil of Greater magic weapon +3",
       "Minor": 0,
       "Medium": 0,
       "Major": 3,
@@ -3691,7 +3655,7 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#greater-magic-weapon"
     },
     {
-      "Name": "Magic vestment +3 (oil)",
+      "Name": "Oil of Magic vestment +3",
       "Minor": 0,
       "Medium": 0,
       "Major": 3,
@@ -3699,7 +3663,7 @@
       "Link": "http://dndsrd.net/spellsMto.html#magic-vestment"
     },
     {
-      "Name": "Greater magic fang +4 (potion)",
+      "Name": "Potion of Greater magic fang +4",
       "Minor": 0,
       "Medium": 0,
       "Major": 2,
@@ -3707,7 +3671,7 @@
       "Link": "http://dndsrd.net/spellsMto.html#greater-magic-fang"
     },
     {
-      "Name": "Greater magic weapon +4 (oil)",
+      "Name": "Oil of Greater magic weapon +4",
       "Minor": 0,
       "Medium": 0,
       "Major": 2,
@@ -3715,7 +3679,7 @@
       "Link": "http://dndsrd.net/spellsMto.html#greater-magic-weapon"
     },
     {
-      "Name": "Magic vestment +4 (oil)",
+      "Name": "Oil of Magic vestment +4",
       "Minor": 0,
       "Medium": 0,
       "Major": 2,
@@ -3723,7 +3687,7 @@
       "Link": "http://dndsrd.net/spellsMto.html#magic-vestment"
     },
     {
-      "Name": "Greater magic fang +5 (potion)",
+      "Name": "Potion of Greater magic fang +5",
       "Minor": 0,
       "Medium": 0,
       "Major": 1,
@@ -3731,7 +3695,7 @@
       "Link": "http://dndsrd.net/spellsMto.html#greater-magic-fang"
     },
     {
-      "Name": "Greater magic weapon +5 (oil)",
+      "Name": "Oil of Greater magic weapon +5",
       "Minor": 0,
       "Medium": 0,
       "Major": 1,
@@ -3739,7 +3703,7 @@
       "Link": "http://dndsrd.net/spellsMto.html#greater-magic-weapon"
     },
     {
-      "Name": "Magic vestment +5 (oil)",
+      "Name": "Oil of Magic vestment +5",
       "Minor": 0,
       "Medium": 0,
       "Major": 1,
@@ -5851,17 +5815,17 @@
   ],
   "Good": [
     {
-      "Name": "Adventuring Backpack (empty)",
+      "Name": "Adventuring Backpack",
       "Cost": 2,
       "Weight": 1
     },
     {
-      "Name": "Barrel (empty)",
+      "Name": "Barrel",
       "Cost": 2,
       "Weight": 13.5
     },
     {
-      "Name": "Basket (empty)",
+      "Name": "Basket",
       "Cost": 0.4,
       "Weight": 0.5
     },
@@ -5891,7 +5855,7 @@
       "Weight": 0
     },
     {
-      "Name": "Bucket (empty)",
+      "Name": "Bucket",
       "Cost": 0.5,
       "Weight": 1
     },
@@ -5906,7 +5870,7 @@
       "Weight": 0
     },
     {
-      "Name": "Canvas (sq. yd.)",
+      "Name": "Canvas",
       "Cost": 0.1,
       "Weight": 0.5
     },
@@ -5926,7 +5890,7 @@
       "Weight": 0
     },
     {
-      "Name": "Chest (empty)",
+      "Name": "Chest",
       "Cost": 2,
       "Weight": 11.5
     },
@@ -5951,7 +5915,7 @@
       "Weight": 2.5
     },
     {
-      "Name": "Flask (empty)",
+      "Name": "Flask",
       "Cost": 0.03,
       "Weight": 0.5
     },
@@ -5986,7 +5950,7 @@
       "Weight": 4
     },
     {
-      "Name": "Ladder, 10-foot",
+      "Name": "Ladder, 3m",
       "Cost": 0.05,
       "Weight": 9
     },
@@ -6076,7 +6040,7 @@
       "Weight": 0
     },
     {
-      "Name": "Pole 10-foot",
+      "Name": "Pole 3m",
       "Cost": 0.2,
       "Weight": 3.5
     },
@@ -6086,7 +6050,7 @@
       "Weight": 4.5
     },
     {
-      "Name": "Pouch, belt (empty)",
+      "Name": "Pouch, belt",
       "Cost": 1,
       "Weight": 0
     },
@@ -6101,17 +6065,17 @@
       "Weight": 0.5
     },
     {
-      "Name": "Rope, hempen (50)",
+      "Name": "Rope, hempen 15m",
       "Cost": 1,
       "Weight": 4.5
     },
     {
-      "Name": "Rope, silk (50)",
+      "Name": "Rope, silk 15m",
       "Cost": 10,
       "Weight": 2.5
     },
     {
-      "Name": "Sack (empty)",
+      "Name": "Sack",
       "Cost": 0.1,
       "Weight": 0
     },
@@ -6141,7 +6105,7 @@
       "Weight": 4.5
     },
     {
-      "Name": "Soap (per)",
+      "Name": "Soap",
       "Cost": 0.5,
       "Weight": 0.5
     },
@@ -6166,9 +6130,9 @@
       "Weight": 0.5
     },
     {
-      "Name": "Vial ink or potion",
+      "Name": "Vial ink",
       "Cost": 1,
-      "Weight": "1/10"
+      "Weight": 0.1
     },
     {
       "Name": "Waterskin",
@@ -6181,17 +6145,17 @@
       "Weight": 0.5
     },
     {
-      "Name": "Acid (flask)",
+      "Name": "Flask of Acid",
       "Cost": 10,
       "Weight": 0.5
     },
     {
-      "Name": "Alchemist's fire (flask)",
+      "Name": "Flask of Alchemist's fire",
       "Cost": 20,
       "Weight": 0.5
     },
     {
-      "Name": "Antitoxin (vial)",
+      "Name": "Vial of Antitoxin",
       "Cost": 50,
       "Weight": 0
     },
@@ -6201,7 +6165,7 @@
       "Weight": 0.5
     },
     {
-      "Name": "Holy water (flask)",
+      "Name": "Flask of Holy water",
       "Cost": 25,
       "Weight": 0.5
     },
@@ -11597,6 +11561,805 @@
       "Name": "Scroll of true resurrection",
       "Cost": 28825,
       "Level": 9
+    }
+  ],
+  "Staff" : [
+    {
+      "Medium": 15,
+      "Major": 3,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-charming",
+      "Name": "Staff of Charming",
+      "Cost": 16500
+    },
+    {
+      "Medium": 15,
+      "Major": 6,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-fire",
+      "Name": "Staff of Fire",
+      "Cost": 17750
+    },
+    {
+      "Medium": 10,
+      "Major": 2,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-swarming-insects",
+      "Name": "Staff of Swarming insects",
+      "Cost": 24750
+    },
+    {
+      "Medium": 20,
+      "Major": 6,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-healing",
+      "Name": "Staff of Healing",
+      "Cost": 27750
+    },
+    {
+      "Medium": 15,
+      "Major": 2,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-size-alteration",
+      "Name": "Staff of Size alteration",
+      "Cost": 29000
+    },
+    {
+      "Medium": 15,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-illumination",
+      "Name": "Staff of Illumination",
+      "Cost": 48250
+    },
+    {
+      "Medium": 5,
+      "Major": 7,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-frost",
+      "Name": "Staff of Frost",
+      "Cost": 56250
+    },
+    {
+      "Medium": 5,
+      "Major": 7,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-defense",
+      "Name": "Staff of Defense",
+      "Cost": 58250
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-abjuration",
+      "Name": "Staff of Abjuration",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-conjuration",
+      "Name": "Staff of Conjuration",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-enchantment",
+      "Name": "Staff of Enchantment",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-evocation",
+      "Name": "Staff of Evocation",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-illusion",
+      "Name": "Staff of Illusion",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-necromancy",
+      "Name": "Staff of Necromancy",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-transmutation",
+      "Name": "Staff of Transmutation",
+      "Cost": 65000
+    },
+    {
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-divination",
+      "Name": "Staff of Divination",
+      "Cost": 73500
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-earth-and-stone",
+      "Name": "Staff of Earth and stone",
+      "Cost": 80500
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-woodlands",
+      "Name": "Staff of Woodlands",
+      "Cost": 101250
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-life",
+      "Name": "Staff of Life",
+      "Cost": 155750
+    },
+    {
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-passage",
+      "Name": "Staff of Passage",
+      "Cost": 170500
+    },
+    {
+      "Medium": 0,
+      "Major": 3,
+      "Link": "http://dndsrd.net/magicItemsSSW.html#staff-of-power",
+      "Name": "Staff of Power",
+      "Cost": 211000
+    }
+  ],
+  "Wand" : [
+    {
+      "Minor": 2,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#detect-magic",
+      "Name": "Wand of Detect magic",
+      "Cost": 375
+    },
+    {
+      "Minor": 2,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsHtoL.html#light",
+      "Name": "Wand of Light",
+      "Cost": 375
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsAtoB.html#burning-hands",
+      "Name": "Wand of Burning hands",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#charm-animal",
+      "Name": "Wand of Charm animal",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#charm-person",
+      "Name": "Wand of Charm person",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#color-spray",
+      "Name": "Wand of Color spray",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#cure-light-wounds",
+      "Name": "Wand of Cure light wounds",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#detect-secret-doors",
+      "Name": "Wand of Detect secret doors",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#enlarge-person",
+      "Name": "Wand of Enlarge person",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+      "Name": "Wand of Magic missile (1st)",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsS.html#shocking-grasp",
+      "Name": "Wand of Shocking grasp",
+      "Cost": 750
+    },
+    {
+      "Minor": 3,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsS.html#summon-monster-i",
+      "Name": "Wand of Summon monster I",
+      "Cost": 750
+    },
+    {
+      "Minor": 2,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+      "Name": "Wand of Magic missile (3rd)",
+      "Cost": 2250
+    },
+    {
+      "Minor": 1,
+      "Medium": 3,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+      "Name": "Wand of Magic missile (5th)",
+      "Cost": 3750
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsAtoB.html#bears-endurance",
+      "Name": "Wand of Bear's endurance",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsAtoB.html#bulls-strength",
+      "Name": "Wand of Bull's strength",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#cats-grace",
+      "Name": "Wand of Cat's grace",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 5,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsC.html#cure-moderate-wounds",
+      "Name": "Wand of Cure moderate wounds",
+      "Cost": 4500
+    },
+    {
+      "Minor": 2,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#darkness",
+      "Name": "Wand of Darkness",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#daylight",
+      "Name": "Wand of Daylight",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 3,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#delay-poison",
+      "Name": "Wand of Delay poison",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsDtoE.html#eagles-splendor",
+      "Name": "Wand of Eagle's splendor",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsFtoG.html#false-life",
+      "Name": "Wand of False life",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsFtoG.html#foxs-cunning",
+      "Name": "Wand of Fox's cunning",
+      "Cost": 4500
+    },
+    {
+      "Minor": 2,
+      "Medium": 1,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsFtoG.html#ghoul-touch",
+      "Name": "Wand of Ghoul touch",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 1,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsHtoL.html#hold-person",
+      "Name": "Wand of Hold person",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 3,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsHtoL.html#invisibility",
+      "Name": "Wand of Invisibility",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsHtoL.html#knock",
+      "Name": "Wand of Knock",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 1,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsHtoL.html#levitate",
+      "Name": "Wand of Levitate",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsAtoB.html#acid-arrow",
+      "Name": "Wand of Acid arrow",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsMtoO.html#mirror-image",
+      "Name": "Wand of Mirror image",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsMtoO.html#owls-wisdom",
+      "Name": "Wand of Owl's wisdom",
+      "Cost": 4500
+    },
+    {
+      "Minor": 2,
+      "Medium": 1,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsS.html#shatter",
+      "Name": "Wand of Shatter",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsS.html#silence",
+      "Name": "Wand of Silence",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 1,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsS.html#summon-monster-ii",
+      "Name": "Wand of Summon monster II",
+      "Cost": 4500
+    },
+    {
+      "Minor": 3,
+      "Medium": 2,
+      "Major": 0,
+      "Link": "http://dndsrd.net/spellsTtoZ.html#web",
+      "Name": "Wand of Web",
+      "Cost": 4500
+    },
+    {
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+      "Name": "Wand of Magic missile (7th)",
+      "Cost": 5250
+    },
+    {
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+      "Name": "Wand of Magic missile (9th)",
+      "Cost": 6750
+    },
+    {
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsC.html#call-lightning",
+      "Name": "Wand of Call lightning (5th)",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 1,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsC.html#charm-person",
+      "Name": "Wand of Charm person, heightened (3rd-level spell)",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsC.html#contagion",
+      "Name": "Wand of Contagion",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsC.html#cure-serious-wounds",
+      "Name": "Wand of Cure serious wounds",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsDtoE.html#dispel-magic",
+      "Name": "Wand of Dispel magic",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
+      "Name": "Wand of Fireball (5th)",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsHtoL.html#keen-edge",
+      "Name": "Wand of Keen edge",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
+      "Name": "Wand of Lightning bolt (5th)",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsMtoO.html#major-image",
+      "Name": "Wand of Major image",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsS.html#slow",
+      "Name": "Wand of Slow",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsS.html#suggestion",
+      "Name": "Wand of Suggestion",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsS.html#summon-monster-iii",
+      "Name": "Wand of Summon monster III",
+      "Cost": 11250
+    },
+    {
+      "Minor": 0,
+      "Medium": 1,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
+      "Name": "Wand of Fireball (6th)",
+      "Cost": 13500
+    },
+    {
+      "Minor": 0,
+      "Medium": 1,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
+      "Name": "Wand of Lightning bolt (6th)",
+      "Cost": 13500
+    },
+    {
+      "Minor": 0,
+      "Medium": 1,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsS.html#searing-light",
+      "Name": "Wand of Searing light (6th)",
+      "Cost": 13500
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsC.html#call-lightning",
+      "Name": "Wand of Call lightning (8th)",
+      "Cost": 18000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
+      "Name": "Wand of Fireball (8th)",
+      "Cost": 18000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
+      "Name": "Wand of Lightning bolt (8th)",
+      "Cost": 18000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/spellsC.html#charm-monster",
+      "Name": "Wand of Charm monster",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/spellsC.html#cure-critical-wounds",
+      "Name": "Wand of Cure critical wounds",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsDtoE.html#dimensional-anchor",
+      "Name": "Wand of Dimensional anchor",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsFtoG.html#fear",
+      "Name": "Wand of Fear",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/spellsFtoG.html#greater-invisibility",
+      "Name": "Wand of Greater invisibility",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsHtoL.html#hold-person",
+      "Name": "Wand of Hold person, heightened (4th level)",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/spellsHtoL.html#ice-storm",
+      "Name": "Wand of Ice storm",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsHtoL.html#inflict-critical-wounds",
+      "Name": "Wand of Inflict critical wounds",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/spellsMtoO.html#neutralize-poison",
+      "Name": "Wand of Neutralize poison",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsPtoR.html#poison",
+      "Name": "Wand of Poison",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsPtoR.html#polymorph",
+      "Name": "Wand of Polymorph",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsPtoR.html#ray-of-enfeeblement",
+      "Name": "Wand of Ray of enfeeblement, heightened (4th level)",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsS.html#suggestion",
+      "Name": "Wand of Suggestion, heightened (4th level)",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 3,
+      "Link": "http://dndsrd.net/spellsS.html#summon-monster-iv",
+      "Name": "Wand of Summon monster IV",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-fire",
+      "Name": "Wand of Wall of fire",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-ice",
+      "Name": "Wand of Wall of ice",
+      "Cost": 21000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsDtoE.html#dispel-magic",
+      "Name": "Wand of Dispel magic (10th)",
+      "Cost": 22500
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
+      "Name": "Wand of Fireball (10th)",
+      "Cost": 22500
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
+      "Name": "Wand of Lightning bolt (10th)",
+      "Cost": 22500
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsC.html#chaos-hammer",
+      "Name": "Wand of Chaos hammer (8th)",
+      "Cost": 24000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsHtoL.html#holy-smite",
+      "Name": "Wand of Holy smite (8th)",
+      "Cost": 24000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsMtoO.html#orders-wrath",
+      "Name": "Wand of Order's wrath (8th)",
+      "Cost": 24000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsTtoZ.html#unholy-blight",
+      "Name": "Wand of Unholy blight (8th)",
+      "Cost": 24000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/spellsPtoR.html#restoration",
+      "Name": "Wand of Restoration",
+      "Cost": 26000
+    },
+    {
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/spellsS.html#stoneskin",
+      "Name": "Wand of Stoneskin",
+      "Cost": 33500
     }
   ]
 }
