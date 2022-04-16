@@ -1933,57 +1933,33 @@
       "Link": "http://dndsrd.net/magicItemsPRR.html#ring-of-spell-storing"
     }
   ],
-  "Weapon": [
+  "Ammo": [
     {
       "Name": "Bullets, sling (20)",
+      "Chance": 1,
       "Cost": 0.2,
-      "Dmg (S)": 0,
-      "Dmg (M)": 0,
-      "Critical": "-",
-      "Range": 0,
       "Weight": 5,
-      "Type": "Bludgeoning",
-      "Category": "Ammo",
-      "Subtype": "Ranged Weapons"
+      "Type": "Bludgeoning"
     },
     {
       "Name": "Bolts, crossbow (20)",
+      "Chance": 2,
       "Cost": 2,
-      "Dmg (S)": 0,
-      "Dmg (M)": 0,
-      "Critical": "-",
-      "Range": 0,
       "Weight": 1,
-      "Type": "Piercing",
-      "Category": "Ammo",
-      "Subtype": "Ranged Weapons"
+      "Type": "Piercing"
     },
     {
-      "Name": "Dart",
-      "Cost": 0.5,
-      "Dmg (S)": "1d3",
-      "Dmg (M)": "1d4",
-      "Critical": "x2",
-      "Range": 20,
-      "Weight": 0.4,
-      "Type": "Piercing",
-      "Category": "Ammo",
-      "Subtype": "Ranged Weapons"
-    },
-    {
-      "Name": "Arrows (20)",
+      "Name": "Arrows, bow (20)",
+      "Chance": 2,
       "Cost": 1,
-      "Dmg (S)": 0,
-      "Dmg (M)": 0,
-      "Critical": "-",
-      "Range": 0,
       "Weight": 1.5,
-      "Type": "Piercing",
-      "Category": "Ammo",
-      "Subtype": "Ranged Weapons"
-    },
+      "Type": "Piercing"
+    }
+  ],
+  "Weapon": [
     {
       "Name": "Gauntlet",
+      "Chance": 2,
       "Cost": 2,
       "Dmg (S)": "1d2",
       "Dmg (M)": "1d3",
@@ -1996,6 +1972,7 @@
     },
     {
       "Name": "Dagger",
+      "Chance": 28,
       "Cost": 2,
       "Dmg (S)": "1d3",
       "Dmg (M)": "1d4",
@@ -2008,6 +1985,7 @@
     },
     {
       "Name": "Dagger, punching",
+      "Chance": 2,
       "Cost": 2,
       "Dmg (S)": "1d3",
       "Dmg (M)": "1d4",
@@ -2020,6 +1998,7 @@
     },
     {
       "Name": "Gauntlet, spiked",
+      "Chance": 2,
       "Cost": 5,
       "Dmg (S)": "1d3",
       "Dmg (M)": "1d4",
@@ -2032,6 +2011,7 @@
     },
     {
       "Name": "Mace, light",
+      "Chance": 28,
       "Cost": 5,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2044,6 +2024,7 @@
     },
     {
       "Name": "Sickle",
+      "Chance": 2,
       "Cost": 6,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2056,6 +2037,7 @@
     },
     {
       "Name": "Club",
+      "Chance": 2,
       "Cost": 1,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2068,6 +2050,7 @@
     },
     {
       "Name": "Mace, heavy",
+      "Chance": 35,
       "Cost": 12,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2080,6 +2063,7 @@
     },
     {
       "Name": "Morningstar",
+      "Chance": 3,
       "Cost": 8,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2092,6 +2076,7 @@
     },
     {
       "Name": "Shortspear",
+      "Chance": 28,
       "Cost": 1,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2104,6 +2089,7 @@
     },
     {
       "Name": "Longspear",
+      "Chance": 3,
       "Cost": 5,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2116,6 +2102,7 @@
     },
     {
       "Name": "Quarterstaff",
+      "Chance": 21,
       "Cost": 1,
       "Dmg (S)": "1d4/1d4",
       "Dmg (M)": "1d6/1d6",
@@ -2128,6 +2115,7 @@
     },
     {
       "Name": "Spear",
+      "Chance": 3,
       "Cost": 2,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2140,6 +2128,7 @@
     },
     {
       "Name": "Crossbow, heavy",
+      "Chance": 21,
       "Cost": 50,
       "Dmg (S)": "1d8",
       "Dmg (M)": "1d10",
@@ -2152,6 +2141,7 @@
     },
     {
       "Name": "Crossbow, light",
+      "Chance": 21,
       "Cost": 35,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2163,7 +2153,21 @@
       "Subtype": "Ranged Weapons"
     },
     {
+      "Name": "Dart",
+      "Chance": 9,
+      "Cost": 0.5,
+      "Dmg (S)": "1d3",
+      "Dmg (M)": "1d4",
+      "Critical": "x2",
+      "Range": 20,
+      "Weight": 0.4,
+      "Type": "Piercing",
+      "Category": "Simple Weapons",
+      "Subtype": "Ranged Weapons"
+    },
+    {
       "Name": "Javelin",
+      "Chance": 5,
       "Cost": 1,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2176,6 +2180,7 @@
     },
     {
       "Name": "Sling",
+      "Chance": 9,
       "Cost": 1,
       "Dmg (S)": "1d3",
       "Dmg (M)": "1d4",
@@ -2188,6 +2193,7 @@
     },
     {
       "Name": "Axe, throwing",
+      "Chance": 11,
       "Cost": 8,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2200,6 +2206,7 @@
     },
     {
       "Name": "Hammer, light",
+      "Chance": 2,
       "Cost": 1,
       "Dmg (S)": "1d3",
       "Dmg (M)": "1d4",
@@ -2212,6 +2219,7 @@
     },
     {
       "Name": "Handaxe",
+      "Chance": 2,
       "Cost": 6,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2224,6 +2232,7 @@
     },
     {
       "Name": "Kukri",
+      "Chance": 3,
       "Cost": 8,
       "Dmg (S)": "1d3",
       "Dmg (M)": "1d4",
@@ -2236,6 +2245,7 @@
     },
     {
       "Name": "Pick, light",
+      "Chance": 2,
       "Cost": 4,
       "Dmg (S)": "1d3",
       "Dmg (M)": "1d4",
@@ -2248,6 +2258,7 @@
     },
     {
       "Name": "Sap",
+      "Chance": 2,
       "Cost": 1,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2260,6 +2271,7 @@
     },
     {
       "Name": "Sword short",
+      "Chance": 35,
       "Cost": 10,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2272,6 +2284,7 @@
     },
     {
       "Name": "Battleaxe",
+      "Chance": 4,
       "Cost": 10,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2284,6 +2297,7 @@
     },
     {
       "Name": "Flail",
+      "Chance": 4,
       "Cost": 8,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2296,6 +2310,7 @@
     },
     {
       "Name": "Longsword",
+      "Chance": 91,
       "Cost": 15,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2308,6 +2323,7 @@
     },
     {
       "Name": "Pick, heavy",
+      "Chance": 2,
       "Cost": 8,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2320,6 +2336,7 @@
     },
     {
       "Name": "Rapier",
+      "Chance": 28,
       "Cost": 20,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2332,6 +2349,7 @@
     },
     {
       "Name": "Scimitar",
+      "Chance": 35,
       "Cost": 15,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2344,6 +2362,7 @@
     },
     {
       "Name": "Trident",
+      "Chance": 2,
       "Cost": 15,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2356,6 +2375,7 @@
     },
     {
       "Name": "Warhammer",
+      "Chance": 3,
       "Cost": 12,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2368,6 +2388,7 @@
     },
     {
       "Name": "Falchion",
+      "Chance": 2,
       "Cost": 75,
       "Dmg (S)": "1d6",
       "Dmg (M)": "2d4",
@@ -2380,6 +2401,7 @@
     },
     {
       "Name": "Glaive",
+      "Chance": 2,
       "Cost": 8,
       "Dmg (S)": "1d8",
       "Dmg (M)": "1d10",
@@ -2392,6 +2414,7 @@
     },
     {
       "Name": "Greataxe",
+      "Chance": 70,
       "Cost": 20,
       "Dmg (S)": "1d10",
       "Dmg (M)": "1d12",
@@ -2404,6 +2427,7 @@
     },
     {
       "Name": "Greatclub",
+      "Chance": 2,
       "Cost": 5,
       "Dmg (S)": "1d8",
       "Dmg (M)": "1d10",
@@ -2416,6 +2440,7 @@
     },
     {
       "Name": "Flail, heavy",
+      "Chance": 5,
       "Cost": 15,
       "Dmg (S)": "1d8",
       "Dmg (M)": "1d10",
@@ -2428,6 +2453,7 @@
     },
     {
       "Name": "Greatsword",
+      "Chance": 70,
       "Cost": 50,
       "Dmg (S)": "1d10",
       "Dmg (M)": "2d6",
@@ -2440,6 +2466,7 @@
     },
     {
       "Name": "Guisarme",
+      "Chance": 2,
       "Cost": 9,
       "Dmg (S)": "1d6",
       "Dmg (M)": "2d4",
@@ -2452,6 +2479,7 @@
     },
     {
       "Name": "Halberd",
+      "Chance": 3,
       "Cost": 10,
       "Dmg (S)": "1d8",
       "Dmg (M)": "1d10",
@@ -2464,6 +2492,7 @@
     },
     {
       "Name": "Lance",
+      "Chance": 3,
       "Cost": 10,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2476,6 +2505,7 @@
     },
     {
       "Name": "Ranseur",
+      "Chance": 2,
       "Cost": 10,
       "Dmg (S)": "1d6",
       "Dmg (M)": "2d4",
@@ -2488,6 +2518,7 @@
     },
     {
       "Name": "Scythe",
+      "Chance": 2,
       "Cost": 18,
       "Dmg (S)": "1d6",
       "Dmg (M)": "2d4",
@@ -2500,6 +2531,7 @@
     },
     {
       "Name": "Longbow",
+      "Chance": 21,
       "Cost": 75,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2512,6 +2544,7 @@
     },
     {
       "Name": "Longbow, composite",
+      "Chance": 41,
       "Cost": 100,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2524,6 +2557,7 @@
     },
     {
       "Name": "Shortbow",
+      "Chance": 11,
       "Cost": 30,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2536,6 +2570,7 @@
     },
     {
       "Name": "Shortbow, composite",
+      "Chance": 21,
       "Cost": 75,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2548,6 +2583,7 @@
     },
     {
       "Name": "Kama",
+      "Chance": 28,
       "Cost": 2,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2560,6 +2596,7 @@
     },
     {
       "Name": "Nunchaku",
+      "Chance": 28,
       "Cost": 2,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2572,6 +2609,7 @@
     },
     {
       "Name": "Sai",
+      "Chance": 1,
       "Cost": 1,
       "Dmg (S)": "1d3",
       "Dmg (M)": "1d4",
@@ -2584,6 +2622,7 @@
     },
     {
       "Name": "Siangham",
+      "Chance": 28,
       "Cost": 3,
       "Dmg (S)": "1d4",
       "Dmg (M)": "1d6",
@@ -2596,6 +2635,7 @@
     },
     {
       "Name": "Sword, bastard",
+      "Chance": 70,
       "Cost": 35,
       "Dmg (S)": "1d8",
       "Dmg (M)": "1d10",
@@ -2608,6 +2648,7 @@
     },
     {
       "Name": "Waraxe, dwarven",
+      "Chance": 70,
       "Cost": 30,
       "Dmg (S)": "1d8",
       "Dmg (M)": "1d10",
@@ -2620,6 +2661,7 @@
     },
     {
       "Name": "Whip",
+      "Chance": 3,
       "Cost": 1,
       "Dmg (S)": "1d2",
       "Dmg (M)": "1d3",
@@ -2632,6 +2674,7 @@
     },
     {
       "Name": "Axe, orc double",
+      "Chance": 3,
       "Cost": 60,
       "Dmg (S)": "1d6/1d6",
       "Dmg (M)": "1d8/1d8",
@@ -2644,6 +2687,7 @@
     },
     {
       "Name": "Chain, spiked",
+      "Chance": 3,
       "Cost": 25,
       "Dmg (S)": "1d6",
       "Dmg (M)": "2d4",
@@ -2656,6 +2700,7 @@
     },
     {
       "Name": "Flail, dire",
+      "Chance": 3,
       "Cost": 90,
       "Dmg (S)": "1d6/1d6",
       "Dmg (M)": "1d8/1d8",
@@ -2668,6 +2713,7 @@
     },
     {
       "Name": "Hammer, gnome hooked",
+      "Chance": 3,
       "Cost": 20,
       "Dmg (S)": "1d6/1d4",
       "Dmg (M)": "1d8/1d6",
@@ -2680,6 +2726,7 @@
     },
     {
       "Name": "Sword, two-bladed",
+      "Chance": 3,
       "Cost": 100,
       "Dmg (S)": "1d6/1d6",
       "Dmg (M)": "1d8/1d8",
@@ -2692,6 +2739,7 @@
     },
     {
       "Name": "Urgrosh, dwarven",
+      "Chance": 3,
       "Cost": 50,
       "Dmg (S)": "1d6/1d4",
       "Dmg (M)": "1d8/1d6",
@@ -2704,6 +2752,7 @@
     },
     {
       "Name": "Bolas",
+      "Chance": 1,
       "Cost": 5,
       "Dmg (S)": "1d3",
       "Dmg (M)": "1d4",
@@ -2716,6 +2765,7 @@
     },
     {
       "Name": "Crossbow, hand",
+      "Chance": 4,
       "Cost": 100,
       "Dmg (S)": "1d3",
       "Dmg (M)": "1d4",
@@ -2728,6 +2778,7 @@
     },
     {
       "Name": "Crossbow, repeating heavy",
+      "Chance": 2,
       "Cost": 400,
       "Dmg (S)": "1d8",
       "Dmg (M)": "1d10",
@@ -2740,6 +2791,7 @@
     },
     {
       "Name": "Crossbow, repeating light",
+      "Chance": 2,
       "Cost": 250,
       "Dmg (S)": "1d6",
       "Dmg (M)": "1d8",
@@ -2752,6 +2804,7 @@
     },
     {
       "Name": "Net",
+      "Chance": 2,
       "Cost": 20,
       "Dmg (S)": 0,
       "Dmg (M)": 0,
@@ -2764,6 +2817,7 @@
     },
     {
       "Name": "Shuriken (5)",
+      "Chance": 2,
       "Cost": 1,
       "Dmg (S)": 1,
       "Dmg (M)": "1d2",
