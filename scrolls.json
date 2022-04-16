@@ -1,0 +1,5270 @@
+{
+    "Arcane": [
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsAtoB.html#acid-splash",
+        "Name": "Scroll of acid splash",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsAtoB.html#arcane-mark",
+        "Name": "Scroll of arcane mark",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dancing-lights",
+        "Name": "Scroll of dancing lights",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#daze",
+        "Name": "Scroll of daze",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-magic",
+        "Name": "Scroll of detect magic",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-poison",
+        "Name": "Scroll of detect poison",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#disrupt-undead",
+        "Name": "Scroll of disrupt undead",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsFtoG.html#flare",
+        "Name": "Scroll of flare",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsFtoG.html#ghost-sound",
+        "Name": "Scroll of ghost sound",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#know-direction",
+        "Name": "Scroll of know direction",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsHtoL.html#light",
+        "Name": "Scroll of light",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#lullaby",
+        "Name": "Scroll of lullaby",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mage-hand",
+        "Name": "Scroll of mage hand",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mending",
+        "Name": "Scroll of mending",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsMtoO.html#message",
+        "Name": "Scroll of message",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsMtoO.html#open/close",
+        "Name": "Scroll of open/close",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsPtoR.html#prestidigitation",
+        "Name": "Scroll of prestidigitation",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsPtoR.html#ray-of-frost",
+        "Name": "Scroll of ray of frost",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsPtoR.html#read-magic",
+        "Name": "Scroll of read magic",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsPtoR.html#resistance",
+        "Name": "Scroll of resistance",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-instrument",
+        "Name": "Scroll of summon instrument",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#touch-of-fatigue",
+        "Name": "Scroll of touch of fatigue",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#alarm",
+        "Name": "Scroll of alarm",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animate-rope",
+        "Name": "Scroll of animate rope",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#burning-hands",
+        "Name": "Scroll of burning hands",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#cause-fear",
+        "Name": "Scroll of cause fear",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#charm-person",
+        "Name": "Scroll of charm person",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#chill-touch",
+        "Name": "Scroll of chill touch",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#color-spray",
+        "Name": "Scroll of color spray",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#comprehend-languages",
+        "Name": "Scroll of comprehend languages",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#lesser-confusion",
+        "Name": "Scroll of confusion, lesser",
+        "Cost": 50,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#cure-light-wounds",
+        "Name": "Scroll of cure light wounds",
+        "Cost": 50,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-secret-doors",
+        "Name": "Scroll of detect secret doors",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-undead",
+        "Name": "Scroll of detect undead",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#disguise-self",
+        "Name": "Scroll of disguise self",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#endure-elements",
+        "Name": "Scroll of endure elements",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#enlarge-person",
+        "Name": "Scroll of enlarge person",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#erase",
+        "Name": "Scroll of erase",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#expeditious-retreat",
+        "Name": "Scroll of expeditious retreat",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#feather-fall",
+        "Name": "Scroll of feather fall",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#grease",
+        "Name": "Scroll of grease",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hold-portal",
+        "Name": "Scroll of hold portal",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hypnotism",
+        "Name": "Scroll of hypnotism",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#identify",
+        "Name": "Scroll of identify",
+        "Cost": 125,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#jump",
+        "Name": "Scroll of jump",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mage-armor",
+        "Name": "Scroll of mage armor",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-missile",
+        "Name": "Scroll of magic missile",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-weapon",
+        "Name": "Scroll of magic weapon",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mount",
+        "Name": "Scroll of mount",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-aura",
+        "Name": "Scroll of magic aura",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#obscuring-mist",
+        "Name": "Scroll of obscuring mist",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-chaos",
+        "Name": "Scroll of protection from chaos",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-evil",
+        "Name": "Scroll of protection from evil",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-good",
+        "Name": "Scroll of protection from good",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-law",
+        "Name": "Scroll of protection from law",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#ray-of-enfeeblement",
+        "Name": "Scroll of ray of enfeeblement",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#reduce-person",
+        "Name": "Scroll of reduce person",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#remove-fear",
+        "Name": "Scroll of remove fear",
+        "Cost": 50,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#shield",
+        "Name": "Scroll of shield",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#shocking-grasp",
+        "Name": "Scroll of shocking grasp",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#silent-image",
+        "Name": "Scroll of silent image",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#sleep",
+        "Name": "Scroll of sleep",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-i",
+        "Name": "Scroll of summon monster I",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#floating-disk",
+        "Name": "Scroll of floating disk",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#true-strike",
+        "Name": "Scroll of true strike",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#undetectable-alignment",
+        "Name": "Scroll of undetectable alignment",
+        "Cost": 50,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#unseen-servant",
+        "Name": "Scroll of unseen servant",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#ventriloquism",
+        "Name": "Scroll of ventriloquism",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animal-messenger",
+        "Name": "Scroll of animal messenger",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animal-trance",
+        "Name": "Scroll of animal trance",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsAtoB.html#arcane-lock",
+        "Name": "Scroll of arcane lock",
+        "Cost": 175,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#bears-endurance",
+        "Name": "Scroll of bear's endurance",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#blindness/deafness",
+        "Name": "Scroll of blindness/deafness",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#blur",
+        "Name": "Scroll of blur",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#bulls-strength",
+        "Name": "Scroll of bull's strength",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#calm-emotions",
+        "Name": "Scroll of calm emotions",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#cats-grace",
+        "Name": "Scroll of cat's grace",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#command-undead",
+        "Name": "Scroll of command undead",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#continual-flame",
+        "Name": "Scroll of continual flame",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#cure-moderate-wounds",
+        "Name": "Scroll of cure moderate wounds",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#darkness",
+        "Name": "Scroll of darkness",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#darkvision",
+        "Name": "Scroll of darkvision",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#daze-monster",
+        "Name": "Scroll of daze monster",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#delay-poison",
+        "Name": "Scroll of delay poison",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-thoughts",
+        "Name": "Scroll of detect thoughts",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#disguise-self",
+        "Name": "Scroll of disguise self",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#eagles-splendor",
+        "Name": "Scroll of eagle's splendor",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#enthrall",
+        "Name": "Scroll of enthrall",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#false-life",
+        "Name": "Scroll of false life",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#flaming-sphere",
+        "Name": "Scroll of flaming sphere",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fog-cloud",
+        "Name": "Scroll of fog cloud",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#foxs-cunning",
+        "Name": "Scroll of fox's cunning",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#ghoul-touch",
+        "Name": "Scroll of ghoul touch",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#glitterdust",
+        "Name": "Scroll of glitterdust",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#gust-of-wind",
+        "Name": "Scroll of gust of wind",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hypnotic-pattern",
+        "Name": "Scroll of hypnotic pattern",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#invisibility",
+        "Name": "Scroll of invisibility",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#knock",
+        "Name": "Scroll of knock",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsPtoR.html#phantom-trap",
+        "Name": "Scroll of phantom trap",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#levitate",
+        "Name": "Scroll of levitate",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsHtoL.html#locate-object",
+        "Name": "Scroll of locate object",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-mouth",
+        "Name": "Scroll of magic mouth",
+        "Cost": 160,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#acid-arrow",
+        "Name": "Scroll of acid arrow",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#minor-image",
+        "Name": "Scroll of minor image",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mirror-image",
+        "Name": "Scroll of mirror image",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#misdirection",
+        "Name": "Scroll of misdirection",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#obscure-object",
+        "Name": "Scroll of obscure object",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#owls-wisdom",
+        "Name": "Scroll of owl's wisdom",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-arrows",
+        "Name": "Scroll of protection from arrows",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#pyrotechnics",
+        "Name": "Scroll of pyrotechnics",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy",
+        "Name": "Scroll of resist energy",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsPtoR.html#rope-trick",
+        "Name": "Scroll of rope trick",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#scare",
+        "Name": "Scroll of scare",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#scorching-ray",
+        "Name": "Scroll of scorching ray",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#see-invisibility",
+        "Name": "Scroll of see invisibility",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#shatter",
+        "Name": "Scroll of shatter",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#silence",
+        "Name": "Scroll of silence",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#sound-burst",
+        "Name": "Scroll of sound burst",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#spectral-hand",
+        "Name": "Scroll of spectral hand",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#spider-climb",
+        "Name": "Scroll of spider climb",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-ii",
+        "Name": "Scroll of summon monster II",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-swarm",
+        "Name": "Scroll of summon swarm",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hideous-laughter",
+        "Name": "Scroll of hideous laughter",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#touch-of-idiocy",
+        "Name": "Scroll of touch of idiocy",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#web",
+        "Name": "Scroll of web",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#whispering-wind",
+        "Name": "Scroll of whispering wind",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#arcane-sight",
+        "Name": "Scroll of arcane sight",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#blink",
+        "Name": "Scroll of blink",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#clairaudience/clairvoyance",
+        "Name": "Scroll of clairaudience/clairvoyance",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#cure-serious-wounds",
+        "Name": "Scroll of cure serious wounds",
+        "Cost": 525,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#daylight",
+        "Name": "Scroll of daylight",
+        "Cost": 525,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#deep-slumber",
+        "Name": "Scroll of deep slumber",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dispel-magic",
+        "Name": "Scroll of dispel magic",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#displacement",
+        "Name": "Scroll of displacement",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#explosive-runes",
+        "Name": "Scroll of explosive runes",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fireball",
+        "Name": "Scroll of fireball",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#flame-arrow",
+        "Name": "Scroll of flame arrow",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fly",
+        "Name": "Scroll of fly",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#gaseous-form",
+        "Name": "Scroll of gaseous form",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#gentle-repose",
+        "Name": "Scroll of gentle repose",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#glibness",
+        "Name": "Scroll of glibness",
+        "Cost": 525,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#good-hope",
+        "Name": "Scroll of good hope",
+        "Cost": 525,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#halt-undead",
+        "Name": "Scroll of halt undead",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#haste",
+        "Name": "Scroll of haste",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#heroism",
+        "Name": "Scroll of heroism",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hold-person",
+        "Name": "Scroll of hold person",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsHtoL.html#illusory-script",
+        "Name": "Scroll of illusory script",
+        "Cost": 425,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#invisibility-sphere",
+        "Name": "Scroll of invisibility sphere",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#keen-edge",
+        "Name": "Scroll of keen edge",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#tiny-hut",
+        "Name": "Scroll of tiny hut",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#lightning-bolt",
+        "Name": "Scroll of lightning bolt",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-circle-against-chaos",
+        "Name": "Scroll of magic circle against chaos",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-circle-against-evil",
+        "Name": "Scroll of magic circle against evil",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-circle-against-good",
+        "Name": "Scroll of magic circle against good",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-circle-against-law",
+        "Name": "Scroll of magic circle against law",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#greater-magic-weapon",
+        "Name": "Scroll of magic weapon, greater",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#major-image",
+        "Name": "Scroll of major image",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#nondetection",
+        "Name": "Scroll of nondetection",
+        "Cost": 425,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#phantom-steed",
+        "Name": "Scroll of phantom steed",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy",
+        "Name": "Scroll of protection from energy",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#rage",
+        "Name": "Scroll of rage",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#ray-of-exhaustion",
+        "Name": "Scroll of ray of exhaustion",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#sculpt-sound",
+        "Name": "Scroll of sculpt sound",
+        "Cost": 525,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#secret-page",
+        "Name": "Scroll of secret page",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#sepia-snake-sigil",
+        "Name": "Scroll of sepia snake sigil",
+        "Cost": 875,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#shrink-item",
+        "Name": "Scroll of shrink item",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#sleet-storm",
+        "Name": "Scroll of sleet storm",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#slow",
+        "Name": "Scroll of slow",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#speak-with-animals",
+        "Name": "Scroll of speak with animals",
+        "Cost": 525,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#stinking-cloud",
+        "Name": "Scroll of stinking cloud",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#suggestion",
+        "Name": "Scroll of suggestion",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-iii",
+        "Name": "Scroll of summon monster III",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#tongues",
+        "Name": "Scroll of tongues",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#vampiric-touch",
+        "Name": "Scroll of vampiric touch",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#water-breathing",
+        "Name": "Scroll of water breathing",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wind-wall",
+        "Name": "Scroll of wind wall",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animate-dead",
+        "Name": "Scroll of animate dead",
+        "Cost": 1050,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#arcane-eye",
+        "Name": "Scroll of arcane eye",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#bestow-curse",
+        "Name": "Scroll of bestow curse",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#charm-monster",
+        "Name": "Scroll of charm monster",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#confusion",
+        "Name": "Scroll of confusion",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#contagion",
+        "Name": "Scroll of contagion",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#crushing-despair",
+        "Name": "Scroll of crushing despair",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#cure-critical-wounds",
+        "Name": "Scroll of cure critical wounds",
+        "Cost": 1000,
+        "Level": 4
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-scrying",
+        "Name": "Scroll of detect scrying",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dimension-door",
+        "Name": "Scroll of dimension door",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dimensional-anchor",
+        "Name": "Scroll of dimensional anchor",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#enervation",
+        "Name": "Scroll of enervation",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#mass-enlarge-person",
+        "Name": "Scroll of enlarge person, mass",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#black-tentacles",
+        "Name": "Scroll of black tentacles",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fear",
+        "Name": "Scroll of fear",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fire-shield",
+        "Name": "Scroll of fire shield",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fire-trap",
+        "Name": "Scroll of fire trap",
+        "Cost": 725,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#freedom-of-movement",
+        "Name": "Scroll of freedom of movement",
+        "Cost": 1000,
+        "Level": 4
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#lesser-geas",
+        "Name": "Scroll of geas, lesser",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#lesser-globe-of-invulnerability",
+        "Name": "Scroll of globe of invulnerability, lesser",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hallucinatory-terrain",
+        "Name": "Scroll of hallucinatory terrain",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#ice-storm",
+        "Name": "Scroll of ice storm",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#illusory-wall",
+        "Name": "Scroll of illusory wall",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#greater-invisibility",
+        "Name": "Scroll of invisibility, greater",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#secure-shelter",
+        "Name": "Scroll of secure shelter",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsHtoL.html#locate-creature",
+        "Name": "Scroll of locate creature",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#minor-creation",
+        "Name": "Scroll of minor creation",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#modify-memory",
+        "Name": "Scroll of modify memory",
+        "Cost": 1000,
+        "Level": 4
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#neutralize-poison",
+        "Name": "Scroll of neutralize poison",
+        "Cost": 1000,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#resilient-sphere",
+        "Name": "Scroll of resilient sphere",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#phantasmal-killer",
+        "Name": "Scroll of phantasmal killer",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#polymorph",
+        "Name": "Scroll of polymorph",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#rainbow-pattern",
+        "Name": "Scroll of rainbow pattern",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mnemonic-enhancer",
+        "Name": "Scroll of mnemonic enhancer",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#mass-reduce-person",
+        "Name": "Scroll of reduce person, mass",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#remove-curse",
+        "Name": "Scroll of remove curse",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsPtoR.html#repel-vermin",
+        "Name": "Scroll of repel vermin",
+        "Cost": 1000,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#scrying",
+        "Name": "Scroll of scrying",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#shadow-conjuration",
+        "Name": "Scroll of shadow conjuration",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#shout",
+        "Name": "Scroll of shout",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#solid-fog",
+        "Name": "Scroll of solid fog",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#speak-with-plants",
+        "Name": "Scroll of speak with plants",
+        "Cost": 1000,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#stone-shape",
+        "Name": "Scroll of stone shape",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#stoneskin",
+        "Name": "Scroll of stoneskin",
+        "Cost": 950,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-iv",
+        "Name": "Scroll of summon monster IV",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-fire",
+        "Name": "Scroll of wall of fire",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-ice",
+        "Name": "Scroll of wall of ice",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#zone-of-silence",
+        "Name": "Scroll of zone of silence",
+        "Cost": 1000,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animal-growth",
+        "Name": "Scroll of animal growth",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#baleful-polymorph",
+        "Name": "Scroll of baleful polymorph",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#interposing-hand",
+        "Name": "Scroll of interposing hand",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#blight",
+        "Name": "Scroll of blight",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#break-enchantment",
+        "Name": "Scroll of break enchantment",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#cloudkill",
+        "Name": "Scroll of cloudkill",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#cone-of-cold",
+        "Name": "Scroll of cone of cold",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#contact-other-plane",
+        "Name": "Scroll of contact other plane",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#mass-cure-light-wounds",
+        "Name": "Scroll of cure light wounds, mass",
+        "Cost": 1625,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dismissal",
+        "Name": "Scroll of dismissal",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#greater-dispel-magic",
+        "Name": "Scroll of dispel magic, greater",
+        "Cost": 1625,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dominate-person",
+        "Name": "Scroll of dominate person",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dream",
+        "Name": "Scroll of dream",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fabricate",
+        "Name": "Scroll of fabricate",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#false-vision",
+        "Name": "Scroll of false vision",
+        "Cost": 1375,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#feeblemind",
+        "Name": "Scroll of feeblemind",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hold-monster",
+        "Name": "Scroll of hold monster",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#secret-chest",
+        "Name": "Scroll of secret chest",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-jar",
+        "Name": "Scroll of magic jar",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#major-creation",
+        "Name": "Scroll of major creation",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mind-fog",
+        "Name": "Scroll of mind fog",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mirage-arcana",
+        "Name": "Scroll of mirage arcana",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mages-faithful-hound",
+        "Name": "Scroll of mage's faithful hound",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mages-private-sanctum",
+        "Name": "Scroll of mage's private sanctum",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#nightmare",
+        "Name": "Scroll of nightmare",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsMtoO.html#overland-flight",
+        "Name": "Scroll of overland flight",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#passwall",
+        "Name": "Scroll of passwall",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsPtoR.html#permanency",
+        "Name": "Scroll of permanency",
+        "Cost": 10125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#persistent-image",
+        "Name": "Scroll of persistent image",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#lesser-planar-binding",
+        "Name": "Scroll of planar binding, lesser",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#prying-eyes",
+        "Name": "Scroll of prying eyes",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#telepathic-bond",
+        "Name": "Scroll of telepathic bond",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#seeming",
+        "Name": "Scroll of seeming",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#sending",
+        "Name": "Scroll of sending",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#shadow-evocation",
+        "Name": "Scroll of shadow evocation",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#song-of-discord",
+        "Name": "Scroll of song of discord",
+        "Cost": 1625,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-v",
+        "Name": "Scroll of summon monster V",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-pain",
+        "Name": "Scroll of symbol of pain",
+        "Cost": 2125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-sleep",
+        "Name": "Scroll of symbol of sleep",
+        "Cost": 2125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#telekinesis",
+        "Name": "Scroll of telekinesis",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#teleport",
+        "Name": "Scroll of teleport",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#transmute-mud-to-rock",
+        "Name": "Scroll of transmute mud to rock",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#transmute-rock-to-mud",
+        "Name": "Scroll of transmute rock to mud",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-force",
+        "Name": "Scroll of wall of force",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-stone",
+        "Name": "Scroll of wall of stone",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#waves-of-fatigue",
+        "Name": "Scroll of waves of fatigue",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#acid-fog",
+        "Name": "Scroll of acid fog",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#analyze-dweomer",
+        "Name": "Scroll of analyze dweomer",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animate-objects",
+        "Name": "Scroll of animate objects",
+        "Cost": 2400,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#antimagic-field",
+        "Name": "Scroll of antimagic field",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#mass-bears-endurance",
+        "Name": "Scroll of bear's endurance, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#forceful-hand",
+        "Name": "Scroll of forceful hand",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#mass-bulls-strength",
+        "Name": "Scroll of bull's strength, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#mass-cats-grace",
+        "Name": "Scroll of cat's grace, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#chain-lightning",
+        "Name": "Scroll of chain lightning",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#circle-of-death",
+        "Name": "Scroll of circle of death",
+        "Cost": 2150,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#contingency",
+        "Name": "Scroll of contingency",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#control-water",
+        "Name": "Scroll of control water",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#create-undead",
+        "Name": "Scroll of create undead",
+        "Cost": 2350,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#mass-cure-moderate-wounds",
+        "Name": "Scroll of cure moderate wounds, mass",
+        "Cost": 2400,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#disintegrate",
+        "Name": "Scroll of disintegrate",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#greater-dispel-magic",
+        "Name": "Scroll of dispel magic, greater",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#mass-eagles-splendor",
+        "Name": "Scroll of eagle's splendor, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#eyebite",
+        "Name": "Scroll of eyebite",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#find-the-path",
+        "Name": "Scroll of find the path",
+        "Cost": 2400,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#flesh-to-stone",
+        "Name": "Scroll of flesh to stone",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#mass-foxs-cunning",
+        "Name": "Scroll of fox's cunning, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#geas/quest",
+        "Name": "Scroll of geas/quest",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#globe-of-invulnerability",
+        "Name": "Scroll of globe of invulnerability",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#guards-and-wards",
+        "Name": "Scroll of guards and wards",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsHtoL.html#heroes-feast",
+        "Name": "Scroll of heroes' feast",
+        "Cost": 2400,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#greater-heroism",
+        "Name": "Scroll of heroism, greater",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsHtoL.html#legend-lore",
+        "Name": "Scroll of legend lore",
+        "Cost": 1900,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mislead",
+        "Name": "Scroll of mislead",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mages-lucubration",
+        "Name": "Scroll of mage's lucubration",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#move-earth",
+        "Name": "Scroll of move earth",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#freezing-sphere",
+        "Name": "Scroll of freezing sphere",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mass-owls-wisdom",
+        "Name": "Scroll of owl's wisdom, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#permanent-image",
+        "Name": "Scroll of permanent image",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#planar-binding",
+        "Name": "Scroll of planar binding",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#programmed-image",
+        "Name": "Scroll of programmed image",
+        "Cost": 1675,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#repulsion",
+        "Name": "Scroll of repulsion",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#shadow-walk",
+        "Name": "Scroll of shadow walk",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#stone-to-flesh",
+        "Name": "Scroll of stone to flesh",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#mass-suggestion",
+        "Name": "Scroll of suggestion, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-vi",
+        "Name": "Scroll of summon monster VI",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-fear",
+        "Name": "Scroll of symbol of fear",
+        "Cost": 2650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-persuasion",
+        "Name": "Scroll of symbol of persuasion",
+        "Cost": 6650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#sympathetic-vibration",
+        "Name": "Scroll of sympathetic vibration",
+        "Cost": 2400,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#transformation",
+        "Name": "Scroll of transformation",
+        "Cost": 1950,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#true-seeing",
+        "Name": "Scroll of true seeing",
+        "Cost": 1900,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#undeath-to-death",
+        "Name": "Scroll of undeath to death",
+        "Cost": 2150,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#veil",
+        "Name": "Scroll of veil",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-iron",
+        "Name": "Scroll of wall of iron",
+        "Cost": 1700,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#greater-arcane-sight",
+        "Name": "Scroll of arcane sight, greater",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsAtoB.html#banishment",
+        "Name": "Scroll of banishment",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#grasping-hand",
+        "Name": "Scroll of grasping hand",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#control-undead",
+        "Name": "Scroll of control undead",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#control-weather",
+        "Name": "Scroll of control weather",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#delayed-blast-fireball",
+        "Name": "Scroll of delayed blast fireball",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#instant-summons",
+        "Name": "Scroll of instant summons",
+        "Cost": 3275,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#ethereal-jaunt",
+        "Name": "Scroll of ethereal jaunt",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#finger-of-death",
+        "Name": "Scroll of finger of death",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#forcecage",
+        "Name": "Scroll of forcecage",
+        "Cost": 23775,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsHtoL.html#mass-hold-person",
+        "Name": "Scroll of hold person, mass",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#insanity",
+        "Name": "Scroll of insanity",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsHtoL.html#mass-invisibility",
+        "Name": "Scroll of invisibility, mass",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsHtoL.html#limited-wish",
+        "Name": "Scroll of limited wish",
+        "Cost": 3775,
+        "Level": 7
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mages-magnificent-mansion",
+        "Name": "Scroll of mage's magnificent mansion",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mages-sword",
+        "Name": "Scroll of mage's sword",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#phase-door",
+        "Name": "Scroll of phase door",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#plane-shift",
+        "Name": "Scroll of plane shift",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#power-word-blind",
+        "Name": "Scroll of power word blind",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsPtoR.html#prismatic-spray",
+        "Name": "Scroll of prismatic spray",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#project-image",
+        "Name": "Scroll of project image",
+        "Cost": 2280,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#reverse-gravity",
+        "Name": "Scroll of reverse gravity",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#greater-scrying",
+        "Name": "Scroll of scrying, greater",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#sequester",
+        "Name": "Scroll of sequester",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#greater-shadow-conjuration",
+        "Name": "Scroll of shadow conjuration, greater",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#simulacrum",
+        "Name": "Scroll of simulacrum",
+        "Cost": 7275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#spell-turning",
+        "Name": "Scroll of spell turning",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#statue",
+        "Name": "Scroll of statue",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-vii",
+        "Name": "Scroll of summon monster VII",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-stunning",
+        "Name": "Scroll of symbol of stunning",
+        "Cost": 7275,
+        "Level": 7
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-weakness",
+        "Name": "Scroll of symbol of weakness",
+        "Cost": 7275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#teleport-object",
+        "Name": "Scroll of teleport object",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#greater-teleport",
+        "Name": "Scroll of teleport, greater",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#vision",
+        "Name": "Scroll of vision",
+        "Cost": 2775,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#waves-of-exhaustion",
+        "Name": "Scroll of waves of exhaustion",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#antipathy",
+        "Name": "Scroll of antipathy",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#clenched-fist",
+        "Name": "Scroll of clenched fist",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#binding",
+        "Name": "Scroll of binding",
+        "Cost": 8500,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsC.html#mass-charm-monster",
+        "Name": "Scroll of charm monster, mass",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#clone",
+        "Name": "Scroll of clone",
+        "Cost": 4000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#create-greater-undead",
+        "Name": "Scroll of create greater undead",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#demand",
+        "Name": "Scroll of demand",
+        "Cost": 3600,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dimensional-lock",
+        "Name": "Scroll of dimensional lock",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#discern-location",
+        "Name": "Scroll of discern location",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#horrid-wilting",
+        "Name": "Scroll of horrid wilting",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#incendiary-cloud",
+        "Name": "Scroll of incendiary cloud",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#iron-body",
+        "Name": "Scroll of iron body",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#maze",
+        "Name": "Scroll of maze",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mind-blank",
+        "Name": "Scroll of mind blank",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#moment-of-prescience",
+        "Name": "Scroll of moment of prescience",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#telekinetic-sphere",
+        "Name": "Scroll of telekinetic sphere",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#irresistible-dance",
+        "Name": "Scroll of irresistible dance",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#greater-planar-binding",
+        "Name": "Scroll of planar binding, greater",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#polar-ray",
+        "Name": "Scroll of polar ray",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#polymorph-any-object",
+        "Name": "Scroll of polymorph any object",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#power-word-stun",
+        "Name": "Scroll of power word stun",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#prismatic-wall",
+        "Name": "Scroll of prismatic wall",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-spells",
+        "Name": "Scroll of protection from spells",
+        "Cost": 3500,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#greater-prying-eyes",
+        "Name": "Scroll of prying eyes, greater",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#scintillating-pattern",
+        "Name": "Scroll of scintillating pattern",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#screen",
+        "Name": "Scroll of screen",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#greater-shadow-evocation",
+        "Name": "Scroll of shadow evocation, greater",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#greater-shout",
+        "Name": "Scroll of shout, greater",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-viii",
+        "Name": "Scroll of summon monster VIII",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#sunburst",
+        "Name": "Scroll of sunburst",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-death",
+        "Name": "Scroll of symbol of death",
+        "Cost": 8000,
+        "Level": 8
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-insanity",
+        "Name": "Scroll of symbol of insanity",
+        "Cost": 8000,
+        "Level": 8
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#sympathy",
+        "Name": "Scroll of sympathy",
+        "Cost": 4500,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#temporal-stasis",
+        "Name": "Scroll of temporal stasis",
+        "Cost": 3500,
+        "Level": 8
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#trap-the-soul",
+        "Name": "Scroll of trap the soul",
+        "Cost": 13000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#astral-projection",
+        "Name": "Scroll of astral projection",
+        "Cost": 4870,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsC.html#crushing-hand",
+        "Name": "Scroll of crushing hand",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dominate-monster",
+        "Name": "Scroll of dominate monster",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#energy-drain",
+        "Name": "Scroll of energy drain",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsDtoE.html#etherealness",
+        "Name": "Scroll of etherealness",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsFtoG.html#foresight",
+        "Name": "Scroll of foresight",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsFtoG.html#freedom",
+        "Name": "Scroll of freedom",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsFtoG.html#gate",
+        "Name": "Scroll of gate",
+        "Cost": 8825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsHtoL.html#mass-hold-monster",
+        "Name": "Scroll of hold monster, mass",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsHtoL.html#imprisonment",
+        "Name": "Scroll of imprisonment",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsMtoO.html#meteor-swarm",
+        "Name": "Scroll of meteor swarm",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mages-disjunction",
+        "Name": "Scroll of mage's disjunction",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsPtoR.html#power-word-kill",
+        "Name": "Scroll of power word kill",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsPtoR.html#prismatic-sphere",
+        "Name": "Scroll of prismatic sphere",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsPtoR.html#refuge",
+        "Name": "Scroll of refuge",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsS.html#shades",
+        "Name": "Scroll of shades",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsS.html#shapechange",
+        "Name": "Scroll of shapechange",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#soul-bind",
+        "Name": "Scroll of soul bind",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-ix",
+        "Name": "Scroll of summon monster IX",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#teleportation-circle",
+        "Name": "Scroll of teleportation circle",
+        "Cost": 4825,
+        "Level": 9
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#time-stop",
+        "Name": "Scroll of time stop",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wail-of-the-banshee",
+        "Name": "Scroll of wail of the banshee",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#weird",
+        "Name": "Scroll of weird",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wish",
+        "Name": "Scroll of wish",
+        "Cost": 28825,
+        "Level": 9
+      }
+    ],
+    "Divine": [
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsC.html#create-water",
+        "Name": "Scroll of create water",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsC.html#cure-minor-wounds",
+        "Name": "Scroll of cure minor wounds",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 8,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-magic",
+        "Name": "Scroll of detect magic",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-poison",
+        "Name": "Scroll of detect poison",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsFtoG.html#flare",
+        "Name": "Scroll of flare",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsFtoG.html#guidance",
+        "Name": "Scroll of guidance",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsHtoL.html#inflict-minor-wounds",
+        "Name": "Scroll of inflict minor wounds",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsHtoL.html#know-direction",
+        "Name": "Scroll of know direction",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 8,
+        "Link": "http://dndsrd.net/spellsHtoL.html#light",
+        "Name": "Scroll of light",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mending",
+        "Name": "Scroll of mending",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsPtoR.html#purify-food-and-drink",
+        "Name": "Scroll of purify food and drink",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsPtoR.html#read-magic",
+        "Name": "Scroll of read magic",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsPtoR.html#resistance",
+        "Name": "Scroll of resistance",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#virtue",
+        "Name": "Scroll of virtue",
+        "Cost": 12.5,
+        "Level": 0
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsAtoB.html#alarm",
+        "Name": "Scroll of alarm",
+        "Cost": 100,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#bane",
+        "Name": "Scroll of bane",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#bless",
+        "Name": "Scroll of bless",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#bless-water",
+        "Name": "Scroll of bless water",
+        "Cost": 50,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsAtoB.html#bless-weapon",
+        "Name": "Scroll of bless weapon",
+        "Cost": 100,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#calm-animals",
+        "Name": "Scroll of calm animals",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#cause-fear",
+        "Name": "Scroll of cause fear",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#charm-animal",
+        "Name": "Scroll of charm animal",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#command",
+        "Name": "Scroll of command",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#comprehend-languages",
+        "Name": "Scroll of comprehend languages",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsC.html#cure-light-wounds",
+        "Name": "Scroll of cure light wounds",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#curse-water",
+        "Name": "Scroll of curse water",
+        "Cost": 50,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#deathwatch",
+        "Name": "Scroll of deathwatch",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-animals-or-plants",
+        "Name": "Scroll of detect animals or plants",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-chaos",
+        "Name": "Scroll of detect chaos",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-evil",
+        "Name": "Scroll of detect evil",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-good",
+        "Name": "Scroll of detect good",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-law",
+        "Name": "Scroll of detect law",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-snares-and-pits",
+        "Name": "Scroll of detect snares and pits",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#detect-undead",
+        "Name": "Scroll of detect undead",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#divine-favor",
+        "Name": "Scroll of divine favor",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#doom",
+        "Name": "Scroll of doom",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsDtoE.html#endure-elements",
+        "Name": "Scroll of endure elements",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#entangle",
+        "Name": "Scroll of entangle",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#entropic-shield",
+        "Name": "Scroll of entropic shield",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#faerie-fire",
+        "Name": "Scroll of faerie fire",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#goodberry",
+        "Name": "Scroll of goodberry",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hide-from-animals",
+        "Name": "Scroll of hide from animals",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hide-from-undead",
+        "Name": "Scroll of hide from undead",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#inflict-light-wounds",
+        "Name": "Scroll of inflict light wounds",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#jump",
+        "Name": "Scroll of jump",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#longstrider",
+        "Name": "Scroll of longstrider",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-fang",
+        "Name": "Scroll of magic fang",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-stone",
+        "Name": "Scroll of magic stone",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-weapon",
+        "Name": "Scroll of magic weapon",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsMtoO.html#obscuring-mist",
+        "Name": "Scroll of obscuring mist",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#pass-without-trace",
+        "Name": "Scroll of pass without trace",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#produce-flame",
+        "Name": "Scroll of produce flame",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-chaos",
+        "Name": "Scroll of protection from chaos",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-evil",
+        "Name": "Scroll of protection from evil",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-good",
+        "Name": "Scroll of protection from good",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-law",
+        "Name": "Scroll of protection from law",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#remove-fear",
+        "Name": "Scroll of remove fear",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#sanctuary",
+        "Name": "Scroll of sanctuary",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#shield-of-faith",
+        "Name": "Scroll of shield of faith",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#shillelagh",
+        "Name": "Scroll of shillelagh",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#speak-with-animals",
+        "Name": "Scroll of speak with animals",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-i",
+        "Name": "Scroll of summon monster I",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-natures-ally-i",
+        "Name": "Scroll of summon nature's ally I",
+        "Cost": 25,
+        "Level": 1
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animal-messenger",
+        "Name": "Scroll of animal messenger",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animal-trance",
+        "Name": "Scroll of animal trance",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#augury",
+        "Name": "Scroll of augury",
+        "Cost": 175,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#barkskin",
+        "Name": "Scroll of barkskin",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#bears-endurance",
+        "Name": "Scroll of bear's endurance",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#bulls-strength",
+        "Name": "Scroll of bull's strength",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#calm-emotions",
+        "Name": "Scroll of calm emotions",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#cats-grace",
+        "Name": "Scroll of cat's grace",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#chill-metal",
+        "Name": "Scroll of chill metal",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#consecrate",
+        "Name": "Scroll of consecrate",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsC.html#cure-moderate-wounds",
+        "Name": "Scroll of cure moderate wounds",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#darkness",
+        "Name": "Scroll of darkness",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#death-knell",
+        "Name": "Scroll of death knell",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#delay-poison",
+        "Name": "Scroll of delay poison",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#desecrate",
+        "Name": "Scroll of desecrate",
+        "Cost": 200,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#eagles-splendor",
+        "Name": "Scroll of eagle's splendor",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#enthrall",
+        "Name": "Scroll of enthrall",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#find-traps",
+        "Name": "Scroll of find traps",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fire-trap",
+        "Name": "Scroll of fire trap",
+        "Cost": 175,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#flame-blade",
+        "Name": "Scroll of flame blade",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#flaming-sphere",
+        "Name": "Scroll of flaming sphere",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fog-cloud",
+        "Name": "Scroll of fog cloud",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#gentle-repose",
+        "Name": "Scroll of gentle repose",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#gust-of-wind",
+        "Name": "Scroll of gust of wind",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsHtoL.html#heat-metal",
+        "Name": "Scroll of heat metal",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hold-animal",
+        "Name": "Scroll of hold animal",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hold-person",
+        "Name": "Scroll of hold person",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#inflict-moderate-wounds",
+        "Name": "Scroll of inflict moderate wounds",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#make-whole",
+        "Name": "Scroll of make whole",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#owls-wisdom",
+        "Name": "Scroll of owl's wisdom",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsPtoR.html#reduce-animal",
+        "Name": "Scroll of reduce animal",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#remove-paralysis",
+        "Name": "Scroll of remove paralysis",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy",
+        "Name": "Scroll of resist energy",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#lesser-restoration",
+        "Name": "Scroll of restoration, lesser",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#shatter",
+        "Name": "Scroll of shatter",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#shield-other",
+        "Name": "Scroll of shield other",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#silence",
+        "Name": "Scroll of silence",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#snare",
+        "Name": "Scroll of snare",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#soften-earth-and-stone",
+        "Name": "Scroll of soften earth and stone",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#sound-burst",
+        "Name": "Scroll of sound burst",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#speak-with-plants",
+        "Name": "Scroll of speak with plants",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#spider-climb",
+        "Name": "Scroll of spider climb",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#spiritual-weapon",
+        "Name": "Scroll of spiritual weapon",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#status",
+        "Name": "Scroll of status",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-ii",
+        "Name": "Scroll of summon monster II",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-natures-ally-ii",
+        "Name": "Scroll of summon nature's ally II",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-swarm",
+        "Name": "Scroll of summon swarm",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#tree-shape",
+        "Name": "Scroll of tree shape",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#undetectable-alignment",
+        "Name": "Scroll of undetectable alignment",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#warp-wood",
+        "Name": "Scroll of warp wood",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wood-shape",
+        "Name": "Scroll of wood shape",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#zone-of-truth",
+        "Name": "Scroll of zone of truth",
+        "Cost": 150,
+        "Level": 2
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animate-dead",
+        "Name": "Scroll of animate dead",
+        "Cost": 625,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#bestow-curse",
+        "Name": "Scroll of bestow curse",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#blindness/deafness",
+        "Name": "Scroll of blindness/deafness",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#call-lightning",
+        "Name": "Scroll of call lightning",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#contagion",
+        "Name": "Scroll of contagion",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#continual-flame",
+        "Name": "Scroll of continual flame",
+        "Cost": 425,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#create-food-and-water",
+        "Name": "Scroll of create food and water",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsC.html#cure-serious-wounds",
+        "Name": "Scroll of cure serious wounds",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#darkvision",
+        "Name": "Scroll of darkvision",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#daylight",
+        "Name": "Scroll of daylight",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#deeper-darkness",
+        "Name": "Scroll of deeper darkness",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#diminish-plants",
+        "Name": "Scroll of diminish plants",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dispel-magic",
+        "Name": "Scroll of dispel magic",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dominate-animal",
+        "Name": "Scroll of dominate animal",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#glyph-of-warding",
+        "Name": "Scroll of glyph of warding",
+        "Cost": 575,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsHtoL.html#heal-mount",
+        "Name": "Scroll of heal mount",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#helping-hand",
+        "Name": "Scroll of helping hand",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#inflict-serious-wounds",
+        "Name": "Scroll of inflict serious wounds",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#invisibility-purge",
+        "Name": "Scroll of invisibility purge",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#locate-object",
+        "Name": "Scroll of locate object",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-circle-against-chaos",
+        "Name": "Scroll of magic circle against chaos",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-circle-against-evil",
+        "Name": "Scroll of magic circle against evil",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-circle-against-law",
+        "Name": "Scroll of magic circle against law",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-circle-against-good",
+        "Name": "Scroll of magic circle against good",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#greater-magic-fang",
+        "Name": "Scroll of magic fang, greater",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#magic-vestment",
+        "Name": "Scroll of magic vestment",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#meld-into-stone",
+        "Name": "Scroll of meld into stone",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#neutralize-poison",
+        "Name": "Scroll of neutralize poison",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#obscure-object",
+        "Name": "Scroll of obscure object",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#plant-growth",
+        "Name": "Scroll of plant growth",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#prayer",
+        "Name": "Scroll of prayer",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy",
+        "Name": "Scroll of protection from energy",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#quench",
+        "Name": "Scroll of quench",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#remove-blindness/deafness",
+        "Name": "Scroll of remove blindness/deafness",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#remove-curse",
+        "Name": "Scroll of remove curse",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#remove-disease",
+        "Name": "Scroll of remove disease",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#searing-light",
+        "Name": "Scroll of searing light",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#sleet-storm",
+        "Name": "Scroll of sleet storm",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#snare",
+        "Name": "Scroll of snare",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#speak-with-dead",
+        "Name": "Scroll of speak with dead",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#speak-with-plants",
+        "Name": "Scroll of speak with plants",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#spike-growth",
+        "Name": "Scroll of spike growth",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#stone-shape",
+        "Name": "Scroll of stone shape",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-iii",
+        "Name": "Scroll of summon monster III",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#summon-natures-ally-iii",
+        "Name": "Scroll of summon nature's ally III",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#water-breathing",
+        "Name": "Scroll of water breathing",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#water-walk",
+        "Name": "Scroll of water walk",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wind-wall",
+        "Name": "Scroll of wind wall",
+        "Cost": 375,
+        "Level": 3
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsAtoB.html#air-walk",
+        "Name": "Scroll of air walk",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#antiplant-shell",
+        "Name": "Scroll of antiplant shell",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#blight",
+        "Name": "Scroll of blight",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#break-enchantment",
+        "Name": "Scroll of break enchantment",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#command-plants",
+        "Name": "Scroll of command plants",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#control-water",
+        "Name": "Scroll of control water",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsC.html#cure-critical-wounds",
+        "Name": "Scroll of cure critical wounds",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsDtoE.html#death-ward",
+        "Name": "Scroll of death ward",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dimensional-anchor",
+        "Name": "Scroll of dimensional anchor",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#discern-lies",
+        "Name": "Scroll of discern lies",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dismissal",
+        "Name": "Scroll of dismissal",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsDtoE.html#divination",
+        "Name": "Scroll of divination",
+        "Cost": 725,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsDtoE.html#divine-power",
+        "Name": "Scroll of divine power",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsFtoG.html#freedom-of-movement",
+        "Name": "Scroll of freedom of movement",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsFtoG.html#giant-vermin",
+        "Name": "Scroll of giant vermin",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#holy-sword",
+        "Name": "Scroll of holy sword",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#imbue-with-spell-ability",
+        "Name": "Scroll of imbue with spell ability",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#inflict-critical-wounds",
+        "Name": "Scroll of inflict critical wounds",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#greater-magic-weapon",
+        "Name": "Scroll of magic weapon, greater",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#nondetection",
+        "Name": "Scroll of nondetection",
+        "Cost": 750,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#lesser-planar-ally",
+        "Name": "Scroll of planar ally, lesser",
+        "Cost": 1200,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#poison",
+        "Name": "Scroll of poison",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#reincarnate",
+        "Name": "Scroll of reincarnate",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#repel-vermin",
+        "Name": "Scroll of repel vermin",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsPtoR.html#restoration",
+        "Name": "Scroll of restoration",
+        "Cost": 800,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#rusting-grasp",
+        "Name": "Scroll of rusting grasp",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#sending",
+        "Name": "Scroll of sending",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsS.html#spell-immunity",
+        "Name": "Scroll of spell immunity",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#spike-stones",
+        "Name": "Scroll of spike stones",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-iv",
+        "Name": "Scroll of summon monster IV",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#summon-natures-ally-iv",
+        "Name": "Scroll of summon nature's ally IV",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#tongues",
+        "Name": "Scroll of tongues",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#tree-stride",
+        "Name": "Scroll of tree stride",
+        "Cost": 700,
+        "Level": 4
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animal-growth",
+        "Name": "Scroll of animal growth",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsAtoB.html#atonement",
+        "Name": "Scroll of atonement",
+        "Cost": 3625,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsAtoB.html#awaken",
+        "Name": "Scroll of awaken",
+        "Cost": 2375,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#baleful-polymorph",
+        "Name": "Scroll of baleful polymorph",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsAtoB.html#break-enchantment",
+        "Name": "Scroll of break enchantment",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#call-lightning-storm",
+        "Name": "Scroll of call lightning storm",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsC.html#greater-command",
+        "Name": "Scroll of command, greater",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#commune",
+        "Name": "Scroll of commune",
+        "Cost": 1625,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#commune-with-nature",
+        "Name": "Scroll of commune with nature",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#control-winds",
+        "Name": "Scroll of control winds",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsC.html#mass-cure-light-wounds",
+        "Name": "Scroll of cure light wounds, mass",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dispel-chaos",
+        "Name": "Scroll of dispel chaos",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dispel-evil",
+        "Name": "Scroll of dispel evil",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dispel-good",
+        "Name": "Scroll of dispel good",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dispel-law",
+        "Name": "Scroll of dispel law",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#disrupting-weapon",
+        "Name": "Scroll of disrupting weapon",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#flame-strike",
+        "Name": "Scroll of flame strike",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsHtoL.html#hallow",
+        "Name": "Scroll of hallow",
+        "Cost": 6125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#ice-storm",
+        "Name": "Scroll of ice storm",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#mass-inflict-light-wounds",
+        "Name": "Scroll of inflict light wounds, mass",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#insect-plague",
+        "Name": "Scroll of insect plague",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mark-of-justice",
+        "Name": "Scroll of mark of justice",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#plane-shift",
+        "Name": "Scroll of plane shift",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#raise-dead",
+        "Name": "Scroll of raise dead",
+        "Cost": 6125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#righteous-might",
+        "Name": "Scroll of righteous might",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#scrying",
+        "Name": "Scroll of scrying",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#slay-living",
+        "Name": "Scroll of slay living",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#spell-resistance",
+        "Name": "Scroll of spell resistance",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#stoneskin",
+        "Name": "Scroll of stoneskin",
+        "Cost": 1375,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-v",
+        "Name": "Scroll of summon monster V",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#summon-natures-ally-v",
+        "Name": "Scroll of summon nature's ally V",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-pain",
+        "Name": "Scroll of symbol of pain",
+        "Cost": 2125,
+        "Level": 5
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-sleep",
+        "Name": "Scroll of symbol of sleep",
+        "Cost": 2125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#transmute-mud-to-rock",
+        "Name": "Scroll of transmute mud to rock",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#transmute-rock-to-mud",
+        "Name": "Scroll of transmute rock to mud",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#true-seeing",
+        "Name": "Scroll of true seeing",
+        "Cost": 1375,
+        "Level": 5
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#unhallow",
+        "Name": "Scroll of unhallow",
+        "Cost": 6125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-fire",
+        "Name": "Scroll of wall of fire",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-stone",
+        "Name": "Scroll of wall of stone",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wall-of-thorns",
+        "Name": "Scroll of wall of thorns",
+        "Cost": 1125,
+        "Level": 5
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animate-objects",
+        "Name": "Scroll of animate objects",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#antilife-shell",
+        "Name": "Scroll of antilife shell",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#banishment",
+        "Name": "Scroll of banishment",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsAtoB.html#mass-bears-endurance",
+        "Name": "Scroll of bear's endurance, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#blade-barrier",
+        "Name": "Scroll of blade barrier",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsAtoB.html#mass-bulls-strength",
+        "Name": "Scroll of bull's strength, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsC.html#mass-cats-grace",
+        "Name": "Scroll of cat's grace, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsC.html#create-undead",
+        "Name": "Scroll of create undead",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsC.html#mass-cure-moderate-wounds",
+        "Name": "Scroll of cure moderate wounds, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#greater-dispel-magic",
+        "Name": "Scroll of dispel magic, greater",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#mass-eagles-splendor",
+        "Name": "Scroll of eagle's splendor, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#find-the-path",
+        "Name": "Scroll of find the path",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fire-seeds",
+        "Name": "Scroll of fire seeds",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#forbiddance",
+        "Name": "Scroll of forbiddance",
+        "Cost": 4650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#geas/quest",
+        "Name": "Scroll of geas/quest",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsFtoG.html#greater-glyph-of-warding",
+        "Name": "Scroll of glyph of warding, greater",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#harm",
+        "Name": "Scroll of harm",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#heal",
+        "Name": "Scroll of heal",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#heroes-feast",
+        "Name": "Scroll of heroes' feast",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#mass-inflict-moderate-wounds",
+        "Name": "Scroll of inflict moderate wounds, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#ironwood",
+        "Name": "Scroll of ironwood",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsHtoL.html#liveoak",
+        "Name": "Scroll of liveoak",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsMtoO.html#move-earth",
+        "Name": "Scroll of move earth",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsMtoO.html#mass-owls-wisdom",
+        "Name": "Scroll of owl's wisdom, mass",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#planar-ally",
+        "Name": "Scroll of planar ally",
+        "Cost": 2400,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsPtoR.html#repel-wood",
+        "Name": "Scroll of repel wood",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#spellstaff",
+        "Name": "Scroll of spellstaff",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#stone-tell",
+        "Name": "Scroll of stone tell",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-vi",
+        "Name": "Scroll of summon monster VI",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#summon-natures-ally-vi",
+        "Name": "Scroll of summon nature's ally VI",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-fear",
+        "Name": "Scroll of symbol of fear",
+        "Cost": 2650,
+        "Level": 6
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-persuasion",
+        "Name": "Scroll of symbol of persuasion",
+        "Cost": 6650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#transport-via-plants",
+        "Name": "Scroll of transport via plants",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#undeath-to-death",
+        "Name": "Scroll of undeath to death",
+        "Cost": 2150,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#wind-walk",
+        "Name": "Scroll of wind walk",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#word-of-recall",
+        "Name": "Scroll of word of recall",
+        "Cost": 1650,
+        "Level": 6
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animate-plants",
+        "Name": "Scroll of animate plants",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsAtoB.html#blasphemy",
+        "Name": "Scroll of blasphemy",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsC.html#changestaff",
+        "Name": "Scroll of changestaff",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsC.html#control-weather",
+        "Name": "Scroll of control weather",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsC.html#creeping-doom",
+        "Name": "Scroll of creeping doom",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsC.html#mass-cure-serious-wounds",
+        "Name": "Scroll of cure serious wounds, mass",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsDtoE.html#destruction",
+        "Name": "Scroll of destruction",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dictum",
+        "Name": "Scroll of dictum",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsDtoE.html#ethereal-jaunt",
+        "Name": "Scroll of ethereal jaunt",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsHtoL.html#holy-word",
+        "Name": "Scroll of holy word",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsHtoL.html#mass-inflict-serious-wounds",
+        "Name": "Scroll of inflict serious wounds, mass",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsPtoR.html#refuge",
+        "Name": "Scroll of refuge",
+        "Cost": 3775,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsPtoR.html#regenerate",
+        "Name": "Scroll of regenerate",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsPtoR.html#repulsion",
+        "Name": "Scroll of repulsion",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsPtoR.html#greater-restoration",
+        "Name": "Scroll of restoration, greater",
+        "Cost": 4775,
+        "Level": 7
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsPtoR.html#resurrection",
+        "Name": "Scroll of resurrection",
+        "Cost": 12275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsS.html#greater-scrying",
+        "Name": "Scroll of scrying, greater",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-vii",
+        "Name": "Scroll of summon monster VII",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsS.html#summon-natures-ally-vii",
+        "Name": "Scroll of summon nature's ally VII",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsS.html#sunbeam",
+        "Name": "Scroll of sunbeam",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-stunning",
+        "Name": "Scroll of symbol of stunning",
+        "Cost": 7275,
+        "Level": 7
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-weakness",
+        "Name": "Scroll of symbol of weakness",
+        "Cost": 7275,
+        "Level": 7
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#transmute-metal-to-wood",
+        "Name": "Scroll of transmute metal to wood",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#word-of-chaos",
+        "Name": "Scroll of word of chaos",
+        "Cost": 2275,
+        "Level": 7
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsAtoB.html#animal-shapes",
+        "Name": "Scroll of animal shapes",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsAtoB.html#antimagic-field",
+        "Name": "Scroll of antimagic field",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#cloak-of-chaos",
+        "Name": "Scroll of cloak of chaos",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsC.html#control-plants",
+        "Name": "Scroll of control plants",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsC.html#create-greater-undead",
+        "Name": "Scroll of create greater undead",
+        "Cost": 3600,
+        "Level": 8
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsC.html#mass-cure-critical-wounds",
+        "Name": "Scroll of cure critical wounds, mass",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsDtoE.html#dimensional-lock",
+        "Name": "Scroll of dimensional lock",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsDtoE.html#discern-location",
+        "Name": "Scroll of discern location",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsDtoE.html#earthquake",
+        "Name": "Scroll of earthquake",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsFtoG.html#finger-of-death",
+        "Name": "Scroll of finger of death",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsFtoG.html#fire-storm",
+        "Name": "Scroll of fire storm",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsHtoL.html#holy-aura",
+        "Name": "Scroll of holy aura",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsHtoL.html#mass-inflict-critical-wounds",
+        "Name": "Scroll of inflict critical wounds, mass",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsPtoR.html#greater-planar-ally",
+        "Name": "Scroll of planar ally, greater",
+        "Cost": 5500,
+        "Level": 8
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsPtoR.html#repel-metal-or-stone",
+        "Name": "Scroll of repel metal or stone",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsPtoR.html#reverse-gravity",
+        "Name": "Scroll of reverse gravity",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsS.html#shield-of-law",
+        "Name": "Scroll of shield of law",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsS.html#greater-spell-immunity",
+        "Name": "Scroll of spell immunity, greater",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-viii",
+        "Name": "Scroll of summon monster VIII",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsS.html#summon-natures-ally-viii",
+        "Name": "Scroll of summon nature's ally VIII",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsS.html#sunburst",
+        "Name": "Scroll of sunburst",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-death",
+        "Name": "Scroll of symbol of death",
+        "Cost": 8000,
+        "Level": 8
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsS.html#symbol-of-insanity",
+        "Name": "Scroll of symbol of insanity",
+        "Cost": 8000,
+        "Level": 8
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#unholy-aura",
+        "Name": "Scroll of unholy aura",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#whirlwind",
+        "Name": "Scroll of whirlwind",
+        "Cost": 3000,
+        "Level": 8
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsAtoB.html#antipathy",
+        "Name": "Scroll of antipathy",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 3,
+        "Link": "http://dndsrd.net/spellsAtoB.html#astral-projection",
+        "Name": "Scroll of astral projection",
+        "Cost": 4870,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsDtoE.html#elemental-swarm",
+        "Name": "Scroll of elemental swarm",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsDtoE.html#energy-drain",
+        "Name": "Scroll of energy drain",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsDtoE.html#etherealness",
+        "Name": "Scroll of etherealness",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsFtoG.html#foresight",
+        "Name": "Scroll of foresight",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsFtoG.html#gate",
+        "Name": "Scroll of gate",
+        "Cost": 8825,
+        "Level": 9
+      },
+      {
+        "Chance": 9,
+        "Link": "http://dndsrd.net/spellsHtoL.html#mass-heal",
+        "Name": "Scroll of heal, mass",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 7,
+        "Link": "http://dndsrd.net/spellsHtoL.html#implosion",
+        "Name": "Scroll of implosion",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 2,
+        "Link": "http://dndsrd.net/spellsMtoO.html#miracle",
+        "Name": "Scroll of miracle",
+        "Cost": 28825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsPtoR.html#regenerate",
+        "Name": "Scroll of regenerate",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsS.html#shambler",
+        "Name": "Scroll of shambler",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsS.html#shapechange",
+        "Name": "Scroll of shapechange",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 5,
+        "Link": "http://dndsrd.net/spellsS.html#soul-bind",
+        "Name": "Scroll of soul bind",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsS.html#storm-of-vengeance",
+        "Name": "Scroll of storm of vengeance",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsS.html#summon-monster-ix",
+        "Name": "Scroll of summon monster IX",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 6,
+        "Link": "http://dndsrd.net/spellsS.html#summon-natures-ally-ix",
+        "Name": "Scroll of summon nature's ally IX",
+        "Cost": 3825,
+        "Level": 9
+      },
+      {
+        "Chance": 4,
+        "Link": "http://dndsrd.net/spellsS.html#sympathy",
+        "Name": "Scroll of sympathy",
+        "Cost": 5325,
+        "Level": 9
+      },
+      {
+        "Chance": 1,
+        "Link": "http://dndsrd.net/spellsTtoZ.html#true-resurrection",
+        "Name": "Scroll of true resurrection",
+        "Cost": 28825,
+        "Level": 9
+      }
+    ]
+}
