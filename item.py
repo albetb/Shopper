@@ -4,10 +4,11 @@ from json import load
 class Item():
     def __init__(self) -> None:
         self.items = self.load_items()
+        self.scrolls = self.load_items("scrolls")
 
-    def load_items(self) -> dict:
-        """ Load items list """
-        with open('items.json', 'r') as file:
+    def load_items(self, file = "items") -> dict:
+        """ Load items or scrolls list """
+        with open(f"{file}.json", "r") as file:
             return load(file)
 
     def new(self, type: str, shop_level: float, party_level: int) -> dict or None:
@@ -25,6 +26,7 @@ class Item():
             "Staff" : self.new_staff(shop_level, quality), # None if quality is "Minor"
             "Wand" : self.new_wand(shop_level, quality),
             "Wondrous Item" : self.new_wondrous_item(shop_level, quality),
+            "Scroll" : self.new_scroll(shop_level, quality)
         }
         return generate[type]
 
@@ -63,32 +65,42 @@ class Item():
 
     def new_potion(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Potion """
-        weights = (item[quality] + shop_level * (item[quality] > 0) for item in self.items["Potion"])
+        weights = (item[quality] + shop_level * int(item[quality] > 0) for item in self.items["Potion"])
         return choices(population = self.items["Potion"], weights = weights)[0]
 
     def new_ring(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Ring """
-        weights = (item[quality] + shop_level * (item[quality] > 0) for item in self.items["Ring"])
+        weights = (item[quality] + shop_level * int(item[quality] > 0) for item in self.items["Ring"])
         return choices(population = self.items["Ring"], weights = weights)[0]
 
     def new_rod(self, shop_level: float, quality: str) -> dict or None:
         """ Generate a new Rod, is None if quality is "Minor" """
         if quality == "Minor": return None
-        weights = (item[quality] + shop_level * (item[quality] > 0) for item in self.items["Rod"])
+        weights = (item[quality] + shop_level * int(item[quality] > 0) for item in self.items["Rod"])
         return choices(population = self.items["Rod"], weights = weights)[0]
 
     def new_staff(self, shop_level: float, quality: str) -> dict or None:
         """ Generate a new Staff, is None if quality is "Minor" """
         if quality == "Minor": return None
-        weights = (item[quality] + shop_level * (item[quality] > 0) for item in self.items["Staff"])
+        weights = (item[quality] + shop_level * int(item[quality] > 0) for item in self.items["Staff"])
         return choices(population = self.items["Staff"], weights = weights)[0]
 
     def new_wand(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Wand """
-        weights = (item[quality] + shop_level * (item[quality] > 0) for item in self.items["Wand"])
+        weights = (item[quality] + shop_level * int(item[quality] > 0) for item in self.items["Wand"])
         return choices(population = self.items["Wand"], weights = weights)[0]
 
     def new_wondrous_item(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Wondrous Item """
         num = int(min(randint(0, 2 * shop_level) + randint(1, 100), 100))
-        return list(filter(lambda x: x["Number"] == num and x["Type"] == quality, self.items["Wondrous Item"]))[0]
+        items =  self.items["Wondrous Item"]
+        return list(filter(lambda x: x["Number"] == num and x["Type"] == quality, items))[0]
+
+    def new_scroll(self, shop_level: float, quality: str) -> dict:
+        """ Generate a new Scroll, 70% Arcane 30% Divine """
+        scroll_type = choices(population = ("Arcane", "Divine"), weights = (7, 3))[0]
+        l_weights = (item[quality] + (shop_level ** 0.5) * int(item[quality] > 0) for item in self.scrolls["Scroll level"])
+        level = choices(population = self.scrolls["Scroll level"], weights = l_weights)[0]["Level"]
+        scrolls = list(filter(lambda x: x["Level"] == level, self.scrolls[scroll_type]))
+        s_weights = (item["Chance"] for item in scrolls)
+        return choices(population = scrolls, weights = s_weights)[0]

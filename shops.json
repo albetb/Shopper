@@ -1,0 +1,67 @@
+{
+    "Type": [
+      {
+        "Name": "",
+        "Description": "Common Merchant",
+        "Min level": 0,
+        "Modifier": {
+          "Good": 10,
+          "Potion": 1
+        }
+      },
+      {
+        "Name": "Jeff",
+        "Description": "A legendary merchant for testing",
+        "Min level": 5,
+        "Modifier": {
+          "Good": 0.5,
+          "Weapon": 0.1,
+          "Armor": 1,
+          "Potion": 2,
+          "Ring": 3,
+          "Rod": 5,
+          "Staff": 7,
+          "Wand": 10,
+          "Scroll": 12,
+          "Wondrous Item": 20
+        }
+      },
+      {
+        "Name": "Stafferino",
+        "Description": "Staffers",
+        "Min level": 1,
+        "Modifier": {
+          "Rod": 5,
+          "Staff": 7
+        }
+      },
+      {
+        "Name": "Blacksmith",
+        "Description": "Normal weapon and armor vendor",
+        "Min level": 0,
+        "Modifier": {
+          "Good": 1,
+          "Weapon": 6,
+          "Armor": 4,
+          "Ring": 0.2
+        }
+      },
+      {
+        "Name": "",
+        "Description": "Common Merchant",
+        "Min level": 0,
+        "Modifier": {
+          "Good": 10,
+          "Potion": 1
+        }
+      },
+      {
+        "Name": "Writer",
+        "Description": "Sell scrolls",
+        "Min level": 1,
+        "Modifier": {
+          "Scroll": 13
+        }
+      }
+    ]
+  }
