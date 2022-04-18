@@ -40,19 +40,9 @@
         "Description": "Normal weapon and armor vendor",
         "Min level": 0,
         "Modifier": {
-          "Good": 1,
-          "Weapon": 6,
-          "Armor": 4,
-          "Ring": 0.2
-        }
-      },
-      {
-        "Name": "",
-        "Description": "Common Merchant",
-        "Min level": 0,
-        "Modifier": {
-          "Good": 10,
-          "Potion": 1
+          "Weapon": 5,
+          "Armor": 3,
+          "Ring": 0.15
         }
       },
       {
@@ -60,7 +50,34 @@
         "Description": "Sell scrolls",
         "Min level": 1,
         "Modifier": {
-          "Scroll": 13
+          "Scroll": 7
+        }
+      },
+      {
+        "Name": "Mage Merchant",
+        "Description": "Sell magic items",
+        "Min level": 1,
+        "Modifier": {
+            "Magic Armor" : 0.1,
+            "Magic Weapon" : 0.2,
+            "Potion" : 2.5,
+            "Ring" : 0.2,
+            "Rod" : 1,
+            "Staff" : 1,
+            "Wand" : 1,
+            "Wondrous Item" : 0.8,
+            "Scroll" : 4
+        }
+      },
+      {
+        "Name": "Magic Blacksmith",
+        "Description": "Sell magic weapon and armor",
+        "Min level": 1,
+        "Modifier": {
+            "Magic Armor" : 2,
+            "Magic Weapon" : 3,
+            "Ring" : 0.1,
+            "Wondrous Item" : 0.1
         }
       }
     ]

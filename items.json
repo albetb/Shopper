@@ -1602,85 +1602,31 @@
       "Minor": 70,
       "Medium": 10,
       "Major": 0,
-      "Name": "+1",
-      "Cost": 2000
+      "Name": 1
     },
     {
       "Minor": 15,
       "Medium": 19,
       "Major": 0,
-      "Name": "+2",
-      "Cost": 8000
+      "Name": 2
     },
     {
       "Minor": 0,
       "Medium": 29,
       "Major": 20,
-      "Name": "+3",
-      "Cost": 18000
+      "Name": 3
     },
     {
       "Minor": 0,
       "Medium": 4,
       "Major": 18,
-      "Name": "+4",
-      "Cost": 32000
+      "Name": 4
     },
     {
       "Minor": 0,
       "Medium": 0,
       "Major": 11,
-      "Name": "+5",
-      "Cost": 50000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 0,
-      "Name": "+6",
-      "Cost": 72000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 0,
-      "Name": "+7",
-      "Cost": 98000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 0,
-      "Name": "+8",
-      "Cost": 128000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 0,
-      "Name": "+9",
-      "Cost": 162000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 0,
-      "Name": "+10",
-      "Cost": 200000
-    },
-    {
-      "Minor": 5,
-      "Medium": 6,
-      "Major": 14,
-      "Name": "Specific weapon",
-      "Cost": "-"
-    },
-    {
-      "Minor": 10,
-      "Medium": 32,
-      "Major": 37,
-      "Name": "Special ability and roll again",
-      "Cost": "-"
+      "Name": 5
     }
   ],
   "Magic Armor Base": [
@@ -1688,127 +1634,61 @@
       "Minor": 60,
       "Medium": 5,
       "Major": 0,
-      "Name": "+1 shield",
-      "Cost": 1000
+      "Name": "+1 shield"
     },
     {
       "Minor": 20,
       "Medium": 5,
       "Major": 0,
-      "Name": "+1 armor",
-      "Cost": 1000
+      "Name": "+1 armor"
     },
     {
       "Minor": 5,
       "Medium": 10,
       "Major": 0,
-      "Name": "+2 shield",
-      "Cost": 4000
+      "Name": "+2 shield"
     },
     {
       "Minor": 2,
       "Medium": 10,
       "Major": 0,
-      "Name": "+2 armor",
-      "Cost": 4000
+      "Name": "+2 armor"
     },
     {
       "Minor": 0,
       "Medium": 10,
       "Major": 8,
-      "Name": "+3 shield",
-      "Cost": 9000
+      "Name": "+3 shield"
     },
     {
       "Minor": 0,
       "Medium": 10,
       "Major": 8,
-      "Name": "+3 armor",
-      "Cost": 9000
+      "Name": "+3 armor"
     },
     {
       "Minor": 0,
       "Medium": 5,
       "Major": 11,
-      "Name": "+4 shield",
-      "Cost": 16000
+      "Name": "+4 shield"
     },
     {
       "Minor": 0,
       "Medium": 2,
       "Major": 11,
-      "Name": "+4 armor",
-      "Cost": 16000
+      "Name": "+4 armor"
     },
     {
       "Minor": 0,
       "Medium": 0,
       "Major": 11,
-      "Name": "+5 shield",
-      "Cost": 25000
+      "Name": "+5 shield"
     },
     {
       "Minor": 0,
       "Medium": 0,
       "Major": 8,
-      "Name": "+5 armor",
-      "Cost": 25000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 0,
-      "Name": "+6 armor/shield",
-      "Cost": 36000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 0,
-      "Name": "+7 armor/shield",
-      "Cost": 49000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 0,
-      "Name": "+8 armor/shield",
-      "Cost": 64000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 0,
-      "Name": "+9 armor/shield",
-      "Cost": 81000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 0,
-      "Name": "+10 armor/shield",
-      "Cost": 100000
-    },
-    {
-      "Minor": 2,
-      "Medium": 3,
-      "Major": 3,
-      "Name": "Specific armor",
-      "Cost": "-"
-    },
-    {
-      "Minor": 2,
-      "Medium": 3,
-      "Major": 3,
-      "Name": "Specific shield",
-      "Cost": "-"
-    },
-    {
-      "Minor": 9,
-      "Medium": 37,
-      "Major": 37,
-      "Name": "Special ability and roll again",
-      "Cost": "-"
+      "Name": "+5 armor"
     }
   ],
   "Specific Armor": [
@@ -2256,7 +2136,7 @@
       "Major": 3,
       "Link": "http://dndsrd.net/magicItemsAW.html#bane",
       "Name": "Bane",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 7,
@@ -2264,7 +2144,7 @@
       "Major": 0,
       "Link": "http://dndsrd.net/magicItemsAW.html#defending",
       "Name": "Defending",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 10,
@@ -2272,7 +2152,7 @@
       "Major": 3,
       "Link": "http://dndsrd.net/magicItemsAW.html#flaming",
       "Name": "Flaming",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 10,
@@ -2280,7 +2160,7 @@
       "Major": 3,
       "Link": "http://dndsrd.net/magicItemsAW.html#frost",
       "Name": "Frost",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 10,
@@ -2288,7 +2168,7 @@
       "Major": 3,
       "Link": "http://dndsrd.net/magicItemsAW.html#shock",
       "Name": "Shock",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 9,
@@ -2296,7 +2176,7 @@
       "Major": 3,
       "Link": "http://dndsrd.net/magicItemsAW.html#ghost-touch-weapon",
       "Name": "Ghost touch",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 11,
@@ -2304,7 +2184,7 @@
       "Major": 0,
       "Link": "http://dndsrd.net/magicItemsAW.html#keen",
       "Name": "Keen",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 4,
@@ -2312,7 +2192,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#ki-focus",
       "Name": "Ki Focus",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 4,
@@ -2320,7 +2200,7 @@
       "Major": 0,
       "Link": "http://dndsrd.net/magicItemsAW.html#merciful",
       "Name": "Merciful",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 7,
@@ -2328,7 +2208,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#mighty-cleaving",
       "Name": "Mighty cleaving",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 5,
@@ -2336,7 +2216,7 @@
       "Major": 3,
       "Link": "http://dndsrd.net/magicItemsAW.html#spell-storing",
       "Name": "Spell storing",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 4,
@@ -2344,7 +2224,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#throwing",
       "Name": "Throwing",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 4,
@@ -2352,7 +2232,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#thundering",
       "Name": "Thundering",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 4,
@@ -2360,7 +2240,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#vicious",
       "Name": "Vicious",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 0,
@@ -2368,7 +2248,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#anarchic",
       "Name": "Anarchic",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2376,7 +2256,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#axiomatic",
       "Name": "Axiomatic",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2384,7 +2264,7 @@
       "Major": 3,
       "Link": "http://dndsrd.net/magicItemsAW.html#disruption",
       "Name": "Disruption",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2392,7 +2272,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#flaming-burst",
       "Name": "Flaming burst",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2400,7 +2280,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#icy-burst",
       "Name": "Icy burst",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2408,7 +2288,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#holy",
       "Name": "Holy",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2416,7 +2296,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#shocking-burst",
       "Name": "Shocking burst",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2424,7 +2304,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#unholy",
       "Name": "Unholy",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2432,7 +2312,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#wounding",
       "Name": "Wounding",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2440,7 +2320,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#speed",
       "Name": "Speed",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -2448,7 +2328,7 @@
       "Major": 3,
       "Link": "http://dndsrd.net/magicItemsAW.html#brilliant-energy",
       "Name": "Brilliant energy",
-      "Cost Modifier": "+4 bonus"
+      "Cost Modifier": 4
     },
     {
       "Minor": 0,
@@ -2456,7 +2336,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#dancing",
       "Name": "Dancing",
-      "Cost Modifier": "+4 bonus"
+      "Cost Modifier": 4
     },
     {
       "Minor": 0,
@@ -2464,7 +2344,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#vorpal",
       "Name": "Vorpal",
-      "Cost Modifier": "+5 bonus"
+      "Cost Modifier": 5
     }
   ],
   "Magic Ranged Weapon": [
@@ -2474,7 +2354,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#bane",
       "Name": "Bane",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 13,
@@ -2482,7 +2362,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#distance",
       "Name": "Distance",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 15,
@@ -2490,7 +2370,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#flaming",
       "Name": "Flaming",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 15,
@@ -2498,7 +2378,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#frost",
       "Name": "Frost",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 5,
@@ -2506,7 +2386,7 @@
       "Major": 0,
       "Link": "http://dndsrd.net/magicItemsAW.html#merciful",
       "Name": "Merciful",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 8,
@@ -2514,7 +2394,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#returning",
       "Name": "Returning",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 15,
@@ -2522,7 +2402,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#shock",
       "Name": "Shock",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 10,
@@ -2530,7 +2410,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#seeking",
       "Name": "Seeking",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 6,
@@ -2538,7 +2418,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#thundering",
       "Name": "Thundering",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 0,
@@ -2546,7 +2426,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#anarchic",
       "Name": "Anarchic",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2554,7 +2434,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#axiomatic",
       "Name": "Axiomatic",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2562,7 +2442,7 @@
       "Major": 10,
       "Link": "http://dndsrd.net/magicItemsAW.html#flaming-burst",
       "Name": "Flaming burst",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2570,7 +2450,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#holy",
       "Name": "Holy",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2578,7 +2458,7 @@
       "Major": 10,
       "Link": "http://dndsrd.net/magicItemsAW.html#icy-burst",
       "Name": "Icy burst",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2586,7 +2466,7 @@
       "Major": 10,
       "Link": "http://dndsrd.net/magicItemsAW.html#shocking-burst",
       "Name": "Shocking burst",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2594,7 +2474,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#unholy",
       "Name": "Unholy",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2602,7 +2482,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#speed",
       "Name": "Speed",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -2610,7 +2490,7 @@
       "Major": 6,
       "Link": "http://dndsrd.net/magicItemsAW.html#brilliant-energy",
       "Name": "Brilliant energy",
-      "Cost Modifier": "+4 bonus"
+      "Cost Modifier": 4
     }
   ],
   "Magic Shield": [
@@ -2620,7 +2500,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#arrow-catching",
       "Name": "Arrow catching",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 20,
@@ -2628,7 +2508,7 @@
       "Major": 3,
       "Link": "http://dndsrd.net/magicItemsAW.html#bashing",
       "Name": "Bashing",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 10,
@@ -2636,7 +2516,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#blinding",
       "Name": "Blinding",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 25,
@@ -2644,7 +2524,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
       "Name": "Fortification, light",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 17,
@@ -2652,7 +2532,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#arrow-deflection",
       "Name": "Arrow deflection",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 5,
@@ -2660,7 +2540,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#animated",
       "Name": "Animated",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 2,
@@ -2668,7 +2548,7 @@
       "Major": 0,
       "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
       "Name": "Spell resistance (13)",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 0,
@@ -2716,7 +2596,7 @@
       "Major": 6,
       "Link": "http://dndsrd.net/magicItemsAW.html#ghost-touch",
       "Name": "Ghost touch",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -2724,7 +2604,7 @@
       "Major": 10,
       "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
       "Name": "Fortification, moderate",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -2732,7 +2612,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
       "Name": "Spell resistance (15)",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -2740,7 +2620,7 @@
       "Major": 1,
       "Link": "http://dndsrd.net/magicItemsAW.html#wild",
       "Name": "Wild",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -2788,7 +2668,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
       "Name": "Spell resistance (17)",
-      "Cost Modifier": "+4 bonus"
+      "Cost Modifier": 4
     },
     {
       "Minor": 0,
@@ -2804,7 +2684,7 @@
       "Major": 4,
       "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
       "Name": "Fortification, heavy",
-      "Cost Modifier": "+5 bonus"
+      "Cost Modifier": 5
     },
     {
       "Minor": 0,
@@ -2812,7 +2692,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#reflecting",
       "Name": "Reflecting",
-      "Cost Modifier": "+5 bonus"
+      "Cost Modifier": 5
     },
     {
       "Minor": 0,
@@ -2820,7 +2700,7 @@
       "Major": 1,
       "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
       "Name": "Spell resistance (19)",
-      "Cost Modifier": "+5 bonus"
+      "Cost Modifier": 5
     },
     {
       "Minor": 0,
@@ -2878,7 +2758,7 @@
       "Major": 1,
       "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
       "Name": "Fortification, light",
-      "Cost Modifier": "+1 bonus"
+      "Cost Modifier": 1
     },
     {
       "Minor": 20,
@@ -2910,7 +2790,7 @@
       "Major": 0,
       "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
       "Name": "Spell resistance (13)",
-      "Cost Modifier": "+2 bonus"
+      "Cost Modifier": 2
     },
     {
       "Minor": 1,
@@ -2982,7 +2862,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#ghost-touch",
       "Name": "Ghost touch",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -2990,7 +2870,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#invulnerability",
       "Name": "Invulnerability",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -2998,7 +2878,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
       "Name": "Fortification, moderate",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -3006,7 +2886,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
       "Name": "Spell resistance (15)",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -3014,7 +2894,7 @@
       "Major": 1,
       "Link": "http://dndsrd.net/magicItemsAW.html#wild",
       "Name": "Wild",
-      "Cost Modifier": "+3 bonus"
+      "Cost Modifier": 3
     },
     {
       "Minor": 0,
@@ -3086,7 +2966,7 @@
       "Major": 5,
       "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
       "Name": "Spell resistance (17)",
-      "Cost Modifier": "+4 bonus"
+      "Cost Modifier": 4
     },
     {
       "Minor": 0,
@@ -3110,7 +2990,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
       "Name": "Fortification, heavy",
-      "Cost Modifier": "+5 bonus"
+      "Cost Modifier": 5
     },
     {
       "Minor": 0,
@@ -3118,7 +2998,7 @@
       "Major": 2,
       "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
       "Name": "Spell resistance (19)",
-      "Cost Modifier": "+5 bonus"
+      "Cost Modifier": 5
     },
     {
       "Minor": 0,
@@ -3243,12 +3123,36 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#pass-without-trace"
     },
     {
-      "Name": "Potion of Protection from (alignment)",
-      "Minor": 2,
+      "Name": "Potion of Protection from evil",
+      "Minor": 0.5,
       "Medium": 0,
       "Major": 0,
       "Cost": 50,
       "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-evil"
+    },
+    {
+      "Name": "Potion of Protection from good",
+      "Minor": 0.5,
+      "Medium": 0,
+      "Major": 0,
+      "Cost": 50,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-good"
+    },
+    {
+      "Name": "Potion of Protection from chaos",
+      "Minor": 0.5,
+      "Medium": 0,
+      "Major": 0,
+      "Cost": 50,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-chaos"
+    },
+    {
+      "Name": "Potion of Protection from law",
+      "Minor": 0.5,
+      "Medium": 0,
+      "Major": 0,
+      "Cost": 50,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-law"
     },
     {
       "Name": "Potion of Remove fear",
@@ -3459,9 +3363,41 @@
       "Link": "http://dndsrd.net/spellsPtoR.html#remove-paralysis"
     },
     {
-      "Name": "Potion of Resist energy (type) 10",
-      "Minor": 3,
-      "Medium": 2,
+      "Name": "Potion of Resist acid 10",
+      "Minor": 0.6,
+      "Medium": 0.4,
+      "Major": 0,
+      "Cost": 300,
+      "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
+    },
+    {
+      "Name": "Potion of Resist cold 10",
+      "Minor": 0.6,
+      "Medium": 0.4,
+      "Major": 0,
+      "Cost": 300,
+      "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
+    },
+    {
+      "Name": "Potion of Resist electricity 10",
+      "Minor": 0.6,
+      "Medium": 0.4,
+      "Major": 0,
+      "Cost": 300,
+      "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
+    },
+    {
+      "Name": "Potion of Resist fire 10",
+      "Minor": 0.6,
+      "Medium": 0.4,
+      "Major": 0,
+      "Cost": 300,
+      "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
+    },
+    {
+      "Name": "Potion of Resist sonic 10",
+      "Minor": 0.6,
+      "Medium": 0.4,
       "Major": 0,
       "Cost": 300,
       "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
@@ -3507,10 +3443,42 @@
       "Link": "http://dndsrd.net/spellsS.html#shield-of-faith"
     },
     {
-      "Name": "Potion of Resist energy (type) 20",
+      "Name": "Potion of Resist acid 20",
       "Minor": 0,
-      "Medium": 3,
-      "Major": 2,
+      "Medium": 0.6,
+      "Major": 0.4,
+      "Cost": 700,
+      "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
+    },
+    {
+      "Name": "Potion of Resist cold 20",
+      "Minor": 0,
+      "Medium": 0.6,
+      "Major": 0.4,
+      "Cost": 700,
+      "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
+    },
+    {
+      "Name": "Potion of Resist electricity 20",
+      "Minor": 0,
+      "Medium": 0.6,
+      "Major": 0.4,
+      "Cost": 700,
+      "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
+    },
+    {
+      "Name": "Potion of Resist fire 20",
+      "Minor": 0,
+      "Medium": 0.6,
+      "Major": 0.4,
+      "Cost": 700,
+      "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
+    },
+    {
+      "Name": "Potion of Resist sonic 20",
+      "Minor": 0,
+      "Medium": 0.6,
+      "Major": 0.4,
       "Cost": 700,
       "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
     },
@@ -3603,12 +3571,36 @@
       "Link": "http://dndsrd.net/spellsHtoL.html#keen-edge"
     },
     {
-      "Name": "Potion of Magic circle against (alignment)",
+      "Name": "Potion of Magic circle against evil",
       "Minor": 0,
-      "Medium": 1,
-      "Major": 1,
+      "Medium": 0.25,
+      "Major": 0.25,
       "Cost": 750,
-      "Link": "http://dndsrd.net/spellsMtoO.html#magic-circle-against-evil"
+      "Link": "http://dndsrd.net/spellsPtoR.html#magic-circle-against-evil"
+    },
+    {
+      "Name": "Potion of Magic circle against good",
+      "Minor": 0,
+      "Medium": 0.25,
+      "Major": 0.25,
+      "Cost": 750,
+      "Link": "http://dndsrd.net/spellsPtoR.html#magic-circle-against-good"
+    },
+    {
+      "Name": "Potion of Magic circle against chaos",
+      "Minor": 0,
+      "Medium": 0.25,
+      "Major": 0.25,
+      "Cost": 750,
+      "Link": "http://dndsrd.net/spellsPtoR.html#magic-circle-against-chaos"
+    },
+    {
+      "Name": "Potion of Magic circle against law",
+      "Minor": 0,
+      "Medium": 0.25,
+      "Major": 0.25,
+      "Cost": 750,
+      "Link": "http://dndsrd.net/spellsPtoR.html#magic-circle-against-law"
     },
     {
       "Name": "Oil of Magic vestment +1",
@@ -3635,10 +3627,42 @@
       "Link": "http://dndsrd.net/spellsMtoO.html#nondetection"
     },
     {
-      "Name": "Potion of Protection from energy (type)",
+      "Name": "Potion of Protection from acid 20",
       "Minor": 0,
-      "Medium": 3,
-      "Major": 2,
+      "Medium": 0.6,
+      "Major": 0.4,
+      "Cost": 750,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
+    },
+    {
+      "Name": "Potion of Protection from cold 20",
+      "Minor": 0,
+      "Medium": 0.6,
+      "Major": 0.4,
+      "Cost": 750,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
+    },
+    {
+      "Name": "Potion of Protection from electricity 20",
+      "Minor": 0,
+      "Medium": 0.6,
+      "Major": 0.4,
+      "Cost": 750,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
+    },
+    {
+      "Name": "Potion of Protection from fire 20",
+      "Minor": 0,
+      "Medium": 0.6,
+      "Major": 0.4,
+      "Cost": 750,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
+    },
+    {
+      "Name": "Potion of Protection from sonic 20",
+      "Minor": 0,
+      "Medium": 0.6,
+      "Major": 0.4,
       "Cost": 750,
       "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
     },
@@ -3723,12 +3747,44 @@
       "Link": "http://dndsrd.net/spellsFtoG.html#good-hope"
     },
     {
-      "Name": "Potion of Resist energy (type) 30",
+      "Name": "Potion of Protection from acid 30",
       "Minor": 0,
       "Medium": 0,
-      "Major": 3,
+      "Major": 0.6,
       "Cost": 1100,
-      "Link": "http://dndsrd.net/spellsPtoR.html#resist-energy"
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
+    },
+    {
+      "Name": "Potion of Protection from cold 30",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 0.6,
+      "Cost": 1100,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
+    },
+    {
+      "Name": "Potion of Protection from electricity 30",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 0.6,
+      "Cost": 1100,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
+    },
+    {
+      "Name": "Potion of Protection from fire 30",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 0.6,
+      "Cost": 1100,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
+    },
+    {
+      "Name": "Potion of Protection from sonic 30",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 0.6,
+      "Cost": 1100,
+      "Link": "http://dndsrd.net/spellsPtoR.html#protection-from-energy"
     },
     {
       "Name": "Potion of Barkskin +5",
@@ -5268,2101 +5324,2101 @@
   ],
   "Wondrous Item": [
     {
-      "Number": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#feather-token",
+      "Id": 1,
+      "Link": "http://dndsrd.net/magicItemsWI.html#feather-token",
       "Name": "Feather token, anchor",
       "Cost": 50,
       "Type": "Minor"
     },
     {
-      "Number": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#universal-solvent",
+      "Id": 2,
+      "Link": "http://dndsrd.net/magicItemsWI.html#universal-solvent",
       "Name": "Universal solvent",
       "Cost": 50,
       "Type": "Minor"
     },
     {
-      "Number": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#elixir-of-love",
+      "Id": 3,
+      "Link": "http://dndsrd.net/magicItemsWI.html#elixir-of-love",
       "Name": "Elixir of love",
       "Cost": 150,
       "Type": "Minor"
     },
     {
-      "Number": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#unguent-of-timelessness",
+      "Id": 4,
+      "Link": "http://dndsrd.net/magicItemsWI.html#unguent-of-timelessness",
       "Name": "Unguent of timelessness",
       "Cost": 150,
       "Type": "Minor"
     },
     {
-      "Number": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#feather-token",
+      "Id": 5,
+      "Link": "http://dndsrd.net/magicItemsWI.html#feather-token",
       "Name": "Feather token, fan",
       "Cost": 200,
       "Type": "Minor"
     },
     {
-      "Number": 6,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dust-of-tracelessness",
+      "Id": 6,
+      "Link": "http://dndsrd.net/magicItemsWI.html#dust-of-tracelessness",
       "Name": "Dust of tracelessness",
       "Cost": 250,
       "Type": "Minor"
     },
     {
-      "Number": 7,
-      "Link": "http://dndsrd.net/magicItemsAW.html#elixir-of-hiding",
+      "Id": 7,
+      "Link": "http://dndsrd.net/magicItemsWI.html#elixir-of-hiding",
       "Name": "Elixir of hiding",
       "Cost": 250,
       "Type": "Minor"
     },
     {
-      "Number": 8,
-      "Link": "http://dndsrd.net/magicItemsAW.html#elixir-of-sneaking",
+      "Id": 8,
+      "Link": "http://dndsrd.net/magicItemsWI.html#elixir-of-sneaking",
       "Name": "Elixir of sneaking",
       "Cost": 250,
       "Type": "Minor"
     },
     {
-      "Number": 9,
-      "Link": "http://dndsrd.net/magicItemsAW.html#elixir-of-swimming",
+      "Id": 9,
+      "Link": "http://dndsrd.net/magicItemsWI.html#elixir-of-swimming",
       "Name": "Elixir of swimming",
       "Cost": 250,
       "Type": "Minor"
     },
     {
-      "Number": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#elixir-of-vision",
+      "Id": 10,
+      "Link": "http://dndsrd.net/magicItemsWI.html#elixir-of-vision",
       "Name": "Elixir of vision",
       "Cost": 250,
       "Type": "Minor"
     },
     {
-      "Number": 11,
-      "Link": "http://dndsrd.net/magicItemsAW.html#silversheen",
+      "Id": 11,
+      "Link": "http://dndsrd.net/magicItemsWI.html#silversheen",
       "Name": "Silversheen",
       "Cost": 250,
       "Type": "Minor"
     },
     {
-      "Number": 12,
-      "Link": "http://dndsrd.net/magicItemsAW.html#feather-token",
+      "Id": 12,
+      "Link": "http://dndsrd.net/magicItemsWI.html#feather-token",
       "Name": "Feather token, bird",
       "Cost": 300,
       "Type": "Minor"
     },
     {
-      "Number": 13,
-      "Link": "http://dndsrd.net/magicItemsAW.html#feather-token",
+      "Id": 13,
+      "Link": "http://dndsrd.net/magicItemsWI.html#feather-token",
       "Name": "Feather token, tree",
       "Cost": 400,
       "Type": "Minor"
     },
     {
-      "Number": 14,
-      "Link": "http://dndsrd.net/magicItemsAW.html#feather-token",
+      "Id": 14,
+      "Link": "http://dndsrd.net/magicItemsWI.html#feather-token",
       "Name": "Feather token, swan boat",
       "Cost": 450,
       "Type": "Minor"
     },
     {
-      "Number": 15,
-      "Link": "http://dndsrd.net/magicItemsAW.html#elixir-of-truth",
+      "Id": 15,
+      "Link": "http://dndsrd.net/magicItemsWI.html#elixir-of-truth",
       "Name": "Elixir of truth",
       "Cost": 500,
       "Type": "Minor"
     },
     {
-      "Number": 16,
-      "Link": "http://dndsrd.net/magicItemsAW.html#feather-token",
+      "Id": 16,
+      "Link": "http://dndsrd.net/magicItemsWI.html#feather-token",
       "Name": "Feather token, whip",
       "Cost": 500,
       "Type": "Minor"
     },
     {
-      "Number": 17,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dust-of-dryness",
+      "Id": 17,
+      "Link": "http://dndsrd.net/magicItemsWI.html#dust-of-dryness",
       "Name": "Dust of dryness",
       "Cost": 850,
       "Type": "Minor"
     },
     {
-      "Number": 18,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bag-of-tricks",
+      "Id": 18,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bag-of-tricks",
       "Name": "Bag of tricks, gray",
       "Cost": 900,
       "Type": "Minor"
     },
     {
-      "Number": 19,
-      "Link": "http://dndsrd.net/magicItemsAW.html#hand-of-the-mage",
+      "Id": 19,
+      "Link": "http://dndsrd.net/magicItemsWI.html#hand-of-the-mage",
       "Name": "Hand of the mage",
       "Cost": 900,
       "Type": "Minor"
     },
     {
-      "Number": 20,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracers-of-armor",
+      "Id": 20,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracers-of-armor",
       "Name": "Bracers of armor +1",
       "Cost": 1000,
       "Type": "Minor"
     },
     {
-      "Number": 21,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-resistance",
+      "Id": 21,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-resistance",
       "Name": "Cloak of resistance +1",
       "Cost": 1000,
       "Type": "Minor"
     },
     {
-      "Number": 22,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-power",
+      "Id": 22,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-power",
       "Name": "Pearl of power, 1st-level spell",
       "Cost": 1000,
       "Type": "Minor"
     },
     {
-      "Number": 23,
-      "Link": "http://dndsrd.net/magicItemsAW.html#phylactery-of-faithfulness",
+      "Id": 23,
+      "Link": "http://dndsrd.net/magicItemsWI.html#phylactery-of-faithfulness",
       "Name": "Phylactery of faithfulness",
       "Cost": 1000,
       "Type": "Minor"
     },
     {
-      "Number": 24,
-      "Link": "http://dndsrd.net/magicItemsAW.html#salve-of-slipperiness",
+      "Id": 24,
+      "Link": "http://dndsrd.net/magicItemsWI.html#salve-of-slipperiness",
       "Name": "Salve of slipperiness",
       "Cost": 1000,
       "Type": "Minor"
     },
     {
-      "Number": 25,
-      "Link": "http://dndsrd.net/magicItemsAW.html#elixir-of-fire-breath",
+      "Id": 25,
+      "Link": "http://dndsrd.net/magicItemsWI.html#elixir-of-fire-breath",
       "Name": "Elixir of fire breath",
       "Cost": 1100,
       "Type": "Minor"
     },
     {
-      "Number": 26,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pipes-of-the-sewers",
+      "Id": 26,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pipes-of-the-sewers",
       "Name": "Pipes of the sewers",
       "Cost": 1150,
       "Type": "Minor"
     },
     {
-      "Number": 27,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dust-of-illusion",
+      "Id": 27,
+      "Link": "http://dndsrd.net/magicItemsWI.html#dust-of-illusion",
       "Name": "Dust of illusion",
       "Cost": 1200,
       "Type": "Minor"
     },
     {
-      "Number": 28,
-      "Link": "http://dndsrd.net/magicItemsAW.html#goggles-of-minute-seeing",
+      "Id": 28,
+      "Link": "http://dndsrd.net/magicItemsWI.html#goggles-of-minute-seeing",
       "Name": "Goggles of minute seeing",
       "Cost": 1250,
       "Type": "Minor"
     },
     {
-      "Number": 29,
-      "Link": "http://dndsrd.net/magicItemsAW.html#brooch-of-shielding",
+      "Id": 29,
+      "Link": "http://dndsrd.net/magicItemsWI.html#brooch-of-shielding",
       "Name": "Brooch of shielding",
       "Cost": 1500,
       "Type": "Minor"
     },
     {
-      "Number": 30,
-      "Link": "http://dndsrd.net/magicItemsAW.html#necklace-of-fireballs",
+      "Id": 30,
+      "Link": "http://dndsrd.net/magicItemsWI.html#necklace-of-fireballs",
       "Name": "Necklace of fireballs type I",
       "Cost": 1650,
       "Type": "Minor"
     },
     {
-      "Number": 31,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dust-of-appearance",
+      "Id": 31,
+      "Link": "http://dndsrd.net/magicItemsWI.html#dust-of-appearance",
       "Name": "Dust of appearance",
       "Cost": 1800,
       "Type": "Minor"
     },
     {
-      "Number": 32,
-      "Link": "http://dndsrd.net/magicItemsAW.html#hat-of-disguise",
+      "Id": 32,
+      "Link": "http://dndsrd.net/magicItemsWI.html#hat-of-disguise",
       "Name": "Hat of disguise",
       "Cost": 1800,
       "Type": "Minor"
     },
     {
-      "Number": 33,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pipes-of-sounding",
+      "Id": 33,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pipes-of-sounding",
       "Name": "Pipes of sounding",
       "Cost": 1800,
       "Type": "Minor"
     },
     {
-      "Number": 34,
-      "Link": "http://dndsrd.net/magicItemsAW.html#efficient-quiver",
+      "Id": 34,
+      "Link": "http://dndsrd.net/magicItemsWI.html#efficient-quiver",
       "Name": "Efficient quiver",
       "Cost": 1800,
       "Type": "Minor"
     },
     {
-      "Number": 35,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-natural-armor",
+      "Id": 35,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-natural-armor",
       "Name": "Amulet of natural armor +1",
       "Cost": 2000,
       "Type": "Minor"
     },
     {
-      "Number": 36,
-      "Link": "http://dndsrd.net/magicItemsAW.html#handy-haversack",
+      "Id": 36,
+      "Link": "http://dndsrd.net/magicItemsWI.html#handy-haversack",
       "Name": "Handy haversack",
       "Cost": 2000,
       "Type": "Minor"
     },
     {
-      "Number": 37,
-      "Link": "http://dndsrd.net/magicItemsAW.html#horn-of-fog",
+      "Id": 37,
+      "Link": "http://dndsrd.net/magicItemsWI.html#horn-of-fog",
       "Name": "Horn of fog",
       "Cost": 2000,
       "Type": "Minor"
     },
     {
-      "Number": 38,
-      "Link": "http://dndsrd.net/magicItemsAW.html#elemental-gem",
+      "Id": 38,
+      "Link": "http://dndsrd.net/magicItemsWI.html#elemental-gem",
       "Name": "Elemental gem",
       "Cost": 2250,
       "Type": "Minor"
     },
     {
-      "Number": 39,
-      "Link": "http://dndsrd.net/magicItemsAW.html#robe-of-bones",
+      "Id": 39,
+      "Link": "http://dndsrd.net/magicItemsWI.html#robe-of-bones",
       "Name": "Robe of bones",
       "Cost": 2400,
       "Type": "Minor"
     },
     {
-      "Number": 40,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sovereign-glue",
+      "Id": 40,
+      "Link": "http://dndsrd.net/magicItemsWI.html#sovereign-glue",
       "Name": "Sovereign glue",
       "Cost": 2400,
       "Type": "Minor"
     },
     {
-      "Number": 41,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bag-of-holding",
+      "Id": 41,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bag-of-holding",
       "Name": "Bag of holding type I",
       "Cost": 2500,
       "Type": "Minor"
     },
     {
-      "Number": 42,
-      "Link": "http://dndsrd.net/magicItemsAW.html#boots-of-elvenkind",
+      "Id": 42,
+      "Link": "http://dndsrd.net/magicItemsWI.html#boots-of-elvenkind",
       "Name": "Boots of elvenkind",
       "Cost": 2500,
       "Type": "Minor"
     },
     {
-      "Number": 43,
-      "Link": "http://dndsrd.net/magicItemsAW.html#boots-of-the-winterlands",
+      "Id": 43,
+      "Link": "http://dndsrd.net/magicItemsWI.html#boots-of-the-winterlands",
       "Name": "Boots of the winterlands",
       "Cost": 2500,
       "Type": "Minor"
     },
     {
-      "Number": 44,
-      "Link": "http://dndsrd.net/magicItemsAW.html#candle-of-truth",
+      "Id": 44,
+      "Link": "http://dndsrd.net/magicItemsWI.html#candle-of-truth",
       "Name": "Candle of truth",
       "Cost": 2500,
       "Type": "Minor"
     },
     {
-      "Number": 45,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-elvenkind",
+      "Id": 45,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-elvenkind",
       "Name": "Cloak of elvenkind",
       "Cost": 2500,
       "Type": "Minor"
     },
     {
-      "Number": 46,
-      "Link": "http://dndsrd.net/magicItemsAW.html#eyes-of-the-eagle",
+      "Id": 46,
+      "Link": "http://dndsrd.net/magicItemsWI.html#eyes-of-the-eagle",
       "Name": "Eyes of the eagle",
       "Cost": 2500,
       "Type": "Minor"
     },
     {
-      "Number": 47,
-      "Link": "http://dndsrd.net/magicItemsAW.html#scarab-golembane",
+      "Id": 47,
+      "Link": "http://dndsrd.net/magicItemsWI.html#scarab-golembane",
       "Name": "Scarab, golembane",
       "Cost": 2500,
       "Type": "Minor"
     },
     {
-      "Number": 48,
-      "Link": "http://dndsrd.net/magicItemsAW.html#necklace-of-fireballs",
+      "Id": 48,
+      "Link": "http://dndsrd.net/magicItemsWI.html#necklace-of-fireballs",
       "Name": "Necklace of fireballs type II",
       "Cost": 2700,
       "Type": "Minor"
     },
     {
-      "Number": 49,
-      "Link": "http://dndsrd.net/magicItemsAW.html#stone-of-alarm",
+      "Id": 49,
+      "Link": "http://dndsrd.net/magicItemsWI.html#stone-of-alarm",
       "Name": "Stone of alarm",
       "Cost": 2700,
       "Type": "Minor"
     },
     {
-      "Number": 50,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bag-of-tricks",
+      "Id": 50,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bag-of-tricks",
       "Name": "Bag of tricks, rust",
       "Cost": 3000,
       "Type": "Minor"
     },
     {
-      "Number": 51,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bead-of-force",
+      "Id": 51,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bead-of-force",
       "Name": "Bead of force",
       "Cost": 3000,
       "Type": "Minor"
     },
     {
-      "Number": 52,
-      "Link": "http://dndsrd.net/magicItemsAW.html#chime-of-opening",
+      "Id": 52,
+      "Link": "http://dndsrd.net/magicItemsWI.html#chime-of-opening",
       "Name": "Chime of opening",
       "Cost": 3000,
       "Type": "Minor"
     },
     {
-      "Number": 53,
-      "Link": "http://dndsrd.net/magicItemsAW.html#horseshoes-of-speed",
+      "Id": 53,
+      "Link": "http://dndsrd.net/magicItemsWI.html#horseshoes-of-speed",
       "Name": "Horseshoes of speed",
       "Cost": 3000,
       "Type": "Minor"
     },
     {
-      "Number": 54,
-      "Link": "http://dndsrd.net/magicItemsAW.html#rope-of-climbing",
+      "Id": 54,
+      "Link": "http://dndsrd.net/magicItemsWI.html#rope-of-climbing",
       "Name": "Rope of climbing",
       "Cost": 3000,
       "Type": "Minor"
     },
     {
-      "Number": 55,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dust-of-disappearance",
+      "Id": 55,
+      "Link": "http://dndsrd.net/magicItemsWI.html#dust-of-disappearance",
       "Name": "Dust of disappearance",
       "Cost": 3500,
       "Type": "Minor"
     },
     {
-      "Number": 56,
-      "Link": "http://dndsrd.net/magicItemsAW.html#lens-of-detection",
+      "Id": 56,
+      "Link": "http://dndsrd.net/magicItemsWI.html#lens-of-detection",
       "Name": "Lens of detection",
       "Cost": 3500,
       "Type": "Minor"
     },
     {
-      "Number": 57,
-      "Link": "http://dndsrd.net/magicItemsAW.html#vestment-druids",
+      "Id": 57,
+      "Link": "http://dndsrd.net/magicItemsWI.html#vestment-druids",
       "Name": "Vestment, druid's",
       "Cost": 3750,
       "Type": "Minor"
     },
     {
-      "Number": 58,
-      "Link": "http://dndsrd.net/magicItemsAW.html#figurines-of-wondrous-power",
+      "Id": 58,
+      "Link": "http://dndsrd.net/magicItemsWI.html#figurines-of-wondrous-power",
       "Name": "Figurine of wondrous power, silver raven",
       "Cost": 3800,
       "Type": "Minor"
     },
     {
-      "Number": 59,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-health",
+      "Id": 59,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-health",
       "Name": "Amulet of health +2",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 60,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracers-of-armor",
+      "Id": 60,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracers-of-armor",
       "Name": "Bracers of armor +2",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 61,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-charisma",
+      "Id": 61,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-charisma",
       "Name": "Cloak of Charisma +2",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 62,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-resistance",
+      "Id": 62,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-resistance",
       "Name": "Cloak of resistance +2",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 63,
-      "Link": "http://dndsrd.net/magicItemsAW.html#gauntlets-of-ogre-power",
+      "Id": 63,
+      "Link": "http://dndsrd.net/magicItemsWI.html#gauntlets-of-ogre-power",
       "Name": "Gauntlets of ogre power",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 64,
-      "Link": "http://dndsrd.net/magicItemsAW.html#gloves-of-arrow-snaring",
+      "Id": 64,
+      "Link": "http://dndsrd.net/magicItemsWI.html#gloves-of-arrow-snaring",
       "Name": "Gloves of arrow snaring",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 65,
-      "Link": "http://dndsrd.net/magicItemsAW.html#gloves-of-dexterity",
+      "Id": 65,
+      "Link": "http://dndsrd.net/magicItemsWI.html#gloves-of-dexterity",
       "Name": "Gloves of Dexterity +2",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 66,
-      "Link": "http://dndsrd.net/magicItemsAW.html#headband-of-intellect",
+      "Id": 66,
+      "Link": "http://dndsrd.net/magicItemsWI.html#headband-of-intellect",
       "Name": "Headband of intellect +2",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 67,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 67,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, clear spindle",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 68,
-      "Link": "http://dndsrd.net/magicItemsAW.html#restorative-ointment",
+      "Id": 68,
+      "Link": "http://dndsrd.net/magicItemsWI.html#restorative-ointment",
       "Name": "Restorative ointment",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 69,
-      "Link": "http://dndsrd.net/magicItemsAW.html#marvelous-pigments",
+      "Id": 69,
+      "Link": "http://dndsrd.net/magicItemsWI.html#marvelous-pigments",
       "Name": "Marvelous pigments",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 70,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-power",
+      "Id": 70,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-power",
       "Name": "Pearl of power, 2nd-level spell",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 71,
-      "Link": "http://dndsrd.net/magicItemsAW.html#periapt-of-wisdom",
+      "Id": 71,
+      "Link": "http://dndsrd.net/magicItemsWI.html#periapt-of-wisdom",
       "Name": "Periapt of Wisdom +2",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 72,
-      "Link": "http://dndsrd.net/magicItemsAW.html#stone-salve",
+      "Id": 72,
+      "Link": "http://dndsrd.net/magicItemsWI.html#stone-salve",
       "Name": "Stone salve",
       "Cost": 4000,
       "Type": "Minor"
     },
     {
-      "Number": 73,
-      "Link": "http://dndsrd.net/magicItemsAW.html#necklace-of-fireballs",
+      "Id": 73,
+      "Link": "http://dndsrd.net/magicItemsWI.html#necklace-of-fireballs",
       "Name": "Necklace of fireballs type III",
       "Cost": 4350,
       "Type": "Minor"
     },
     {
-      "Number": 74,
-      "Link": "http://dndsrd.net/magicItemsAW.html#circlet-of-persuasion",
+      "Id": 74,
+      "Link": "http://dndsrd.net/magicItemsWI.html#circlet-of-persuasion",
       "Name": "Circlet of persuasion",
       "Cost": 4500,
       "Type": "Minor"
     },
     {
-      "Number": 75,
-      "Link": "http://dndsrd.net/magicItemsAW.html#slippers-of-spider-climbing",
+      "Id": 75,
+      "Link": "http://dndsrd.net/magicItemsWI.html#slippers-of-spider-climbing",
       "Name": "Slippers of spider climbing",
       "Cost": 4800,
       "Type": "Minor"
     },
     {
-      "Number": 76,
-      "Link": "http://dndsrd.net/magicItemsAW.html#incense-of-meditation",
+      "Id": 76,
+      "Link": "http://dndsrd.net/magicItemsWI.html#incense-of-meditation",
       "Name": "Incense of meditation",
       "Cost": 4900,
       "Type": "Minor"
     },
     {
-      "Number": 77,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bag-of-holding",
+      "Id": 77,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bag-of-holding",
       "Name": "Bag of holding type II",
       "Cost": 5000,
       "Type": "Minor"
     },
     {
-      "Number": 78,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracers-of-archery-lesser",
+      "Id": 78,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracers-of-archery-lesser",
       "Name": "Bracers of archery, lesser",
       "Cost": 5000,
       "Type": "Minor"
     },
     {
-      "Number": 79,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 79,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, dusty rose prism",
       "Cost": 5000,
       "Type": "Minor"
     },
     {
-      "Number": 80,
-      "Link": "http://dndsrd.net/magicItemsAW.html#helm-of-comprehend-languages-and-read-magic",
+      "Id": 80,
+      "Link": "http://dndsrd.net/magicItemsWI.html#helm-of-comprehend-languages-and-read-magic",
       "Name": "Helm of comprehend languages and read magic",
       "Cost": 5200,
       "Type": "Minor"
     },
     {
-      "Number": 81,
-      "Link": "http://dndsrd.net/magicItemsAW.html#vest-of-escape",
+      "Id": 81,
+      "Link": "http://dndsrd.net/magicItemsWI.html#vest-of-escape",
       "Name": "Vest of escape",
       "Cost": 5200,
       "Type": "Minor"
     },
     {
-      "Number": 82,
-      "Link": "http://dndsrd.net/magicItemsAW.html#eversmoking-bottle",
+      "Id": 82,
+      "Link": "http://dndsrd.net/magicItemsWI.html#eversmoking-bottle",
       "Name": "Eversmoking bottle",
       "Cost": 5400,
       "Type": "Minor"
     },
     {
-      "Number": 83,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sustaining-spoon",
+      "Id": 83,
+      "Link": "http://dndsrd.net/magicItemsWI.html#sustaining-spoon",
       "Name": "Sustaining spoon",
       "Cost": 5400,
       "Type": "Minor"
     },
     {
-      "Number": 84,
-      "Link": "http://dndsrd.net/magicItemsAW.html#necklace-of-fireballs",
+      "Id": 84,
+      "Link": "http://dndsrd.net/magicItemsWI.html#necklace-of-fireballs",
       "Name": "Necklace of fireballs type IV",
       "Cost": 5400,
       "Type": "Minor"
     },
     {
-      "Number": 85,
-      "Link": "http://dndsrd.net/magicItemsAW.html#boots-of-striding-and-springing",
+      "Id": 85,
+      "Link": "http://dndsrd.net/magicItemsWI.html#boots-of-striding-and-springing",
       "Name": "Boots of striding and springing",
       "Cost": 5500,
       "Type": "Minor"
     },
     {
-      "Number": 86,
-      "Link": "http://dndsrd.net/magicItemsAW.html#wind-fan",
+      "Id": 86,
+      "Link": "http://dndsrd.net/magicItemsWI.html#wind-fan",
       "Name": "Wind fan",
       "Cost": 5500,
       "Type": "Minor"
     },
     {
-      "Number": 87,
-      "Link": "http://dndsrd.net/magicItemsAW.html#necklace-of-fireballs",
+      "Id": 87,
+      "Link": "http://dndsrd.net/magicItemsWI.html#necklace-of-fireballs",
       "Name": "Necklace of fireballs type V",
       "Cost": 5850,
       "Type": "Minor"
     },
     {
-      "Number": 88,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-mighty-fists",
+      "Id": 88,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-mighty-fists",
       "Name": "Amulet of mighty fists +1",
       "Cost": 6000,
       "Type": "Minor"
     },
     {
-      "Number": 89,
-      "Link": "http://dndsrd.net/magicItemsAW.html#horseshoes-of-zephyr",
+      "Id": 89,
+      "Link": "http://dndsrd.net/magicItemsWI.html#horseshoes-of-zephyr",
       "Name": "Horseshoes of a zephyr",
       "Cost": 6000,
       "Type": "Minor"
     },
     {
-      "Number": 90,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pipes-of-haunting",
+      "Id": 90,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pipes-of-haunting",
       "Name": "Pipes of haunting",
       "Cost": 6000,
       "Type": "Minor"
     },
     {
-      "Number": 91,
-      "Link": "http://dndsrd.net/magicItemsAW.html#gloves-of-swimming-and-climbing",
+      "Id": 91,
+      "Link": "http://dndsrd.net/magicItemsWI.html#gloves-of-swimming-and-climbing",
       "Name": "Gloves of swimming and climbing",
       "Cost": 6250,
       "Type": "Minor"
     },
     {
-      "Number": 92,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bag-of-tricks",
+      "Id": 92,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bag-of-tricks",
       "Name": "Bag of tricks, tan",
       "Cost": 6300,
       "Type": "Minor"
     },
     {
-      "Number": 93,
-      "Link": "http://dndsrd.net/magicItemsAW.html#circlet-of-blasting-minor",
+      "Id": 93,
+      "Link": "http://dndsrd.net/magicItemsWI.html#circlet-of-blasting-minor",
       "Name": "Circlet of blasting, minor",
       "Cost": 6480,
       "Type": "Minor"
     },
     {
-      "Number": 94,
-      "Link": "http://dndsrd.net/magicItemsAW.html#horn-of-goodness-evil",
+      "Id": 94,
+      "Link": "http://dndsrd.net/magicItemsWI.html#horn-of-goodness-evil",
       "Name": "Horn of goodness/evil",
       "Cost": 6500,
       "Type": "Minor"
     },
     {
-      "Number": 95,
-      "Link": "http://dndsrd.net/magicItemsAW.html#robe-of-useful-items",
+      "Id": 95,
+      "Link": "http://dndsrd.net/magicItemsWI.html#robe-of-useful-items",
       "Name": "Robe of useful items",
       "Cost": 7000,
       "Type": "Minor"
     },
     {
-      "Number": 96,
-      "Link": "http://dndsrd.net/magicItemsAW.html#boat-folding",
+      "Id": 96,
+      "Link": "http://dndsrd.net/magicItemsWI.html#boat-folding",
       "Name": "Boat, folding",
       "Cost": 7200,
       "Type": "Minor"
     },
     {
-      "Number": 97,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-the-manta-ray",
+      "Id": 97,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-the-manta-ray",
       "Name": "Cloak of the manta ray",
       "Cost": 7200,
       "Type": "Minor"
     },
     {
-      "Number": 98,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bottle-of-air",
+      "Id": 98,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bottle-of-air",
       "Name": "Bottle of air",
       "Cost": 7250,
       "Type": "Minor"
     },
     {
-      "Number": 99,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bag-of-holding",
+      "Id": 99,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bag-of-holding",
       "Name": "Bag of holding type III",
       "Cost": 7400,
       "Type": "Minor"
     },
     {
-      "Number": 100,
-      "Link": "http://dndsrd.net/magicItemsAW.html#periapt-of-health",
+      "Id": 100,
+      "Link": "http://dndsrd.net/magicItemsWI.html#periapt-of-health",
       "Name": "Periapt of health",
       "Cost": 7400,
       "Type": "Minor"
     },
     {
-      "Number": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#boots-of-levitation",
+      "Id": 1,
+      "Link": "http://dndsrd.net/magicItemsWI.html#boots-of-levitation",
       "Name": "Boots of levitation",
       "Cost": 7500,
       "Type": "Medium"
     },
     {
-      "Number": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#harp-of-charming",
+      "Id": 2,
+      "Link": "http://dndsrd.net/magicItemsWI.html#harp-of-charming",
       "Name": "Harp of charming",
       "Cost": 7500,
       "Type": "Medium"
     },
     {
-      "Number": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-natural-armor",
+      "Id": 3,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-natural-armor",
       "Name": "Amulet of natural armor +2",
       "Cost": 8000,
       "Type": "Medium"
     },
     {
-      "Number": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#golem-manual",
+      "Id": 4,
+      "Link": "http://dndsrd.net/magicItemsWI.html#golem-manual",
       "Name": "Golem manual, flesh",
       "Cost": 8000,
       "Type": "Medium"
     },
     {
-      "Number": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#hand-of-glory",
+      "Id": 5,
+      "Link": "http://dndsrd.net/magicItemsWI.html#hand-of-glory",
       "Name": "Hand of glory",
       "Cost": 8000,
       "Type": "Medium"
     },
     {
-      "Number": 6,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 6,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, deep red sphere",
       "Cost": 8000,
       "Type": "Medium"
     },
     {
-      "Number": 7,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 7,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, incandescent blue sphere",
       "Cost": 8000,
       "Type": "Medium"
     },
     {
-      "Number": 8,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 8,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, pale blue rhomboid",
       "Cost": 8000,
       "Type": "Medium"
     },
     {
-      "Number": 9,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 9,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, pink and green sphere",
       "Cost": 8000,
       "Type": "Medium"
     },
     {
-      "Number": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 10,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, pink rhomboid",
       "Cost": 8000,
       "Type": "Medium"
     },
     {
-      "Number": 11,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 11,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, scarlet and blue sphere",
       "Cost": 8000,
       "Type": "Medium"
     },
     {
-      "Number": 12,
-      "Link": "http://dndsrd.net/magicItemsAW.html#deck-of-illusions",
+      "Id": 12,
+      "Link": "http://dndsrd.net/magicItemsWI.html#deck-of-illusions",
       "Name": "Deck of illusions",
       "Cost": 8100,
       "Type": "Medium"
     },
     {
-      "Number": 13,
-      "Link": "http://dndsrd.net/magicItemsAW.html#necklace-of-fireballs",
+      "Id": 13,
+      "Link": "http://dndsrd.net/magicItemsWI.html#necklace-of-fireballs",
       "Name": "Necklace of fireballs type VI",
       "Cost": 8100,
       "Type": "Medium"
     },
     {
-      "Number": 14,
-      "Link": "http://dndsrd.net/magicItemsAW.html#candle-of-invocation",
+      "Id": 14,
+      "Link": "http://dndsrd.net/magicItemsWI.html#candle-of-invocation",
       "Name": "Candle of invocation",
       "Cost": 8400,
       "Type": "Medium"
     },
     {
-      "Number": 15,
-      "Link": "http://dndsrd.net/magicItemsAW.html#necklace-of-fireballs",
+      "Id": 15,
+      "Link": "http://dndsrd.net/magicItemsWI.html#necklace-of-fireballs",
       "Name": "Necklace of fireballs type VII",
       "Cost": 8700,
       "Type": "Medium"
     },
     {
-      "Number": 16,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracers-of-armor",
+      "Id": 16,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracers-of-armor",
       "Name": "Bracers of armor +3",
       "Cost": 9000,
       "Type": "Medium"
     },
     {
-      "Number": 17,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-resistance",
+      "Id": 17,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-resistance",
       "Name": "Cloak of resistance +3",
       "Cost": 9000,
       "Type": "Medium"
     },
     {
-      "Number": 18,
-      "Link": "http://dndsrd.net/magicItemsAW.html#decanter-of-endless-water",
+      "Id": 18,
+      "Link": "http://dndsrd.net/magicItemsWI.html#decanter-of-endless-water",
       "Name": "Decanter of endless water",
       "Cost": 9000,
       "Type": "Medium"
     },
     {
-      "Number": 19,
-      "Link": "http://dndsrd.net/magicItemsAW.html#necklace-of-adaptation",
+      "Id": 19,
+      "Link": "http://dndsrd.net/magicItemsWI.html#necklace-of-adaptation",
       "Name": "Necklace of adaptation",
       "Cost": 9000,
       "Type": "Medium"
     },
     {
-      "Number": 20,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-power",
+      "Id": 20,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-power",
       "Name": "Pearl of power, 3rd-level spell",
       "Cost": 9000,
       "Type": "Medium"
     },
     {
-      "Number": 21,
-      "Link": "http://dndsrd.net/magicItemsAW.htmlmagicItemsICA.html#talisman-of-the-sphere",
+      "Id": 21,
+      "Link": "http://dndsrd.net/magicItemsWI.htmlmagicItemsICA.html#talisman-of-the-sphere",
       "Name": "Talisman of the sphere",
       "Cost": 9000,
       "Type": "Medium"
     },
     {
-      "Number": 22,
-      "Link": "http://dndsrd.net/magicItemsAW.html#figurines-of-wondrous-power",
+      "Id": 22,
+      "Link": "http://dndsrd.net/magicItemsWI.html#figurines-of-wondrous-power",
       "Name": "Figurine of wondrous power, serpentine owl",
       "Cost": 9100,
       "Type": "Medium"
     },
     {
-      "Number": 23,
-      "Link": "http://dndsrd.net/magicItemsAW.html#strand-of-prayer-beads",
+      "Id": 23,
+      "Link": "http://dndsrd.net/magicItemsWI.html#strand-of-prayer-beads",
       "Name": "Strand of prayer beads, lesser",
       "Cost": 9600,
       "Type": "Medium"
     },
     {
-      "Number": 24,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bag-of-holding",
+      "Id": 24,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bag-of-holding",
       "Name": "Bag of holding type IV",
       "Cost": 10000,
       "Type": "Medium"
     },
     {
-      "Number": 25,
-      "Link": "http://dndsrd.net/magicItemsAW.html#figurines-of-wondrous-power",
+      "Id": 25,
+      "Link": "http://dndsrd.net/magicItemsWI.html#figurines-of-wondrous-power",
       "Name": "Figurine of wondrous power, bronze griffon",
       "Cost": 10000,
       "Type": "Medium"
     },
     {
-      "Number": 26,
-      "Link": "http://dndsrd.net/magicItemsAW.html#figurines-of-wondrous-power",
+      "Id": 26,
+      "Link": "http://dndsrd.net/magicItemsWI.html#figurines-of-wondrous-power",
       "Name": "Figurine of wondrous power, ebony fly",
       "Cost": 10000,
       "Type": "Medium"
     },
     {
-      "Number": 27,
-      "Link": "http://dndsrd.net/magicItemsAW.html#glove-of-storing",
+      "Id": 27,
+      "Link": "http://dndsrd.net/magicItemsWI.html#glove-of-storing",
       "Name": "Glove of storing",
       "Cost": 10000,
       "Type": "Medium"
     },
     {
-      "Number": 28,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 28,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, dark blue rhomboid",
       "Cost": 10000,
       "Type": "Medium"
     },
     {
-      "Number": 29,
-      "Link": "http://dndsrd.net/magicItemsAW.html#stone-horse",
+      "Id": 29,
+      "Link": "http://dndsrd.net/magicItemsWI.html#stone-horse",
       "Name": "Stone horse, courser",
       "Cost": 10000,
       "Type": "Medium"
     },
     {
-      "Number": 30,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cape-of-the-mountebank",
+      "Id": 30,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cape-of-the-mountebank",
       "Name": "Cape of the mountebank",
       "Cost": 10080,
       "Type": "Medium"
     },
     {
-      "Number": 31,
-      "Link": "http://dndsrd.net/magicItemsAW.html#phylactery-of-undead-turning",
+      "Id": 31,
+      "Link": "http://dndsrd.net/magicItemsWI.html#phylactery-of-undead-turning",
       "Name": "Phylactery of undead turning",
       "Cost": 11000,
       "Type": "Medium"
     },
     {
-      "Number": 32,
-      "Link": "http://dndsrd.net/magicItemsAW.html#gauntlet-of-rust",
+      "Id": 32,
+      "Link": "http://dndsrd.net/magicItemsWI.html#gauntlet-of-rust",
       "Name": "Gauntlet of rust",
       "Cost": 11500,
       "Type": "Medium"
     },
     {
-      "Number": 33,
-      "Link": "http://dndsrd.net/magicItemsAW.html#boots-of-speed",
+      "Id": 33,
+      "Link": "http://dndsrd.net/magicItemsWI.html#boots-of-speed",
       "Name": "Boots of speed",
       "Cost": 12000,
       "Type": "Medium"
     },
     {
-      "Number": 34,
-      "Link": "http://dndsrd.net/magicItemsAW.html#goggles-of-night",
+      "Id": 34,
+      "Link": "http://dndsrd.net/magicItemsWI.html#goggles-of-night",
       "Name": "Goggles of night",
       "Cost": 12000,
       "Type": "Medium"
     },
     {
-      "Number": 35,
-      "Link": "http://dndsrd.net/magicItemsAW.html#golem-manual",
+      "Id": 35,
+      "Link": "http://dndsrd.net/magicItemsWI.html#golem-manual",
       "Name": "Golem manual, clay",
       "Cost": 12000,
       "Type": "Medium"
     },
     {
-      "Number": 36,
-      "Link": "http://dndsrd.net/magicItemsAW.html#medallion-of-thoughts",
+      "Id": 36,
+      "Link": "http://dndsrd.net/magicItemsWI.html#medallion-of-thoughts",
       "Name": "Medallion of thoughts",
       "Cost": 12000,
       "Type": "Medium"
     },
     {
-      "Number": 37,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pipes-of-pain",
+      "Id": 37,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pipes-of-pain",
       "Name": "Pipes of pain",
       "Cost": 12000,
       "Type": "Medium"
     },
     {
-      "Number": 38,
-      "Link": "http://dndsrd.net/magicItemsAW.html#blessed-book",
+      "Id": 38,
+      "Link": "http://dndsrd.net/magicItemsWI.html#blessed-book",
       "Name": "Blessed book",
       "Cost": 12500,
       "Type": "Medium"
     },
     {
-      "Number": 39,
-      "Link": "http://dndsrd.net/magicItemsAW.html#belt-monks",
+      "Id": 39,
+      "Link": "http://dndsrd.net/magicItemsWI.html#belt-monks",
       "Name": "Belt, monk's",
       "Cost": 13000,
       "Type": "Medium"
     },
     {
-      "Number": 40,
-      "Link": "http://dndsrd.net/magicItemsAW.html#gem-of-brightness",
+      "Id": 40,
+      "Link": "http://dndsrd.net/magicItemsWI.html#gem-of-brightness",
       "Name": "Gem of brightness",
       "Cost": 13000,
       "Type": "Medium"
     },
     {
-      "Number": 41,
-      "Link": "http://dndsrd.net/magicItemsAW.html#lyre-of-building",
+      "Id": 41,
+      "Link": "http://dndsrd.net/magicItemsWI.html#lyre-of-building",
       "Name": "Lyre of building",
       "Cost": 13000,
       "Type": "Medium"
     },
     {
-      "Number": 42,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-arachnida",
+      "Id": 42,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-arachnida",
       "Name": "Cloak of arachnida",
       "Cost": 14000,
       "Type": "Medium"
     },
     {
-      "Number": 43,
-      "Link": "http://dndsrd.net/magicItemsAW.html#stone-horse",
+      "Id": 43,
+      "Link": "http://dndsrd.net/magicItemsWI.html#stone-horse",
       "Name": "Stone horse, destrier",
       "Cost": 14800,
       "Type": "Medium"
     },
     {
-      "Number": 44,
-      "Link": "http://dndsrd.net/magicItemsAW.html#belt-of-dwarvenkind",
+      "Id": 44,
+      "Link": "http://dndsrd.net/magicItemsWI.html#belt-of-dwarvenkind",
       "Name": "Belt of dwarvenkind",
       "Cost": 14900,
       "Type": "Medium"
     },
     {
-      "Number": 45,
-      "Link": "http://dndsrd.net/magicItemsAW.html#periapt-of-wound-closure",
+      "Id": 45,
+      "Link": "http://dndsrd.net/magicItemsWI.html#periapt-of-wound-closure",
       "Name": "Periapt of wound closure",
       "Cost": 15000,
       "Type": "Medium"
     },
     {
-      "Number": 46,
-      "Link": "http://dndsrd.net/magicItemsAW.html#horn-of-the-tritons",
+      "Id": 46,
+      "Link": "http://dndsrd.net/magicItemsWI.html#horn-of-the-tritons",
       "Name": "Horn of the tritons",
       "Cost": 15100,
       "Type": "Medium"
     },
     {
-      "Number": 47,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-the-sirines",
+      "Id": 47,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-the-sirines",
       "Name": "Pearl of the sirines",
       "Cost": 15300,
       "Type": "Medium"
     },
     {
-      "Number": 48,
-      "Link": "http://dndsrd.net/magicItemsAW.html#figurines-of-wondrous-power",
+      "Id": 48,
+      "Link": "http://dndsrd.net/magicItemsWI.html#figurines-of-wondrous-power",
       "Name": "Figurine of wondrous power, onyx dog",
       "Cost": 15500,
       "Type": "Medium"
     },
     {
-      "Number": 49,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-health",
+      "Id": 49,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-health",
       "Name": "Amulet of health +4",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 50,
-      "Link": "http://dndsrd.net/magicItemsAW.html#belt-of-giant-strength",
+      "Id": 50,
+      "Link": "http://dndsrd.net/magicItemsWI.html#belt-of-giant-strength",
       "Name": "Belt of giant Strength +4",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 51,
-      "Link": "http://dndsrd.net/magicItemsAW.html#boots-winged",
+      "Id": 51,
+      "Link": "http://dndsrd.net/magicItemsWI.html#boots-winged",
       "Name": "Boots, winged",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 52,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracers-of-armor",
+      "Id": 52,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracers-of-armor",
       "Name": "Bracers of armor +4",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 53,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-charisma",
+      "Id": 53,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-charisma",
       "Name": "Cloak of Charisma +4",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 54,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-resistance",
+      "Id": 54,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-resistance",
       "Name": "Cloak of resistance +4",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 55,
-      "Link": "http://dndsrd.net/magicItemsAW.html#gloves-of-dexterity",
+      "Id": 55,
+      "Link": "http://dndsrd.net/magicItemsWI.html#gloves-of-dexterity",
       "Name": "Gloves of Dexterity +4",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 56,
-      "Link": "http://dndsrd.net/magicItemsAW.html#headband-of-intellect",
+      "Id": 56,
+      "Link": "http://dndsrd.net/magicItemsWI.html#headband-of-intellect",
       "Name": "Headband of intellect +4",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 57,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-power",
+      "Id": 57,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-power",
       "Name": "Pearl of power, 4th-level spell",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 58,
-      "Link": "http://dndsrd.net/magicItemsAW.html#periapt-of-wisdom",
+      "Id": 58,
+      "Link": "http://dndsrd.net/magicItemsWI.html#periapt-of-wisdom",
       "Name": "Periapt of Wisdom +4",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 59,
-      "Link": "http://dndsrd.net/magicItemsAW.html#scabbard-of-keen-edges",
+      "Id": 59,
+      "Link": "http://dndsrd.net/magicItemsWI.html#scabbard-of-keen-edges",
       "Name": "Scabbard of keen edges",
       "Cost": 16000,
       "Type": "Medium"
     },
     {
-      "Number": 60,
-      "Link": "http://dndsrd.net/magicItemsAW.html#figurines-of-wondrous-power",
+      "Id": 60,
+      "Link": "http://dndsrd.net/magicItemsWI.html#figurines-of-wondrous-power",
       "Name": "Figurine of wondrous power, golden lions",
       "Cost": 16500,
       "Type": "Medium"
     },
     {
-      "Number": 61,
-      "Link": "http://dndsrd.net/magicItemsAW.html#chime-of-interruption",
+      "Id": 61,
+      "Link": "http://dndsrd.net/magicItemsWI.html#chime-of-interruption",
       "Name": "Chime of interruption",
       "Cost": 16800,
       "Type": "Medium"
     },
     {
-      "Number": 62,
-      "Link": "http://dndsrd.net/magicItemsAW.html#broom-of-flying",
+      "Id": 62,
+      "Link": "http://dndsrd.net/magicItemsWI.html#broom-of-flying",
       "Name": "Broom of flying",
       "Cost": 17000,
       "Type": "Medium"
     },
     {
-      "Number": 63,
-      "Link": "http://dndsrd.net/magicItemsAW.html#figurines-of-wondrous-power",
+      "Id": 63,
+      "Link": "http://dndsrd.net/magicItemsWI.html#figurines-of-wondrous-power",
       "Name": "Figurine of wondrous power, marble elephant",
       "Cost": 17000,
       "Type": "Medium"
     },
     {
-      "Number": 64,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-natural-armor",
+      "Id": 64,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-natural-armor",
       "Name": "Amulet of natural armor +3",
       "Cost": 18000,
       "Type": "Medium"
     },
     {
-      "Number": 65,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 65,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, iridescent spindle",
       "Cost": 18000,
       "Type": "Medium"
     },
     {
-      "Number": 66,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracelet-of-friends",
+      "Id": 66,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracelet-of-friends",
       "Name": "Bracelet of friends",
       "Cost": 19000,
       "Type": "Medium"
     },
     {
-      "Number": 67,
-      "Link": "http://dndsrd.net/magicItemsAW.html#carpet-of-flying",
+      "Id": 67,
+      "Link": "http://dndsrd.net/magicItemsWI.html#carpet-of-flying",
       "Name": "Carpet of flying, 5 by 5",
       "Cost": 20000,
       "Type": "Medium"
     },
     {
-      "Number": 68,
-      "Link": "http://dndsrd.net/magicItemsAW.html#horn-of-blasting",
+      "Id": 68,
+      "Link": "http://dndsrd.net/magicItemsWI.html#horn-of-blasting",
       "Name": "Horn of blasting",
       "Cost": 20000,
       "Type": "Medium"
     },
     {
-      "Number": 69,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 69,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, pale lavender ellipsoid",
       "Cost": 20000,
       "Type": "Medium"
     },
     {
-      "Number": 70,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 70,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, pearly white spindle",
       "Cost": 20000,
       "Type": "Medium"
     },
     {
-      "Number": 71,
-      "Link": "http://dndsrd.net/magicItemsAW.html#portable-hole",
+      "Id": 71,
+      "Link": "http://dndsrd.net/magicItemsWI.html#portable-hole",
       "Name": "Portable hole",
       "Cost": 20000,
       "Type": "Medium"
     },
     {
-      "Number": 72,
-      "Link": "http://dndsrd.net/magicItemsAW.html#stone-of-good-luck",
+      "Id": 72,
+      "Link": "http://dndsrd.net/magicItemsWI.html#stone-of-good-luck",
       "Name": "Stone of good luck (luckstone)",
       "Cost": 20000,
       "Type": "Medium"
     },
     {
-      "Number": 73,
-      "Link": "http://dndsrd.net/magicItemsAW.html#figurines-of-wondrous-power",
+      "Id": 73,
+      "Link": "http://dndsrd.net/magicItemsWI.html#figurines-of-wondrous-power",
       "Name": "Figurine of wondrous power, ivory goats",
       "Cost": 21000,
       "Type": "Medium"
     },
     {
-      "Number": 74,
-      "Link": "http://dndsrd.net/magicItemsAW.html#rope-of-entanglement",
+      "Id": 74,
+      "Link": "http://dndsrd.net/magicItemsWI.html#rope-of-entanglement",
       "Name": "Rope of entanglement",
       "Cost": 21000,
       "Type": "Medium"
     },
     {
-      "Number": 75,
-      "Link": "http://dndsrd.net/magicItemsAW.html#golem-manual",
+      "Id": 75,
+      "Link": "http://dndsrd.net/magicItemsWI.html#golem-manual",
       "Name": "Golem manual, stone",
       "Cost": 22000,
       "Type": "Medium"
     },
     {
-      "Number": 76,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mask-of-the-skull",
+      "Id": 76,
+      "Link": "http://dndsrd.net/magicItemsWI.html#mask-of-the-skull",
       "Name": "Mask of the skull",
       "Cost": 22000,
       "Type": "Medium"
     },
     {
-      "Number": 77,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mattock-of-the-titans",
+      "Id": 77,
+      "Link": "http://dndsrd.net/magicItemsWI.html#mattock-of-the-titans",
       "Name": "Mattock of the titans",
       "Cost": 23348,
       "Type": "Medium"
     },
     {
-      "Number": 78,
-      "Link": "http://dndsrd.net/magicItemsAW.html#circlet-of-blasting-major",
+      "Id": 78,
+      "Link": "http://dndsrd.net/magicItemsWI.html#circlet-of-blasting-major",
       "Name": "Circlet of blasting, major",
       "Cost": 23760,
       "Type": "Medium"
     },
     {
-      "Number": 79,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-mighty-fists",
+      "Id": 79,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-mighty-fists",
       "Name": "Amulet of mighty fists +2",
       "Cost": 24000,
       "Type": "Medium"
     },
     {
-      "Number": 80,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-displacement-minor",
+      "Id": 80,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-displacement-minor",
       "Name": "Cloak of displacement, minor",
       "Cost": 24000,
       "Type": "Medium"
     },
     {
-      "Number": 81,
-      "Link": "http://dndsrd.net/magicItemsAW.html#helm-of-underwater-action",
+      "Id": 81,
+      "Link": "http://dndsrd.net/magicItemsWI.html#helm-of-underwater-action",
       "Name": "Helm of underwater action",
       "Cost": 24000,
       "Type": "Medium"
     },
     {
-      "Number": 82,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracers-of-archery-greater",
+      "Id": 82,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracers-of-archery-greater",
       "Name": "Bracers of archery, greater",
       "Cost": 25000,
       "Type": "Medium"
     },
     {
-      "Number": 83,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracers-of-armor",
+      "Id": 83,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracers-of-armor",
       "Name": "Bracers of armor +5",
       "Cost": 25000,
       "Type": "Medium"
     },
     {
-      "Number": 84,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-resistance",
+      "Id": 84,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-resistance",
       "Name": "Cloak of resistance +5",
       "Cost": 25000,
       "Type": "Medium"
     },
     {
-      "Number": 85,
-      "Link": "http://dndsrd.net/magicItemsAW.html#eyes-of-doom",
+      "Id": 85,
+      "Link": "http://dndsrd.net/magicItemsWI.html#eyes-of-doom",
       "Name": "Eyes of doom",
       "Cost": 25000,
       "Type": "Medium"
     },
     {
-      "Number": 86,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-power",
+      "Id": 86,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-power",
       "Name": "Pearl of power, 5th-level spell",
       "Cost": 25000,
       "Type": "Medium"
     },
     {
-      "Number": 87,
-      "Link": "http://dndsrd.net/magicItemsAW.html#maul-of-the-titans",
+      "Id": 87,
+      "Link": "http://dndsrd.net/magicItemsWI.html#maul-of-the-titans",
       "Name": "Maul of the titans",
       "Cost": 25305,
       "Type": "Medium"
     },
     {
-      "Number": 88,
-      "Link": "http://dndsrd.net/magicItemsAW.html#strand-of-prayer-beads",
+      "Id": 88,
+      "Link": "http://dndsrd.net/magicItemsWI.html#strand-of-prayer-beads",
       "Name": "Strand of prayer beads",
       "Cost": 25800,
       "Type": "Medium"
     },
     {
-      "Number": 89,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-the-bat",
+      "Id": 89,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-the-bat",
       "Name": "Cloak of the bat",
       "Cost": 26000,
       "Type": "Medium"
     },
     {
-      "Number": 90,
-      "Link": "http://dndsrd.net/magicItemsAW.html#iron-bands-of-binding",
+      "Id": 90,
+      "Link": "http://dndsrd.net/magicItemsWI.html#iron-bands-of-binding",
       "Name": "Iron bands of binding",
       "Cost": 26000,
       "Type": "Medium"
     },
     {
-      "Number": 91,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cube-of-frost-resistance",
+      "Id": 91,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cube-of-frost-resistance",
       "Name": "Cube of frost resistance",
       "Cost": 27000,
       "Type": "Medium"
     },
     {
-      "Number": 92,
-      "Link": "http://dndsrd.net/magicItemsAW.html#helm-of-telepathy",
+      "Id": 92,
+      "Link": "http://dndsrd.net/magicItemsWI.html#helm-of-telepathy",
       "Name": "Helm of telepathy",
       "Cost": 27000,
       "Type": "Medium"
     },
     {
-      "Number": 93,
-      "Link": "http://dndsrd.net/magicItemsAW.html#periapt-of-proof-against-poison",
+      "Id": 93,
+      "Link": "http://dndsrd.net/magicItemsWI.html#periapt-of-proof-against-poison",
       "Name": "Periapt of proof against poison",
       "Cost": 27000,
       "Type": "Medium"
     },
     {
-      "Number": 94,
-      "Link": "http://dndsrd.net/magicItemsAW.html#robe-of-scintillating-colors",
+      "Id": 94,
+      "Link": "http://dndsrd.net/magicItemsWI.html#robe-of-scintillating-colors",
       "Name": "Robe of scintillating colors",
       "Cost": 27000,
       "Type": "Medium"
     },
     {
-      "Number": 95,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-bodily-health",
+      "Id": 95,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-bodily-health",
       "Name": "Manual of bodily health +1",
       "Cost": 27500,
       "Type": "Medium"
     },
     {
-      "Number": 96,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-gainful-exercise",
+      "Id": 96,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-gainful-exercise",
       "Name": "Manual of gainful exercise +1",
       "Cost": 27500,
       "Type": "Medium"
     },
     {
-      "Number": 97,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-quickness-in-action",
+      "Id": 97,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-quickness-in-action",
       "Name": "Manual of quickness in action +1",
       "Cost": 27500,
       "Type": "Medium"
     },
     {
-      "Number": 98,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-clear-thought",
+      "Id": 98,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-clear-thought",
       "Name": "Tome of clear thought +1",
       "Cost": 27500,
       "Type": "Medium"
     },
     {
-      "Number": 99,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-leadership-and-influence",
+      "Id": 99,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-leadership-and-influence",
       "Name": "Tome of leadership and influence +1",
       "Cost": 27500,
       "Type": "Medium"
     },
     {
-      "Number": 100,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-understanding",
+      "Id": 100,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-understanding",
       "Name": "Tome of understanding +1",
       "Cost": 27500,
       "Type": "Medium"
     },
     {
-      "Number": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dimensional-shackles",
+      "Id": 1,
+      "Link": "http://dndsrd.net/magicItemsWI.html#dimensional-shackles",
       "Name": "Dimensional shackles",
       "Cost": 28000,
       "Type": "Major"
     },
     {
-      "Number": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#figurines-of-wondrous-power",
+      "Id": 2,
+      "Link": "http://dndsrd.net/magicItemsWI.html#figurines-of-wondrous-power",
       "Name": "Figurine of wondrous power, obsidian steed",
       "Cost": 28500,
       "Type": "Major"
     },
     {
-      "Number": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#drums-of-panic",
+      "Id": 3,
+      "Link": "http://dndsrd.net/magicItemsWI.html#drums-of-panic",
       "Name": "Drums of panic",
       "Cost": 30000,
       "Type": "Major"
     },
     {
-      "Number": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 4,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, orange",
       "Cost": 30000,
       "Type": "Major"
     },
     {
-      "Number": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 5,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, pale green prism",
       "Cost": 30000,
       "Type": "Major"
     },
     {
-      "Number": 6,
-      "Link": "http://dndsrd.net/magicItemsAW.html#lantern-of-revealing",
+      "Id": 6,
+      "Link": "http://dndsrd.net/magicItemsWI.html#lantern-of-revealing",
       "Name": "Lantern of revealing",
       "Cost": 30000,
       "Type": "Major"
     },
     {
-      "Number": 7,
-      "Link": "http://dndsrd.net/magicItemsAW.html#robe-of-blending",
+      "Id": 7,
+      "Link": "http://dndsrd.net/magicItemsWI.html#robe-of-blending",
       "Name": "Robe of blending",
       "Cost": 30000,
       "Type": "Major"
     },
     {
-      "Number": 8,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-natural-armor",
+      "Id": 8,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-natural-armor",
       "Name": "Amulet of natural armor +4",
       "Cost": 32000,
       "Type": "Major"
     },
     {
-      "Number": 9,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-proof-against-detection-and-location",
+      "Id": 9,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-proof-against-detection-and-location",
       "Name": "Amulet of proof against detection and location",
       "Cost": 35000,
       "Type": "Major"
     },
     {
-      "Number": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#carpet-of-flying",
+      "Id": 10,
+      "Link": "http://dndsrd.net/magicItemsWI.html#carpet-of-flying",
       "Name": "Carpet of flying, 5 by 10",
       "Cost": 35000,
       "Type": "Major"
     },
     {
-      "Number": 11,
-      "Link": "http://dndsrd.net/magicItemsAW.html#golem-manual",
+      "Id": 11,
+      "Link": "http://dndsrd.net/magicItemsWI.html#golem-manual",
       "Name": "Golem manual, iron",
       "Cost": 35000,
       "Type": "Major"
     },
     {
-      "Number": 12,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-health",
+      "Id": 12,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-health",
       "Name": "Amulet of health +6",
       "Cost": 36000,
       "Type": "Major"
     },
     {
-      "Number": 13,
-      "Link": "http://dndsrd.net/magicItemsAW.html#belt-of-giant-strength",
+      "Id": 13,
+      "Link": "http://dndsrd.net/magicItemsWI.html#belt-of-giant-strength",
       "Name": "Belt of giant Strength +6",
       "Cost": 36000,
       "Type": "Major"
     },
     {
-      "Number": 14,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracers-of-armor",
+      "Id": 14,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracers-of-armor",
       "Name": "Bracers of armor +6",
       "Cost": 36000,
       "Type": "Major"
     },
     {
-      "Number": 15,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-charisma",
+      "Id": 15,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-charisma",
       "Name": "Cloak of Charisma +6",
       "Cost": 36000,
       "Type": "Major"
     },
     {
-      "Number": 16,
-      "Link": "http://dndsrd.net/magicItemsAW.html#gloves-of-dexterity",
+      "Id": 16,
+      "Link": "http://dndsrd.net/magicItemsWI.html#gloves-of-dexterity",
       "Name": "Gloves of Dexterity +6",
       "Cost": 36000,
       "Type": "Major"
     },
     {
-      "Number": 17,
-      "Link": "http://dndsrd.net/magicItemsAW.html#headband-of-intellect",
+      "Id": 17,
+      "Link": "http://dndsrd.net/magicItemsWI.html#headband-of-intellect",
       "Name": "Headband of intellect +6",
       "Cost": 36000,
       "Type": "Major"
     },
     {
-      "Number": 18,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 18,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, vibrant purple prism",
       "Cost": 36000,
       "Type": "Major"
     },
     {
-      "Number": 19,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-power",
+      "Id": 19,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-power",
       "Name": "Pearl of power, 6th-level spell",
       "Cost": 36000,
       "Type": "Major"
     },
     {
-      "Number": 20,
-      "Link": "http://dndsrd.net/magicItemsAW.html#periapt-of-wisdom",
+      "Id": 20,
+      "Link": "http://dndsrd.net/magicItemsWI.html#periapt-of-wisdom",
       "Name": "Periapt of Wisdom +6",
       "Cost": 36000,
       "Type": "Major"
     },
     {
-      "Number": 21,
-      "Link": "http://dndsrd.net/magicItemsAW.html#scarab-of-protection",
+      "Id": 21,
+      "Link": "http://dndsrd.net/magicItemsWI.html#scarab-of-protection",
       "Name": "Scarab of protection",
       "Cost": 38000,
       "Type": "Major"
     },
     {
-      "Number": 22,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ioun-stones",
+      "Id": 22,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ioun-stones",
       "Name": "Ioun stone, lavender and green ellipsoid",
       "Cost": 40000,
       "Type": "Major"
     },
     {
-      "Number": 23,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ring-gates",
+      "Id": 23,
+      "Link": "http://dndsrd.net/magicItemsWI.html#ring-gates",
       "Name": "Ring gates",
       "Cost": 40000,
       "Type": "Major"
     },
     {
-      "Number": 24,
-      "Link": "http://dndsrd.net/magicItemsAW.html#crystal-ball",
+      "Id": 24,
+      "Link": "http://dndsrd.net/magicItemsWI.html#crystal-ball",
       "Name": "Crystal ball",
       "Cost": 42000,
       "Type": "Major"
     },
     {
-      "Number": 25,
-      "Link": "http://dndsrd.net/magicItemsAW.html#golem-manual",
+      "Id": 25,
+      "Link": "http://dndsrd.net/magicItemsWI.html#golem-manual",
       "Name": "Golem manual, greater stone",
       "Cost": 44000,
       "Type": "Major"
     },
     {
-      "Number": 26,
-      "Link": "http://dndsrd.net/magicItemsAW.html#orb-of-storms",
+      "Id": 26,
+      "Link": "http://dndsrd.net/magicItemsWI.html#orb-of-storms",
       "Name": "Orb of storms",
       "Cost": 48000,
       "Type": "Major"
     },
     {
-      "Number": 27,
-      "Link": "http://dndsrd.net/magicItemsAW.html#boots-of-teleportation",
+      "Id": 27,
+      "Link": "http://dndsrd.net/magicItemsWI.html#boots-of-teleportation",
       "Name": "Boots of teleportation",
       "Cost": 49000,
       "Type": "Major"
     },
     {
-      "Number": 28,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracers-of-armor",
+      "Id": 28,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracers-of-armor",
       "Name": "Bracers of armor +7",
       "Cost": 49000,
       "Type": "Major"
     },
     {
-      "Number": 29,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-power",
+      "Id": 29,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-power",
       "Name": "Pearl of power, 7th-level spell",
       "Cost": 49000,
       "Type": "Major"
     },
     {
-      "Number": 30,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-natural-armor",
+      "Id": 30,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-natural-armor",
       "Name": "Amulet of natural armor +5",
       "Cost": 50000,
       "Type": "Major"
     },
     {
-      "Number": 31,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-displacement-major",
+      "Id": 31,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-displacement-major",
       "Name": "Cloak of displacement, major",
       "Cost": 50000,
       "Type": "Major"
     },
     {
-      "Number": 32,
-      "Link": "http://dndsrd.net/magicItemsAW.html#crystal-ball",
+      "Id": 32,
+      "Link": "http://dndsrd.net/magicItemsWI.html#crystal-ball",
       "Name": "Crystal ball with see invisibility",
       "Cost": 50000,
       "Type": "Major"
     },
     {
-      "Number": 33,
-      "Link": "http://dndsrd.net/magicItemsAW.html#horn-of-valhalla",
+      "Id": 33,
+      "Link": "http://dndsrd.net/magicItemsWI.html#horn-of-valhalla",
       "Name": "Horn of Valhalla",
       "Cost": 50000,
       "Type": "Major"
     },
     {
-      "Number": 34,
-      "Link": "http://dndsrd.net/magicItemsAW.html#crystal-ball",
+      "Id": 34,
+      "Link": "http://dndsrd.net/magicItemsWI.html#crystal-ball",
       "Name": "Crystal ball with detect thoughts",
       "Cost": 51000,
       "Type": "Major"
     },
     {
-      "Number": 35,
-      "Link": "http://dndsrd.net/magicItemsAW.html#carpet-of-flying",
+      "Id": 35,
+      "Link": "http://dndsrd.net/magicItemsWI.html#carpet-of-flying",
       "Name": "Carpet of flying, 6 by 9",
       "Cost": 53000,
       "Type": "Major"
     },
     {
-      "Number": 36,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-mighty-fists",
+      "Id": 36,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-mighty-fists",
       "Name": "Amulet of mighty fists +3",
       "Cost": 54000,
       "Type": "Major"
     },
     {
-      "Number": 37,
-      "Link": "http://dndsrd.net/magicItemsAW.html#wings-of-flying",
+      "Id": 37,
+      "Link": "http://dndsrd.net/magicItemsWI.html#wings-of-flying",
       "Name": "Wings of flying",
       "Cost": 54000,
       "Type": "Major"
     },
     {
-      "Number": 38,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cloak-of-etherealness",
+      "Id": 38,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cloak-of-etherealness",
       "Name": "Cloak of etherealness",
       "Cost": 55000,
       "Type": "Major"
     },
     {
-      "Number": 39,
-      "Link": "http://dndsrd.net/magicItemsAW.html#instant-fortress",
+      "Id": 39,
+      "Link": "http://dndsrd.net/magicItemsWI.html#instant-fortress",
       "Name": "Instant fortress",
       "Cost": 55000,
       "Type": "Major"
     },
     {
-      "Number": 40,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-bodily-health",
+      "Id": 40,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-bodily-health",
       "Name": "Manual of bodily health +2",
       "Cost": 55000,
       "Type": "Major"
     },
     {
-      "Number": 41,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-gainful-exercise",
+      "Id": 41,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-gainful-exercise",
       "Name": "Manual of gainful exercise +2",
       "Cost": 55000,
       "Type": "Major"
     },
     {
-      "Number": 42,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-quickness-in-action",
+      "Id": 42,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-quickness-in-action",
       "Name": "Manual of quickness in action +2",
       "Cost": 55000,
       "Type": "Major"
     },
     {
-      "Number": 43,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-clear-thought",
+      "Id": 43,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-clear-thought",
       "Name": "Tome of clear thought +2",
       "Cost": 55000,
       "Type": "Major"
     },
     {
-      "Number": 44,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-leadership-and-influence",
+      "Id": 44,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-leadership-and-influence",
       "Name": "Tome of leadership and influence +2",
       "Cost": 55000,
       "Type": "Major"
     },
     {
-      "Number": 45,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-understanding",
+      "Id": 45,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-understanding",
       "Name": "Tome of understanding +2",
       "Cost": 55000,
       "Type": "Major"
     },
     {
-      "Number": 46,
-      "Link": "http://dndsrd.net/magicItemsAW.html#eyes-of-charming",
+      "Id": 46,
+      "Link": "http://dndsrd.net/magicItemsWI.html#eyes-of-charming",
       "Name": "Eyes of charming",
       "Cost": 56000,
       "Type": "Major"
     },
     {
-      "Number": 47,
-      "Link": "http://dndsrd.net/magicItemsAW.html#robe-of-stars",
+      "Id": 47,
+      "Link": "http://dndsrd.net/magicItemsWI.html#robe-of-stars",
       "Name": "Robe of stars",
       "Cost": 58000,
       "Type": "Major"
     },
     {
-      "Number": 48,
-      "Link": "http://dndsrd.net/magicItemsAW.html#carpet-of-flying",
+      "Id": 48,
+      "Link": "http://dndsrd.net/magicItemsWI.html#carpet-of-flying",
       "Name": "Carpet of flying, 10 by 10",
       "Cost": 60000,
       "Type": "Major"
     },
     {
-      "Number": 49,
-      "Link": "http://dndsrd.net/magicItemsAW.html#darkskull",
+      "Id": 49,
+      "Link": "http://dndsrd.net/magicItemsWI.html#darkskull",
       "Name": "Darkskull",
       "Cost": 60000,
       "Type": "Major"
     },
     {
-      "Number": 50,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cube-of-force",
+      "Id": 50,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cube-of-force",
       "Name": "Cube of force",
       "Cost": 62000,
       "Type": "Major"
     },
     {
-      "Number": 51,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bracers-of-armor",
+      "Id": 51,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bracers-of-armor",
       "Name": "Bracers of armor +8",
       "Cost": 64000,
       "Type": "Major"
     },
     {
-      "Number": 52,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-power",
+      "Id": 52,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-power",
       "Name": "Pearl of power, 8th-level spell",
       "Cost": 64000,
       "Type": "Major"
     },
     {
-      "Number": 53,
-      "Link": "http://dndsrd.net/magicItemsAW.html#crystal-ball",
+      "Id": 53,
+      "Link": "http://dndsrd.net/magicItemsWI.html#crystal-ball",
       "Name": "Crystal ball with telepathy",
       "Cost": 70000,
       "Type": "Major"
     },
     {
-      "Number": 54,
-      "Link": "http://dndsrd.net/magicItemsAW.html#horn-of-blasting",
+      "Id": 54,
+      "Link": "http://dndsrd.net/magicItemsWI.html#horn-of-blasting",
       "Name": "Horn of blasting, greater",
       "Cost": 70000,
       "Type": "Major"
     },
     {
-      "Number": 55,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-power",
+      "Id": 55,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-power",
       "Name": "Pearl of power, two spells",
       "Cost": 70000,
       "Type": "Major"
     },
     {
-      "Number": 56,
-      "Link": "http://dndsrd.net/magicItemsAW.html#helm-of-teleportation",
+      "Id": 56,
+      "Link": "http://dndsrd.net/magicItemsWI.html#helm-of-teleportation",
       "Name": "Helm of teleportation",
       "Cost": 73500,
       "Type": "Major"
     },
     {
-      "Number": 57,
-      "Link": "http://dndsrd.net/magicItemsAW.html#gem-of-seeing",
+      "Id": 57,
+      "Link": "http://dndsrd.net/magicItemsWI.html#gem-of-seeing",
       "Name": "Gem of seeing",
       "Cost": 75000,
       "Type": "Major"
     },
     {
-      "Number": 58,
-      "Link": "http://dndsrd.net/magicItemsAW.html#robe-of-the-archmagi",
+      "Id": 58,
+      "Link": "http://dndsrd.net/magicItemsWI.html#robe-of-the-archmagi",
       "Name": "Robe of the archmagi",
       "Cost": 75000,
       "Type": "Major"
     },
     {
-      "Number": 59,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mantle-of-faith",
+      "Id": 59,
+      "Link": "http://dndsrd.net/magicItemsWI.html#mantle-of-faith",
       "Name": "Mantle of faith",
       "Cost": 76000,
       "Type": "Major"
     },
     {
-      "Number": 60,
-      "Link": "http://dndsrd.net/magicItemsAW.html#crystal-ball",
+      "Id": 60,
+      "Link": "http://dndsrd.net/magicItemsWI.html#crystal-ball",
       "Name": "Crystal ball with true seeing",
       "Cost": 80000,
       "Type": "Major"
     },
     {
-      "Number": 61,
-      "Link": "http://dndsrd.net/magicItemsAW.html#pearl-of-power",
+      "Id": 61,
+      "Link": "http://dndsrd.net/magicItemsWI.html#pearl-of-power",
       "Name": "Pearl of power, 9th-level spell",
       "Cost": 81000,
       "Type": "Major"
     },
     {
-      "Number": 62,
-      "Link": "http://dndsrd.net/magicItemsAW.html#well-of-many-worlds",
+      "Id": 62,
+      "Link": "http://dndsrd.net/magicItemsWI.html#well-of-many-worlds",
       "Name": "Well of many worlds",
       "Cost": 82000,
       "Type": "Major"
     },
     {
-      "Number": 63,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-bodily-health",
+      "Id": 63,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-bodily-health",
       "Name": "Manual of bodily health +3",
       "Cost": 82500,
       "Type": "Major"
     },
     {
-      "Number": 64,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-gainful-exercise",
+      "Id": 64,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-gainful-exercise",
       "Name": "Manual of gainful exercise +3",
       "Cost": 82500,
       "Type": "Major"
     },
     {
-      "Number": 65,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-quickness-in-action",
+      "Id": 65,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-quickness-in-action",
       "Name": "Manual of quickness in action +3",
       "Cost": 82500,
       "Type": "Major"
     },
     {
-      "Number": 66,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-clear-thought",
+      "Id": 66,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-clear-thought",
       "Name": "Tome of clear thought +3",
       "Cost": 82500,
       "Type": "Major"
     },
     {
-      "Number": 67,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-leadership-and-influence",
+      "Id": 67,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-leadership-and-influence",
       "Name": "Tome of leadership and influence +3",
       "Cost": 82500,
       "Type": "Major"
     },
     {
-      "Number": 68,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-understanding",
+      "Id": 68,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-understanding",
       "Name": "Tome of understanding +3",
       "Cost": 82500,
       "Type": "Major"
     },
     {
-      "Number": 69,
-      "Link": "http://dndsrd.net/magicItemsAW.html#apparatus-of-the-crab",
+      "Id": 69,
+      "Link": "http://dndsrd.net/magicItemsWI.html#apparatus-of-the-crab",
       "Name": "Apparatus of the crab",
       "Cost": 90000,
       "Type": "Major"
     },
     {
-      "Number": 70,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mantle-of-spell-resistance",
+      "Id": 70,
+      "Link": "http://dndsrd.net/magicItemsWI.html#mantle-of-spell-resistance",
       "Name": "Mantle of spell resistance",
       "Cost": 90000,
       "Type": "Major"
     },
     {
-      "Number": 71,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mirror-of-opposition",
+      "Id": 71,
+      "Link": "http://dndsrd.net/magicItemsWI.html#mirror-of-opposition",
       "Name": "Mirror of opposition",
       "Cost": 92000,
       "Type": "Major"
     },
     {
-      "Number": 72,
-      "Link": "http://dndsrd.net/magicItemsAW.html#strand-of-prayer-beads",
+      "Id": 72,
+      "Link": "http://dndsrd.net/magicItemsWI.html#strand-of-prayer-beads",
       "Name": "Strand of prayer beads, greater",
       "Cost": 95800,
       "Type": "Major"
     },
     {
-      "Number": 73,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-mighty-fists",
+      "Id": 73,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-mighty-fists",
       "Name": "Amulet of mighty fists +4",
       "Cost": 96000,
       "Type": "Major"
     },
     {
-      "Number": 74,
-      "Link": "http://dndsrd.net/magicItemsAW.html#eyes-of-petrification",
+      "Id": 74,
+      "Link": "http://dndsrd.net/magicItemsWI.html#eyes-of-petrification",
       "Name": "Eyes of petrification",
       "Cost": 98000,
       "Type": "Major"
     },
     {
-      "Number": 75,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bowl-of-commanding-water-elementals",
+      "Id": 75,
+      "Link": "http://dndsrd.net/magicItemsWI.html#bowl-of-commanding-water-elementals",
       "Name": "Bowl of commanding water elementals",
       "Cost": 100000,
       "Type": "Major"
     },
     {
-      "Number": 76,
-      "Link": "http://dndsrd.net/magicItemsAW.html#brazier-of-commanding-fire-elementals",
+      "Id": 76,
+      "Link": "http://dndsrd.net/magicItemsWI.html#brazier-of-commanding-fire-elementals",
       "Name": "Brazier of commanding fire elementals",
       "Cost": 100000,
       "Type": "Major"
     },
     {
-      "Number": 77,
-      "Link": "http://dndsrd.net/magicItemsAW.html#censer-of-controlling-air-elementals",
+      "Id": 77,
+      "Link": "http://dndsrd.net/magicItemsWI.html#censer-of-controlling-air-elementals",
       "Name": "Censer of controlling air elementals",
       "Cost": 100000,
       "Type": "Major"
     },
     {
-      "Number": 78,
-      "Link": "http://dndsrd.net/magicItemsAW.html#stone-of-controlling-earth-elementals",
+      "Id": 78,
+      "Link": "http://dndsrd.net/magicItemsWI.html#stone-of-controlling-earth-elementals",
       "Name": "Stone of controlling earth elementals",
       "Cost": 100000,
       "Type": "Major"
     },
     {
-      "Number": 79,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-bodily-health",
+      "Id": 79,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-bodily-health",
       "Name": "Manual of bodily health +4",
       "Cost": 110000,
       "Type": "Major"
     },
     {
-      "Number": 80,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-gainful-exercise",
+      "Id": 80,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-gainful-exercise",
       "Name": "Manual of gainful exercise +4",
       "Cost": 110000,
       "Type": "Major"
     },
     {
-      "Number": 81,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-quickness-in-action",
+      "Id": 81,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-quickness-in-action",
       "Name": "Manual of quickness in action +4",
       "Cost": 110000,
       "Type": "Major"
     },
     {
-      "Number": 82,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-clear-thought",
+      "Id": 82,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-clear-thought",
       "Name": "Tome of clear thought +4",
       "Cost": 110000,
       "Type": "Major"
     },
     {
-      "Number": 83,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-leadership-and-influence",
+      "Id": 83,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-leadership-and-influence",
       "Name": "Tome of leadership and influence +4",
       "Cost": 110000,
       "Type": "Major"
     },
     {
-      "Number": 84,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-understanding",
+      "Id": 84,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-understanding",
       "Name": "Tome of understanding +4",
       "Cost": 110000,
       "Type": "Major"
     },
     {
-      "Number": 85,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-the-planes",
+      "Id": 85,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-the-planes",
       "Name": "Amulet of the planes",
       "Cost": 120000,
       "Type": "Major"
     },
     {
-      "Number": 86,
-      "Link": "http://dndsrd.net/magicItemsAW.html#robe-of-eyes",
+      "Id": 86,
+      "Link": "http://dndsrd.net/magicItemsWI.html#robe-of-eyes",
       "Name": "Robe of eyes",
       "Cost": 120000,
       "Type": "Major"
     },
     {
-      "Number": 87,
-      "Link": "http://dndsrd.net/magicItemsAW.html#helm-of-brilliance",
+      "Id": 87,
+      "Link": "http://dndsrd.net/magicItemsWI.html#helm-of-brilliance",
       "Name": "Helm of brilliance",
       "Cost": 125000,
       "Type": "Major"
     },
     {
-      "Number": 88,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-bodily-health",
+      "Id": 88,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-bodily-health",
       "Name": "Manual of bodily health +5",
       "Cost": 137500,
       "Type": "Major"
     },
     {
-      "Number": 89,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-gainful-exercise",
+      "Id": 89,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-gainful-exercise",
       "Name": "Manual of gainful exercise +5",
       "Cost": 137500,
       "Type": "Major"
     },
     {
-      "Number": 90,
-      "Link": "http://dndsrd.net/magicItemsAW.html#manual-of-quickness-in-action",
+      "Id": 90,
+      "Link": "http://dndsrd.net/magicItemsWI.html#manual-of-quickness-in-action",
       "Name": "Manual of quickness in action +5",
       "Cost": 137500,
       "Type": "Major"
     },
     {
-      "Number": 91,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-clear-thought",
+      "Id": 91,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-clear-thought",
       "Name": "Tome of clear thought +5",
       "Cost": 137500,
       "Type": "Major"
     },
     {
-      "Number": 92,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-leadership-and-influence",
+      "Id": 92,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-leadership-and-influence",
       "Name": "Tome of leadership and influence +5",
       "Cost": 137500,
       "Type": "Major"
     },
     {
-      "Number": 93,
-      "Link": "http://dndsrd.net/magicItemsAW.html#tome-of-understanding",
+      "Id": 93,
+      "Link": "http://dndsrd.net/magicItemsWI.html#tome-of-understanding",
       "Name": "Tome of understanding +5",
       "Cost": 137500,
       "Type": "Major"
     },
     {
-      "Number": 94,
-      "Link": "http://dndsrd.net/magicItemsAW.html#efreeti-bottle",
+      "Id": 94,
+      "Link": "http://dndsrd.net/magicItemsWI.html#efreeti-bottle",
       "Name": "Efreeti bottle",
       "Cost": 145000,
       "Type": "Major"
     },
     {
-      "Number": 95,
-      "Link": "http://dndsrd.net/magicItemsAW.html#amulet-of-mighty-fists",
+      "Id": 95,
+      "Link": "http://dndsrd.net/magicItemsWI.html#amulet-of-mighty-fists",
       "Name": "Amulet of mighty fists +5",
       "Cost": 150000,
       "Type": "Major"
     },
     {
-      "Number": 96,
-      "Link": "http://dndsrd.net/magicItemsAW.html#chaos-diamond",
+      "Id": 96,
+      "Link": "http://dndsrd.net/magicItemsWI.html#chaos-diamond",
       "Name": "Chaos diamond",
       "Cost": 160000,
       "Type": "Major"
     },
     {
-      "Number": 97,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cubic-gate",
+      "Id": 97,
+      "Link": "http://dndsrd.net/magicItemsWI.html#cubic-gate",
       "Name": "Cubic gate",
       "Cost": 164000,
       "Type": "Major"
     },
     {
-      "Number": 98,
-      "Link": "http://dndsrd.net/magicItemsAW.html#iron-flask",
+      "Id": 98,
+      "Link": "http://dndsrd.net/magicItemsWI.html#iron-flask",
       "Name": "Iron flask",
       "Cost": 170000,
       "Type": "Major"
     },
     {
-      "Number": 99,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mirror-of-mental-prowess",
+      "Id": 99,
+      "Link": "http://dndsrd.net/magicItemsWI.html#mirror-of-mental-prowess",
       "Name": "Mirror of mental prowess",
       "Cost": 175000,
       "Type": "Major"
     },
     {
-      "Number": 100,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mirror-of-life-trapping",
+      "Id": 100,
+      "Link": "http://dndsrd.net/magicItemsWI.html#mirror-of-life-trapping",
       "Name": "Mirror of life trapping",
       "Cost": 200000,
       "Type": "Major"

@@ -3,15 +3,20 @@ from random import random, randint
 from json import load
 
 class Shop:
-    def __init__(self, name: str, shop_level: float = 0, city_level: int = 0, party_level: int = 1, reputation: float = 0, template: str = "") -> None:
+    def __init__(self, name: str, 
+                       shop_level: float = 0, 
+                       city_level: int = 0, 
+                       party_level: int = 1, 
+                       reputation: float = 0, 
+                       template: str = "" ) -> None:
         self.name = name # Name of the shop or of the merchant
         self.shop_level = max(0, min(10, shop_level)) # [0, 10] Level of the merchant
         self.city_level = int(max(0, min(5, city_level))) # [0, 5] Size of city 0: Small village; 5: Metropolis
         self.party_level = int(max(1, min(20, party_level))) # [1, 20] Current party level
         self.reputation = max(-10, min(10, reputation)) # [-10, +10] Attitude of the merchant to the party
         self.stock = [] # Items selled by the shop
-        self.item = Item()
-        
+        self.item = Item() # Item generator
+
         if template != "":
             self.template(template)
         else:
@@ -69,28 +74,32 @@ class Shop:
         """ Generate a new inventory, delete old one if any """
         self.stock = []
         for key in self.item_mod:
-            if self.item_mod[key] == 0: continue
-
-            num = self.item_mod[key] # Number of item generated
-            num *= self.party_level ** 0.5 
-            num *= 1 + 0.1 * self.city_level
-            num *= 1.1 ** self.shop_level
-            num = int(num + 1 if random() < num - int(num) else num)
-            
-            for _ in range(num):
+            for _ in range(self.mod_item_number(key)):
                 self.add_item(self.item.new(key, self.shop_level, self.party_level))
             
             # Generate a random amount of Ammo or Shields if type is Weapon or Armor
             if key == "Weapon": self.generate_ammo()
             elif key == "Armor": self.generate_shield()
 
-    def add_item(self, item: dict or None) -> None:
-        """ Add an item on the stock if item is not None"""
-        if item is not None and isinstance(item, dict) and "Cost" in item.keys():
-            if item["Cost"] > 5: # Randomly change item cost
-                mod = (100 + randint(-20, +20) - self.reputation * 2 + self.city_level) / 100
-                item["Cost"] = int(max(round(item["Cost"] * mod, 0), 1))
-            self.stock.append(item)
+    def mod_item_number(self, key: str) -> int:
+        """ Modifies the number of item generated based on levels """
+        num = self.item_mod[key]
+        num *= self.party_level ** 0.5 
+        num *= 1 + 0.1 * self.city_level
+        num *= 1.05 ** self.shop_level
+        return int(num + 1 if random() < num - int(num) else num)
+
+    def add_item(self, added_item: dict or None) -> None:
+        """ Add an item on the stock if item is not None """
+        if added_item is not None and isinstance(added_item, dict) and "Cost" in added_item.keys():
+            for item in self.stock:
+                if item["Name"] == added_item["Name"]:
+                    item["Number"] += 1
+                    break
+            else:
+                added_item["Mod"] = randint(-20, +20)
+                added_item["Number"] = 1
+                self.stock.append(added_item)
 
     def generate_ammo(self) -> None:
         """ Generate a random amount of Ammo, when shop have Weapons """
@@ -106,10 +115,16 @@ class Shop:
     
     def display(self) -> None:
         """ Display the shop's inventory """
-        for index, item in enumerate(self.stock):
-            if item in self.stock[:index]: continue
-            print(f'{self.stock.count(item)}x {item["Name"]}: {item["Cost"]}gp')
+        for item in self.stock:
+            print(f'{item["Number"]}x {item["Name"]}: {self.true_cost(item)}gp')
+
+    def true_cost(self, item: dict) -> int or float:
+        """ Modifies cost of an item """
+        mod = (100 + item["Mod"] - self.reputation * 2 + self.city_level) / 100
+        cost = max(round(item["Cost"] * mod, 2), 0)
+        dec = 1 if cost < 100 else 5 if cost < 1000 else 10
+        return cost if cost < 1 else int(round(cost / dec, 0) * dec)
 
     def stock_value(self) -> float:
         """ Calculate entire stock value of the shop """
-        return round(sum(item["Cost"] for item in self.stock), 2)
+        return round(sum(self.true_cost(item) for item in self.stock), 2)
