@@ -24,8 +24,10 @@ class Shop:
                                 "Good" : 0,
                                 "Weapon" : 0,
                                 "Armor" : 0,
-                                "Magic Armor" : 0,
+                                "Ammo" : 0,
+                                "Shield" : 0,
                                 "Magic Weapon" : 0,
+                                "Magic Armor" : 0,
                                 "Potion" : 0,
                                 "Ring" : 0,
                                 "Rod" : 0,
@@ -56,19 +58,25 @@ class Shop:
     def add_reputation(self, reputation_added: float) -> None:
         """ Add or subtract reputation from the shop [-10, 10] """
         self.reputation = max(-10, min(10, self.reputation + reputation_added))
-    
+
     def load_shop(self) -> dict:
         """ Load shop type for template """
-        with open(f"shops.json", "r") as file:
+        with open(f"config/shops.json", "r") as file:
             return load(file)
 
     def template(self, name: str = "") -> None:
         """ Select a template for the shop """
         shop_types = self.load_shop()
+        # Get default shop if shop name don't exist
         name = "" if name not in (item["Name"] for item in shop_types["Type"]) else name
         shop = list(filter(lambda x: x["Name"] == name, shop_types["Type"]))[0]
-        self.item_mod = shop["Modifier"]
         self.shop_level = max(self.shop_level, shop["Min level"])
+        self.item_mod = shop["Modifier"]
+        # If has Weapon or Armor add Ammo or Shield to the inventory
+        if self.item_mod["Weapon"] > 0:
+            self.item_mod["Ammo"] = self.item_mod["Weapon"] * 0.6
+        if self.item_mod["Armor"] > 0:
+            self.item_mod["Shield"] = self.item_mod["Armor"] * 0.4
 
     def generate_inventory(self) -> None:
         """ Generate a new inventory, delete old one if any """
@@ -76,10 +84,6 @@ class Shop:
         for key in self.item_mod:
             for _ in range(self.mod_item_number(key)):
                 self.add_item(self.item.new(key, self.shop_level, self.party_level))
-            
-            # Generate a random amount of Ammo or Shields if type is Weapon or Armor
-            if key == "Weapon": self.generate_ammo()
-            elif key == "Armor": self.generate_shield()
 
     def mod_item_number(self, key: str) -> int:
         """ Modifies the number of item generated based on levels """
@@ -97,30 +101,19 @@ class Shop:
                     item["Number"] += 1
                     break
             else:
-                added_item["Mod"] = randint(-20, +20)
+                added_item["Price Modifier"] = randint(-20, +20)
                 added_item["Number"] = 1
                 self.stock.append(added_item)
-
-    def generate_ammo(self) -> None:
-        """ Generate a random amount of Ammo, when shop have Weapons """
-        num = randint(0, int(self.item_mod["Weapon"]))
-        for _ in range(num):
-            self.add_item(self.item.new("Ammo", self.shop_level, self.party_level))
-
-    def generate_shield(self) -> None:
-        """ Generate a random amount of Shield, when shop have Armors """
-        num = randint(int(self.item_mod["Armor"] >= 1), int(self.item_mod["Armor"]))
-        for _ in range(num):
-            self.add_item(self.item.new("Shield", self.shop_level, self.party_level))
     
     def display(self) -> None:
         """ Display the shop's inventory """
         for item in self.stock:
-            print(f'{item["Number"]}x {item["Name"]}: {self.true_cost(item)}gp')
+            if item["Number"] > 0:
+                print(f'{item["Number"]}x {item["Name"]}: {self.true_cost(item)}gp')
 
     def true_cost(self, item: dict) -> int or float:
         """ Modifies cost of an item """
-        mod = (100 + item["Mod"] - self.reputation * 2 + self.city_level) / 100
+        mod = (100 + item["Price Modifier"] - self.reputation * 2 + self.city_level) / 100
         cost = max(round(item["Cost"] * mod, 2), 0)
         dec = 1 if cost < 100 else 5 if cost < 1000 else 10
         return cost if cost < 1 else int(round(cost / dec, 0) * dec)

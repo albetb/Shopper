@@ -14,16 +14,18 @@
         "Description": "A legendary merchant for testing",
         "Min level": 5,
         "Modifier": {
-          "Good": 0.5,
-          "Weapon": 0.1,
-          "Armor": 1,
+          "Good": 5,
+          "Weapon": 4,
+          "Magic Armor" : 5,
+          "Magic Weapon" : 4,
+          "Armor": 2,
           "Potion": 2,
           "Ring": 3,
           "Rod": 5,
-          "Staff": 7,
-          "Wand": 10,
-          "Scroll": 12,
-          "Wondrous Item": 20
+          "Staff": 2,
+          "Wand": 4,
+          "Scroll": 3,
+          "Wondrous Item": 4
         }
       },
       {
@@ -79,6 +81,40 @@
             "Ring" : 0.1,
             "Wondrous Item" : 0.1
         }
+      },
+      {
+        "Name": "Gino Pippo",
+        "Description": "An adventurer merchant",
+        "Min level": 1,
+        "Modifier": {
+          "Weapon" : 1,
+          "Magic Weapon" : 0.75,
+          "Potion" : 1,
+          "Ring" : 0.44,
+          "Staff" : 0.23,
+          "Wand" : 0.3,
+          "Wondrous Item" : 1.38,
+          "Scroll" : 1.8
+      }
+      },
+      {
+        "Name": "Minime",
+        "Description": "Lurid merchant",
+        "Min level": 1,
+        "Modifier": {
+          "Good" : 1,
+          "Weapon" : 0.5,
+          "Armor" : 0.3,
+          "Magic Weapon" : 0.15,
+          "Magic Armor" : 0.13,
+          "Potion" : 0.5,
+          "Ring" : 0.01,
+          "Rod" : 0.01,
+          "Staff" : 0.01,
+          "Wand" : 0.01,
+          "Wondrous Item" : 0.01,
+          "Scroll" : 0.01
+      }
       }
     ]
   }

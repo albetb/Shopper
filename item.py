@@ -1,3 +1,4 @@
+from msilib.schema import tables
 from random import choices, randint
 from json import load
 from secrets import choice
@@ -6,32 +7,36 @@ class Item():
     def __init__(self) -> None:
         self.items = self.load_items()
         self.scrolls = self.load_items("scrolls")
+        self.tables = self.load_items("tables")
 
     def load_items(self, file = "items") -> dict:
         """ Load items or scrolls list """
-        with open(f"{file}.json", "r") as file:
+        with open(f"config/{file}.json", "r") as file:
             return load(file)
 
-    def new(self, type: str, shop_level: float, party_level: int) -> dict or None:
+    def new(self, item_type: str, shop_level: float, party_level: int, quality: str or None = None) -> dict or None:
         """ Generate a new item of the selected type """
+        quality = self.quality(shop_level, party_level) if quality == None else quality
+
+        if item_type == "Good": return self.new_good(shop_level)
+        elif item_type == "Ammo": return self.new_ammo()
+        elif item_type == "Weapon": return self.new_weapon(shop_level)
+        elif item_type == "Armor": return self.new_armor(shop_level)
+        elif item_type == "Shield": return self.new_shield(shop_level)
+        elif item_type == "Magic Weapon": return self.new_magic_weapon(shop_level, quality)
+        elif item_type == "Magic Armor": return self.new_magic_armor(shop_level, quality)
+        elif item_type == "Potion": return self.new_potion(shop_level, quality)
+        elif item_type == "Ring": return self.new_ring(shop_level, quality)
+        elif item_type == "Rod": return self.new_rod(shop_level, quality)
+        elif item_type == "Staff": return self.new_staff(shop_level, quality)
+        elif item_type == "Wand": return self.new_wand(shop_level, quality)
+        elif item_type == "Wondrous Item": return self.new_wondrous_item(shop_level, quality)
+        elif item_type == "Scroll": return self.new_scroll(shop_level, quality)
+
+    def random_magic_item(self, shop_level: float, party_level: int) -> dict:
         quality = self.quality(shop_level, party_level)
-        generate = {
-            "Good" : self.new_good(shop_level),
-            "Ammo" : self.new_ammo(),
-            "Weapon" : self.new_weapon(shop_level),
-            "Armor" : self.new_armor(shop_level),
-            "Shield" : self.new_shield(shop_level),
-            "Magic Weapon": self.new_magic_weapon(shop_level, quality),
-            "Magic Armor": self.new_magic_armor(shop_level, quality),
-            "Potion" : self.new_potion(shop_level, quality),
-            "Ring" : self.new_ring(shop_level, quality),
-            "Rod" : self.new_rod(shop_level, quality), # None if quality is "Minor"
-            "Staff" : self.new_staff(shop_level, quality), # None if quality is "Minor"
-            "Wand" : self.new_wand(shop_level, quality),
-            "Wondrous Item" : self.new_wondrous_item(shop_level, quality),
-            "Scroll" : self.new_scroll(shop_level, quality)
-        }
-        return generate[type]
+        item_type = self.item_choice("Random Magic Item Chance", quality = quality, file = "tables")["Name"]
+        return self.new(item_type, shop_level, party_level, quality)
 
     def quality(self, shop_level: float, party_level: int) -> str:
         """ Generate a random quality for an item based on party level """
@@ -40,73 +45,79 @@ class Item():
         minor = max(0, 100 - medium - major)
         return choices(population = ("Minor", "Medium", "Major"), weights = (minor, medium, major))[0]
 
+    def item_choice(self, name: str, quality: str = "Chance", mod: float = 0, file: str = "items") -> dict:
+        """ Choose an item from a list of dict based on an attribute """
+        # Select correct file
+        table = self.tables[name] if file == "tables" else self.scrolls[name] if file == "scrolls" else self.items[name]
+
+        weights = (item[quality] + mod * int(item[quality] > 0) for item in table)
+        item = dict(choices(population = table, weights = weights)[0])
+        return self.remove_unused_attributes(item)
+
+    def remove_unused_attributes(self, item: dict) -> dict:
+        """ Remove some attributes from the item used for item generation """
+        clean_item = dict(item)
+        for key in ["Minor", "Medium", "Major", "Chance", "Id"]:
+            if key in item.keys():
+                del clean_item[key]
+        return clean_item
+
     def new_good(self, shop_level: float) -> dict:
         """ Generate a new non magical Good """
-        max_cost = max((item["Cost"] for item in self.items["Good"]))
-        weights = (int((max_cost - item["Cost"]) / 10 + shop_level ** 2) for item in self.items["Good"])
-        return choices(population = self.items["Good"], weights = weights)[0]
+        return self.item_choice("Good")
 
     def new_ammo(self) -> dict:
         """ Generate a new Ammo for ranged weapons """
-        return choices(population = self.items["Ammo"],
-                       weights = (item["Chance"] for item in self.items["Ammo"]))[0]
+        return self.item_choice("Ammo")
 
     def new_weapon(self, shop_level: float) -> dict:
         """ Generate a new non magical Weapon """
-        return choices(population = self.items["Weapon"],
-                       weights = (item["Chance"] + shop_level for item in self.items["Weapon"]))[0]
+        return self.item_choice("Weapon", mod = shop_level)
 
     def new_armor(self, shop_level: float) -> dict:
         """ Generate a new non magical Armor """
-        return choices(population = self.items["Armor"],
-                       weights = (item["Chance"] + shop_level ** 0.5 for item in self.items["Armor"]))[0]
+        return self.item_choice("Armor", mod = shop_level ** 0.5)
 
     def new_shield(self, shop_level: float) -> dict:
         """ Generate a new non magical Shield """
-        return choices(population = self.items["Shield"],
-                       weights = (item["Chance"] + shop_level ** 0.5 for item in self.items["Shield"]))[0]
+        return self.item_choice("Shield", mod = shop_level ** 0.5)
 
     def new_potion(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Potion """
-        weights = (item[quality] + shop_level * int(item[quality] > 0) for item in self.items["Potion"])
-        return choices(population = self.items["Potion"], weights = weights)[0]
+        return self.item_choice("Potion", quality = quality, mod = shop_level)
 
     def new_ring(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Ring """
-        weights = (item[quality] + shop_level * int(item[quality] > 0) for item in self.items["Ring"])
-        return choices(population = self.items["Ring"], weights = weights)[0]
+        return self.item_choice("Ring", quality = quality, mod = shop_level)
 
     def new_rod(self, shop_level: float, quality: str) -> dict or None:
         """ Generate a new Rod, is None if quality is "Minor" """
         if quality == "Minor": return None
-        weights = (item[quality] + shop_level * int(item[quality] > 0) for item in self.items["Rod"])
-        return choices(population = self.items["Rod"], weights = weights)[0]
+        return self.item_choice("Rod", quality = quality, mod = shop_level)
 
     def new_staff(self, shop_level: float, quality: str) -> dict or None:
         """ Generate a new Staff, is None if quality is "Minor" """
         if quality == "Minor": return None
-        weights = (item[quality] + shop_level * int(item[quality] > 0) for item in self.items["Staff"])
-        return choices(population = self.items["Staff"], weights = weights)[0]
+        return self.item_choice("Staff", quality = quality, mod = shop_level)
 
     def new_wand(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Wand """
-        weights = (item[quality] + shop_level * int(item[quality] > 0) for item in self.items["Wand"])
-        return choices(population = self.items["Wand"], weights = weights)[0]
+        return self.item_choice("Wand", quality = quality, mod = shop_level)
 
     def new_wondrous_item(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Wondrous Item """
-        id = int(min(randint(0, 2 * shop_level) + randint(1, 100), 100))
+        id = int(min(randint(0, int(1.5 * shop_level)) + randint(1, 100), 100))
         items = self.items["Wondrous Item"]
-        return list(filter(lambda x: x["Id"] == id and x["Type"] == quality, items))[0]
+        item = dict(list(filter(lambda x: x["Id"] == id and x["Type"] == quality, items))[0])
+        return self.remove_unused_attributes(item)
 
     def new_scroll(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Scroll, 70% Arcane 30% Divine """
         scroll_type = choices(population = ("Arcane", "Divine"), weights = (7, 3))[0]
-        l_weights = (item[quality] + (shop_level ** 0.5) * int(item[quality] > 0) for item in self.scrolls["Scroll level"])
-        level = choices(population = self.scrolls["Scroll level"], weights = l_weights)[0]["Level"]
+        level = self.item_choice("Scroll Level", quality = quality, mod = shop_level ** 0.5, file = "tables")["Level"]
         scrolls = list(filter(lambda x: x["Level"] == level, self.scrolls[scroll_type]))
         s_weights = (item["Chance"] for item in scrolls)
-        return choices(population = scrolls, weights = s_weights)[0]
+        return self.remove_unused_attributes(choices(population = scrolls, weights = s_weights)[0])
 
     def new_magic_weapon(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Magic Weapon """
@@ -118,16 +129,13 @@ class Item():
         }
         is_specific_weapon = randint(1, 100) <= specific_weapon_chance[quality]
         if is_specific_weapon:
-            weights = (item[quality] for item in self.items["Specific Weapon"])
-            return choices(population = self.items["Specific Weapon"], weights = weights)[0]
+            return self.item_choice("Specific Weapon", quality = quality, file = "tables")
 
         # Get random normal weapon
         weapon = dict(self.new_weapon(shop_level))
 
         # Get random base bonus for the weapon
-        weights = (item[quality] + (shop_level ** 0.5) * int(item[quality] > 0) for item in self.items["Magic Weapon Base"])
-        base_bonus = choices(population = self.items["Magic Weapon Base"],
-                             weights = weights)[0]["Name"]
+        base_bonus = self.item_choice("Magic Weapon Base", quality = quality, mod = shop_level ** 0.5, file = "tables")["Name"]
         bonus = int(base_bonus)
 
         # Chance to get a special ability on the weapon
@@ -161,8 +169,7 @@ class Item():
                     continue
 
                 # Roll special ability
-                special_ability = choices(population = self.items[weapon_type],
-                                          weights = (item[quality] for item in self.items[weapon_type]))[0]
+                special_ability = self.item_choice(weapon_type, quality = quality, file = "tables")
 
                 # Reroll if ability is already added
                 if special_ability["Name"] in (item["Name"] for item in ability_list):
@@ -199,23 +206,20 @@ class Item():
 
     def new_magic_armor(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Magic Armor or Shield """
-        # Chance to get a specific Magic Weapon
-        specific_weapon_chance = {
+        # Chance to get a specific Magic Armor or Shield
+        specific_item_chance = {
             "Minor": 4,
             "Medium": 6,
             "Major": 6
         }
-        is_specific_weapon = randint(1, 100) <= specific_weapon_chance[quality]
+        is_specific_item = randint(1, 100) <= specific_item_chance[quality]
 
-        if is_specific_weapon:
-            weapon_type = choice(("Armor", "Shield"))
-            weights = (item[quality] + (shop_level ** 0.5) * int(item[quality] > 0) for item in self.items[f"Specific {weapon_type}"])
-            return choices(population = self.items[f"Specific {weapon_type}"], weights = weights)[0]
+        if is_specific_item:
+            item_type = choice(("Armor", "Shield"))
+            return self.item_choice(f"Specific {item_type}", quality = quality, mod = shop_level ** 0.5, file = "tables")
 
         # Get random base bonus for the item and determine if it's an armor or a shield
-        weights = (item[quality] + (shop_level ** 0.5) * int(item[quality] > 0) for item in self.items["Magic Armor Base"])
-        bonus_name = choices(population = self.items["Magic Armor Base"],
-                             weights = weights)[0]["Name"]
+        bonus_name = self.item_choice("Magic Armor Base", quality = quality, mod = shop_level ** 0.5, file = "tables")["Name"]
         base_bonus = int(bonus_name[1])
         bonus = int(base_bonus)
         is_armor = "armor" in bonus_name
@@ -254,8 +258,7 @@ class Item():
                     continue
 
                 # Roll special ability
-                special_ability = choices(population = self.items[item_type],
-                                          weights = (item[quality] for item in self.items[item_type]))[0]
+                special_ability = self.item_choice(item_type, quality = quality, file = "tables")
 
                 # Reroll if ability is already added
                 if special_ability["Name"] in (item["Name"] for item in ability_list):

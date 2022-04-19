@@ -2,481 +2,571 @@
   "Good": [
     {
       "Name": "Adventuring Backpack",
+      "Chance": 6,
       "Cost": 2,
       "Weight": 1
     },
     {
       "Name": "Barrel",
+      "Chance": 2,
       "Cost": 2,
       "Weight": 13.5
     },
     {
       "Name": "Basket",
+      "Chance": 4,
       "Cost": 0.4,
       "Weight": 0.5
     },
     {
       "Name": "Bedroll",
+      "Chance": 6,
       "Cost": 0.1,
       "Weight": 2.5
     },
     {
       "Name": "Bell",
+      "Chance": 3,
       "Cost": 1,
       "Weight": 0
     },
     {
       "Name": "Blanket, winter",
+      "Chance": 4,
       "Cost": 0.5,
       "Weight": 1.5
     },
     {
       "Name": "Block and tackle",
+      "Chance": 4,
       "Cost": 5,
       "Weight": 2.5
     },
     {
       "Name": "Bottle, wine glass",
+      "Chance": 7,
       "Cost": 2,
       "Weight": 0
     },
     {
       "Name": "Bucket",
+      "Chance": 6,
       "Cost": 0.5,
       "Weight": 1
     },
     {
       "Name": "Caltrops",
+      "Chance": 5,
       "Cost": 1,
       "Weight": 1
     },
     {
       "Name": "Candle",
+      "Chance": 5,
       "Cost": 0.01,
       "Weight": 0
     },
     {
       "Name": "Canvas",
+      "Chance": 3,
       "Cost": 0.1,
       "Weight": 0.5
     },
     {
       "Name": "Case, map or scroll",
+      "Chance": 6,
       "Cost": 1,
       "Weight": 0
     },
     {
       "Name": "Chain (10)",
+      "Chance": 4,
       "Cost": 30,
       "Weight": 1
     },
     {
       "Name": "Chalk, 1 piece",
+      "Chance": 4,
       "Cost": 0.01,
       "Weight": 0
     },
     {
       "Name": "Chest",
+      "Chance": 3,
       "Cost": 2,
       "Weight": 11.5
     },
     {
       "Name": "Crowbar",
+      "Chance": 6,
       "Cost": 2,
       "Weight": 2.5
     },
     {
-      "Name": "Firewood (per day)",
+      "Name": "Firewood (per one day)",
+      "Chance": 5,
       "Cost": 0.01,
       "Weight": 9
     },
     {
       "Name": "Fishhook",
+      "Chance": 4,
       "Cost": 0.1,
       "Weight": 0
     },
     {
       "Name": "Fishing net, 25 sq.",
+      "Chance": 5,
       "Cost": 4,
       "Weight": 2.5
     },
     {
       "Name": "Flask",
+      "Chance": 5,
       "Cost": 0.03,
       "Weight": 0.5
     },
     {
       "Name": "Flint and steel",
+      "Chance": 8,
       "Cost": 1,
       "Weight": 0
     },
     {
       "Name": "Grappling hook",
+      "Chance": 11,
       "Cost": 1,
       "Weight": 2
     },
     {
       "Name": "Hammer",
+      "Chance": 7,
       "Cost": 0.5,
       "Weight": 1
     },
     {
       "Name": "Ink (1 oz. vial)",
+      "Chance": 9,
       "Cost": 8,
       "Weight": 0
     },
     {
       "Name": "Inkpen",
+      "Chance": 8,
       "Cost": 0.1,
       "Weight": 0
     },
     {
       "Name": "Jug, clay",
+      "Chance": 4,
       "Cost": 0.03,
       "Weight": 4
     },
     {
       "Name": "Ladder, 3m",
+      "Chance": 6,
       "Cost": 0.05,
       "Weight": 9
     },
     {
       "Name": "Lamp, common",
+      "Chance": 8,
       "Cost": 0.1,
       "Weight": 0.5
     },
     {
       "Name": "Lantern, bullseye",
+      "Chance": 7,
       "Cost": 12,
       "Weight": 1.5
     },
     {
       "Name": "Lantern, hooded",
+      "Chance": 6,
       "Cost": 7,
       "Weight": 1
     },
     {
       "Name": "Lock, Very simple",
+      "Chance": 4,
       "Cost": 20,
       "Weight": 0.5
     },
     {
       "Name": "Lock, Average",
+      "Chance": 3,
       "Cost": 40,
       "Weight": 0.5
     },
     {
       "Name": "Lock, Good",
+      "Chance": 2,
       "Cost": 80,
       "Weight": 0.5
     },
     {
       "Name": "Lock, Amazing",
+      "Chance": 2,
       "Cost": 150,
       "Weight": 0.5
     },
     {
       "Name": "Manacles",
+      "Chance": 4,
       "Cost": 15,
       "Weight": 1
     },
     {
       "Name": "Manacles, masterwork",
+      "Chance": 3,
       "Cost": 50,
       "Weight": 1
     },
     {
       "Name": "Mirror, small steel",
+      "Chance": 7,
       "Cost": 10,
       "Weight": 0
     },
     {
-      "Name": "Mug/Tankard, clay",
+      "Name": "Mug, clay",
+      "Chance": 6,
       "Cost": 0.02,
       "Weight": 0.5
     },
     {
       "Name": "Oil (1-pint flask)",
+      "Chance": 12,
       "Cost": 0.1,
       "Weight": 0.5
     },
     {
       "Name": "Paper (sheet)",
+      "Chance": 10,
       "Cost": 0.4,
       "Weight": 0
     },
     {
       "Name": "Parchment (sheet)",
+      "Chance": 9,
       "Cost": 0.2,
       "Weight": 0
     },
     {
       "Name": "Pick, miner's",
+      "Chance": 5,
       "Cost": 3,
       "Weight": 4.5
     },
     {
       "Name": "Pitcher, clay",
+      "Chance": 4,
       "Cost": 0.02,
       "Weight": 2.5
     },
     {
       "Name": "Piton",
+      "Chance": 4,
       "Cost": 0.1,
       "Weight": 0
     },
     {
       "Name": "Pole 3m",
+      "Chance": 4,
       "Cost": 0.2,
       "Weight": 3.5
     },
     {
       "Name": "Pot, iron",
+      "Chance": 3,
       "Cost": 0.5,
       "Weight": 4.5
     },
     {
       "Name": "Pouch, belt",
+      "Chance": 8,
       "Cost": 1,
       "Weight": 0
     },
     {
       "Name": "Ram, portable",
+      "Chance": 3,
       "Cost": 10,
       "Weight": 9
     },
     {
-      "Name": "Rations, trail (per day)",
+      "Name": "Rations (per one day)",
+      "Chance": 17,
       "Cost": 0.5,
       "Weight": 0.5
     },
     {
       "Name": "Rope, hempen 15m",
+      "Chance": 8,
       "Cost": 1,
       "Weight": 4.5
     },
     {
       "Name": "Rope, silk 15m",
+      "Chance": 11,
       "Cost": 10,
       "Weight": 2.5
     },
     {
       "Name": "Sack",
+      "Chance": 9,
       "Cost": 0.1,
       "Weight": 0
     },
     {
       "Name": "Sealing wax",
+      "Chance": 4,
       "Cost": 1,
       "Weight": 0.5
     },
     {
       "Name": "Sewing needle",
+      "Chance": 8,
       "Cost": 0.5,
       "Weight": 0
     },
     {
       "Name": "Signal whistle",
+      "Chance": 5,
       "Cost": 0.8,
       "Weight": 0
     },
     {
       "Name": "Signet ring",
+      "Chance": 3,
       "Cost": 5,
       "Weight": 0
     },
     {
       "Name": "Sledge",
+      "Chance": 4,
       "Cost": 1,
       "Weight": 4.5
     },
     {
       "Name": "Soap",
+      "Chance": 3,
       "Cost": 0.5,
       "Weight": 0.5
     },
     {
       "Name": "Shovel",
+      "Chance": 7,
       "Cost": 2,
       "Weight": 3.5
     },
     {
       "Name": "Spyglass",
+      "Chance": 2,
       "Cost": 1000,
       "Weight": 0.5
     },
     {
       "Name": "Tent",
+      "Chance": 4,
       "Cost": 10,
       "Weight": 9
     },
     {
       "Name": "Torch",
+      "Chance": 15,
       "Cost": 0.01,
       "Weight": 0.5
     },
     {
       "Name": "Vial ink",
+      "Chance": 11,
       "Cost": 1,
       "Weight": 0.1
     },
     {
       "Name": "Waterskin",
+      "Chance": 14,
       "Cost": 1,
       "Weight": 2
     },
     {
       "Name": "Whetstone",
+      "Chance": 4,
       "Cost": 0.02,
       "Weight": 0.5
     },
     {
       "Name": "Flask of Acid",
+      "Chance": 4,
       "Cost": 10,
       "Weight": 0.5
     },
     {
       "Name": "Flask of Alchemist's fire",
+      "Chance": 4,
       "Cost": 20,
       "Weight": 0.5
     },
     {
       "Name": "Vial of Antitoxin",
+      "Chance": 5,
       "Cost": 50,
       "Weight": 0
     },
     {
       "Name": "Everburning torch",
+      "Chance": 4,
       "Cost": 110,
       "Weight": 0.5
     },
     {
       "Name": "Flask of Holy water",
+      "Chance": 6,
       "Cost": 25,
       "Weight": 0.5
     },
     {
       "Name": "Smokestick",
+      "Chance": 4,
       "Cost": 20,
       "Weight": 0
     },
     {
       "Name": "Sunrod",
+      "Chance": 3,
       "Cost": 2,
       "Weight": 0.5
     },
     {
       "Name": "Tanglefoot bag",
+      "Chance": 3,
       "Cost": 50,
       "Weight": 2
     },
     {
       "Name": "Thunderstone",
+      "Chance": 4,
       "Cost": 30,
       "Weight": 0.5
     },
     {
       "Name": "Tindertwig",
+      "Chance": 4,
       "Cost": 1,
       "Weight": 0
     },
     {
       "Name": "Alchemist's lab",
+      "Chance": 2,
       "Cost": 500,
       "Weight": 18
     },
     {
       "Name": "Artisan's tools",
+      "Chance": 9,
       "Cost": 5,
       "Weight": 2.5
     },
     {
       "Name": "Artisan's tools, masterwork",
+      "Chance": 6,
       "Cost": 55,
       "Weight": 2.5
     },
     {
       "Name": "Climber's kit",
+      "Chance": 4,
       "Cost": 80,
       "Weight": 2.5
     },
     {
       "Name": "Disguise kit",
+      "Chance": 9,
       "Cost": 50,
       "Weight": 3.5
     },
     {
       "Name": "Healer's kit",
+      "Chance": 7,
       "Cost": 50,
       "Weight": 0.5
     },
     {
       "Name": "Holly and mistletoe",
+      "Chance": 4,
       "Cost": 0.01,
       "Weight": 0
     },
     {
       "Name": "Holy symbol, wooden",
+      "Chance": 4,
       "Cost": 1,
       "Weight": 0
     },
     {
       "Name": "Holy symbol, silver",
+      "Chance": 4,
       "Cost": 25,
       "Weight": 0.5
     },
     {
       "Name": "Hourglass",
+      "Chance": 4,
       "Cost": 25,
       "Weight": 0.5
     },
     {
       "Name": "Magnifying glass",
+      "Chance": 4,
       "Cost": 100,
       "Weight": 0
     },
     {
       "Name": "Musical instrument, common",
+      "Chance": 12,
       "Cost": 5,
       "Weight": 1.5
     },
     {
       "Name": "Musical instrument, masterwork",
+      "Chance": 8,
       "Cost": 100,
       "Weight": 1.5
     },
     {
       "Name": "Scale, merchant's",
+      "Chance": 4,
       "Cost": 2,
       "Weight": 0.5
     },
     {
       "Name": "Spell component pouch",
+      "Chance": 11,
       "Cost": 5,
       "Weight": 1
     },
     {
       "Name": "Spellbook, wizard's (blank)",
+      "Chance": 10,
       "Cost": 15,
       "Weight": 1.5
     },
     {
       "Name": "Thieves' tools",
+      "Chance": 6,
       "Cost": 30,
       "Weight": 0.5
     },
     {
       "Name": "Thieves' tools, masterwork",
+      "Chance": 4,
       "Cost": 100,
       "Weight": 1
     },
     {
-      "Name": "Tool, masterwork",
-      "Cost": 50,
-      "Weight": 0.5
-    },
-    {
       "Name": "Water clock",
+      "Chance": 2,
       "Cost": 1000,
       "Weight": 90.5
     }
@@ -1595,1450 +1685,6 @@
       "Armor Check Penalty": "-10",
       "Arcane Spell Failure Chance": "50%",
       "Weight": 20.5
-    }
-  ],
-  "Magic Weapon Base": [
-    {
-      "Minor": 70,
-      "Medium": 10,
-      "Major": 0,
-      "Name": 1
-    },
-    {
-      "Minor": 15,
-      "Medium": 19,
-      "Major": 0,
-      "Name": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 29,
-      "Major": 20,
-      "Name": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 18,
-      "Name": 4
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 11,
-      "Name": 5
-    }
-  ],
-  "Magic Armor Base": [
-    {
-      "Minor": 60,
-      "Medium": 5,
-      "Major": 0,
-      "Name": "+1 shield"
-    },
-    {
-      "Minor": 20,
-      "Medium": 5,
-      "Major": 0,
-      "Name": "+1 armor"
-    },
-    {
-      "Minor": 5,
-      "Medium": 10,
-      "Major": 0,
-      "Name": "+2 shield"
-    },
-    {
-      "Minor": 2,
-      "Medium": 10,
-      "Major": 0,
-      "Name": "+2 armor"
-    },
-    {
-      "Minor": 0,
-      "Medium": 10,
-      "Major": 8,
-      "Name": "+3 shield"
-    },
-    {
-      "Minor": 0,
-      "Medium": 10,
-      "Major": 8,
-      "Name": "+3 armor"
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 11,
-      "Name": "+4 shield"
-    },
-    {
-      "Minor": 0,
-      "Medium": 2,
-      "Major": 11,
-      "Name": "+4 armor"
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 11,
-      "Name": "+5 shield"
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 8,
-      "Name": "+5 armor"
-    }
-  ],
-  "Specific Armor": [
-    {
-      "Minor": 50,
-      "Medium": 25,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mithral-shirt",
-      "Name": "Mithral shirt",
-      "Cost": 1100
-    },
-    {
-      "Minor": 30,
-      "Medium": 20,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dragonhide-plate",
-      "Name": "Dragonhide plate",
-      "Cost": 3300
-    },
-    {
-      "Minor": 20,
-      "Medium": 12,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#elven-chain",
-      "Name": "Elven chain",
-      "Cost": 4150
-    },
-    {
-      "Minor": 0,
-      "Medium": 10,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#rhino-hide",
-      "Name": "Rhino hide",
-      "Cost": 5165
-    },
-    {
-      "Minor": 0,
-      "Medium": 15,
-      "Major": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#adamantine-breastplate",
-      "Name": "Adamantine breastplate",
-      "Cost": 10200
-    },
-    {
-      "Minor": 0,
-      "Medium": 15,
-      "Major": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dwarven-plate",
-      "Name": "Dwarven plate",
-      "Cost": 16500
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 12,
-      "Link": "http://dndsrd.net/magicItemsAW.html#banded-mail-of-luck",
-      "Name": "Banded mail of luck",
-      "Cost": 18900
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 18,
-      "Link": "http://dndsrd.net/magicItemsAW.html#celestial-armor",
-      "Name": "Celestial armor",
-      "Cost": 22400
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#plate-armor-of-the-deep",
-      "Name": "Plate armor of the deep",
-      "Cost": 24650
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 15,
-      "Link": "http://dndsrd.net/magicItemsAW.html#breastplate-of-command",
-      "Name": "Breastplate of command",
-      "Cost": 25400
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 15,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mithral-full-plate-of-speed",
-      "Name": "Mithral full plate of speed",
-      "Cost": 26500
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#demon-armor",
-      "Name": "Demon armor",
-      "Cost": 52260
-    }
-  ],
-  "Specific Weapon": [
-    {
-      "Minor": 15,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sleep-arrow",
-      "Name": "Sleep arrow",
-      "Cost": 132
-    },
-    {
-      "Minor": 10,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#screaming-bolt",
-      "Name": "Screaming bolt",
-      "Cost": 267
-    },
-    {
-      "Minor": 20,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#silver-dagger-masterwork",
-      "Name": "Silver dagger, masterwork",
-      "Cost": 322
-    },
-    {
-      "Minor": 20,
-      "Medium": 0,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#masterwork-cold-iron-longsword",
-      "Name": "Cold iron longsword, masterwork",
-      "Cost": 330
-    },
-    {
-      "Minor": 10,
-      "Medium": 9,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#javelin-of-lightning",
-      "Name": "Javelin of lightning",
-      "Cost": 1500
-    },
-    {
-      "Minor": 5,
-      "Medium": 6,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#slaying-arrow",
-      "Name": "Slaying arrow",
-      "Cost": 2282
-    },
-    {
-      "Minor": 10,
-      "Medium": 9,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#adamantine-dagger",
-      "Name": "Adamantine dagger",
-      "Cost": 3002
-    },
-    {
-      "Minor": 10,
-      "Medium": 9,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#adamantine-battleaxe",
-      "Name": "Adamantine battleaxe",
-      "Cost": 3010
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#slaying-arrow",
-      "Name": "Slaying arrow (greater)",
-      "Cost": 4057
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#shatterspike",
-      "Name": "Shatterspike",
-      "Cost": 4315
-    },
-    {
-      "Minor": 0,
-      "Medium": 6,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dagger-of-venom",
-      "Name": "Dagger of venom",
-      "Cost": 8302
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#trident-of-warning",
-      "Name": "Trident of warning",
-      "Cost": 10115
-    },
-    {
-      "Minor": 0,
-      "Medium": 6,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#assassins-dagger",
-      "Name": "Assassin's dagger",
-      "Cost": 10302
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#shifters-sorrow",
-      "Name": "Shifter's sorrow",
-      "Cost": 12780
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#trident-of-fish-command",
-      "Name": "Trident of fish command",
-      "Cost": 18650
-    },
-    {
-      "Minor": 0,
-      "Medium": 8,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#flame-tongue",
-      "Name": "Flame tongue",
-      "Cost": 20715
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#luck-blade",
-      "Name": "Luck blade (0 wishes)",
-      "Cost": 22060
-    },
-    {
-      "Minor": 0,
-      "Medium": 7,
-      "Major": 7,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sword-of-subtlety",
-      "Name": "Sword of subtlety",
-      "Cost": 22310
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 7,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sword-of-the-planes",
-      "Name": "Sword of the planes",
-      "Cost": 22315
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 6,
-      "Link": "http://dndsrd.net/magicItemsAW.html#nine-lives-stealer",
-      "Name": "Nine lives stealer",
-      "Cost": 23057
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sword-of-life-stealing",
-      "Name": "Sword of life stealing",
-      "Cost": 25715
-    },
-    {
-      "Minor": 0,
-      "Medium": 2,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#oathbow",
-      "Name": "Oathbow",
-      "Cost": 25600
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mace-of-terror",
-      "Name": "Mace of terror",
-      "Cost": 38552
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 6,
-      "Link": "http://dndsrd.net/magicItemsAW.html#life-drinker",
-      "Name": "Life-drinker",
-      "Cost": 40320
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sylvan-scimitar",
-      "Name": "Sylvan scimitar",
-      "Cost": 47315
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#rapier-of-puncturing",
-      "Name": "Rapier of puncturing",
-      "Cost": 50320
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 6,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sun-blade",
-      "Name": "Sun blade",
-      "Cost": 50335
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 6,
-      "Link": "http://dndsrd.net/magicItemsAW.html#frost-brand",
-      "Name": "Frost brand",
-      "Cost": 54475
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dwarven-thrower",
-      "Name": "Dwarven thrower",
-      "Cost": 60312
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 7,
-      "Link": "http://dndsrd.net/magicItemsAW.html#luck-blade",
-      "Name": "Luck blade (1 wish)",
-      "Cost": 62360
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mace-of-smiting",
-      "Name": "Mace of smiting",
-      "Cost": 75312
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#luck-blade",
-      "Name": "Luck blade (2 wishes)",
-      "Cost": 102660
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#holy-avenger",
-      "Name": "Holy avenger",
-      "Cost": 120630
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#luck-blade",
-      "Name": "Luck blade (3 wishes)",
-      "Cost": 142960
-    }
-  ],
-  "Specific Shield": [
-    {
-      "Minor": 30,
-      "Medium": 20,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#darkwood-buckler",
-      "Name": "Darkwood buckler",
-      "Cost": 205
-    },
-    {
-      "Minor": 50,
-      "Medium": 25,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#darkwood-shield",
-      "Name": "Darkwood shield",
-      "Cost": 257
-    },
-    {
-      "Minor": 15,
-      "Medium": 25,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mithral-heavy-shield",
-      "Name": "Mithral heavy shield",
-      "Cost": 1020
-    },
-    {
-      "Minor": 5,
-      "Medium": 15,
-      "Major": 20,
-      "Link": "http://dndsrd.net/magicItemsAW.html#casters-shield",
-      "Name": "Caster's shield",
-      "Cost": 3153
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 20,
-      "Link": "http://dndsrd.net/magicItemsAW.html#spined-shield",
-      "Name": "Spined shield",
-      "Cost": 5580
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 20,
-      "Link": "http://dndsrd.net/magicItemsAW.html#lions-shield",
-      "Name": "Lion's shield",
-      "Cost": 9170
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 30,
-      "Link": "http://dndsrd.net/magicItemsAW.html#winged-shield",
-      "Name": "Winged shield",
-      "Cost": 17257
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#absorbing-shield",
-      "Name": "Absorbing shield",
-      "Cost": 50170
-    }
-  ],
-  "Magic Melee Weapon": [
-    {
-      "Minor": 10,
-      "Medium": 6,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bane",
-      "Name": "Bane",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 7,
-      "Medium": 6,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#defending",
-      "Name": "Defending",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 10,
-      "Medium": 7,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#flaming",
-      "Name": "Flaming",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 10,
-      "Medium": 7,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#frost",
-      "Name": "Frost",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 10,
-      "Medium": 7,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#shock",
-      "Name": "Shock",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 9,
-      "Medium": 5,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ghost-touch-weapon",
-      "Name": "Ghost touch",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 11,
-      "Medium": 6,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#keen",
-      "Name": "Keen",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 4,
-      "Medium": 4,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ki-focus",
-      "Name": "Ki Focus",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 4,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#merciful",
-      "Name": "Merciful",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 7,
-      "Medium": 4,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#mighty-cleaving",
-      "Name": "Mighty cleaving",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 5,
-      "Medium": 5,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#spell-storing",
-      "Name": "Spell storing",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 4,
-      "Medium": 4,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#throwing",
-      "Name": "Throwing",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 4,
-      "Medium": 2,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#thundering",
-      "Name": "Thundering",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 4,
-      "Medium": 4,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#vicious",
-      "Name": "Vicious",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#anarchic",
-      "Name": "Anarchic",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#axiomatic",
-      "Name": "Axiomatic",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#disruption",
-      "Name": "Disruption",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#flaming-burst",
-      "Name": "Flaming burst",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#icy-burst",
-      "Name": "Icy burst",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#holy",
-      "Name": "Holy",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#shocking-burst",
-      "Name": "Shocking burst",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#unholy",
-      "Name": "Unholy",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 2,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#wounding",
-      "Name": "Wounding",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#speed",
-      "Name": "Speed",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#brilliant-energy",
-      "Name": "Brilliant energy",
-      "Cost Modifier": 4
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#dancing",
-      "Name": "Dancing",
-      "Cost Modifier": 4
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#vorpal",
-      "Name": "Vorpal",
-      "Cost Modifier": 5
-    }
-  ],
-  "Magic Ranged Weapon": [
-    {
-      "Minor": 12,
-      "Medium": 8,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bane",
-      "Name": "Bane",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 13,
-      "Medium": 8,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#distance",
-      "Name": "Distance",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 15,
-      "Medium": 12,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#flaming",
-      "Name": "Flaming",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 15,
-      "Medium": 12,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#frost",
-      "Name": "Frost",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 5,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#merciful",
-      "Name": "Merciful",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 8,
-      "Medium": 5,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#returning",
-      "Name": "Returning",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 15,
-      "Medium": 12,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#shock",
-      "Name": "Shock",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 10,
-      "Medium": 5,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#seeking",
-      "Name": "Seeking",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 6,
-      "Medium": 4,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#thundering",
-      "Name": "Thundering",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#anarchic",
-      "Name": "Anarchic",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#axiomatic",
-      "Name": "Axiomatic",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#flaming-burst",
-      "Name": "Flaming burst",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#holy",
-      "Name": "Holy",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#icy-burst",
-      "Name": "Icy burst",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#shocking-burst",
-      "Name": "Shocking burst",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#unholy",
-      "Name": "Unholy",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#speed",
-      "Name": "Speed",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 6,
-      "Link": "http://dndsrd.net/magicItemsAW.html#brilliant-energy",
-      "Name": "Brilliant energy",
-      "Cost Modifier": 4
-    }
-  ],
-  "Magic Shield": [
-    {
-      "Minor": 20,
-      "Medium": 10,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#arrow-catching",
-      "Name": "Arrow catching",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 20,
-      "Medium": 10,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#bashing",
-      "Name": "Bashing",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 10,
-      "Medium": 5,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#blinding",
-      "Name": "Blinding",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 25,
-      "Medium": 15,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
-      "Name": "Fortification, light",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 17,
-      "Medium": 10,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#arrow-deflection",
-      "Name": "Arrow deflection",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 5,
-      "Medium": 7,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#animated",
-      "Name": "Animated",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 2,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
-      "Name": "Spell resistance (13)",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#acid-resistance",
-      "Name": "Acid resistance",
-      "Cost Modifier": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cold-resistance",
-      "Name": "Cold resistance",
-      "Cost Modifier": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#electricity-resistance",
-      "Name": "Electricity resistance",
-      "Cost Modifier": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fire-resistance",
-      "Name": "Fire resistance",
-      "Cost Modifier": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 4,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sonic-resistance",
-      "Name": "Sonic resistance",
-      "Cost Modifier": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 6,
-      "Major": 6,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ghost-touch",
-      "Name": "Ghost touch",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 10,
-      "Major": 10,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
-      "Name": "Fortification, moderate",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 3,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
-      "Name": "Spell resistance (15)",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 1,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#wild",
-      "Name": "Wild",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#acid-resistance-improved",
-      "Name": "Acid resistance, improved",
-      "Cost Modifier": 42000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cold-resistance-improved",
-      "Name": "Cold resistance, improved",
-      "Cost Modifier": 42000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#electricity-resistance-improved",
-      "Name": "Electricity resistance, improved",
-      "Cost Modifier": 42000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fire-resistance-improved",
-      "Name": "Fire resistance, improved",
-      "Cost Modifier": 42000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sonic-resistance-improved",
-      "Name": "Sonic resistance, improved",
-      "Cost Modifier": 42000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
-      "Name": "Spell resistance (17)",
-      "Cost Modifier": 4
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#undead-controlling",
-      "Name": "Undead controlling",
-      "Cost Modifier": 49000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 4,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
-      "Name": "Fortification, heavy",
-      "Cost Modifier": 5
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#reflecting",
-      "Name": "Reflecting",
-      "Cost Modifier": 5
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
-      "Name": "Spell resistance (19)",
-      "Cost Modifier": 5
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#acid-resistance-greater",
-      "Name": "Acid resistance, greater",
-      "Cost Modifier": 66000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cold-resistance-greater",
-      "Name": "Cold resistance, greater",
-      "Cost Modifier": 66000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#electricity-resistance-greater",
-      "Name": "Electricity resistance, greater",
-      "Cost Modifier": 66000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fire-resistance-greater",
-      "Name": "Fire resistance, greater",
-      "Cost Modifier": 66000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sonic-resistance-greater",
-      "Name": "Sonic resistance, greater",
-      "Cost Modifier": 66000
-    }
-  ],
-  "Magic Armor": [
-    {
-      "Minor": 25,
-      "Medium": 5,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#glamered",
-      "Name": "Glamered",
-      "Cost Modifier": 2700
-    },
-    {
-      "Minor": 7,
-      "Medium": 3,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
-      "Name": "Fortification, light",
-      "Cost Modifier": 1
-    },
-    {
-      "Minor": 20,
-      "Medium": 3,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#slick",
-      "Name": "Slick",
-      "Cost Modifier": 3750
-    },
-    {
-      "Minor": 20,
-      "Medium": 3,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#shadow",
-      "Name": "Shadow",
-      "Cost Modifier": 3750
-    },
-    {
-      "Minor": 20,
-      "Medium": 3,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#silent-moves",
-      "Name": "Silent moves",
-      "Cost Modifier": 3750
-    },
-    {
-      "Minor": 4,
-      "Medium": 2,
-      "Major": 0,
-      "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
-      "Name": "Spell resistance (13)",
-      "Cost Modifier": 2
-    },
-    {
-      "Minor": 1,
-      "Medium": 10,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#slick-improved",
-      "Name": "Slick, improved",
-      "Cost Modifier": 15000
-    },
-    {
-      "Minor": 1,
-      "Medium": 10,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#shadow-improved",
-      "Name": "Shadow, improved",
-      "Cost Modifier": 15000
-    },
-    {
-      "Minor": 1,
-      "Medium": 10,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#silent-moves-improved",
-      "Name": "Silent moves, improved",
-      "Cost Modifier": 15000
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#acid-resistance",
-      "Name": "Acid resistance",
-      "Cost Modifier": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cold-resistance",
-      "Name": "Cold resistance",
-      "Cost Modifier": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#electricity-resistance",
-      "Name": "Electricity resistance",
-      "Cost Modifier": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fire-resistance",
-      "Name": "Fire resistance",
-      "Cost Modifier": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 3,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sonic-resistance",
-      "Name": "Sonic resistance",
-      "Cost Modifier": 18000
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#ghost-touch",
-      "Name": "Ghost touch",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#invulnerability",
-      "Name": "Invulnerability",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
-      "Name": "Fortification, moderate",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
-      "Name": "Spell resistance (15)",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 5,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#wild",
-      "Name": "Wild",
-      "Cost Modifier": 3
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#slick-greater",
-      "Name": "Slick, greater",
-      "Cost Modifier": 33750
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#shadow-greater",
-      "Name": "Shadow, greater",
-      "Cost Modifier": 33750
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#silent-moves-greater",
-      "Name": "Silent moves, greater",
-      "Cost Modifier": 33750
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#acid-resistance-improved",
-      "Name": "Acid resistance, improved",
-      "Cost Modifier": 42000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cold-resistance-improved",
-      "Name": "Cold resistance, improved",
-      "Cost Modifier": 42000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#electricity-resistance-improved",
-      "Name": "Electricity resistance, improved",
-      "Cost Modifier": 42000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fire-resistance-improved",
-      "Name": "Fire resistance, improved",
-      "Cost Modifier": 42000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sonic-resistance-improved",
-      "Name": "Sonic resistance, improved",
-      "Cost Modifier": 42000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 5,
-      "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
-      "Name": "Spell resistance (17)",
-      "Cost Modifier": 4
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#etherealness",
-      "Name": "Etherealness",
-      "Cost Modifier": 49000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#undead-controlling",
-      "Name": "Undead controlling",
-      "Cost Modifier": 49000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fortification",
-      "Name": "Fortification, heavy",
-      "Cost Modifier": 5
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 2,
-      "Link": "http://dndsrd.net/magicItemsAW.html#spell-resistance",
-      "Name": "Spell resistance (19)",
-      "Cost Modifier": 5
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#acid-resistance-greater",
-      "Name": "Acid resistance, greater",
-      "Cost Modifier": 66000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#cold-resistance-greater",
-      "Name": "Cold resistance, greater",
-      "Cost Modifier": 66000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#electricity-resistance-greater",
-      "Name": "Electricity resistance, greater",
-      "Cost Modifier": 66000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#fire-resistance-greater",
-      "Name": "Fire resistance, greater",
-      "Cost Modifier": 66000
-    },
-    {
-      "Minor": 0,
-      "Medium": 0,
-      "Major": 1,
-      "Link": "http://dndsrd.net/magicItemsAW.html#sonic-resistance-greater",
-      "Name": "Sonic resistance, greater",
-      "Cost Modifier": 66000
     }
   ],
   "Potion": [
