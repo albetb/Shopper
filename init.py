@@ -2,15 +2,12 @@ from shop import Shop
             
 mario = Shop(   
                 "Mario", 
-                city_level = 1, 
+                city_level = 0, 
                 party_level = 5, 
-                shop_level = 1, 
+                shop_level = 2, 
                 reputation = 0, 
-                template = "Blacksmith"
+                template = "Mage Merchant"
             )
 
 mario.generate_inventory()
-mario.display()
-for i in range(400):
-    mario.passing_time(hours = 1)
-    mario.display()
+mario.create_pdf()

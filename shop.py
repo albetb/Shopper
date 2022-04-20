@@ -1,6 +1,8 @@
 from item import Item
 from random import random, randint, choices, choice
 from json import load
+from fpdf import FPDF
+from datetime import datetime
 
 class Shop:
     def __init__(self, name: str, 
@@ -65,14 +67,14 @@ class Shop:
         """ Add or subtract reputation from the shop [-10, 10] """
         self.reputation = max(-10, min(10, self.reputation + reputation_added))
 
-    def load_shop(self) -> dict:
+    def load_shop_type(self) -> dict:
         """ Load shop type for template """
         with open(f"config/shops.json", "r") as file:
             return load(file)
 
     def template(self, name: str = "") -> None:
         """ Select a template for the shop """
-        shop_types = self.load_shop()
+        shop_types = self.load_shop_type()
         # Get default shop if shop name don't exist
         name = "" if name not in (item["Name"] for item in shop_types["Type"]) else name
         shop = list(filter(lambda x: x["Name"] == name, shop_types["Type"]))[0]
@@ -205,14 +207,50 @@ class Shop:
             print("|" + " " * 48 + "|")
             for item in self.stock:
                 if item["Number"] > 0:
-                    name = item["Name"] if len(item["Name"]) < 34 else f"{str(item['Name'])[:32]}.."
-                    txt = f'| {item["Number"]}x {name}: {self.true_cost(item)}gp'
-                    txt = txt + " " * (49 - len(txt)) + "|"
+                    name = item["Name"] if len(item["Name"]) < 32 else f"{str(item['Name'])[:30]}.."
+                    txt = f'| {item["Number"]}x {name} '
+                    cst = str(self.true_cost(item))
+                    txt = txt + "." * (44 - len(txt) - len(cst)) + f" {cst} gp |"
                     print(txt)
             print("|" + " " * 48 + "|")
             cost = f"| > Gold: {int(self.gold)}gp"
             print(cost + " " * (49 - len(cost)) + "|")
             print("|" + "_" * 48 + "|")
+
+    def create_pdf(self) -> None:
+        """ Create a pdf of the inventory """
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Courier", size = 12)
+
+        print = lambda t, l = "": pdf.cell(200, 5, txt = t, ln = 1, align = 'C', link = l)
+
+        print("_" * 50)
+        shop_name = self.name if len(self.name) < 31 else f"{str(self.name)[:29]}.."
+        shop_name = f" {shop_name}'s inventory: "
+        shop_name = "| " + "~" * ((47 - len(shop_name)) // 2) + shop_name
+        shop_name = shop_name + "~" * (48 - len(shop_name)) + " |"
+        print(shop_name)
+        print("|" + " " * 48 + "|")
+        for item in self.stock:
+            if item["Number"] > 0:
+                name = item["Name"] if len(item["Name"]) < 32 else f"{str(item['Name'])[:30]}.."
+                txt = f'| {item["Number"]}x {name} '
+                cst = str(self.true_cost(item))
+                txt = txt + "." * (44 - len(txt) - len(cst)) + f" {cst} gp |"
+                link = ""
+                if "Link" in item.keys():
+                    link = item["Link"]
+                elif "Ability" in item.keys() and isinstance(item["Ability"], list) and len(item["Ability"]) > 0:
+                    link = item["Ability"][0]["Link"]
+                print(txt, link)
+        print("|" + " " * 48 + "|")
+        cost = f"| > Gold: {int(self.gold)}gp"
+        print(cost + " " * (49 - len(cost)) + "|")
+        print("|" + "_" * 48 + "|")
+        
+        now = datetime.now().strftime("%y%m%d%H%M%S")
+        pdf.output(f"created/{self.name}'s inventory - {now}.pdf")  
 
     def true_cost(self, item: dict) -> int or float:
         """ Modifies cost of an item """
