@@ -193,11 +193,6 @@ class Shop:
     def display(self) -> None:
         """ Display the shop's inventory """
         if not self.is_open():
-            all((
-                    8 < self.hours_counter % 24 < 18, # Normal opening time 9 - 18
-                    self.hours_counter % 24 != 13, # Lunch break 13-14
-                    not self.hours_counter % 168 > 144 # Day off every 7 days
-                ))
             reason = "day off" if self.hours_counter % 168 > 144 else "lunch break" if self.hours_counter % 24 == 13 else f"{self.hours_counter % 24} o'clock"
             print(f"~~~ The shop is closed (it's {reason}) ~~~")
         else:
