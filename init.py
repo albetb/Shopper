@@ -1,7 +1,7 @@
 from shop import Shop
             
 mario = Shop(   
-                "Mario", 
+                "Carson Thunder", 
                 city_level = 0, 
                 party_level = 5, 
                 shop_level = 2, 

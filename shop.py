@@ -213,7 +213,7 @@ class Shop:
                     txt = txt + "." * (44 - len(txt) - len(cst)) + f" {cst} gp |"
                     print(txt)
             print("|" + " " * 48 + "|")
-            cost = f"| > Gold: {int(self.gold)}gp"
+            cost = f"| > Gold: {int(self.gold)} gp"
             print(cost + " " * (49 - len(cost)) + "|")
             print("|" + "_" * 48 + "|")
 
@@ -223,31 +223,32 @@ class Shop:
         pdf.add_page()
         pdf.set_font("Courier", size = 12)
 
-        print = lambda t, l = "": pdf.cell(200, 5, txt = t, ln = 1, align = 'C', link = l)
+        print = lambda t, l = "": pdf.cell(190, 5, txt = t, ln = 1, align = 'C', link = l)
 
-        print("_" * 50)
-        shop_name = self.name if len(self.name) < 31 else f"{str(self.name)[:29]}.."
+        print("_" * 60)
+        print("|" + " " * 58 + "|")
+        shop_name = self.name if len(self.name) < 41 else f"{str(self.name)[:39]}.."
         shop_name = f" {shop_name}'s inventory: "
-        shop_name = "| " + "~" * ((47 - len(shop_name)) // 2) + shop_name
-        shop_name = shop_name + "~" * (48 - len(shop_name)) + " |"
+        shop_name = "| " + "~" * ((57 - len(shop_name)) // 2) + shop_name
+        shop_name = shop_name + "~" * (58 - len(shop_name)) + " |"
         print(shop_name)
-        print("|" + " " * 48 + "|")
+        print("|" + " " * 58 + "|")
         for item in self.stock:
             if item["Number"] > 0:
-                name = item["Name"] if len(item["Name"]) < 32 else f"{str(item['Name'])[:30]}.."
+                name = item["Name"] if len(item["Name"]) < 42 else f"{str(item['Name'])[:40]}.."
                 txt = f'| {item["Number"]}x {name} '
                 cst = str(self.true_cost(item))
-                txt = txt + "." * (44 - len(txt) - len(cst)) + f" {cst} gp |"
+                txt = txt + "." * (54 - len(txt) - len(cst)) + f" {cst} gp |"
                 link = ""
                 if "Link" in item.keys():
                     link = item["Link"]
                 elif "Ability" in item.keys() and isinstance(item["Ability"], list) and len(item["Ability"]) > 0:
                     link = item["Ability"][0]["Link"]
                 print(txt, link)
-        print("|" + " " * 48 + "|")
-        cost = f"| > Gold: {int(self.gold)}gp"
-        print(cost + " " * (49 - len(cost)) + "|")
-        print("|" + "_" * 48 + "|")
+        print("|" + " " * 58 + "|")
+        cost = f"| > Gold: {int(self.gold)} gp"
+        print(cost + " " * (59 - len(cost)) + "|")
+        print("|" + "_" * 58 + "|")
         
         now = datetime.now().strftime("%y%m%d%H%M%S")
         pdf.output(f"created/{self.name}'s inventory - {now}.pdf")  
