@@ -8,5 +8,9 @@ mario = Shop(
                 reputation = 0, 
                 template = "Blacksmith"
             )
+
 mario.generate_inventory()
 mario.display()
+for i in range(400):
+    mario.passing_time(hours = 1)
+    mario.display()

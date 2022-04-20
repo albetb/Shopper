@@ -1,4 +1,3 @@
-from msilib.schema import tables
 from random import choices, randint
 from json import load
 from secrets import choice
@@ -9,7 +8,7 @@ class Item():
         self.scrolls = self.load_items("scrolls")
         self.tables = self.load_items("tables")
 
-    def load_items(self, file = "items") -> dict:
+    def load_items(self, file: str = "items") -> dict:
         """ Load items or scrolls list """
         with open(f"config/{file}.json", "r") as file:
             return load(file)
@@ -17,21 +16,22 @@ class Item():
     def new(self, item_type: str, shop_level: float, party_level: int, quality: str or None = None) -> dict or None:
         """ Generate a new item of the selected type """
         quality = self.quality(shop_level, party_level) if quality == None else quality
-
-        if item_type == "Good": return self.new_good(shop_level)
-        elif item_type == "Ammo": return self.new_ammo()
-        elif item_type == "Weapon": return self.new_weapon(shop_level)
-        elif item_type == "Armor": return self.new_armor(shop_level)
-        elif item_type == "Shield": return self.new_shield(shop_level)
-        elif item_type == "Magic Weapon": return self.new_magic_weapon(shop_level, quality)
-        elif item_type == "Magic Armor": return self.new_magic_armor(shop_level, quality)
-        elif item_type == "Potion": return self.new_potion(shop_level, quality)
-        elif item_type == "Ring": return self.new_ring(shop_level, quality)
-        elif item_type == "Rod": return self.new_rod(shop_level, quality)
-        elif item_type == "Staff": return self.new_staff(shop_level, quality)
-        elif item_type == "Wand": return self.new_wand(shop_level, quality)
-        elif item_type == "Wondrous Item": return self.new_wondrous_item(shop_level, quality)
-        elif item_type == "Scroll": return self.new_scroll(shop_level, quality)
+        return {
+            "Good": lambda: self.new_good(shop_level),
+            "Ammo": lambda: self.new_ammo(),
+            "Weapon": lambda: self.new_weapon(shop_level),
+            "Armor": lambda: self.new_armor(shop_level),
+            "Shield": lambda: self.new_shield(shop_level),
+            "Magic Weapon": lambda: self.new_magic_weapon(shop_level, quality),
+            "Magic Armor": lambda: self.new_magic_armor(shop_level, quality),
+            "Potion": lambda: self.new_potion(shop_level, quality),
+            "Ring": lambda: self.new_ring(shop_level, quality),
+            "Rod": lambda: self.new_rod(shop_level, quality), # None if quality is "Minor"
+            "Staff": lambda: self.new_staff(shop_level, quality), # None if quality is "Minor"
+            "Wand": lambda: self.new_wand(shop_level, quality),
+            "Wondrous Item": lambda: self.new_wondrous_item(shop_level, quality),
+            "Scroll": lambda: self.new_scroll(shop_level, quality)
+        }[item_type]()
 
     def random_magic_item(self, shop_level: float, party_level: int) -> dict:
         quality = self.quality(shop_level, party_level)

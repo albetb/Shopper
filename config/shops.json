@@ -114,6 +114,24 @@
           "Wand" : 0.01,
           "Wondrous Item" : 0.01,
           "Scroll" : 0.01
+        }
+      },
+      {
+        "Name": "Spaccio",
+        "Description": "Not drugs",
+        "Min level": 1,
+        "Modifier": {
+          "Good" : 2,
+          "Weapon" : 1.5,
+          "Armor" : 1.1,
+          "Magic Weapon" : 0.6,
+          "Magic Armor" : 0.4,
+          "Ring" : 0.2,
+          "Rod" : 0.1,
+          "Staff" : 0.1,
+          "Wand" : 0.6,
+          "Wondrous Item" : 0.01,
+          "Scroll" : 0.05
       }
       }
     ]
