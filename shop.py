@@ -13,10 +13,10 @@ class Shop:
                        reputation: float = 0, 
                        template: str = "" ) -> None:
         self.name = name # Name of the shop or of the merchant
-        self.shop_level = max(0, min(10, shop_level)) # [0, 10] Level of the merchant
+        self.shop_level = round(max(0, min(10, shop_level)),2) # [0, 10] Level of the merchant
         self.city_level = int(max(0, min(5, city_level))) # [0, 5] Size of city 0: Small village; 5: Metropolis
         self.party_level = int(max(1, min(20, party_level))) # [1, 20] Current party level
-        self.reputation = max(-10, min(10, reputation)) # [-10, +10] Attitude of the merchant to the party
+        self.reputation = round(max(-10, min(10, reputation)),2) # [-10, +10] Attitude of the merchant to the party
         self.stock = [] # Items selled by the shop
         self.item = Item() # Item generator
         self.gold = 0 # Gold possessed
@@ -25,6 +25,7 @@ class Shop:
         if template != "":
             self.template(template)
         else:
+            self.type = ""
             self.item_mod = {
                                 "Good" : 0,
                                 "Weapon" : 0,
@@ -49,7 +50,7 @@ class Shop:
     def add_shop_level(self, level_added: float) -> None:
         """ Add shop level from the shop [0, 10] """
         lv = self.shop_level
-        self.shop_level = max(self.shop_level, min(10, self.shop_level + level_added))
+        self.shop_level = round(max(self.shop_level, min(10, self.shop_level + level_added)),2)
         self.gold += self.base_gold(self.party_level, self.shop_level) - self.base_gold(self.party_level, lv)
         if int(lv) != int(self.shop_level):
             print(f"{self.name} has reached lv{int(self.shop_level)}!")
@@ -66,7 +67,7 @@ class Shop:
 
     def add_reputation(self, reputation_added: float) -> None:
         """ Add or subtract reputation from the shop [-10, 10] """
-        self.reputation = max(-10, min(10, self.reputation + reputation_added))
+        self.reputation = round(max(-10, min(10, self.reputation + reputation_added)),2)
 
     def load_shop_type(self) -> dict:
         """ Load shop type for template """
@@ -77,8 +78,8 @@ class Shop:
         """ Select a template for the shop """
         shop_types = self.load_shop_type()
         # Get default shop if shop name don't exist
-        name = "" if name not in (item["Name"] for item in shop_types["Type"]) else name
-        shop = list(filter(lambda x: x["Name"] == name, shop_types["Type"]))[0]
+        self.type =  "" if name not in (item["Name"] for item in shop_types["Type"]) else name
+        shop = list(filter(lambda x: x["Name"] == self.type, shop_types["Type"]))[0]
         self.shop_level = max(self.shop_level, shop["Min level"])
         self.gold = self.base_gold(self.party_level, self.shop_level)
         self.item_mod = shop["Modifier"]
@@ -233,6 +234,13 @@ class Shop:
         shop_name = "| " + "~" * ((57 - len(shop_name)) // 2) + shop_name
         shop_name = shop_name + "~" * (58 - len(shop_name)) + " |"
         print(shop_name)
+        info = f"| {self.type} lv: {self.shop_level}"
+        cost = f" Gold: {int(self.gold)} gp |"
+        info += " " * (60 - len(info) - len(cost)) + cost
+        print(info)
+        info2 = f"| > Reputation: {self.reputation}, Player lv: {self.party_level}"
+        info2 += " " * (59 - len(info2)) + "|"
+        print(info2)
         print("|" + " " * 58 + "|")
         for item in self.stock:
             if item["Number"] > 0:
@@ -247,8 +255,6 @@ class Shop:
                     link = item["Ability"][0]["Link"]
                 print(txt, link)
         print("|" + " " * 58 + "|")
-        cost = f"| > Gold: {int(self.gold)} gp"
-        print(cost + " " * (59 - len(cost)) + "|")
         print("|" + "_" * 58 + "|")
         
         now = datetime.now().strftime("%y%m%d%H%M%S")

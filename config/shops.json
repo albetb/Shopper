@@ -29,12 +29,16 @@
         }
       },
       {
-        "Name": "Stafferino",
-        "Description": "Staffers",
+        "Name": "Druid Merchant",
+        "Description": "Sell druidic things",
         "Min level": 1,
         "Modifier": {
-          "Rod": 5,
-          "Staff": 7
+          "Good": 1.8,
+          "Rod": 0.8,
+          "Staff": 0.55,
+          "Potion": 2,
+          "Ring": 0.3,
+          "Wondrous Item": 0.85
         }
       },
       {
@@ -42,8 +46,8 @@
         "Description": "Normal weapon and armor vendor",
         "Min level": 0,
         "Modifier": {
-          "Weapon": 5,
-          "Armor": 3,
+          "Weapon": 6,
+          "Armor": 4.5,
           "Ring": 0.15
         }
       },
@@ -52,7 +56,7 @@
         "Description": "Sell scrolls",
         "Min level": 1,
         "Modifier": {
-          "Scroll": 7
+          "Scroll": 6.5
         }
       },
       {
@@ -76,14 +80,14 @@
         "Description": "Sell magic weapon and armor",
         "Min level": 1,
         "Modifier": {
-            "Magic Armor" : 2,
-            "Magic Weapon" : 3,
+            "Magic Armor" : 2.6,
+            "Magic Weapon" : 3.6,
             "Ring" : 0.1,
             "Wondrous Item" : 0.1
         }
       },
       {
-        "Name": "Gino Pippo",
+        "Name": "Wanderer",
         "Description": "An adventurer merchant",
         "Min level": 1,
         "Modifier": {
@@ -98,7 +102,7 @@
       }
       },
       {
-        "Name": "Minime",
+        "Name": "Merchant of the Slums",
         "Description": "Lurid merchant",
         "Min level": 1,
         "Modifier": {
@@ -117,7 +121,7 @@
         }
       },
       {
-        "Name": "Spaccio",
+        "Name": "Bazar Vendor",
         "Description": "Not drugs",
         "Min level": 1,
         "Modifier": {
@@ -132,6 +136,27 @@
           "Wand" : 0.6,
           "Wondrous Item" : 0.01,
           "Scroll" : 0.05
+      }
+      },
+      {
+        "Name": "Holy Merchant",
+        "Description": "A priest who sell magic items",
+        "Min level": 1,
+        "Modifier": {
+          "Potion" : 3.5,
+          "Ring" : 1,
+          "Wand" : 0.5,
+          "Wondrous Item" : 0.9,
+          "Scroll" : 2
+      }
+      },
+      {
+        "Name": "Alchemist",
+        "Description": "Sell potions",
+        "Min level": 1,
+        "Modifier": {
+          "Potion" : 6,
+          "Ring" : 1.5
       }
       }
     ]
