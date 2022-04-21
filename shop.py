@@ -3,6 +3,7 @@ from random import random, randint, choices, choice
 from json import load
 from fpdf import FPDF
 from datetime import datetime
+import os
 
 class Shop:
     def __init__(self, name: str, 
@@ -217,7 +218,7 @@ class Shop:
             print(cost + " " * (49 - len(cost)) + "|")
             print("|" + "_" * 48 + "|")
 
-    def create_pdf(self) -> None:
+    def create_pdf(self, open = False) -> None:
         """ Create a pdf of the inventory """
         pdf = FPDF()
         pdf.add_page()
@@ -251,7 +252,11 @@ class Shop:
         print("|" + "_" * 58 + "|")
         
         now = datetime.now().strftime("%y%m%d%H%M%S")
-        pdf.output(f"created/{self.name}'s inventory - {now}.pdf")  
+        filename = f"created\{self.name}'s inventory - {now}.pdf"
+        pdf.output(filename)
+        if open:
+            file_path = os.path.join(os.getcwd(), filename)
+            os.startfile(file_path)
 
     def true_cost(self, item: dict) -> int or float:
         """ Modifies cost of an item """
