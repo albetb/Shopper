@@ -1,12 +1,12 @@
 from shop import Shop
             
 mario = Shop(   
-                "Carson Thunder", 
+                "Jeff", 
                 city_level = 0, 
-                party_level = 5, 
+                party_level = 15, 
                 shop_level = 2, 
                 reputation = 0, 
-                template = "Mage Merchant"
+                template = "Jeff"
             )
 
 mario.generate_inventory()

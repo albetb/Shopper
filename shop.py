@@ -225,7 +225,7 @@ class Shop:
 
         print = lambda t, l = "": pdf.cell(190, 5, txt = t, ln = 1, align = 'C', link = l)
 
-        print("_" * 60)
+        print(" " + "_" * 58 + " ")
         print("|" + " " * 58 + "|")
         shop_name = self.name if len(self.name) < 41 else f"{str(self.name)[:39]}.."
         shop_name = f" {shop_name}'s inventory: "

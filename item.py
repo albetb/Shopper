@@ -1,4 +1,5 @@
-from random import choices, randint
+from asyncio import shield
+from random import choices, randint, random
 from json import load
 from secrets import choice
 
@@ -19,9 +20,9 @@ class Item():
         return {
             "Good": lambda: self.new_good(shop_level),
             "Ammo": lambda: self.new_ammo(),
-            "Weapon": lambda: self.new_weapon(shop_level),
-            "Armor": lambda: self.new_armor(shop_level),
-            "Shield": lambda: self.new_shield(shop_level),
+            "Weapon": lambda: self.new_weapon(shop_level, party_level),
+            "Armor": lambda: self.new_armor(shop_level, party_level),
+            "Shield": lambda: self.new_shield(shop_level, party_level),
             "Magic Weapon": lambda: self.new_magic_weapon(shop_level, quality),
             "Magic Armor": lambda: self.new_magic_armor(shop_level, quality),
             "Potion": lambda: self.new_potion(shop_level, quality),
@@ -70,17 +71,32 @@ class Item():
         """ Generate a new Ammo for ranged weapons """
         return self.item_choice("Ammo")
 
-    def new_weapon(self, shop_level: float) -> dict:
+    def new_weapon(self, shop_level: float, party_level: int) -> dict:
         """ Generate a new non magical Weapon """
-        return self.item_choice("Weapon", mod = shop_level)
+        weapon = self.item_choice("Weapon", mod = shop_level)
+        perfect_chance = min((shop_level + party_level ** 0.5) / 10, 1)
+        if random() < perfect_chance:
+            weapon["Name"] += ", perfect"
+            weapon["Cost"] += 300
+        return weapon
 
-    def new_armor(self, shop_level: float) -> dict:
+    def new_armor(self, shop_level: float, party_level: int) -> dict:
         """ Generate a new non magical Armor """
-        return self.item_choice("Armor", mod = shop_level ** 0.5)
+        armor = self.item_choice("Armor", mod = shop_level ** 0.5)
+        perfect_chance = min((shop_level + party_level ** 0.5) / 10, 1)
+        if random() < perfect_chance:
+            armor["Name"] += ", perfect"
+            armor["Cost"] += 300
+        return armor
 
-    def new_shield(self, shop_level: float) -> dict:
+    def new_shield(self, shop_level: float, party_level: int) -> dict:
         """ Generate a new non magical Shield """
-        return self.item_choice("Shield", mod = shop_level ** 0.5)
+        shield = self.item_choice("Shield", mod = shop_level ** 0.5)
+        perfect_chance = min((shop_level + party_level ** 0.5) / 10, 1)
+        if random() < perfect_chance:
+            shield["Name"] += ", perfect"
+            shield["Cost"] += 300
+        return shield
 
     def new_potion(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Potion """
@@ -132,7 +148,7 @@ class Item():
             return self.item_choice("Specific Weapon", quality = quality, file = "tables")
 
         # Get random normal weapon
-        weapon = dict(self.new_weapon(shop_level))
+        weapon = dict(self.item_choice("Weapon", mod = shop_level))
 
         # Get random base bonus for the weapon
         base_bonus = self.item_choice("Magic Weapon Base", quality = quality, mod = shop_level ** 0.5, file = "tables")["Name"]
@@ -225,7 +241,7 @@ class Item():
         is_armor = "armor" in bonus_name
 
         # Get random normal armor or shield
-        armor = dict(self.new_armor(shop_level)) if is_armor else dict(self.new_shield(shop_level))
+        armor = dict(self.item_choice("Armor", mod = shop_level ** 0.5)) if is_armor else dict(self.item_choice("Shield", mod = shop_level ** 0.5))
 
         # Chance to get a special ability on the item
         special_ability_chance = {
