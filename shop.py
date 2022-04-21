@@ -44,7 +44,7 @@ class Shop:
     
     def base_gold(self, party_level: int, shop_level: float) -> float:
         """ Return base gold for a shop """
-        return 1000 * int(party_level) ** 1.5 * max(int(shop_level) ** 1.05, 1)
+        return int(1000 * party_level ** 1.5 * 1.1 ** shop_level)
 
     def add_shop_level(self, level_added: float) -> None:
         """ Add shop level from the shop [0, 10] """
