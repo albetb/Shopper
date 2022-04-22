@@ -21,27 +21,11 @@ class Shop:
         self.item = Item() # Item generator
         self.gold = 0 # Gold possessed
         self.hours_counter = 0 # For counting time
-
-        if template != "":
-            self.template(template)
-        else:
-            self.type = "" # Merchant type
-            self.item_mod = {
-                                "Good" : 0,
-                                "Weapon" : 0,
-                                "Armor" : 0,
-                                "Ammo" : 0,
-                                "Shield" : 0,
-                                "Magic Weapon" : 0,
-                                "Magic Armor" : 0,
-                                "Potion" : 0,
-                                "Ring" : 0,
-                                "Rod" : 0,
-                                "Staff" : 0,
-                                "Wand" : 0,
-                                "Wondrous Item" : 0,
-                                "Scroll" : 0
-                            }
+        
+        shop_types = self.load_shop_type()
+        # Get default shop if shop name don't exist
+        self.type =  "" if template not in (item["Name"] for item in shop_types["Type"]) else template
+        self.template(self.type)
     
     def base_gold(self, party_level: int, shop_level: float) -> float:
         """ Return base gold for a shop """
@@ -77,8 +61,6 @@ class Shop:
     def template(self, name: str = "") -> None:
         """ Select a template for the shop """
         shop_types = self.load_shop_type()
-        # Get default shop if shop name don't exist
-        self.type =  "" if name not in (item["Name"] for item in shop_types["Type"]) else name
         shop = list(filter(lambda x: x["Name"] == self.type, shop_types["Type"]))[0]
         self.shop_level = max(self.shop_level, shop["Min level"])
         self.gold = self.base_gold(self.party_level, self.shop_level)

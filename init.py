@@ -1,13 +1,13 @@
 from shop import Shop
             
 mario = Shop(   
-                "Jeff", 
-                city_level = 2, 
-                party_level = 1, 
-                shop_level = 0, 
+                "Mario", 
+                city_level = 1, 
+                party_level = 5, 
+                shop_level = 2,
                 reputation = 0, 
-                template = "Jeff"
+                template = ""
             )
 
 mario.generate_inventory()
-mario.create_pdf(open = True)
+mario.display(2)
