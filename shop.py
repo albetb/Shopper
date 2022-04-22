@@ -3,7 +3,7 @@ from random import random, randint, choices, choice
 from json import load
 from fpdf import FPDF
 from datetime import datetime
-import os
+from os import path, getcwd, startfile
 
 class Shop:
     def __init__(self, name: str, 
@@ -25,7 +25,7 @@ class Shop:
         if template != "":
             self.template(template)
         else:
-            self.type = ""
+            self.type = "" # Merchant type
             self.item_mod = {
                                 "Good" : 0,
                                 "Weapon" : 0,
@@ -105,7 +105,7 @@ class Shop:
                     if selled_item["Name"] == item["Name"]:
                         print(f"Selled: {selled_item['Name']}")
                         selled_item["Number"] -= 1
-                        self.gold += self.true_cost(selled_item)
+                        self.gold += self.true_cost(selled_item, False)
 
     def passing_time(self, hours: int = 0, days: int = 0) -> None:
         """ Pass time, shop sell items, restock items and spend coins """
@@ -193,80 +193,67 @@ class Shop:
                 added_item["Number"] = 1
                 added_item["Item Type"] = item_type
                 self.stock.append(added_item)
-    
-    def display(self) -> None:
-        """ Display the shop's inventory """
-        if not self.is_open():
-            reason = "day off" if self.hours_counter % 168 > 144 else "lunch break" if self.hours_counter % 24 == 13 else f"{self.hours_counter % 24} o'clock"
-            print(f"~~~ The shop is closed (it's {reason}) ~~~")
+
+    def display(self, is_pdf: int = 0) -> None:
+        """ Display the inventory or if is_pdf > 0 create a pdf of the inventory and if is_pdf > 1 open it """
+        if is_pdf > 0:
+            pdf = FPDF()
+            pdf.add_page()
+            pdf.set_font("Courier", size = 12)
+
+            fprint = lambda t, l = "": pdf.cell(190, 5, txt = t, ln = 1, align = 'C', link = l)
         else:
-            print("_" * 50)
-            shop_name = self.name if len(self.name) < 31 else f"{str(self.name)[:29]}.."
-            shop_name = f" {shop_name}'s inventory: "
-            shop_name = "| " + "~" * ((47 - len(shop_name)) // 2) + shop_name
-            shop_name = shop_name + "~" * (48 - len(shop_name)) + " |"
-            print(shop_name)
-            print("|" + " " * 48 + "|")
-            for item in self.stock:
-                if item["Number"] > 0:
-                    name = item["Name"] if len(item["Name"]) < 32 else f"{str(item['Name'])[:30]}.."
-                    txt = f'| {item["Number"]}x {name} '
-                    cst = str(self.true_cost(item))
-                    txt = txt + "." * (44 - len(txt) - len(cst)) + f" {cst} gp |"
-                    print(txt)
-            print("|" + " " * 48 + "|")
-            cost = f"| > Gold: {int(self.gold)} gp"
-            print(cost + " " * (49 - len(cost)) + "|")
-            print("|" + "_" * 48 + "|")
+            fprint = lambda t, l = "" : print(t)
+            if not self.is_open():
+                reason = "day off" if self.hours_counter % 168 > 144 else "lunch break" if self.hours_counter % 24 == 13 else f"{self.hours_counter % 24} o'clock"
+                fprint(f"~~~ The shop is closed (it's {reason}) ~~~")
+                return
 
-    def create_pdf(self, open = False) -> None:
-        """ Create a pdf of the inventory """
-        pdf = FPDF()
-        pdf.add_page()
-        pdf.set_font("Courier", size = 12)
-
-        print = lambda t, l = "": pdf.cell(190, 5, txt = t, ln = 1, align = 'C', link = l)
-
-        print(" " + "_" * 58 + " ")
-        print("|" + " " * 58 + "|")
+        fprint(" " + "_" * 58 + " ")
+        fprint("|" + " " * 58 + "|")
         shop_name = self.name if len(self.name) < 41 else f"{str(self.name)[:39]}.."
         shop_name = f" {shop_name}'s inventory: "
         shop_name = "| " + "~" * ((57 - len(shop_name)) // 2) + shop_name
         shop_name = shop_name + "~" * (58 - len(shop_name)) + " |"
-        print(shop_name)
+        fprint(shop_name)
         info = f"| {self.type} lv: {self.shop_level}"
         cost = f" Gold: {int(self.gold)} gp |"
         info += " " * (60 - len(info) - len(cost)) + cost
-        print(info)
+        fprint(info)
         info2 = f"| > Reputation: {self.reputation}, Player lv: {self.party_level}"
         info2 += " " * (59 - len(info2)) + "|"
-        print(info2)
-        print("|" + " " * 58 + "|")
+        fprint(info2)
+        fprint("|" + " " * 58 + "|")
         for item in self.stock:
             if item["Number"] > 0:
                 name = item["Name"] if len(item["Name"]) < 42 else f"{str(item['Name'])[:40]}.."
                 txt = f'| {item["Number"]}x {name} '
                 cst = str(self.true_cost(item))
                 txt = txt + "." * (54 - len(txt) - len(cst)) + f" {cst} gp |"
-                link = ""
-                if "Link" in item.keys():
-                    link = item["Link"]
-                elif "Ability" in item.keys() and isinstance(item["Ability"], list) and len(item["Ability"]) > 0:
-                    link = item["Ability"][0]["Link"]
-                print(txt, link)
-        print("|" + " " * 58 + "|")
-        print("|" + "_" * 58 + "|")
+                if is_pdf > 0:
+                    link = ""
+                    if "Link" in item.keys():
+                        link = item["Link"]
+                    elif "Ability" in item.keys() and isinstance(item["Ability"], list) and len(item["Ability"]) > 0:
+                        link = item["Ability"][0]["Link"]
+                    fprint(txt, link)
+                else:
+                    fprint(txt)
+        fprint("|" + " " * 58 + "|")
+        fprint("|" + "_" * 58 + "|")
         
-        now = datetime.now().strftime("%y%m%d%H%M%S")
-        filename = f"created\{self.name}'s inventory - {now}.pdf"
-        pdf.output(filename)
-        if open:
-            file_path = os.path.join(os.getcwd(), filename)
-            os.startfile(file_path)
+        if is_pdf > 0:
+            now = datetime.now().strftime("%y%m%d%H%M%S")
+            filename = f"created\{self.name}'s inventory - {now}.pdf"
+            pdf.output(filename)
+        if is_pdf > 1:
+            file_path = path.join(getcwd(), filename)
+            startfile(file_path)
 
-    def true_cost(self, item: dict) -> int or float:
-        """ Modifies cost of an item """
-        mod = (100 + item["Price Modifier"] - self.reputation * 2 + self.city_level) / 100
+    def true_cost(self, item: dict, for_party: bool = True) -> int or float:
+        """ Modifies cost of an item, if for_party is True reduce cost based on reputation """
+        rep = self.reputation * 2 if for_party else 0
+        mod = (100 + item["Price Modifier"] - rep + self.city_level) / 100
         cost = max(round(item["Cost"] * mod, 2), 0)
         dec = 1 if cost < 100 else 5 if cost < 1000 else 10
         return cost if cost < 1 else int(round(cost / dec, 0) * dec)
