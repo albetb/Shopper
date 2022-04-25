@@ -1,7 +1,5 @@
-from asyncio import shield
 from random import choices, randint, random
 from json import load
-from secrets import choice
 
 class Item():
     def __init__(self) -> None:
@@ -20,9 +18,10 @@ class Item():
                   quality: str or None = None, 
                   arcane_chance: float = 0.7) -> dict or None:
         """ Generate a new item of the selected type """
-        quality = self.quality(shop_level, party_level) if quality == None else quality
+        if quality == None:
+            quality = self.quality(shop_level, party_level)
         return {
-            "Good": lambda: self.new_good(shop_level),
+            "Good": lambda: self.new_good(),
             "Ammo": lambda: self.new_ammo(),
             "Weapon": lambda: self.new_weapon(shop_level, party_level),
             "Armor": lambda: self.new_armor(shop_level, party_level),
@@ -31,31 +30,56 @@ class Item():
             "Magic Armor": lambda: self.new_magic_armor(shop_level, quality),
             "Potion": lambda: self.new_potion(shop_level, quality),
             "Ring": lambda: self.new_ring(shop_level, quality),
-            "Rod": lambda: self.new_rod(shop_level, quality), # None if quality is "Minor"
-            "Staff": lambda: self.new_staff(shop_level, quality), # None if quality is "Minor"
+            "Rod": lambda: self.new_rod(shop_level, quality),
+            "Staff": lambda: self.new_staff(shop_level, quality), 
             "Wand": lambda: self.new_wand(shop_level, quality),
-            "Wondrous Item": lambda: self.new_wondrous_item(shop_level, quality),
-            "Scroll": lambda: self.new_scroll(shop_level, quality, arcane_chance)
+            "Wondrous Item": lambda: self.new_wondrous(shop_level, quality),
+            "Scroll": lambda: self.new_scroll(shop_level,
+                                              quality,
+                                              arcane_chance)
         }[item_type]()
 
     def random_magic_item(self, shop_level: float, party_level: int) -> dict:
         quality = self.quality(shop_level, party_level)
-        item_type = self.item_choice("Random Magic Item Chance", quality = quality, file = "tables")["Name"]
+        item_type = self.item_choice("Random Magic Item Chance",
+                                     quality = quality,
+                                     file = "tables")["Name"]
         return self.new(item_type, shop_level, party_level, quality)
 
     def quality(self, shop_level: float, party_level: int) -> str:
         """ Generate a random quality for an item based on party level """
-        major = min(0 if party_level < 10 else 1 if party_level == 10 else 5 * (party_level - 10) + shop_level ** 0.5, 100)
-        medium = min(0 if party_level < 5 else 1 if party_level == 5 else 5 * (party_level - 5) + shop_level ** 0.75, 100 - major)
-        minor = max(0, 100 - medium - major)
-        return choices(population = ("Minor", "Medium", "Major"), weights = (minor, medium, major))[0]
+        major, medium, minor = 0, 0, 0
 
-    def item_choice(self, name: str, quality: str = "Chance", mod: float = 0, file: str = "items") -> dict:
+        if party_level == 10:
+            major = 1 + shop_level ** 0.5
+        elif party_level > 10:
+            major = min(5 * (party_level - 10) + shop_level ** 0.5, 100)
+
+        if party_level == 5:
+            medium = 1 + shop_level ** 0.75
+        elif party_level > 5:
+            medium = 5 * (party_level - 5) + shop_level ** 0.75
+        medium = min(medium, 100 - major)
+        
+        minor = max(0, 100 - medium - major)
+        return choices(population = ("Minor", "Medium", "Major"),
+                       weights = (minor, medium, major))[0]
+
+    def item_choice(self, name: str,
+                          quality: str = "Chance",
+                          mod: float = 0,
+                          file: str = "items") -> dict:
         """ Choose an item from a list of dict based on an attribute """
         # Select correct file
-        table = self.tables[name] if file == "tables" else self.scrolls[name] if file == "scrolls" else self.items[name]
+        if file == "tables":
+            table = self.tables[name]
+        elif file == "scrolls":
+            table = self.scrolls[name]
+        else:
+            table = self.items[name]
 
-        weights = (item[quality] + mod * int(item[quality] > 0) for item in table)
+        weights = (item[quality] + mod * int(item[quality] > 0)
+                   for item in table)
         item = dict(choices(population = table, weights = weights)[0])
         return self.remove_unused_attributes(item)
 
@@ -67,7 +91,7 @@ class Item():
                 del clean_item[key]
         return clean_item
 
-    def new_good(self, shop_level: float) -> dict:
+    def new_good(self) -> dict:
         """ Generate a new non magical Good """
         return self.item_choice("Good")
 
@@ -124,22 +148,31 @@ class Item():
         """ Generate a new Wand """
         return self.item_choice("Wand", quality = quality, mod = shop_level)
 
-    def new_wondrous_item(self, shop_level: float, quality: str) -> dict:
+    def new_wondrous(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Wondrous Item """
         id = int(min(randint(0, int(1.5 * shop_level)) + randint(1, 100), 100))
         items = self.items["Wondrous Item"]
-        item = dict(list(filter(lambda x: x["Id"] == id and x["Type"] == quality, items))[0])
+        sel = lambda x: x["Id"] == id and x["Type"] == quality
+        item = dict(list(filter(lambda x: sel(x), items))[0])
         return self.remove_unused_attributes(item)
 
-    def new_scroll(self, shop_level: float, quality: str, arcane_chance: float = 0.7) -> dict:
+    def new_scroll(self, shop_level: float,
+                         quality: str,
+                         arcane_chance: float = 0.7) -> dict:
         """ Generate a new Scroll, 70% Arcane 30% Divine """
         arcane_chance = max(min(arcane_chance, 1), 0)
         divine_chance = max(min(1 - arcane_chance, 1), 0)
-        scroll_type = choices(population = ("Arcane", "Divine"), weights = (arcane_chance, divine_chance))[0]
-        level = self.item_choice("Scroll Level", quality = quality, mod = shop_level ** 0.5, file = "tables")["Level"]
-        scrolls = list(filter(lambda x: x["Level"] == level, self.scrolls[scroll_type]))
+        scroll_type = choices(population = ("Arcane", "Divine"),
+                              weights = (arcane_chance, divine_chance))[0]
+        level = self.item_choice("Scroll Level",
+                                 quality = quality,
+                                 mod = shop_level ** 0.5,
+                                 file = "tables")["Level"]
+        scrolls = list(filter(lambda x: x["Level"] == level,
+                              self.scrolls[scroll_type]))
         s_weights = (item["Chance"] for item in scrolls)
-        return self.remove_unused_attributes(choices(population = scrolls, weights = s_weights)[0])
+        return self.remove_unused_attributes(choices(population = scrolls,
+                                                     weights = s_weights)[0])
 
     def new_magic_weapon(self, shop_level: float, quality: str) -> dict:
         """ Generate a new Magic Weapon """
@@ -149,15 +182,19 @@ class Item():
             "Medium": 6,
             "Major": 14
         }
-        is_specific_weapon = randint(1, 100) <= specific_weapon_chance[quality]
-        if is_specific_weapon:
-            return self.item_choice("Specific Weapon", quality = quality, file = "tables")
+        if randint(1, 100) <= specific_weapon_chance[quality]:
+            return self.item_choice("Specific Weapon",
+                                    quality = quality,
+                                    file = "tables")
 
         # Get random normal weapon
         weapon = dict(self.item_choice("Weapon", mod = shop_level))
 
         # Get random base bonus for the weapon
-        base_bonus = self.item_choice("Magic Weapon Base", quality = quality, mod = shop_level ** 0.5, file = "tables")["Name"]
+        base_bonus = self.item_choice("Magic Weapon Base",
+                                      quality = quality,
+                                      mod = shop_level ** 0.5,
+                                      file = "tables")["Name"]
         bonus = int(base_bonus)
 
         # Chance to get a special ability on the weapon
@@ -166,11 +203,13 @@ class Item():
             "Medium": 32,
             "Major": 37
         }
-        has_special_ability = randint(1, 100) <= special_ability_chance[quality] + max(shop_level ** 0.5 - 1, 0)
+        chance = special_ability_chance[quality] + max(shop_level ** 0.5 - 1, 0)
 
-        if has_special_ability:
+        if randint(1, 100) <= chance:
             # Save weapon type
-            weapon_type = "Magic Ranged Weapon" if "Ranged" in weapon["Subtype"] else "Magic Melee Weapon"
+            weapon_type = "Magic Melee Weapon"
+            if "Ranged" in weapon["Subtype"]:
+                "Magic Ranged Weapon"
 
             ability_list = []
             rolls = 1
@@ -183,22 +222,27 @@ class Item():
                     "Medium": 5,
                     "Major": 10
                 }
-                has_double_ability = randint(1, 100) <= double_ability_chance[quality]
+                chance = double_ability_chance[quality]
 
                 # If has double ability reroll two times
-                if has_double_ability:
+                if randint(1, 100) <= chance:
                     rolls += 2
                     continue
 
                 # Roll special ability
-                special_ability = self.item_choice(weapon_type, quality = quality, file = "tables")
+                special_ability = self.item_choice(weapon_type,
+                                                   quality = quality,
+                                                   file = "tables")
 
                 # Reroll if ability is already added
-                if special_ability["Name"] in (item["Name"] for item in ability_list):
+                ability_names = (item["Name"] for item in ability_list)
+                if special_ability["Name"] in ability_names:
                     rolls += 1
                     continue
 
-                if isinstance(special_ability["Cost Modifier"], int) and special_ability["Cost Modifier"] < 6:
+                is_int = isinstance(special_ability["Cost Modifier"], int)
+                is_mod_based = special_ability["Cost Modifier"] < 6
+                if is_int and is_mod_based:
                     # Reroll if special ability bonus + base bonus exceed 10
                     if bonus + special_ability["Cost Modifier"] > 10:
                         rolls += 1
@@ -221,7 +265,9 @@ class Item():
         weapon["Bonus"] = base_bonus
         weapon["Name"] = f"{weapon['Name']} +{base_bonus}"
 
-        # Weapon cost is base cost + 300 for masterwork + 2000 * total bonus ** 2
+        # Weapon cost is base cost 
+        # + 300 for masterwork 
+        # + 2000 * total bonus ** 2
         weapon["Cost"] += 300 + 2000 * bonus ** 2
 
         return weapon
@@ -234,20 +280,28 @@ class Item():
             "Medium": 6,
             "Major": 6
         }
-        is_specific_item = randint(1, 100) <= specific_item_chance[quality]
+        if randint(1, 100) <= specific_item_chance[quality]:
+            item_type = choices(("Armor", "Shield"), (1,1))[0]
+            return self.item_choice(f"Specific {item_type}",
+                                    quality = quality,
+                                    mod = shop_level ** 0.5,
+                                    file = "tables")
 
-        if is_specific_item:
-            item_type = choice(("Armor", "Shield"))
-            return self.item_choice(f"Specific {item_type}", quality = quality, mod = shop_level ** 0.5, file = "tables")
-
-        # Get random base bonus for the item and determine if it's an armor or a shield
-        bonus_name = self.item_choice("Magic Armor Base", quality = quality, mod = shop_level ** 0.5, file = "tables")["Name"]
+        # Get random base bonus for the item
+        # and determine if it's an armor or a shield
+        bonus_name = self.item_choice("Magic Armor Base",
+                                      quality = quality,
+                                      mod = shop_level ** 0.5,
+                                      file = "tables")["Name"]
         base_bonus = int(bonus_name[1])
         bonus = int(base_bonus)
         is_armor = "armor" in bonus_name
 
         # Get random normal armor or shield
-        armor = dict(self.item_choice("Armor", mod = shop_level ** 0.5)) if is_armor else dict(self.item_choice("Shield", mod = shop_level ** 0.5))
+        if is_armor:
+            armor = dict(self.item_choice("Armor", mod = shop_level ** 0.5))
+        else:
+            armor = dict(self.item_choice("Shield", mod = shop_level ** 0.5))
 
         # Chance to get a special ability on the item
         special_ability_chance = {
@@ -255,9 +309,9 @@ class Item():
             "Medium": 37,
             "Major": 37
         }
-        has_special_ability = randint(1, 100) <= special_ability_chance[quality] + max(shop_level ** 0.5 - 1, 0)
+        chance = special_ability_chance[quality] + max(shop_level ** 0.5 - 1, 0)
 
-        if has_special_ability:
+        if randint(1, 100) <= chance:
             # Save item type
             item_type = "Magic Armor" if is_armor else "Magic Shield"
 
@@ -272,18 +326,21 @@ class Item():
                     "Medium": 5,
                     "Major": 10
                 }
-                has_double_ability = randint(1, 100) <= double_ability_chance[quality]
+                chance = double_ability_chance[quality]
 
                 # If has double ability reroll two times
-                if has_double_ability:
+                if randint(1, 100) <= chance:
                     rolls += 2
                     continue
 
                 # Roll special ability
-                special_ability = self.item_choice(item_type, quality = quality, file = "tables")
+                special_ability = self.item_choice(item_type,
+                                                   quality = quality,
+                                                   file = "tables")
 
                 # Reroll if ability is already added
-                if special_ability["Name"] in (item["Name"] for item in ability_list):
+                ability_names = (item["Name"] for item in ability_list)
+                if special_ability["Name"] in ability_names:
                     rolls += 1
                     continue
 
