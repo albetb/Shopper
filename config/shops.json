@@ -44,6 +44,7 @@
         "Name": "Druid Merchant",
         "Description": "Sell druidic things",
         "Min level": 1,
+        "Arcane Chance" : 0.05,
         "Modifier": {
           "Good": 1.8,
           "Rod": 0.8,
@@ -75,6 +76,7 @@
         "Name": "Mage Merchant",
         "Description": "Sell magic items",
         "Min level": 1,
+        "Arcane Chance" : 0.95,
         "Modifier": {
             "Magic Armor" : 0.1,
             "Magic Weapon" : 0.2,
@@ -154,6 +156,7 @@
         "Name": "Holy Merchant",
         "Description": "A priest who sell magic items",
         "Min level": 1,
+        "Arcane Chance" : 0.05,
         "Modifier": {
           "Potion" : 3.5,
           "Ring" : 1,

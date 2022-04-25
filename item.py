@@ -14,7 +14,11 @@ class Item():
         with open(f"config/{file}.json", "r") as file:
             return load(file)
 
-    def new(self, item_type: str, shop_level: float, party_level: int, quality: str or None = None) -> dict or None:
+    def new(self, item_type: str, 
+                  shop_level: float, 
+                  party_level: int, 
+                  quality: str or None = None, 
+                  arcane_chance: float = 0.7) -> dict or None:
         """ Generate a new item of the selected type """
         quality = self.quality(shop_level, party_level) if quality == None else quality
         return {
@@ -31,7 +35,7 @@ class Item():
             "Staff": lambda: self.new_staff(shop_level, quality), # None if quality is "Minor"
             "Wand": lambda: self.new_wand(shop_level, quality),
             "Wondrous Item": lambda: self.new_wondrous_item(shop_level, quality),
-            "Scroll": lambda: self.new_scroll(shop_level, quality)
+            "Scroll": lambda: self.new_scroll(shop_level, quality, arcane_chance)
         }[item_type]()
 
     def random_magic_item(self, shop_level: float, party_level: int) -> dict:
@@ -127,9 +131,11 @@ class Item():
         item = dict(list(filter(lambda x: x["Id"] == id and x["Type"] == quality, items))[0])
         return self.remove_unused_attributes(item)
 
-    def new_scroll(self, shop_level: float, quality: str) -> dict:
+    def new_scroll(self, shop_level: float, quality: str, arcane_chance: float = 0.7) -> dict:
         """ Generate a new Scroll, 70% Arcane 30% Divine """
-        scroll_type = choices(population = ("Arcane", "Divine"), weights = (7, 3))[0]
+        arcane_chance = max(min(arcane_chance, 1), 0)
+        divine_chance = max(min(1 - arcane_chance, 1), 0)
+        scroll_type = choices(population = ("Arcane", "Divine"), weights = (arcane_chance, divine_chance))[0]
         level = self.item_choice("Scroll Level", quality = quality, mod = shop_level ** 0.5, file = "tables")["Level"]
         scrolls = list(filter(lambda x: x["Level"] == level, self.scrolls[scroll_type]))
         s_weights = (item["Chance"] for item in scrolls)

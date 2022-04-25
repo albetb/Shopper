@@ -7,11 +7,11 @@ from os import path, getcwd, startfile
 
 class Shop:
     def __init__(self, name: str, 
-                       shop_level: float = 0, 
-                       city_level: int = 0, 
-                       party_level: int = 1, 
-                       reputation: float = 0, 
-                       template: str = "" ) -> None:
+                       shop_level: float = 0,
+                       city_level: int = 0,
+                       party_level: int = 1,
+                       reputation: float = 0,
+                       template: str = "") -> None:
         self.name = name # Name of the shop or of the merchant
         self.shop_level = round(max(0, min(10, shop_level)),2) # [0, 10] Level of the merchant
         self.city_level = int(max(0, min(5, city_level))) # [0, 5] Size of city 0: Small village; 5: Metropolis
@@ -21,11 +21,12 @@ class Shop:
         self.item = Item() # Item generator
         self.gold = 0 # Gold possessed
         self.hours_counter = 0 # For counting time
+        self.arcane_chance = 0.7
         
         shop_types = self.load_shop_type()
         # Get default shop if shop name don't exist
         self.type =  "" if template not in (item["Name"] for item in shop_types["Type"]) else template
-        self.template(self.type)
+        self.template()
     
     def base_gold(self, party_level: int, shop_level: float) -> float:
         """ Return base gold for a shop """
@@ -58,13 +59,15 @@ class Shop:
         with open(f"config/shops.json", "r") as file:
             return load(file)
 
-    def template(self, name: str = "") -> None:
+    def template(self) -> None:
         """ Select a template for the shop """
         shop_types = self.load_shop_type()
         shop = list(filter(lambda x: x["Name"] == self.type, shop_types["Type"]))[0]
         self.shop_level = max(self.shop_level, shop["Min level"])
         self.gold = self.base_gold(self.party_level, self.shop_level)
         self.item_mod = shop["Modifier"]
+        if "Arcane Chance" in shop.keys():
+            self.arcane_chance = shop["Arcane Chance"]
         # If has Weapon or Armor add Ammo or Shield to the inventory
         if "Weapon" in self.item_mod.keys() and self.item_mod["Weapon"] > 0:
             self.item_mod["Ammo"] = self.item_mod["Weapon"] * 0.6
@@ -117,7 +120,7 @@ class Shop:
             item_number = self.mod_item_number(key)
             if self.count_item_type(key) < item_number:
                 for _ in range(item_number - self.count_item_type(key)):
-                    item = self.item.new(key, self.shop_level, self.party_level)
+                    item = self.item.new(key, self.shop_level, self.party_level, arcane_chance = self.arcane_chance)
                     if item is not None and isinstance(item, dict) and "Name" in item.keys() and self.gold - 100 >= item['Cost'] * 0.95:
                         print(f"Restocked: {item['Name']}")
                         self.add_item(item, key)
@@ -133,7 +136,7 @@ class Shop:
         self.stock = []
         for key in self.item_mod:
             for _ in range(self.mod_item_number(key)):
-                self.add_item(self.item.new(key, self.shop_level, self.party_level), key)
+                self.add_item(self.item.new(key, self.shop_level, self.party_level, arcane_chance = self.arcane_chance), key)
         inv_value = lambda : sum(item["Cost"] for item in self.stock) * 0.95
         self.sort_by_cost()
         while inv_value() > self.gold - 100:
