@@ -182,7 +182,7 @@ class Item():
             "Medium": 6,
             "Major": 14
         }
-        if randint(1, 100) <= specific_weapon_chance[quality]:
+        if random() <= specific_weapon_chance[quality] / 100:
             return self.item_choice("Specific Weapon",
                                     quality = quality,
                                     file = "tables")
@@ -205,11 +205,11 @@ class Item():
         }
         chance = special_ability_chance[quality] + max(shop_level ** 0.5 - 1, 0)
 
-        if randint(1, 100) <= chance:
+        if random() <= chance / 100:
             # Save weapon type
             weapon_type = "Magic Melee Weapon"
             if "Ranged" in weapon["Subtype"]:
-                "Magic Ranged Weapon"
+                weapon_type = "Magic Ranged Weapon"
 
             ability_list = []
             rolls = 1
@@ -225,7 +225,7 @@ class Item():
                 chance = double_ability_chance[quality]
 
                 # If has double ability reroll two times
-                if randint(1, 100) <= chance:
+                if random() <= chance / 100:
                     rolls += 2
                     continue
 
@@ -280,7 +280,7 @@ class Item():
             "Medium": 6,
             "Major": 6
         }
-        if randint(1, 100) <= specific_item_chance[quality]:
+        if random() <= specific_item_chance[quality] / 100:
             item_type = choices(("Armor", "Shield"), (1,1))[0]
             return self.item_choice(f"Specific {item_type}",
                                     quality = quality,
@@ -311,7 +311,7 @@ class Item():
         }
         chance = special_ability_chance[quality] + max(shop_level ** 0.5 - 1, 0)
 
-        if randint(1, 100) <= chance:
+        if random() <= chance / 100:
             # Save item type
             item_type = "Magic Armor" if is_armor else "Magic Shield"
 
@@ -329,7 +329,7 @@ class Item():
                 chance = double_ability_chance[quality]
 
                 # If has double ability reroll two times
-                if randint(1, 100) <= chance:
+                if random() <= chance / 100:
                     rolls += 2
                     continue
 

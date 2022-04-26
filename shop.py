@@ -90,10 +90,7 @@ class Shop:
     def sell_something(self) -> None:
         """ Sell 1/10 random items """
         item_number = round(sum(item["Number"] for item in self.stock), 2)
-        if item_number < 10:
-            prob = item_number / 10
-        else:
-            prob = 1
+        prob = item_number / 10 if item_number < 10 else 1
         if random() < prob:
             num = randint(0, max(item_number // 10, 1))
             for _ in range(num):
@@ -108,14 +105,13 @@ class Shop:
 
     def passing_time(self, hours: int = 0, days: int = 0) -> None:
         """ Pass time, shop sell items, restock items and spend coins """
-        starting_time = int(self.hours_counter)
-        for _ in range(starting_time, starting_time + hours + days * 24):
+        for _ in range(hours + days * 24):
             self.hours_counter += 1
             if self.gold > self.base_gold(self.party_level, self.shop_level):
                 self.gold *= 0.9
                 self.add_shop_level(0.01)
             self.gold -= choices(population = (0, 1), weights = (2, 1))[0]
-            if self.hours_counter % (24 * 3) == 0: # Restock items every 3 daysa
+            if self.hours_counter % (24 * 3) == 0: # Restock items every 3 days
                 self.restock()
             if self.is_open():
                 self.sell_something()
@@ -192,7 +188,7 @@ class Shop:
         return int(num + 1 if random() < num - int(num) else num)
 
     def add_item(self, added_item: dict or None, item_type: str) -> None:
-        """ Add an item on the stock if item is not None """
+        """ Add an item on the stock if item is dict """
         if isinstance(added_item, dict) and "Cost" in added_item.keys():
             for item in self.stock:
                 if item["Name"] == added_item["Name"]:
@@ -226,7 +222,9 @@ class Shop:
                 fprint(f"~~~ The shop is closed (it's {reason}) ~~~")
                 return
 
+        #  _________________________________________________________ 
         fprint(" " + "_" * 58 + " ")
+        # |                                                          |
         fprint("|" + " " * 58 + "|")
         shop_name = self.name
         if len(self.name) >= 41:
@@ -234,15 +232,19 @@ class Shop:
         shop_name = f" {shop_name}'s inventory: "
         shop_name = "| " + "~" * ((57 - len(shop_name)) // 2) + shop_name
         shop_name = shop_name + "~" * (58 - len(shop_name)) + " |"
+        # | ~~~~~~~~~~~~~~~~~~ Mario's inventory: ~~~~~~~~~~~~~~~~~~ |
         fprint(shop_name)
         info = f"| {self.type} lv: {self.shop_level}"
         cost = f" Gold: {int(self.gold)} gp |"
         info += " " * (60 - len(info) - len(cost)) + cost
+        # | Blacksmith lv: 1                          Gold: 11828 gp |
         fprint(info)
         info2 = f"| > Reputation: {self.reputation}"
         info2 += f", Player lv: {self.party_level}"
         info2 += " " * (59 - len(info2)) + "|"
+        # | > Reputation: 0, Player lv: 5                            |
         fprint(info2)
+        # |                                                          |
         fprint("|" + " " * 58 + "|")
         for item in self.stock:
             if item["Number"] > 0:
@@ -257,13 +259,17 @@ class Shop:
                     if "Link" in item.keys():
                         link = item["Link"]
                     elif "Ability" in item.keys():
+                        # Add first special ability link
                         if isinstance(item["Ability"], list):
                             if len(item["Ability"]) > 0:
                                 link = item["Ability"][0]["Link"]
                     fprint(txt, link)
                 else:
+                    # | 1x Dagger +3 ...................... 19950 gp |
                     fprint(txt)
+        # |                                                          |
         fprint("|" + " " * 58 + "|")
+        # |__________________________________________________________|
         fprint("|" + "_" * 58 + "|")
         
         if is_pdf > 0:

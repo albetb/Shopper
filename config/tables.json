@@ -1171,11 +1171,11 @@
         "Cost Modifier": 3750
       },
       {
+        "Name": "Shadow",
         "Minor": 20,
         "Medium": 3,
         "Major": 0,
         "Link": "http://dndsrd.net/magicItemsAW.html#shadow",
-        "Name": "Shadow",
         "Cost Modifier": 3750
       },
       {
