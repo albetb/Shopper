@@ -6,7 +6,7 @@ body, html {
 
 .content {
     margin: 0 auto;
-    width: 500px;
+    width: 60%;
 }
 
 table, td, th {
@@ -23,8 +23,9 @@ th {
 }
 
 td {
-    text-align: center;
+    text-align: left;
     padding: 5px;
+    margin-left: 5px;
 }
 
 .form {

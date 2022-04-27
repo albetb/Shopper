@@ -1,22 +1,17 @@
 from random import choices, randint, random
-from json import load
+from loader import load_file
 
-class Item():
+class __Item():
     def __init__(self) -> None:
-        self.items = self.load_items()
-        self.scrolls = self.load_items("scrolls")
-        self.tables = self.load_items("tables")
+        self.items = load_file("items")
+        self.scrolls = load_file("scrolls")
+        self.tables = load_file("tables")
 
-    def load_items(self, file: str = "items") -> dict:
-        """ Load items or scrolls list """
-        with open(f"config/{file}.json", "r") as file:
-            return load(file)
-
-    def new(self, item_type: str, 
-                  shop_level: float, 
-                  party_level: int, 
-                  quality: str or None = None, 
-                  arcane_chance: float = 0.7) -> dict or None:
+    def new(self, item_type: str,
+                  shop_level: float,
+                  party_level: int,
+                  arcane_chance: float = 0.7,
+                  quality: str or None = None) -> dict or None:
         """ Generate a new item of the selected type """
         if quality == None:
             quality = self.quality(shop_level, party_level)
@@ -265,6 +260,9 @@ class Item():
         weapon["Bonus"] = base_bonus
         weapon["Name"] = f"{weapon['Name']} +{base_bonus}"
 
+        if "Ability" in weapon.keys() and len(weapon["Ability"]) > 0:
+            weapon["Link"] = weapon["Ability"][0]["Link"]
+
         # Weapon cost is base cost 
         # + 300 for masterwork 
         # + 2000 * total bonus ** 2
@@ -339,9 +337,34 @@ class Item():
                                                    file = "tables")
 
                 # Reroll if ability is already added
-                ability_names = (item["Name"] for item in ability_list)
-                if special_ability["Name"] in ability_names:
-                    rolls += 1
+                ability_names = (item["Name"][:5] for item in ability_list)
+                trimmed_name = special_ability["Name"][:5]
+                if trimmed_name in ability_names:
+                    present = list(filter(
+                                lambda x: x["Name"][:5] == trimmed_name,
+                                special_ability))
+                    mod = special_ability["Cost Modifier"]
+                    # If ability is lower level add better one
+                    if isinstance(mod, int) and present["Cost Modifier"] < mod:
+                        if mod < 6:
+                            # Reroll if special ability bonus + base bonus > 10
+                            if bonus + mod > 10:
+                                rolls += 1
+                                continue
+                            # Add ability modifier to total item bonus
+                            bonus += mod - present["Cost Modifier"]
+                        else:
+                            # If cost modifier is > 5 is a flat modifier
+                            armor["Cost"] += mod - present["Cost Modifier"]
+
+                        armor["Name"].replace(present["Name"], 
+                                              special_ability['Name'])
+
+                        ability_list.remove(present)
+                        ability_list.append(special_ability)
+                        continue
+                    else:
+                        rolls += 1
                     continue
 
                 if isinstance(special_ability["Cost Modifier"], int):
@@ -371,7 +394,22 @@ class Item():
         armor["Bonus"] = base_bonus
         armor["Name"] = f"{armor['Name']} +{base_bonus}"
 
+        if "Ability" in armor.keys() and len(armor["Ability"]) > 0:
+            armor["Link"] = armor["Ability"][0]["Link"]
+
         # Item cost is base cost + 300 for masterwork + 2000 * total bonus ** 2
         armor["Cost"] += 300 + 2000 * bonus ** 2
 
         return armor
+
+def new(item_type: str, 
+        shop_level: float, 
+        party_level: int,
+        arcane_chance: float = 0.7,
+        quality: str or None = None) -> dict or None:
+    """ Generate a new item of the selected type """
+    return __Item().new(item_type,
+                        shop_level,
+                        party_level,
+                        arcane_chance,
+                        quality)

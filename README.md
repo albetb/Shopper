@@ -7,4 +7,3 @@ TODO:
 * Manually remove item from shop inventory with custom price (price should be adjustable)
 * Save/load shop in JSON files
 * Graphic interface (flask?)
-* Fix ability generationa for weapon and armor, when two ability with the same name is selected only the strongest one should be added

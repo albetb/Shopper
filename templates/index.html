@@ -4,9 +4,23 @@
 <title>Shopperino</title>
 {% endblock %}
 
+{% block menu %}
+<div style="width: auto; display: flex; color:aquamarine">
+    <div style="float: left; width: 25%;">
+        <h1 style="text-align: left; margin-left: 15px; ">Shopperino</h1>
+    </div>
+    <div style="float: center; width: 50%;">
+        <p style="text-align: center; vertical-align: bottom;"> Player level: 5 </p>
+    </div>
+    <div style="float: right; width: 25%">
+        <p style="text-align: right; margin-right: 15px; vertical-align: bottom;"> Campaign time: Mon 15/05 12:00 </p>
+    </div>
+    <br style="clear: left;" />
+</div>
+{% endblock %}
+
 {% block body %}
 <div class="content">
-    <h1 style="text-align: center">Shopperino</h1>
     {% if items|length < 1 %}
     <h4 style="text-align: center">There are no items.</h4>
     {% else %}
@@ -14,16 +28,18 @@
         <tr>
             <th>#</th>
             <th>Name</th>
+            <th>Type</th>
             <th>Cost</th>
         </tr>
         {% for item in items %}
             <tr>
                 <td>{{ item["Number"] }}</td>
-                {% if "Link" in item.keys() %}
-                    <td><a href="{{item['Link']}}" target="_blank">{{ item["Name"] }}</a></td>
+                {% if item["Link"] != "" %}
+                    <td class="text-align: left; margin-left: 5px;"><a href="{{item['Link']}}" target="_blank" >{{ item["Name"] }}</a></td>
                 {% else %}
-                    <td>{{ item["Name"] }}</td>
+                    <td class="text-align: left; margin-left: 5px;">{{ item["Name"] }}</td>
                 {% endif %}
+                <td>{{ item["Type"] }}</td>
                 <td>{{ item["Cost"] }}</td>
                 <td>
                     <a href="/delete/{{item['Name']}}">Delete</a>

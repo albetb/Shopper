@@ -12,15 +12,12 @@ mario = Shop(
                 template = "Magic Blacksmith"
             )
 
-mario.generate_inventory()
-# mario.display(2)
-
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
         pass
     elif request.method == 'GET':
-        return render_template('index.html', items = mario.stock)
+        return render_template('index.html', items = mario.inventory())
 
 @app.route('/delete/<int:id>')
 def delete(id):

@@ -677,11 +677,11 @@
         "Cost Modifier": 2
       },
       {
+        "Name": "Icy burst",
         "Minor": 0,
         "Medium": 3,
         "Major": 5,
         "Link": "http://dndsrd.net/magicItemsAW.html#icy-burst",
-        "Name": "Icy burst",
         "Cost Modifier": 2
       },
       {
@@ -717,11 +717,11 @@
         "Cost Modifier": 2
       },
       {
+        "Name": "Speed",
         "Minor": 0,
         "Medium": 0,
         "Major": 5,
         "Link": "http://dndsrd.net/magicItemsAW.html#speed",
-        "Name": "Speed",
         "Cost Modifier": 3
       },
       {
@@ -741,11 +741,11 @@
         "Cost Modifier": 4
       },
       {
+        "Name": "Vorpal",
         "Minor": 0,
         "Medium": 0,
         "Major": 2,
         "Link": "http://dndsrd.net/magicItemsAW.html#vorpal",
-        "Name": "Vorpal",
         "Cost Modifier": 5
       }
     ],
@@ -759,11 +759,11 @@
         "Cost Modifier": 1
       },
       {
+        "Name": "Distance",
         "Minor": 13,
         "Medium": 8,
         "Major": 4,
         "Link": "http://dndsrd.net/magicItemsAW.html#distance",
-        "Name": "Distance",
         "Cost Modifier": 1
       },
       {
@@ -887,11 +887,11 @@
         "Cost Modifier": 3
       },
       {
+        "Name": "Brilliant energy",
         "Minor": 0,
         "Medium": 0,
         "Major": 6,
         "Link": "http://dndsrd.net/magicItemsAW.html#brilliant-energy",
-        "Name": "Brilliant energy",
         "Cost Modifier": 4
       }
     ],
