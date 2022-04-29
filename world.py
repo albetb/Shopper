@@ -1,5 +1,6 @@
 from shop import Shop
-from loader import save_file, load_file
+
+# TODO: implementing World and Cities
 
 class World:
     def __init__(self, name: str, party_level: int = 1) -> None:
@@ -15,28 +16,6 @@ class World:
         city.add_shop("Gino")
         self.cities.append(city)
 
-    def serialize(self) -> dict:
-        """ Serialize game stats as a dictionary to save it in a JSON file """
-        return {
-            "population": self.population,
-            "resource": {
-                "food": self.food,
-                "wood": self.wood
-                },
-            "building": {
-                "house": self.house,
-                "granary": self.granary,
-                "storage": self.storage
-                },
-            "occupation": {
-                "harvester": self.harvester,
-                "lumber": self.lumber
-                },
-            "time": self.time,
-            "events": self.events.serialize_events()
-            }
-
-
 class City:
     def __init__(self, name: str, city_level: int = 0) -> None:
         self.name = name if isinstance(name, str) else "NONAME"
@@ -45,7 +24,7 @@ class City:
 
         self.shops = []
 
-    def add_shop(self, name, ):
+    def add_shop(self, name: str):
         shop = Shop(
             name,
             city_level = 3,
@@ -55,7 +34,3 @@ class City:
             template = "Magic Blacksmith"
         )
         self.shops.append(shop)
-
-aa = World("Terra")
-aa.add_city("asdasda",0)
-save_file("test", aa)

@@ -1,15 +1,20 @@
-body, html {
+body,
+html {
     margin: 0;
     font-family: sans-serif;
     background-color: rgb(248, 238, 216);
 }
 
 .content {
-    margin: 0 auto;
-    width: 60%;
+    margin: auto;
+    justify-content: center;
+    width: fit-content;
+    margin-bottom: 15px;
 }
 
-table, td, th {
+table,
+td,
+th {
     border: 2px solid #aaa;
 }
 
@@ -20,10 +25,12 @@ table {
 
 th {
     height: 30px;
+    width: fit-content;
 }
 
 td {
     text-align: left;
+    width: fit-content;
     padding: 5px;
     margin: 5px;
 }
@@ -33,5 +40,32 @@ td {
 }
 
 #content {
-    width: 60%;
+    width: fit-content;
+}
+
+.input_box {
+    width: fit-content;
+    display: flex;
+    color: rgb(223, 223, 223);
+    background-color: rgb(1, 116, 116);
+    border-radius: 15px;
+    margin: 20px 20px 20px 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.input_box_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
+
+.menu_box {
+    width: auto;
+    display: flex;
+    color: rgb(223, 223, 223);
+    background-color: rgb(1, 116, 116);
 }

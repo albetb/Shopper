@@ -12,7 +12,7 @@ def load_file(file_name: str) -> dict:
     with open(f"config/{file_name}.json", "r") as file:
         return load(file)
 
-def save_file(file_name, data):
+def save_file(file_name: str, data: dict):
     """ Save to a .txt file as JSON """
     with open(f'config/{file_name}.json', 'w+') as file:
         file.write(dumps(data))
