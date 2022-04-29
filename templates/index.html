@@ -5,26 +5,49 @@
 {% endblock %}
 
 {% block menu %}
-<div style="width: auto; display: flex; color:aquamarine">
-    <div style="float: left; width: 25%;">
-        <h1 style="text-align: left; margin-left: 15px; ">Shopperino</h1>
+<form method="POST" action="/">
+    <div style="width: auto; display: flex; color:rgb(223, 223, 223); background-color: rgb(1, 116, 116);">
+        <div style="float: left; width: 50%;">
+            <h1 style="text-align: left; margin-left: 25px; ">Shopperino</h1>
+        </div>
+        <div style="float: right; width: 50%; margin-right: 20px">
+            <p style="text-align: right; vertical-align: bottom;"> Campaign time: Mon 15/05 12:00 </p>
+            <p style="text-align: right; vertical-align: upper;"> Player level:
+                <input name="player_level" type="number" style="width: 40px" max="20" min="1" value="1">
+            </p>
+        </div>
+        <br style="clear: left;" />
     </div>
-    <div style="float: center; width: 50%;">
-        <p style="text-align: center; vertical-align: bottom;"> Player level: 5 </p>
-    </div>
-    <div style="float: right; width: 25%">
-        <p style="text-align: right; margin-right: 15px; vertical-align: bottom;"> Campaign time: Mon 15/05 12:00 </p>
-    </div>
-    <br style="clear: left;" />
-</div>
-{% endblock %}
+    <div
+        style="width: 98%; display: flex; color:rgb(223, 223, 223); background-color: rgb(1, 116, 116); border-radius: 15px; margin: 20px 20px 20px 20px; align-items: center;">
+        <p style="margin-left: 15px;"> City level:
+            <input name="city_level" type="number" style="width: 40px" max="5" min="0" value="0">
+        </p>
 
+        <p style="margin-left: 15px;"> Shop level:
+            <input name="shop_level" type="number" style="width: 40px" max="10" min="0" value="0">
+        </p>
+
+        <p style="margin-left: 15px;"> Reputation:
+            <input name="reputation" type="number" style="width: 40px" max="10" min="-10" value="0">
+        </p>
+
+        <select name="shoptype" style="margin-left: 15px;">
+            <option value="{{shop_list[0]}}" selected>{{shop_list[0]}}</option>
+            {% for shoptype in shop_list[1:] %}
+            <option value="{{shoptype}}">{{shoptype}}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit" style="margin-left: 20px;">New shop</input>
+    </div>
+</form>
+{% endblock %}
 {% block body %}
+
 <div class="content">
-    {% if items|length < 1 %}
-    <h4 style="text-align: center">There are no items.</h4>
-    {% else %}
-    <table>
+    {% if items|length > 0 %}
+    <table style="margin: 20px">
         <tr>
             <th>#</th>
             <th>Name</th>
@@ -32,30 +55,19 @@
             <th>Cost</th>
         </tr>
         {% for item in items %}
-            <tr>
-                <td>{{ item["Number"] }}</td>
-                {% if item["Link"] != "" %}
-                    <td class="text-align: left; margin-left: 5px;"><a href="{{item['Link']}}" target="_blank" >{{ item["Name"] }}</a></td>
-                {% else %}
-                    <td class="text-align: left; margin-left: 5px;">{{ item["Name"] }}</td>
-                {% endif %}
-                <td>{{ item["Type"] }}</td>
-                <td>{{ item["Cost"] }}</td>
-                <td>
-                    <a href="/delete/{{item['Name']}}">Delete</a>
-                    <br>
-                    <a href="/update/{{item['Name']}}">Update</a>
-                </td>
-            </tr>
+        <tr>
+            <td style="text-align: center;">{{ item["Number"] }}</td>
+            {% if item["Link"] != "" %}
+            <td class="text-align: left; margin-left: 5px;"><a href="{{item['Link']}}"
+                    target="_blank">{{ item["Name"] }}</a></td>
+            {% else %}
+            <td class="text-align: left; margin-left: 5px;">{{ item["Name"] }}</td>
+            {% endif %}
+            <td>{{ item["Type"] }}</td>
+            <td style="text-align: right; margin-right: 5px;">{{ item["Cost"] }}</td>
+        </tr>
         {% endfor %}
     </table>
     {% endif %}
-
-    <div class="form">
-        <form action="/" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Add Item">
-        </form>
-    </div>
 </div>
 {% endblock %}

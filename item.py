@@ -342,7 +342,7 @@ class __Item():
                 if trimmed_name in ability_names:
                     present = list(filter(
                                 lambda x: x["Name"][:5] == trimmed_name,
-                                special_ability))
+                                ability_list))[0]
                     mod = special_ability["Cost Modifier"]
                     # If ability is lower level add better one
                     if isinstance(mod, int) and present["Cost Modifier"] < mod:

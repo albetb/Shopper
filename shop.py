@@ -5,6 +5,13 @@ from datetime import datetime
 from os import path, getcwd, startfile
 from loader import load_file
 
+
+def shop_names(all = False) -> list:
+    shop_types = load_file("shops")
+    return [item["Name"] 
+            for item in shop_types["Type"]
+            if item["Name"] != "Jeff" or all]
+
 class Shop:
     def __init__(self, name: str,
                        shop_level: float = 0,
@@ -102,8 +109,8 @@ class Shop:
     def __template(self, __template) -> None:
         """ Select a template for the shop """
         shop_types = load_file("shops")
+        type_name = shop_names(all = True)
         # Get default shop if shop name don't exist
-        type_name = (item["Name"] for item in shop_types["Type"])
         self.type = "" if __template not in type_name else __template
         shop = list(filter(lambda x: x["Name"] == self.type,
                            shop_types["Type"]))[0]

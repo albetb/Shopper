@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     font-family: sans-serif;
-    background-color: whitesmoke;
+    background-color: rgb(248, 238, 216);
 }
 
 .content {
@@ -10,7 +10,7 @@ body, html {
 }
 
 table, td, th {
-    border: 1px solid #aaa;
+    border: 2px solid #aaa;
 }
 
 table {
@@ -25,7 +25,7 @@ th {
 td {
     text-align: left;
     padding: 5px;
-    margin-left: 5px;
+    margin: 5px;
 }
 
 .form {
@@ -33,5 +33,5 @@ td {
 }
 
 #content {
-    width: 70%;
+    width: 60%;
 }
