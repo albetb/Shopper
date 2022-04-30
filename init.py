@@ -1,5 +1,7 @@
 from shop import Shop, shop_names
 from flask import Flask, render_template, request
+from threading import Timer
+from webbrowser import open
 
 app = Flask(__name__)
 
@@ -49,4 +51,7 @@ def index():
                            default = default)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = 5000
+    url = f"http://127.0.0.1:{port}"
+    Timer(1, lambda: open(url)).start()
+    app.run(port=port, debug=False)

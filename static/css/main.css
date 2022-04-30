@@ -71,3 +71,21 @@ td {
     background-color: rgb(1, 116, 116);
     box-shadow: 3px 4px rgba(1, 89, 116, 0.404);
 }
+
+/* unvisited link */
+a:link {
+    text-decoration: none;
+    color: rgba(1, 77, 100);
+}
+
+/* visited link */
+a:visited {
+    text-decoration: none;
+    color: rgb(1, 77, 100);
+}
+
+/* mouse over link */
+a:hover {
+    text-decoration: underline;
+    color: rgb(1, 77, 100);
+}
