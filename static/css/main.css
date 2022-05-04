@@ -9,18 +9,25 @@ html {
     margin: auto;
     justify-content: center;
     width: fit-content;
+    background-color: rgb(248, 238, 216);
     margin-bottom: 15px;
 }
 
 table,
 td,
 th {
-    border: 2px solid #aaa;
+    border: 0px rgba(255, 255, 255, 0);
+}
+
+tr:nth-child(even){
+    background-color: #6969691c;
 }
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: auto;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 th {
@@ -46,6 +53,9 @@ td {
 .input_box {
     width: fit-content;
     display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 10px;
     color: rgb(223, 223, 223);
     background-color: rgb(1, 116, 116);
     border-radius: 15px;
@@ -61,7 +71,11 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center
+    text-align: center;
+}
+
+.itemx {
+    flex: 1 1 auto;
 }
 
 .menu_box {
@@ -71,14 +85,12 @@ td {
     background-color: rgb(1, 116, 116);
     box-shadow: 3px 4px rgba(1, 89, 116, 0.404);
 }
-
-/* unvisited link */
-a:link {
-    text-decoration: none;
-    color: rgba(1, 77, 100);
+.margined {
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
-/* visited link */
+a:link,
 a:visited {
     text-decoration: none;
     color: rgb(1, 77, 100);

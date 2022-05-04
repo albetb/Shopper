@@ -2,6 +2,7 @@ from shop import Shop, shop_names
 from flask import Flask, render_template, request
 from threading import Timer
 from webbrowser import open
+from flask_cors import CORS
 
 app = Flask(__name__)
 

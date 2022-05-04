@@ -13,8 +13,7 @@
         <div style="float: right; width: 50%; margin-right: 20px">
             <p style="text-align: right; vertical-align: bottom;"> Welcome adventurer </p>
             <p style="text-align: right; vertical-align: upper;"> Player level:
-                <input name="player_level" type="number" style="width: 40px" max="20" min="1"
-                    value="{{default['player_level']}}">
+                <input name="player_level" type="number" style="width: 35px" max="20" min="1" value="{{default['player_level']}}">
             </p>
         </div>
         <br style="clear: left;" />
@@ -22,35 +21,45 @@
     <div class="input_box_container">
 
         <div class="input_box">
-            <p style="margin-left: 15px;"> City level:
-                <input name="city_level" value="{{default['city_level']}}" type="number" style="width: 40px" max="5"
-                    min="0">
-            </p>
 
-            <p style="margin-left: 15px;"> Shop level:
-                <input name="shop_level" value="{{default['shop_level']}}" type="number" style="width: 40px" max="10"
-                    min="0">
-            </p>
+            <div class="itemx">
+                <p> City level:
+                    <input name="city_level" value="{{default['city_level']}}" type="number" style="width: 35px" max="5" min="0">
+                </p>
+            </div>
 
-            <p style="margin-left: 15px;"> Reputation:
-                <input name="reputation" value="{{default['reputation']}}" type="number" style="width: 40px" max="10"
-                    min="-10">
-            </p>
+            <div class="itemx">
+                <p> Shop level:
+                    <input name="shop_level" value="{{default['shop_level']}}" type="number" style="width: 35px" max="10" min="0">
+                </p>
+            </div>
 
-            <select name="shop_type" style="margin-left: 15px;">
-                <option value="{{default['shop_type']}}" selected>{{default['shop_type']}}</option>
-                {% for shoptype in shop_list[:] %}
-                {% if shoptype != default['shop_type']%}
-                <option value="{{shoptype}}">{{shoptype}}</option>
-                {% endif %}
-                {% endfor %}
-            </select>
+            <div class="itemx">
+                <p> Reputation:
+                    <input name="reputation" value="{{default['reputation']}}" type="number" style="width: 35px" max="10" min="-10">
+                </p>
+            </div>
 
-            <button type="submit" style="border-radius: 7px; margin-left: 20px; margin-right: 20px;">New shop</button>
+            <div class="itemx">
+                <select name="shop_type">
+                    <option value="{{default['shop_type']}}" selected>{{default['shop_type']}}</option>
+                    {% for shoptype in shop_list[:] %}
+                    {% if shoptype != default['shop_type']%}
+                    <option value="{{shoptype}}">{{shoptype}}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
 
-            <input style="margin-left: 15px;" name="save" type="checkbox">
-            <p style="margin-left: 5px; margin-right: 15px;"> Save PDF
-            </p>
+            <div class="itemx">
+                <button type="submit" style="border-radius: 7px;height:30px; width:80px">New
+                    shop</button>
+            </div>
+
+            <div class="itemx">
+                <p style="margin-right: 8px;"><input name="save" type="checkbox"> Save PDF
+                </p>
+            </div>
         </div>
     </div>
 </form>
@@ -60,22 +69,21 @@
 <div class="content">
     {% if items|length > 0 %}
     <table>
-        <tr>
-            <th style="width: 4%">#</th>
-            <th>Name</th>
-            <th style="width: 15%">Type</th>
-            <th style="width: 10%">Cost</th>
+        <tr style="border-bottom: 1px solid rgba(70, 70, 70, 0.4);">
+            <th style="width: 4%; max-width: 80px; min-width: fit-content;">#</th>
+            <th style="width: auto">Name</th>
+            <th style="width: 15%; min-width: 0px; max-width: fit-content;">Type</th>
+            <th style="min-width: fit-content; max-width: fit-content;">Cost</th>
         </tr>
         {% for item in items %}
         <tr>
             <td style="text-align: center;">{{ item["Number"] }}</td>
             {% if item["Link"] != "" %}
-            <td class="text-align: left; margin-left: 5px;"><a href="{{item['Link']}}"
-                    target="_blank">{{ item["Name"] }}</a></td>
+            <td class="text-align: left; margin-left: 5px;"><a href="{{item['Link']}}" target="_blank">{{ item["Name"] }}</a></td>
             {% else %}
             <td class="text-align: left; margin-left: 5px;">{{ item["Name"] }}</td>
             {% endif %}
-            <td style="text-align: center;" ;>{{ item["Type"] }}</td>
+            <td style="text-align: center;">{{ item["Type"] }}</td>
             <td style="text-align: right; margin-right: 5px;">{{ item["Cost"] }} gp</td>
         </tr>
         {% endfor %}
