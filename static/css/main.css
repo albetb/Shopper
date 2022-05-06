@@ -5,11 +5,47 @@ html {
     background-color: rgb(248, 238, 216);
 }
 
+.menu_box {
+    display: flex;
+    color: rgb(223, 223, 223);
+    background-color: rgb(1, 116, 116);
+    box-shadow: 3px 4px rgba(1, 89, 116, 0.404);
+}
+
+.input_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 10px;
+    color: rgb(223, 223, 223);
+    background-color: rgb(1, 116, 116);
+    border-radius: 15px;
+    margin: 20px;
+    align-items: center;
+    box-shadow: 3px 4px rgba(1, 89, 116, 0.404);
+}
+
+.input_box_container {
+    display: flex;
+    justify-content: center;
+}
+
+.itemx {
+    flex: 1 1 auto;
+}
+
+.margined {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
 .content {
     margin: auto;
-    justify-content: center;
     width: fit-content;
-    background-color: rgb(248, 238, 216);
     margin-bottom: 15px;
 }
 
@@ -42,88 +78,38 @@ td {
     margin: 5px;
 }
 
-.form {
-    margin-top: 20px;
-}
-
 #content {
     width: fit-content;
 }
 
-.input_box {
-    width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    padding: 10px;
-    color: rgb(223, 223, 223);
-    background-color: rgb(1, 116, 116);
-    border-radius: 15px;
-    margin: 20px 20px 20px 20px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    box-shadow: 3px 4px rgba(1, 89, 116, 0.404);
-}
 
-.input_box_container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.itemx {
-    flex: 1 1 auto;
-}
-
-.menu_box {
-    width: auto;
-    display: flex;
-    color: rgb(223, 223, 223);
-    background-color: rgb(1, 116, 116);
-    box-shadow: 3px 4px rgba(1, 89, 116, 0.404);
-}
-.margined {
-    margin-left: 8px;
-    margin-right: 8px;
-}
-
+/* Links */
 a:link,
 a:visited {
     text-decoration: none;
     color: rgb(1, 77, 100);
 }
-
-/* mouse over link */
 a:hover {
     text-decoration: underline;
     color: rgb(1, 77, 100);
 }
 
-/* width */
+/* Scrollbar */
 ::-webkit-scrollbar {
     display: block;
     width: 12px;
     border-radius: 6px;
     padding: 4px;
   }
-  
-  /* Track */
   ::-webkit-scrollbar-track {
     background: transparent;
   }
-  
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgb(1, 116, 116);
     border-radius: 6px;
     border: 3px transparent #6969691c;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
   }
-  
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(1, 89, 116, 0.604);
   }
