@@ -32,39 +32,35 @@ class Shop:
         self.gold = 0 # Gold possessed
         self.hours_counter = 0 # For counting time
         self.arcane_chance = 0.7 # Base arcane scroll chance
-        
         self.__template(template) # Load template for the shop
 
-    def serialize(self) -> dict: pass
-
-    def add_shop_level(self, level_added: float) -> None:
+    def add_shop_level(self, lv: float) -> None:
         """ Add shop level from the shop [0, 10] """
-        lv = self.shop_level
-        lv_sum = self.shop_level + level_added
+        shop_lv = self.shop_level
+        lv_sum = self.shop_level + lv
         self.shop_level = round(max(self.shop_level, min(10, lv_sum)), 2)
-        old_gold = self.__base_gold(self.party_level, lv)
+        old_gold = self.__base_gold(self.party_level, shop_lv)
         new_gold = self.__base_gold(self.party_level, self.shop_level)
         self.gold += new_gold - old_gold
-        if int(lv) != int(self.shop_level):
+        if int(shop_lv) != int(self.shop_level):
             print(f"{self.name} has reached lv {int(self.shop_level)}!")
 
-    def add_city_level(self, level_added: int) -> None:
+    def add_city_level(self, lv: int) -> None:
         """ Add or subtract city level from the shop's city [0, 5] """
-        self.city_level = int(max(0, min(5, self.city_level + level_added)))
+        self.city_level = int(max(0, min(5, self.city_level + lv)))
 
-    def add_party_level(self, level_added: int) -> None:
+    def add_party_level(self, lv: int) -> None:
         """ Add level to the party [1, 20] """
-        lv = self.party_level
-        add_lv = self.party_level + level_added
+        party_lv = self.party_level
+        add_lv = self.party_level + lv
         self.party_level = int(max(self.party_level, min(20, add_lv)))
-        old_gold = self.__base_gold(lv, self.shop_level)
+        old_gold = self.__base_gold(party_lv, self.shop_level)
         new_gold = self.__base_gold(self.party_level, self.shop_level)
         self.gold += new_gold - old_gold
 
-    def add_reputation(self, reputation_added: float) -> None:
+    def add_reputation(self, rep: float) -> None:
         """ Add or subtract reputation from the shop [-10, 10] """
-        sum_value = self.reputation + reputation_added
-        self.reputation = round(max(-10, min(10, sum_value)), 2)
+        self.reputation = round(max(-10, min(10, self.reputation + rep)), 2)
 
     def passing_time(self, hours: int = 0, days: int = 0) -> None:
         """ Pass time, shop sell items, restock items and spend coins """
@@ -303,7 +299,3 @@ class Shop:
         cost = max(round(item["Cost"] * mod, 2), 0)
         dec = 1 if cost < 100 else 5 if cost < 1000 else 10
         return cost if cost < 1 else int(round(cost / dec, 0) * dec)
-
-    def __stock_value(self) -> float:
-        """ Calculate entire stock value of the shop """
-        return round(sum(self.true_cost(item) for item in self.stock), 2)
