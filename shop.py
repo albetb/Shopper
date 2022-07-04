@@ -2,7 +2,11 @@ from item import new
 from random import random, randint, choices, choice
 from fpdf import FPDF
 from datetime import datetime
-from os import path, getcwd, startfile
+from os import path, getcwd
+try:
+    from os import startfile
+except ImportError:
+    startfile = lambda *x, **args: None
 from loader import load_file
 
 
