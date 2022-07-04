@@ -51,8 +51,11 @@ def index():
                            items = items,
                            default = default)
 
-if __name__ == "__main__":
+def run():
     port = 5000
-    url = f"http://127.0.0.1:{port}"
-    Timer(1, lambda: open(url)).start()
-    app.run(port=port, debug=False)
+    # url = f"http://127.0.0.1:{port}"
+    # Timer(1, lambda: open(url)).start()
+    app.run(host='0.0.0.0', port=port, debug=False)
+
+if __name__ == "__main__":
+    run()
