@@ -1,14 +1,6 @@
 from item import new
 from random import random, randint, choices, choice
-from fpdf import FPDF
-from datetime import datetime
-from os import path, getcwd
-try:
-    from os import startfile
-except ImportError:
-    startfile = lambda *x, **args: None
 from loader import load_file
-
 
 def shop_names(all = False) -> list:
     shop_types = load_file("shops")
@@ -214,86 +206,6 @@ class Shop:
                 added_item["Number"] = 1
                 added_item["Item Type"] = item_type
                 self.stock.append(added_item)
-
-    def display(self, is_pdf: int = 0) -> None:
-        """ Display the inventory
-            or if is_pdf > 0 create a pdf of the inventory
-            and if is_pdf > 1 open it """
-        if is_pdf > 0:
-            pdf = FPDF()
-            pdf.add_page()
-            pdf.set_font("Courier", size = 12)
-
-            fprint = lambda t, l = "": pdf.cell(190, 5, txt = t, ln = 1,
-                                                align = 'C', link = l)
-        else:
-            fprint = lambda t, l = "" : print(t)
-            if not self.__is_open():
-                reason = f"{self.hours_counter % 24} o'clock"
-                if self.hours_counter % 168 > 144:
-                    reason = "day off"
-                elif self.hours_counter % 24 == 13:
-                    reason = "lunch break"
-                fprint(f"~~~ The shop is closed (it's {reason}) ~~~")
-                return
-
-        #  _________________________________________________________ 
-        fprint(" " + "_" * 58 + " ")
-        # |                                                          |
-        fprint("|" + " " * 58 + "|")
-        shop_name = self.name
-        if len(self.name) >= 41:
-            shop_name = f"{str(self.name)[:39]}.."
-        shop_name = f" {shop_name}'s inventory: "
-        shop_name = "| " + "~" * ((57 - len(shop_name)) // 2) + shop_name
-        shop_name = shop_name + "~" * (58 - len(shop_name)) + " |"
-        # | ~~~~~~~~~~~~~~~~~~ Mario's inventory: ~~~~~~~~~~~~~~~~~~ |
-        fprint(shop_name)
-        info = f"| {self.type} lv: {self.shop_level}"
-        cost = f" Gold: {int(self.gold)} gp |"
-        info += " " * (60 - len(info) - len(cost)) + cost
-        # | Blacksmith lv: 1                          Gold: 11828 gp |
-        fprint(info)
-        info2 = f"| > Reputation: {self.reputation}"
-        info2 += f", Player lv: {self.party_level}"
-        info2 += " " * (59 - len(info2)) + "|"
-        # | > Reputation: 0, Player lv: 5                            |
-        fprint(info2)
-        # |                                                          |
-        fprint("|" + " " * 58 + "|")
-        for item in self.stock:
-            if item["Number"] > 0:
-                name = item["Name"]
-                if len(item["Name"]) >= 42:
-                    name = f"{str(item['Name'])[:40]}.."
-                txt = f'| {item["Number"]}x {name} '
-                cst = str(self.true_cost(item))
-                txt = txt + "." * (54 - len(txt) - len(cst)) + f" {cst} gp |"
-                if is_pdf > 0:
-                    link = ""
-                    if "Link" in item.keys():
-                        link = item["Link"]
-                    elif "Ability" in item.keys():
-                        # Add first special ability link
-                        if isinstance(item["Ability"], list):
-                            if len(item["Ability"]) > 0:
-                                link = item["Ability"][0]["Link"]
-                    fprint(txt, link)
-                else:
-                    # | 1x Dagger +3 ...................... 19950 gp |
-                    fprint(txt)
-        # |                                                          |
-        fprint("|" + " " * 58 + "|")
-        # |__________________________________________________________|
-        fprint("|" + "_" * 58 + "|")
-        
-        if is_pdf > 0:
-            now = datetime.now().strftime("%y%m%d%H%M%S")
-            filename = f"created\{self.name}'s inventory - {now}.pdf"
-            pdf.output(filename)
-        if is_pdf > 1:
-            file_path = path.join(getcwd(), filename)
-            startfile(file_path)
 
     def true_cost(self, item: dict, for_party: bool = True) -> int or float:
         """ Modifies cost of an item,

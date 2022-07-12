@@ -5,22 +5,21 @@
 {% endblock %}
 
 {% block menu %}
-<form method="POST" action="/">
-    <div class="menu_box">
-        <div style="float: left; width: 50%;">
-            <h1 style="text-align: left; margin-left: 25px;">Shopperino</h1>
-        </div>
-        <div style="float: right; width: 50%; margin-right: 20px">
-            <p style="text-align: right; vertical-align: bottom;"> Welcome adventurer </p>
-            <p style="text-align: right; vertical-align: upper;"> Player level:
-                <input name="player_level" type="number" style="width: 35px" max="20" min="1" value="{{default['player_level']}}">
-            </p>
-        </div>
-        <br style="clear: left;" />
+<div class="menu_box">
+    <div style="float: left; width: 50%;">
+        <h1 style="text-align: left; margin-left: 25px;">Shopperino</h1>
     </div>
-    <div class="input_box_container">
+</div>
 
+<div class="input_box_container">
+    <form method="POST" action="/">
         <div class="input_box">
+
+            <div class="itemx">
+                <p> Player level:
+                    <input name="player_level" type="number" style="width: 35px" max="20" min="1" value="{{default['player_level']}}">
+                </p>
+            </div>
 
             <div class="itemx">
                 <p> City level:
@@ -54,11 +53,6 @@
             <div class="itemx">
                 <button type="submit" style="border-radius:10px; box-shadow:2px 3px rgba(2, 76, 99, 0.603); height:30px; width:80px">New
                     shop</button>
-            </div>
-
-            <div class="itemx">
-                <p style="margin-right: 8px;"><input name="save" type="checkbox"> Save PDF
-                </p>
             </div>
         </div>
     </div>

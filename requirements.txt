@@ -1,3 +1,2 @@
-fpdf
 flask
 flask_cors
