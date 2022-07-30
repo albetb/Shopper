@@ -1,8 +1,5 @@
 from shop import Shop, shop_names
 from flask import Flask, render_template, request
-from threading import Timer
-from webbrowser import open
-from flask_cors import CORS
 
 app = Flask(__name__)
 
@@ -23,7 +20,6 @@ def index():
         shop_level = request.form.get('shop_level')
         reputation = request.form.get('reputation')
         shop_type = request.form.get('shop_type')
-        save_pdf = request.form.get('save')
 
         vendor = Shop(
                     "Shop",
@@ -42,9 +38,6 @@ def index():
             "shop_type": shop_type
         }
         items = vendor.inventory()
-        
-        if save_pdf:
-            vendor.display(1)
 
     return render_template('index.html',
                            shop_list = shop_names(),
@@ -53,8 +46,6 @@ def index():
 
 def run():
     port = 5000
-    # url = f"http://127.0.0.1:{port}"
-    # Timer(1, lambda: open(url)).start()
     app.run(host='0.0.0.0', port=port, debug=False)
 
 if __name__ == "__main__":

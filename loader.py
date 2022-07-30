@@ -7,10 +7,13 @@ class Load():
         self.tables = load_file("tables")
         self.shop_types = load_file("shops")
 
-def load_file(file_name: str) -> dict:
+def load_file(file_name: str) -> dict or None:
     """ Load JSON file """
-    with open(f"config/{file_name}.json", "r") as file:
-        return load(file)
+    try:
+        with open(f"config/{file_name}.json", "r") as file:
+            return load(file)
+    except:
+        return
 
 def save_file(file_name: str, data: dict):
     """ Save to a .txt file as JSON """

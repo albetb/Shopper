@@ -1,6 +1,6 @@
 from item import new
 from random import random, randint, choices, choice
-from loader import load_file
+from loader import load_file, save_file
 
 def shop_names(all = False) -> list:
     shop_types = load_file("shops")
@@ -29,6 +29,47 @@ class Shop:
         self.hours_counter = 0 # For counting time
         self.arcane_chance = 0.7 # Base arcane scroll chance
         self.__template(template) # Load template for the shop
+
+    def serialize(self) -> None:
+        """ Save a shop from a JSON """
+        save_file(self.name, 
+        {
+            "Name": self.name,
+            "Shop": self.shop_level,
+            "City": self.city_level,
+            "Party": self.party_level,
+            "Reputation": self.reputation,
+            "Stock": self.stock,
+            "Gold": self.gold,
+            "Time": self.hours_counter,
+            "Arcane": self.arcane_chance,
+            "Type": self.shop_type,
+            "Modifier": self.item_mod
+        })
+
+    def deserialize(self, file_name) -> bool:
+        """ Load a shop from a JSON, return True if succeded """
+        data = load_file(file_name)
+        if not self.__valid_json(data): return False
+        self.name = data["Name"]
+        self.shop_level = data["Shop"]
+        self.city_level = data["City"]
+        self.party_level = data["Party"]
+        self.reputation = data["Reputation"]
+        self.stock = data["Stock"]
+        self.gold = data["Gold"]
+        self.hours_counter = data["Time"]
+        self.arcane_chance = data["Arcane"]
+        self.shop_type = data["Type"]
+        self.item_mod = data["Modifier"]
+        return True
+
+    def __valid_json(self, data) -> bool:
+        """ Check if loaded JSON is a valid shop """
+        if not isinstance(data, dict): return False
+        values = {"Name", "Shop", "City", "Party", "Reputation",
+                  "Stock", "Gold", "Time", "Arcane", "Type", "Modifier"}
+        return values == set(data.keys())
 
     def add_shop_level(self, lv: float) -> None:
         """ Add shop level from the shop [0, 10] """
@@ -98,13 +139,15 @@ class Shop:
                 for item in self.stock
                 if item["Number"] > 0]
 
-    def __template(self, __template) -> None:
+    def __template(self, template) -> None:
         """ Select a template for the shop """
+        # Try to load a shop with the same name
+        if self.deserialize(self.name): return
         shop_types = load_file("shops")
         type_name = shop_names(all = True)
         # Get default shop if shop name don't exist
-        self.type = "" if __template not in type_name else __template
-        shop = list(filter(lambda x: x["Name"] == self.type,
+        self.shop_type = "" if template not in type_name else template
+        shop = list(filter(lambda x: x["Name"] == self.shop_type,
                            shop_types["Type"]))[0]
         self.shop_level = max(self.shop_level, shop["Min level"])
         self.gold = self.__base_gold(self.party_level, self.shop_level)
@@ -140,7 +183,7 @@ class Shop:
         """ Check if the shop is open """
         return all((
                     8 < self.hours_counter % 24 < 18, # Opening time 9 - 18
-                    self.hours_counter % 24 != 13, # Lunch break 13-14
+                    self.hours_counter % 24 != 13, # Lunch break 13 - 14
                     not self.hours_counter % 168 > 144 # Day off every 7 days
                 ))
 
