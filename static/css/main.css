@@ -113,3 +113,31 @@ a:hover {
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(1, 89, 116, 0.604);
   }
+
+/* Lateral menu */
+
+.lateral-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; /* Makes the menu go from top to bottom */
+    width: 15%; /* Makes the menu 15% of the page's width */
+    background-color: rgb(1, 116, 116); /* Customize the background color */
+    padding: 20px; /* Add padding to menu items for spacing */
+    box-sizing: border-box; /* Include padding in width and height */
+}
+
+.lateral-menu li {
+    margin-bottom: 10px; /* Add margin between menu items */
+}
+
+.lateral-menu a {
+    display: block;
+    color: #fff; /* Customize text color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.lateral-menu a:hover {
+    background-color: #555; /* Customize hover color */
+}

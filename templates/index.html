@@ -4,6 +4,201 @@
 <title>Shopperino</title>
 {% endblock %}
 
+
+{% block lateral_menu %}
+<ul class="lateral-menu">
+    <li>
+        <button id="toggle-textbox-button">New World</button>
+        <input type="text" id="text-input" placeholder="New World Name" style="display: none;">
+        <button id="save-button" style="display: none;">Save</button>
+    </li>
+    <li>
+        <h4>Saved Worlds:</h4>
+        <select id="saved-text-dropdown"></select>
+    </li>
+    <li>
+        <button id="toggle-city-textbox-button">Add City</button>
+        <input type="text" id="city-text-input" placeholder="City Name" style="display: none;">
+        <button id="save-city-button" style="display: none;">Save</button>
+    </li>
+    <li>
+        <h4>Cities in Selected World:</h4>
+        <select id="saved-cities-dropdown"></select>
+    </li>
+</ul>
+
+<script>
+// JavaScript code for creating and selecting saved worlds and cities with persistence
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleTextboxButton = document.getElementById("toggle-textbox-button");
+    const textInput = document.getElementById("text-input");
+    const saveButton = document.getElementById("save-button");
+    const savedWorldsDropdown = document.getElementById("saved-text-dropdown");
+
+    const toggleCityTextboxButton = document.getElementById("toggle-city-textbox-button");
+    const cityTextInput = document.getElementById("city-text-input");
+    const saveCityButton = document.getElementById("save-city-button");
+    const savedCitiesDropdown = document.getElementById("saved-cities-dropdown");
+
+    // Function to toggle visibility of elements
+    function toggleElementVisibility(element, isVisible) {
+        element.style.display = isVisible ? "block" : "none";
+    }
+
+    // Event listener for the "New World" button
+    toggleTextboxButton.addEventListener("click", function () {
+        // Toggle visibility of the world name input and save button
+        toggleElementVisibility(textInput, true);
+        toggleElementVisibility(saveButton, true);
+        toggleElementVisibility(toggleTextboxButton, false);
+    });
+
+    // Event listener for the "Save" button for worlds
+    saveButton.addEventListener("click", function () {
+        const worldName = textInput.value.trim();
+
+        if (worldName) {
+            // Retrieve the existing list of saved worlds from local storage or create a new one
+            let savedWorlds = JSON.parse(localStorage.getItem("savedWorlds")) || [];
+
+            // Add the new world to the list
+            savedWorlds.push(worldName);
+
+            // Save the updated list back to local storage
+            localStorage.setItem("savedWorlds", JSON.stringify(savedWorlds));
+
+            // Clear the input field
+            textInput.value = "";
+
+            // Add the saved world to the dropdown without refreshing
+            addSavedWorldToDropdown(worldName);
+
+            // Toggle visibility of elements
+            toggleElementVisibility(textInput, false);
+            toggleElementVisibility(saveButton, false);
+            toggleElementVisibility(toggleTextboxButton, true);
+        }
+    });
+
+    // Event listener for the "Add City" button
+    toggleCityTextboxButton.addEventListener("click", function () {
+        // Toggle visibility of the city name input and save button
+        toggleElementVisibility(cityTextInput, true);
+        toggleElementVisibility(saveCityButton, true);
+        toggleElementVisibility(toggleCityTextboxButton, false);
+    });
+
+    // Event listener for the "Save" button for cities
+    saveCityButton.addEventListener("click", function () {
+        const cityName = cityTextInput.value.trim();
+        const selectedWorld = savedWorldsDropdown.value; // Get the selected world
+
+        if (cityName && selectedWorld) {
+            // Retrieve the existing list of saved cities for the selected world from local storage
+            let savedCities = JSON.parse(localStorage.getItem(selectedWorld)) || [];
+
+            // Add the new city to the list
+            savedCities.push(cityName);
+
+            // Save the updated list back to local storage under the selected world's name
+            localStorage.setItem(selectedWorld, JSON.stringify(savedCities));
+
+            // Clear the input field
+            cityTextInput.value = "";
+
+            // Add the saved city to the dropdown without refreshing
+            addSavedCityToDropdown(cityName);
+
+            // Toggle visibility of elements
+            toggleElementVisibility(cityTextInput, false);
+            toggleElementVisibility(saveCityButton, false);
+            toggleElementVisibility(toggleCityTextboxButton, true);
+        }
+    });
+
+    // Event listener for the selected world dropdown
+    savedWorldsDropdown.addEventListener("change", function () {
+        // Get the selected world name
+        const selectedWorld = savedWorldsDropdown.value;
+
+        // Save selection on local storage
+        localStorage.setItem("selectedWorld", selectedWorld)
+
+        // Retrieve and display the saved cities for the selected world from local storage
+        displaySavedCities(selectedWorld);
+    });
+
+    // Event listener for the selected city dropdown
+    savedCitiesDropdown.addEventListener("change", function () {
+        // Get the selected city name
+        const selectedCity = savedCitiesDropdown.value;
+
+        // Save selection on local storage
+        localStorage.setItem("selectedCity", selectedCity)
+    });
+
+    // Function to add a saved world to the dropdown
+    function addSavedWorldToDropdown(worldName) {
+        const option = document.createElement("option");
+        option.textContent = worldName;
+        savedWorldsDropdown.appendChild(option);
+    }
+
+    // Function to add a saved city to the dropdown
+    function addSavedCityToDropdown(cityName) {
+        const option = document.createElement("option");
+        option.textContent = cityName;
+        savedCitiesDropdown.appendChild(option);
+    }
+
+    // Function to display saved cities for a selected world
+    function displaySavedCities(worldName) {
+        // Retrieve the saved cities for the selected world from local storage
+        const savedCities = JSON.parse(localStorage.getItem(worldName)) || [];
+
+        // Clear the existing dropdown options
+        savedCitiesDropdown.innerHTML = "";
+
+        // Add the saved cities to the dropdown
+        savedCities.forEach(function (cityName) {
+            addSavedCityToDropdown(cityName);
+        });
+    }
+    
+    // Function to display saved worlds initially
+    function displaySavedWorlds() {
+        const savedWorlds = JSON.parse(localStorage.getItem("savedWorlds")) || [];
+
+        savedWorlds.forEach(function (worldName) {
+            addSavedWorldToDropdown(worldName);
+        });
+    }
+
+    // Initial display of saved worlds
+    displaySavedWorlds();
+
+    // Retrieve the selected world from local storage and set it as the initial selection
+    const selectedWorldFromLocalStorage = localStorage.getItem("selectedWorld");
+    if (selectedWorldFromLocalStorage) {
+        savedWorldsDropdown.value = selectedWorldFromLocalStorage;
+        // Trigger the change event to display the saved cities for the selected world
+        savedWorldsDropdown.dispatchEvent(new Event("change"));
+        // Retrieve and display the saved cities for the selected world from local storage
+        displaySavedCities(savedWorldsDropdown.value);
+    }
+
+    // Retrieve the selected city from local storage and set it as the initial selection
+    const selectedCityFromLocalStorage = localStorage.getItem("selectedCity");
+    if (selectedCityFromLocalStorage) {
+        savedCitiesDropdown.value = selectedCityFromLocalStorage;
+        // Trigger the change event to display the selected city
+        savedCitiesDropdown.dispatchEvent(new Event("change"));
+    }
+});
+
+</script>
+{% endblock %}
+
 {% block menu %}
 <div class="menu_box">
     <div style="float: left; width: 50%;">
