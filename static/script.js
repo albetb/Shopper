@@ -19,6 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const cityLevelDropdown = document.getElementById("city-level-dropdown");
     const citiesDropdownContainer = document.getElementById("cities-dropdown-container");
 
+    const shopLevelInput = document.getElementById("shop-level-input");
+    const reputationInput = document.getElementById("reputation-input");
+    const shopTypeDropdown = document.getElementById("shop-type-dropdown");
+
+    const new_shop_button = document.getElementById("new_shop_button");
+
     // Function to toggle visibility of elements
     function toggleElementVisibility(element, isVisible) {
         element.style.display = isVisible ? "block" : "none";
@@ -273,6 +279,55 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         
         refreshVisibility();
+    });
+
+    new_shop_button.addEventListener("click", function() {
+        const postData = {
+            player_level: playerLevelInput.value,
+            city_level: cityLevelDropdown.value,
+            shop_level: shopLevelInput.value,
+            reputation: reputationInput.value,
+            shop_type: shopTypeDropdown.value
+        };
+
+        // Send the POST request to the specified endpoint
+        fetch('/getShop', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(postData) // Convert data to JSON format
+        })
+        .then(response => response.json()) // Parse the JSON response
+        .then(data => {
+            const table = document.getElementById('items-table');
+            table.innerHTML = "";
+        
+            // Populate the table with items from the response
+            data.items.forEach(item => {
+                const row = table.insertRow();
+                
+                // Add cells and set their content
+                const numberCell = row.insertCell();
+                numberCell.textContent = item["Number"];
+                
+                const nameCell = row.insertCell();
+                const nameLink = document.createElement('a');
+                nameLink.href = item["Link"];
+                nameLink.textContent = item["Name"];
+                nameCell.appendChild(nameLink);
+                
+                const typeCell = row.insertCell();
+                typeCell.textContent = item["Type"];
+                
+                const costCell = row.insertCell();
+                costCell.textContent = `${item["Cost"]} gp`;
+        });
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('Error:', error);
+        });
     });
 
     refreshVisibility();

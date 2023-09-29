@@ -1,12 +1,17 @@
 body,
 html {
-    margin: 0;
     font-family: sans-serif;
     background-color: rgb(248, 238, 216);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .menu_box {
-    display: flex;
+    height: 15vh;
+    width: 100vw;
     color: rgb(223, 223, 223);
     background-color: rgb(1, 116, 116);
     box-shadow: 3px 4px rgba(1, 89, 116, 0.404);
@@ -26,12 +31,25 @@ html {
 }
 
 .input_box_container {
-    display: flex;
     justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 50vw;
+    position: fixed;
+    top: 15vh;
+    left: 25vw; /* Center horizontally */
+    z-index: 1; /* Place input_box_container above content */
 }
 
 .itemx {
     flex: 1 1 auto;
+}
+
+.buttonx {
+    border-radius:10px;
+    box-shadow:2px 3px rgba(2, 76, 99, 0.603);
+    height:30px;
+    width:80px
 }
 
 .margined {
@@ -44,9 +62,13 @@ html {
 }
 
 .content {
+    flex: 1;
     margin: auto;
     width: fit-content;
     margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
 }
 
 table,
@@ -117,13 +139,12 @@ a:hover {
 /* Lateral menu */
 
 .lateral-menu {
-    position: fixed;
-    top: 0;
+    top: 15vh;
     left: 0;
-    height: 100%; /* Makes the menu go from top to bottom */
-    width: 15%; /* Makes the menu 15% of the page's width */
+    height: 85vh;
+    width: 15vw;
     background-color: rgb(1, 116, 116); /* Customize the background color */
-    padding: 20px; /* Add padding to menu items for spacing */
+    padding: 15px; /* Add padding to menu items for spacing */
     box-sizing: border-box; /* Include padding in width and height */
 }
 
