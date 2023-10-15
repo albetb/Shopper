@@ -52,6 +52,10 @@
   justify-content: space-between;
 }
 
+.margin-top{
+  margin-top: 10px;
+}
+
 .modern-button {
   width: 6vw; /* Set width of the dropdown */
   background-color: #f9f9f9; /* Green background color */

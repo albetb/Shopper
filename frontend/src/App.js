@@ -9,6 +9,7 @@ function App() {
   const [savedWorlds, setSavedWorlds] = useState([]);
   const [savedCities, setSavedCities] = useState([]);
   const [savedShops, setSavedShops] = useState([]);
+  const [playerLevel, setPlayerLevel] = useState(1);
   const [data, setData] = useState({
     player_level: 1,
     city_level: 0,
@@ -21,6 +22,10 @@ function App() {
   useEffect(() => {
     const worlds = JSON.parse(localStorage.getItem(`saved_worlds`)) || [];
     setSavedWorlds(worlds);
+    if (worlds.length > 0){
+      const player_level = localStorage.getItem(`${worlds[0]}_level`) || 1;
+      setPlayerLevel(player_level);
+    }
     const cities = JSON.parse(localStorage.getItem(`saved_cities_${worlds[0]}`)) || [];
     setSavedCities(cities);
     const shops = JSON.parse(localStorage.getItem(`saved_shops_${worlds[0]}_${cities[0]}`)) || [];
@@ -40,6 +45,8 @@ function App() {
     const worlds = setSelection(savedWorlds, world);
     setSavedWorlds(worlds);
     localStorage.setItem(`saved_worlds`, JSON.stringify(worlds));
+    const world_level = localStorage.getItem(`${world}_level`);
+    setPlayerLevel(world_level);
 
     const cities = JSON.parse(localStorage.getItem(`saved_cities_${worlds[0]}`)) || [];
     setSavedCities(cities);
@@ -68,6 +75,8 @@ function App() {
       const worlds = setSelection(savedWorlds, cap(world));
       setSavedWorlds(worlds);
       localStorage.setItem(`saved_worlds`, JSON.stringify(worlds));
+      setPlayerLevel(1);
+      localStorage.setItem(`${worlds[0]}_level`, 1);
 
       setSavedCities([]);
       setSavedShops([]);
@@ -90,8 +99,15 @@ function App() {
       setSavedShops(shops);
       localStorage.setItem(`saved_shops_${savedWorlds[0]}_${savedCities[0]}`, JSON.stringify(shops));
 
-      const shop = new Shop(shopName, data.shop_level, data.city_level, data.player_level, data.reputation, data.shop_type);
+      const shop = new Shop(shopName, data.shop_level, data.city_level, playerLevel, data.reputation, data.shop_type);
       setInventory(shop.stock);
+    }
+  };
+
+  const onPlayerLevelChange = (level) => {
+    if (level !== playerLevel){
+      setPlayerLevel(level);
+      localStorage.setItem(`${savedWorlds[0]}_level`, level);
     }
   };
 
@@ -104,7 +120,9 @@ function App() {
     onNewShop: onNewShop,
     savedWorlds: savedWorlds ?? [],
     savedCities: savedCities ?? [],
-    savedShops: savedShops ?? []
+    savedShops: savedShops ?? [],
+    playerLevel: playerLevel,
+    onPlayerLevelChange: onPlayerLevelChange
   };
 
   return (

@@ -43,7 +43,9 @@ const MenuCards = ({ props }) => {
   var menuCardWorldProps = {
     onSelectWorld: props.onSelectWorld,
     onNewWorld: props.onNewWorld,
-    savedWorlds: props.savedWorlds
+    savedWorlds: props.savedWorlds,
+    playerLevel: props.playerLevel,
+    onPlayerLevelChange: props.onPlayerLevelChange
   };
 
   var menuCardCityProps = {
