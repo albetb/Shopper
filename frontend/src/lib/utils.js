@@ -1,7 +1,7 @@
-import items from '../appData/items.json';
-import scrolls from '../appData/scrolls.json';
-import shops from '../appData/shops.json';
-import tables from '../appData/tables.json';
+import items from '../appdata/items.json';
+import scrolls from '../appdata/scrolls.json';
+import shops from '../appdata/shops.json';
+import tables from '../appdata/tables.json';
 
 function loadFile(fileName) {
     try {

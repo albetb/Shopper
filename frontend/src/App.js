@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './style/App.css';
+import './style/app.css';
 import Sidebar from './components/sidebar/sidebar';
 import ShopInventory from './components/shop_inventory/shop_inventory';
 import Shop from './lib/shop';
@@ -10,11 +10,11 @@ function App() {
   const [savedCities, setSavedCities] = useState([]);
   const [savedShops, setSavedShops] = useState([]);
   const [data, setData] = useState({
-    player_level: 20,
-    city_level: 5,
-    shop_level: 10,
+    player_level: 1,
+    city_level: 0,
+    shop_level: 0,
     reputation: 0,
-    shop_type: 'Jeff'
+    shop_type: ''
   });
   const [inventory, setInventory] = useState([]);
 
@@ -108,9 +108,9 @@ function App() {
   };
 
   return (
-      <body className="App">
+      <body className="app">
         <Sidebar props={sidebarProps}/>
-        <header className="App-header">
+        <header className="app-header">
           <ShopInventory items={inventory}/>
         </header>
       </body>

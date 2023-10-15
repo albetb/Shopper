@@ -60,7 +60,7 @@ function randomMagicItem(shopLevel, partyLevel) {
     return newRandomItem(itemTypeName, shopLevel, partyLevel, quality);
 }
 
-function itemChoice(name, val) {
+function itemChoice(name, val = {}) {
     try {
         const table = loadFile(val.file ?? "items")[name];
         const weights = table.map(item => item[val.quality ?? "Chance"] + (val.mod ?? 0) * (item[val.quality ?? "Chance"] > 0));

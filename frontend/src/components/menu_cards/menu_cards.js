@@ -29,13 +29,13 @@ const MenuCards = ({ props }) => {
   };
 
   const cardContentVisible = (cardId) => {
-    if (cardId == 1){
+    if (cardId === 1){
       return true;
     }
-    else if (cardId == 2){
+    else if (cardId === 2){
       return props.savedWorlds && props.savedWorlds.length > 0;
     }
-    else if (cardId == 3){
+    else if (cardId === 3){
       return props.savedCities && props.savedCities.length > 0;
     }
   };
@@ -74,9 +74,9 @@ const MenuCards = ({ props }) => {
                 </div>
                 {!cardStates.find(c => c.id === card.id).collapsed && (
                   <div className="card-content">
-                    {card.id == 1 && <MenuCardWorld props={menuCardWorldProps}/>}
-                    {card.id == 2 && <MenuCardCity props={menuCardCityProps}/>}
-                    {card.id == 3 && <MenuCardShop props={menuCardShopProps}/>}
+                    {card.id === 1 && <MenuCardWorld props={menuCardWorldProps}/>}
+                    {card.id === 2 && <MenuCardCity props={menuCardCityProps}/>}
+                    {card.id === 3 && <MenuCardShop props={menuCardShopProps}/>}
                   </div>
                 )}
               </div>
