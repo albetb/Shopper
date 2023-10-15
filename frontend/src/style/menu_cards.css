@@ -1,0 +1,92 @@
+.cards {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 3vw; /* Adjust top spacing as needed */
+}
+
+.card {
+  width: 100%;
+  height: auto; /* Adjust card height as needed */
+  background-color: rgba(192, 192, 192, 0.8); /* Light grey with transparency */
+  margin-bottom: 10px; 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.card.collapsed {
+  height: 42px; /* Reduced height when card is collapsed */
+}
+
+.collapse-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0rem;
+}
+
+.card-title {
+  margin: 10px;
+}
+
+.card-content {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 95%;
+}
+
+.card-side-div{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-expand-div{
+  justify-content: space-between;
+}
+
+.modern-button {
+  width: 6vw; /* Set width of the dropdown */
+  background-color: #f9f9f9; /* Green background color */
+  color: #282b28; /* White text color */
+  border: none; /* No border */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline for links */
+  display: inline-block; /* Make it inline block to adjust width */
+  font-size: 14px; /* Font size */
+  transition-duration: 0.3s; /* Smooth transition effect on hover */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.modern-dropdown {
+  width: 10vw; /* Set width of the dropdown */
+  border: 1px solid #ccc; /* Border color */
+  background-color: #f9f9f9; /* Dropdown background color */
+  color: #333333; /* Dropdown text color */
+  font-size: 14px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Cursor on hover */
+}
+
+@media (max-width: 768px) {
+  .cards {
+    top: 80px;
+    margin-left: 2vw;
+    width: 90vw;
+  }
+  .modern-button {
+    width: 30vw; /* Set width of the dropdown */
+  }
+  .modern-dropdown {
+    width: 50vw; /* Set width of the dropdown */
+  }
+}

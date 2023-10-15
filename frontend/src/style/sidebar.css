@@ -1,0 +1,77 @@
+.sidebar {
+  width: 20vw;
+  height: 100vh;
+  background-color: rgb(1, 116, 116);
+  box-shadow: 3px 4px rgba(1, 89, 116, 0.404);
+  transition: width 0.3s ease;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  padding-left: 0.5vw;
+  align-items: center;
+}
+
+.sidebar.collapsed {
+  width: 3vw;
+}
+
+.toggle-button {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.toggle-button-out {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: slideIn 0.8s forwards;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 20
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 95vw;
+  }
+  
+  .sidebar.collapsed .toggle-button {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 7.5vw; /* Rounded corners */
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(300%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

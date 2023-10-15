@@ -1,0 +1,45 @@
+table {
+    width: 50vw;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 2%;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #d5d5d5;
+  }
+
+  tr {
+    font-size: 16px;
+    color: #d5d5d5;
+  }
+
+  a:link,
+  a:visited,
+  a:hover  {
+    text-decoration: underline;
+    color: #d5d5d5;
+  }
+  
+  /* Hover effect on table rows */
+  tr:hover {
+    transition: all 0.3s;
+  }
+  
+  /* Header styles */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #d5d5d5;
+  }
+
+  /* Adjust table width for mobile devices */
+@media (max-width: 768px) {
+    table {
+      width: 90%; /* Set width to 90% for mobile devices */
+    }
+  }
