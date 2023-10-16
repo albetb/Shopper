@@ -3,7 +3,7 @@ import './style/app.css';
 import Sidebar from './components/sidebar/sidebar';
 import ShopInventory from './components/shop_inventory/shop_inventory';
 import Shop from './lib/shop';
-import { cap } from './lib/utils';
+import { cap, shopNames } from './lib/utils';
 
 function App() {
   const [savedWorlds, setSavedWorlds] = useState([]);
@@ -13,13 +13,8 @@ function App() {
   const [cityLevel, setCityLevel] = useState(1);
   const [shopLevel, setShopLevel] = useState(0);
   const [reputation, setReputation] = useState(0);
-  const [data, setData] = useState({
-    player_level: 1,
-    city_level: 0,
-    shop_level: 0,
-    reputation: 0,
-    shop_type: ''
-  });
+  const [shopTypes, setShopTypes] = useState([]);
+  const [selectedShopType, setSelectedShopType] = useState('');
   const [inventory, setInventory] = useState([]);
 
   useEffect(() => {
@@ -44,7 +39,12 @@ function App() {
       setShopLevel(shop_level);
       const reputation_level = localStorage.getItem(`${worlds[0]}_${cities[0]}_${shops[0]}_reputation`) || 0;
       setReputation(reputation_level);
+      const shop_type = localStorage.getItem(`${worlds[0]}_${cities[0]}_${shops[0]}_type`) || '';
+      setSelectedShopType(shop_type);
     }
+
+    const shop_types = shopNames();
+    setShopTypes(shop_types);
   }, []);
 
   const setSelection = (list, element) => {
@@ -101,10 +101,12 @@ function App() {
     setShopLevel(shop_level);
     const reputation_level = localStorage.getItem(`${world}_${city}_${shops_list[0]}_reputation`) || 0;
     setReputation(reputation_level);
+    const shop_type = localStorage.getItem(`${world}_${city}_${shops_list[0]}_type`) || '';
+    setSelectedShopType(shop_type);
   }
 
   const onNewWorld = (world) => {
-    if (world.trim() !== '') {
+    if (world.trim() !== '' && !savedWorlds.includes(world)) {
       const worlds = setSelection(savedWorlds, cap(world));
       setSavedWorlds(worlds);
       localStorage.setItem(`saved_worlds`, JSON.stringify(worlds));
@@ -113,6 +115,7 @@ function App() {
       setCityLevel(1);
       setShopLevel(0);
       setReputation(0);
+      setSelectedShopType('');
 
       setSavedCities([]);
       setSavedShops([]);
@@ -120,7 +123,7 @@ function App() {
   };
 
   const onNewCity = (city) => {
-    if (city.trim() !== '') {
+    if (city.trim() !== '' && !savedCities.includes(city)) {
       const cities = setSelection(savedCities, cap(city));
       setSavedCities(cities);
       localStorage.setItem(`saved_cities_${savedWorlds[0]}`, JSON.stringify(cities));
@@ -128,13 +131,14 @@ function App() {
       localStorage.setItem(`${savedWorlds[0]}_${cities[0]}_level`, 1);
       setShopLevel(0);
       setReputation(0);
+      setSelectedShopType('');
 
       setSavedShops([]);
     }
   };
 
   const onNewShop = (shopName) => {
-    if (shopName.trim() !== '') {
+    if (shopName.trim() !== '' && !savedShops.includes(shopName)) {
       const shops = setSelection(savedShops, cap(shopName));
       setSavedShops(shops);
       localStorage.setItem(`saved_shops_${savedWorlds[0]}_${savedCities[0]}`, JSON.stringify(shops));
@@ -142,8 +146,10 @@ function App() {
       localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${shopName}_level`, 0);
       setReputation(0);
       localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${shopName}_reputation`, 0);
+      setSelectedShopType('');
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${shopName}_type`, '');
 
-      const shop = new Shop(shopName, shopLevel, cityLevel, playerLevel, reputation, data.shop_type);
+      const shop = new Shop(shopName, shopLevel, cityLevel, playerLevel, reputation, selectedShopType);
       setInventory(shop.stock);
     }
   };
@@ -176,24 +182,34 @@ function App() {
     }
   };
 
+  const onShopTypeChanged = (shop_type) => {
+    if (shop_type !== selectedShopType){
+      setSelectedShopType(shop_type);
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${savedShops[0]}_type`, shop_type);
+    }
+  };
+
   var sidebarProps = {
-    onSelectWorld: onSelectWorld,
-    onSelectCity: onSelectCity,
-    onSelectShop: onSelectShop,
-    onNewWorld: onNewWorld,
-    onNewCity: onNewCity,
-    onNewShop: onNewShop,
     savedWorlds: savedWorlds ?? [],
-    savedCities: savedCities ?? [],
-    savedShops: savedShops ?? [],
     playerLevel: playerLevel,
+    onNewWorld: onNewWorld,
+    onSelectWorld: onSelectWorld,
     onPlayerLevelChange: onPlayerLevelChange,
+    savedCities: savedCities ?? [],
     cityLevel: cityLevel,
+    onNewCity: onNewCity,
+    onSelectCity: onSelectCity,
     onCityLevelChange: onCityLevelChange,
+    savedShops: savedShops ?? [],
     shopLevel: shopLevel,
-    onShopLevelChange: onShopLevelChange,
     reputation: reputation,
-    onReputationChange: onReputationChange
+    onNewShop: onNewShop,
+    onSelectShop: onSelectShop,
+    onShopLevelChange: onShopLevelChange,
+    onReputationChange: onReputationChange,
+    shopTypes: shopTypes ?? [],
+    selectedShopType: selectedShopType,
+    onShopTypeChanged: onShopTypeChanged
   };
 
   return (

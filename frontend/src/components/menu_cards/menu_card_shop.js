@@ -29,6 +29,10 @@ const MenuCardShop = ({ props }) => {
     props.onReputationChange(level);
   };
 
+  const handleShopTypeChange = (event) => {
+    props.onShopTypeChanged(event.target.value);
+  };
+
   return (
             <>
                 {isNewShopVisible ? (
@@ -82,6 +86,20 @@ const MenuCardShop = ({ props }) => {
                             min="-10"
                             max="10"
                             />
+                        </div>
+                        <div className="card-side-div margin-top">
+                          <label className="modern-label">Shop Type:</label>
+                          <select
+                            className="modern-dropdown"
+                            value={props.selectedShopType}
+                            onChange={handleShopTypeChange}
+                          >
+                            {props.shopTypes.map((type, index) => (
+                              <option key={index} value={type}>
+                                {type}
+                              </option>
+                            ))}
+                          </select>
                         </div>
                       </>
                     )}

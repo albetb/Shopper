@@ -62,7 +62,10 @@ const MenuCards = ({ props }) => {
     shopLevel: props.shopLevel,
     onShopLevelChange: props.onShopLevelChange,
     reputation: props.reputation,
-    onReputationChange: props.onReputationChange
+    onReputationChange: props.onReputationChange,
+    shopTypes: props.shopTypes ?? [],
+    selectedShopType: props.selectedShopType,
+    onShopTypeChanged: props.onShopTypeChanged
   };
 
   return (
