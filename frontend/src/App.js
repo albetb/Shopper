@@ -190,7 +190,8 @@ function App() {
   const onCreateShop = () => {
     if (savedShops.length > 0) {
       const shop = new Shop(savedShops[0], shopLevel, cityLevel, playerLevel, reputation, selectedShopType);
-      setInventory(shop.stock);
+      const shop_inventory = shop.getInventory();
+      setInventory(shop_inventory);
       const inventoryLabelText = `${savedShops[0]} from ${savedCities[0]}`;
       setInventoryLabel(inventoryLabelText);
     }

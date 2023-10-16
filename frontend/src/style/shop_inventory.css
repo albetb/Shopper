@@ -20,15 +20,15 @@ table {
   }
   
   th.nameSize {
-    width: 31vw;
+    width: 36vw;
   }
   
   th.typeSize {
-    width: 5vw;
+    width: 7vw;
   }
   
   th.costSize {
-    width: 5vw;
+    width: 4vw;
   }
 
   td {

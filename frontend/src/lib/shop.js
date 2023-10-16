@@ -75,6 +75,14 @@ class Shop {
         this.sortByType();
     }
 
+    getInventory() {
+        let displayedInventory = this.stock;
+        for (let item of displayedInventory){
+            item.Cost = this.trueCost(item, true);
+        }
+        return displayedInventory;
+    }
+
     addItem(addedItem, itemType) {
         if (addedItem && addedItem.Cost !== undefined) {
             let found = false;
@@ -219,9 +227,9 @@ class Shop {
     trueCost(item, forParty = true) {
         const rep = forParty ? this.reputation * 2 : 0;
         const mod = (100 + item.priceModifier - rep + this.cityLevel) / 100;
-        let cost = Math.max(Math.round(item.cost * mod), 0);
-        const dec = cost < 100 ? 1 : cost < 1000 ? 5 : 10;
-        return cost < 1 ? cost : Math.round(cost / dec) * dec;
+        let cost = Math.max((parseFloat(item.Cost) * mod), 0.01);
+        const dec = cost < 100 ? 1 : (cost < 1000 ? 5 : 10);
+        return cost < 1 ? cost.toFixed(2) : Math.round(cost / dec) * dec;
     }
 }
 
