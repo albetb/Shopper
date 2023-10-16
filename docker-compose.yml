@@ -1,7 +1,0 @@
-services:
-  shopper:
-    image: shopper:latest
-    container_name: shopper
-    ports:
-      - "8787:5000"
-    restart: always

@@ -1,0 +1,67 @@
+table {
+    width: 50vw;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 2%;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    color: #d5d5d5;
+  }
+
+  th {
+    border-bottom: 2px solid #ddd;
+  }
+  
+  th.numberSize {
+    width: 3vw;
+  }
+  
+  th.nameSize {
+    width: 31vw;
+  }
+  
+  th.typeSize {
+    width: 5vw;
+  }
+  
+  th.costSize {
+    width: 5vw;
+  }
+
+  td {
+    border-top: 1px solid #dddddd7e;
+  }
+
+  tr {
+    font-size: 16px;
+    color: #d5d5d5;
+  }
+
+  a:link,
+  a:visited,
+  a:hover  {
+    text-decoration: underline;
+    color: #d5d5d5;
+  }
+  
+  /* Hover effect on table rows */
+  tr:hover {
+    transition: all 0.3s;
+  }
+  
+  /* Header styles */
+  h2 {
+    font-size: 24px;
+    color: #d5d5d5;
+    margin: 20px;
+  }
+
+  /* Adjust table width for mobile devices */
+@media (max-width: 768px) {
+    table {
+      width: 90%; /* Set width to 90% for mobile devices */
+    }
+  }
