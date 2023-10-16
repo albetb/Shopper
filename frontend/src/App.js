@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './style/app.css';
+import './style/App.css';
 import Sidebar from './components/sidebar/sidebar';
 import ShopInventory from './components/shop_inventory/shop_inventory';
 import Shop from './lib/shop';
