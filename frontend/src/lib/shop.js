@@ -4,10 +4,10 @@ import { newRandomItem } from './item';
 class Shop {
     constructor(shopName, shopLevel = 0, cityLevel = 0, partyLevel = 1, reputation = 0, template = "") {
         this.shopName = shopName;
-        this.shopLevel = Math.max(0, Math.min(10, parseFloat(shopLevel.toFixed(2))));
+        this.shopLevel = Math.max(0, Math.min(10, parseFloat(shopLevel).toFixed(2)));
         this.cityLevel = Math.max(0, Math.min(5, parseInt(cityLevel)));
         this.partyLevel = Math.max(1, Math.min(20, parseInt(partyLevel)));
-        this.reputation = Math.max(-10, Math.min(10, parseFloat(reputation.toFixed(2))));
+        this.reputation = Math.max(-10, Math.min(10, parseFloat(reputation).toFixed(2)));
         this.stock = [];
         this.gold = 0;
         this.hoursCounter = 0;

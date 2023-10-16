@@ -1,21 +1,21 @@
 import React from 'react';
 import '../../style/shop_inventory.css';
 
-const ShopInventory = ({ items }) => {
+const ShopInventory = ({ items, inventoryLabel }) => {
   if (items && items.length === 0) {
     return null; // If the items list is empty, do not display anything
   }
 
   return (
-    <div>
-      <h2>Shop Inventory</h2>
+    <>
+      <h2>{inventoryLabel}</h2>
       <table>
         <thead>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Cost</th>
+            <th className='numberSize'>#</th>
+            <th className='nameSize'>Name</th>
+            <th className='typeSize'>Type</th>
+            <th className='costSize'>Cost</th>
           </tr>
         </thead>
         <tbody>
@@ -37,7 +37,7 @@ const ShopInventory = ({ items }) => {
           ))}
         </tbody>
       </table>
-    </div>
+    </>
   );
 };
 

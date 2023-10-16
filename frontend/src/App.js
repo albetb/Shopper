@@ -16,6 +16,7 @@ function App() {
   const [shopTypes, setShopTypes] = useState([]);
   const [selectedShopType, setSelectedShopType] = useState('');
   const [inventory, setInventory] = useState([]);
+  const [inventoryLabel, setInventoryLabel] = useState('');
 
   useEffect(() => {
     const worlds = JSON.parse(localStorage.getItem(`saved_worlds`)) || [];
@@ -148,35 +149,32 @@ function App() {
       localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${shopName}_reputation`, 0);
       setSelectedShopType('');
       localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${shopName}_type`, '');
-
-      const shop = new Shop(shopName, shopLevel, cityLevel, playerLevel, reputation, selectedShopType);
-      setInventory(shop.stock);
     }
   };
 
   const onPlayerLevelChange = (level) => {
-    if (level !== playerLevel){
+    if (level && level !== playerLevel && parseInt(level) > 0){
       setPlayerLevel(level);
       localStorage.setItem(`${savedWorlds[0]}_level`, level);
     }
   };
 
   const onCityLevelChange = (level) => {
-    if (level !== cityLevel){
+    if (level && level !== cityLevel && parseInt(level) > 0 && parseInt(level) < 6){
       setCityLevel(level);
       localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_level`, level);
     }
   };
 
   const onShopLevelChange = (level) => {
-    if (level !== shopLevel){
+    if ((level || parseInt(level) === 0) && level !== shopLevel && parseFloat(level) > -1 && parseFloat(level) < 11){
       setShopLevel(level);
       localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${savedShops[0]}_level`, level);
     }
   };
 
   const onReputationChange = (level) => {
-    if (level !== cityLevel){
+    if ((level || parseInt(level) === 0) && level !== reputation && parseFloat(level) > -11 && parseFloat(level) < 11){
       setReputation(level);
       localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${savedShops[0]}_reputation`, level);
     }
@@ -186,6 +184,15 @@ function App() {
     if (shop_type !== selectedShopType){
       setSelectedShopType(shop_type);
       localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${savedShops[0]}_type`, shop_type);
+    }
+  };
+
+  const onCreateShop = () => {
+    if (savedShops.length > 0) {
+      const shop = new Shop(savedShops[0], shopLevel, cityLevel, playerLevel, reputation, selectedShopType);
+      setInventory(shop.stock);
+      const inventoryLabelText = `${savedShops[0]} from ${savedCities[0]}`;
+      setInventoryLabel(inventoryLabelText);
     }
   };
 
@@ -209,14 +216,15 @@ function App() {
     onReputationChange: onReputationChange,
     shopTypes: shopTypes ?? [],
     selectedShopType: selectedShopType,
-    onShopTypeChanged: onShopTypeChanged
+    onShopTypeChanged: onShopTypeChanged,
+    onCreateShop: onCreateShop
   };
 
   return (
       <body className="app">
         <Sidebar props={sidebarProps}/>
         <header className="app-header">
-          <ShopInventory items={inventory}/>
+          <ShopInventory items={inventory} inventoryLabel={inventoryLabel}/>
         </header>
       </body>
   );

@@ -33,6 +33,10 @@ const MenuCardShop = ({ props }) => {
     props.onShopTypeChanged(event.target.value);
   };
 
+  const handleGenerateInventory = () => {
+    props.onCreateShop();
+  };
+
   return (
             <>
                 {isNewShopVisible ? (
@@ -100,6 +104,9 @@ const MenuCardShop = ({ props }) => {
                               </option>
                             ))}
                           </select>
+                        </div>
+                        <div className="card-side-div margin-top">
+                          <button className="modern-button" onClick={handleGenerateInventory}>Generate</button>
                         </div>
                       </>
                     )}

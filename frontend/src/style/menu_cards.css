@@ -11,6 +11,7 @@
   width: 100%;
   height: auto; /* Adjust card height as needed */
   background-color: rgba(192, 192, 192, 0.8); /* Light grey with transparency */
+  box-shadow: 3px 4px 5px rgba(1, 89, 116, 0.7);
   margin-bottom: 10px; 
   border-radius: 10px;
   display: flex;

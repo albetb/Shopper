@@ -185,7 +185,7 @@ function newMagicWeapon(shopLevel, quality) {
         "Medium": 0.32,
         "Major": 0.37
     };
-    let chance = specialAbilityChance[quality] + Math.max(Math.sqrt(shopLevel) - 1, 0);
+    let chance = specialAbilityChance[quality] + Math.max((Math.sqrt(shopLevel) - 1)/100, 0);
 
     if (Math.random() <= chance) {
         let weaponType = "Magic Melee Weapon";
@@ -277,7 +277,7 @@ function newMagicArmor(shopLevel, quality) {
         "Medium": 0.37,
         "Major": 0.37
     };
-    let chance = specialAbilityChance[quality] + Math.max(Math.sqrt(shopLevel) - 1, 0);
+    let chance = specialAbilityChance[quality] + Math.max((Math.sqrt(shopLevel) - 1)/100, 0);
 
     if (Math.random() <= chance) {
         const itemType = isArmor ? "Magic Armor" : "Magic Shield";

@@ -39,6 +39,22 @@ const MenuCards = ({ props }) => {
     }
   };
 
+  const cardTitle = (cardId, cardTitle) => {
+    switch (cardId){
+      case 1:
+        const thereIsSavedWorld = props.savedWorlds && props.savedWorlds.length > 0;
+        return `${cardTitle}${thereIsSavedWorld ? " - " : ""}${thereIsSavedWorld ? props.savedWorlds[0] : ""}${thereIsSavedWorld ? " - Lv:" : ""}${thereIsSavedWorld ? props.playerLevel : ""}`;
+      case 2:
+        const thereIsSavedCity = props.savedCities && props.savedCities.length > 0;
+        return `${cardTitle}${thereIsSavedCity ? " - " : ""}${thereIsSavedCity ? props.savedCities[0] : ""}${thereIsSavedCity ? " - Lv:" : ""}${thereIsSavedCity ? props.cityLevel : ""}`;
+      case 3:
+        const thereIsSavedShop = props.savedShops && props.savedShops.length > 0;
+        return `${cardTitle}${thereIsSavedShop ? " - " : ""}${thereIsSavedShop ? props.savedShops[0] : ""}${thereIsSavedShop ? " - Lv:" : ""}${thereIsSavedShop ? props.shopLevel : ""}`;
+      default:
+        return "";
+    }
+  };
+
   var menuCardWorldProps = {
     onSelectWorld: props.onSelectWorld,
     onNewWorld: props.onNewWorld,
@@ -65,7 +81,8 @@ const MenuCards = ({ props }) => {
     onReputationChange: props.onReputationChange,
     shopTypes: props.shopTypes ?? [],
     selectedShopType: props.selectedShopType,
-    onShopTypeChanged: props.onShopTypeChanged
+    onShopTypeChanged: props.onShopTypeChanged,
+    onCreateShop: props.onCreateShop
   };
 
   return (
@@ -73,7 +90,7 @@ const MenuCards = ({ props }) => {
             {cards.map(card => cardContentVisible(card.id) && (
               <div className={`card ${cardStates.find(c => c.id === card.id).collapsed ? 'collapsed' : ''}`} key={card.id}>
                 <div className="card-side-div card-expand-div">
-                  <p className="card-title">{card.title}</p>
+                  <p className="card-title">{cardTitle(card.id, card.title)}</p>
                   <button className="collapse-button" onClick={() => toggleCard(card.id)}>
                     <span className="material-symbols-outlined">
                       {!cardStates.find(c => c.id === card.id).collapsed ? 

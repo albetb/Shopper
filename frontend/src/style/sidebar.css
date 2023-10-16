@@ -2,7 +2,7 @@
   width: 19vw;
   height: 100vh;
   background-color: rgb(1, 116, 116);
-  box-shadow: 3px 4px rgba(1, 89, 116, 0.404);
+  box-shadow: 2px 0px 5px 1px rgba(1, 89, 116, 0.7);
   transition: width 0.3s ease;
   position: fixed;
   left: 0;
@@ -14,7 +14,7 @@
 }
 
 .sidebar.collapsed {
-  width: 3vw;
+  width: 2.6vw;
 }
 
 .toggle-button {
@@ -59,11 +59,15 @@
   .sidebar {
     width: 95vw;
   }
-  
-  .sidebar.collapsed .toggle-button {
-    width: 15vw;
-    height: 15vw;
+
+  .sidebar.collapsed, .toggle-button {
+    width: 12vw;
+    height: 12vw;
     border-radius: 7.5vw; /* Rounded corners */
+  }
+  
+  .sidebar.collapsed {
+    margin: 2vw;
   }
 }
 
