@@ -29,14 +29,13 @@ const MenuCards = ({ props }) => {
   };
 
   const cardContentVisible = (cardId) => {
-    if (cardId === 1){
-      return true;
-    }
-    else if (cardId === 2){
-      return props.savedWorlds && props.savedWorlds.length > 0;
-    }
-    else if (cardId === 3){
-      return props.savedCities && props.savedCities.length > 0;
+    switch (cardId){
+      case 2:
+        return props.savedWorlds && props.savedWorlds.length > 0;
+      case 3:
+        return props.savedCities && props.savedCities.length > 0;
+      default:
+        return true;
     }
   };
 
@@ -51,13 +50,19 @@ const MenuCards = ({ props }) => {
   var menuCardCityProps = {
     onSelectCity: props.onSelectCity,
     onNewCity: props.onNewCity,
-    savedCities: props.savedCities
+    savedCities: props.savedCities,
+    cityLevel: props.cityLevel,
+    onCityLevelChange: props.onCityLevelChange
   };
 
   var menuCardShopProps = {
     onSelectShop: props.onSelectShop,
     onNewShop: props.onNewShop,
-    savedShops: props.savedShops
+    savedShops: props.savedShops,
+    shopLevel: props.shopLevel,
+    onShopLevelChange: props.onShopLevelChange,
+    reputation: props.reputation,
+    onReputationChange: props.onReputationChange
   };
 
   return (

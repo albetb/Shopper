@@ -18,36 +18,76 @@ const MenuCardShop = ({ props }) => {
   const handleDropdownChange = (event) => {
     props.onSelectShop(event.target.value);
   };
+  
+  const handleShopLevelChange = (event) => {
+    const level = parseInt(event.target.value);
+    props.onShopLevelChange(level);
+  };
+  
+  const handleReputationChange = (event) => {
+    const level = parseInt(event.target.value);
+    props.onReputationChange(level);
+  };
 
   return (
-            <div className="card-side-div">
-              {isNewShopVisible ? (
-                <>
-                  <input className="modern-dropdown"
-                    type="text"
-                    placeholder="Shop name"
-                    value={shopName}
-                    onChange={(e) => setShopName(e.target.value)}
-                    />
-                  <button className="modern-button" onClick={handleOkClick}>Ok</button>
-                </>
-              ) : (
-                <>
-                  <select className="modern-dropdown" onChange={handleDropdownChange} value={props.savedShops[0]}>
-                    {props.savedShops.length > 0 ? (
-                      props.savedShops.map((shop, index) => (
-                        <option key={index} value={shop}>
-                          {shop}
-                        </option>
-                      ))
-                    ) : (
-                      <option value="">Create a shop</option>
+            <>
+                {isNewShopVisible ? (
+                  <>
+                    <div className="card-side-div">
+                      <input className="modern-dropdown"
+                        type="text"
+                        placeholder="Shop name"
+                        value={shopName}
+                        onChange={(e) => setShopName(e.target.value)}
+                        />
+                      <button className="modern-button" onClick={handleOkClick}>Ok</button>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="card-side-div">
+                      <select className="modern-dropdown" onChange={handleDropdownChange} value={props.savedShops[0]}>
+                        {props.savedShops.length > 0 ? (
+                          props.savedShops.map((shop, index) => (
+                            <option key={index} value={shop}>
+                              {shop}
+                            </option>
+                          ))
+                        ) : (
+                          <option value="">Create a shop</option>
+                        )}
+                      </select>
+                      <button className="modern-button" onClick={handleNewShopClick}>New shop</button>
+                    </div>
+                    {props.savedShops.length > 0 && (
+                      <>
+                        <div className="card-side-div margin-top">
+                          <label className="modern-label">Shop Level:</label>
+                          <input
+                            className="modern-dropdown"
+                            type="number"
+                            value={props.shopLevel}
+                            onChange={handleShopLevelChange}
+                            min="0"
+                            max="10"
+                            />
+                        </div>
+                        <div className="card-side-div margin-top">
+                          <label className="modern-label">Reputation:</label>
+                          <input
+                            className="modern-dropdown"
+                            type="number"
+                            value={props.reputation}
+                            onChange={handleReputationChange}
+                            min="-10"
+                            max="10"
+                            />
+                        </div>
+                      </>
                     )}
-                  </select>
-                  <button className="modern-button" onClick={handleNewShopClick}>New shop</button>
-                </>
-              )}
-            </div>
+                  </>
+                )}
+            </>
           );
 };
 

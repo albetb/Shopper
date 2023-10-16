@@ -10,6 +10,9 @@ function App() {
   const [savedCities, setSavedCities] = useState([]);
   const [savedShops, setSavedShops] = useState([]);
   const [playerLevel, setPlayerLevel] = useState(1);
+  const [cityLevel, setCityLevel] = useState(1);
+  const [shopLevel, setShopLevel] = useState(0);
+  const [reputation, setReputation] = useState(0);
   const [data, setData] = useState({
     player_level: 1,
     city_level: 0,
@@ -26,10 +29,22 @@ function App() {
       const player_level = localStorage.getItem(`${worlds[0]}_level`) || 1;
       setPlayerLevel(player_level);
     }
+
     const cities = JSON.parse(localStorage.getItem(`saved_cities_${worlds[0]}`)) || [];
     setSavedCities(cities);
+    if (cities.length > 0){
+      const city_level = localStorage.getItem(`${worlds[0]}_${cities[0]}_level`) || 1;
+      setCityLevel(city_level);
+    }
+
     const shops = JSON.parse(localStorage.getItem(`saved_shops_${worlds[0]}_${cities[0]}`)) || [];
     setSavedShops(shops);
+    if (shops.length > 0){
+      const shop_level = localStorage.getItem(`${worlds[0]}_${cities[0]}_${shops[0]}_level`) || 0;
+      setShopLevel(shop_level);
+      const reputation_level = localStorage.getItem(`${worlds[0]}_${cities[0]}_${shops[0]}_reputation`) || 0;
+      setReputation(reputation_level);
+    }
   }, []);
 
   const setSelection = (list, element) => {
@@ -43,32 +58,50 @@ function App() {
 
   const onSelectWorld = (world) => {
     const worlds = setSelection(savedWorlds, world);
-    setSavedWorlds(worlds);
     localStorage.setItem(`saved_worlds`, JSON.stringify(worlds));
-    const world_level = localStorage.getItem(`${world}_level`);
+
+    setWorldFromStorage(worlds);
+  };
+
+  const setWorldFromStorage = (worlds) => {
+    setSavedWorlds(worlds);
+    const world_level = localStorage.getItem(`${worlds[0]}_level`);
     setPlayerLevel(world_level);
 
-    const cities = JSON.parse(localStorage.getItem(`saved_cities_${worlds[0]}`)) || [];
-    setSavedCities(cities);
-
-    const shops = JSON.parse(localStorage.getItem(`saved_shops_${worlds[0]}_${cities[0]}`)) || [];
-    setSavedShops(shops);
-  };
+    setCityFromStorage(worlds[0]);
+  }
 
   const onSelectCity = (city) => {
     const cities = setSelection(savedCities, city);
-    setSavedCities(cities);
     localStorage.setItem(`saved_cities_${savedWorlds[0]}`, JSON.stringify(cities));
 
-    const shops = JSON.parse(localStorage.getItem(`saved_shops_${savedWorlds[0]}_${cities[0]}`)) || [];
-    setSavedShops(shops);
+    setCityFromStorage(savedWorlds[0], cities);
   };
+
+  const setCityFromStorage = (world, cities = null) => {
+    const cities_list = cities ?? (JSON.parse(localStorage.getItem(`saved_cities_${world}`)) || []);
+    setSavedCities(cities_list);
+    const city_level = localStorage.getItem(`${world}_${cities_list[0]}_level`);
+    setCityLevel(city_level);
+
+    setShopFromStorage(world, cities_list[0]);
+  }
 
   const onSelectShop = (shop) => {
     const shops = setSelection(savedShops, shop);
-    setSavedShops(shops);
     localStorage.setItem(`saved_shops_${savedWorlds[0]}_${savedCities[0]}`, JSON.stringify(shops));
+
+    setShopFromStorage(savedWorlds[0], savedCities[0], shops);
   };
+
+  const setShopFromStorage = (world, city, shops = null) => {
+    const shops_list = shops ?? (JSON.parse(localStorage.getItem(`saved_shops_${world}_${city}`)) || []);
+    setSavedShops(shops_list);
+    const shop_level = localStorage.getItem(`${world}_${city}_${shops_list[0]}_level`) || 0;
+    setShopLevel(shop_level);
+    const reputation_level = localStorage.getItem(`${world}_${city}_${shops_list[0]}_reputation`) || 0;
+    setReputation(reputation_level);
+  }
 
   const onNewWorld = (world) => {
     if (world.trim() !== '') {
@@ -77,6 +110,9 @@ function App() {
       localStorage.setItem(`saved_worlds`, JSON.stringify(worlds));
       setPlayerLevel(1);
       localStorage.setItem(`${worlds[0]}_level`, 1);
+      setCityLevel(1);
+      setShopLevel(0);
+      setReputation(0);
 
       setSavedCities([]);
       setSavedShops([]);
@@ -88,6 +124,10 @@ function App() {
       const cities = setSelection(savedCities, cap(city));
       setSavedCities(cities);
       localStorage.setItem(`saved_cities_${savedWorlds[0]}`, JSON.stringify(cities));
+      setCityLevel(1);
+      localStorage.setItem(`${savedWorlds[0]}_${cities[0]}_level`, 1);
+      setShopLevel(0);
+      setReputation(0);
 
       setSavedShops([]);
     }
@@ -98,8 +138,12 @@ function App() {
       const shops = setSelection(savedShops, cap(shopName));
       setSavedShops(shops);
       localStorage.setItem(`saved_shops_${savedWorlds[0]}_${savedCities[0]}`, JSON.stringify(shops));
+      setShopLevel(0);
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${shopName}_level`, 0);
+      setReputation(0);
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${shopName}_reputation`, 0);
 
-      const shop = new Shop(shopName, data.shop_level, data.city_level, playerLevel, data.reputation, data.shop_type);
+      const shop = new Shop(shopName, shopLevel, cityLevel, playerLevel, reputation, data.shop_type);
       setInventory(shop.stock);
     }
   };
@@ -108,6 +152,27 @@ function App() {
     if (level !== playerLevel){
       setPlayerLevel(level);
       localStorage.setItem(`${savedWorlds[0]}_level`, level);
+    }
+  };
+
+  const onCityLevelChange = (level) => {
+    if (level !== cityLevel){
+      setCityLevel(level);
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_level`, level);
+    }
+  };
+
+  const onShopLevelChange = (level) => {
+    if (level !== shopLevel){
+      setShopLevel(level);
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${savedShops[0]}_level`, level);
+    }
+  };
+
+  const onReputationChange = (level) => {
+    if (level !== cityLevel){
+      setReputation(level);
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${savedShops[0]}_reputation`, level);
     }
   };
 
@@ -122,7 +187,13 @@ function App() {
     savedCities: savedCities ?? [],
     savedShops: savedShops ?? [],
     playerLevel: playerLevel,
-    onPlayerLevelChange: onPlayerLevelChange
+    onPlayerLevelChange: onPlayerLevelChange,
+    cityLevel: cityLevel,
+    onCityLevelChange: onCityLevelChange,
+    shopLevel: shopLevel,
+    onShopLevelChange: onShopLevelChange,
+    reputation: reputation,
+    onReputationChange: onReputationChange
   };
 
   return (
