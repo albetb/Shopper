@@ -6,7 +6,7 @@ table {
   }
   
   th, td {
-    padding: 15px;
+    padding: 14px 8px;
     text-align: left;
     color: #d5d5d5;
   }
@@ -15,20 +15,21 @@ table {
     border-bottom: 2px solid #ddd;
   }
   
-  th.numberSize {
-    width: 3vw;
+  th.number-size, td.align-right {
+    width: 2vw;
+    text-align: right;
   }
   
-  th.nameSize {
-    width: 36vw;
+  th.name-size {
+    width: 100vw;
   }
   
-  th.typeSize {
+  th.type-size {
     width: 7vw;
   }
   
-  th.costSize {
-    width: 4vw;
+  th.cost-size {
+    width: 5vw;
   }
 
   td {
@@ -63,5 +64,13 @@ table {
 @media (max-width: 768px) {
     table {
       width: 90%; /* Set width to 90% for mobile devices */
+    }
+
+    tr {
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 20px;
     }
   }

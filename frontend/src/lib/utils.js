@@ -43,4 +43,9 @@ function shopNames(all = false) {
     return shopTypes.Type.filter(item => (item.Name !== "Jeff" || all)).map(item => item.Name);
 }
 
-export { loadFile, weightedRandom, cap, shopNames };
+function isMobile() {
+    const isMobile = (window.innerWidth <= 760);
+    return isMobile
+}
+
+export { loadFile, weightedRandom, cap, shopNames, isMobile };

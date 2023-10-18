@@ -12,16 +12,16 @@ const ShopInventory = ({ items, inventoryLabel }) => {
       <table>
         <thead>
           <tr>
-            <th className='numberSize'>#</th>
-            <th className='nameSize'>Name</th>
-            <th className='typeSize'>Type</th>
-            <th className='costSize'>Cost</th>
+            <th className='number-size'>#</th>
+            <th className='name-size'>Name</th>
+            <th className='type-size'>Type</th>
+            <th className='cost-size'>Cost</th>
           </tr>
         </thead>
         <tbody>
           {items && items.map((item, index) => (
             <tr key={index}>
-              <td>{item.number}</td>
+              <td className='align-right'>{item.number}</td>
               <td>
                 {item.Link ? (
                   <a href={item.Link} target="_blank" rel="noopener noreferrer">
@@ -32,7 +32,7 @@ const ShopInventory = ({ items, inventoryLabel }) => {
                 )}
               </td>
               <td>{item.itemType}</td>
-              <td>{item.Cost} gp</td>
+              <td>{item.Cost}</td>
             </tr>
           ))}
         </tbody>

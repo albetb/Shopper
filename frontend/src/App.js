@@ -3,9 +3,10 @@ import './style/App.css';
 import Sidebar from './components/sidebar/sidebar';
 import ShopInventory from './components/shop_inventory/shop_inventory';
 import Shop from './lib/shop';
-import { cap, shopNames } from './lib/utils';
+import { cap, shopNames, isMobile } from './lib/utils';
 
 function App() {
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [savedWorlds, setSavedWorlds] = useState([]);
   const [savedCities, setSavedCities] = useState([]);
   const [savedShops, setSavedShops] = useState([]);
@@ -47,6 +48,10 @@ function App() {
     const shop_types = shopNames();
     setShopTypes(shop_types);
   }, []);
+
+  const toggleSidebar = () => {
+    setIsSidebarCollapsed(!isSidebarCollapsed);
+  };
 
   const setSelection = (list, element) => {
     if (list){
@@ -153,7 +158,7 @@ function App() {
   };
 
   const onPlayerLevelChange = (level) => {
-    if (level && level !== playerLevel && parseInt(level) > 0){
+    if (level && level !== playerLevel && parseInt(level) > 0 && parseInt(level) < 100){
       setPlayerLevel(level);
       localStorage.setItem(`${savedWorlds[0]}_level`, level);
     }
@@ -194,10 +199,16 @@ function App() {
       setInventory(shop_inventory);
       const inventoryLabelText = `${savedShops[0]} from ${savedCities[0]}`;
       setInventoryLabel(inventoryLabelText);
+
+      if (isMobile()){
+        setIsSidebarCollapsed(true)
+      }
     }
   };
 
   var sidebarProps = {
+    isSidebarCollapsed: isSidebarCollapsed,
+    toggleSidebar: toggleSidebar,
     savedWorlds: savedWorlds ?? [],
     playerLevel: playerLevel,
     onNewWorld: onNewWorld,

@@ -1,26 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MenuCards from '../menu_cards/menu_cards';
 import '../../style/sidebar.css';
 
 const Sidebar = ({ props }) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
   return (
     <div>
-      <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
+      <div className={`sidebar ${props.isSidebarCollapsed ? 'collapsed' : ''}`}>
 
-        <button className="toggle-button" onClick={toggleSidebar}>
+        <button className="toggle-button" onClick={props.toggleSidebar}>
           <span className="material-symbols-outlined">
-            {!isCollapsed ?
+            {!props.isSidebarCollapsed ?
             ( "arrow_back" ) : ( "arrow_forward" )}
           </span>
         </button>
         
-        {!isCollapsed && (
+        {!props.isSidebarCollapsed && (
           <div className="content">
             <MenuCards props={props}/>
           </div>

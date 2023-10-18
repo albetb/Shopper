@@ -12,7 +12,7 @@
   height: auto; /* Adjust card height as needed */
   background-color: rgba(192, 192, 192, 0.8); /* Light grey with transparency */
   box-shadow: 3px 4px 5px rgba(1, 89, 116, 0.7);
-  margin-bottom: 10px; 
+  margin-bottom: 11px; 
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -49,38 +49,73 @@
   justify-content: space-around;
 }
 
+.levels-div{
+  width: 10vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .card-expand-div{
   justify-content: space-between;
 }
 
 .margin-top{
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .modern-button {
   width: 6vw; /* Set width of the dropdown */
-  background-color: #f9f9f9; /* Green background color */
-  color: #282b28; /* White text color */
-  border: none; /* No border */
   text-align: center; /* Center text */
   text-decoration: none; /* Remove underline for links */
   display: inline-block; /* Make it inline block to adjust width */
-  font-size: 14px; /* Font size */
   transition-duration: 0.3s; /* Smooth transition effect on hover */
-  cursor: pointer; /* Cursor on hover */
-  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25);
+}
+
+.levels-button {
+  width: 3vw; /* Set width of the dropdown */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline for links */
+  transition-duration: 0.3s; /* Smooth transition effect on hover */
+  box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25);
+  font-weight: bold;
 }
 
 .modern-dropdown {
   width: 10vw; /* Set width of the dropdown */
-  border: 1px solid #ccc; /* Border color */
-  background-color: #f9f9f9; /* Dropdown background color */
-  color: #333333; /* Dropdown text color */
-  font-size: 14px; /* Font size */
-  border-radius: 5px; /* Rounded corners */
   outline: none; /* Remove outline */
-  cursor: pointer; /* Cursor on hover */
+  padding-left: 4px;
 }
+
+.modern-dropdown, .modern-button, .levels-button{
+  height: 3.6vh; /* Set height of the dropdown */
+  background-color: #f9f9f9; /* White background color */
+  color: #333333; /* Dropdown text color */
+  border: 1px solid #c0c0c0; /* Border color */
+  border-radius: 1vh; /* Rounded corners */
+  cursor: pointer; /* Cursor on hover */
+  font-size: 14px; /* Font size */
+}
+
+.level-frame {
+  height: 3.5vh; /* Set height of the dropdown */
+  width: 3.5vh; /* Set height of the dropdown */
+  display: inline-block; /* Make the frame fit the content */
+  border-radius: 1vh; /* Rounded corners */
+  text-align: center; /* Center text */
+  vertical-align: bottom;
+  box-shadow: 0px 0px 5px 5px rgba(1, 89, 116, 0.25);
+}
+
+.level-text {
+  text-align: bottom; /* Center text */
+  vertical-align: text-bottom;
+  line-height: 3.5vh;
+  height: 3.5vh;
+}
+
 
 @media (max-width: 768px) {
   .cards {
@@ -89,9 +124,16 @@
     width: 90vw;
   }
   .modern-button {
-    width: 30vw; /* Set width of the dropdown */
+    width: 35vw; /* Set width of the dropdown */
   }
-  .modern-dropdown {
-    width: 50vw; /* Set width of the dropdown */
+  .modern-dropdown, .levels-div {
+    width: 45vw; /* Set width of the dropdown */
+  }
+  .levels-button {
+    width: 15vw; /* Set width of the dropdown */
+  }
+  .modern-dropdown, .modern-button, .levels-button{
+    height: 4vh; /* Set height of the dropdown */
+    border-radius: 1.3vh; /* Rounded corners */
   }
 }

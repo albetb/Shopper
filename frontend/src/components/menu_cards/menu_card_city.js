@@ -58,8 +58,8 @@ const MenuCardCity = ({ props }) => {
                           value={props.cityLevel}
                           onChange={(e) => props.onCityLevelChange(e.target.value)}
                         >
-                          <option value="1">Burg</option>
-                          <option value="2">Village</option>
+                          <option value="1">Village</option>
+                          <option value="2">Burg</option>
                           <option value="3">Town</option>
                           <option value="4">City</option>
                           <option value="5">Metropolis</option>

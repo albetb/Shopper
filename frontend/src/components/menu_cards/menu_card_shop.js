@@ -18,16 +18,6 @@ const MenuCardShop = ({ props }) => {
   const handleDropdownChange = (event) => {
     props.onSelectShop(event.target.value);
   };
-  
-  const handleShopLevelChange = (event) => {
-    const level = parseInt(event.target.value);
-    props.onShopLevelChange(level);
-  };
-  
-  const handleReputationChange = (event) => {
-    const level = parseInt(event.target.value);
-    props.onReputationChange(level);
-  };
 
   const handleShopTypeChange = (event) => {
     props.onShopTypeChanged(event.target.value);
@@ -35,6 +25,26 @@ const MenuCardShop = ({ props }) => {
 
   const handleGenerateInventory = () => {
     props.onCreateShop();
+  };
+  
+  const handleShopLevelDecrement = () => {
+    const level = parseInt(props.shopLevel);
+    props.onShopLevelChange(level - 1);
+  };
+  
+  const handleShopLevelIncrement = () => {
+    const level = parseInt(props.shopLevel);
+    props.onShopLevelChange(level + 1);
+  };
+  
+  const handleReputationIncrement = () => {
+    const level = parseInt(props.reputation);
+    props.onReputationChange(level + 1);
+  };
+  
+  const handleReputationDecrement = () => {
+    const level = parseInt(props.reputation);
+    props.onReputationChange(level - 1);
   };
 
   return (
@@ -71,25 +81,23 @@ const MenuCardShop = ({ props }) => {
                       <>
                         <div className="card-side-div margin-top">
                           <label className="modern-label">Shop Level:</label>
-                          <input
-                            className="modern-dropdown"
-                            type="number"
-                            value={props.shopLevel}
-                            onChange={handleShopLevelChange}
-                            min="0"
-                            max="10"
-                            />
+                          <div className='levels-div'>
+                            <button className="levels-button" onClick={handleShopLevelDecrement}>-</button>
+                              <div className='level-frame'> 
+                                <label className="level-text">{props.shopLevel}</label>
+                              </div>
+                            <button className="levels-button" onClick={handleShopLevelIncrement}>+</button>
+                          </div>
                         </div>
                         <div className="card-side-div margin-top">
                           <label className="modern-label">Reputation:</label>
-                          <input
-                            className="modern-dropdown"
-                            type="number"
-                            value={props.reputation}
-                            onChange={handleReputationChange}
-                            min="-10"
-                            max="10"
-                            />
+                          <div className='levels-div'>
+                            <button className="levels-button" onClick={handleReputationDecrement}>-</button>
+                              <div className='level-frame'> 
+                                <label className="level-text">{props.reputation}</label>
+                              </div>
+                            <button className="levels-button" onClick={handleReputationIncrement}>+</button>
+                          </div>
                         </div>
                         <div className="card-side-div margin-top">
                           <label className="modern-label">Shop Type:</label>

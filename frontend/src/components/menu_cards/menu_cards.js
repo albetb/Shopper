@@ -40,19 +40,27 @@ const MenuCards = ({ props }) => {
   };
 
   const cardTitle = (cardId, cardTitle) => {
+    let showText = false;
+    let text = "";
+
     switch (cardId){
       case 1:
-        const thereIsSavedWorld = props.savedWorlds && props.savedWorlds.length > 0;
-        return `${cardTitle}${thereIsSavedWorld ? " - " : ""}${thereIsSavedWorld ? props.savedWorlds[0] : ""}${thereIsSavedWorld ? " - Lv:" : ""}${thereIsSavedWorld ? props.playerLevel : ""}`;
+        showText = props.savedWorlds && props.savedWorlds.length > 0;
+        text = showText ? ` - ${props.savedWorlds[0]} - Lv: ${props.playerLevel}` : "";
+        break;
       case 2:
-        const thereIsSavedCity = props.savedCities && props.savedCities.length > 0;
-        return `${cardTitle}${thereIsSavedCity ? " - " : ""}${thereIsSavedCity ? props.savedCities[0] : ""}${thereIsSavedCity ? " - Lv:" : ""}${thereIsSavedCity ? props.cityLevel : ""}`;
+        showText = props.savedCities && props.savedCities.length > 0;
+        text = showText ? ` - ${props.savedCities[0]} - Lv: ${props.cityLevel}` : "";
+        break;
       case 3:
-        const thereIsSavedShop = props.savedShops && props.savedShops.length > 0;
-        return `${cardTitle}${thereIsSavedShop ? " - " : ""}${thereIsSavedShop ? props.savedShops[0] : ""}${thereIsSavedShop ? " - Lv:" : ""}${thereIsSavedShop ? props.shopLevel : ""}`;
+        showText = props.savedShops && props.savedShops.length > 0;
+        text = showText ? ` - ${props.savedShops[0]} - Lv: ${props.shopLevel}` : "";
+        break;
       default:
-        return "";
+        break;
     }
+
+    return `${cardTitle}${text}`;
   };
 
   var menuCardWorldProps = {

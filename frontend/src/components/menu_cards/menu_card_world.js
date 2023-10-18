@@ -19,9 +19,14 @@ const MenuCardWorld = ({ props }) => {
     props.onSelectWorld(event.target.value);
   };
   
-  const handlePlayerLevelChange = (event) => {
-    const level = parseInt(event.target.value);
-    props.onPlayerLevelChange(level);
+  const handlePlayerLevelIncrement = () => {
+    const level = parseInt(props.playerLevel);
+    props.onPlayerLevelChange(level + 1);
+  };
+  
+  const handlePlayerLevelDecrement = () => {
+    const level = parseInt(props.playerLevel);
+    props.onPlayerLevelChange(level - 1);
   };
 
   return (
@@ -58,13 +63,13 @@ const MenuCardWorld = ({ props }) => {
                       <>
                         <div className="card-side-div margin-top">
                           <label className="modern-label">Player Level:</label>
-                          <input
-                            className="modern-dropdown"
-                            type="number"
-                            value={props.playerLevel}
-                            onChange={handlePlayerLevelChange}
-                            min="1"
-                            />
+                          <div className='levels-div'>
+                            <button className="levels-button" onClick={handlePlayerLevelDecrement}>-</button>
+                              <div className='level-frame'> 
+                                <label className="level-text">{props.playerLevel}</label>
+                              </div>
+                            <button className="levels-button" onClick={handlePlayerLevelIncrement}>+</button>
+                          </div>
                         </div>
                       </>
                     )}
