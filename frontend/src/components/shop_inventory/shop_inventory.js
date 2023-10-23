@@ -1,14 +1,26 @@
 import React from 'react';
+import { trimLine, isMobile } from '../../lib/utils';
 import '../../style/shop_inventory.css';
 
-const ShopInventory = ({ items, inventoryLabel }) => {
+const ShopInventory = ({ items, shopName, cityName }) => {
   if (items && items.length === 0) {
     return null; // If the items list is empty, do not display anything
   }
+  
+  const shopLabel = () => {
+    const trimLength = isMobile() ? 20 : 30;
+    return `${trimLine(shopName, trimLength)}`;
+  };
+  
+  const cityLabel = () => {
+    const trimLength = isMobile() ? 26 : 40;
+    return `${cityName && "from "}${trimLine(cityName, trimLength)}`;
+  };
 
   return (
     <>
-      <h2>{inventoryLabel}</h2>
+      <h2>{shopLabel()}</h2>
+      <p>{cityLabel()}</p>
       <table>
         <thead>
           <tr>

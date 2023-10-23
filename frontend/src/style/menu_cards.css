@@ -21,7 +21,7 @@
 }
 
 .card.collapsed {
-  height: 42px; /* Reduced height when card is collapsed */
+  height: 40px; /* Reduced height when card is collapsed */
 }
 
 .collapse-button {
@@ -114,6 +114,11 @@
   vertical-align: text-bottom;
   line-height: 3.5vh;
   height: 3.5vh;
+}
+
+h3 {
+  color: #333333; /* Dropdown text color */
+  font-size: 13px; /* Font size */
 }
 
 

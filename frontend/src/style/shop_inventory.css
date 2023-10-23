@@ -57,7 +57,13 @@ table {
   h2 {
     font-size: 24px;
     color: #d5d5d5;
-    margin: 20px;
+    margin: 25px 0px 0px 0px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #d5d5d5;
+    margin: 15px 0px;
   }
 
   /* Adjust table width for mobile devices */

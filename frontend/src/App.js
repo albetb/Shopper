@@ -17,7 +17,8 @@ function App() {
   const [shopTypes, setShopTypes] = useState([]);
   const [selectedShopType, setSelectedShopType] = useState('');
   const [inventory, setInventory] = useState([]);
-  const [inventoryLabel, setInventoryLabel] = useState('');
+  const [currentShop, setCurrentShop] = useState('');
+  const [currentCity, setCurrentCity] = useState('');
 
   useEffect(() => {
     const worlds = JSON.parse(localStorage.getItem(`saved_worlds`)) || [];
@@ -197,8 +198,8 @@ function App() {
       const shop = new Shop(savedShops[0], shopLevel, cityLevel, playerLevel, reputation, selectedShopType);
       const shop_inventory = shop.getInventory();
       setInventory(shop_inventory);
-      const inventoryLabelText = `${savedShops[0]} from ${savedCities[0]}`;
-      setInventoryLabel(inventoryLabelText);
+      setCurrentCity(savedCities[0]);
+      setCurrentShop(savedShops[0]);
 
       if (isMobile()){
         setIsSidebarCollapsed(true)
@@ -236,7 +237,7 @@ function App() {
       <body className="app">
         <Sidebar props={sidebarProps}/>
         <header className="app-header">
-          <ShopInventory items={inventory} inventoryLabel={inventoryLabel}/>
+          <ShopInventory items={inventory} shopName={currentShop} cityName={currentCity}/>
         </header>
       </body>
   );

@@ -3,6 +3,7 @@ import MenuCardWorld from './menu_card_world';
 import MenuCardCity from './menu_card_city';
 import MenuCardShop from './menu_card_shop';
 import '../../style/menu_cards.css';
+import { isMobile, trimLine } from '../../lib/utils';
 
 const MenuCards = ({ props }) => {
   const [cardStates, setCardStates] = useState([
@@ -42,19 +43,20 @@ const MenuCards = ({ props }) => {
   const cardTitle = (cardId, cardTitle) => {
     let showText = false;
     let text = "";
+    const trimLength = isMobile() ? 23 : 10;
 
     switch (cardId){
       case 1:
         showText = props.savedWorlds && props.savedWorlds.length > 0;
-        text = showText ? ` - ${props.savedWorlds[0]} - Lv: ${props.playerLevel}` : "";
+        text = showText ? ` - ${trimLine(props.savedWorlds[0], trimLength)} - Lv: ${props.playerLevel}` : "";
         break;
       case 2:
         showText = props.savedCities && props.savedCities.length > 0;
-        text = showText ? ` - ${props.savedCities[0]} - Lv: ${props.cityLevel}` : "";
+        text = showText ? ` - ${trimLine(props.savedCities[0], trimLength)} - Lv: ${props.cityLevel}` : "";
         break;
       case 3:
         showText = props.savedShops && props.savedShops.length > 0;
-        text = showText ? ` - ${props.savedShops[0]} - Lv: ${props.shopLevel}` : "";
+        text = showText ? ` - ${trimLine(props.savedShops[0], trimLength)} - Lv: ${props.shopLevel}` : "";
         break;
       default:
         break;
@@ -98,7 +100,7 @@ const MenuCards = ({ props }) => {
             {cards.map(card => cardContentVisible(card.id) && (
               <div className={`card ${cardStates.find(c => c.id === card.id).collapsed ? 'collapsed' : ''}`} key={card.id}>
                 <div className="card-side-div card-expand-div">
-                  <p className="card-title">{cardTitle(card.id, card.title)}</p>
+                  <h3 className="card-title">{cardTitle(card.id, card.title)}</h3>
                   <button className="collapse-button" onClick={() => toggleCard(card.id)}>
                     <span className="material-symbols-outlined">
                       {!cardStates.find(c => c.id === card.id).collapsed ? 

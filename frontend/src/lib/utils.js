@@ -3,7 +3,7 @@ import scrolls from '../appData/scrolls.json';
 import shops from '../appData/shops.json';
 import tables from '../appData/tables.json';
 
-function loadFile(fileName) {
+export function loadFile(fileName) {
     try {
         switch(fileName) {
             case "items":
@@ -22,7 +22,7 @@ function loadFile(fileName) {
     }
 }
 
-function weightedRandom(weights) {
+export function weightedRandom(weights) {
     const totalWeight = weights.reduce((acc, val) => acc + val, 0);
     const randomNum = Math.random() * totalWeight;
     let sum = 0;
@@ -34,18 +34,24 @@ function weightedRandom(weights) {
     }
 }
 
-function cap(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+export function cap(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function shopNames(all = false) {
+export function shopNames(all = false) {
     const shopTypes = loadFile("shops");
     return shopTypes.Type.filter(item => (item.Name !== "Jeff" || all)).map(item => item.Name);
 }
 
-function isMobile() {
+export function isMobile() {
     const isMobile = (window.innerWidth <= 760);
     return isMobile
 }
 
-export { loadFile, weightedRandom, cap, shopNames, isMobile };
+export function trimLine(string, endLine = 11) {
+    if (string){
+        const dot = string.length > endLine ? "…" : "";
+        return `${string.slice(0, endLine)}${dot}`;
+    }
+    return string;
+}

@@ -1,22 +1,14 @@
 import React, { useState } from 'react';
+import SelectComponent from '../common/select_component';
+import CreateComponent from '../common/create_component';
+import LevelComponent from '../common/level_component';
 import '../../style/menu_cards.css';
 
 const MenuCardShop = ({ props }) => {
   const [isNewShopVisible, setIsNewShopVisible] = useState(false);
-  const [shopName, setShopName] = useState('');
-
-  const handleNewShopClick = () => {
-    setIsNewShopVisible(true);
-  };
-
-  const handleOkClick = () => {
-    props.onNewShop(shopName)
-    setIsNewShopVisible(false);
-    setShopName('');
-  };
-
-  const handleDropdownChange = (event) => {
-    props.onSelectShop(event.target.value);
+  
+  const setIsVisible = (isVisible) => {
+    setIsNewShopVisible(isVisible);
   };
 
   const handleShopTypeChange = (event) => {
@@ -26,79 +18,44 @@ const MenuCardShop = ({ props }) => {
   const handleGenerateInventory = () => {
     props.onCreateShop();
   };
-  
-  const handleShopLevelDecrement = () => {
-    const level = parseInt(props.shopLevel);
-    props.onShopLevelChange(level - 1);
+
+  const createComponentProps = {
+    saved: props.savedShops,
+    tabName: "shop",
+    onNew: props.onNewShop,
+    setIsVisible: setIsVisible
   };
-  
-  const handleShopLevelIncrement = () => {
-    const level = parseInt(props.shopLevel);
-    props.onShopLevelChange(level + 1);
+
+  const selectComponentProps = {
+    saved: props.savedShops,
+    tabName: "shop",
+    setIsVisible: setIsVisible,
+    onSelect: props.onSelectShop
   };
-  
-  const handleReputationIncrement = () => {
-    const level = parseInt(props.reputation);
-    props.onReputationChange(level + 1);
+
+  const shopLevelComponentProps = {
+    level: props.shopLevel,
+    levelName: "Shop level",
+    onLevelChange: props.onShopLevelChange
   };
-  
-  const handleReputationDecrement = () => {
-    const level = parseInt(props.reputation);
-    props.onReputationChange(level - 1);
+
+  const reputationLevelComponentProps = {
+    level: props.reputation,
+    levelName: "Reputation",
+    onLevelChange: props.onReputationChange
   };
 
   return (
             <>
                 {isNewShopVisible ? (
-                  <>
-                    <div className="card-side-div">
-                      <input className="modern-dropdown"
-                        type="text"
-                        placeholder="Shop name"
-                        value={shopName}
-                        onChange={(e) => setShopName(e.target.value)}
-                        />
-                      <button className="modern-button" onClick={handleOkClick}>Ok</button>
-                    </div>
-                  </>
+                  <CreateComponent props={createComponentProps}/>
                 ) : (
                   <>
-                    <div className="card-side-div">
-                      <select className="modern-dropdown" onChange={handleDropdownChange} value={props.savedShops[0]}>
-                        {props.savedShops.length > 0 ? (
-                          props.savedShops.map((shop, index) => (
-                            <option key={index} value={shop}>
-                              {shop}
-                            </option>
-                          ))
-                        ) : (
-                          <option value="">Create a shop</option>
-                        )}
-                      </select>
-                      <button className="modern-button" onClick={handleNewShopClick}>New shop</button>
-                    </div>
+                  <SelectComponent props={selectComponentProps}/>
                     {props.savedShops.length > 0 && (
                       <>
-                        <div className="card-side-div margin-top">
-                          <label className="modern-label">Shop Level:</label>
-                          <div className='levels-div'>
-                            <button className="levels-button" onClick={handleShopLevelDecrement}>-</button>
-                              <div className='level-frame'> 
-                                <label className="level-text">{props.shopLevel}</label>
-                              </div>
-                            <button className="levels-button" onClick={handleShopLevelIncrement}>+</button>
-                          </div>
-                        </div>
-                        <div className="card-side-div margin-top">
-                          <label className="modern-label">Reputation:</label>
-                          <div className='levels-div'>
-                            <button className="levels-button" onClick={handleReputationDecrement}>-</button>
-                              <div className='level-frame'> 
-                                <label className="level-text">{props.reputation}</label>
-                              </div>
-                            <button className="levels-button" onClick={handleReputationIncrement}>+</button>
-                          </div>
-                        </div>
+                        <LevelComponent props={shopLevelComponentProps}/>
+                        <LevelComponent props={reputationLevelComponentProps}/>
                         <div className="card-side-div margin-top">
                           <label className="modern-label">Shop Type:</label>
                           <select
