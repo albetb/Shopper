@@ -1,6 +1,5 @@
 import items from '../appData/items.json';
 import scrolls from '../appData/scrolls.json';
-import shops from '../appData/shops.json';
 import tables from '../appData/tables.json';
 
 export function loadFile(fileName) {
@@ -10,8 +9,6 @@ export function loadFile(fileName) {
                 return items;
             case "scrolls":
                 return scrolls;
-            case "shops":
-                return shops;
             case "tables":
                 return tables;
             default:
@@ -39,8 +36,8 @@ export function cap(string) {
 }
 
 export function shopNames(all = false) {
-    const shopTypes = loadFile("shops");
-    return shopTypes.Type.filter(item => (item.Name !== "Jeff" || all)).map(item => item.Name);
+    const tables = loadFile("tables");
+    return tables["Shop Types"].map(item => item.Name);
 }
 
 export function isMobile() {

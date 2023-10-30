@@ -173,7 +173,7 @@ function newMagicWeapon(shopLevel, quality) {
     };
 
     if (Math.random() <= specificWeaponChance[quality]) {
-        return itemChoice("Specific Weapon", { quality: quality, file: "tables" });
+        return itemChoice("Specific Weapon", { quality: quality, file: "items" });
     }
 
     let weapon = itemChoice("Weapon", { mod: shopLevel });
@@ -257,7 +257,7 @@ function newMagicArmor(shopLevel, quality) {
 
     if (Math.random() <= specificItemChance[quality]) {
         const itemType = Math.random() < 0.5 ? "Armor" : "Shield";
-        return itemChoice(`Specific ${itemType}`, { quality: quality, mod: Math.sqrt(shopLevel), file: "tables" });
+        return itemChoice(`Specific ${itemType}`, { quality: quality, mod: Math.sqrt(shopLevel), file: "items" });
     }
 
     const bonusName = (itemChoice("Magic Armor Base", { quality: quality, mod: Math.sqrt(shopLevel), file: "tables" })).Name;

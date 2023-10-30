@@ -1467,6 +1467,280 @@
       "Subtype": "Ranged Weapons"
     }
   ],
+  "Specific Weapon": [
+    {
+      "Name": "Sleep arrow",
+      "Minor": 15,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#sleep-arrow",
+      "Cost": 132
+    },
+    {
+      "Name": "Screaming bolt",
+      "Minor": 10,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#screaming-bolt",
+      "Cost": 267
+    },
+    {
+      "Name": "Silver dagger, masterwork",
+      "Minor": 20,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#silver-dagger-masterwork",
+      "Cost": 322
+    },
+    {
+      "Name": "Cold iron longsword, masterwork",
+      "Minor": 20,
+      "Medium": 0,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#masterwork-cold-iron-longsword",
+      "Cost": 330
+    },
+    {
+      "Name": "Javelin of lightning",
+      "Minor": 10,
+      "Medium": 9,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#javelin-of-lightning",
+      "Cost": 1500
+    },
+    {
+      "Name": "Slaying arrow",
+      "Minor": 5,
+      "Medium": 6,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#slaying-arrow",
+      "Cost": 2282
+    },
+    {
+      "Name": "Adamantine dagger",
+      "Minor": 10,
+      "Medium": 9,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#adamantine-dagger",
+      "Cost": 3002
+    },
+    {
+      "Name": "Adamantine battleaxe",
+      "Minor": 10,
+      "Medium": 9,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#adamantine-battleaxe",
+      "Cost": 3010
+    },
+    {
+      "Name": "Slaying arrow (greater)",
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#slaying-arrow",
+      "Cost": 4057
+    },
+    {
+      "Name": "Shatterspike",
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#shatterspike",
+      "Cost": 4315
+    },
+    {
+      "Name": "Dagger of venom",
+      "Minor": 0,
+      "Medium": 6,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#dagger-of-venom",
+      "Cost": 8302
+    },
+    {
+      "Name": "Trident of warning",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#trident-of-warning",
+      "Cost": 10115
+    },
+    {
+      "Name": "Assassin's dagger",
+      "Minor": 0,
+      "Medium": 6,
+      "Major": 4,
+      "Link": "http://dndsrd.net/magicItemsAW.html#assassins-dagger",
+      "Cost": 10302
+    },
+    {
+      "Name": "Shifter's sorrow",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 3,
+      "Link": "http://dndsrd.net/magicItemsAW.html#shifters-sorrow",
+      "Cost": 12780
+    },
+    {
+      "Name": "Trident of fish command",
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 2,
+      "Link": "http://dndsrd.net/magicItemsAW.html#trident-of-fish-command",
+      "Cost": 18650
+    },
+    {
+      "Name": "Flame tongue",
+      "Minor": 0,
+      "Medium": 8,
+      "Major": 4,
+      "Link": "http://dndsrd.net/magicItemsAW.html#flame-tongue",
+      "Cost": 20715
+    },
+    {
+      "Name": "Luck blade (0 wishes)",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 4,
+      "Link": "http://dndsrd.net/magicItemsAW.html#luck-blade",
+      "Cost": 22060
+    },
+    {
+      "Name": "Sword of subtlety",
+      "Minor": 0,
+      "Medium": 7,
+      "Major": 7,
+      "Link": "http://dndsrd.net/magicItemsAW.html#sword-of-subtlety",
+      "Cost": 22310
+    },
+    {
+      "Name": "Sword of the planes",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 7,
+      "Link": "http://dndsrd.net/magicItemsAW.html#sword-of-the-planes",
+      "Cost": 22315
+    },
+    {
+      "Name": "Nine lives stealer",
+      "Minor": 0,
+      "Medium": 4,
+      "Major": 6,
+      "Link": "http://dndsrd.net/magicItemsAW.html#nine-lives-stealer",
+      "Cost": 23057
+    },
+    {
+      "Name": "Sword of life stealing",
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsAW.html#sword-of-life-stealing",
+      "Cost": 25715
+    },
+    {
+      "Name": "Oathbow",
+      "Minor": 0,
+      "Medium": 2,
+      "Major": 4,
+      "Link": "http://dndsrd.net/magicItemsAW.html#oathbow",
+      "Cost": 25600
+    },
+    {
+      "Name": "Mace of terror",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsAW.html#mace-of-terror",
+      "Cost": 38552
+    },
+    {
+      "Name": "Life-drinker",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 6,
+      "Link": "http://dndsrd.net/magicItemsAW.html#life-drinker",
+      "Cost": 40320
+    },
+    {
+      "Name": "Sylvan scimitar",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsAW.html#sylvan-scimitar",
+      "Cost": 47315
+    },
+    {
+      "Name": "Rapier of puncturing",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsAW.html#rapier-of-puncturing",
+      "Cost": 50320
+    },
+    {
+      "Name": "Sun blade",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 6,
+      "Link": "http://dndsrd.net/magicItemsAW.html#sun-blade",
+      "Cost": 50335
+    },
+    {
+      "Name": "Frost brand",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 6,
+      "Link": "http://dndsrd.net/magicItemsAW.html#frost-brand",
+      "Cost": 54475
+    },
+    {
+      "Name": "Dwarven thrower",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 5,
+      "Link": "http://dndsrd.net/magicItemsAW.html#dwarven-thrower",
+      "Cost": 60312
+    },
+    {
+      "Name": "Luck blade (1 wish)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 7,
+      "Link": "http://dndsrd.net/magicItemsAW.html#luck-blade",
+      "Cost": 62360
+    },
+    {
+      "Name": "Mace of smiting",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 4,
+      "Link": "http://dndsrd.net/magicItemsAW.html#mace-of-smiting",
+      "Cost": 75312
+    },
+    {
+      "Name": "Luck blade (2 wishes)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/magicItemsAW.html#luck-blade",
+      "Cost": 102660
+    },
+    {
+      "Name": "Holy avenger",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 2,
+      "Link": "http://dndsrd.net/magicItemsAW.html#holy-avenger",
+      "Cost": 120630
+    },
+    {
+      "Name": "Luck blade (3 wishes)",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 1,
+      "Link": "http://dndsrd.net/magicItemsAW.html#luck-blade",
+      "Cost": 142960
+    }
+  ],
   "Armor": [
     {
       "Name": "Padded",
@@ -1625,6 +1899,104 @@
       "Category": "Heavy"
     }
   ],
+  "Specific Armor": [
+    {
+      "Name": "Mithral shirt",
+      "Minor": 50,
+      "Medium": 25,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#mithral-shirt",
+      "Cost": 1100
+    },
+    {
+      "Name": "Dragonhide plate",
+      "Minor": 30,
+      "Medium": 20,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#dragonhide-plate",
+      "Cost": 3300
+    },
+    {
+      "Name": "Elven chain",
+      "Minor": 20,
+      "Medium": 12,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#elven-chain",
+      "Cost": 4150
+    },
+    {
+      "Name": "Rhino hide",
+      "Minor": 0,
+      "Medium": 10,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#rhino-hide",
+      "Cost": 5165
+    },
+    {
+      "Name": "Adamantine breastplate",
+      "Minor": 0,
+      "Medium": 15,
+      "Major": 10,
+      "Link": "http://dndsrd.net/magicItemsAW.html#adamantine-breastplate",
+      "Cost": 10200
+    },
+    {
+      "Name": "Dwarven plate",
+      "Minor": 0,
+      "Medium": 15,
+      "Major": 10,
+      "Link": "http://dndsrd.net/magicItemsAW.html#dwarven-plate",
+      "Cost": 16500
+    },
+    {
+      "Name": "Banded mail of luck",
+      "Minor": 0,
+      "Medium": 3,
+      "Major": 12,
+      "Link": "http://dndsrd.net/magicItemsAW.html#banded-mail-of-luck",
+      "Cost": 18900
+    },
+    {
+      "Name": "Celestial armor",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 18,
+      "Link": "http://dndsrd.net/magicItemsAW.html#celestial-armor",
+      "Cost": 22400
+    },
+    {
+      "Name": "Plate armor of the deep",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 10,
+      "Link": "http://dndsrd.net/magicItemsAW.html#plate-armor-of-the-deep",
+      "Cost": 24650
+    },
+    {
+      "Name": "Breastplate of command",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 15,
+      "Link": "http://dndsrd.net/magicItemsAW.html#breastplate-of-command",
+      "Cost": 25400
+    },
+    {
+      "Name": "Mithral full plate of speed",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 15,
+      "Link": "http://dndsrd.net/magicItemsAW.html#mithral-full-plate-of-speed",
+      "Cost": 26500
+    },
+    {
+      "Name": "Demon armor",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 10,
+      "Link": "http://dndsrd.net/magicItemsAW.html#demon-armor",
+      "Cost": 52260
+    }
+  ],
   "Shield": [
     {
       "Name": "Buckler",
@@ -1685,6 +2057,72 @@
       "Armor Check Penalty": "-10",
       "Arcane Spell Failure Chance": "50%",
       "Weight": 20.5
+    }
+  ],
+  "Specific Shield": [
+    {
+      "Name": "Darkwood buckler",
+      "Minor": 30,
+      "Medium": 20,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#darkwood-buckler",
+      "Cost": 205
+    },
+    {
+      "Name": "Darkwood shield",
+      "Minor": 50,
+      "Medium": 25,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#darkwood-shield",
+      "Cost": 257
+    },
+    {
+      "Name": "Mithral heavy shield",
+      "Minor": 15,
+      "Medium": 25,
+      "Major": 0,
+      "Link": "http://dndsrd.net/magicItemsAW.html#mithral-heavy-shield",
+      "Cost": 1020
+    },
+    {
+      "Name": "Caster's shield",
+      "Minor": 5,
+      "Medium": 15,
+      "Major": 20,
+      "Link": "http://dndsrd.net/magicItemsAW.html#casters-shield",
+      "Cost": 3153
+    },
+    {
+      "Name": "Spined shield",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 20,
+      "Link": "http://dndsrd.net/magicItemsAW.html#spined-shield",
+      "Cost": 5580
+    },
+    {
+      "Name": "Lion's shield",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 20,
+      "Link": "http://dndsrd.net/magicItemsAW.html#lions-shield",
+      "Cost": 9170
+    },
+    {
+      "Name": "Winged shield",
+      "Minor": 0,
+      "Medium": 5,
+      "Major": 30,
+      "Link": "http://dndsrd.net/magicItemsAW.html#winged-shield",
+      "Cost": 17257
+    },
+    {
+      "Name": "Absorbing shield",
+      "Minor": 0,
+      "Medium": 0,
+      "Major": 10,
+      "Link": "http://dndsrd.net/magicItemsAW.html#absorbing-shield",
+      "Cost": 50170
     }
   ],
   "Potion": [

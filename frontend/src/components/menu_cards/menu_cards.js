@@ -41,28 +41,20 @@ const MenuCards = ({ props }) => {
   };
 
   const cardTitle = (cardId, cardTitle) => {
-    let showText = false;
-    let text = "";
     const trimLength = isMobile() ? 23 : 10;
-
-    switch (cardId){
-      case 1:
-        showText = props.savedWorlds && props.savedWorlds.length > 0;
-        text = showText ? ` - ${trimLine(props.savedWorlds[0], trimLength)} - Lv: ${props.playerLevel}` : "";
-        break;
-      case 2:
-        showText = props.savedCities && props.savedCities.length > 0;
-        text = showText ? ` - ${trimLine(props.savedCities[0], trimLength)} - Lv: ${props.cityLevel}` : "";
-        break;
-      case 3:
-        showText = props.savedShops && props.savedShops.length > 0;
-        text = showText ? ` - ${trimLine(props.savedShops[0], trimLength)} - Lv: ${props.shopLevel}` : "";
-        break;
-      default:
-        break;
+    const formatText = (name, lv) => ` - ${trimLine(name, trimLength)} - Lv: ${lv}`;
+  
+    if (cardId == 1 && props.savedWorlds && props.savedWorlds.length > 0) {
+      return `${cardTitle}${formatText(props.savedWorlds[0], props.playerLevel)}`;
     }
-
-    return `${cardTitle}${text}`;
+    else if (cardId == 2 && props.savedCities && props.savedCities.length > 0) {
+      return `${cardTitle}${formatText(props.savedCities[0], props.playerLevel)}`;
+    }
+    else if (cardId == 3 && props.savedShops && props.savedShops.length > 0) {
+      return `${cardTitle}${formatText(props.savedShops[0], props.shopLevel)}`;
+    }
+  
+    return cardTitle;
   };
 
   var menuCardWorldProps = {

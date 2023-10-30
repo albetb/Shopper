@@ -16,10 +16,10 @@ class Shop {
     }
 
     async template(template) {
-        const shopTypes = loadFile("shops");
+        const tables = loadFile("tables");
         const typeNames = shopNames(true);
         this.shopType = typeNames.includes(template) ? template : "";
-        const shop = shopTypes.Type.find(type => type.Name === this.shopType);
+        const shop = tables["Shop Types"].find(type => type.Name === this.shopType);
         if (!shop) {
             // Handle case where shop type is not found
             return;
