@@ -23,6 +23,7 @@ function App() {
   useEffect(() => {
     const worlds = JSON.parse(localStorage.getItem(`saved_worlds`)) || [];
     setSavedWorlds(worlds);
+    
     if (worlds.length > 0){
       const player_level = localStorage.getItem(`${worlds[0]}_level`) || 1;
       setPlayerLevel(player_level);
@@ -30,6 +31,7 @@ function App() {
 
     const cities = JSON.parse(localStorage.getItem(`saved_cities_${worlds[0]}`)) || [];
     setSavedCities(cities);
+
     if (cities.length > 0){
       const city_level = localStorage.getItem(`${worlds[0]}_${cities[0]}_level`) || 1;
       setCityLevel(city_level);
@@ -37,6 +39,7 @@ function App() {
 
     const shops = JSON.parse(localStorage.getItem(`saved_shops_${worlds[0]}_${cities[0]}`)) || [];
     setSavedShops(shops);
+
     if (shops.length > 0){
       const shop_level = localStorage.getItem(`${worlds[0]}_${cities[0]}_${shops[0]}_level`) || 0;
       setShopLevel(shop_level);
@@ -53,7 +56,7 @@ function App() {
   const toggleSidebar = () => {
     setIsSidebarCollapsed(!isSidebarCollapsed);
   };
-
+  
   const setSelection = (list, element) => {
     if (list){
       list = list.filter(item => item !== element);
@@ -63,12 +66,32 @@ function App() {
     return [element];
   }
 
+  //#region onSelect
+
   const onSelectWorld = (world) => {
     const worlds = setSelection(savedWorlds, world);
     localStorage.setItem(`saved_worlds`, JSON.stringify(worlds));
 
     setWorldFromStorage(worlds);
   };
+
+  const onSelectCity = (city) => {
+    const cities = setSelection(savedCities, city);
+    localStorage.setItem(`saved_cities_${savedWorlds[0]}`, JSON.stringify(cities));
+
+    setCityFromStorage(savedWorlds[0], cities);
+  };
+
+  const onSelectShop = (shop) => {
+    const shops = setSelection(savedShops, shop);
+    localStorage.setItem(`saved_shops_${savedWorlds[0]}_${savedCities[0]}`, JSON.stringify(shops));
+
+    setShopFromStorage(savedWorlds[0], savedCities[0], shops);
+  };
+
+  //#endregion
+
+  //#region setFromStorage
 
   const setWorldFromStorage = (worlds) => {
     setSavedWorlds(worlds);
@@ -78,13 +101,6 @@ function App() {
     setCityFromStorage(worlds[0]);
   }
 
-  const onSelectCity = (city) => {
-    const cities = setSelection(savedCities, city);
-    localStorage.setItem(`saved_cities_${savedWorlds[0]}`, JSON.stringify(cities));
-
-    setCityFromStorage(savedWorlds[0], cities);
-  };
-
   const setCityFromStorage = (world, cities = null) => {
     const cities_list = cities ?? (JSON.parse(localStorage.getItem(`saved_cities_${world}`)) || []);
     setSavedCities(cities_list);
@@ -93,13 +109,6 @@ function App() {
 
     setShopFromStorage(world, cities_list[0]);
   }
-
-  const onSelectShop = (shop) => {
-    const shops = setSelection(savedShops, shop);
-    localStorage.setItem(`saved_shops_${savedWorlds[0]}_${savedCities[0]}`, JSON.stringify(shops));
-
-    setShopFromStorage(savedWorlds[0], savedCities[0], shops);
-  };
 
   const setShopFromStorage = (world, city, shops = null) => {
     const shops_list = shops ?? (JSON.parse(localStorage.getItem(`saved_shops_${world}_${city}`)) || []);
@@ -111,6 +120,10 @@ function App() {
     const shop_type = localStorage.getItem(`${world}_${city}_${shops_list[0]}_type`) || '';
     setSelectedShopType(shop_type);
   }
+
+  //#endregion
+
+  //#region onNew
 
   const onNewWorld = (world) => {
     if (world.trim() !== '' && !savedWorlds.includes(world)) {
@@ -158,6 +171,10 @@ function App() {
     }
   };
 
+  //#endregion
+
+  //#region onChange
+  
   const onPlayerLevelChange = (level) => {
     if (level && level !== playerLevel && parseInt(level) > 0 && parseInt(level) < 100){
       setPlayerLevel(level);
@@ -192,6 +209,8 @@ function App() {
       localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${savedShops[0]}_type`, shop_type);
     }
   };
+  
+  //#endregion
 
   const onCreateShop = () => {
     if (savedShops.length > 0) {
