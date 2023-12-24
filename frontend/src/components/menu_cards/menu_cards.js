@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MenuCardWorld from './menu_card_world';
 import MenuCardCity from './menu_card_city';
 import MenuCardShop from './menu_card_shop';
@@ -12,16 +12,52 @@ const MenuCards = ({ props }) => {
     { id: 3, collapsed: false }
   ]);
 
+  useEffect(() => {
+    const isWorldCollapsed = JSON.parse(localStorage.getItem(`is_world_collapsed`)) || false;
+    setCardCollapsed(1, isWorldCollapsed);
+    const isCityCollapsed = JSON.parse(localStorage.getItem(`is_city_collapsed`)) || false;
+    setCardCollapsed(2, isCityCollapsed);
+    const isShopCollapsed = JSON.parse(localStorage.getItem(`is_shop_collapsed`)) || false;
+    setCardCollapsed(3, isShopCollapsed);
+  }, []);
+  
+  const setCardCollapsed = (cardId, isCollapsed) => {
+    setCardStates((prevStates) => {
+      return prevStates.map((cardState) => {
+        if (cardState.id === cardId) {
+          return { ...cardState, collapsed: isCollapsed };
+        }
+        return cardState;
+      });
+    });
+  };
+
   const cards = [
     { id: 1, title: 'World' },
     { id: 2, title: 'City' },
     { id: 3, title: 'Shop' }
   ];
-
+  
   const toggleCard = (cardId) => {
-    setCardStates(prevStates => {
-      return prevStates.map(cardState => {
+    setCardStates((prevStates) => {
+      return prevStates.map((cardState) => {
         if (cardState.id === cardId) {
+          let cardName = "";
+          switch (cardId) {
+            case 1:
+              cardName = "world";
+              break;
+            case 2:
+              cardName = "city";
+              break;
+            case 3:
+              cardName = "shop";
+              break;
+            default:
+              return { ...cardState, collapsed: !cardState.collapsed };
+          }
+          localStorage.setItem(`is_${cardName}_collapsed`, !cardState.collapsed);
+  
           return { ...cardState, collapsed: !cardState.collapsed };
         }
         return cardState;
@@ -48,7 +84,7 @@ const MenuCards = ({ props }) => {
       return `${cardTitle}${formatText(props.savedWorlds[0], props.playerLevel)}`;
     }
     else if (cardId == 2 && props.savedCities && props.savedCities.length > 0) {
-      return `${cardTitle}${formatText(props.savedCities[0], props.playerLevel)}`;
+      return `${cardTitle}${formatText(props.savedCities[0], props.cityLevel)}`;
     }
     else if (cardId == 3 && props.savedShops && props.savedShops.length > 0) {
       return `${cardTitle}${formatText(props.savedShops[0], props.shopLevel)}`;

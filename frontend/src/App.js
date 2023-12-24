@@ -33,6 +33,7 @@ function App() {
     setSavedCities(cities);
 
     if (cities.length > 0){
+      setCurrentCity(cities[0]);
       const city_level = localStorage.getItem(`${worlds[0]}_${cities[0]}_level`) || 1;
       setCityLevel(city_level);
     }
@@ -41,12 +42,15 @@ function App() {
     setSavedShops(shops);
 
     if (shops.length > 0){
+      setCurrentShop(shops[0]);
       const shop_level = localStorage.getItem(`${worlds[0]}_${cities[0]}_${shops[0]}_level`) || 0;
       setShopLevel(shop_level);
       const reputation_level = localStorage.getItem(`${worlds[0]}_${cities[0]}_${shops[0]}_reputation`) || 0;
       setReputation(reputation_level);
       const shop_type = localStorage.getItem(`${worlds[0]}_${cities[0]}_${shops[0]}_type`) || '';
       setSelectedShopType(shop_type);
+      const inventory = JSON.parse(localStorage.getItem(`${worlds[0]}_${cities[0]}_${shops[0]}_stock`)) || [];
+      setInventory(inventory);
     }
 
     const shop_types = shopNames();
@@ -104,6 +108,7 @@ function App() {
   const setCityFromStorage = (world, cities = null) => {
     const cities_list = cities ?? (JSON.parse(localStorage.getItem(`saved_cities_${world}`)) || []);
     setSavedCities(cities_list);
+    setCurrentCity(cities_list[0]);
     const city_level = localStorage.getItem(`${world}_${cities_list[0]}_level`);
     setCityLevel(city_level);
 
@@ -113,12 +118,15 @@ function App() {
   const setShopFromStorage = (world, city, shops = null) => {
     const shops_list = shops ?? (JSON.parse(localStorage.getItem(`saved_shops_${world}_${city}`)) || []);
     setSavedShops(shops_list);
+    setCurrentShop(shops_list[0]);
     const shop_level = localStorage.getItem(`${world}_${city}_${shops_list[0]}_level`) || 0;
     setShopLevel(shop_level);
     const reputation_level = localStorage.getItem(`${world}_${city}_${shops_list[0]}_reputation`) || 0;
     setReputation(reputation_level);
     const shop_type = localStorage.getItem(`${world}_${city}_${shops_list[0]}_type`) || '';
     setSelectedShopType(shop_type);
+    const inventory = JSON.parse(localStorage.getItem(`${world}_${city}_${shops_list[0]}_stock`)) || [];
+    setInventory(inventory);
   }
 
   //#endregion
@@ -126,12 +134,12 @@ function App() {
   //#region onNew
 
   const onNewWorld = (world) => {
-    if (world.trim() !== '' && !savedWorlds.includes(world)) {
+    if (world.trim() !== '' && !savedWorlds.includes(cap(world))) {
       const worlds = setSelection(savedWorlds, cap(world));
       setSavedWorlds(worlds);
       localStorage.setItem(`saved_worlds`, JSON.stringify(worlds));
       setPlayerLevel(1);
-      localStorage.setItem(`${worlds[0]}_level`, 1);
+      localStorage.setItem(`${cap(world)}_level`, 1);
       setCityLevel(1);
       setShopLevel(0);
       setReputation(0);
@@ -143,12 +151,12 @@ function App() {
   };
 
   const onNewCity = (city) => {
-    if (city.trim() !== '' && !savedCities.includes(city)) {
+    if (city.trim() !== '' && !savedCities.includes(cap(city))) {
       const cities = setSelection(savedCities, cap(city));
       setSavedCities(cities);
       localStorage.setItem(`saved_cities_${savedWorlds[0]}`, JSON.stringify(cities));
       setCityLevel(1);
-      localStorage.setItem(`${savedWorlds[0]}_${cities[0]}_level`, 1);
+      localStorage.setItem(`${savedWorlds[0]}_${cap(city)}_level`, 1);
       setShopLevel(0);
       setReputation(0);
       setSelectedShopType('');
@@ -158,16 +166,17 @@ function App() {
   };
 
   const onNewShop = (shopName) => {
-    if (shopName.trim() !== '' && !savedShops.includes(shopName)) {
+    if (shopName.trim() !== '' && !savedShops.includes(cap(shopName))) {
       const shops = setSelection(savedShops, cap(shopName));
       setSavedShops(shops);
       localStorage.setItem(`saved_shops_${savedWorlds[0]}_${savedCities[0]}`, JSON.stringify(shops));
       setShopLevel(0);
-      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${shopName}_level`, 0);
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${cap(shopName)}_level`, 0);
       setReputation(0);
-      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${shopName}_reputation`, 0);
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${cap(shopName)}_reputation`, 0);
       setSelectedShopType('');
-      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${shopName}_type`, '');
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${cap(shopName)}_type`, '');
+      setInventory([]);
     }
   };
 
@@ -219,6 +228,7 @@ function App() {
       setInventory(shop_inventory);
       setCurrentCity(savedCities[0]);
       setCurrentShop(savedShops[0]);
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${savedShops[0]}_stock`, JSON.stringify(shop_inventory));
 
       if (isMobile()){
         setIsSidebarCollapsed(true)
