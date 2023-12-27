@@ -241,13 +241,13 @@ function App() {
       let updatedInventory = [...prevInventory];
   
       const itemIndex = updatedInventory.findIndex(
-        (item) => item.Name === itemName && item.itemType === itemType
+        (item) => item.Name === itemName && item.ItemType === itemType
       );
   
       // If the item is found, decrease its number by one
       if (itemIndex !== -1) {
         const updatedItem = { ...updatedInventory[itemIndex] };
-        updatedItem.number = Math.max(0, updatedItem.number - 1);
+        updatedItem.Number = Math.max(0, updatedItem.Number - 1);
         updatedInventory[itemIndex] = updatedItem;
       }
 
