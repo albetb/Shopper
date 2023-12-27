@@ -2,6 +2,23 @@ import items from '../appData/items.json';
 import scrolls from '../appData/scrolls.json';
 import tables from '../appData/tables.json';
 
+export const itemTypes = [
+    "Good",
+    "Ammo",
+    "Weapon",
+    "Armor",
+    "Shield",
+    "Magic Weapon",
+    "Magic Armor",
+    "Potion",
+    "Ring",
+    "Rod",
+    "Staff",
+    "Wand",
+    "Wondrous Item",
+    "Scroll"
+  ];
+
 export function loadFile(fileName) {
     try {
         switch(fileName) {
@@ -35,7 +52,7 @@ export function cap(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export function shopNames(all = false) {
+export function shopNames() {
     const tables = loadFile("tables");
     return tables["Shop Types"].map(item => item.Name);
 }

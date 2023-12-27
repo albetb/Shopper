@@ -88,15 +88,15 @@ class Shop {
             let found = false;
             for (let item of this.stock) {
                 if (item.Name === addedItem.Name) {
-                    item.number += 1;
+                    item.Number += 1;
                     found = true;
                     break;
                 }
             }
             if (!found) {
-                addedItem.priceModifier = Math.floor(Math.random() * 41) - 20;
-                addedItem.number = 1;
-                addedItem.itemType = itemType;
+                addedItem.PriceModifier = Math.floor(Math.random() * 41) - 20;
+                addedItem.Number = 1;
+                addedItem.ItemType = itemType;
                 this.stock.push(addedItem);
             }
         }
@@ -108,7 +108,7 @@ class Shop {
 
     sortByType() {
         this.stock.sort((a, b) => a.Name.localeCompare(b.Name));
-        this.stock.sort((a, b) => a.itemType.localeCompare(b.itemType));
+        this.stock.sort((a, b) => a.ItemType.localeCompare(b.ItemType));
     }
 
     sortByCost() {
@@ -178,7 +178,7 @@ class Shop {
                 const itemsPossessed = this.stock.filter(item => item.number > 0);
                 const item = { ...itemsPossessed[Math.floor(Math.random() * itemsPossessed.length)] };
                 for (let selledItem of this.stock) {
-                    if (selledItem.name === item.name) {
+                    if (selledItem.name === item.Name) {
                         selledItem.number -= 1;
                         this.gold += this.trueCost(selledItem, false);
                     }
@@ -201,10 +201,10 @@ class Shop {
             if (this.countItemType(key) < itemNumber) {
                 for (let i = 0; i < itemNumber - this.countItemType(key); i++) {
                     const item = this.newItem(key, this.shopLevel, this.partyLevel, this.arcaneChance);
-                    if (item && item.name && this.gold - 100 >= item.cost * 0.95) {
+                    if (item && item.Name && this.gold - 100 >= item.Cost * 0.95) {
                         console.log(`Restocked: ${item.name}`);
                         this.addItem(item, key);
-                        this.gold -= item.cost * 0.95;
+                        this.gold -= item.Cost * 0.95;
                     }
                 }
             }
@@ -226,7 +226,7 @@ class Shop {
 
     trueCost(item, forParty = true) {
         const rep = forParty ? this.reputation * 2 : 0;
-        const mod = (100 + item.priceModifier - rep + this.cityLevel) / 100;
+        const mod = (100 + item.PriceModifier - rep + this.cityLevel) / 100;
         let cost = Math.max((parseFloat(item.Cost) * mod), 0.01);
         const dec = cost < 100 ? 1 : (cost < 1000 ? 5 : 10);
         return cost < 1 ? cost.toFixed(2) : Math.round(cost / dec) * dec;

@@ -1,9 +1,77 @@
-import React from 'react';
-import { trimLine, isMobile } from '../../lib/utils';
+import React, { useState } from 'react';
+import { trimLine, isMobile, itemTypes } from '../../lib/utils';
 import '../../style/shop_inventory.css';
 
-const ShopInventory = ({ items, shopName, cityName, onDeleteItem }) => {
-  if (!items || !items.some(item => item.number > 0)) {
+const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
+  const [number, setNumber] = useState(1);
+  const [itemName, setItemName] = useState('');
+  const [itemType, setItemType] = useState('Good');
+  const [cost, setCost] = useState(1);
+
+  const handleAddItemClick = () => {
+    // Call the onAddItem function with the details of the new item
+    onAddItem(number, itemName, itemType, cost);
+    // Reset form fields
+    setNumber(1);
+    setItemName('');
+    setItemType('Good');
+    setCost(1);
+    setShowAddItemForm(false);
+  };
+
+  return (
+    <tr className='add-item'>
+      <td className='number-size'>
+        <input
+          type="number"
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+          className='number-size modern-input'
+        />
+      </td>
+      <td className='name-size'>
+        <input
+          type="text"
+          placeholder="Item name"
+          value={itemName}
+          onChange={(e) => setItemName(e.target.value)}
+          className='name-size modern-input'
+        />
+      </td>
+      <td className='type-size'>
+        <select
+          value={itemType}
+          onChange={(e) => setItemType(e.target.value)}
+          className='type-size modern-input'
+        >
+          {itemTypes.map((type, index) => (
+            <option key={index} value={type}>
+              {type}
+            </option>
+          ))}
+        </select>
+      </td>
+      <td className='cost-size'>
+        <input
+          type="number"
+          value={cost}
+          onChange={(e) => setCost(e.target.value)}
+          className='cost-size modern-input'
+        />
+      </td>
+      <td className='action-size'>
+        <button className='levels-button' onClick={handleAddItemClick}>
+          +
+        </button>
+      </td>
+    </tr>
+  );
+};
+
+const ShopInventory = ({ items, shopName, cityName, onDeleteItem, onAddItem }) => {
+  const [showAddItemForm, setShowAddItemForm] = useState(false);
+
+  if (!items || !items.some(item => item.Number > 0)) {
     return null; // If there are no items or all items have number <= 0, do not display anything
   }
 
@@ -19,6 +87,10 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem }) => {
 
   const handleDeleteItemClick = (itemName, itemType) => {
     onDeleteItem(itemName, itemType);
+  };
+
+  const handleAddItemButtonClick = () => {
+    setShowAddItemForm(true);
   };
 
   return (
@@ -38,9 +110,9 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem }) => {
         <tbody>
           {items.map((item, index) => (
             // Conditionally render a row only if item.number is more than zero
-            item.number > 0 && (
+            item.Number > 0 && (
               <tr key={index}>
-                <td className='align-right'>{item.number}</td>
+                <td className='align-right'>{item.Number}</td>
                 <td>
                   {item.Link ? (
                     <a href={item.Link} target="_blank" rel="noopener noreferrer">
@@ -50,10 +122,10 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem }) => {
                     item.Name
                   )}
                 </td>
-                <td>{item.itemType}</td>
+                <td>{item.ItemType}</td>
                 <td>{item.Cost}</td>
                 <td>
-                  <button className='levels-button' onClick={() => handleDeleteItemClick(item.Name, item.itemType)}>
+                  <button className='levels-button' onClick={() => handleDeleteItemClick(item.Name, item.ItemType)}>
                     -
                   </button>
                 </td>
@@ -62,6 +134,13 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem }) => {
           ))}
         </tbody>
       </table>
+      {showAddItemForm ? (
+        <AddItemForm onAddItem={onAddItem} setShowAddItemForm={setShowAddItemForm} />
+      ) : (
+        <button className='add-item-button' onClick={handleAddItemButtonClick}>
+          Add Item
+        </button>
+      )}
     </>
   );
 };

@@ -258,6 +258,47 @@ function App() {
     });
   };
 
+  const onAddItem = (number, itemName, itemType, cost) => {
+    // Check if the item name is not empty and the number is more than zero
+    if (itemName.trim() === '' || number <= 0) {
+      // Handle invalid input (you may show an alert or provide feedback)
+      return;
+    }
+  
+    setInventory((prevInventory) => {
+      let updatedInventory = [...prevInventory];
+  
+      // Check if the item already exists in the inventory
+      const itemIndex = updatedInventory.findIndex(
+        (item) => item.Name === cap(itemName) && item.itemType === itemType
+      );
+  
+      if (itemIndex !== -1) {
+        // If the item exists, increase its number by the specified amount
+        const updatedItem = { ...updatedInventory[itemIndex] };
+        updatedItem.number += Number(number);
+        updatedInventory[itemIndex] = updatedItem;
+      } else {
+        // If the item doesn't exist, add it to the inventory
+        const newItem = {
+          Name: cap(itemName),
+          ItemType: itemType,
+          Cost: cost,
+          Number: Number(number),
+          // Add other properties if needed
+        };
+        updatedInventory.push(newItem);
+        updatedInventory.sort((a, b) => a.Name.localeCompare(b.Name));
+        updatedInventory.sort((a, b) => a.ItemType.localeCompare(b.ItemType));
+      }
+  
+      // Update local storage
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${savedShops[0]}_stock`, JSON.stringify(updatedInventory));
+  
+      return updatedInventory;
+    });
+  };
+
   var sidebarProps = {
     isSidebarCollapsed: isSidebarCollapsed,
     toggleSidebar: toggleSidebar,
@@ -288,7 +329,7 @@ function App() {
       <body className="app">
         <Sidebar props={sidebarProps}/>
         <header className="app-header">
-          <ShopInventory items={inventory} shopName={currentShop} cityName={currentCity} onDeleteItem={onDeleteItem}/>
+          <ShopInventory items={inventory} shopName={currentShop} cityName={currentCity} onDeleteItem={onDeleteItem} onAddItem={onAddItem}/>
         </header>
       </body>
   );
