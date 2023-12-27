@@ -236,6 +236,28 @@ function App() {
     }
   };
 
+  const onDeleteItem = (itemName, itemType) => {
+    setInventory((prevInventory) => {
+      let updatedInventory = [...prevInventory];
+  
+      const itemIndex = updatedInventory.findIndex(
+        (item) => item.Name === itemName && item.itemType === itemType
+      );
+  
+      // If the item is found, decrease its number by one
+      if (itemIndex !== -1) {
+        const updatedItem = { ...updatedInventory[itemIndex] };
+        updatedItem.number = Math.max(0, updatedItem.number - 1);
+        updatedInventory[itemIndex] = updatedItem;
+      }
+
+      // Update local storage
+      localStorage.setItem(`${savedWorlds[0]}_${savedCities[0]}_${savedShops[0]}_stock`,JSON.stringify(updatedInventory));
+      
+      return updatedInventory;
+    });
+  };
+
   var sidebarProps = {
     isSidebarCollapsed: isSidebarCollapsed,
     toggleSidebar: toggleSidebar,
@@ -266,7 +288,7 @@ function App() {
       <body className="app">
         <Sidebar props={sidebarProps}/>
         <header className="app-header">
-          <ShopInventory items={inventory} shopName={currentShop} cityName={currentCity}/>
+          <ShopInventory items={inventory} shopName={currentShop} cityName={currentCity} onDeleteItem={onDeleteItem}/>
         </header>
       </body>
   );
