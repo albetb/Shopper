@@ -49,10 +49,6 @@ table {
     width: 7vw;
   }
   
-  th.type-size, td.type-size, select.type-size {
-    width: 7vw;
-  }
-  
   th.cost-size, td.cost-size, input.cost-size {
     width: 5vw;
   }
@@ -106,10 +102,10 @@ table {
   }
 
   .add-item-button {
-    height: 4vh; /* Set height of the dropdown */
+    height: 4.5vh; /* Set height of the dropdown */
     width: 12vw; /* Set width of the dropdown */
     border-radius: 1vh; /* Rounded corners */
-    margin: 0 0 24px 0;
+    margin: 20px 0;
   }
 
   .modern-input {
@@ -131,7 +127,31 @@ table {
   /* Adjust table width for mobile devices */
 @media (max-width: 768px) {
     table {
-      width: 90%; /* Set width to 90% for mobile devices */
+      width: 90vw; /* Set width to 90% for mobile devices */
+    }
+
+    tr.add-item {
+      width: 90vw;
+    }
+  
+    td.number-size, input.number-size {
+      width: 2vw;
+    }
+    
+    td.name-size, input.name-size {
+      width: 33.8vw;
+    }
+  
+    td.type-size, select.type-size {
+      width: 7vw;
+    }
+    
+    td.cost-size, input.cost-size {
+      width: 8vw;
+    }
+    
+    td.action-size, input.action-size {
+      width: 10vw;
     }
 
     tr {
@@ -143,6 +163,10 @@ table {
     }
     
     .levels-button {
-      width: 4vw; /* Set width of the dropdown */
+      width: 12vw; /* Set width of the dropdown */
+    }
+
+    .add-item-button {
+      width: 40vw; /* Set width of the dropdown */
     }
   }

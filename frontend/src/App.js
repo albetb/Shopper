@@ -270,13 +270,13 @@ function App() {
   
       // Check if the item already exists in the inventory
       const itemIndex = updatedInventory.findIndex(
-        (item) => item.Name === cap(itemName) && item.itemType === itemType
+        (item) => item.Name === cap(itemName) && item.ItemType === itemType
       );
   
       if (itemIndex !== -1) {
         // If the item exists, increase its number by the specified amount
         const updatedItem = { ...updatedInventory[itemIndex] };
-        updatedItem.number += Number(number);
+        updatedItem.Number += Number(number);
         updatedInventory[itemIndex] = updatedItem;
       } else {
         // If the item doesn't exist, add it to the inventory
