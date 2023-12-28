@@ -69,7 +69,6 @@ table {
     transition: all 0.3s;
   }
   
-  /* Header styles */
   h2 {
     font-size: 24px;
     color: #d5d5d5;
@@ -82,64 +81,64 @@ table {
     margin: 15px 0px;
   }
 
-  .levels-button, .add-item-button {
-    text-align: center; /* Center text */
-    text-decoration: none; /* Remove underline for links */
-    transition-duration: 0.3s; /* Smooth transition effect on hover */
+  .item-number-button, .add-item-button {
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.3s;
     box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25);
     font-weight: bold;
-    background-color: #f9f9f9; /* White background color */
-    color: #333333; /* Dropdown text color */
-    border: 1px solid #c0c0c0; /* Border color */
-    cursor: pointer; /* Cursor on hover */
-    font-size: 14px; /* Font size */
+    background-color: #f9f9f9;
+    color: #333333;
+    border: 1px solid #c0c0c0;
+    cursor: pointer;
+    font-size: 14px;
   }
 
-  .levels-button {
-    height: 3.6vh; /* Set height of the dropdown */
-    width: 3vw; /* Set width of the dropdown */
-    border-radius: 1vh; /* Rounded corners */
+  .item-number-button {
+    height: 3.6vh;
+    width: 3vw;
+    border-radius: 1vh;
   }
 
   .add-item-button {
-    height: 4.5vh; /* Set height of the dropdown */
-    width: 12vw; /* Set width of the dropdown */
-    border-radius: 1vh; /* Rounded corners */
+    height: 4.5vh;
+    width: 12vw;
+    border-radius: 1vh;
     margin: 20px 0;
   }
 
   .modern-input {
-    outline: none; /* Remove outline */
+    outline: none;
     padding-left: 4px;
-    height: 3.6vh; /* Set height of the dropdown */
-    background-color: #f9f9f9; /* White background color */
-    color: #333333; /* Dropdown text color */
-    border: 1px solid #c0c0c0; /* Border color */
-    border-radius: 1vh; /* Rounded corners */
-    cursor: pointer; /* Cursor on hover */
-    font-size: 14px; /* Font size */
+    height: 3.6vh;
+    background-color: #f9f9f9;
+    color: #333333;
+    border: 1px solid #c0c0c0;
+    border-radius: 1vh;
+    cursor: pointer;
+    font-size: 14px;
   }
 
   select.modern-input {
-    height: 4.1vh; /* Set height of the dropdown */
+    height: 4.1vh;
   }
 
-  /* Adjust table width for mobile devices */
+
 @media (max-width: 768px) {
     table {
-      width: 90vw; /* Set width to 90% for mobile devices */
+      width: 96vw;
     }
 
     tr.add-item {
-      width: 90vw;
+      width: 96vw;
     }
   
     td.number-size, input.number-size {
-      width: 2vw;
+      width: 3vw;
     }
     
     td.name-size, input.name-size {
-      width: 33.8vw;
+      width: 39vw;
     }
   
     td.type-size, select.type-size {
@@ -147,7 +146,7 @@ table {
     }
     
     td.cost-size, input.cost-size {
-      width: 8vw;
+      width: 10vw;
     }
     
     td.action-size, input.action-size {
@@ -162,11 +161,11 @@ table {
       font-size: 20px;
     }
     
-    .levels-button {
-      width: 12vw; /* Set width of the dropdown */
+    .item-number-button {
+      width: 9vw;
     }
 
     .add-item-button {
-      width: 40vw; /* Set width of the dropdown */
+      width: 40vw;
     }
   }

@@ -3,20 +3,20 @@ import scrolls from '../appData/scrolls.json';
 import tables from '../appData/tables.json';
 
 export const itemTypes = [
-    "Good",
     "Ammo",
-    "Weapon",
     "Armor",
-    "Shield",
-    "Magic Weapon",
+    "Good",
     "Magic Armor",
+    "Magic Weapon",
     "Potion",
     "Ring",
     "Rod",
+    "Scroll",
+    "Shield",
     "Staff",
     "Wand",
-    "Wondrous Item",
-    "Scroll"
+    "Weapon",
+    "Wondrous Item"
   ];
 
 export function loadFile(fileName) {

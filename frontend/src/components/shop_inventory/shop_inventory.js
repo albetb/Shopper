@@ -60,7 +60,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
         />
       </td>
       <td className='action-size'>
-        <button className='levels-button' onClick={handleAddItemClick}>
+        <button className='item-number-button' onClick={handleAddItemClick}>
           +
         </button>
       </td>
@@ -83,6 +83,11 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem, onAddItem }) =
   const cityLabel = () => {
     const trimLength = isMobile() ? 26 : 40;
     return `${cityName && "from "}${trimLine(cityName, trimLength)}`;
+  };
+
+  const abbreviateLabel = (itemName) => {
+    // Check if the itemName is "Wondrous Item" and abbreviate accordingly
+    return isMobile() && itemName === "Wondrous Item" ? "W. Item" : itemName;
   };
 
   const handleDeleteItemClick = (itemName, itemType) => {
@@ -122,10 +127,10 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem, onAddItem }) =
                     item.Name
                   )}
                 </td>
-                <td>{item.ItemType}</td>
+                <td>{abbreviateLabel(item.ItemType)}</td>
                 <td>{item.Cost}</td>
                 <td>
-                  <button className='levels-button' onClick={() => handleDeleteItemClick(item.Name, item.ItemType)}>
+                  <button className='item-number-button' onClick={() => handleDeleteItemClick(item.Name, item.ItemType)}>
                     -
                   </button>
                 </td>
