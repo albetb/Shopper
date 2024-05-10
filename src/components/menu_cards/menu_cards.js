@@ -13,11 +13,11 @@ const MenuCards = ({ props }) => {
   ]);
 
   useEffect(() => {
-    const isWorldCollapsed = JSON.parse(localStorage.getItem(`is_world_collapsed`)) || false;
+    const isWorldCollapsed = JSON.parse(localStorage.getItem('is_world_collapsed')) || false;
     setCardCollapsed(1, isWorldCollapsed);
-    const isCityCollapsed = JSON.parse(localStorage.getItem(`is_city_collapsed`)) || false;
+    const isCityCollapsed = JSON.parse(localStorage.getItem('is_city_collapsed')) || false;
     setCardCollapsed(2, isCityCollapsed);
-    const isShopCollapsed = JSON.parse(localStorage.getItem(`is_shop_collapsed`)) || false;
+    const isShopCollapsed = JSON.parse(localStorage.getItem('is_shop_collapsed')) || false;
     setCardCollapsed(3, isShopCollapsed);
   }, []);
   
@@ -42,16 +42,16 @@ const MenuCards = ({ props }) => {
     setCardStates((prevStates) => {
       return prevStates.map((cardState) => {
         if (cardState.id === cardId) {
-          let cardName = "";
+          let cardName = '';
           switch (cardId) {
             case 1:
-              cardName = "world";
+              cardName = 'world';
               break;
             case 2:
-              cardName = "city";
+              cardName = 'city';
               break;
             case 3:
-              cardName = "shop";
+              cardName = 'shop';
               break;
             default:
               return { ...cardState, collapsed: !cardState.collapsed };
@@ -80,13 +80,13 @@ const MenuCards = ({ props }) => {
     const trimLength = isMobile() ? 23 : 10;
     const formatText = (name, lv) => ` - ${trimLine(name, trimLength)} - Lv: ${lv}`;
   
-    if (cardId == 1 && props.savedWorlds && props.savedWorlds.length > 0) {
+    if (cardId === 1 && props.savedWorlds && props.savedWorlds.length > 0) {
       return `${cardTitle}${formatText(props.savedWorlds[0], props.playerLevel)}`;
     }
-    else if (cardId == 2 && props.savedCities && props.savedCities.length > 0) {
+    else if (cardId === 2 && props.savedCities && props.savedCities.length > 0) {
       return `${cardTitle}${formatText(props.savedCities[0], props.cityLevel)}`;
     }
-    else if (cardId == 3 && props.savedShops && props.savedShops.length > 0) {
+    else if (cardId === 3 && props.savedShops && props.savedShops.length > 0) {
       return `${cardTitle}${formatText(props.savedShops[0], props.shopLevel)}`;
     }
   
@@ -119,26 +119,26 @@ const MenuCards = ({ props }) => {
     onReputationChange: props.onReputationChange,
     shopTypes: props.shopTypes ?? [],
     selectedShopType: props.selectedShopType,
-    onShopTypeChanged: props.onShopTypeChanged,
+    onShopTypeChange: props.onShopTypeChange,
     onCreateShop: props.onCreateShop
   };
 
   return (
-          <div className="cards">
+          <div className='cards'>
             {cards.map(card => cardContentVisible(card.id) && (
               <div className={`card ${cardStates.find(c => c.id === card.id).collapsed ? 'collapsed' : ''}`} key={card.id}>
-                <div className="card-side-div card-expand-div">
-                  <h3 className="card-title">{cardTitle(card.id, card.title)}</h3>
-                  <button className="collapse-button" onClick={() => toggleCard(card.id)}>
-                    <span className="material-symbols-outlined">
+                <div className='card-side-div card-expand-div'>
+                  <h3 className='card-title'>{cardTitle(card.id, card.title)}</h3>
+                  <button className='collapse-button' onClick={() => toggleCard(card.id)}>
+                    <span className='material-symbols-outlined'>
                       {!cardStates.find(c => c.id === card.id).collapsed ? 
-                        ( "expand_less" ) : ( "expand_more" )
+                        ( 'expand_less' ) : ( 'expand_more' )
                       }
                     </span>
                   </button>
                 </div>
                 {!cardStates.find(c => c.id === card.id).collapsed && (
-                  <div className="card-content">
+                  <div className='card-content'>
                     {card.id === 1 && <MenuCardWorld props={menuCardWorldProps}/>}
                     {card.id === 2 && <MenuCardCity props={menuCardCityProps}/>}
                     {card.id === 3 && <MenuCardShop props={menuCardShopProps}/>}

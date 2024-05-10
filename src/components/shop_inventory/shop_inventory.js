@@ -23,7 +23,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
     <tr className='add-item'>
       <td className='number-size'>
         <input
-          type="number"
+          type='number'
           value={number}
           onChange={(e) => setNumber(e.target.value)}
           className='number-size modern-input'
@@ -31,8 +31,8 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
       </td>
       <td className='name-size'>
         <input
-          type="text"
-          placeholder="Item name"
+          type='text'
+          placeholder='Item name'
           value={itemName}
           onChange={(e) => setItemName(e.target.value)}
           className='name-size modern-input'
@@ -53,7 +53,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
       </td>
       <td className='cost-size'>
         <input
-          type="number"
+          type='number'
           value={cost}
           onChange={(e) => setCost(e.target.value)}
           className='cost-size modern-input'
@@ -82,12 +82,12 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem, onAddItem }) =
 
   const cityLabel = () => {
     const trimLength = isMobile() ? 26 : 40;
-    return `${cityName && "from "}${trimLine(cityName, trimLength)}`;
+    return `${cityName && 'from '}${trimLine(cityName, trimLength)}`;
   };
 
   const abbreviateLabel = (itemName) => {
-    // Check if the itemName is "Wondrous Item" and abbreviate accordingly
-    return isMobile() && itemName === "Wondrous Item" ? "W. Item" : itemName;
+    // Check if the itemName is 'Wondrous Item' and abbreviate accordingly
+    return isMobile() && itemName === 'Wondrous Item' ? 'W. Item' : itemName;
   };
 
   const handleDeleteItemClick = (itemName, itemType) => {
@@ -120,7 +120,7 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem, onAddItem }) =
                 <td className='align-right'>{item.Number}</td>
                 <td>
                   {item.Link ? (
-                    <a href={item.Link} target="_blank" rel="noopener noreferrer">
+                    <a href={item.Link} target='_blank' rel='noopener noreferrer'>
                       {item.Name}
                     </a>
                   ) : (

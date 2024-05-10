@@ -15,14 +15,14 @@ const LevelComponent = ({ props }) => {
 
   return (
             <>
-              <div className="card-side-div margin-top">
-                  <label className="modern-label">{props.levelName}:</label>
+              <div className='card-side-div margin-top'>
+                  <label className='modern-label'>{props.levelName}:</label>
                   <div className='levels-div'>
-                      <button className="levels-button" onClick={handleLevelDecrement}>-</button>
+                      <button className='levels-button' onClick={handleLevelDecrement}>-</button>
                       <div className='level-frame'> 
-                          <label className="level-text">{props.level}</label>
+                          <label className='level-text'>{props.level}</label>
                       </div>
-                      <button className="levels-button" onClick={handleLevelIncrement}>+</button>
+                      <button className='levels-button' onClick={handleLevelIncrement}>+</button>
                   </div>
               </div>
             </>

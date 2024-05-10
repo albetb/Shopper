@@ -12,9 +12,9 @@ const SelectComponent = ({ props }) => {
 
   return (
     <>
-      <div className="card-side-div">
+      <div className='card-side-div'>
         <select
-          className="modern-dropdown"
+          className='modern-dropdown'
           onChange={handleDropdownChange}
           value={props.saved[0]}
           disabled={props.saved.length === 0} // Disable the dropdown if it has zero elements
@@ -26,12 +26,12 @@ const SelectComponent = ({ props }) => {
               </option>
             ))
           ) : (
-            <option value="" disabled>
+            <option value='' disabled>
               Create a {props.tabName}
             </option>
           )}
         </select>
-        <button className="modern-button" onClick={handleNewClick}>
+        <button className='modern-button' onClick={handleNewClick}>
           New {props.tabName}
         </button>
       </div>

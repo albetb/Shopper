@@ -1,8 +1,8 @@
-import { loadFile, shopNames } from './utils';
+import { loadFile, shopTypes } from './utils';
 import { newRandomItem } from './item';
 
 class Shop {
-    constructor(shopName, shopLevel = 0, cityLevel = 0, partyLevel = 1, reputation = 0, template = "") {
+    constructor(shopName, shopLevel = 0, cityLevel = 0, partyLevel = 1, reputation = 0, template = '') {
         this.shopName = shopName;
         this.shopLevel = Math.max(0, Math.min(10, parseFloat(shopLevel).toFixed(2)));
         this.cityLevel = Math.max(0, Math.min(5, parseInt(cityLevel)));
@@ -16,24 +16,24 @@ class Shop {
     }
 
     async template(template) {
-        const tables = loadFile("tables");
-        const typeNames = shopNames(true);
-        this.shopType = typeNames.includes(template) ? template : "";
-        const shop = tables["Shop Types"].find(type => type.Name === this.shopType);
+        const tables = loadFile('tables');
+        const typeNames = shopTypes(true);
+        this.shopType = typeNames.includes(template) ? template : '';
+        const shop = tables['Shop Types'].find(type => type.Name === this.shopType);
         if (!shop) {
             // Handle case where shop type is not found
             return;
         }
-        this.shopLevel = Math.max(this.shopLevel, shop["Min level"]);
+        this.shopLevel = Math.max(this.shopLevel, shop['Min level']);
         this.gold = this.baseGold(this.partyLevel, this.shopLevel);
         this.itemMod = shop.Modifier;
-        if (shop["Arcane Chance"]) {
-            this.arcaneChance = shop["Arcane Chance"];
+        if (shop['Arcane Chance']) {
+            this.arcaneChance = shop['Arcane Chance'];
         }
-        if ("Weapon" in this.itemMod && this.itemMod.Weapon > 0) {
+        if ('Weapon' in this.itemMod && this.itemMod.Weapon > 0) {
             this.itemMod.Ammo = this.itemMod.Weapon * 0.6;
         }
-        if ("Armor" in this.itemMod && this.itemMod.Armor > 0) {
+        if ('Armor' in this.itemMod && this.itemMod.Armor > 0) {
             this.itemMod.Shield = this.itemMod.Armor * 0.4;
         }
         this.generateInventory();
@@ -116,8 +116,8 @@ class Shop {
     }
 
     validJson(data) {
-        if (!data || typeof data !== "object") return false;
-        const requiredKeys = ["Name", "Shop", "City", "Party", "Reputation", "Stock", "Gold", "Time", "Arcane", "Type", "Modifier"];
+        if (!data || typeof data !== 'object') return false;
+        const requiredKeys = ['Name', 'Shop', 'City', 'Party', 'Reputation', 'Stock', 'Gold', 'Time', 'Arcane', 'Type', 'Modifier'];
         return requiredKeys.every(key => key in data);
     }
 

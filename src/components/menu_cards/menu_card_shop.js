@@ -12,7 +12,7 @@ const MenuCardShop = ({ props }) => {
   };
 
   const handleShopTypeChange = (event) => {
-    props.onShopTypeChanged(event.target.value);
+    props.onShopTypeChange(event.target.value);
   };
 
   const handleGenerateInventory = () => {
@@ -21,27 +21,27 @@ const MenuCardShop = ({ props }) => {
 
   const createComponentProps = {
     saved: props.savedShops,
-    tabName: "shop",
+    tabName: 'shop',
     onNew: props.onNewShop,
     setIsVisible: setIsVisible
   };
 
   const selectComponentProps = {
     saved: props.savedShops,
-    tabName: "shop",
+    tabName: 'shop',
     setIsVisible: setIsVisible,
     onSelect: props.onSelectShop
   };
 
   const shopLevelComponentProps = {
     level: props.shopLevel,
-    levelName: "Shop level",
+    levelName: 'Shop level',
     onLevelChange: props.onShopLevelChange
   };
 
   const reputationLevelComponentProps = {
     level: props.reputation,
-    levelName: "Reputation",
+    levelName: 'Reputation',
     onLevelChange: props.onReputationChange
   };
 
@@ -56,10 +56,10 @@ const MenuCardShop = ({ props }) => {
                       <>
                         <LevelComponent props={shopLevelComponentProps}/>
                         <LevelComponent props={reputationLevelComponentProps}/>
-                        <div className="card-side-div margin-top">
-                          <label className="modern-label">Shop Type:</label>
+                        <div className='card-side-div margin-top'>
+                          <label className='modern-label'>Shop Type:</label>
                           <select
-                            className="modern-dropdown"
+                            className='modern-dropdown'
                             value={props.selectedShopType}
                             onChange={handleShopTypeChange}
                           >
@@ -70,8 +70,8 @@ const MenuCardShop = ({ props }) => {
                             ))}
                           </select>
                         </div>
-                        <div className="card-side-div margin-top">
-                          <button className="modern-button" onClick={handleGenerateInventory}>Generate</button>
+                        <div className='card-side-div margin-top'>
+                          <button className='modern-button' onClick={handleGenerateInventory}>Generate</button>
                         </div>
                       </>
                     )}

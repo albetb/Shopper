@@ -1,32 +1,32 @@
-import items from '../appData/items.json';
-import scrolls from '../appData/scrolls.json';
-import tables from '../appData/tables.json';
+import items from '../app_data/items.json';
+import scrolls from '../app_data/scrolls.json';
+import tables from '../app_data/tables.json';
 
 export const itemTypes = [
-    "Ammo",
-    "Armor",
-    "Good",
-    "Magic Armor",
-    "Magic Weapon",
-    "Potion",
-    "Ring",
-    "Rod",
-    "Scroll",
-    "Shield",
-    "Staff",
-    "Wand",
-    "Weapon",
-    "Wondrous Item"
+    'Ammo',
+    'Armor',
+    'Good',
+    'Magic Armor',
+    'Magic Weapon',
+    'Potion',
+    'Ring',
+    'Rod',
+    'Scroll',
+    'Shield',
+    'Staff',
+    'Wand',
+    'Weapon',
+    'Wondrous Item'
   ];
 
 export function loadFile(fileName) {
     try {
         switch(fileName) {
-            case "items":
+            case 'items':
                 return items;
-            case "scrolls":
+            case 'scrolls':
                 return scrolls;
-            case "tables":
+            case 'tables':
                 return tables;
             default:
                 return null
@@ -49,12 +49,14 @@ export function weightedRandom(weights) {
 }
 
 export function cap(string) {
+    if (typeof string !== 'string' || string.length === 0)
+        return '';
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export function shopNames() {
-    const tables = loadFile("tables");
-    return tables["Shop Types"].map(item => item.Name);
+export function shopTypes() {
+    const tables = loadFile('tables');
+    return tables['Shop Types'].map(item => item.Name);
 }
 
 export function isMobile() {
@@ -64,8 +66,17 @@ export function isMobile() {
 
 export function trimLine(string, endLine = 11) {
     if (string){
-        const dot = string.length > endLine ? "…" : "";
+        const dot = string.length > endLine ? '…' : '';
         return `${string.slice(0, endLine)}${dot}`;
     }
     return string;
+}
+
+export function extendArrayPrototype() {
+    Array.prototype.empty = function() {
+        return this.length === 0;
+    };
+    Array.prototype.any = function() {
+        return this.length > 0;
+    };
 }

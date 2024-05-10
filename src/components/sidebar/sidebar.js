@@ -7,15 +7,15 @@ const Sidebar = ({ props }) => {
     <div>
       <div className={`sidebar ${props.isSidebarCollapsed ? 'collapsed' : ''}`}>
 
-        <button className="toggle-button" onClick={props.toggleSidebar}>
-          <span className="material-symbols-outlined">
+        <button className='toggle-button' onClick={props.toggleSidebar}>
+          <span className='material-symbols-outlined'>
             {!props.isSidebarCollapsed ?
-            ( "arrow_back" ) : ( "arrow_forward" )}
+            ( 'arrow_back' ) : ( 'arrow_forward' )}
           </span>
         </button>
         
         {!props.isSidebarCollapsed && (
-          <div className="content">
+          <div className='content'>
             <MenuCards props={props}/>
           </div>
         )}

@@ -13,21 +13,21 @@ const MenuCardWorld = ({ props }) => {
   
   const createComponentProps = {
     saved: props.savedWorlds,
-    tabName: "world",
+    tabName: 'world',
     onNew: props.onNewWorld,
     setIsVisible: setIsVisible
   };
   
   const selectComponentProps = {
     saved: props.savedWorlds,
-    tabName: "world",
+    tabName: 'world',
     setIsVisible: setIsVisible,
     onSelect: props.onSelectWorld
   };
   
     const levelComponentProps = {
       level: props.playerLevel,
-      levelName: "Player level",
+      levelName: 'Player level',
       onLevelChange: props.onPlayerLevelChange
     };
   

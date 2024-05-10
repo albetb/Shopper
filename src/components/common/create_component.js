@@ -16,14 +16,14 @@ const CreateComponent = ({ props }) => {
 
   return (
             <>
-              <div className="card-side-div">
-                <input className="modern-dropdown"
-                  type="text"
+              <div className='card-side-div'>
+                <input className='modern-dropdown'
+                  type='text'
                   placeholder={placeholder()}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   />
-                <button className="modern-button" onClick={handleOkClick}>Ok</button>
+                <button className='modern-button' onClick={handleOkClick}>Ok</button>
               </div>
             </>
           );
