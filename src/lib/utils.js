@@ -71,12 +71,12 @@ export function trimLine(string, endLine = 11) {
     }
     return string;
 }
-
-export function extendArrayPrototype() {
-    Array.prototype.empty = function() {
-        return this.length === 0;
-    };
-    Array.prototype.any = function() {
-        return this.length > 0;
-    };
+  
+export function order(list, element) {
+    if (list.length > 0){
+        list = list.filter(item => item !== element);
+        list.sort();
+        return [element].concat(list);
+    }
+    return [element];
 }

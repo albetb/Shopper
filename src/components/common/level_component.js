@@ -4,12 +4,12 @@ import '../../style/menu_cards.css';
 const LevelComponent = ({ props }) => {  
   
   const handleLevelIncrement = () => {
-    const level = parseInt(props.level);
+    const level = props.level;
     props.onLevelChange(level + 1);
   };
   
   const handleLevelDecrement = () => {
-    const level = parseInt(props.level);
+    const level = props.level;
     props.onLevelChange(level - 1);
   };
 

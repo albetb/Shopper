@@ -3,7 +3,7 @@ import { cap } from './utils';
   //#region get
 
 export function getWorlds() {
-    return JSON.parse(localStorage.getItem('saved_worlds')) || [];
+    return JSON.parse(localStorage.getItem('worlds')) || [];
 }
 
 export function getPlayerLevel(world) {
@@ -11,7 +11,7 @@ export function getPlayerLevel(world) {
 }
 
 export function getCities(world) {
-    return JSON.parse(localStorage.getItem(`saved_cities_${world}`)) || [];
+    return JSON.parse(localStorage.getItem(`cities_${world}`)) || [];
 }
 
 export function getCityLevel(world, city) {
@@ -19,7 +19,7 @@ export function getCityLevel(world, city) {
 }
 
 export function getShops(world, city) {
-    return JSON.parse(localStorage.getItem(`saved_shops_${world}_${city}`)) || [];
+    return JSON.parse(localStorage.getItem(`shops_${world}_${city}`)) || [];
 }
 
 export function getShopLevel(world, city, shop) {
@@ -43,7 +43,7 @@ export function getInventory(world, city, shop) {
 //#region set
 
 export function setWorlds(value) {
-    localStorage.setItem('saved_worlds', JSON.stringify(value));
+    localStorage.setItem('worlds', JSON.stringify(value));
 }
 
 export function setPlayerLevel(world, value) {
@@ -51,7 +51,7 @@ export function setPlayerLevel(world, value) {
 }
 
 export function setCities(world, value) {
-    localStorage.setItem(`saved_cities_${cap(world)}`, JSON.stringify(value));
+    localStorage.setItem(`cities_${cap(world)}`, JSON.stringify(value));
 }
 
 export function setCityLevel(world, city, value) {
@@ -59,7 +59,7 @@ export function setCityLevel(world, city, value) {
 }
 
 export function setShops(world, city, value) {
-    localStorage.setItem(`saved_shops_${cap(world)}_${cap(city)}`, JSON.stringify(value))
+    localStorage.setItem(`shops_${cap(world)}_${cap(city)}`, JSON.stringify(value))
 }
 
 export function setShopLevel(world, city, shop, value) {
