@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../../style/menu_cards.css';
 
 const CreateComponent = ({ props }) => {
@@ -15,18 +15,18 @@ const CreateComponent = ({ props }) => {
   };
 
   return (
-            <>
-              <div className='card-side-div'>
-                <input className='modern-dropdown'
-                  type='text'
-                  placeholder={placeholder()}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  />
-                <button className='modern-button' onClick={handleOkClick}>Ok</button>
-              </div>
-            </>
-          );
+    <>
+      <div className='card-side-div'>
+        <input className='modern-dropdown'
+          type='text'
+          placeholder={placeholder()}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <button className='modern-button' onClick={handleOkClick}>Ok</button>
+      </div>
+    </>
+  );
 }
 
 export default CreateComponent;

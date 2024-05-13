@@ -17,11 +17,11 @@ export const itemTypes = [
     'Wand',
     'Weapon',
     'Wondrous Item'
-  ];
+];
 
 export function loadFile(fileName) {
     try {
-        switch(fileName) {
+        switch (fileName) {
             case 'items':
                 return items;
             case 'scrolls':
@@ -30,7 +30,7 @@ export function loadFile(fileName) {
                 return tables;
             default:
                 return null
-          }
+        }
     } catch (error) {
         return null;
     }
@@ -65,15 +65,15 @@ export function isMobile() {
 }
 
 export function trimLine(string, endLine = 11) {
-    if (string){
+    if (string) {
         const dot = string.length > endLine ? '…' : '';
         return `${string.slice(0, endLine)}${dot}`;
     }
     return string;
 }
-  
+
 export function order(list, element) {
-    if (list.length > 0){
+    if (list.length > 0) {
         list = list.filter(item => item !== element);
         list.sort();
         return [element].concat(list);

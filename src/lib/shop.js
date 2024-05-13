@@ -1,92 +1,203 @@
-import { loadFile, shopTypes } from './utils';
+import { loadFile, shopTypes, cap } from './utils';
 import { newRandomItem } from './item';
 
+const BASE_ARCANE_CHANCE = 0.7;
+const REQUIRED_KEYS = ['Name', 'Level', 'CityLevel', 'PlayerLevel', 'Reputation', 'Stock', 'Gold', 'Time', 'ArcaneChance', 'ShopType', 'ItemModifier'];
+
 class Shop {
-    constructor(shopName, shopLevel = 0, cityLevel = 0, partyLevel = 1, reputation = 0, template = '') {
-        this.shopName = shopName;
-        this.shopLevel = Math.max(0, Math.min(10, parseFloat(shopLevel).toFixed(2)));
-        this.cityLevel = Math.max(0, Math.min(5, parseInt(cityLevel)));
-        this.partyLevel = Math.max(1, Math.min(20, parseInt(partyLevel)));
-        this.reputation = Math.max(-10, Math.min(10, parseFloat(reputation).toFixed(2)));
-        this.stock = [];
-        this.gold = 0;
-        this.hoursCounter = 0;
-        this.arcaneChance = 0.7;
-        this.template(template);
+    constructor(shopName = '', cityLevel = 0, playerLevel = 1) {
+        this.Name = shopName;
+        this.Gold = 0;
+        this.setShopLevel(0);
+        this.setCityLevel(cityLevel);
+        this.setPlayerLevel(playerLevel);
+        this.setReputation(0);
+        this.Stock = [];
+        this.Time = 0;
+        this.ArcaneChance = BASE_ARCANE_CHANCE;
+        this.template();
     }
 
-    async template(template) {
+    template() {
         const tables = loadFile('tables');
-        const typeNames = shopTypes(true);
-        this.shopType = typeNames.includes(template) ? template : '';
-        const shop = tables['Shop Types'].find(type => type.Name === this.shopType);
-        if (!shop) {
-            // Handle case where shop type is not found
-            return;
-        }
-        this.shopLevel = Math.max(this.shopLevel, shop['Min level']);
-        this.gold = this.baseGold(this.partyLevel, this.shopLevel);
-        this.itemMod = shop.Modifier;
-        if (shop['Arcane Chance']) {
-            this.arcaneChance = shop['Arcane Chance'];
-        }
-        if ('Weapon' in this.itemMod && this.itemMod.Weapon > 0) {
-            this.itemMod.Ammo = this.itemMod.Weapon * 0.6;
-        }
-        if ('Armor' in this.itemMod && this.itemMod.Armor > 0) {
-            this.itemMod.Shield = this.itemMod.Armor * 0.4;
-        }
-        this.generateInventory();
+        const shop = tables['Shop Types'].find(type => type.Name === (this.ShopType ?? ''));
+
+        this.ShopType = shop.Name;
+        this.Level = Math.max(this.Level, shop['Min level']);
+        this.Gold = this.baseGold(this.PlayerLevel, this.Level);
+        this.ItemModifier = shop.Modifier;
+        this.ArcaneChance = shop['Arcane Chance'] ?? BASE_ARCANE_CHANCE;
+        this.ItemModifier.Ammo = (this.ItemModifier.Weapon ?? 0) * 0.6;
+        this.ItemModifier.Shield = (this.ItemModifier.Armor ?? 0) * 0.4;
     }
 
-    deserialize(fileName) {
-        const data = loadFile(fileName);
-        if (!this.validJson(data)) return false;
-        this.shopName = data.shopName;
-        this.shopLevel = data.Shop;
-        this.cityLevel = data.City;
-        this.partyLevel = data.Party;
-        this.reputation = data.Reputation;
-        this.stock = data.Stock;
-        this.gold = data.Gold;
-        this.hoursCounter = data.Time;
-        this.arcaneChance = data.Arcane;
-        this.shopType = data.Type;
-        this.itemMod = data.Modifier;
+    deserialize(data) {
+        if (!REQUIRED_KEYS.every(key => data.hasOwnProperty(key))) {
+            return false;
+        }
+
+        this.Name = data.Name;
+        this.Level = data.Level;
+        this.CityLevel = data.CityLevel;
+        this.PlayerLevel = data.PlayerLevel;
+        this.Reputation = data.Reputation;
+        this.Stock = data.Stock;
+        this.Gold = data.Gold;
+        this.Time = data.Time;
+        this.ArcaneChance = data.ArcaneChance;
+        this.ShopType = data.ShopType;
+        this.ItemModifier = data.ItemModifier;
         return true;
     }
 
-    async generateInventory() {
-        this.stock = [];
-        for (const key in this.itemMod) {
+    generateInventory() {
+        this.Stock = [];
+        for (const key in this.ItemModifier) {
             for (let i = 0; i < this.modItemNumber(key); i++) {
-                const newItem = newRandomItem(key, this.shopLevel, this.partyLevel, this.arcaneChance);
+                const newItem = newRandomItem(key, this.Level, this.PlayerLevel, this.ArcaneChance);
                 this.addItem(newItem, key);
             }
         }
-        const invValue = () => this.stock.reduce((total, item) => total + item.Cost, 0) * 0.95;
+        const invValue = () => this.Stock.reduce((total, item) => total + item.Cost, 0) * 0.95;
         this.sortByCost();
-        while (invValue() > this.gold - 100) {
-            if (this.stock.length > 0) {
-                this.stock.pop();
+        while (invValue() > this.Gold - 100) {
+            if (this.Stock.length > 0) {
+                this.Stock.pop();
             }
         }
-        this.gold -= invValue();
+        this.Gold -= invValue();
         this.sortByType();
     }
 
     getInventory() {
-        let displayedInventory = this.stock;
-        for (let item of displayedInventory){
-            item.Cost = this.trueCost(item, true);
+        return this.Stock.map(item => ({
+            ...item,
+            Cost: this.trueCost(item, true)
+        }));
+    }
+
+    baseGold(PlayerLevel, Level) {
+        return Math.floor(1000 * Math.pow(PlayerLevel, 1.5) * Math.pow(1.1, Level));
+    }
+
+    sortByType() {
+        this.Stock.sort((a, b) => a.Name.localeCompare(b.Name));
+        this.Stock.sort((a, b) => a.ItemType.localeCompare(b.ItemType));
+    }
+
+    sortByCost() {
+        this.Stock.sort((a, b) => a.Cost - b.Cost);
+    }
+
+    setPlayerLevel(lv) {
+        const partyLv = this.PlayerLevel;
+        this.PlayerLevel = Math.max(1, Math.min(99, parseInt(lv)));
+        const oldGold = this.baseGold(partyLv, this.Level);
+        const newGold = this.baseGold(this.PlayerLevel, this.Level);
+        this.Gold += newGold - oldGold;
+    }
+
+    setCityLevel(lv) {
+        this.CityLevel = Math.max(0, Math.min(5, lv));
+    }
+
+    setShopLevel(lv) {
+        const shopLv = this.Level ?? 0;
+        this.Level = Math.max(0, Math.min(10, lv));
+        const oldGold = this.baseGold(this.PlayerLevel, shopLv);
+        const newGold = this.baseGold(this.PlayerLevel, lv);
+        this.Gold += newGold - oldGold;
+    }
+
+    setReputation(rep) {
+        this.Reputation = Math.max(-10, Math.min(10, rep));;
+    }
+
+    setShopType(shopType) {
+        this.ShopType = shopTypes().includes(shopType) ? shopType : '';
+    }
+
+    passingTime(hours = 0, days = 0) {
+        for (let i = 0; i < hours + days * 24; i++) {
+            this.Time++;
+            // Invest some Gold and gain levels
+            if (this.Gold > this.baseGold(this.PlayerLevel, this.Level)) {
+                this.Gold *= 0.9;
+                this.setShopLevel(this.Level + 0.01 * (10 - this.Level));
+            }
+            // Spend a little amount of Gold per day
+            this.Gold -= Math.random() < 0.66 ? 0 : 1;
+            this.sellSomething();
+            // ReStock items every day
+            if (this.Time % 24 === 0)
+                this.reStock();
         }
-        return displayedInventory;
+    }
+
+    sell(itemName, itemType) {
+        let updatedInventory = [...this.Stock];
+        const itemIndex = updatedInventory.findIndex(
+            (item) => item.Name === cap(itemName) && item.ItemType === itemType
+        );
+
+        if (itemIndex === -1) return;
+
+        const updatedItem = { ...updatedInventory[itemIndex] };
+        updatedItem.Number = Math.max(0, updatedItem.Number - 1);
+        updatedInventory[itemIndex] = updatedItem;
+
+        this.Gold += this.trueCost(updatedItem);
+        this.Stock = updatedInventory;
+    }
+
+    sellSomething() {
+        const itemNumber = this.getInventory().reduce((acc, item) => acc + item.Number, 0);
+        if (Math.random() >= itemNumber / 10) return; // If have < 10 items, may sell nothing
+        const num = Math.floor(Math.random() * Math.max(itemNumber / 10, 1));
+        for (let i = 0; i < num; i++) {
+            const itemsPossessed = this.Stock.filter(item => item.Number > 0);
+            const item = { ...itemsPossessed[Math.floor(Math.random() * itemsPossessed.length)] };
+            for (let selledItem of this.Stock) {
+                if (selledItem.Name === item.Name) {
+                    selledItem.Number -= 1;
+                    this.Gold += selledItem.Cost;
+                }
+            }
+        }
+    }
+
+    buy(itemName, itemType, cost = 1, number = 1) {
+        if (itemName.trim() === '' || number <= 0) return;
+        let updatedInventory = [...this.Stock];
+        const itemIndex = updatedInventory.findIndex(
+            (item) => item.Name === cap(itemName) && item.ItemType === itemType
+        );
+
+        if (itemIndex !== -1) {
+            const updatedItem = { ...updatedInventory[itemIndex] };
+            updatedItem.Number += parseInt(number);
+            updatedInventory[itemIndex] = updatedItem;
+        } else {
+            const newItem = {
+                Name: cap(itemName),
+                ItemType: itemType,
+                Cost: parseInt(Math.max(cost, 1)),
+                Number: parseInt(number),
+                PriceModifier: 0
+            };
+            updatedInventory.push(newItem);
+        }
+
+        // Add gold payment logic
+
+        this.Stock = updatedInventory;
+        this.sortByType();
     }
 
     addItem(addedItem, itemType) {
         if (addedItem && addedItem.Cost !== undefined) {
             let found = false;
-            for (let item of this.stock) {
+            for (let item of this.Stock) {
                 if (item.Name === addedItem.Name) {
                     item.Number += 1;
                     found = true;
@@ -97,115 +208,20 @@ class Shop {
                 addedItem.PriceModifier = Math.floor(Math.random() * 41) - 20;
                 addedItem.Number = 1;
                 addedItem.ItemType = itemType;
-                this.stock.push(addedItem);
+                this.Stock.push(addedItem);
             }
         }
     }
 
-    baseGold(partyLevel, shopLevel) {
-        return Math.floor(1000 * Math.pow(partyLevel, 1.5) * Math.pow(1.1, shopLevel));
-    }
-
-    sortByType() {
-        this.stock.sort((a, b) => a.Name.localeCompare(b.Name));
-        this.stock.sort((a, b) => a.ItemType.localeCompare(b.ItemType));
-    }
-
-    sortByCost() {
-        this.stock.sort((a, b) => a.Cost - b.Cost);
-    }
-
-    validJson(data) {
-        if (!data || typeof data !== 'object') return false;
-        const requiredKeys = ['Name', 'Shop', 'City', 'Party', 'Reputation', 'Stock', 'Gold', 'Time', 'Arcane', 'Type', 'Modifier'];
-        return requiredKeys.every(key => key in data);
-    }
-
-    addShopLevel(lv) {
-        const shopLv = this.shopLevel;
-        const lvSum = this.shopLevel + lv;
-        this.shopLevel = Math.round(Math.max(this.shopLevel, Math.min(10, lvSum)) * 100) / 100;
-        const oldGold = this.baseGold(this.partyLevel, shopLv);
-        const newGold = this.baseGold(this.partyLevel, this.shopLevel);
-        this.gold += newGold - oldGold;
-        if (parseInt(shopLv) !== parseInt(this.shopLevel)) {
-            console.log(`${this.shopName} has reached level ${parseInt(this.shopLevel)}!`);
-        }
-    }
-
-    addCityLevel(lv) {
-        this.cityLevel = Math.max(0, Math.min(5, this.cityLevel + lv));
-    }
-
-    addPartyLevel(lv) {
-        const partyLv = this.partyLevel;
-        const addLv = this.partyLevel + lv;
-        this.partyLevel = Math.max(this.partyLevel, Math.min(20, addLv));
-        const oldGold = this.baseGold(partyLv, this.shopLevel);
-        const newGold = this.baseGold(this.partyLevel, this.shopLevel);
-        this.gold += newGold - oldGold;
-    }
-
-    addReputation(rep) {
-        this.reputation = Math.round(Math.max(-10, Math.min(10, this.reputation + rep)) * 100) / 100;
-    }
-
-    passingTime(hours = 0, days = 0) {
-        for (let i = 0; i < hours + days * 24; i++) {
-            this.hoursCounter++;
-            // Invest some gold and gain levels
-            if (this.gold > this.baseGold(this.partyLevel, this.shopLevel)) {
-                this.gold *= 0.9;
-                this.addShopLevel(0.01 * (10 - this.shopLevel));
-            }
-            // Spend a little amount of gold per day
-            this.gold -= Math.random() < 0.66 ? 0 : 1;
-            // Restock items every 3 days
-            if (this.hoursCounter % (24 * 3) === 0) {
-                this.restock();
-            }
-            if (this.isOpen()) {
-                this.sellSomething();
-            }
-        }
-    }
-
-    sellSomething() {
-        const itemNumber = this.stock.reduce((acc, item) => acc + item.number, 0);
-        if (Math.random() < itemNumber / 10) { // If have < 10 items, may sell nothing
-            const num = Math.floor(Math.random() * Math.max(itemNumber / 10, 1));
-            for (let i = 0; i < num; i++) {
-                const itemsPossessed = this.stock.filter(item => item.number > 0);
-                const item = { ...itemsPossessed[Math.floor(Math.random() * itemsPossessed.length)] };
-                for (let selledItem of this.stock) {
-                    if (selledItem.name === item.Name) {
-                        selledItem.number -= 1;
-                        this.gold += this.trueCost(selledItem, false);
-                    }
-                }
-            }
-        }
-    }
-
-    isOpen() {
-        return (
-            this.hoursCounter % 24 > 8 && this.hoursCounter % 24 < 18 && // Opening time 9 - 18
-            this.hoursCounter % 24 !== 13 && // Lunch break 13 - 14
-            this.hoursCounter % 168 <= 144 // Day off every 7 days
-        );
-    }
-
-    restock() {
-        for (let key in this.itemMod) {
+    reStock() {
+        for (let key in this.ItemModifier) {
             const itemNumber = this.modItemNumber(key);
-            if (this.countItemType(key) < itemNumber) {
-                for (let i = 0; i < itemNumber - this.countItemType(key); i++) {
-                    const item = this.newItem(key, this.shopLevel, this.partyLevel, this.arcaneChance);
-                    if (item && item.Name && this.gold - 100 >= item.Cost * 0.95) {
-                        console.log(`Restocked: ${item.name}`);
-                        this.addItem(item, key);
-                        this.gold -= item.Cost * 0.95;
-                    }
+            if (this.countItemType(key) >= itemNumber) return;
+            for (let i = 0; i < itemNumber - this.countItemType(key); i++) {
+                const item = this.newItem(key, this.Level, this.PlayerLevel, this.ArcaneChance);
+                if (item && item.Name && this.Gold - 100 >= item.Cost * 0.95) {
+                    this.addItem(item, key);
+                    this.Gold -= item.Cost * 0.95;
                 }
             }
         }
@@ -213,20 +229,20 @@ class Shop {
     }
 
     countItemType(itemType) {
-        return this.stock.filter(item => item.itemType === itemType).reduce((acc, item) => acc + item.number, 0);
+        return this.Stock.filter(item => item.itemType === itemType).reduce((acc, item) => acc + item.number, 0);
     }
 
     modItemNumber(key) {
-        let num = this.itemMod[key];
-        num *= Math.pow(1.1, this.partyLevel);
-        num *= 1 + 0.1 * this.cityLevel;
-        num *= Math.pow(1.05, this.shopLevel);
+        let num = this.ItemModifier[key];
+        num *= Math.pow(1.1, this.PlayerLevel);
+        num *= 1 + 0.1 * this.CityLevel;
+        num *= Math.pow(1.05, this.Level);
         return Math.floor(num + (Math.random() < num - Math.floor(num) ? 1 : 0));
     }
 
     trueCost(item, forParty = true) {
-        const rep = forParty ? this.reputation * 2 : 0;
-        const mod = (100 + item.PriceModifier - rep + this.cityLevel) / 100;
+        const rep = forParty ? this.Reputation * 2 : 0;
+        const mod = (100 + item.PriceModifier - rep + this.CityLevel) / 100;
         let cost = Math.max((parseFloat(item.Cost) * mod), 0.01);
         const dec = cost < 100 ? 1 : (cost < 1000 ? 5 : 10);
         return cost < 1 ? cost.toFixed(2) : Math.round(cost / dec) * dec;

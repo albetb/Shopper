@@ -20,7 +20,7 @@ const MenuCards = ({ props }) => {
     const isShopCollapsed = JSON.parse(localStorage.getItem('is_shop_collapsed')) || false;
     setCardCollapsed(3, isShopCollapsed);
   }, []);
-  
+
   const setCardCollapsed = (cardId, isCollapsed) => {
     setCardStates((prevStates) => {
       return prevStates.map((cardState) => {
@@ -37,7 +37,7 @@ const MenuCards = ({ props }) => {
     { id: 2, title: 'City' },
     { id: 3, title: 'Shop' }
   ];
-  
+
   const toggleCard = (cardId) => {
     setCardStates((prevStates) => {
       return prevStates.map((cardState) => {
@@ -57,7 +57,7 @@ const MenuCards = ({ props }) => {
               return { ...cardState, collapsed: !cardState.collapsed };
           }
           localStorage.setItem(`is_${cardName}_collapsed`, !cardState.collapsed);
-  
+
           return { ...cardState, collapsed: !cardState.collapsed };
         }
         return cardState;
@@ -66,7 +66,7 @@ const MenuCards = ({ props }) => {
   };
 
   const cardContentVisible = (cardId) => {
-    switch (cardId){
+    switch (cardId) {
       case 2:
         return props.savedWorlds && props.savedWorlds.length > 0;
       case 3:
@@ -79,7 +79,7 @@ const MenuCards = ({ props }) => {
   const cardTitle = (cardId, cardTitle) => {
     const trimLength = isMobile() ? 23 : 10;
     const formatText = (name, lv) => ` - ${trimLine(name, trimLength)} - Lv: ${lv}`;
-  
+
     if (cardId === 1 && props.savedWorlds && props.savedWorlds.length > 0) {
       return `${cardTitle}${formatText(props.savedWorlds[0], props.playerLevel)}`;
     }
@@ -89,7 +89,7 @@ const MenuCards = ({ props }) => {
     else if (cardId === 3 && props.savedShops && props.savedShops.length > 0) {
       return `${cardTitle}${formatText(props.savedShops[0], props.shopLevel)}`;
     }
-  
+
     return cardTitle;
   };
 
@@ -118,36 +118,36 @@ const MenuCards = ({ props }) => {
     reputation: props.reputation,
     onReputationChange: props.onReputationChange,
     shopTypes: props.shopTypes ?? [],
-    selectedShopType: props.selectedShopType,
+    shopType: props.shopType,
     onShopTypeChange: props.onShopTypeChange,
     onCreateShop: props.onCreateShop
   };
 
   return (
-          <div className='cards'>
-            {cards.map(card => cardContentVisible(card.id) && (
-              <div className={`card ${cardStates.find(c => c.id === card.id).collapsed ? 'collapsed' : ''}`} key={card.id}>
-                <div className='card-side-div card-expand-div'>
-                  <h3 className='card-title'>{cardTitle(card.id, card.title)}</h3>
-                  <button className='collapse-button' onClick={() => toggleCard(card.id)}>
-                    <span className='material-symbols-outlined'>
-                      {!cardStates.find(c => c.id === card.id).collapsed ? 
-                        ( 'expand_less' ) : ( 'expand_more' )
-                      }
-                    </span>
-                  </button>
-                </div>
-                {!cardStates.find(c => c.id === card.id).collapsed && (
-                  <div className='card-content'>
-                    {card.id === 1 && <MenuCardWorld props={menuCardWorldProps}/>}
-                    {card.id === 2 && <MenuCardCity props={menuCardCityProps}/>}
-                    {card.id === 3 && <MenuCardShop props={menuCardShopProps}/>}
-                  </div>
-                )}
-              </div>
-            ))}
+    <div className='cards'>
+      {cards.map(card => cardContentVisible(card.id) && (
+        <div className={`card ${cardStates.find(c => c.id === card.id).collapsed ? 'collapsed' : ''}`} key={card.id}>
+          <div className='card-side-div card-expand-div'>
+            <h3 className='card-title'>{cardTitle(card.id, card.title)}</h3>
+            <button className='collapse-button' onClick={() => toggleCard(card.id)}>
+              <span className='material-symbols-outlined'>
+                {!cardStates.find(c => c.id === card.id).collapsed ?
+                  ('expand_less') : ('expand_more')
+                }
+              </span>
+            </button>
           </div>
-        );
+          {!cardStates.find(c => c.id === card.id).collapsed && (
+            <div className='card-content'>
+              {card.id === 1 && <MenuCardWorld props={menuCardWorldProps} />}
+              {card.id === 2 && <MenuCardCity props={menuCardCityProps} />}
+              {card.id === 3 && <MenuCardShop props={menuCardShopProps} />}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
 
 }
 

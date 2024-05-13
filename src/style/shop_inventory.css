@@ -1,171 +1,189 @@
 table {
-    width: 50vw;
-    border-collapse: collapse;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 2%;
-  }
-  
-  th, td {
-    padding: 14px 8px;
-    text-align: left;
-    color: #d5d5d5;
-  }
+  width: 50vw;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 2%;
+}
 
-  th {
-    border-bottom: 2px solid #ddd;
-  }
+th,
+td {
+  padding: 14px 8px;
+  text-align: left;
+  color: #d5d5d5;
+}
 
-  td {
-    border-top: 1px solid #dddddd7e;
-  }
+th {
+  border-bottom: 2px solid #ddd;
+}
 
-  tr {
-    font-size: 16px;
-    color: #d5d5d5;
-  }
+td {
+  border-top: 1px solid #dddddd7e;
+}
 
-  tr.add-item {
-    width: 50vw;
-    border-collapse: collapse;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 2%;
-    padding: 0 0 14px 0;
-  }
-  
-  th.number-size, td.align-right, td.number-size, input.number-size {
-    width: 2vw;
-    text-align: right;
-  }
-  
-  th.name-size, td.name-size, input.name-size {
-    width: 33vw;
-  }
-  
-  input.name-size {
-    width: 99%;
-  }
-  
-  th.type-size, td.type-size, select.type-size {
-    width: 7vw;
-  }
-  
-  th.cost-size, td.cost-size, input.cost-size {
-    width: 5vw;
-  }
-  
-  th.action-size, td.action-size, input.action-size {
-    width: 3vw;
-  }
+tr {
+  font-size: 16px;
+  color: #d5d5d5;
+}
 
-  a:link,
-  a:visited,
-  a:hover  {
-    text-decoration: underline;
-    color: #d5d5d5;
-  }
-  
-  /* Hover effect on table rows */
-  tr:hover {
-    transition: all 0.3s;
-  }
-  
-  h2 {
-    font-size: 24px;
-    color: #d5d5d5;
-    margin: 25px 0px 0px 0px;
-  }
-  
-  p {
-    font-size: 14px;
-    color: #d5d5d5;
-    margin: 15px 0px;
-  }
+tr.add-item {
+  width: 50vw;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 2%;
+  padding: 0 0 14px 0;
+}
 
-  .item-number-button, .add-item-button {
-    text-align: center;
-    text-decoration: none;
-    transition-duration: 0.3s;
-    box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25);
-    font-weight: bold;
-    background-color: #f9f9f9;
-    color: #333333;
-    border: 1px solid #c0c0c0;
-    cursor: pointer;
-    font-size: 14px;
-  }
+th.number-size,
+td.align-right,
+td.number-size,
+input.number-size {
+  width: 2vw;
+  text-align: right;
+}
 
-  .item-number-button {
-    height: 3.6vh;
-    width: 3vw;
-    border-radius: 1vh;
-  }
+th.name-size,
+td.name-size,
+input.name-size {
+  width: 33vw;
+}
 
-  .add-item-button {
-    height: 4.5vh;
-    width: 12vw;
-    border-radius: 1vh;
-    margin: 20px 0;
-  }
+input.name-size {
+  width: 99%;
+}
 
-  .modern-input {
-    outline: none;
-    padding-left: 4px;
-    height: 3.6vh;
-    background-color: #f9f9f9;
-    color: #333333;
-    border: 1px solid #c0c0c0;
-    border-radius: 1vh;
-    cursor: pointer;
-    font-size: 14px;
-  }
+th.type-size,
+td.type-size,
+select.type-size {
+  width: 7vw;
+}
 
-  select.modern-input {
-    height: 4.1vh;
-  }
+th.cost-size,
+td.cost-size,
+input.cost-size {
+  width: 5vw;
+}
+
+th.action-size,
+td.action-size,
+input.action-size {
+  width: 3vw;
+}
+
+a:link,
+a:visited,
+a:hover {
+  text-decoration: underline;
+  color: #d5d5d5;
+}
+
+/* Hover effect on table rows */
+tr:hover {
+  transition: all 0.3s;
+}
+
+h2 {
+  font-size: 24px;
+  color: #d5d5d5;
+  margin: 25px 0px 0px 0px;
+}
+
+p {
+  font-size: 14px;
+  color: #d5d5d5;
+  margin: 15px 0px;
+}
+
+.item-number-button,
+.add-item-button {
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25);
+  font-weight: bold;
+  background-color: #f9f9f9;
+  color: #333333;
+  border: 1px solid #c0c0c0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.item-number-button {
+  height: 3.6vh;
+  width: 3vw;
+  border-radius: 1vh;
+}
+
+.add-item-button {
+  height: 4.5vh;
+  width: 12vw;
+  border-radius: 1vh;
+  margin: 20px 0;
+}
+
+.modern-input {
+  outline: none;
+  padding-left: 4px;
+  height: 3.6vh;
+  background-color: #f9f9f9;
+  color: #333333;
+  border: 1px solid #c0c0c0;
+  border-radius: 1vh;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+select.modern-input {
+  height: 4.1vh;
+}
 
 
 @media (max-width: 768px) {
-    table {
-      width: 96vw;
-    }
-
-    tr.add-item {
-      width: 96vw;
-    }
-  
-    td.number-size, input.number-size {
-      width: 3vw;
-    }
-    
-    td.name-size, input.name-size {
-      width: 39vw;
-    }
-  
-    td.type-size, select.type-size {
-      width: 7vw;
-    }
-    
-    td.cost-size, input.cost-size {
-      width: 10vw;
-    }
-    
-    td.action-size, input.action-size {
-      width: 10vw;
-    }
-
-    tr {
-      font-size: 14px;
-    }
-
-    h2 {
-      font-size: 20px;
-    }
-    
-    .item-number-button {
-      width: 9vw;
-    }
-
-    .add-item-button {
-      width: 40vw;
-    }
+  table {
+    width: 96vw;
   }
+
+  tr.add-item {
+    width: 96vw;
+  }
+
+  td.number-size,
+  input.number-size {
+    width: 3vw;
+  }
+
+  td.name-size,
+  input.name-size {
+    width: 39vw;
+  }
+
+  td.type-size,
+  select.type-size {
+    width: 7vw;
+  }
+
+  td.cost-size,
+  input.cost-size {
+    width: 10vw;
+  }
+
+  td.action-size,
+  input.action-size {
+    width: 10vw;
+  }
+
+  tr {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .item-number-button {
+    width: 9vw;
+  }
+
+  .add-item-button {
+    width: 40vw;
+  }
+}

@@ -10,7 +10,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
 
   const handleAddItemClick = () => {
     // Call the onAddItem function with the details of the new item
-    onAddItem(number, itemName, itemType, cost);
+    onAddItem(itemName, itemType, cost, number);
     // Reset form fields
     setNumber(1);
     setItemName('');

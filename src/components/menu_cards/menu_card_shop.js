@@ -6,7 +6,7 @@ import '../../style/menu_cards.css';
 
 const MenuCardShop = ({ props }) => {
   const [isNewShopVisible, setIsNewShopVisible] = useState(false);
-  
+
   const setIsVisible = (isVisible) => {
     setIsNewShopVisible(isVisible);
   };
@@ -46,39 +46,39 @@ const MenuCardShop = ({ props }) => {
   };
 
   return (
+    <>
+      {isNewShopVisible ? (
+        <CreateComponent props={createComponentProps} />
+      ) : (
+        <>
+          <SelectComponent props={selectComponentProps} />
+          {props.savedShops.length > 0 && (
             <>
-                {isNewShopVisible ? (
-                  <CreateComponent props={createComponentProps}/>
-                ) : (
-                  <>
-                  <SelectComponent props={selectComponentProps}/>
-                    {props.savedShops.length > 0 && (
-                      <>
-                        <LevelComponent props={shopLevelComponentProps}/>
-                        <LevelComponent props={reputationLevelComponentProps}/>
-                        <div className='card-side-div margin-top'>
-                          <label className='modern-label'>Shop Type:</label>
-                          <select
-                            className='modern-dropdown'
-                            value={props.selectedShopType}
-                            onChange={handleShopTypeChange}
-                          >
-                            {props.shopTypes.map((type, index) => (
-                              <option key={index} value={type}>
-                                {type}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                        <div className='card-side-div margin-top'>
-                          <button className='modern-button' onClick={handleGenerateInventory}>Generate</button>
-                        </div>
-                      </>
-                    )}
-                  </>
-                )}
+              <LevelComponent props={shopLevelComponentProps} />
+              <LevelComponent props={reputationLevelComponentProps} />
+              <div className='card-side-div margin-top'>
+                <label className='modern-label'>Shop Type:</label>
+                <select
+                  className='modern-dropdown'
+                  value={props.shopType}
+                  onChange={handleShopTypeChange}
+                >
+                  {props.shopTypes.map((type, index) => (
+                    <option key={index} value={type}>
+                      {type}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className='card-side-div margin-top'>
+                <button className='modern-button' onClick={handleGenerateInventory}>Generate</button>
+              </div>
             </>
-          );
+          )}
+        </>
+      )}
+    </>
+  );
 };
 
 export default MenuCardShop;

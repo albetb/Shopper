@@ -1,6 +1,7 @@
 import { cap } from './utils';
+import Shop from './shop';
 
-  //#region get
+//#region get
 
 export function getWorlds() {
     return JSON.parse(localStorage.getItem('worlds')) || [];
@@ -22,20 +23,16 @@ export function getShops(world, city) {
     return JSON.parse(localStorage.getItem(`shops_${world}_${city}`)) || [];
 }
 
-export function getShopLevel(world, city, shop) {
-    return localStorage.getItem(`${world}_${city}_${shop}_level`) || 0;
-}
-
-export function getReputation(world, city, shop) {
-    return localStorage.getItem(`${world}_${city}_${shop}_reputation`) || 0;
-}
-
-export function getShopType(world, city, shop) {
-    return localStorage.getItem(`${world}_${city}_${shop}_type`) || '';
-}
-
-export function getInventory(world, city, shop) {
-    return JSON.parse(localStorage.getItem(`${world}_${city}_${shop}_stock`)) || [];
+export function getShop(world, city, shop) {
+    const shopJson = JSON.parse(localStorage.getItem(`${world}_${city}_${shop}_shop`));
+    if (shopJson) {
+        let shop = new Shop();
+        var isValid = shop.deserialize(shopJson);
+        if (isValid) {
+            return shop;
+        }
+    }
+    return null;
 }
 
 //#endregion
@@ -62,20 +59,8 @@ export function setShops(world, city, value) {
     localStorage.setItem(`shops_${cap(world)}_${cap(city)}`, JSON.stringify(value))
 }
 
-export function setShopLevel(world, city, shop, value) {
-    localStorage.setItem(`${cap(world)}_${cap(city)}_${cap(shop)}_level`, value);
-}
-
-export function setReputation(world, city, shop, value) {
-    localStorage.setItem(`${cap(world)}_${cap(city)}_${cap(shop)}_reputation`, value);
-}
-
-export function setShopType(world, city, shop, value) {
-    localStorage.setItem(`${cap(world)}_${cap(city)}_${cap(shop)}_type`, value);
-}
-
-export function setStock(world, city, shop, value) {
-    localStorage.setItem(`${world}_${city}_${shop}_stock`, JSON.stringify(value));
+export function setShop(world, city, shop, value) {
+    localStorage.setItem(`${world}_${city}_${shop}_shop`, JSON.stringify(value));
 }
 
 //#endregion
