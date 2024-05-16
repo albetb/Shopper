@@ -1,38 +1,27 @@
-import { cap } from './utils';
+import World from './world';
+import City from './city';
 import Shop from './shop';
 
 //#region get
 
 export function getWorlds() {
-    return JSON.parse(localStorage.getItem('worlds')) || [];
+    return JSON.parse(localStorage.getItem('Worlds')) || [];
 }
 
-export function getPlayerLevel(world) {
-    return localStorage.getItem(`${world}_level`) || 1;
+export function getSelectedWorld() {
+    return JSON.parse(localStorage.getItem('SelectedWorld')) || { Id: null, Name: null };
 }
 
-export function getCities(world) {
-    return JSON.parse(localStorage.getItem(`cities_${world}`)) || [];
+export function getWorld(id) {
+    return new World().load(JSON.parse(localStorage.getItem(`World/${id}`)));
 }
 
-export function getCityLevel(world, city) {
-    return localStorage.getItem(`${world}_${city}_level`) || 1;
+export function getCity(id) {
+    return new City().load(JSON.parse(localStorage.getItem(`City/${id}`)));
 }
 
-export function getShops(world, city) {
-    return JSON.parse(localStorage.getItem(`shops_${world}_${city}`)) || [];
-}
-
-export function getShop(world, city, shop) {
-    const shopJson = JSON.parse(localStorage.getItem(`${world}_${city}_${shop}_shop`));
-    if (shopJson) {
-        let shop = new Shop();
-        var isValid = shop.deserialize(shopJson);
-        if (isValid) {
-            return shop;
-        }
-    }
-    return null;
+export function getShop(id) {
+    return new Shop().load(JSON.parse(localStorage.getItem(`Shop/${id}`)));
 }
 
 //#endregion
@@ -40,27 +29,23 @@ export function getShop(world, city, shop) {
 //#region set
 
 export function setWorlds(value) {
-    localStorage.setItem('worlds', JSON.stringify(value));
+    localStorage.setItem('Worlds', JSON.stringify(value));
 }
 
-export function setPlayerLevel(world, value) {
-    localStorage.setItem(`${cap(world)}_level`, value);
+export function setSelectedWorld(value) {
+    localStorage.setItem('SelectedWorld', JSON.stringify(value));
 }
 
-export function setCities(world, value) {
-    localStorage.setItem(`cities_${cap(world)}`, JSON.stringify(value));
+export function setWorld(value) {
+    localStorage.setItem(`World/${value.Id}`, JSON.stringify(value));
 }
 
-export function setCityLevel(world, city, value) {
-    localStorage.setItem(`${cap(world)}_${cap(city)}_level`, value);
+export function setCity(value) {
+    localStorage.setItem(`City/${value.Id}`, JSON.stringify(value));
 }
 
-export function setShops(world, city, value) {
-    localStorage.setItem(`shops_${cap(world)}_${cap(city)}`, JSON.stringify(value))
-}
-
-export function setShop(world, city, shop, value) {
-    localStorage.setItem(`${world}_${city}_${shop}_shop`, JSON.stringify(value));
+export function setShop(value) {
+    localStorage.setItem(`Shop/${value.Id}`, JSON.stringify(value));
 }
 
 //#endregion

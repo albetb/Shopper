@@ -73,10 +73,18 @@ export function trimLine(string, endLine = 11) {
 }
 
 export function order(list, element) {
-    if (list.length > 0) {
+    if (list != null && list.length > 0) {
         list = list.filter(item => item !== element);
         list.sort();
         return [element].concat(list);
     }
-    return [element];
+    return [];
+}
+
+export function newGuid() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0,
+            v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
 }

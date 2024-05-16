@@ -1,12 +1,13 @@
-import { loadFile, shopTypes, cap } from './utils';
+import { loadFile, shopTypes, cap, newGuid } from './utils';
 import { newRandomItem } from './item';
 
 const BASE_ARCANE_CHANCE = 0.7;
-const REQUIRED_KEYS = ['Name', 'Level', 'CityLevel', 'PlayerLevel', 'Reputation', 'Stock', 'Gold', 'Time', 'ArcaneChance', 'ShopType', 'ItemModifier'];
+const REQUIRED_KEYS = ['Id', 'Name', 'Level', 'CityLevel', 'PlayerLevel', 'Reputation', 'Stock', 'Gold', 'Time', 'ArcaneChance', 'ShopType', 'ItemModifier'];
 
 class Shop {
-    constructor(shopName = '', cityLevel = 0, playerLevel = 1) {
-        this.Name = shopName;
+    constructor(name = '', cityLevel = 0, playerLevel = 1) {
+        this.Id = newGuid();
+        this.Name = name;
         this.Gold = 0;
         this.setShopLevel(0);
         this.setCityLevel(cityLevel);
@@ -31,11 +32,13 @@ class Shop {
         this.ItemModifier.Shield = (this.ItemModifier.Armor ?? 0) * 0.4;
     }
 
-    deserialize(data) {
-        if (!REQUIRED_KEYS.every(key => data.hasOwnProperty(key))) {
-            return false;
+    load(data) {
+        if (typeof data !== 'object' || data === null ||
+            !REQUIRED_KEYS.every(key => data.hasOwnProperty(key))) {
+            return null;
         }
 
+        this.Id = data.Id;
         this.Name = data.Name;
         this.Level = data.Level;
         this.CityLevel = data.CityLevel;
@@ -47,7 +50,8 @@ class Shop {
         this.ArcaneChance = data.ArcaneChance;
         this.ShopType = data.ShopType;
         this.ItemModifier = data.ItemModifier;
-        return true;
+
+        return this;
     }
 
     generateInventory() {
@@ -110,7 +114,7 @@ class Shop {
     }
 
     setReputation(rep) {
-        this.Reputation = Math.max(-10, Math.min(10, rep));;
+        this.Reputation = Math.max(-10, Math.min(10, rep));
     }
 
     setShopType(shopType) {
@@ -129,8 +133,9 @@ class Shop {
             this.Gold -= Math.random() < 0.66 ? 0 : 1;
             this.sellSomething();
             // ReStock items every day
-            if (this.Time % 24 === 0)
+            if (this.Time % 24 === 0) {
                 this.reStock();
+            }
         }
     }
 

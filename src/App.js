@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './components/sidebar/sidebar';
 import ShopInventory from './components/shop_inventory/shop_inventory';
+import World from './lib/world';
+import City from './lib/city';
 import Shop from './lib/shop';
 import { cap, shopTypes, isMobile, order } from './lib/utils';
 import * as db from './lib/storage';
@@ -9,94 +11,73 @@ import './style/App.css';
 function App() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [worlds, setWorlds] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [shops, setShops] = useState([]);
-  const [playerLevel, setPlayerLevel] = useState(1);
-  const [cityLevel, setCityLevel] = useState(1);
+  const [selectedWorld, setSelectedWorld] = useState('');
+  const [world, setWorld] = useState(null);
+  const [city, setCity] = useState(null);
   const [shop, setShop] = useState(null);
 
   useEffect(() => {
-    setWorldFromStorage();
+    const worldsDb = db.getWorlds();
+    const selectedWorldDb = db.getSelectedWorld();
+    const worldDb = db.getWorld(selectedWorldDb?.Id);
+    const cityDb = db.getCity(worldDb?.SelectedCity?.Id);
+    const shopDb = db.getShop(cityDb?.SelectedShop.Id);
+    setWorlds(worldsDb);
+    setSelectedWorld(selectedWorldDb);
+    setWorld(worldDb);
+    setCity(cityDb);
+    setShop(shopDb);
   }, []);
-
-  useEffect(() => {
-    if (worlds.length > 0)
-      setCityFromStorage();
-  }, [worlds]);
-
-  useEffect(() => {
-    if (cities.length > 0)
-      setShopFromStorage();
-  }, [cities]);
 
   const toggleSidebar = () => {
     setSidebarCollapsed(!sidebarCollapsed);
   };
 
-  //#region setFromStorage
-
-  const setWorldFromStorage = () => {
-    const dbWorlds = db.getWorlds();
-    setWorlds(dbWorlds);
-    if (dbWorlds.length > 0) {
-      setPlayerLevel(db.getPlayerLevel(dbWorlds[0]));
-    }
-  }
-
-  const setCityFromStorage = () => {
-    const dbCities = db.getCities(worlds[0]);
-    setCities(dbCities);
-    if (dbCities.length > 0) {
-      setCityLevel(db.getCityLevel(worlds[0], dbCities[0]));
-    }
-  }
-
-  const setShopFromStorage = () => {
-    const dbShops = db.getShops(worlds[0], cities[0]);
-    setShops(dbShops);
-    if (dbShops.length > 0) {
-      setShop(db.getShop(worlds[0], cities[0], dbShops[0]));
-    }
-  }
-
-  //#endregion
-
   //#region onNew
 
   const onNewWorld = (name) => {
-    if (name.trim() !== '' && !worlds.includes(cap(name))) {
-      const newWorlds = order(worlds, cap(name));
+    if (name.trim() !== '' && !worlds.some(world => world.Name === cap(name))) {
+      const newWorld = new World(cap(name));
+      setWorld(newWorld);
+      db.setWorld(newWorld);
+
+      const newWorlds = [...worlds, { Id: newWorld.Id, Name: newWorld.Name }];
       setWorlds(newWorlds);
       db.setWorlds(newWorlds);
-      onPlayerLevelChange(1, newWorlds[0]);
 
-      setCities([]);
-      setShops([]);
+      setSelectedWorld({ Id: newWorld.Id, Name: newWorld.Name });
+      db.setSelectedWorld({ Id: newWorld.Id, Name: newWorld.Name });
+
+      setCity(null);
       setShop(null);
     }
   };
 
   const onNewCity = (name) => {
-    if (name.trim() !== '' && !cities.includes(cap(name))) {
-      const newCities = order(cities, cap(name));
-      setCities(newCities);
-      db.setCities(worlds[0], newCities);
-      onCityLevelChange(1, newCities[0]);
+    if (name.trim() !== '' && !world.cityNameExist(cap(name))) {
+      const newCity = new City(cap(name), world.Level);
+      setCity(newCity);
+      db.setCity(newCity);
 
-      setShops([]);
+      let newWorld = new World().load(world);
+      newWorld.addCity(newCity.Id, newCity.Name);
+      setWorld(newWorld);
+      db.setWorld(newWorld);
+
       setShop(null);
     }
   };
 
   const onNewShop = (name) => {
-    if (name.trim() !== '' && !shops.includes(cap(name))) {
-      const newShops = order(shops, cap(name));
-      setShops(newShops);
-      db.setShops(worlds[0], cities[0], newShops);
-
-      const newShop = new Shop(cap(name), cityLevel, playerLevel);
-      db.setShop(worlds[0], cities[0], cap(name), newShop);
+    if (name.trim() !== '' && !city.shopNameExist(cap(name))) {
+      const newShop = new Shop(cap(name), city.Level, world.Level);
       setShop(newShop);
+      db.setShop(newShop);
+
+      let newCity = new City().load(city);
+      newCity.addShop(newShop.Id, newShop.Name);
+      setCity(newCity);
+      db.setCity(newCity);
     }
   };
 
@@ -104,59 +85,72 @@ function App() {
 
   //#region onSelect
 
-  const onSelectWorld = (world) => {
-    db.setWorlds(order(worlds, world));
-    setWorldFromStorage();
+  const onSelectWorld = (name) => {
+    const newSelectedWorld = worlds.find(world => world.Name === name);
+    if (!newSelectedWorld) { return; }
+
+    setSelectedWorld({ Id: newSelectedWorld.Id, Name: newSelectedWorld.Name });
+    db.setSelectedWorld({ Id: newSelectedWorld.Id, Name: newSelectedWorld.Name });
+
+    const newWorld = db.getWorld(newSelectedWorld.Id);
+    setWorld(newWorld);
+
+    const newCity = db.getCity(newWorld.SelectedCity.Id);
+    setCity(newCity);
+
+    setShop(db.getShop(newCity?.SelectedShop?.Id));
   };
 
-  const onSelectCity = (city) => {
-    db.setCities(worlds[0], order(cities, city));
-    setCityFromStorage();
+  const onSelectCity = (name) => {
+    const newSelectedCity = world.Cities.find(city => city.Name === name);
+    if (!newSelectedCity) { return; }
+
+    let newWorld = new World().load(world);
+    newWorld.selectCity(newSelectedCity.Id)
+    setWorld(newWorld);
+    db.setWorld(newWorld);
+
+    const newCity = db.getCity(newSelectedCity.Id);
+    setCity(newCity);
+
+    setShop(db.getShop(newCity.SelectedShop.Id));
   };
 
-  const onSelectShop = (shop) => {
-    db.setShops(worlds[0], cities[0], order(shops, shop));
-    setShopFromStorage();
+  const onSelectShop = (name) => {
+    const newSelectedShop = city.Shops.find(shop => shop.Name === name);
+    if (!newSelectedShop) { return; }
+
+    let newCity = new City().load(city);
+    newCity.selectShop(newSelectedShop.Id)
+    setCity(newCity);
+    db.setCity(newCity);
+
+    setShop(db.getShop(newSelectedShop.Id));
   };
 
   //#endregion
 
   //#region onChange
 
-  const onPlayerLevelChange = (level, newWorld) => {
-    if (level && parseInt(level) > 0 && parseInt(level) < 100) {
-      setPlayerLevel(parseInt(level));
-      db.setPlayerLevel(newWorld ?? worlds[0], parseInt(level));
+  const onPlayerLevelChange = (level) => {
+    let newWorld = new World().load(world);
+    newWorld.setPlayerLevel(level);
+    setWorld(newWorld);
+    db.setWorld(newWorld);
 
-      db.getCities(newWorld ?? worlds[0]).forEach(cityName => {
-        db.getShops(newWorld ?? worlds[0], cityName).forEach(shopName => {
-          var updatedShop = new Shop();
-          updatedShop.deserialize(db.getShop(newWorld ?? worlds[0], cityName, shopName));
-          updatedShop.setPlayerLevel(parseInt(level));
-          db.setShop(newWorld ?? worlds[0], cityName, shopName, updatedShop);
-          if (shop.Name === shopName && cityName === cities[0]) {
-            setShop(updatedShop);
-          }
-        });
-      });
-    }
+    const newCity = db.getCity(newWorld.SelectedCity.Id);
+    setCity(newCity);
+
+    setShop(db.getShop(newCity?.SelectedShop?.Id));
   };
 
-  const onCityLevelChange = (level, newCity) => {
-    if (level && parseInt(level) > 0 && parseInt(level) < 6) {
-      setCityLevel(parseInt(level));
-      db.setCityLevel(worlds[0], newCity ?? cities[0], parseInt(level));
+  const onCityLevelChange = (level) => {
+    let newCity = new City().load(city);
+    newCity.setCityLevel(level);
+    setCity(newCity);
+    db.setCity(newCity);
 
-      db.getShops(worlds[0], newCity ?? cities[0]).forEach(shopName => {
-        var updatedShop = new Shop();
-        updatedShop.deserialize(db.getShop(worlds[0], newCity ?? cities[0], shopName));
-        updatedShop.setCityLevel(parseInt(level));
-        db.setShop(worlds[0], newCity ?? cities[0], shopName, updatedShop);
-        if (shop.Name === shopName) {
-          setShop(updatedShop);
-        }
-      });
-    }
+    setShop(db.getShop(newCity.SelectedShop.Id));
   };
 
   //#endregion
@@ -165,11 +159,23 @@ function App() {
 
   const updateShop = (method, ...args) => {
     if (shop) {
-      var updatedShop = new Shop();
-      updatedShop.deserialize(shop);
+      var updatedShop = new Shop().load(shop);
       updatedShop[method].apply(updatedShop, args);
       setShop(updatedShop);
-      db.setShop(worlds[0], cities[0], shops[0], updatedShop);
+      db.setShop(updatedShop);
+    }
+  };
+
+  const onCreateShop = () => {
+    if (shop) {
+      var updatedShop = new Shop().load(shop);
+      updatedShop.template();
+      updatedShop.generateInventory();
+      setShop(updatedShop);
+      db.setShop(updatedShop);
+
+      if (isMobile())
+        setSidebarCollapsed(true)
     }
   };
 
@@ -185,20 +191,6 @@ function App() {
     updateShop('setShopType', type);
   };
 
-  const onCreateShop = () => {
-    if (shop) {
-      var updatedShop = new Shop();
-      updatedShop.deserialize(shop);
-      updatedShop.template();
-      updatedShop.generateInventory();
-      setShop(updatedShop);
-      db.setShop(worlds[0], cities[0], shops[0], updatedShop);
-
-      if (isMobile())
-        setSidebarCollapsed(true)
-    }
-  };
-
   const onDeleteItem = (itemName, itemType) => {
     updateShop('sell', itemName, itemType);
   };
@@ -212,17 +204,17 @@ function App() {
   var sidebarProps = {
     isSidebarCollapsed: sidebarCollapsed,
     toggleSidebar: toggleSidebar,
-    savedWorlds: worlds ?? [],
-    playerLevel: playerLevel,
+    savedWorlds: order(worlds?.map(world => world.Name), selectedWorld.Name),
+    playerLevel: world?.Level ?? 0,
     onNewWorld: onNewWorld,
     onSelectWorld: onSelectWorld,
     onPlayerLevelChange: onPlayerLevelChange,
-    savedCities: cities ?? [],
-    cityLevel: cityLevel,
+    savedCities: order(world?.Cities?.map(city => city.Name), world?.SelectedCity?.Name),
+    cityLevel: city?.Level ?? 0,
     onNewCity: onNewCity,
     onSelectCity: onSelectCity,
     onCityLevelChange: onCityLevelChange,
-    savedShops: shops ?? [],
+    savedShops: order(city?.Shops?.map(shop => shop.Name), city?.SelectedShop?.Name),
     shopLevel: shop?.Level ?? 0,
     reputation: shop?.Reputation ?? 0,
     onNewShop: onNewShop,
@@ -239,7 +231,7 @@ function App() {
     <body className='app'>
       <Sidebar props={sidebarProps} />
       <header className='app-header'>
-        <ShopInventory items={shop?.getInventory() ?? []} shopName={shops[0]} cityName={cities[0]} onDeleteItem={onDeleteItem} onAddItem={onAddItem} />
+        <ShopInventory items={shop?.getInventory() ?? []} shopName={shop?.Name ?? ''} cityName={city?.Name ?? ''} onDeleteItem={onDeleteItem} onAddItem={onAddItem} />
       </header>
     </body>
   );
