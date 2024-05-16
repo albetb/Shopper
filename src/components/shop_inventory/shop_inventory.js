@@ -68,7 +68,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
   );
 };
 
-const ShopInventory = ( props ) => {
+const ShopInventory = ({ props }) => {
   const [showAddItemForm, setShowAddItemForm] = useState(false);
 
   if (!props.items || !props.items.some(item => item.Number > 0)) {
