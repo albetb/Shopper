@@ -227,11 +227,19 @@ function App() {
     onCreateShop: onCreateShop
   };
 
+  var shopInventoryProps = {
+    items: shop?.getInventory() ?? [],
+    shopName: shop?.Name ?? '',
+    cityName: city?.Name ?? '',
+    onDeleteItem: onDeleteItem,
+    onAddItem: onAddItem
+  }
+
   return (
     <body className='app'>
       <Sidebar props={sidebarProps} />
       <header className='app-header'>
-        <ShopInventory items={shop?.getInventory() ?? []} shopName={shop?.Name ?? ''} cityName={city?.Name ?? ''} onDeleteItem={onDeleteItem} onAddItem={onAddItem} />
+        <ShopInventory props={shopInventoryProps}  />
       </header>
     </body>
   );

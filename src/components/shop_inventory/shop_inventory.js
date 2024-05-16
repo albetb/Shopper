@@ -68,21 +68,21 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
   );
 };
 
-const ShopInventory = ({ items, shopName, cityName, onDeleteItem, onAddItem }) => {
+const ShopInventory = ( props ) => {
   const [showAddItemForm, setShowAddItemForm] = useState(false);
 
-  if (!items || !items.some(item => item.Number > 0)) {
+  if (!props.items || !props.items.some(item => item.Number > 0)) {
     return null; // If there are no items or all items have number <= 0, do not display anything
   }
 
   const shopLabel = () => {
     const trimLength = isMobile() ? 20 : 30;
-    return `${trimLine(shopName, trimLength)}`;
+    return `${trimLine(props.shopName, trimLength)}`;
   };
 
   const cityLabel = () => {
     const trimLength = isMobile() ? 26 : 40;
-    return `${cityName && 'from '}${trimLine(cityName, trimLength)}`;
+    return `${props.cityName && 'from '}${trimLine(props.cityName, trimLength)}`;
   };
 
   const abbreviateLabel = (itemName) => {
@@ -91,7 +91,7 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem, onAddItem }) =
   };
 
   const handleDeleteItemClick = (itemName, itemType) => {
-    onDeleteItem(itemName, itemType);
+    props.onDeleteItem(itemName, itemType);
   };
 
   const handleAddItemButtonClick = () => {
@@ -113,7 +113,7 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem, onAddItem }) =
           </tr>
         </thead>
         <tbody>
-          {items.map((item, index) => (
+          {props.items.map((item, index) => (
             // Conditionally render a row only if item.number is more than zero
             item.Number > 0 && (
               <tr key={index}>
@@ -140,7 +140,7 @@ const ShopInventory = ({ items, shopName, cityName, onDeleteItem, onAddItem }) =
         </tbody>
       </table>
       {showAddItemForm ? (
-        <AddItemForm onAddItem={onAddItem} setShowAddItemForm={setShowAddItemForm} />
+        <AddItemForm onAddItem={props.onAddItem} setShowAddItemForm={setShowAddItemForm} />
       ) : (
         <button className='add-item-button' onClick={handleAddItemButtonClick}>
           Add Item
