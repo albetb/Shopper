@@ -285,7 +285,7 @@ function App() {
     onSelectWorld: onSelectWorld,
     onPlayerLevelChange: onPlayerLevelChange,
     savedCities: order(world?.Cities?.map(city => city.Name), world?.SelectedCity?.Name),
-    cityLevel: city?.Level ?? 0,
+    cityLevel: city?.Level ?? 1,
     onNewCity: onNewCity,
     onDeleteCity: onDeleteCity,
     onSelectCity: onSelectCity,

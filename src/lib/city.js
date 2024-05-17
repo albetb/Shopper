@@ -7,7 +7,7 @@ class City {
     constructor(name = '', playerLevel = 1) {
         this.Id = newGuid();
         this.Name = name;
-        this.Level = 0;
+        this.Level = 1;
         this.PlayerLevel = playerLevel;
         this.SelectedShop = { Id: null, Name: null };
         this.Shops = [];
@@ -77,7 +77,7 @@ class City {
     }
 
     setCityLevel(lv) {
-        this.Level = Math.max(0, Math.min(5, lv));
+        this.Level = Math.max(1, Math.min(5, lv));
 
         this.Shops.forEach(shop => {
             var shopDb = db.getShop(shop.Id);

@@ -21,7 +21,7 @@ class Shop {
 
     template() {
         const tables = loadFile('tables');
-        const shop = tables['Shop Types'].find(type => type.Name === (this.ShopType ?? ''));
+        const shop = tables['Shop Types'].find(type => type.Name === (this.ShopType ?? 'None'));
 
         this.ShopType = shop.Name;
         this.Level = Math.max(this.Level, shop['Min level']);
@@ -118,7 +118,7 @@ class Shop {
     }
 
     setShopType(shopType) {
-        this.ShopType = shopTypes().includes(shopType) ? shopType : '';
+        this.ShopType = shopTypes().includes(shopType) ? shopType : 'None';
     }
 
     passingTime(hours = 0, days = 0) {
