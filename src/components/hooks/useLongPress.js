@@ -4,7 +4,7 @@ const useLongPress = (onLongPress, onClick, { shouldPreventDefault = true, delay
   const [longPressTriggered, setLongPressTriggered] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null);
 
-  const start = useCallback((event, params) => {
+  const start = useCallback((event, params = []) => {
     if (shouldPreventDefault && event.target) {
       event.target.addEventListener('touchend', preventDefault, { passive: false });
       event.target.addEventListener('touchmove', preventDefault, { passive: false });

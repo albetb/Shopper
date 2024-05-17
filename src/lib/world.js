@@ -53,12 +53,16 @@ class World {
         return this.Cities.find(city => city.Name === name)?.Id;
     }
 
-    selectCity(name) {
-        let city = this.Cities.find(city => city.Name === name);
+    selectCity(value) {
+        let city = this.Cities.find(city => city.Name === value);
         if (!city) {
-            city = this.Cities.find(city => city.Id === name);
+            city = this.Cities.find(city => city.Id === value);
         }
-        this.SelectedCity = { Id: city?.Id , Name: city?.Name };
+        this.SelectedCity = { Id: city?.Id, Name: city?.Name };
+    }
+
+    deleteCity(value) {
+        this.Cities = this.Cities.filter(city => city.Id !== value && city.Name !== value);
     }
 
     setPlayerLevel(lv) {

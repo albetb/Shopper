@@ -28,7 +28,7 @@ class City {
 
         return this;
     }
-    
+
     addShop(id, name) {
         if (this.shopIdExist(id) || this.shopNameExist(name)) {
             return;
@@ -54,12 +54,16 @@ class City {
         return this.Shops.find(shop => shop.Name === name)?.Id;
     }
 
-    selectShop(name) {
-        let shop = this.Shops.find(shop => shop.Name === name);
+    selectShop(value) {
+        let shop = this.Shops.find(shop => shop.Name === value);
         if (!shop) {
-            shop = this.Shops.find(shop => shop.Id === name);
+            shop = this.Shops.find(shop => shop.Id === value);
         }
-        this.SelectedShop = { Id: shop?.Id , Name: shop?.Name };
+        this.SelectedShop = { Id: shop?.Id, Name: shop?.Name };
+    }
+
+    deleteShop(value) {
+        this.Shops = this.Shops.filter(shop => shop.Id !== value && shop.Name !== value);
     }
 
     setPlayerLevel(lv) {

@@ -22,7 +22,8 @@ const MenuCardWorld = ({ props }) => {
     saved: props.savedWorlds,
     tabName: 'world',
     setIsVisible: setIsVisible,
-    onSelect: props.onSelectWorld
+    onSelect: props.onSelectWorld,
+    onDeleteItem: props.onDeleteItem
   };
 
   const levelComponentProps = {

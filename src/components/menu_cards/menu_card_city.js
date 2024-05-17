@@ -21,7 +21,8 @@ const MenuCardCity = ({ props }) => {
     saved: props.savedCities,
     tabName: 'city',
     setIsVisible: setIsVisible,
-    onSelect: props.onSelectCity
+    onSelect: props.onSelectCity,
+    onDeleteItem: props.onDeleteItem
   };
 
   return (

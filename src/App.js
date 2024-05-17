@@ -172,6 +172,65 @@ function App() {
 
   //#endregion
 
+  //#region onDelete
+
+  const onDeleteWorld = () => {
+    const oldSelectedWorld = selectedWorld;
+    const newSelectedWorld = worlds.filter(s => s.Id !== oldSelectedWorld.Id)?.[0];
+
+    const oldSelectedWorldDb = db.getWorld(oldSelectedWorld.Id);
+    oldSelectedWorldDb.Cities.forEach(city => {
+      const cityDb = db.getCity(city.Id);
+      cityDb.Shops.forEach(shop => {
+        db.deleteShop(shop.Id);
+      })
+      db.deleteCity(city.Id);
+    });
+
+    saveSelectedWorld(newSelectedWorld);
+    saveWorlds(worlds.filter(s => s.Id !== oldSelectedWorld.Id));
+    const newSelectedWorldDb = db.getWorld(newSelectedWorld?.Id)
+    setWorld(newSelectedWorldDb);
+
+    const newSelectedCityDb = db.getCity(newSelectedWorldDb?.SelectedCity?.Id)
+    setShop(db.getShop(newSelectedCityDb?.SelectedShop?.Id));
+    setCity(newSelectedCityDb);
+    db.deleteWorld(oldSelectedWorld.Id)
+  };
+
+  const onDeleteCity = () => {
+    let newWorld = new World().load(world);
+    const oldSelectedCity = world.SelectedCity;
+    const newSelectedCity = world.Cities.filter(s => s.Id !== oldSelectedCity.Id)?.[0];
+    newWorld.selectCity(newSelectedCity?.Id)
+    newWorld.deleteCity(oldSelectedCity.Id);
+    saveWorld(newWorld);
+
+    const oldSelectedCityDb = db.getCity(oldSelectedCity.Id);
+    oldSelectedCityDb.Shops.forEach(shop => {
+      db.deleteShop(shop.Id);
+    });
+
+    const newSelectedCityDb = db.getCity(newWorld.SelectedCity.Id)
+    setShop(db.getShop(newSelectedCityDb?.SelectedShop?.Id));
+    setCity(newSelectedCityDb);
+    db.deleteCity(oldSelectedCity.Id)
+  };
+
+  const onDeleteShop = () => {
+    let newCity = new City().load(city);
+    const oldSelectedShop = city.SelectedShop;
+    const newSelectedShop = city.Shops.filter(s => s.Id !== oldSelectedShop.Id)?.[0];
+    newCity.selectShop(newSelectedShop?.Id)
+    newCity.deleteShop(oldSelectedShop.Id);
+    saveCity(newCity);
+
+    setShop(db.getShop(newCity.SelectedShop.Id));
+    db.deleteShop(oldSelectedShop.Id)
+  };
+
+  //#endregion
+
   //#region shop
 
   const updateShop = (method, ...args) => {
@@ -219,20 +278,23 @@ function App() {
   var sidebarProps = {
     isSidebarCollapsed: sidebarCollapsed,
     toggleSidebar: toggleSidebar,
-    savedWorlds: order(worlds?.map(world => world.Name), selectedWorld.Name),
+    savedWorlds: order(worlds?.map(world => world.Name), selectedWorld?.Name),
     playerLevel: world?.Level ?? 1,
     onNewWorld: onNewWorld,
+    onDeleteWorld: onDeleteWorld,
     onSelectWorld: onSelectWorld,
     onPlayerLevelChange: onPlayerLevelChange,
     savedCities: order(world?.Cities?.map(city => city.Name), world?.SelectedCity?.Name),
     cityLevel: city?.Level ?? 0,
     onNewCity: onNewCity,
+    onDeleteCity: onDeleteCity,
     onSelectCity: onSelectCity,
     onCityLevelChange: onCityLevelChange,
     savedShops: order(city?.Shops?.map(shop => shop.Name), city?.SelectedShop?.Name),
     shopLevel: shop?.Level ?? 0,
     reputation: shop?.Reputation ?? 0,
     onNewShop: onNewShop,
+    onDeleteShop: onDeleteShop,
     onSelectShop: onSelectShop,
     onShopLevelChange: onShopLevelChange,
     onReputationChange: onReputationChange,

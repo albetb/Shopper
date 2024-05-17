@@ -30,7 +30,8 @@ const MenuCardShop = ({ props }) => {
     saved: props.savedShops,
     tabName: 'shop',
     setIsVisible: setIsVisible,
-    onSelect: props.onSelectShop
+    onSelect: props.onSelectShop,
+    onDeleteItem: props.onDeleteItem
   };
 
   const shopLevelComponentProps = {

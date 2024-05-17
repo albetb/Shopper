@@ -43,18 +43,36 @@ export function setSelectedWorld(value) {
 }
 
 export function setWorld(value) {
-    localStorage.setItem(`World/${value.Id}`, compressToUTF16(JSON.stringify(value)));
+    localStorage.setItem(`World/${value?.Id}`, compressToUTF16(JSON.stringify(value)));
 }
 
 export function setCity(value) {
-    localStorage.setItem(`City/${value.Id}`, compressToUTF16(JSON.stringify(value)));
+    localStorage.setItem(`City/${value?.Id}`, compressToUTF16(JSON.stringify(value)));
 }
 
 export function setShop(value) {
-    localStorage.setItem(`Shop/${value.Id}`, compressToUTF16(JSON.stringify(value)));
+    localStorage.setItem(`Shop/${value?.Id}`, compressToUTF16(JSON.stringify(value)));
 }
 
 //#endregion
+
+//#region delete
+
+export function deleteWorld(value) {
+    localStorage.removeItem(`World/${value}`);
+}
+
+export function deleteCity(value) {
+    localStorage.removeItem(`City/${value}`);
+}
+
+export function deleteShop(value) {
+    localStorage.removeItem(`Shop/${value}`);
+}
+
+//#endregion
+
+//#region save storage
 
 const getAllLocalStorageItems = () => {
     const items = {};
@@ -96,3 +114,5 @@ export const handleFileUpload = (event) => {
 
     reader.readAsText(file);
 };
+
+//#endregion

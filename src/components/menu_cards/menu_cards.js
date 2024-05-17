@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import MenuCardWorld from './menu_card_world';
 import MenuCardCity from './menu_card_city';
 import MenuCardShop from './menu_card_shop';
-import '../../style/menu_cards.css';
 import { isMobile, trimLine } from '../../lib/utils';
+import '../../style/menu_cards.css';
 
 const MenuCards = ({ props }) => {
   const [cardStates, setCardStates] = useState([
@@ -98,7 +98,8 @@ const MenuCards = ({ props }) => {
     onNewWorld: props.onNewWorld,
     savedWorlds: props.savedWorlds,
     playerLevel: props.playerLevel,
-    onPlayerLevelChange: props.onPlayerLevelChange
+    onPlayerLevelChange: props.onPlayerLevelChange,
+    onDeleteItem: props.onDeleteWorld
   };
 
   var menuCardCityProps = {
@@ -106,7 +107,8 @@ const MenuCards = ({ props }) => {
     onNewCity: props.onNewCity,
     savedCities: props.savedCities,
     cityLevel: props.cityLevel,
-    onCityLevelChange: props.onCityLevelChange
+    onCityLevelChange: props.onCityLevelChange,
+    onDeleteItem: props.onDeleteCity
   };
 
   var menuCardShopProps = {
@@ -120,7 +122,8 @@ const MenuCards = ({ props }) => {
     shopTypes: props.shopTypes ?? [],
     shopType: props.shopType,
     onShopTypeChange: props.onShopTypeChange,
-    onCreateShop: props.onCreateShop
+    onCreateShop: props.onCreateShop,
+    onDeleteItem: props.onDeleteShop
   };
 
   return (
