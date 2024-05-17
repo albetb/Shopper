@@ -18,11 +18,23 @@ const LevelComponent = ({ props }) => {
       <div className='card-side-div margin-top'>
         <label className='modern-label'>{props.levelName}:</label>
         <div className='levels-div'>
-          <button className='levels-button' onClick={handleLevelDecrement}>-</button>
+
+          <button className='levels-button' onClick={handleLevelDecrement}>
+            <span class="material-symbols-outlined">
+              remove
+            </span>
+          </button>
+
           <div className='level-frame'>
             <label className='level-text'>{props.level}</label>
           </div>
-          <button className='levels-button' onClick={handleLevelIncrement}>+</button>
+
+          <button className='levels-button' onClick={handleLevelIncrement}>
+            <span class="material-symbols-outlined">
+              add
+            </span>
+          </button>
+
         </div>
       </div>
     </>

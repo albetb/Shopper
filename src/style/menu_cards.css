@@ -86,12 +86,12 @@
 }
 
 .levels-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 3vw;
-  text-align: center;
-  text-decoration: none;
   transition-duration: 0.3s;
   box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25);
-  font-weight: bold;
 }
 
 .modern-dropdown {
