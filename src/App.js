@@ -33,20 +33,46 @@ function App() {
     setSidebarCollapsed(!sidebarCollapsed);
   };
 
+  //#region save
+
+  const saveWorlds = (item) => {
+    setWorlds(item);
+    db.setWorlds(item);
+  }
+
+  const saveSelectedWorld = (item) => {
+    setSelectedWorld(item);
+    db.setSelectedWorld(item);
+  }
+
+  const saveWorld = (item) => {
+    setWorld(item);
+    db.setWorld(item);
+  }
+
+  const saveCity = (item) => {
+    setCity(item);
+    db.setCity(item);
+  }
+
+  const saveShop = (item) => {
+    setShop(item);
+    db.setShop(item);
+  }
+
+  //#endregion
+
   //#region onNew
 
   const onNewWorld = (name) => {
     if (name.trim() !== '' && !worlds.some(world => world.Name === cap(name))) {
       const newWorld = new World(cap(name));
-      setWorld(newWorld);
-      db.setWorld(newWorld);
+      saveWorld(newWorld);
 
       const newWorlds = [...worlds, { Id: newWorld.Id, Name: newWorld.Name }];
-      setWorlds(newWorlds);
-      db.setWorlds(newWorlds);
+      saveWorlds(newWorlds);
 
-      setSelectedWorld({ Id: newWorld.Id, Name: newWorld.Name });
-      db.setSelectedWorld({ Id: newWorld.Id, Name: newWorld.Name });
+      saveSelectedWorld({ Id: newWorld.Id, Name: newWorld.Name });
 
       setCity(null);
       setShop(null);
@@ -56,13 +82,11 @@ function App() {
   const onNewCity = (name) => {
     if (name.trim() !== '' && !world.cityNameExist(cap(name))) {
       const newCity = new City(cap(name), world.Level);
-      setCity(newCity);
-      db.setCity(newCity);
+      saveCity(newCity);
 
       let newWorld = new World().load(world);
       newWorld.addCity(newCity.Id, newCity.Name);
-      setWorld(newWorld);
-      db.setWorld(newWorld);
+      saveWorld(newWorld);
 
       setShop(null);
     }
@@ -71,13 +95,11 @@ function App() {
   const onNewShop = (name) => {
     if (name.trim() !== '' && !city.shopNameExist(cap(name))) {
       const newShop = new Shop(cap(name), city.Level, world.Level);
-      setShop(newShop);
-      db.setShop(newShop);
+      saveShop(newShop);
 
       let newCity = new City().load(city);
       newCity.addShop(newShop.Id, newShop.Name);
-      setCity(newCity);
-      db.setCity(newCity);
+      saveCity(newCity);
     }
   };
 
@@ -89,8 +111,7 @@ function App() {
     const newSelectedWorld = worlds.find(world => world.Name === name);
     if (!newSelectedWorld) { return; }
 
-    setSelectedWorld({ Id: newSelectedWorld.Id, Name: newSelectedWorld.Name });
-    db.setSelectedWorld({ Id: newSelectedWorld.Id, Name: newSelectedWorld.Name });
+    saveSelectedWorld({ Id: newSelectedWorld.Id, Name: newSelectedWorld.Name });
 
     const newWorld = db.getWorld(newSelectedWorld.Id);
     setWorld(newWorld);
@@ -107,8 +128,7 @@ function App() {
 
     let newWorld = new World().load(world);
     newWorld.selectCity(newSelectedCity.Id)
-    setWorld(newWorld);
-    db.setWorld(newWorld);
+    saveWorld(newWorld);
 
     const newCity = db.getCity(newSelectedCity.Id);
     setCity(newCity);
@@ -122,8 +142,7 @@ function App() {
 
     let newCity = new City().load(city);
     newCity.selectShop(newSelectedShop.Id)
-    setCity(newCity);
-    db.setCity(newCity);
+    saveCity(newCity);
 
     setShop(db.getShop(newSelectedShop.Id));
   };
@@ -135,8 +154,7 @@ function App() {
   const onPlayerLevelChange = (level) => {
     let newWorld = new World().load(world);
     newWorld.setPlayerLevel(level);
-    setWorld(newWorld);
-    db.setWorld(newWorld);
+    saveWorld(newWorld);
 
     const newCity = db.getCity(newWorld.SelectedCity.Id);
     setCity(newCity);
@@ -147,8 +165,7 @@ function App() {
   const onCityLevelChange = (level) => {
     let newCity = new City().load(city);
     newCity.setCityLevel(level);
-    setCity(newCity);
-    db.setCity(newCity);
+    saveCity(newCity);
 
     setShop(db.getShop(newCity.SelectedShop.Id));
   };
@@ -161,8 +178,7 @@ function App() {
     if (shop) {
       var updatedShop = new Shop().load(shop);
       updatedShop[method].apply(updatedShop, args);
-      setShop(updatedShop);
-      db.setShop(updatedShop);
+      saveShop(updatedShop);
     }
   };
 
@@ -171,8 +187,7 @@ function App() {
       var updatedShop = new Shop().load(shop);
       updatedShop.template();
       updatedShop.generateInventory();
-      setShop(updatedShop);
-      db.setShop(updatedShop);
+      saveShop(updatedShop);
 
       if (isMobile())
         setSidebarCollapsed(true)
@@ -205,7 +220,7 @@ function App() {
     isSidebarCollapsed: sidebarCollapsed,
     toggleSidebar: toggleSidebar,
     savedWorlds: order(worlds?.map(world => world.Name), selectedWorld.Name),
-    playerLevel: world?.Level ?? 0,
+    playerLevel: world?.Level ?? 1,
     onNewWorld: onNewWorld,
     onSelectWorld: onSelectWorld,
     onPlayerLevelChange: onPlayerLevelChange,
@@ -239,7 +254,7 @@ function App() {
     <body className='app'>
       <Sidebar props={sidebarProps} />
       <header className='app-header'>
-        <ShopInventory props={shopInventoryProps}  />
+        <ShopInventory props={shopInventoryProps} />
       </header>
     </body>
   );

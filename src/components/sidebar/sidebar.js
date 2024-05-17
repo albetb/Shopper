@@ -24,8 +24,10 @@ const Sidebar = ({ props }) => {
           <div className='content'>
             <div className='sidebar-buttons'>
 
-              <button className='modern-button' style={{ marginLeft: '5px', marginBottom: '5px' }} onClick={downloadLocalStorage}>
-                Save Data
+              <button className='saving-button' onClick={downloadLocalStorage}>
+                <span class="material-symbols-outlined">
+                  download
+                </span>
               </button>
 
               <input
@@ -35,8 +37,10 @@ const Sidebar = ({ props }) => {
                 accept='application/json'
                 onChange={handleFileUpload}
               />
-              <button className='modern-button' style={{ marginLeft: '15px', marginBottom: '5px' }} onClick={handleUploadClick}>
-                Upload Data
+              <button className='saving-button saving-button-margin' onClick={handleUploadClick}>
+                <span class="material-symbols-outlined">
+                  drive_folder_upload
+                </span>
               </button>
 
             </div>

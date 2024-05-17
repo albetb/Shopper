@@ -31,6 +31,9 @@ tr.add-item {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 2%;
   padding: 0 0 14px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 th.number-size,
@@ -67,6 +70,7 @@ th.action-size,
 td.action-size,
 input.action-size {
   width: 3vw;
+  height: 3.6vh;
 }
 
 a:link,
@@ -76,7 +80,6 @@ a:hover {
   color: #d5d5d5;
 }
 
-/* Hover effect on table rows */
 tr:hover {
   transition: all 0.3s;
 }
@@ -105,10 +108,10 @@ p {
   border: 1px solid #c0c0c0;
   cursor: pointer;
   font-size: 14px;
+  height: 4vh;
 }
 
 .item-number-button {
-  height: 3.6vh;
   width: 3vw;
   border-radius: 1vh;
 }
@@ -153,7 +156,7 @@ select.modern-input {
 
   td.name-size,
   input.name-size {
-    width: 39vw;
+    width: -webkit-fill-available;
   }
 
   td.type-size,

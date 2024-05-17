@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { trimLine, isMobile, itemTypes } from '../../lib/utils';
+import useLongPress from '../hooks/useLongPress';
 import '../../style/shop_inventory.css';
 
 const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
@@ -9,9 +10,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
   const [cost, setCost] = useState(1);
 
   const handleAddItemClick = () => {
-    // Call the onAddItem function with the details of the new item
     onAddItem(itemName, itemType, cost, number);
-    // Reset form fields
     setNumber(1);
     setItemName('');
     setItemType('Good');
@@ -61,7 +60,9 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
       </td>
       <td className='action-size'>
         <button className='item-number-button' onClick={handleAddItemClick}>
-          +
+          <span className='material-symbols-outlined'>
+            add_shopping_cart
+          </span>
         </button>
       </td>
     </tr>
@@ -71,8 +72,22 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
 const ShopInventory = ({ props }) => {
   const [showAddItemForm, setShowAddItemForm] = useState(false);
 
+  const handleDeleteItemClick = (itemName, itemType) => {
+    props.onDeleteItem(itemName, itemType);
+  };
+
+  const handleAddItemButtonClick = () => {
+    setShowAddItemForm(true);
+  };
+
+  const longPressEvent = useLongPress(
+    (itemName, itemType) => handleDeleteItemClick(itemName, itemType),
+    () => { },
+    { shouldPreventDefault: true, delay: 500 }
+  );
+
   if (!props.items || !props.items.some(item => item.Number > 0)) {
-    return null; // If there are no items or all items have number <= 0, do not display anything
+    return null;
   }
 
   const shopLabel = () => {
@@ -86,16 +101,7 @@ const ShopInventory = ({ props }) => {
   };
 
   const abbreviateLabel = (itemName) => {
-    // Check if the itemName is 'Wondrous Item' and abbreviate accordingly
     return isMobile() && itemName === 'Wondrous Item' ? 'W. Item' : itemName;
-  };
-
-  const handleDeleteItemClick = (itemName, itemType) => {
-    props.onDeleteItem(itemName, itemType);
-  };
-
-  const handleAddItemButtonClick = () => {
-    setShowAddItemForm(true);
   };
 
   return (
@@ -114,7 +120,6 @@ const ShopInventory = ({ props }) => {
         </thead>
         <tbody>
           {props.items.map((item, index) => (
-            // Conditionally render a row only if item.number is more than zero
             item.Number > 0 && (
               <tr key={index}>
                 <td className='align-right'>{item.Number}</td>
@@ -130,8 +135,17 @@ const ShopInventory = ({ props }) => {
                 <td>{abbreviateLabel(item.ItemType)}</td>
                 <td>{item.Cost}</td>
                 <td>
-                  <button className='item-number-button' onClick={() => handleDeleteItemClick(item.Name, item.ItemType)}>
-                    -
+                  <button
+                    className='item-number-button'
+                    onMouseDown={(e) => longPressEvent.onMouseDown(e, [item.Name, item.ItemType])}
+                    onTouchStart={(e) => longPressEvent.onTouchStart(e, [item.Name, item.ItemType])}
+                    onMouseUp={longPressEvent.onMouseUp}
+                    onMouseLeave={longPressEvent.onMouseLeave}
+                    onTouchEnd={longPressEvent.onTouchEnd}
+                  >
+                    <span className='material-symbols-outlined'>
+                      remove_shopping_cart
+                    </span>
                   </button>
                 </td>
               </tr>
