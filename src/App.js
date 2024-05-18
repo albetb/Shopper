@@ -17,6 +17,7 @@ function App() {
   const [shop, setShop] = useState(null);
 
   useEffect(() => {
+    db.validateDb();
     const worldsDb = db.getWorlds();
     const selectedWorldDb = db.getSelectedWorld();
     const worldDb = db.getWorld(selectedWorldDb?.Id);

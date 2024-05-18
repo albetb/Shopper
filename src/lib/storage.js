@@ -3,6 +3,8 @@ import World from './world';
 import City from './city';
 import Shop from './shop';
 
+const CURRENT_STORAGE_VERSION = 1000;
+
 //#region get
 
 export function getWorlds() {
@@ -68,6 +70,14 @@ export function deleteCity(value) {
 
 export function deleteShop(value) {
     localStorage.removeItem(`Shop/${value}`);
+}
+
+export function validateDb() {
+    const version = parseInt(localStorage.getItem('Version'));
+    if (!version || version < CURRENT_STORAGE_VERSION) {
+        localStorage.clear();
+        localStorage.setItem('Version', CURRENT_STORAGE_VERSION)
+    }
 }
 
 //#endregion
