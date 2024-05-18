@@ -180,6 +180,10 @@ h3 {
     width: 15vw;
   }
 
+  .modern-dropdown.small {
+    width: 27vw;
+  }
+
   .modern-dropdown,
   .modern-button,
   .levels-button {

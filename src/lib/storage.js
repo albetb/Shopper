@@ -73,10 +73,15 @@ export function deleteShop(value) {
 }
 
 export function validateDb() {
-    const version = parseInt(localStorage.getItem('Version'));
-    if (!version || version < CURRENT_STORAGE_VERSION) {
+    try {
+        const version = parseInt(JSON.parse(decompressFromUTF16(localStorage.getItem('Version')) ?? 0));
+        if (!version || version < CURRENT_STORAGE_VERSION) {
+            throw new Error();
+        }
+    }
+    catch {
         localStorage.clear();
-        localStorage.setItem('Version', CURRENT_STORAGE_VERSION)
+        localStorage.setItem('Version', compressToUTF16(JSON.stringify(CURRENT_STORAGE_VERSION)))
     }
 }
 

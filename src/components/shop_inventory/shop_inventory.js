@@ -28,7 +28,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
           className='number-size modern-input'
         />
       </td>
-      <td className='name-size'>
+      <td className='name-size name-small'>
         <input
           type='text'
           placeholder='Item name'

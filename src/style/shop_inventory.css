@@ -45,8 +45,7 @@ input.number-size {
 }
 
 th.name-size,
-td.name-size,
-input.name-size {
+td.name-size {
   width: 33vw;
 }
 
@@ -227,5 +226,9 @@ select.modern-input {
 
   .add-item-button {
     width: 40vw;
+  }
+
+  td.name-small {
+    width: 35vw;
   }
 }

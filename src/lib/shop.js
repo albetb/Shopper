@@ -156,6 +156,7 @@ class Shop {
                 }
             }
         }
+        this.sortByType();
     }
 
     sell(itemName, itemType) {
