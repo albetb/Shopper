@@ -4,12 +4,12 @@ import '../../style/menu_cards.css';
 const LevelComponent = ({ props }) => {
 
   const handleLevelIncrement = () => {
-    const level = parseInt(props.level);
+    const level = parseFloat(props.level);
     props.onLevelChange(level + 1);
   };
 
   const handleLevelDecrement = () => {
-    const level = parseInt(props.level);
+    const level = parseFloat(props.level);
     props.onLevelChange(level - 1);
   };
 
@@ -20,7 +20,7 @@ const LevelComponent = ({ props }) => {
         <div className='levels-div'>
 
           <button className='levels-button' onClick={handleLevelDecrement}>
-            <span class="material-symbols-outlined">
+            <span className='material-symbols-outlined'>
               remove
             </span>
           </button>
@@ -30,7 +30,7 @@ const LevelComponent = ({ props }) => {
           </div>
 
           <button className='levels-button' onClick={handleLevelIncrement}>
-            <span class="material-symbols-outlined">
+            <span className='material-symbols-outlined'>
               add
             </span>
           </button>

@@ -273,6 +273,21 @@ function App() {
     updateShop('buy', itemName, itemType, cost, number);
   };
 
+  const onWaitTime = (days = 0, hours = 0) => {
+    const selectedWorldDb = db.getWorld(world.Id);
+    selectedWorldDb.Cities.forEach(city => {
+      const cityDb = db.getCity(city.Id);
+      cityDb.Shops.forEach(shopNew => {
+        var shopDb = db.getShop(shopNew.Id);
+        shopDb.passingTime(days, hours)
+        db.setShop(shopDb);
+        if (shopNew.Id == shop.Id) {
+          setShop(shopDb)
+        }
+      })
+    });
+  };
+
   //#endregion
 
   var sidebarProps = {
@@ -301,13 +316,15 @@ function App() {
     shopTypes: shopTypes() ?? [],
     shopType: shop?.ShopType ?? '',
     onShopTypeChange: onShopTypeChange,
-    onCreateShop: onCreateShop
+    onCreateShop: onCreateShop,
+    onWaitTime: onWaitTime
   };
 
   var shopInventoryProps = {
     items: shop?.getInventory() ?? [],
     shopName: shop?.Name ?? '',
     cityName: city?.Name ?? '',
+    gold: shop?.Gold,
     onDeleteItem: onDeleteItem,
     onAddItem: onAddItem
   }

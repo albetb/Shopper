@@ -140,6 +140,44 @@ select.modern-input {
   height: 4.1vh;
 }
 
+.header-container {
+  width: 40vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.label-container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.money-box {
+  align-self: center;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.time-div-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+.space-left {
+  margin-left: 15px;
+}
+
 
 @media (max-width: 768px) {
   table {

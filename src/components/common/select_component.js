@@ -17,44 +17,44 @@ const SelectComponent = ({ props }) => {
 
   const longPressEvent = useLongPress(handleDelete, () => { }, { delay: 500 });
 
+  const isSavedEmpty = !Array.isArray(props.saved) || props.saved.length === 0;
+
   return (
     <div className='card-side-div'>
+      {!isSavedEmpty && (
+        <>
+          <select
+            className='modern-dropdown'
+            onChange={handleDropdownChange}
+            value={props.saved?.[0] || ''}
+          >
+            {props.saved.map((item, index) => (
+              <option key={index} value={item}>
+                {item}
+              </option>
+            ))}
+          </select>
+        </>
+      )}
 
-      <select
-        className='modern-dropdown'
-        onChange={handleDropdownChange}
-        value={props.saved?.[0] || ''}
-        disabled={!Array.isArray(props.saved) || props.saved?.length === 0}
-      >
-        {props.saved.length > 0 ? (
-          props.saved.map((item, index) => (
-            <option key={index} value={item}>
-              {item}
-            </option>
-          ))
-        ) : (
-          <option value='' disabled>
-            Create a {props.tabName}
-          </option>
-        )}
-      </select>
-
-      <button className='levels-button' onClick={handleNewClick}>
+      <button className={isSavedEmpty ? 'modern-button' : 'levels-button'} onClick={handleNewClick}>
         <span className="material-symbols-outlined">
           new_window
         </span>
       </button>
 
-      <button
-        className='levels-button'
-        disabled={props.saved.length === 0}
-        {...longPressEvent}
-      >
-        <span className="material-symbols-outlined">
-          delete
-        </span>
-      </button>
-
+      {!isSavedEmpty && (
+        <>
+          <button
+            className='levels-button'
+            {...longPressEvent}
+          >
+            <span className="material-symbols-outlined">
+              delete
+            </span>
+          </button>
+        </>
+      )}
     </div>
   );
 };

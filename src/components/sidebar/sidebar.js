@@ -25,7 +25,7 @@ const Sidebar = ({ props }) => {
             <div className='sidebar-buttons'>
 
               <button className='saving-button' onClick={downloadLocalStorage}>
-                <span class="material-symbols-outlined">
+                <span className='material-symbols-outlined'>
                   download
                 </span>
               </button>
@@ -38,7 +38,7 @@ const Sidebar = ({ props }) => {
                 onChange={handleFileUpload}
               />
               <button className='saving-button saving-button-margin' onClick={handleUploadClick}>
-                <span class="material-symbols-outlined">
+                <span className='material-symbols-outlined'>
                   drive_folder_upload
                 </span>
               </button>

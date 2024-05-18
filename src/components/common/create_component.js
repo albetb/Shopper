@@ -28,6 +28,7 @@ const CreateComponent = ({ props }) => {
 
   return (
     <div className='card-side-div'>
+
       <input
         ref={inputRef}
         className='modern-dropdown'
@@ -37,7 +38,13 @@ const CreateComponent = ({ props }) => {
         onChange={(e) => setName(e.target.value)}
         onKeyDown={handleKeyDown}
       />
-      <button className='modern-button' onClick={handleOkClick}>Ok</button>
+
+      <button className='modern-button' onClick={handleOkClick}>
+        <span className='material-symbols-outlined'>
+          check
+        </span>
+      </button>
+
     </div>
   );
 };

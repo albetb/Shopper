@@ -71,9 +71,20 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
 
 const ShopInventory = ({ props }) => {
   const [showAddItemForm, setShowAddItemForm] = useState(false);
+  const [deletingItems, setDeletingItems] = useState({});
 
   const handleDeleteItemClick = (itemName, itemType) => {
-    props.onDeleteItem(itemName, itemType);
+    const itemKey = `${itemName}-${itemType}`;
+    setDeletingItems((prev) => ({ ...prev, [itemKey]: true }));
+
+    setTimeout(() => {
+      props.onDeleteItem(itemName, itemType);
+      setDeletingItems((prev) => {
+        const newDeletingItems = { ...prev };
+        delete newDeletingItems[itemKey];
+        return newDeletingItems;
+      });
+    }, 300);
   };
 
   const handleAddItemButtonClick = () => {
@@ -106,8 +117,17 @@ const ShopInventory = ({ props }) => {
 
   return (
     <>
-      <h2>{shopLabel()}</h2>
-      <p>{cityLabel()}</p>
+      <div className='header-container'>
+        <div className='label-container'>
+          <h2>{shopLabel()}</h2>
+          <div className='space-left'>
+            <p>{cityLabel()}</p>
+          </div>
+        </div>
+        <div className='money-box'>
+          <p><b>Gold: {typeof (parseFloat(props.gold)) === 'number' ? parseFloat(props.gold) : '0'}</b></p>
+        </div>
+      </div>
       <table>
         <thead>
           <tr>
@@ -119,38 +139,41 @@ const ShopInventory = ({ props }) => {
           </tr>
         </thead>
         <tbody>
-          {props.items.map((item, index) => (
-            item.Number > 0 && (
-              <tr key={index}>
-                <td className='align-right'>{item.Number}</td>
-                <td>
-                  {item.Link ? (
-                    <a href={item.Link} target='_blank' rel='noopener noreferrer'>
-                      {item.Name}
-                    </a>
-                  ) : (
-                    item.Name
-                  )}
-                </td>
-                <td>{abbreviateLabel(item.ItemType)}</td>
-                <td>{item.Cost}</td>
-                <td>
-                  <button
-                    className='item-number-button'
-                    onMouseDown={(e) => longPressEvent.onMouseDown(e, [item.Name, item.ItemType])}
-                    onTouchStart={(e) => longPressEvent.onTouchStart(e, [item.Name, item.ItemType])}
-                    onMouseUp={longPressEvent.onMouseUp}
-                    onMouseLeave={longPressEvent.onMouseLeave}
-                    onTouchEnd={longPressEvent.onTouchEnd}
-                  >
-                    <span className='material-symbols-outlined'>
-                      remove_shopping_cart
-                    </span>
-                  </button>
-                </td>
-              </tr>
-            )
-          ))}
+          {props.items.map((item, index) => {
+            const itemKey = `${item.Name}-${item.ItemType}`;
+            return (
+              item.Number > 0 && (
+                <tr key={index} className={deletingItems[itemKey] ? 'deleting' : ''}>
+                  <td className='align-right'>{item.Number}</td>
+                  <td>
+                    {item.Link ? (
+                      <a href={item.Link} target='_blank' rel='noopener noreferrer'>
+                        {item.Name}
+                      </a>
+                    ) : (
+                      item.Name
+                    )}
+                  </td>
+                  <td>{abbreviateLabel(item.ItemType)}</td>
+                  <td>{item.Cost}</td>
+                  <td>
+                    <button
+                      className='item-number-button'
+                      onMouseDown={(e) => longPressEvent.onMouseDown(e, [item.Name, item.ItemType])}
+                      onTouchStart={(e) => longPressEvent.onTouchStart(e, [item.Name, item.ItemType])}
+                      onMouseUp={longPressEvent.onMouseUp}
+                      onMouseLeave={longPressEvent.onMouseLeave}
+                      onTouchEnd={longPressEvent.onTouchEnd}
+                    >
+                      <span className='material-symbols-outlined'>
+                        remove_shopping_cart
+                      </span>
+                    </button>
+                  </td>
+                </tr>
+              )
+            );
+          })}
         </tbody>
       </table>
       {showAddItemForm ? (
