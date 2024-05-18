@@ -282,7 +282,7 @@ function App() {
         var shopDb = db.getShop(shopNew.Id);
         shopDb.passingTime(days, hours)
         db.setShop(shopDb);
-        if (shopNew.Id == shop.Id) {
+        if (shopNew.Id === shop.Id) {
           setShop(shopDb)
         }
       })

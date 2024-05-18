@@ -1,5 +1,5 @@
 import React from 'react';
-import useLongPress from '../hooks/useLongPress';
+import useLongPress from '../hooks/use_long_press';
 import '../../style/menu_cards.css';
 
 const SelectComponent = ({ props }) => {

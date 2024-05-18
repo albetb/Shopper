@@ -4,6 +4,7 @@ import MenuCardCity from './menu_card_city';
 import MenuCardShop from './menu_card_shop';
 import MenuCardTime from './menu_card_time';
 import { isMobile, trimLine } from '../../lib/utils';
+import * as db from '../../lib/storage';
 import '../../style/menu_cards.css';
 
 const MenuCards = ({ props }) => {
@@ -15,13 +16,13 @@ const MenuCards = ({ props }) => {
   ]);
 
   useEffect(() => {
-    const isWorldCollapsed = JSON.parse(localStorage.getItem('is_world_collapsed')) || false;
+    const isWorldCollapsed = db.getIsWorldCollapsed();
     setCardCollapsed(1, isWorldCollapsed);
-    const isCityCollapsed = JSON.parse(localStorage.getItem('is_city_collapsed')) || false;
+    const isCityCollapsed = db.getIsCityCollapsed();
     setCardCollapsed(2, isCityCollapsed);
-    const isShopCollapsed = JSON.parse(localStorage.getItem('is_shop_collapsed')) || false;
+    const isShopCollapsed = db.getIsShopCollapsed();
     setCardCollapsed(3, isShopCollapsed);
-    const isTimeCollapsed = JSON.parse(localStorage.getItem('is_time_collapsed')) || false;
+    const isTimeCollapsed = db.getIsTimeCollapsed();
     setCardCollapsed(4, isTimeCollapsed);
   }, []);
 
@@ -51,20 +52,23 @@ const MenuCards = ({ props }) => {
           switch (cardId) {
             case 1:
               cardName = 'world';
+              db.setIsWorldCollapsed(!cardState.collapsed);
               break;
             case 2:
               cardName = 'city';
+              db.setIsCityCollapsed(!cardState.collapsed);
               break;
             case 3:
               cardName = 'shop';
+              db.setIsShopCollapsed(!cardState.collapsed);
               break;
             case 4:
               cardName = 'time';
+              db.setIsTimeCollapsed(!cardState.collapsed);
               break;
             default:
               return { ...cardState, collapsed: !cardState.collapsed };
           }
-          localStorage.setItem(`is_${cardName}_collapsed`, !cardState.collapsed);
 
           return { ...cardState, collapsed: !cardState.collapsed };
         }

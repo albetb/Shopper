@@ -1,73 +1,8 @@
 import React, { useState } from 'react';
-import { trimLine, isMobile, itemTypes } from '../../lib/utils';
-import useLongPress from '../hooks/useLongPress';
+import { trimLine, isMobile } from '../../lib/utils';
+import useLongPress from '../hooks/use_long_press';
+import AddItemForm from './add_item_form';
 import '../../style/shop_inventory.css';
-
-const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
-  const [number, setNumber] = useState(1);
-  const [itemName, setItemName] = useState('');
-  const [itemType, setItemType] = useState('Good');
-  const [cost, setCost] = useState(1);
-
-  const handleAddItemClick = () => {
-    onAddItem(itemName, itemType, cost, number);
-    setNumber(1);
-    setItemName('');
-    setItemType('Good');
-    setCost(1);
-    setShowAddItemForm(false);
-  };
-
-  return (
-    <tr className='add-item'>
-      <td className='number-size'>
-        <input
-          type='number'
-          value={number}
-          onChange={(e) => setNumber(e.target.value)}
-          className='number-size modern-input'
-        />
-      </td>
-      <td className='name-size name-small'>
-        <input
-          type='text'
-          placeholder='Item name'
-          value={itemName}
-          onChange={(e) => setItemName(e.target.value)}
-          className='name-size modern-input'
-        />
-      </td>
-      <td className='type-size'>
-        <select
-          value={itemType}
-          onChange={(e) => setItemType(e.target.value)}
-          className='type-size modern-input'
-        >
-          {itemTypes.map((type, index) => (
-            <option key={index} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
-      </td>
-      <td className='cost-size'>
-        <input
-          type='number'
-          value={cost}
-          onChange={(e) => setCost(e.target.value)}
-          className='cost-size modern-input'
-        />
-      </td>
-      <td className='action-size'>
-        <button className='item-number-button' onClick={handleAddItemClick}>
-          <span className='material-symbols-outlined'>
-            add_shopping_cart
-          </span>
-        </button>
-      </td>
-    </tr>
-  );
-};
 
 const ShopInventory = ({ props }) => {
   const [showAddItemForm, setShowAddItemForm] = useState(false);

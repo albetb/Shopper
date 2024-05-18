@@ -26,7 +26,7 @@ const LevelComponent = ({ props }) => {
           </button>
 
           <div className='level-frame'>
-            <label className='level-text'>{props.level}</label>
+            <label className='level-text'>{parseInt(props.level)}</label>
           </div>
 
           <button className='levels-button' onClick={handleLevelIncrement}>

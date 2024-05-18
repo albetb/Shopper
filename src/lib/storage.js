@@ -32,6 +32,26 @@ export function getShop(id) {
     return value ? new Shop().load(JSON.parse(decompressFromUTF16(value))) : null;
 }
 
+export function getIsWorldCollapsed() {
+    const value = localStorage.getItem('IsWorldCollapsed');
+    return value ? JSON.parse(decompressFromUTF16(value)) : false;
+}
+
+export function getIsCityCollapsed() {
+    const value = localStorage.getItem('IsCityCollapsed');
+    return value ? JSON.parse(decompressFromUTF16(value)) : false;
+}
+
+export function getIsShopCollapsed() {
+    const value = localStorage.getItem('IsShopCollapsed');
+    return value ? JSON.parse(decompressFromUTF16(value)) : false;
+}
+
+export function getIsTimeCollapsed() {
+    const value = localStorage.getItem('IsTimeCollapsed');
+    return value ? JSON.parse(decompressFromUTF16(value)) : false;
+}
+
 //#endregion
 
 //#region set
@@ -54,6 +74,22 @@ export function setCity(value) {
 
 export function setShop(value) {
     localStorage.setItem(`Shop/${value?.Id}`, compressToUTF16(JSON.stringify(value)));
+}
+
+export function setIsWorldCollapsed(value) {
+    localStorage.setItem('IsWorldCollapsed', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setIsCityCollapsed(value) {
+    localStorage.setItem('IsCityCollapsed', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setIsShopCollapsed(value) {
+    localStorage.setItem('IsShopCollapsed', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setIsTimeCollapsed(value) {
+    localStorage.setItem('IsTimeCollapsed', compressToUTF16(JSON.stringify(value)));
 }
 
 //#endregion
