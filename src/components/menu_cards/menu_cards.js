@@ -84,7 +84,7 @@ const MenuCards = ({ props }) => {
       case 3:
         return props.savedCities && props.savedCities.length > 0;
       case 4:
-        return props.savedShops && props.savedShops.length > 0;
+        return props.savedShops && props.savedShops.length > 0 && props.isShopGenerated;
       default:
         return true;
     }
@@ -103,7 +103,7 @@ const MenuCards = ({ props }) => {
     else if (cardId === 3 && props.savedShops && props.savedShops.length > 0) {
       return `${cardTitle}${formatText(props.savedShops[0], parseInt(props.shopLevel))}`;
     }
-    else if (cardId === 4 && props.savedShops && props.savedShops.length > 0) {
+    else if (cardId === 4 && props.savedShops && props.savedShops.length > 0 && props.isShopGenerated) {
       return 'Time management';
     }
 

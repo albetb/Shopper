@@ -93,7 +93,7 @@ const ShopInventory = ({ props }) => {
                   <td>{item.Cost}</td>
                   <td>
                     <button
-                      className='item-number-button'
+                      className='item-number-button thick-border'
                       onMouseDown={(e) => longPressEvent.onMouseDown(e, [item.Name, item.ItemType])}
                       onTouchStart={(e) => longPressEvent.onTouchStart(e, [item.Name, item.ItemType])}
                       onMouseUp={longPressEvent.onMouseUp}

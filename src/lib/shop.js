@@ -5,6 +5,9 @@ const BASE_ARCANE_CHANCE = 0.7;
 const REQUIRED_KEYS = ['Id', 'Name', 'Level', 'CityLevel', 'PlayerLevel', 'Reputation', 'Stock', 'Gold', 'Time', 'ArcaneChance', 'ShopType', 'ItemModifier'];
 
 class Shop {
+
+    //#region ctor
+
     constructor(name = '', cityLevel = 0, playerLevel = 1) {
         this.Id = newGuid();
         this.Name = name;
@@ -64,7 +67,7 @@ class Shop {
         }
         const invValue = () => this.Stock.reduce((total, item) => total + item.Cost, 0) * 0.95;
         this.sortByCost();
-        while (invValue() > this.Gold - 100) {
+        while (invValue() > this.Gold * 0.85) {
             if (this.Stock.length > 0) {
                 this.Stock.pop();
             }
@@ -73,15 +76,46 @@ class Shop {
         this.sortByType();
     }
 
+    addItem(addedItem, itemType) {
+        if (addedItem && addedItem.Cost !== undefined) {
+            let found = false;
+            for (let item of this.Stock) {
+                if (item.Name === addedItem.Name) {
+                    item.Number += 1;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                addedItem.PriceModifier = Math.floor(Math.random() * 41) - 20;
+                addedItem.Number = 1;
+                addedItem.ItemType = itemType;
+                this.Stock.push(addedItem);
+            }
+        }
+    }
+
+    modItemNumber(key) {
+        let num = this.ItemModifier[key];
+        num *= Math.pow(1.1, this.PlayerLevel);
+        num *= 1 + 0.1 * this.CityLevel;
+        num *= Math.pow(1.05, this.Level);
+        return Math.floor(num + (Math.random() < num - Math.floor(num) ? 1 : 0));
+    }
+
+    baseGold(PlayerLevel, Level) {
+        return Math.floor(1000 * Math.pow(PlayerLevel, 1.5) * Math.pow(1.1, Level));
+    }
+
+    //#endregion
+
+    //#region get / set
+
     getInventory() {
         return this.Stock.map(item => ({
             ...item,
             Cost: this.trueCost(item, true)
         }));
-    }
-
-    baseGold(PlayerLevel, Level) {
-        return Math.floor(1000 * Math.pow(PlayerLevel, 1.5) * Math.pow(1.1, Level));
     }
 
     sortByType() {
@@ -121,6 +155,14 @@ class Shop {
         this.ShopType = shopTypes().includes(shopType) ? shopType : 'None';
     }
 
+    trueCost(item, forParty = true) {
+        const rep = forParty ? this.Reputation * 2 : 0;
+        const mod = (100 + item.PriceModifier - rep + this.CityLevel) / 100;
+        let cost = Math.max((parseFloat(item.Cost) * mod), 0.01);
+        const dec = cost < 100 ? 1 : (cost < 1000 ? 5 : 10);
+        return parseFloat(cost < 1 ? cost.toFixed(2) : Math.round(cost / dec) * dec);
+    }
+
     setGold(gold) {
         if (gold == null || typeof gold !== 'number' || isNaN(gold)) {
             if (this.Gold == null || typeof this.Gold !== 'number' || isNaN(this.Gold)) {
@@ -138,17 +180,22 @@ class Shop {
         this.Gold = isFloat ? parseFloat(gold.toFixed(2)) : Math.floor(gold);
     }
 
+    //#endregion
+
+    //#region time
+
     passingTime(hours = 0, days = 0) {
-        for (let i = 0; i < hours + days * 24; i++) {
+        const time = Math.min(hours + days * 24, 7 * 24); // max 1 week for performance reason
+        for (let i = 0; i < time; i++) {
             this.Time++;
             if (this.Stock && this.Stock?.length !== 0) {
                 // Invest some Gold and gain levels
                 if (this.Gold > this.baseGold(this.PlayerLevel, this.Level)) {
                     this.setGold(this.Gold * 0.9);
-                    this.setShopLevel(this.Level + 0.1 * (10 - parseInt(this.Level)));
+                    this.setShopLevel(this.Level + 0.01 * (10 - parseInt(this.Level)));
                 }
                 // Spend a little amount of Gold per day
-                this.setGold(this.Gold - (Math.random() < 0.66 ? 0 : 1));
+                this.setGold(this.Gold - (this.Time % 3 === 0 ? 1 : 0));
                 this.sellSomething();
                 // ReStock items every day
                 if (this.Time % 24 === 0) {
@@ -157,22 +204,6 @@ class Shop {
             }
         }
         this.sortByType();
-    }
-
-    sell(itemName, itemType) {
-        let updatedInventory = [...this.Stock];
-        const itemIndex = updatedInventory.findIndex(
-            (item) => item.Name === cap(itemName) && item.ItemType === itemType
-        );
-
-        if (itemIndex === -1) return;
-
-        const updatedItem = { ...updatedInventory[itemIndex] };
-        updatedItem.Number = Math.max(0, updatedItem.Number - 1);
-        updatedInventory[itemIndex] = updatedItem;
-
-        this.setGold(this.Gold + this.trueCost(updatedItem));
-        this.Stock = updatedInventory;
     }
 
     sellSomething() {
@@ -193,6 +224,29 @@ class Shop {
             }
         }
     }
+
+    reStock() {
+        for (let key in this.ItemModifier) {
+            const itemNumber = this.modItemNumber(key);
+            if (this.countItemType(key) >= itemNumber) return;
+            for (let i = 0; i < itemNumber - this.countItemType(key); i++) {
+                const item = newRandomItem(key, this.Level, this.PlayerLevel, this.ArcaneChance);
+                if (item && item.Name && this.Gold - 100 >= item.Cost * 0.95) {
+                    this.addItem(item, key);
+                    this.setGold(this.Gold - item.Cost * 0.9);
+                }
+            }
+        }
+        this.sortByType();
+    }
+
+    countItemType(itemType) {
+        return this.Stock.filter(item => item.itemType === itemType).reduce((acc, item) => acc + item.number, 0);
+    }
+
+    //#endregion
+
+    //#region buy / sell
 
     buy(itemName, itemType, cost = 1, number = 1) {
         if (itemName.trim() === '' || number <= 0) return;
@@ -222,58 +276,20 @@ class Shop {
         this.sortByType();
     }
 
-    addItem(addedItem, itemType) {
-        if (addedItem && addedItem.Cost !== undefined) {
-            let found = false;
-            for (let item of this.Stock) {
-                if (item.Name === addedItem.Name) {
-                    item.Number += 1;
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                addedItem.PriceModifier = Math.floor(Math.random() * 41) - 20;
-                addedItem.Number = 1;
-                addedItem.ItemType = itemType;
-                this.Stock.push(addedItem);
-            }
-        }
-    }
+    sell(itemName, itemType) {
+        let updatedInventory = [...this.Stock];
+        const itemIndex = updatedInventory.findIndex(
+            (item) => item.Name === cap(itemName) && item.ItemType === itemType
+        );
 
-    reStock() {
-        for (let key in this.ItemModifier) {
-            const itemNumber = this.modItemNumber(key);
-            if (this.countItemType(key) >= itemNumber) return;
-            for (let i = 0; i < itemNumber - this.countItemType(key); i++) {
-                const item = newRandomItem(key, this.Level, this.PlayerLevel, this.ArcaneChance);
-                if (item && item.Name && this.Gold - 100 >= item.Cost * 0.95) {
-                    this.addItem(item, key);
-                    this.setGold(this.Gold - item.Cost * 0.9);
-                }
-            }
-        }
-        this.sortByType();
-    }
+        if (itemIndex === -1) return;
 
-    countItemType(itemType) {
-        return this.Stock.filter(item => item.itemType === itemType).reduce((acc, item) => acc + item.number, 0);
-    }
+        const updatedItem = { ...updatedInventory[itemIndex] };
+        updatedItem.Number = Math.max(0, updatedItem.Number - 1);
+        updatedInventory[itemIndex] = updatedItem;
 
-    modItemNumber(key) {
-        let num = this.ItemModifier[key];
-        num *= Math.pow(1.1, this.PlayerLevel);
-        num *= 1 + 0.1 * this.CityLevel;
-        num *= Math.pow(1.05, this.Level);
-        return Math.floor(num + (Math.random() < num - Math.floor(num) ? 1 : 0));
-    }
-
-    trueCost(item, forParty = true) {
-        const rep = forParty ? this.Reputation * 2 : 0;
-        const mod = (100 + item.PriceModifier - rep + this.CityLevel) / 100;
-        let cost = Math.max((parseFloat(item.Cost) * mod), 0.01);
-        const dec = cost < 100 ? 1 : (cost < 1000 ? 5 : 10);
-        return parseFloat(cost < 1 ? cost.toFixed(2) : Math.round(cost / dec) * dec);
+        this.setGold(this.Gold + this.trueCost(updatedItem));
+        this.Stock = updatedInventory;
     }
 }
 

@@ -291,6 +291,8 @@ function App() {
 
   //#endregion
 
+  //#region props
+
   var sidebarProps = {
     isSidebarCollapsed: sidebarCollapsed,
     toggleSidebar: toggleSidebar,
@@ -318,7 +320,8 @@ function App() {
     shopType: shop?.ShopType ?? '',
     onShopTypeChange: onShopTypeChange,
     onCreateShop: onCreateShop,
-    onWaitTime: onWaitTime
+    onWaitTime: onWaitTime,
+    isShopGenerated: (shop?.getInventory() ?? []).length > 0
   };
 
   var shopInventoryProps = {
@@ -329,6 +332,8 @@ function App() {
     onDeleteItem: onDeleteItem,
     onAddItem: onAddItem
   }
+
+  //#endregion
 
   return (
     <body className='app'>
