@@ -37,7 +37,7 @@ const SelectComponent = ({ props }) => {
         </>
       )}
 
-      <button className={isSavedEmpty ? 'modern-button' : 'levels-button'} onClick={handleNewClick}>
+      <button className={isSavedEmpty ? 'modern-button' : 'levels-button large'} onClick={handleNewClick}>
         <span className="material-symbols-outlined">
           new_window
         </span>
@@ -46,7 +46,7 @@ const SelectComponent = ({ props }) => {
       {!isSavedEmpty && (
         <>
           <button
-            className='levels-button'
+            className='levels-button large'
             {...longPressEvent}
           >
             <span className="material-symbols-outlined">

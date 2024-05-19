@@ -21,9 +21,7 @@ const Sidebar = ({ props }) => {
         </button>
 
         {!props.isSidebarCollapsed && (
-          <div className='content'>
-            <div className='sidebar-buttons'>
-
+          <>
               <button className='saving-button' onClick={downloadLocalStorage}>
                 <span className='material-symbols-outlined'>
                   download
@@ -43,10 +41,8 @@ const Sidebar = ({ props }) => {
                 </span>
               </button>
 
-            </div>
-
             <MenuCards props={props} />
-          </div>
+          </>
         )}
       </div>
     </div>

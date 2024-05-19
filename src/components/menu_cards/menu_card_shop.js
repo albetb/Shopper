@@ -72,7 +72,7 @@ const MenuCardShop = ({ props }) => {
                 </select>
               </div>
               <div className='card-side-div margin-top'>
-                <button className='modern-button' onClick={handleGenerateInventory}>Generate</button>
+                <button className='modern-button' onClick={handleGenerateInventory}><b>Generate</b></button>
               </div>
             </>
           )}
