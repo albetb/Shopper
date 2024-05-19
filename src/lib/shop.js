@@ -65,14 +65,12 @@ class Shop {
                 this.addItem(newItem, key);
             }
         }
-        const invValue = () => this.Stock.reduce((total, item) => total + item.Cost, 0) * 0.95;
+
         this.sortByCost();
-        while (invValue() > this.Gold * 0.85) {
-            if (this.Stock.length > 0) {
-                this.Stock.pop();
-            }
+        while (this.getInventoryValue() > this.Gold * 0.85 && this.Stock.length > 1) {
+            this.Stock.pop();
         }
-        this.setGold(this.Gold - invValue());
+        this.setGold(Math.max(this.Gold - this.getInventoryValue(), Math.random() * 200));
         this.sortByType();
     }
 
@@ -97,14 +95,14 @@ class Shop {
 
     modItemNumber(key) {
         let num = this.ItemModifier[key];
-        num *= Math.pow(1.1, this.PlayerLevel);
-        num *= 1 + 0.1 * this.CityLevel;
-        num *= Math.pow(1.05, this.Level);
+        num *= 1 + 0.1 * (this.PlayerLevel - 1);
+        num *= 1 + 0.1 * (this.CityLevel - 1);
+        num *= 1 + 0.05 * this.Level;
         return Math.floor(num + (Math.random() < num - Math.floor(num) ? 1 : 0));
     }
 
     baseGold(PlayerLevel, Level) {
-        return Math.floor(1000 * Math.pow(PlayerLevel, 1.5) * Math.pow(1.1, Level));
+        return Math.floor(1000 * Math.pow(PlayerLevel, 1.4) * Math.pow(1.1, Level));
     }
 
     //#endregion
@@ -116,6 +114,10 @@ class Shop {
             ...item,
             Cost: this.trueCost(item, true)
         }));
+    }
+
+    getInventoryValue() {
+        return this.Stock.reduce((total, item) => total + this.trueCost(item, false), 0) * 0.95;
     }
 
     sortByType() {
@@ -166,13 +168,13 @@ class Shop {
     setGold(gold) {
         if (gold == null || typeof gold !== 'number' || isNaN(gold)) {
             if (this.Gold == null || typeof this.Gold !== 'number' || isNaN(this.Gold)) {
-                this.Gold = 0;
+                this.Gold = parseInt(Math.random() * 20);
             }
             return;
         }
 
         if (gold < 0) {
-            this.Gold = 0;
+            this.Gold = parseInt(Math.random() * 20);
             return;
         }
 
@@ -208,10 +210,11 @@ class Shop {
 
     sellSomething() {
         const itemNumber = this.getInventory().reduce((acc, item) => acc + item.Number, 0);
+        if (Math.random() > 0.5) return; // 50% sell nothing
         if (Math.random() >= itemNumber / 10) return; // If have < 10 items, may sell nothing
         let num = Math.floor(Math.random() * Math.max(itemNumber / 10, 1));
-        if (num === 0 && Math.random() <= 0.03) {
-            num = 1;
+        if (num === 0 && Math.random() <= 0.03 && itemNumber > 3) {
+            num = 1; // 3% to sell something in any case
         }
         for (let i = 0; i < num; i++) {
             const itemsPossessed = this.Stock.filter(item => item.Number > 0);
@@ -228,12 +231,16 @@ class Shop {
     reStock() {
         for (let key in this.ItemModifier) {
             const itemNumber = this.modItemNumber(key);
-            if (this.countItemType(key) >= itemNumber) return;
-            for (let i = 0; i < itemNumber - this.countItemType(key); i++) {
+            const itemsPossessed = this.countItemType(key);
+            if (itemsPossessed >= itemNumber) return;
+            for (let i = 0; i < itemNumber - itemsPossessed; i++) {
+                if (this.baseGold(this.PlayerLevel, this.Level) * 0.15 > this.Gold) {
+                    break;
+                }
                 const item = newRandomItem(key, this.Level, this.PlayerLevel, this.ArcaneChance);
-                if (item && item.Name && this.Gold - 100 >= item.Cost * 0.95) {
+                if (item && item.Name) {
                     this.addItem(item, key);
-                    this.setGold(this.Gold - item.Cost * 0.9);
+                    this.setGold(this.Gold - item.Cost * 0.8);
                 }
             }
         }
@@ -241,7 +248,7 @@ class Shop {
     }
 
     countItemType(itemType) {
-        return this.Stock.filter(item => item.itemType === itemType).reduce((acc, item) => acc + item.number, 0);
+        return this.Stock.filter(item => item.ItemType === itemType).reduce((acc, item) => acc + item.Number, 0);
     }
 
     //#endregion

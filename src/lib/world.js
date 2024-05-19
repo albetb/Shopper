@@ -66,7 +66,7 @@ class World {
     }
 
     setPlayerLevel(lv) {
-        this.Level = Math.max(1, Math.min(99, parseInt(lv)));
+        this.Level = Math.max(1, Math.min(40, parseInt(lv)));
 
         this.Cities.forEach(shop => {
             var cityDb = db.getCity(shop.Id);

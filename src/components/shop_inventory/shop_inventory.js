@@ -50,6 +50,22 @@ const ShopInventory = ({ props }) => {
     return isMobile() && itemName === 'Wondrous Item' ? 'W. Item' : itemName;
   };
 
+  function formatGold() {
+    return formatNumber(props.gold);
+  }
+
+  function formatNumber(num) {
+    if (typeof (parseFloat(num)) !== 'number' || isNaN(num)) {
+      return '0';
+    }
+    const separator = "'";
+    let [integerPart, decimalPart] = num.toFixed(2).split('.');
+    let reversedIntegerPart = integerPart.split('').reverse().join('');
+    let formattedIntegerPart = reversedIntegerPart.match(/.{1,3}/g).join(separator).split('').reverse().join('');
+
+    return `${formattedIntegerPart}.${decimalPart}`.replace('.00', '');
+  }
+
   return (
     <>
       <div className='header-container'>
@@ -60,7 +76,7 @@ const ShopInventory = ({ props }) => {
           </div>
         </div>
         <div className='money-box'>
-          <p><b>Gold: {typeof (parseFloat(props.gold)) === 'number' ? parseFloat(props.gold) : '0'}</b></p>
+          <p><b>Gold: {formatGold()}</b></p>
         </div>
       </div>
       <table>
@@ -90,7 +106,7 @@ const ShopInventory = ({ props }) => {
                     )}
                   </td>
                   <td>{abbreviateLabel(item.ItemType)}</td>
-                  <td>{item.Cost}</td>
+                  <td>{formatNumber(item.Cost)}</td>
                   <td>
                     <button
                       className='item-number-button thick-border'
