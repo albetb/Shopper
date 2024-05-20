@@ -65,7 +65,7 @@ td.name-size>input {
 }
 
 .action-size {
-  width: auto;
+  width: 4rem;
 }
 
 a:link,
@@ -185,7 +185,7 @@ select.modern-input {
   }
 
   tr.add-item {
-    width: 100%;
+    width: 96vw;
     max-width: 96vw;
   }
 
@@ -218,9 +218,8 @@ select.modern-input {
     justify-content: center;
   }
 
-  td.action-size,
-  input.action-size {
-    width: auto;
+  .action-size {
+    width: 3.3rem;
   }
 
   tr {
