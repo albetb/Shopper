@@ -101,6 +101,10 @@ p {
   width: 5em;
   border-radius: 0.9em;
   font-size: 0.73em;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .add-item-button {

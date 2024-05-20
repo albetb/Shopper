@@ -43,6 +43,10 @@
   border-radius: 0.55rem;
   margin-left: 0.6rem;
   margin-top: 0.51rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .saving-button-margin {
