@@ -125,7 +125,7 @@ h3 {
 
 @media (max-width: 768px) {
   .cards {
-    top: 80px;
+    top: 3.9rem;
     margin-left: 2%;
     width: 92%;
   }
@@ -135,14 +135,14 @@ h3 {
   }
 
   .levels-button.large {
-    max-width: 5.6rem;
+    max-width: 4.2rem;
   }
 
   .modern-dropdown {
-    max-width: 11.7rem;
+    max-width: 9.9rem;
   }
 
   .modern-button {
-    max-width: 10rem;
+    max-width: 8rem;
   }
 }

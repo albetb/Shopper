@@ -63,17 +63,17 @@
 
   .sidebar.collapsed,
   .toggle-button {
-    width: 3.7rem;
+    width: 3.4rem;
     height: 3.7rem;
     border-radius: 8rem;
   }
 
   .sidebar.collapsed {
-    margin: 2rem;
+    margin: 1rem;
   }
 
   .saving-button {
-    height: 3.8rem;
+    height: 2.8rem;
     width: 7rem;
     border-radius: 0.75rem;
   }

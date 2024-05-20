@@ -81,6 +81,9 @@ p {
 
 .item-number-button,
 .add-item-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition-duration: 0.3s;
   box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25);
   font-weight: bold;
@@ -212,13 +215,9 @@ select.modern-input {
   h2 {
     font-size: 1em;
   }
-
+  .add-item-button,
   .item-number-button {
-    width: 9vw;
-  }
-
-  .add-item-button {
-    width: 35vw;
+    height: 3.7em;
   }
 
   td.name-small {
