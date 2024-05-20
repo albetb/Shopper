@@ -46,7 +46,7 @@ const SelectComponent = ({ props }) => {
       {!isSavedEmpty && (
         <>
           <button
-            className='levels-button large'
+            className='levels-button large thick-border'
             {...longPressEvent}
           >
             <span className="material-symbols-outlined">

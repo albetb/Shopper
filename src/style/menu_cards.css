@@ -58,6 +58,10 @@
   max-width: 8rem;
 }
 
+.modern-button.small {
+  max-width: 6.6rem;
+}
+
 .levels-div {
   width: 100%;
   max-width: 11rem;

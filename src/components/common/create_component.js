@@ -39,7 +39,7 @@ const CreateComponent = ({ props }) => {
         onKeyDown={handleKeyDown}
       />
 
-      <button className='modern-button' onClick={handleOkClick}>
+      <button className='modern-button small' onClick={handleOkClick}>
         <span className='material-symbols-outlined'>
           check
         </span>
