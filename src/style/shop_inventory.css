@@ -27,12 +27,14 @@ tr {
 
 tr.add-item {
   width: 50vw;
+  max-width: 50vw;
   border-collapse: collapse;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 2%;
   padding: 0 0 14px 0;
   display: flex;
   justify-content: space-around;
+  border-top: 2px solid #dddddd7e;
 }
 
 td.align-right,
@@ -46,12 +48,16 @@ td.name-size {
   width: 33vw;
 }
 
-input.name-size {
-  width: 99%;
+td.name-small {
+  width: 28vw;
+}
+
+td.name-size>input {
+  width: 27vw;
 }
 
 .type-size {
-  width: 7vw;
+  width: 6vw;
 }
 
 .cost-size {
@@ -59,7 +65,7 @@ input.name-size {
 }
 
 .action-size {
-  width: 3vw;
+  width: auto;
 }
 
 a:link,
@@ -91,17 +97,17 @@ p {
   color: #333333;
   border: 1px solid #c0c0c0;
   cursor: pointer;
-  font-size: 0.63em;
-  height: 3.5em;
-  width: 5.3em;
+  height: 3.1em;
+  width: 5em;
   border-radius: 0.9em;
+  font-size: 0.73em;
 }
 
 .add-item-button {
-  height: 2.5em;
   width: 10em;
-  border-radius: 0.5em;
-  margin: 18px 0;
+  border-radius: 0.9em;
+  margin: 1.2rem 0;
+  font-size: 0.6em;
 }
 
 .modern-input {
@@ -125,7 +131,7 @@ select.modern-input {
 }
 
 .header-container {
-  width: 40vw;
+  width: 50vw;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -144,13 +150,13 @@ select.modern-input {
 .money-box {
   display: flex;
   align-self: center;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   border: 2px solid rgb(33, 40, 45);
   height: 25px;
-  align-items: center;
-  justify-content: center;
 }
 
 .time-div-row {
@@ -167,45 +173,54 @@ select.modern-input {
   margin-left: 15px;
 }
 
+.no-border-top {
+  border-top: 0px;
+}
+
 
 @media (max-width: 768px) {
   table {
-    width: 96vw;
+    width: 100%;
+    max-width: 96vw;
   }
 
   tr.add-item {
-    width: 96vw;
-    border-top: 1px solid #dddddd7e;
+    width: 100%;
+    max-width: 96vw;
   }
 
   td.number-size,
   input.number-size {
     width: 3vw;
-    border-top: 0px;
   }
 
   td.name-size,
   input.name-size {
-    width: 99%;
-    border-top: 0px;
+    width: 100%;
+    max-width: 35vw;
+  }
+
+  td.name-size>input {
+    width: 33vw;
   }
 
   td.type-size,
   select.type-size {
-    width: 10vw;
-    border-top: 0px;
+    width: 11vw;
+    display: flex;
+    justify-content: center;
   }
 
   td.cost-size,
   input.cost-size {
-    width: 10vw;
-    border-top: 0px;
+    width: 11vw;
+    display: flex;
+    justify-content: center;
   }
 
   td.action-size,
   input.action-size {
-    width: 10vw;
-    border-top: 0px;
+    width: auto;
   }
 
   tr {
@@ -215,12 +230,17 @@ select.modern-input {
   h2 {
     font-size: 1em;
   }
-  .add-item-button,
-  .item-number-button {
-    height: 3.7em;
+
+  .add-item-button {
+    width: 9em;
+    font-size: 0.9em;
   }
 
-  td.name-small {
-    width: 35vw;
+  p {
+    font-size: 0.8em;
+  }
+
+  .header-container {
+    width: 62vw;
   }
 }

@@ -19,7 +19,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
 
   return (
     <tr className='add-item'>
-      <td className='number-size'>
+      <td className='number-size no-border-top'>
         <input
           type='number'
           value={number}
@@ -27,7 +27,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
           className='number-size modern-input'
         />
       </td>
-      <td className='name-size name-small'>
+      <td className='name-size name-small no-border-top'>
         <input
           type='text'
           placeholder='Item name'
@@ -36,7 +36,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
           className='name-size modern-input'
         />
       </td>
-      <td className='type-size'>
+      <td className='type-size no-border-top'>
         <select
           value={itemType}
           onChange={(e) => setItemType(e.target.value)}
@@ -49,7 +49,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
           ))}
         </select>
       </td>
-      <td className='cost-size'>
+      <td className='cost-size no-border-top'>
         <input
           type='number'
           value={cost}
@@ -57,7 +57,7 @@ const AddItemForm = ({ onAddItem, setShowAddItemForm }) => {
           className='cost-size modern-input'
         />
       </td>
-      <td className='action-size'>
+      <td className='action-size no-border-top'>
         <button className='item-number-button' onClick={handleAddItemClick}>
           <span className='material-symbols-outlined'>
             add_shopping_cart

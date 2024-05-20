@@ -1,6 +1,6 @@
 .sidebar {
   display: flex;
-  width: 21rem;
+  width: 20rem;
   height: 100%;
   background-color: rgb(1, 116, 116);
   box-shadow: 2px 0px 5px 1px rgba(1, 89, 116, 0.7);
@@ -9,7 +9,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-  padding-left: 0.5rem;
+  padding-left: 0.4rem;
 }
 
 .sidebar.collapsed {
@@ -43,12 +43,12 @@
   width: 100%;
   max-width: 5.6rem;
   border-radius: 0.55rem;
-  margin-left: 0.9rem;
+  margin-left: 0.6rem;
   margin-top: 0.51rem;
 }
 
 .saving-button-margin {
-  margin-left: 1.3rem;
+  margin-left: 1rem;
 }
 
 .deleting {
@@ -63,13 +63,14 @@
 
   .sidebar.collapsed,
   .toggle-button {
-    width: 3.4rem;
+    width: 3.7rem;
     height: 3.7rem;
     border-radius: 8rem;
   }
 
   .sidebar.collapsed {
     margin: 1rem;
+    padding-left: 0;
   }
 
   .saving-button {
