@@ -274,4 +274,8 @@ select.modern-input {
   .header-container {
     width: 62vw;
   }
+
+  .suggestions {
+    max-height: 18rem;
+  }
 }

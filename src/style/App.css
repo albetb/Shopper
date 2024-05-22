@@ -35,7 +35,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: rgb(1, 116, 116);
-  border-radius: 6px;
+  border-radius: 1rem;
   border: 3px transparent #6969691c;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
@@ -52,7 +52,7 @@ body {
 
 @media (prefers-reduced-motion: no-preference) {
   .app-logo {
-    animation: app-logo-spin infinite 20s linear;
+    animation: app-logo-spin infinite 2s linear;
   }
 }
 
