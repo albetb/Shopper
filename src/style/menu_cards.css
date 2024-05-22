@@ -102,6 +102,10 @@
   -ms-user-select: none;
 }
 
+.padding-left {
+  padding-left: 0.5em;
+}
+
 .modern-dropdown.small {
   width: 100%;
   max-width: 5rem;

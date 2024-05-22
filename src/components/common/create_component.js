@@ -31,7 +31,7 @@ const CreateComponent = ({ props }) => {
 
       <input
         ref={inputRef}
-        className='modern-dropdown'
+        className='modern-dropdown padding-left'
         type='text'
         placeholder={placeholder()}
         value={name}

@@ -18,7 +18,10 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
       );
       const otherItems = getItem(itemName, itemType);
 
-      setSuggestions([...filteredSuggestions, ...otherItems]);
+      const namesInFilteredSuggestions = new Set(filteredSuggestions.map(item => item.Name));
+      const filteredOtherItems = otherItems.filter(item => !namesInFilteredSuggestions.has(item.Name));
+
+      setSuggestions([...filteredSuggestions, ...filteredOtherItems]);
     } else {
       setSuggestions([]);
     }
