@@ -60,6 +60,25 @@ function randomMagicItem(shopLevel, partyLevel) {
     return newRandomItem(itemTypeName, shopLevel, partyLevel, quality);
 }
 
+function getItem(itemName, itemType) {
+    var itemList = [];
+    if (itemType === 'Scroll') {
+        const arcaneScroll = loadFile('scrolls')['Arcane'];
+        const divineScroll = loadFile('scrolls')['Divine'];
+
+        itemList = [...arcaneScroll, ...divineScroll];
+    } else {
+        itemList = loadFile('items')[itemType] ?? [];
+    }
+
+    const items = itemList
+        .filter(item => item?.Name?.toLowerCase().includes(itemName.toLowerCase()))
+        .map(item => removeUnusedAttributes(item));
+    items.forEach(item => item.ItemType = itemType);
+
+    return items;
+}
+
 function itemChoice(name, val = {}) {
     try {
         const table = loadFile(val.file ?? 'items')[name];
@@ -361,4 +380,4 @@ function newMagicArmor(shopLevel, quality) {
     return armor;
 }
 
-export { newRandomItem, randomMagicItem };
+export { newRandomItem, randomMagicItem, getItem };

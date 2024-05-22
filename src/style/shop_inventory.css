@@ -128,7 +128,7 @@ p {
 .thick-border {
   border: 2px solid rgba(90, 90, 90, 0.7);
   box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25),
-   inset 0px 0px 6px 3px rgba(90, 90, 90, 0.55);
+    inset 0px 0px 6px 3px rgba(90, 90, 90, 0.55);
 }
 
 select.modern-input {
@@ -189,7 +189,7 @@ select.modern-input {
   width: 99%;
   border: 1px solid #ccc;
   background-color: #282c34;
-  max-height: 200rem;
+  max-height: 30rem;
   overflow-y: auto;
   margin: 0;
   padding: 0;

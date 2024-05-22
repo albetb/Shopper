@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { itemTypes } from '../../lib/utils';
+import { getItem } from '../../lib/item';
 import '../../style/shop_inventory.css';
 
 const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
@@ -15,7 +16,9 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
       const filteredSuggestions = items.filter(item =>
         item.Name.toLowerCase().includes(itemName.toLowerCase())
       );
-      setSuggestions(filteredSuggestions);
+      const otherItems = getItem(itemName, itemType);
+
+      setSuggestions([...filteredSuggestions, ...otherItems]);
     } else {
       setSuggestions([]);
     }
