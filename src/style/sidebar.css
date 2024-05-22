@@ -9,6 +9,7 @@
   top: 0;
   bottom: 0;
   padding-left: 0.4rem;
+  z-index: 2;
 }
 
 .sidebar.collapsed {

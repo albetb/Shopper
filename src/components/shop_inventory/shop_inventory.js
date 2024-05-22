@@ -128,7 +128,7 @@ const ShopInventory = ({ props }) => {
         </tbody>
       </table>
       {showAddItemForm ? (
-        <AddItemForm onAddItem={props.onAddItem} setShowAddItemForm={setShowAddItemForm} />
+        <AddItemForm onAddItem={props.onAddItem} items={props.items} setShowAddItemForm={setShowAddItemForm} />
       ) : (
         <button className='add-item-button' onClick={handleAddItemButtonClick}>
           Add Item

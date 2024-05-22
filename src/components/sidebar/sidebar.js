@@ -10,41 +10,39 @@ const Sidebar = ({ props }) => {
   };
 
   return (
-    <div>
-      <div className={`sidebar ${props.isSidebarCollapsed ? 'collapsed' : ''}`}>
+    <div className={`sidebar ${props.isSidebarCollapsed ? 'collapsed' : ''}`}>
 
-        <button className='toggle-button' onClick={props.toggleSidebar}>
-          <span className='material-symbols-outlined'>
-            {!props.isSidebarCollapsed ?
-              ('arrow_back') : ('arrow_forward')}
-          </span>
-        </button>
+      <button className='toggle-button' onClick={props.toggleSidebar}>
+        <span className='material-symbols-outlined'>
+          {!props.isSidebarCollapsed ?
+            ('arrow_back') : ('arrow_forward')}
+        </span>
+      </button>
 
-        {!props.isSidebarCollapsed && (
-          <>
-              <button className='saving-button' onClick={downloadLocalStorage}>
-                <span className='material-symbols-outlined'>
-                  download
-                </span>
-              </button>
+      {!props.isSidebarCollapsed && (
+        <>
+          <button className='saving-button' onClick={downloadLocalStorage}>
+            <span className='material-symbols-outlined'>
+              download
+            </span>
+          </button>
 
-              <input
-                type='file'
-                id='upload'
-                style={{ display: 'none' }}
-                accept='application/json'
-                onChange={handleFileUpload}
-              />
-              <button className='saving-button saving-button-margin' onClick={handleUploadClick}>
-                <span className='material-symbols-outlined'>
-                  drive_folder_upload
-                </span>
-              </button>
+          <input
+            type='file'
+            id='upload'
+            style={{ display: 'none' }}
+            accept='application/json'
+            onChange={handleFileUpload}
+          />
+          <button className='saving-button saving-button-margin' onClick={handleUploadClick}>
+            <span className='material-symbols-outlined'>
+              drive_folder_upload
+            </span>
+          </button>
 
-            <MenuCards props={props} />
-          </>
-        )}
-      </div>
+          <MenuCards props={props} />
+        </>
+      )}
     </div>
   );
 };
