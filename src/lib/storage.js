@@ -47,11 +47,6 @@ export function getIsShopCollapsed() {
     return value ? JSON.parse(decompressFromUTF16(value)) : false;
 }
 
-export function getIsTimeCollapsed() {
-    const value = localStorage.getItem('IsTimeCollapsed');
-    return value ? JSON.parse(decompressFromUTF16(value)) : false;
-}
-
 //#endregion
 
 //#region set
@@ -86,10 +81,6 @@ export function setIsCityCollapsed(value) {
 
 export function setIsShopCollapsed(value) {
     localStorage.setItem('IsShopCollapsed', compressToUTF16(JSON.stringify(value)));
-}
-
-export function setIsTimeCollapsed(value) {
-    localStorage.setItem('IsTimeCollapsed', compressToUTF16(JSON.stringify(value)));
 }
 
 //#endregion

@@ -283,7 +283,7 @@ class Shop {
         this.sortByType();
     }
 
-    sell(itemName, itemType) {
+    sell(itemName, itemType, num = 1) {
         let updatedInventory = [...this.Stock];
         const itemIndex = updatedInventory.findIndex(
             (item) => item.Name === cap(itemName) && item.ItemType === itemType
@@ -292,7 +292,7 @@ class Shop {
         if (itemIndex === -1) return;
 
         const updatedItem = { ...updatedInventory[itemIndex] };
-        updatedItem.Number = Math.max(0, updatedItem.Number - 1);
+        updatedItem.Number = Math.max(0, updatedItem.Number - num);
         updatedInventory[itemIndex] = updatedItem;
 
         this.setGold(this.Gold + this.trueCost(updatedItem));

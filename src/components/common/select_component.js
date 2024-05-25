@@ -1,8 +1,9 @@
-import React from 'react';
-import useLongPress from '../hooks/use_long_press';
+import React, { useState } from 'react';
 import '../../style/menu_cards.css';
 
 const SelectComponent = ({ props }) => {
+  const [confirmDelete, setConfirmDelete] = useState(false);
+
   const handleNewClick = () => {
     props.setIsVisible(true);
   };
@@ -11,11 +12,22 @@ const SelectComponent = ({ props }) => {
     props.onSelect(event.target.value);
   };
 
-  const handleDelete = () => {
-    props.onDeleteItem();
+  const handleDropdownClick = () => {
+    setConfirmDelete(false);
   };
 
-  const longPressEvent = useLongPress(handleDelete, () => { }, { delay: 500 });
+  const handleDelete = () => {
+    props.onDeleteItem();
+    setConfirmDelete(false);
+  };
+
+  const handleConfirmClick = () => {
+    setConfirmDelete(true);
+  };
+
+  const handleCancelClick = () => {
+    setConfirmDelete(false);
+  };
 
   const isSavedEmpty = !Array.isArray(props.saved) || props.saved.length === 0;
 
@@ -26,6 +38,7 @@ const SelectComponent = ({ props }) => {
           <select
             className='modern-dropdown'
             onChange={handleDropdownChange}
+            onClick={handleDropdownClick}
             value={props.saved?.[0] || ''}
           >
             {props.saved.map((item, index) => (
@@ -37,22 +50,36 @@ const SelectComponent = ({ props }) => {
         </>
       )}
 
-      <button className={isSavedEmpty ? 'modern-button' : 'levels-button large'} onClick={handleNewClick}>
-        <span className="material-symbols-outlined">
-          new_window
-        </span>
-      </button>
+      {!confirmDelete && (
+        <button className={isSavedEmpty ? 'modern-button' : 'levels-button large'} onClick={handleNewClick}>
+          <span className="material-symbols-outlined">
+            new_window
+          </span>
+        </button>
+      )}
 
       {!isSavedEmpty && (
         <>
-          <button
-            className='levels-button large thick-border'
-            {...longPressEvent}
-          >
-            <span className="material-symbols-outlined">
-              delete
-            </span>
-          </button>
+          {confirmDelete ? (
+            <>
+              <button className='levels-button large' onClick={handleDelete}>
+                <span className="material-symbols-outlined">
+                  delete
+                </span>
+              </button>
+              <button className='levels-button large' onClick={handleCancelClick}>
+                <span className="material-symbols-outlined">
+                  close
+                </span>
+              </button>
+            </>
+          ) : (
+            <button className='levels-button large' onClick={handleConfirmClick}>
+              <span className="material-symbols-outlined">
+                delete
+              </span>
+            </button>
+          )}
         </>
       )}
     </div>

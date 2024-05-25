@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import MenuCardWorld from './menu_card_world';
 import MenuCardCity from './menu_card_city';
 import MenuCardShop from './menu_card_shop';
-import MenuCardTime from './menu_card_time';
 import { isMobile, trimLine } from '../../lib/utils';
 import * as db from '../../lib/storage';
 import '../../style/menu_cards.css';
@@ -11,8 +10,7 @@ const MenuCards = ({ props }) => {
   const [cardStates, setCardStates] = useState([
     { id: 1, collapsed: false },
     { id: 2, collapsed: false },
-    { id: 3, collapsed: false },
-    { id: 4, collapsed: false }
+    { id: 3, collapsed: false }
   ]);
 
   useEffect(() => {
@@ -22,8 +20,6 @@ const MenuCards = ({ props }) => {
     setCardCollapsed(2, isCityCollapsed);
     const isShopCollapsed = db.getIsShopCollapsed();
     setCardCollapsed(3, isShopCollapsed);
-    const isTimeCollapsed = db.getIsTimeCollapsed();
-    setCardCollapsed(4, isTimeCollapsed);
   }, []);
 
   const setCardCollapsed = (cardId, isCollapsed) => {
@@ -40,8 +36,7 @@ const MenuCards = ({ props }) => {
   const cards = [
     { id: 1, title: 'World' },
     { id: 2, title: 'City' },
-    { id: 3, title: 'Shop' },
-    { id: 4, title: 'Time' }
+    { id: 3, title: 'Shop' }
   ];
 
   const toggleCard = (cardId) => {
@@ -62,10 +57,6 @@ const MenuCards = ({ props }) => {
               cardName = 'shop';
               db.setIsShopCollapsed(!cardState.collapsed);
               break;
-            case 4:
-              cardName = 'time';
-              db.setIsTimeCollapsed(!cardState.collapsed);
-              break;
             default:
               return { ...cardState, collapsed: !cardState.collapsed };
           }
@@ -83,8 +74,6 @@ const MenuCards = ({ props }) => {
         return props.savedWorlds && props.savedWorlds.length > 0;
       case 3:
         return props.savedCities && props.savedCities.length > 0;
-      case 4:
-        return props.savedShops && props.savedShops.length > 0 && props.isShopGenerated;
       default:
         return true;
     }
@@ -103,9 +92,6 @@ const MenuCards = ({ props }) => {
     else if (cardId === 3 && props.savedShops && props.savedShops.length > 0) {
       return `${cardTitle}${formatText(props.savedShops[0], parseInt(props.shopLevel))}`;
     }
-    else if (cardId === 4 && props.savedShops && props.savedShops.length > 0 && props.isShopGenerated) {
-      return 'Time management';
-    }
 
     return cardTitle;
   };
@@ -116,7 +102,9 @@ const MenuCards = ({ props }) => {
     savedWorlds: props.savedWorlds,
     playerLevel: props.playerLevel,
     onPlayerLevelChange: props.onPlayerLevelChange,
-    onDeleteItem: props.onDeleteWorld
+    onDeleteItem: props.onDeleteWorld,
+    isShopGenerated: props.isShopGenerated,
+    onWaitTime: props.onWaitTime
   };
 
   var menuCardCityProps = {
@@ -143,10 +131,6 @@ const MenuCards = ({ props }) => {
     onDeleteItem: props.onDeleteShop
   };
 
-  var menuCardTimeProps = {
-    onWaitTime: props.onWaitTime
-  };
-
   return (
     <div className='cards'>
       {cards.map(card => cardContentVisible(card.id) && (
@@ -166,7 +150,6 @@ const MenuCards = ({ props }) => {
               {card.id === 1 && <MenuCardWorld props={menuCardWorldProps} />}
               {card.id === 2 && <MenuCardCity props={menuCardCityProps} />}
               {card.id === 3 && <MenuCardShop props={menuCardShopProps} />}
-              {card.id === 4 && <MenuCardTime props={menuCardTimeProps} />}
             </div>
           )}
         </div>
