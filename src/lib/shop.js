@@ -258,25 +258,28 @@ class Shop {
     buy(itemName, itemType, cost = 1, number = 1) {
         if (itemName.trim() === '' || number <= 0) return;
         let updatedInventory = [...this.Stock];
+        const savedName = itemName.length > 64 ? cap(itemName).slice(0, 64) : cap(itemName);
+        const savedCost = Math.min(Math.max(parseFloat(cost).toFixed(2), 1), 999999999);
+        const savedNumber = Math.min(Math.max(parseInt(number), 99), 0);
         const itemIndex = updatedInventory.findIndex(
-            (item) => item.Name === cap(itemName) && item.ItemType === itemType
+            (item) => item.Name === savedName && item.ItemType === itemType
         );
 
         if (itemIndex !== -1) {
             const updatedItem = { ...updatedInventory[itemIndex] };
-            updatedItem.Number = Math.min(updatedItem.Number + parseInt(number), 99);
+            updatedItem.Number = savedNumber;
             updatedInventory[itemIndex] = updatedItem;
-            this.setGold(this.Gold - this.trueCost(updatedItem));
+            this.setGold(this.Gold - this.trueCost(updatedItem) * savedNumber);
         } else {
             const newItem = {
-                Name: itemName.length > 64 ? cap(itemName).slice(0, 64) : cap(itemName),
+                Name: savedName,
                 ItemType: itemType,
-                Cost: Math.min(Math.max(parseFloat(cost).toFixed(2), 1), 999999999),
-                Number: Math.min(parseInt(number), 99),
+                Cost: savedCost,
+                Number: savedNumber,
                 PriceModifier: 0
             };
             updatedInventory.push(newItem);
-            this.setGold(this.Gold - cost);
+            this.setGold(this.Gold - savedCost * savedNumber);
         }
 
         this.Stock = updatedInventory;
