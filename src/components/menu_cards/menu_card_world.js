@@ -32,7 +32,7 @@ const MenuCardWorld = ({ props }) => {
 
   const levelComponentProps = {
     level: props.playerLevel,
-    levelName: 'Player level',
+    levelName: 'Player Level',
     onLevelChange: props.onPlayerLevelChange
   };
 

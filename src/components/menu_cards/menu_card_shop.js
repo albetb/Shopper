@@ -36,7 +36,7 @@ const MenuCardShop = ({ props }) => {
 
   const shopLevelComponentProps = {
     level: props.shopLevel,
-    levelName: 'Shop level',
+    levelName: 'Shop Level',
     onLevelChange: props.onShopLevelChange
   };
 

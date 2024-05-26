@@ -29,7 +29,7 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
     } else {
       setSuggestions([]);
     }
-  }, [itemName, items]);
+  }, [itemName, itemType, items]);
 
   const handleAddItemClick = () => {
     onAddItem(itemName, itemType, cost, number);
