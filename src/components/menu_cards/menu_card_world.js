@@ -82,38 +82,40 @@ const MenuCardWorld = ({ props }) => {
         <>
           <SelectComponent props={selectComponentProps} />
           {props.savedWorlds.length > 0 && (
-            <LevelComponent props={levelComponentProps} />
-          )}
+            <>
+              <LevelComponent props={levelComponentProps} />
 
-          <div className={`card-side-div margin-top ${props.isShopGenerated ? '' : 'opacity-50'}`}>
-            <input
-              type='number'
-              placeholder='hours'
-              value={hours}
-              min={0}
-              max={23}
-              onChange={(e) => setHours(e.target.value)}
-              onBlur={handleHoursBlur}
-              className='modern-dropdown small padding-left'
-            />
-            <input
-              type='number'
-              placeholder='days'
-              value={days}
-              min={0}
-              max={7}
-              onChange={(e) => setDays(e.target.value)}
-              onBlur={handleDaysBlur}
-              className='modern-dropdown small padding-left'
-            />
-            <button
-              className={`modern-dropdown small ${isTransitioningCustom ? 'transition' : ''}`}
-              disabled={!props.isShopGenerated}
-              onClick={handleCustomWait}
-            >
-              {buttonTextCustom}
-            </button>
-          </div>
+              <div className={`card-side-div margin-top ${props.isShopGenerated ? '' : 'opacity-50'}`}>
+                <input
+                  type='number'
+                  placeholder='hours'
+                  value={hours}
+                  min={0}
+                  max={23}
+                  onChange={(e) => setHours(e.target.value)}
+                  onBlur={handleHoursBlur}
+                  className='modern-dropdown small padding-left'
+                />
+                <input
+                  type='number'
+                  placeholder='days'
+                  value={days}
+                  min={0}
+                  max={7}
+                  onChange={(e) => setDays(e.target.value)}
+                  onBlur={handleDaysBlur}
+                  className='modern-dropdown small padding-left'
+                />
+                <button
+                  className={`modern-dropdown small ${isTransitioningCustom ? 'transition' : ''}`}
+                  disabled={!props.isShopGenerated}
+                  onClick={handleCustomWait}
+                >
+                  {buttonTextCustom}
+                </button>
+              </div>
+            </>
+          )}
         </>
       )}
     </>

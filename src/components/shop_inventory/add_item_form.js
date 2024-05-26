@@ -13,6 +13,7 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
 
   const MAX_NUMBER = 99;
   const MAX_COST = 999999999;
+  const MAX_NAME_LENGTH = 64;
 
   useEffect(() => {
     if (itemName.length >= 2) {
@@ -53,8 +54,7 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
       setNumber(0);
     } else if (numValue > MAX_NUMBER) {
       setNumber(MAX_NUMBER);
-    }
-    else {
+    } else {
       setNumber(numValue);
     }
   };
@@ -65,10 +65,16 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
       setCost(0);
     } else if (numValue > MAX_COST) {
       setCost(MAX_COST);
-    }
-    else {
+    } else {
       setCost(numValue);
     }
+  };
+
+  const handleNameBlur = () => {
+    if (itemName.length > MAX_NAME_LENGTH) {
+      setItemName(itemName.slice(0, MAX_NAME_LENGTH));
+    }
+    setIsFocused(false);
   };
 
   const shouldShowSuggestions = isFocused && (suggestions.length > 1 ||
@@ -94,7 +100,7 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
           value={itemName}
           onChange={(e) => setItemName(e.target.value)}
           onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
+          onBlur={handleNameBlur}
           className='name-size modern-input'
         />
         {shouldShowSuggestions && (

@@ -269,9 +269,9 @@ class Shop {
             this.setGold(this.Gold - this.trueCost(updatedItem));
         } else {
             const newItem = {
-                Name: cap(itemName),
+                Name: itemName.length > 64 ? cap(itemName).slice(0, 64) : cap(itemName),
                 ItemType: itemType,
-                Cost: Math.max(parseFloat(cost).toFixed(2), 1),
+                Cost: Math.min(Math.max(parseFloat(cost).toFixed(2), 1), 999999999),
                 Number: Math.min(parseInt(number), 99),
                 PriceModifier: 0
             };
