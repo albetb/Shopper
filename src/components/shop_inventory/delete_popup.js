@@ -23,8 +23,10 @@ const DeletePopup = ({ itemName, itemType, itemNumber, onClose, onDelete, positi
         };
 
         document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
         };
     }, [popupRef, onClose]);
 

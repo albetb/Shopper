@@ -21,15 +21,16 @@ const ShopInventory = ({ props }) => {
 
   const handleDeleteItemClick = (event, itemName, itemType, itemNumber) => {
     if (!isLongPress) {
+      const clickPosition = event.changedTouches?.length > 0
+        ? { x: event.changedTouches[0].clientX, y: event.changedTouches[0].clientY }
+        : { x: event.clientX, y: event.clientY };
+
       setPopup({
         visible: true,
         itemName,
         itemType,
         itemNumber,
-        position: {
-          x: event.clientX,
-          y: event.clientY
-        }
+        position: clickPosition
       });
     }
   };
@@ -143,7 +144,10 @@ const ShopInventory = ({ props }) => {
                       onTouchStart={(e) => longPressEvent.onTouchStart(e, [item.Name, item.ItemType])}
                       onMouseUp={longPressEvent.onMouseUp}
                       onMouseLeave={longPressEvent.onMouseLeave}
-                      onTouchEnd={longPressEvent.onTouchEnd}
+                      onTouchEnd={(e) => {
+                        longPressEvent.onTouchEnd(e);
+                        handleDeleteItemClick(e, item.Name, item.ItemType, item.Number);
+                      }}
                     >
                       <span className='material-symbols-outlined'>
                         remove_shopping_cart

@@ -227,14 +227,14 @@ select.modern-input {
 }
 
 .item-number-button.small {
-  height: 2em;
-  width: 4em;
+  height: 1.9em;
+  width: 3.8em;
   border-radius: 0.6em;
 }
 
 .modern-input.small {
   height: 1.45em;
-  width: 3em;
+  width: 4em;
   border-radius: 0.5em;
 }
 
@@ -314,5 +314,17 @@ select.modern-input {
 
   .suggestions {
     max-height: 18rem;
+  }
+
+  .item-number-button.small {
+    height: 2.4em;
+    width: 4.3em;
+    border-radius: 0.6em;
+  }
+  
+  .modern-input.small {
+    height: 2em;
+    width: 5.5em;
+    border-radius: 0.5em;
   }
 }

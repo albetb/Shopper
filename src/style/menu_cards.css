@@ -118,6 +118,7 @@
   max-width: 2.1rem;
   border-radius: 0.65rem;
   box-shadow: 0px 0px 5px 5px rgba(1, 89, 116, 0.25);
+  align-content: center;
 }
 
 .level-text {
