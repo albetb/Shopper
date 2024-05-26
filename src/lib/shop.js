@@ -260,14 +260,14 @@ class Shop {
         let updatedInventory = [...this.Stock];
         const savedName = itemName.length > 64 ? cap(itemName).slice(0, 64) : cap(itemName);
         const savedCost = Math.min(Math.max(parseFloat(cost).toFixed(2), 1), 999999999);
-        const savedNumber = Math.min(Math.max(parseInt(number), 99), 0);
+        const savedNumber = Math.min(Math.max(parseInt(number), 0), 99);
         const itemIndex = updatedInventory.findIndex(
             (item) => item.Name === savedName && item.ItemType === itemType
         );
 
         if (itemIndex !== -1) {
             const updatedItem = { ...updatedInventory[itemIndex] };
-            updatedItem.Number = savedNumber;
+            updatedItem.Number += savedNumber;
             updatedInventory[itemIndex] = updatedItem;
             this.setGold(this.Gold - this.trueCost(updatedItem) * savedNumber);
         } else {
