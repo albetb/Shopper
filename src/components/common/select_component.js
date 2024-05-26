@@ -1,8 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../../style/menu_cards.css';
 
 const SelectComponent = ({ props }) => {
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const selectRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (selectRef.current && !selectRef.current.contains(event.target)) {
+        setConfirmDelete(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   const handleNewClick = () => {
     props.setIsVisible(true);
@@ -32,7 +47,7 @@ const SelectComponent = ({ props }) => {
   const isSavedEmpty = !Array.isArray(props.saved) || props.saved.length === 0;
 
   return (
-    <div className='card-side-div'>
+    <div ref={selectRef} className='card-side-div'>
       {!isSavedEmpty && (
         <>
           <select
