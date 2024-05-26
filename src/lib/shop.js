@@ -264,7 +264,7 @@ class Shop {
 
         if (itemIndex !== -1) {
             const updatedItem = { ...updatedInventory[itemIndex] };
-            updatedItem.Number += parseInt(number);
+            updatedItem.Number = Math.min(updatedItem.Number + parseInt(number), 99);
             updatedInventory[itemIndex] = updatedItem;
             this.setGold(this.Gold - this.trueCost(updatedItem));
         } else {
@@ -272,7 +272,7 @@ class Shop {
                 Name: cap(itemName),
                 ItemType: itemType,
                 Cost: Math.max(parseFloat(cost).toFixed(2), 1),
-                Number: parseInt(number),
+                Number: Math.min(parseInt(number), 99),
                 PriceModifier: 0
             };
             updatedInventory.push(newItem);

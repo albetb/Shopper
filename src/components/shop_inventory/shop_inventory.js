@@ -1,14 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { trimLine, isMobile } from '../../lib/utils';
 import useLongPress from '../hooks/use_long_press';
 import AddItemForm from './add_item_form';
+import DeletePopup from './delete_popup';
 import '../../style/shop_inventory.css';
 
 const ShopInventory = ({ props }) => {
   const [showAddItemForm, setShowAddItemForm] = useState(false);
   const [deletingItems, setDeletingItems] = useState({});
+  const [popup, setPopup] = useState({
+    visible: false,
+    itemName: '',
+    itemType: '',
+    itemNumber: 0,
+    position: { x: 0, y: 0 }
+  });
+  const [isLongPress, setIsLongPress] = useState(false);
 
-  const handleDeleteItemClick = (itemName, itemType) => {
+  const LONGPRESS_TIME = 400;
+
+  const handleDeleteItemClick = (event, itemName, itemType, itemNumber) => {
+    if (!isLongPress) {
+      setPopup({
+        visible: true,
+        itemName,
+        itemType,
+        itemNumber,
+        position: {
+          x: event.clientX,
+          y: event.clientY
+        }
+      });
+    }
+  };
+
+  const handleLongPressDelete = (itemName, itemType) => {
+    setIsLongPress(true);
     const itemKey = `${itemName}-${itemType}`;
     setDeletingItems((prev) => ({ ...prev, [itemKey]: true }));
 
@@ -19,7 +46,8 @@ const ShopInventory = ({ props }) => {
         delete newDeletingItems[itemKey];
         return newDeletingItems;
       });
-    }, 300);
+      setIsLongPress(false);
+    }, LONGPRESS_TIME);
   };
 
   const handleAddItemButtonClick = () => {
@@ -27,9 +55,9 @@ const ShopInventory = ({ props }) => {
   };
 
   const longPressEvent = useLongPress(
-    (itemName, itemType) => handleDeleteItemClick(itemName, itemType),
+    (itemName, itemType) => handleLongPressDelete(itemName, itemType),
     () => { },
-    { shouldPreventDefault: true, delay: 500 }
+    { shouldPreventDefault: true, delay: LONGPRESS_TIME }
   );
 
   if (!props.items || !props.items.some(item => item.Number > 0)) {
@@ -55,7 +83,7 @@ const ShopInventory = ({ props }) => {
   }
 
   function formatNumber(num) {
-    if (typeof (parseFloat(num)) !== 'number' || isNaN(num)) {
+    if (typeof parseFloat(num) !== 'number' || isNaN(num)) {
       return '0';
     }
     const separator = "'";
@@ -109,7 +137,8 @@ const ShopInventory = ({ props }) => {
                   <td>{formatNumber(item.Cost)}</td>
                   <td>
                     <button
-                      className='item-number-button thick-border'
+                      className='item-number-button'
+                      onClick={(e) => handleDeleteItemClick(e, item.Name, item.ItemType, item.Number)}
                       onMouseDown={(e) => longPressEvent.onMouseDown(e, [item.Name, item.ItemType])}
                       onTouchStart={(e) => longPressEvent.onTouchStart(e, [item.Name, item.ItemType])}
                       onMouseUp={longPressEvent.onMouseUp}
@@ -133,6 +162,16 @@ const ShopInventory = ({ props }) => {
         <button className='add-item-button' onClick={handleAddItemButtonClick}>
           Add Item
         </button>
+      )}
+      {popup.visible && (
+        <DeletePopup
+          itemName={popup.itemName}
+          itemType={popup.itemType}
+          itemNumber={popup.itemNumber}
+          position={popup.position}
+          onClose={() => setPopup({ visible: false, itemName: '', itemType: '', itemNumber: 0, position: { x: 0, y: 0 } })}
+          onDelete={(itemName, itemType, num) => props.onDeleteItem(itemName, itemType, num)}
+        />
       )}
     </>
   );

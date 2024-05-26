@@ -11,6 +11,9 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
   const [suggestions, setSuggestions] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
 
+  const MAX_NUMBER = 99;
+  const MAX_COST = 999999999;
+
   useEffect(() => {
     if (itemName.length >= 2) {
       const filteredSuggestions = items.filter(item =>
@@ -44,6 +47,30 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
     setIsFocused(false);
   };
 
+  const handleNumberBlur = () => {
+    const numValue = number ? parseInt(number, 10) : 0;
+    if (numValue < 0) {
+      setNumber(0);
+    } else if (numValue > MAX_NUMBER) {
+      setNumber(MAX_NUMBER);
+    }
+    else {
+      setNumber(numValue);
+    }
+  };
+
+  const handleCostBlur = () => {
+    const numValue = cost ? parseInt(cost, 10) : 0;
+    if (numValue < 0) {
+      setCost(0);
+    } else if (numValue > MAX_COST) {
+      setCost(MAX_COST);
+    }
+    else {
+      setCost(numValue);
+    }
+  };
+
   const shouldShowSuggestions = isFocused && (suggestions.length > 1 ||
     (suggestions.length === 1 && suggestions[0].Name.toLowerCase() !== itemName.toLowerCase()));
 
@@ -52,8 +79,11 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
       <td className='number-size no-border-top'>
         <input
           type='number'
+          min={0}
+          max={MAX_NUMBER}
           value={number}
           onChange={(e) => setNumber(e.target.value)}
+          onBlur={handleNumberBlur}
           className='number-size modern-input'
         />
       </td>
@@ -98,7 +128,10 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
         <input
           type='number'
           value={cost}
+          min={0}
+          max={MAX_COST}
           onChange={(e) => setCost(e.target.value)}
+          onBlur={handleCostBlur}
           className='cost-size modern-input'
         />
       </td>

@@ -266,8 +266,8 @@ function App() {
     updateShop('setShopType', type);
   };
 
-  const onDeleteItem = (itemName, itemType) => {
-    updateShop('sell', itemName, itemType);
+  const onDeleteItem = (itemName, itemType, num) => {
+    updateShop('sell', itemName, itemType, num);
   };
 
   const onAddItem = (itemName, itemType, cost, number) => {

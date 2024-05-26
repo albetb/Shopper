@@ -92,7 +92,8 @@ p {
   align-items: center;
   justify-content: center;
   transition-duration: 0.3s;
-  box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25);
+  box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25),
+    inset 0px 0px 5px 2px rgba(90, 90, 90, 0.25);
   font-weight: bold;
   background-color: #f9f9f9;
   color: #333333;
@@ -106,6 +107,11 @@ p {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+}
+
+.item-number-button.small {
+  height: 2em;
+  width: 3em;
 }
 
 .add-item-button {
@@ -124,12 +130,6 @@ p {
   cursor: pointer;
   font-size: 0.9em;
   padding-left: 0.4em;
-}
-
-.thick-border {
-  border: 2px solid rgba(90, 90, 90, 0.7);
-  box-shadow: 0px 0px 5px 5px rgba(136, 135, 135, 0.25),
-    inset 0px 0px 6px 3px rgba(90, 90, 90, 0.55);
 }
 
 select.modern-input {
@@ -207,6 +207,43 @@ select.modern-input {
 
 .suggestion-item:hover {
   background-color: #383c44;
+}
+
+.popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 6rem;
+  border: 1px solid #ccc;
+  background-color: #282c34;
+  margin: 0;
+  padding: 0;
+  border-radius: 0.9em;
+  z-index: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-number-button.small {
+  height: 2em;
+  width: 4em;
+  border-radius: 0.6em;
+}
+
+.modern-input.small {
+  height: 1.45em;
+  width: 3em;
+  border-radius: 0.5em;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.modern-input.no-padding {
+  padding-left: 0;
 }
 
 
