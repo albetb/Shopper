@@ -295,7 +295,7 @@ class Shop {
         updatedItem.Number = Math.max(0, updatedItem.Number - num);
         updatedInventory[itemIndex] = updatedItem;
 
-        this.setGold(this.Gold + this.trueCost(updatedItem));
+        this.setGold(this.Gold + this.trueCost(updatedItem) * num);
         this.Stock = updatedInventory;
     }
 }
