@@ -95,6 +95,7 @@ const MenuCardWorld = ({ props }) => {
                   onChange={(e) => setHours(e.target.value)}
                   onBlur={handleHoursBlur}
                   className='modern-dropdown small padding-left'
+                  disabled={!props.isShopGenerated}
                 />
                 <input
                   type='number'
@@ -105,11 +106,12 @@ const MenuCardWorld = ({ props }) => {
                   onChange={(e) => setDays(e.target.value)}
                   onBlur={handleDaysBlur}
                   className='modern-dropdown small padding-left'
+                  disabled={!props.isShopGenerated}
                 />
                 <button
+                  onClick={handleCustomWait}
                   className={`modern-dropdown small ${isTransitioningCustom ? 'transition' : ''}`}
                   disabled={!props.isShopGenerated}
-                  onClick={handleCustomWait}
                 >
                   {buttonTextCustom}
                 </button>

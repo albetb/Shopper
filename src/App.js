@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Sidebar from './components/sidebar/sidebar';
 import ShopInventory from './components/shop_inventory/shop_inventory';
 import World from './lib/world';
@@ -15,6 +15,36 @@ function App() {
   const [world, setWorld] = useState(null);
   const [city, setCity] = useState(null);
   const [shop, setShop] = useState(null);
+  const [shopGenerated, setShopGenerated] = useState(false);
+
+  const getAreShopsGenerated = useCallback((selectedWorld = null) => {
+    const selectedWorldDb = selectedWorld !== null ? db.getWorld(selectedWorld.Id) : db.getWorld(world?.Id);
+    if (selectedWorldDb && Array.isArray(selectedWorldDb.Cities)) {
+      const isShopGenerated = selectedWorldDb.Cities.some(cityNew => {
+        const cityDb = db.getCity(cityNew.Id);
+        if (cityDb && Array.isArray(cityDb.Shops)) {
+          return cityDb.Shops.some(shopNew => {
+            const shopDb = db.getShop(shopNew.Id);
+            if (shopDb) {
+              const shopInventory = shopDb.getInventory() ?? [];
+              if (shopInventory.length > 0) {
+                return true;
+              }
+            }
+            return false;
+          });
+        }
+        return false;
+      });
+
+      if (isShopGenerated) {
+        setShopGenerated(isShopGenerated);
+        return;
+      }
+    }
+
+    setShopGenerated(false);
+  }, [world]);
 
   useEffect(() => {
     db.validateDb();
@@ -28,7 +58,8 @@ function App() {
     setWorld(worldDb);
     setCity(cityDb);
     setShop(shopDb);
-  }, []);
+    getAreShopsGenerated(selectedWorldDb);
+  }, [getAreShopsGenerated]);
 
   const toggleSidebar = () => {
     setSidebarCollapsed(!sidebarCollapsed);
@@ -75,6 +106,8 @@ function App() {
 
       saveSelectedWorld({ Id: newWorld.Id, Name: newWorld.Name });
 
+      getAreShopsGenerated(newWorld);
+
       setCity(null);
       setShop(null);
     }
@@ -117,6 +150,8 @@ function App() {
     const newWorld = db.getWorld(newSelectedWorld.Id);
     setWorld(newWorld);
 
+    getAreShopsGenerated(newWorld);
+
     const newCity = db.getCity(newWorld.SelectedCity.Id);
     setCity(newCity);
 
@@ -128,7 +163,7 @@ function App() {
     if (!newSelectedCity) { return; }
 
     let newWorld = new World().load(world);
-    newWorld.selectCity(newSelectedCity.Id)
+    newWorld.selectCity(newSelectedCity.Id);
     saveWorld(newWorld);
 
     const newCity = db.getCity(newSelectedCity.Id);
@@ -142,7 +177,7 @@ function App() {
     if (!newSelectedShop) { return; }
 
     let newCity = new City().load(city);
-    newCity.selectShop(newSelectedShop.Id)
+    newCity.selectShop(newSelectedShop.Id);
     saveCity(newCity);
 
     setShop(db.getShop(newSelectedShop.Id));
@@ -190,20 +225,20 @@ function App() {
 
     saveSelectedWorld(newSelectedWorld);
     saveWorlds(worlds.filter(s => s.Id !== oldSelectedWorld.Id));
-    const newSelectedWorldDb = db.getWorld(newSelectedWorld?.Id)
+    const newSelectedWorldDb = db.getWorld(newSelectedWorld?.Id);
     setWorld(newSelectedWorldDb);
 
     const newSelectedCityDb = db.getCity(newSelectedWorldDb?.SelectedCity?.Id)
     setShop(db.getShop(newSelectedCityDb?.SelectedShop?.Id));
     setCity(newSelectedCityDb);
-    db.deleteWorld(oldSelectedWorld.Id)
+    db.deleteWorld(oldSelectedWorld.Id);
   };
 
   const onDeleteCity = () => {
     let newWorld = new World().load(world);
     const oldSelectedCity = world.SelectedCity;
     const newSelectedCity = world.Cities.filter(s => s.Id !== oldSelectedCity.Id)?.[0];
-    newWorld.selectCity(newSelectedCity?.Id)
+    newWorld.selectCity(newSelectedCity?.Id);
     newWorld.deleteCity(oldSelectedCity.Id);
     saveWorld(newWorld);
 
@@ -212,10 +247,10 @@ function App() {
       db.deleteShop(shop.Id);
     });
 
-    const newSelectedCityDb = db.getCity(newWorld.SelectedCity.Id)
+    const newSelectedCityDb = db.getCity(newWorld.SelectedCity.Id);
     setShop(db.getShop(newSelectedCityDb?.SelectedShop?.Id));
     setCity(newSelectedCityDb);
-    db.deleteCity(oldSelectedCity.Id)
+    db.deleteCity(oldSelectedCity.Id);
   };
 
   const onDeleteShop = () => {
@@ -227,7 +262,9 @@ function App() {
     saveCity(newCity);
 
     setShop(db.getShop(newCity.SelectedShop.Id));
-    db.deleteShop(oldSelectedShop.Id)
+    db.deleteShop(oldSelectedShop.Id);
+
+    getAreShopsGenerated();
   };
 
   //#endregion
@@ -249,8 +286,10 @@ function App() {
       updatedShop.generateInventory();
       saveShop(updatedShop);
 
+      getAreShopsGenerated();
+
       if (isMobile())
-        setSidebarCollapsed(true)
+        setSidebarCollapsed(true);
     }
   };
 
@@ -276,14 +315,14 @@ function App() {
 
   const onWaitTime = (days = 0, hours = 0) => {
     const selectedWorldDb = db.getWorld(world.Id);
-    selectedWorldDb.Cities.forEach(city => {
-      const cityDb = db.getCity(city.Id);
+    selectedWorldDb.Cities.forEach(cityNew => {
+      const cityDb = db.getCity(cityNew.Id);
       cityDb.Shops.forEach(shopNew => {
         var shopDb = db.getShop(shopNew.Id);
-        shopDb.passingTime(days, hours)
+        shopDb.passingTime(days, hours);
         db.setShop(shopDb);
         if (shopNew.Id === shop.Id) {
-          setShop(shopDb)
+          setShop(shopDb);
         }
       })
     });
@@ -321,7 +360,7 @@ function App() {
     onShopTypeChange: onShopTypeChange,
     onCreateShop: onCreateShop,
     onWaitTime: onWaitTime,
-    isShopGenerated: (shop?.getInventory() ?? []).length > 0
+    isShopGenerated: shopGenerated
   };
 
   var shopInventoryProps = {

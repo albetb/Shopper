@@ -142,8 +142,9 @@ class Shop {
     }
 
     setShopLevel(lv) {
+        lv = Math.max(0, Math.min(10, lv.toFixed(2)));
         const shopLv = this.Level ?? 0;
-        this.Level = Math.max(0, Math.min(10, lv.toFixed(2)));
+        this.Level = lv;
         const oldGold = this.baseGold(this.PlayerLevel, shopLv);
         const newGold = this.baseGold(this.PlayerLevel, lv);
         this.setGold(this.Gold + newGold - oldGold);
