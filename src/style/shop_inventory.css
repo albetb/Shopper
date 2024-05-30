@@ -92,21 +92,11 @@ p {
   align-items: center;
   justify-content: center;
   transition-duration: 0.3s;
-  box-shadow: 3px 3px 2px 0px rgba(1, 89, 116, 0.264),
-    inset -3px -3px 5px 0px rgba(185, 207, 255, 0.625);
   font-weight: bold;
-  background-color: #f9f9f9;
-  color: #333333;
-  border: 1px solid #c0c0c0;
-  cursor: pointer;
   height: 3.1em;
   width: 5em;
   border-radius: 0.9em;
   font-size: 0.73em;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 
 .item-number-button.small {
@@ -123,11 +113,7 @@ p {
 
 .modern-input {
   height: 2.25em;
-  background-color: #f9f9f9;
-  color: #333333;
-  border: 1px solid #c0c0c0;
   border-radius: 0.5em;
-  cursor: pointer;
   font-size: 0.9em;
   padding-left: 0.4em;
 }

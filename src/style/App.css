@@ -21,6 +21,25 @@ code {
     monospace;
 }
 
+.saving-button,
+.item-number-button,
+.add-item-button,
+.modern-input,
+.modern-dropdown,
+.modern-button,
+.levels-button {
+  background-color: #f9f9f9;
+  color: #333333;
+  border: 1px solid #c0c0c0;
+  cursor: pointer;
+  box-shadow: 3px 3px 2px 0px rgba(1, 89, 116, 0.264),
+    inset -3px -3px 5px 0px rgba(185, 207, 255, 0.625);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 /* Webkit (Chrome, Safari, newer versions of Opera) */
 body::-webkit-scrollbar {
   display: block;
