@@ -43,18 +43,14 @@ const MenuCards = ({ props }) => {
     setCardStates((prevStates) => {
       return prevStates.map((cardState) => {
         if (cardState.id === cardId) {
-          let cardName = '';
           switch (cardId) {
             case 1:
-              cardName = 'world';
               db.setIsWorldCollapsed(!cardState.collapsed);
               break;
             case 2:
-              cardName = 'city';
               db.setIsCityCollapsed(!cardState.collapsed);
               break;
             case 3:
-              cardName = 'shop';
               db.setIsShopCollapsed(!cardState.collapsed);
               break;
             default:

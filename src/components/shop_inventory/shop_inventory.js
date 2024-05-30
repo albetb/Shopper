@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { trimLine, isMobile } from '../../lib/utils';
 import useLongPress from '../hooks/use_long_press';
 import AddItemForm from './add_item_form';
