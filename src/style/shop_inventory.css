@@ -95,7 +95,6 @@ p {
   font-weight: bold;
   height: 3.1em;
   width: 5em;
-  border-radius: 0.9em;
   font-size: 0.73em;
 }
 
@@ -106,14 +105,12 @@ p {
 
 .add-item-button {
   width: 10em;
-  border-radius: 0.9em;
   margin: 1.2rem 0;
   font-size: 0.6em;
 }
 
 .modern-input {
   height: 2.25em;
-  border-radius: 0.5em;
   font-size: 0.9em;
   padding-left: 0.4em;
 }
@@ -213,15 +210,18 @@ select.modern-input {
 }
 
 .item-number-button.small {
-  height: 1.9em;
-  width: 3.8em;
-  border-radius: 0.6em;
+  height: 1.9rem;
+  width: 3.8rem;
 }
 
-.modern-input.small {
-  height: 1.45em;
-  width: 4em;
-  border-radius: 0.5em;
+.item-number-button.medium {
+  height: 2rem;
+  width: 4rem;
+}
+
+.small-scrollbar {
+  height: 1.45rem;
+  width: 6rem;
 }
 
 .width-90 {
@@ -305,12 +305,5 @@ select.modern-input {
   .item-number-button.small {
     height: 2.4em;
     width: 4.3em;
-    border-radius: 0.6em;
-  }
-
-  .modern-input.small {
-    height: 2em;
-    width: 5.5em;
-    border-radius: 0.5em;
   }
 }
