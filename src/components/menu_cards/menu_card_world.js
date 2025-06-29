@@ -1,119 +1,128 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import LevelComponent from '../common/level_component';
 import SelectComponent from '../common/select_component';
 import CreateComponent from '../common/create_component';
+import { order } from '../../lib/utils';
+import {
+  onNewWorld,
+  onSelectWorld,
+  onDeleteWorld,
+  onWaitTime
+} from '../../store/appSlice';
 import '../../style/menu_cards.css';
 
-const MenuCardWorld = ({ props }) => {
-  const [isNewWorldVisible, setIsNewWorldVisible] = useState(false);
-  const [buttonTextCustom, setButtonTextCustom] = useState(<span className='material-symbols-outlined'>fast_forward</span>);
-  const [isTransitioningCustom, setIsTransitioningCustom] = useState(false);
+export default function MenuCardWorld() {
+  const dispatch = useDispatch();
+  const [isNewVisible, setIsNewVisible] = useState(false);
+  const [buttonIcon, setButtonIcon] = useState(
+    <span className="material-symbols-outlined">fast_forward</span>
+  );
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const [hours, setHours] = useState('');
   const [days, setDays] = useState('');
 
-  const setIsVisible = (isVisible) => {
-    setIsNewWorldVisible(isVisible);
+  // Redux state selectors
+  const worlds = useSelector(state => state.app.worlds);
+  const selected = useSelector(state => state.app.selectedWorld?.Name);
+  const playerLevel = useSelector(state => state.app.world?.Level) ?? 1;
+  const isShopGenerated = useSelector(state => state.app.shopGenerated);
+
+  // Handlers
+  const toggleNew = visible => setIsNewVisible(visible);
+  const onCreate = name => dispatch(onNewWorld(name));
+  const onSelect = name => dispatch(onSelectWorld(name));
+  const onDelete = () => dispatch(onDeleteWorld());
+
+  const handleBlur = (value, setter, max) => {
+    let num = parseInt(value, 10) || 0;
+    num = Math.max(0, Math.min(max, num));
+    setter(num.toString());
   };
 
-  const createComponentProps = {
-    saved: props.savedWorlds,
-    tabName: 'world',
-    onNew: props.onNewWorld,
-    setIsVisible: setIsVisible
-  };
-
-  const selectComponentProps = {
-    saved: props.savedWorlds,
-    tabName: 'world',
-    setIsVisible: setIsVisible,
-    onSelect: props.onSelectWorld,
-    onDeleteItem: props.onDeleteItem
-  };
-
-  const levelComponentProps = {
-    level: props.playerLevel,
-    levelName: 'Player Level',
-    onLevelChange: props.onPlayerLevelChange
-  };
-
-  const handleHoursBlur = () => {
-    const hoursValue = hours ? parseInt(hours, 10) : 0;
-    if (hoursValue < 0) {
-      setHours('0');
-    } else if (hoursValue > 23) {
-      setHours('23');
-    }
-    else {
-      setHours(hoursValue.toString());
-    }
-  };
-
-  const handleDaysBlur = () => {
-    const daysValue = days ? parseInt(days, 10) : 0;
-    if (daysValue < 0) {
-      setDays('0');
-    } else if (daysValue > 7) {
-      setDays('7');
-    }
-    else {
-      setDays(daysValue.toString());
-    }
-  };
-
-  const handleCustomWait = () => {
+  const handleWait = () => {
     if (hours || days) {
-      setIsTransitioningCustom(true);
+      setIsTransitioning(true);
       setTimeout(() => {
-        setButtonTextCustom(<span className='material-symbols-outlined'>check</span>);
-        setIsTransitioningCustom(false);
-        setTimeout(() => setButtonTextCustom(<span className='material-symbols-outlined'>fast_forward</span>), 1000);
+        setButtonIcon(
+          <span className="material-symbols-outlined">check</span>
+        );
+        setIsTransitioning(false);
+        setTimeout(
+          () => setButtonIcon(
+            <span className="material-symbols-outlined">fast_forward</span>
+          ),
+          1000
+        );
       }, 300);
-      const hoursValue = hours ? parseInt(hours, 10) : 0;
-      const daysValue = days ? parseInt(days, 10) : 0;
-      props.onWaitTime(hoursValue, daysValue);
+      const h = parseInt(hours, 10) || 0;
+      const d = parseInt(days, 10) || 0;
+      dispatch(onWaitTime([d, h]));
     }
+  };
+
+  // Props for common components
+  const createProps = {
+    saved: order(worlds.map(w => w.Name), selected),
+    tabName: 'world',
+    onNew: onCreate,
+    setIsVisible: toggleNew
+  };
+
+  const selectProps = {
+    saved: order(worlds.map(w => w.Name), selected),
+    tabName: 'world',
+    setIsVisible: toggleNew,
+    onSelect,
+    onDeleteItem: onDelete
+  };
+
+  const levelProps = {
+    level: playerLevel,
+    levelName: 'Player Level',
+    onLevelChange: lvl => dispatch({ type: 'app/onPlayerLevelChange', payload: lvl })
   };
 
   return (
     <>
-      {isNewWorldVisible ? (
-        <CreateComponent props={createComponentProps} />
+      {isNewVisible ? (
+        <CreateComponent props={createProps} />
       ) : (
         <>
-          <SelectComponent props={selectComponentProps} />
-          {props.savedWorlds.length > 0 && (
+          <SelectComponent props={selectProps} />
+          {worlds.length > 0 && (
             <>
-              <LevelComponent props={levelComponentProps} />
+              <LevelComponent props={levelProps} />
 
-              <div className={`card-side-div margin-top ${props.isShopGenerated ? '' : 'opacity-50'}`}>
+              <div className={`card-side-div margin-top ${isShopGenerated ? '' : 'opacity-50'}`}>
                 <input
-                  type='number'
-                  placeholder='hours'
+                  type="number"
+                  placeholder="hours"
                   value={hours}
                   min={0}
                   max={23}
-                  onChange={(e) => setHours(e.target.value)}
-                  onBlur={handleHoursBlur}
-                  className='modern-dropdown small padding-left'
-                  disabled={!props.isShopGenerated}
+                  onChange={e => setHours(e.target.value)}
+                  onBlur={() => handleBlur(hours, setHours, 23)}
+                  className="modern-dropdown small padding-left"
+                  disabled={!isShopGenerated}
                 />
                 <input
-                  type='number'
-                  placeholder='days'
+                  type="number"
+                  placeholder="days"
                   value={days}
                   min={0}
                   max={7}
-                  onChange={(e) => setDays(e.target.value)}
-                  onBlur={handleDaysBlur}
-                  className='modern-dropdown small padding-left'
-                  disabled={!props.isShopGenerated}
+                  onChange={e => setDays(e.target.value)}
+                  onBlur={() => handleBlur(days, setDays, 7)}
+                  className="modern-dropdown small padding-left"
+                  disabled={!isShopGenerated}
                 />
                 <button
-                  onClick={handleCustomWait}
-                  className={`modern-dropdown small ${isTransitioningCustom ? 'transition' : ''}`}
-                  disabled={!props.isShopGenerated}
+                  onClick={handleWait}
+                  className={`modern-dropdown small ${isTransitioning ? 'transition' : ''}`}
+                  disabled={!isShopGenerated}
                 >
-                  {buttonTextCustom}
+                  {buttonIcon}
                 </button>
               </div>
             </>
@@ -123,5 +132,3 @@ const MenuCardWorld = ({ props }) => {
     </>
   );
 }
-
-export default MenuCardWorld;

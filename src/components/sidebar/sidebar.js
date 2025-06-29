@@ -1,50 +1,47 @@
-import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import MenuCards from '../menu_cards/menu_cards';
-import { handleFileUpload, downloadLocalStorage } from '../../lib/storage'
+import { handleFileUpload, downloadLocalStorage } from '../../lib/storage';
+import { toggleSidebar } from '../../store/appSlice';
 import '../../style/sidebar.css';
 
-const Sidebar = ({ props }) => {
-  const handleUploadClick = () => {
-    const fileInput = document.getElementById('upload');
-    fileInput.click();
-  };
+export default function Sidebar() {
+  const dispatch = useDispatch();
+  const isCollapsed = useSelector(state => state.app.sidebarCollapsed);
+
+  const handleToggle = () => dispatch(toggleSidebar());
+  const handleUploadClick = () => document.getElementById('upload').click();
 
   return (
-    <div className={`sidebar ${props.isSidebarCollapsed ? 'collapsed' : ''}`}>
-
-      <button className='toggle-button' onClick={props.toggleSidebar}>
-        <span className='material-symbols-outlined'>
-          {!props.isSidebarCollapsed ?
-            ('arrow_back') : ('arrow_forward')}
+    <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>      
+      <button className="toggle-button" onClick={handleToggle}>
+        <span className="material-symbols-outlined">
+          {isCollapsed ? 'arrow_forward' : 'arrow_back'}
         </span>
       </button>
 
-      {!props.isSidebarCollapsed && (
+      {!isCollapsed && (
         <>
-          <button className='saving-button' onClick={downloadLocalStorage}>
-            <span className='material-symbols-outlined'>
-              download
-            </span>
+          <button className="saving-button" onClick={downloadLocalStorage}>
+            <span className="material-symbols-outlined">download</span>
           </button>
 
           <input
-            type='file'
-            id='upload'
+            type="file"
+            id="upload"
             style={{ display: 'none' }}
-            accept='application/json'
+            accept="application/json"
             onChange={handleFileUpload}
           />
-          <button className='saving-button saving-button-margin' onClick={handleUploadClick}>
-            <span className='material-symbols-outlined'>
-              drive_folder_upload
-            </span>
+          <button
+            className="saving-button saving-button-margin"
+            onClick={handleUploadClick}
+          >
+            <span className="material-symbols-outlined">drive_folder_upload</span>
           </button>
 
-          <MenuCards props={props} />
+          <MenuCards />
         </>
       )}
     </div>
   );
-};
-
-export default Sidebar;
+}

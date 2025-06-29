@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { trimLine, isMobile } from '../../lib/utils';
 import useLongPress from '../hooks/use_long_press';
 import AddItemForm from './add_item_form';
 import DeletePopup from './delete_popup';
+import { updateShop } from '../../store/appSlice';
 import '../../style/shop_inventory.css';
 
-const ShopInventory = ({ props }) => {
+export default function ShopInventory() {
+  const dispatch = useDispatch();
   const [showAddItemForm, setShowAddItemForm] = useState(false);
   const [deletingItems, setDeletingItems] = useState({});
   const [popup, setPopup] = useState({
@@ -16,169 +19,149 @@ const ShopInventory = ({ props }) => {
     position: { x: 0, y: 0 }
   });
   const [isLongPress, setIsLongPress] = useState(false);
-
   const LONGPRESS_TIME = 400;
 
-  const handleDeleteItemClick = (event, itemName, itemType, itemNumber) => {
-    if (!isLongPress) {
-      const clickPosition = event.changedTouches?.length > 0
-        ? { x: event.changedTouches[0].clientX, y: event.changedTouches[0].clientY }
-        : { x: event.clientX, y: event.clientY };
+  // --- Redux selectors ---
+  const items = useSelector(state => state.app.shop?.getInventory() || []);
+  const shopName = useSelector(state => state.app.shop?.Name) || '';
+  const cityName = useSelector(state => state.app.city?.Name) || '';
+  const gold = useSelector(state => state.app.shop?.Gold) ?? 0;
 
-      setPopup({
-        visible: true,
-        itemName,
-        itemType,
-        itemNumber,
-        position: clickPosition
-      });
+  // --- Handlers ---
+  const handleDeleteItemClick = (e, name, type, number) => {
+    if (!isLongPress) {
+      const pos = e.changedTouches?.length
+        ? { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY }
+        : { x: e.clientX, y: e.clientY };
+      setPopup({ visible: true, itemName: name, itemType: type, itemNumber: number, position: pos });
     }
   };
 
-  const handleLongPressDelete = (itemName, itemType) => {
+  const handleLongPressDelete = (name, type, number) => {
     setIsLongPress(true);
-    const itemKey = `${itemName}-${itemType}`;
-    setDeletingItems((prev) => ({ ...prev, [itemKey]: true }));
-
+    const key = `${name}-${type}`;
+    setDeletingItems(prev => ({ ...prev, [key]: true }));
     setTimeout(() => {
-      props.onDeleteItem(itemName, itemType);
-      setDeletingItems((prev) => {
-        const newDeletingItems = { ...prev };
-        delete newDeletingItems[itemKey];
-        return newDeletingItems;
-      });
+      dispatch(updateShop(['sell', name, type, number]));
+      setDeletingItems(prev => { const np = { ...prev }; delete np[key]; return np; });
       setIsLongPress(false);
     }, LONGPRESS_TIME);
   };
 
-  const handleAddItemButtonClick = () => {
-    setShowAddItemForm(true);
+  const handleAddItem = (name, type, cost, number) => {
+    dispatch(updateShop(['buy', name, type, cost, number]));
+    setShowAddItemForm(false);
   };
 
   const longPressEvent = useLongPress(
-    (itemName, itemType) => handleLongPressDelete(itemName, itemType),
-    () => { },
+    (_name, _type, number) => handleLongPressDelete(_name, _type, number),
+    () => {},
     { shouldPreventDefault: true, delay: LONGPRESS_TIME }
   );
 
-  if (!props.items || !props.items.some(item => item.Number > 0)) {
-    return null;
-  }
+  // don’t render if no items at all
+  if (!items.some(i => i.Number > 0)) return null;
 
-  const shopLabel = () => {
-    const trimLength = isMobile() ? 20 : 30;
-    return `${trimLine(props.shopName, trimLength)}`;
+  // --- Formatting ---
+  const formatNumber = num => {
+    const n = parseFloat(num);
+    if (isNaN(n)) return '0';
+    let [intPart, decPart] = n.toFixed(2).split('.');
+    const sep = "'";
+    const rev = intPart.split('').reverse().join('');
+    const fmtInt = rev.match(/.{1,3}/g).join(sep).split('').reverse().join('');
+    return `${fmtInt}.${decPart}`.replace('.00', '');
   };
 
-  const cityLabel = () => {
-    const trimLength = isMobile() ? 26 : 40;
-    return `${props.cityName && 'from '}${trimLine(props.cityName, trimLength)}`;
-  };
-
-  const abbreviateLabel = (itemName) => {
-    return isMobile() && itemName === 'Wondrous Item' ? 'W. Item' : itemName;
-  };
-
-  function formatGold() {
-    return formatNumber(props.gold);
-  }
-
-  function formatNumber(num) {
-    if (typeof parseFloat(num) !== 'number' || isNaN(num)) {
-      return '0';
-    }
-    const separator = "'";
-    let [integerPart, decimalPart] = num.toFixed(2).split('.');
-    let reversedIntegerPart = integerPart.split('').reverse().join('');
-    let formattedIntegerPart = reversedIntegerPart.match(/.{1,3}/g).join(separator).split('').reverse().join('');
-
-    return `${formattedIntegerPart}.${decimalPart}`.replace('.00', '');
-  }
+  const shopLabel = () => trimLine(shopName, isMobile() ? 20 : 30);
+  const cityLabel = () =>
+    cityName
+      ? `from ${trimLine(cityName, isMobile() ? 26 : 40)}`
+      : '';
 
   return (
     <>
-      <div className='header-container'>
-        <div className='label-container'>
+      <div className="header-container">
+        <div className="label-container">
           <h2>{shopLabel()}</h2>
-          <div className='space-left'>
+          <div className="space-left">
             <p>{cityLabel()}</p>
           </div>
         </div>
-        <div className='money-box'>
-          <p><b>Gold: {formatGold()}</b></p>
+        <div className="money-box">
+          <p><b>Gold: {formatNumber(gold)}</b></p>
         </div>
       </div>
+
       <table>
         <thead>
           <tr>
-            <th className='number-size'>#</th>
-            <th className='name-size'>Name</th>
-            <th className='type-size'>Type</th>
-            <th className='cost-size'>Cost</th>
-            <th className='action-size'></th>
+            <th className="number-size">#</th>
+            <th className="name-size">Name</th>
+            <th className="type-size">Type</th>
+            <th className="cost-size">Cost</th>
+            <th className="action-size"></th>
           </tr>
         </thead>
         <tbody>
-          {props.items.map((item, index) => {
-            const itemKey = `${item.Name}-${item.ItemType}`;
+          {items.map((item, idx) => {
+            if (item.Number <= 0) return null;
+            const key = `${item.Name}-${item.ItemType}`;
+            const abbrevType = isMobile() && item.ItemType === 'Wondrous Item'
+              ? 'W. Item'
+              : item.ItemType;
+
             return (
-              item.Number > 0 && (
-                <tr key={index} className={deletingItems[itemKey] ? 'deleting' : ''}>
-                  <td className='align-right'>{item.Number}</td>
-                  <td>
-                    {item.Link ? (
-                      <a href={item.Link} target='_blank' rel='noopener noreferrer'>
-                        {item.Name}
-                      </a>
-                    ) : (
-                      item.Name
-                    )}
-                  </td>
-                  <td>{abbreviateLabel(item.ItemType)}</td>
-                  <td>{formatNumber(item.Cost)}</td>
-                  <td>
-                    <button
-                      className='item-number-button'
-                      onClick={(e) => handleDeleteItemClick(e, item.Name, item.ItemType, item.Number)}
-                      onMouseDown={(e) => longPressEvent.onMouseDown(e, [item.Name, item.ItemType])}
-                      onTouchStart={(e) => longPressEvent.onTouchStart(e, [item.Name, item.ItemType])}
-                      onMouseUp={longPressEvent.onMouseUp}
-                      onMouseLeave={longPressEvent.onMouseLeave}
-                      onTouchEnd={(e) => {
-                        longPressEvent.onTouchEnd(e);
-                        handleDeleteItemClick(e, item.Name, item.ItemType, item.Number);
-                      }}
-                    >
-                      <span className='material-symbols-outlined'>
-                        remove_shopping_cart
-                      </span>
-                    </button>
-                  </td>
-                </tr>
-              )
+              <tr key={idx} className={deletingItems[key] ? 'deleting' : ''}>
+                <td className="align-right">{item.Number}</td>
+                <td>
+                  {item.Link
+                    ? <a href={item.Link} target="_blank" rel="noopener noreferrer">{item.Name}</a>
+                    : item.Name
+                  }
+                </td>
+                <td>{abbrevType}</td>
+                <td>{formatNumber(item.Cost)}</td>
+                <td>
+                  <button
+                    className="item-number-button"
+                    onClick={e => handleDeleteItemClick(e, item.Name, item.ItemType, item.Number)}
+                    onMouseDown={e => longPressEvent.onMouseDown(e, [item.Name, item.ItemType, item.Number])}
+                    onTouchStart={e => longPressEvent.onTouchStart(e, [item.Name, item.ItemType, item.Number])}
+                    onMouseUp={longPressEvent.onMouseUp}
+                    onMouseLeave={longPressEvent.onMouseLeave}
+                    onTouchEnd={e => {
+                      longPressEvent.onTouchEnd(e);
+                      handleDeleteItemClick(e, item.Name, item.ItemType, item.Number);
+                    }}
+                  >
+                    <span className="material-symbols-outlined">remove_shopping_cart</span>
+                  </button>
+                </td>
+              </tr>
             );
           })}
         </tbody>
       </table>
-      {showAddItemForm ? (
-        <AddItemForm onAddItem={props.onAddItem} items={props.items} setShowAddItemForm={setShowAddItemForm} />
-      ) : (
-        <button className='add-item-button' onClick={handleAddItemButtonClick}>
-          Add Item
-        </button>
-      )}
+
+      {showAddItemForm
+        ? <AddItemForm onAddItem={handleAddItem} items={items} setShowAddItemForm={setShowAddItemForm} />
+        : <button className="add-item-button" onClick={() => setShowAddItemForm(true)}>Add Item</button>
+      }
+
       {popup.visible && (
         <DeletePopup
           itemName={popup.itemName}
           itemType={popup.itemType}
           itemNumber={popup.itemNumber}
           position={popup.position}
-          onClose={() => setPopup({ visible: false, itemName: '', itemType: '', itemNumber: 0, position: { x: 0, y: 0 } })}
-          onDelete={(itemName, itemType, num) => props.onDeleteItem(itemName, itemType, num)}
+          onClose={() => setPopup({ ...popup, visible: false })}
+          onDelete={() => {
+            dispatch(updateShop(['sell', popup.itemName, popup.itemType, popup.itemNumber]));
+            setPopup({ ...popup, visible: false });
+          }}
         />
       )}
     </>
   );
-};
-
-export default ShopInventory;
+}

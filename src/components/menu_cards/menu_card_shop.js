@@ -1,85 +1,112 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import SelectComponent from '../common/select_component';
 import CreateComponent from '../common/create_component';
 import LevelComponent from '../common/level_component';
+import { order, shopTypes } from '../../lib/utils';
+import {
+  onNewShop,
+  onSelectShop,
+  onDeleteShop,
+  updateShop,
+  onCreateShop
+} from '../../store/appSlice';
 import '../../style/menu_cards.css';
 
-const MenuCardShop = ({ props }) => {
-  const [isNewShopVisible, setIsNewShopVisible] = useState(false);
+export default function MenuCardShop() {
+  const dispatch = useDispatch();
+  const [isNewVisible, setIsNewVisible] = useState(false);
 
-  const setIsVisible = (isVisible) => {
-    setIsNewShopVisible(isVisible);
-  };
+  // Redux state
+  const shops = useSelector(state => state.app.city?.Shops.map(s => s.Name) || []);
+  const selectedName = useSelector(state => state.app.city?.SelectedShop?.Name);
+  const saved = order(shops, selectedName);
 
-  const handleShopTypeChange = (event) => {
-    props.onShopTypeChange(event.target.value);
-  };
+  const shopLevel = useSelector(state => state.app.shop?.Level) ?? 0;
+  const reputation = useSelector(state => state.app.shop?.Reputation) ?? 0;
+  const shopType = useSelector(state => state.app.shop?.ShopType) ?? '';
+  const types = shopTypes() || [];
+  const canGenerate = useSelector(state => state.app.city) != null;
 
-  const handleGenerateInventory = () => {
-    props.onCreateShop();
-  };
+  // Handlers
+  const showCreate = () => setIsNewVisible(true);
+  const hideCreate = () => setIsNewVisible(false);
+  const handleNew = name => dispatch(onNewShop(name));
+  const handleSelect = name => dispatch(onSelectShop(name));
+  const handleDelete = () => dispatch(onDeleteShop());
+  const handleLevelChange = lvl => dispatch(updateShop(['setShopLevel', lvl]));
+  const handleReputationChange = lvl => dispatch(updateShop(['setReputation', lvl]));
+  const handleTypeChange = event => dispatch(updateShop(['setShopType', event.target.value]));
+  const handleGenerate = () => dispatch(onCreateShop());
 
-  const createComponentProps = {
-    saved: props.savedShops,
-    tabName: 'shop',
-    onNew: props.onNewShop,
-    setIsVisible: setIsVisible
-  };
-
-  const selectComponentProps = {
-    saved: props.savedShops,
-    tabName: 'shop',
-    setIsVisible: setIsVisible,
-    onSelect: props.onSelectShop,
-    onDeleteItem: props.onDeleteItem
-  };
-
-  const shopLevelComponentProps = {
-    level: props.shopLevel,
-    levelName: 'Shop Level',
-    onLevelChange: props.onShopLevelChange
-  };
-
-  const reputationLevelComponentProps = {
-    level: props.reputation,
-    levelName: 'Reputation',
-    onLevelChange: props.onReputationChange
-  };
+  if (isNewVisible) {
+    return (
+      <CreateComponent
+        props={{
+          saved,
+          tabName: 'shop',
+          onNew: handleNew,
+          setIsVisible: hideCreate
+        }}
+      />
+    );
+  }
 
   return (
     <>
-      {isNewShopVisible ? (
-        <CreateComponent props={createComponentProps} />
-      ) : (
+      <SelectComponent
+        props={{
+          saved,
+          tabName: 'shop',
+          setIsVisible: showCreate,
+          onSelect: handleSelect,
+          onDeleteItem: handleDelete
+        }}
+      />
+
+      {saved.length > 0 && (
         <>
-          <SelectComponent props={selectComponentProps} />
-          {props.savedShops.length > 0 && (
-            <>
-              <LevelComponent props={shopLevelComponentProps} />
-              <LevelComponent props={reputationLevelComponentProps} />
-              <div className='card-side-div margin-top'>
-                <label className='modern-label'>Shop Type:</label>
-                <select
-                  className='modern-dropdown'
-                  value={props.shopType}
-                  onChange={handleShopTypeChange}
-                >
-                  {props.shopTypes.map((type, index) => (
-                    <option key={index} value={type}>
-                      {type}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className='card-side-div margin-top'>
-                <button className='modern-button' onClick={handleGenerateInventory}><b>Generate</b></button>
-              </div>
-            </>
-          )}
+          <LevelComponent
+            props={{
+              level: shopLevel,
+              levelName: 'Shop Level',
+              onLevelChange: handleLevelChange
+            }}
+          />
+          <LevelComponent
+            props={{
+              level: reputation,
+              levelName: 'Reputation',
+              onLevelChange: handleReputationChange
+            }}
+          />
+
+          <div className="card-side-div margin-top">
+            <label className="modern-label">Shop Type:</label>
+            <select
+              className="modern-dropdown"
+              value={shopType}
+              onChange={handleTypeChange}
+            >
+              {types.map((type, idx) => (
+                <option key={idx} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="card-side-div margin-top">
+            <button
+              className="modern-button"
+              onClick={handleGenerate}
+              disabled={!canGenerate}
+            >
+              <b>Generate</b>
+            </button>
+          </div>
         </>
       )}
     </>
   );
-};
-
-export default MenuCardShop;
+}

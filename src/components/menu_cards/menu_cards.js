@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import MenuCardWorld from './menu_card_world';
 import MenuCardCity from './menu_card_city';
 import MenuCardShop from './menu_card_shop';
@@ -6,153 +7,90 @@ import { isMobile, trimLine } from '../../lib/utils';
 import * as db from '../../lib/storage';
 import '../../style/menu_cards.css';
 
-const MenuCards = ({ props }) => {
+export default function MenuCards() {
   const [cardStates, setCardStates] = useState([
     { id: 1, collapsed: false },
     { id: 2, collapsed: false },
     { id: 3, collapsed: false }
   ]);
 
+  const worlds = useSelector(state => state.app.worlds.map(w => w.Name));
+  const selectedWorld = useSelector(state => state.app.selectedWorld?.Name);
+  const playerLevel = useSelector(state => state.app.world?.Level) ?? 1;
+
+  const cities = useSelector(state => state.app.world?.Cities.map(c => c.Name) || []);
+  const selectedCity = useSelector(state => state.app.city?.Name);
+  const cityLevel = useSelector(state => state.app.city?.Level) ?? 1;
+
+  const shops = useSelector(state => state.app.city?.Shops.map(s => s.Name) || []);
+  const selectedShop = useSelector(state => state.app.shop?.Name);
+  const shopLevel = useSelector(state => state.app.shop?.Level) ?? 0;
+
+  // Initialize collapse state from db
   useEffect(() => {
-    const isWorldCollapsed = db.getIsWorldCollapsed();
-    setCardCollapsed(1, isWorldCollapsed);
-    const isCityCollapsed = db.getIsCityCollapsed();
-    setCardCollapsed(2, isCityCollapsed);
-    const isShopCollapsed = db.getIsShopCollapsed();
-    setCardCollapsed(3, isShopCollapsed);
+    setCardCollapsed(1, db.getIsWorldCollapsed());
+    setCardCollapsed(2, db.getIsCityCollapsed());
+    setCardCollapsed(3, db.getIsShopCollapsed());
   }, []);
 
-  const setCardCollapsed = (cardId, isCollapsed) => {
-    setCardStates((prevStates) => {
-      return prevStates.map((cardState) => {
-        if (cardState.id === cardId) {
-          return { ...cardState, collapsed: isCollapsed };
-        }
-        return cardState;
-      });
-    });
+  const setCardCollapsed = (cardId, collapsed) => {
+    setCardStates(states => states.map(s =>
+      s.id === cardId ? { ...s, collapsed } : s
+    ));
+  };
+
+  const toggleCard = (cardId) => {
+    setCardStates(states => states.map(s => {
+      if (s.id === cardId) {
+        const newState = !s.collapsed;
+        if (cardId === 1) db.setIsWorldCollapsed(newState);
+        if (cardId === 2) db.setIsCityCollapsed(newState);
+        if (cardId === 3) db.setIsShopCollapsed(newState);
+        return { ...s, collapsed: newState };
+      }
+      return s;
+    }));
   };
 
   const cards = [
-    { id: 1, title: 'World' },
-    { id: 2, title: 'City' },
-    { id: 3, title: 'Shop' }
+    { id: 1, title: 'World', saved: worlds, selected: selectedWorld, level: playerLevel },
+    { id: 2, title: 'City', saved: cities, selected: selectedCity, level: cityLevel },
+    { id: 3, title: 'Shop', saved: shops, selected: selectedShop, level: shopLevel }
   ];
 
-  const toggleCard = (cardId) => {
-    setCardStates((prevStates) => {
-      return prevStates.map((cardState) => {
-        if (cardState.id === cardId) {
-          switch (cardId) {
-            case 1:
-              db.setIsWorldCollapsed(!cardState.collapsed);
-              break;
-            case 2:
-              db.setIsCityCollapsed(!cardState.collapsed);
-              break;
-            case 3:
-              db.setIsShopCollapsed(!cardState.collapsed);
-              break;
-            default:
-              return { ...cardState, collapsed: !cardState.collapsed };
-          }
-
-          return { ...cardState, collapsed: !cardState.collapsed };
-        }
-        return cardState;
-      });
-    });
-  };
-
-  const cardContentVisible = (cardId) => {
-    switch (cardId) {
-      case 2:
-        return props.savedWorlds && props.savedWorlds.length > 0;
-      case 3:
-        return props.savedCities && props.savedCities.length > 0;
-      default:
-        return true;
-    }
-  };
-
-  const cardTitle = (cardId, cardTitle) => {
-    const trimLength = isMobile() ? 23 : 10;
-    const formatText = (name, lv) => ` - ${trimLine(name, trimLength)} - Lv: ${lv}`;
-
-    if (cardId === 1 && props.savedWorlds && props.savedWorlds.length > 0) {
-      return `${cardTitle}${formatText(props.savedWorlds[0], props.playerLevel)}`;
-    }
-    else if (cardId === 2 && props.savedCities && props.savedCities.length > 0) {
-      return `${cardTitle}${formatText(props.savedCities[0], props.cityLevel)}`;
-    }
-    else if (cardId === 3 && props.savedShops && props.savedShops.length > 0) {
-      return `${cardTitle}${formatText(props.savedShops[0], parseInt(props.shopLevel))}`;
-    }
-
-    return cardTitle;
-  };
-
-  var menuCardWorldProps = {
-    onSelectWorld: props.onSelectWorld,
-    onNewWorld: props.onNewWorld,
-    savedWorlds: props.savedWorlds,
-    playerLevel: props.playerLevel,
-    onPlayerLevelChange: props.onPlayerLevelChange,
-    onDeleteItem: props.onDeleteWorld,
-    isShopGenerated: props.isShopGenerated,
-    onWaitTime: props.onWaitTime
-  };
-
-  var menuCardCityProps = {
-    onSelectCity: props.onSelectCity,
-    onNewCity: props.onNewCity,
-    savedCities: props.savedCities,
-    cityLevel: props.cityLevel,
-    onCityLevelChange: props.onCityLevelChange,
-    onDeleteItem: props.onDeleteCity
-  };
-
-  var menuCardShopProps = {
-    onSelectShop: props.onSelectShop,
-    onNewShop: props.onNewShop,
-    savedShops: props.savedShops,
-    shopLevel: props.shopLevel,
-    onShopLevelChange: props.onShopLevelChange,
-    reputation: props.reputation,
-    onReputationChange: props.onReputationChange,
-    shopTypes: props.shopTypes ?? [],
-    shopType: props.shopType,
-    onShopTypeChange: props.onShopTypeChange,
-    onCreateShop: props.onCreateShop,
-    onDeleteItem: props.onDeleteShop
+  const trimLength = isMobile() ? 23 : 10;
+  const formatTitle = ({ id, title, saved, selected, level }) => {
+    if (saved.length === 0) return title;
+    const displayName = trimLine(selected || saved[0], trimLength);
+    return `${title} - ${displayName} - Lv: ${level}`;
   };
 
   return (
-    <div className='cards'>
-      {cards.map(card => cardContentVisible(card.id) && (
-        <div className={`card ${cardStates.find(c => c.id === card.id).collapsed ? 'collapsed' : ''}`} key={card.id}>
-          <div className='card-side-div card-expand-div'>
-            <h3 className='card-title'>{cardTitle(card.id, card.title)}</h3>
-            <button className='collapse-button' onClick={() => toggleCard(card.id)}>
-              <span className='material-symbols-outlined'>
-                {!cardStates.find(c => c.id === card.id).collapsed ?
-                  ('expand_less') : ('expand_more')
-                }
-              </span>
-            </button>
-          </div>
-          {!cardStates.find(c => c.id === card.id).collapsed && (
-            <div className='card-content'>
-              {card.id === 1 && <MenuCardWorld props={menuCardWorldProps} />}
-              {card.id === 2 && <MenuCardCity props={menuCardCityProps} />}
-              {card.id === 3 && <MenuCardShop props={menuCardShopProps} />}
+    <div className="cards">
+      {cards.map(card => {
+        const state = cardStates.find(s => s.id === card.id);
+        if (card.id === 2 && worlds.length === 0) return null;
+        if (card.id === 3 && cities.length === 0) return null;
+        return (
+          <div key={card.id} className={`card ${state.collapsed ? 'collapsed' : ''}`}>
+            <div className="card-side-div card-expand-div">
+              <h3 className="card-title">{formatTitle(card)}</h3>
+              <button className="collapse-button" onClick={() => toggleCard(card.id)}>
+                <span className="material-symbols-outlined">
+                  {state.collapsed ? 'expand_more' : 'expand_less'}
+                </span>
+              </button>
             </div>
-          )}
-        </div>
-      ))}
+            {!state.collapsed && (
+              <div className="card-content">
+                {card.id === 1 && <MenuCardWorld />}
+                {card.id === 2 && <MenuCardCity />}
+                {card.id === 3 && <MenuCardShop />}
+              </div>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
-
 }
-
-export default MenuCards;

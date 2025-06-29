@@ -1,59 +1,78 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import SelectComponent from '../common/select_component';
 import CreateComponent from '../common/create_component';
+import { order } from '../../lib/utils';
+import {
+  onNewCity,
+  onSelectCity,
+  onCityLevelChange,
+  onDeleteCity
+} from '../../store/appSlice';
 import '../../style/menu_cards.css';
 
-const MenuCardCity = ({ props }) => {
-  const [isNewCityVisible, setIsNewCityVisible] = useState(false);
+export default function MenuCardCity() {
+  const dispatch = useDispatch();
+  const [isNewVisible, setIsNewVisible] = useState(false);
 
-  const setIsVisible = (isVisible) => {
-    setIsNewCityVisible(isVisible);
-  };
+  // Redux state
+  const world = useSelector(state => state.app.world);
+  const city = useSelector(state => state.app.city);
 
-  const createComponentProps = {
-    saved: props.savedCities,
-    tabName: 'city',
-    onNew: props.onNewCity,
-    setIsVisible: setIsVisible
-  };
+  const cities = world?.Cities.map(c => c.Name) || [];
+  const selectedName = city?.Name;
+  const saved = order(cities, selectedName);
+  const cityLevel = city?.Level ?? 1;
 
-  const selectComponentProps = {
-    saved: props.savedCities,
-    tabName: 'city',
-    setIsVisible: setIsVisible,
-    onSelect: props.onSelectCity,
-    onDeleteItem: props.onDeleteItem
-  };
+  // Handlers
+  const showCreate = () => setIsNewVisible(true);
+  const hideCreate = () => setIsNewVisible(false);
+  const handleNew = name => dispatch(onNewCity(name));
+  const handleSelect = name => dispatch(onSelectCity(name));
+  const handleDelete = () => dispatch(onDeleteCity());
+  const handleLevelChange = lvl => dispatch(onCityLevelChange(lvl));
+
+  if (isNewVisible) {
+    return (
+      <CreateComponent
+        props={{
+          saved,
+          tabName: 'city',
+          onNew: handleNew,
+          setIsVisible: hideCreate
+        }}
+      />
+    );
+  }
 
   return (
     <>
-      {isNewCityVisible ? (
-        <CreateComponent props={createComponentProps} />
-      ) : (
-        <>
-          <SelectComponent props={selectComponentProps} />
-          {props.savedCities.length > 0 && (
-            <>
-              <div className='card-side-div margin-top'>
-                <label className='modern-label'>City Level:</label>
-                <select
-                  className='modern-dropdown'
-                  value={props.cityLevel}
-                  onChange={(e) => props.onCityLevelChange(e.target.value)}
-                >
-                  <option value='1'>Village</option>
-                  <option value='2'>Burg</option>
-                  <option value='3'>Town</option>
-                  <option value='4'>City</option>
-                  <option value='5'>Metropolis</option>
-                </select>
-              </div>
-            </>
-          )}
-        </>
+      <SelectComponent
+        props={{
+          saved,
+          tabName: 'city',
+          setIsVisible: showCreate,
+          onSelect: handleSelect,
+          onDeleteItem: handleDelete
+        }}
+      />
+
+      {saved.length > 0 && (
+        <div className="card-side-div margin-top">
+          <label className="modern-label">City Level:</label>
+          <select
+            className="modern-dropdown"
+            value={cityLevel}
+            onChange={e => handleLevelChange(Number(e.target.value))}
+          >
+            <option value={1}>Village</option>
+            <option value={2}>Burg</option>
+            <option value={3}>Town</option>
+            <option value={4}>City</option>
+            <option value={5}>Metropolis</option>
+          </select>
+        </div>
       )}
     </>
   );
-};
-
-export default MenuCardCity;
+}
