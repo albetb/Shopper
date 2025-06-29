@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import SelectComponent from '../common/select_component';
-import CreateComponent from '../common/create_component';
-import LevelComponent from '../common/level_component';
+import { useDispatch, useSelector } from 'react-redux';
 import { order, shopTypes } from '../../lib/utils';
 import {
-  onNewShop,
-  onSelectShop,
+  onCreateShop,
+  updateShop
+} from '../../store/slices/shopSlice';
+import {
   onDeleteShop,
-  updateShop,
-  onCreateShop
-} from '../../store/appSlice';
+  onNewShop,
+  onSelectShop
+} from '../../store/thunks/shopThunks';
+import CreateComponent from '../common/create_component';
+import LevelComponent from '../common/level_component';
+import SelectComponent from '../common/select_component';
 import '../../style/menu_cards.css';
 
 export default function MenuCardShop() {
@@ -18,15 +20,15 @@ export default function MenuCardShop() {
   const [isNewVisible, setIsNewVisible] = useState(false);
 
   // Redux state
-  const shops = useSelector(state => state.app.city?.Shops.map(s => s.Name) || []);
-  const selectedName = useSelector(state => state.app.city?.SelectedShop?.Name);
+  const shops = useSelector(state => state.city.city?.Shops.map(s => s.Name) || []);
+  const selectedName = useSelector(state => state.city.city?.SelectedShop?.Name);
   const saved = order(shops, selectedName);
 
-  const shopLevel = useSelector(state => state.app.shop?.Level) ?? 0;
-  const reputation = useSelector(state => state.app.shop?.Reputation) ?? 0;
-  const shopType = useSelector(state => state.app.shop?.ShopType) ?? '';
+  const shopLevel = useSelector(state => state.shop.shop?.Level) ?? 0;
+  const reputation = useSelector(state => state.shop.shop?.Reputation) ?? 0;
+  const shopType = useSelector(state => state.shop.shop?.ShopType) ?? '';
   const types = shopTypes() || [];
-  const canGenerate = useSelector(state => state.app.city) != null;
+  const canGenerate = useSelector(state => state.city.city) != null;
 
   // Handlers
   const showCreate = () => setIsNewVisible(true);

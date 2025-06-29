@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { trimLine, isMobile } from '../../lib/utils';
+import { useDispatch, useSelector } from 'react-redux';
+import Shop from '../../lib/shop';
+import { isMobile, trimLine } from '../../lib/utils';
+import { updateShop } from '../../store/slices/shopSlice';
 import useLongPress from '../hooks/use_long_press';
 import AddItemForm from './add_item_form';
 import DeletePopup from './delete_popup';
-import { updateShop } from '../../store/appSlice';
 import '../../style/shop_inventory.css';
 
 export default function ShopInventory() {
@@ -22,10 +23,11 @@ export default function ShopInventory() {
   const LONGPRESS_TIME = 400;
 
   // --- Redux selectors ---
-  const items = useSelector(state => state.app.shop?.getInventory() || []);
-  const shopName = useSelector(state => state.app.shop?.Name) || '';
-  const cityName = useSelector(state => state.app.city?.Name) || '';
-  const gold = useSelector(state => state.app.shop?.Gold) ?? 0;
+  const rawShop = useSelector(state => state.shop.shop);
+  const items = rawShop ? new Shop().load(rawShop).getInventory() : [];
+  const shopName = rawShop?.Name || '';
+  const gold = rawShop?.Gold ?? 0;
+  const cityName = useSelector(state => state.city.city?.Name) || '';
 
   // --- Handlers ---
   const handleDeleteItemClick = (e, name, type, number) => {
@@ -55,7 +57,7 @@ export default function ShopInventory() {
 
   const longPressEvent = useLongPress(
     (_name, _type, number) => handleLongPressDelete(_name, _type, number),
-    () => {},
+    () => { },
     { shouldPreventDefault: true, delay: LONGPRESS_TIME }
   );
 

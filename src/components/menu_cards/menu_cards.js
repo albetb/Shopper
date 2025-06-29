@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import MenuCardWorld from './menu_card_world';
+import * as db from '../../lib/storage';
+import { isMobile, trimLine } from '../../lib/utils';
 import MenuCardCity from './menu_card_city';
 import MenuCardShop from './menu_card_shop';
-import { isMobile, trimLine } from '../../lib/utils';
-import * as db from '../../lib/storage';
+import MenuCardWorld from './menu_card_world';
 import '../../style/menu_cards.css';
 
 export default function MenuCards() {
@@ -14,17 +14,17 @@ export default function MenuCards() {
     { id: 3, collapsed: false }
   ]);
 
-  const worlds = useSelector(state => state.app.worlds.map(w => w.Name));
-  const selectedWorld = useSelector(state => state.app.selectedWorld?.Name);
-  const playerLevel = useSelector(state => state.app.world?.Level) ?? 1;
+  const worlds = useSelector(state => state.world.worlds.map(w => w.Name));
+  const selectedWorld = useSelector(state => state.world.selectedWorld?.Name);
+  const playerLevel = useSelector(state => state.world.world?.Level) ?? 1;
 
-  const cities = useSelector(state => state.app.world?.Cities.map(c => c.Name) || []);
-  const selectedCity = useSelector(state => state.app.city?.Name);
-  const cityLevel = useSelector(state => state.app.city?.Level) ?? 1;
+  const cities = useSelector(state => state.world.world?.Cities.map(c => c.Name) || []);
+  const selectedCity = useSelector(state => state.city.city?.Name);
+  const cityLevel = useSelector(state => state.city.city?.Level) ?? 1;
 
-  const shops = useSelector(state => state.app.city?.Shops.map(s => s.Name) || []);
-  const selectedShop = useSelector(state => state.app.shop?.Name);
-  const shopLevel = useSelector(state => state.app.shop?.Level) ?? 0;
+  const shops = useSelector(state => state.city.city?.Shops.map(s => s.Name) || []);
+  const selectedShop = useSelector(state => state.shop.shop?.Name);
+  const shopLevel = useSelector(state => state.shop.shop?.Level) ?? 0;
 
   // Initialize collapse state from db
   useEffect(() => {

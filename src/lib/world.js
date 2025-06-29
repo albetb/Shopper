@@ -1,79 +1,109 @@
-
 import * as db from './storage';
 import { newGuid } from './utils';
 
 const REQUIRED_KEYS = ['Id', 'Name', 'Level', 'SelectedCity', 'Cities'];
 
 class World {
-    constructor(name = '') {
-        this.Id = newGuid();
-        this.Name = name;
-        this.Level = 1;
-        this.SelectedCity = { Id: null, Name: null };
-        this.Cities = [];
+  constructor(name = '') {
+    this.Id = newGuid();
+    this.Name = name;
+    this.Level = 1;
+    this.SelectedCity = { Id: null, Name: null };
+    this.Cities = [];
+  }
+
+  load(data) {
+    if (
+      data === null ||
+      !REQUIRED_KEYS.every(key => Object.prototype.hasOwnProperty.call(data, key))
+    ) {
+      return null;
     }
 
-    load(data) {
-        if (data === null ||
-            !REQUIRED_KEYS.every(key => data.hasOwnProperty(key))) {
-            return null;
-        }
+    this.Id = data.Id;
+    this.Name = data.Name;
+    this.Level = data.Level;
 
-        this.Id = data.Id;
-        this.Name = data.Name;
-        this.Level = data.Level;
-        this.SelectedCity = data.SelectedCity;
-        this.Cities = data.Cities;
+    // Clone nested objects/arrays to ensure they're extensible
+    this.SelectedCity = {
+      Id: data.SelectedCity.Id,
+      Name: data.SelectedCity.Name,
+    };
+    this.Cities = data.Cities.map(city => ({
+      Id: city.Id,
+      Name: city.Name,
+    }));
 
-        return this;
+    return this;
+  }
+
+  addCity(id, name) {
+    if (this.cityIdExist(id) || this.cityNameExist(name)) {
+      return;
     }
 
-    addCity(id, name) {
-        if (this.cityIdExist(id) || this.cityNameExist(name)) {
-            return;
-        }
+    // Safe to push now, as this.Cities is a fresh array
+    this.Cities.push({ Id: id, Name: name });
+    this.SelectedCity = { Id: id, Name: name };
+  }
 
-        this.Cities.push({ Id: id, Name: name });
-        this.SelectedCity = { Id: id, Name: name };
-    }
+  cityNameExist(name) {
+    return this.Cities.some(city => city.Name === name);
+  }
 
-    cityNameExist(name) {
-        return this.Cities.some(city => city.Name === name);
-    }
+  cityIdExist(id) {
+    return this.Cities.some(city => city.Id === id);
+  }
 
-    cityIdExist(id) {
-        return this.Cities.some(city => city.Id === id);
-    }
+  getCityName(id) {
+    return this.Cities.find(city => city.Id === id)?.Name;
+  }
 
-    getCityName(id) {
-        return this.Cities.find(city => city.Id === id)?.Name;
-    }
+  getCityId(name) {
+    return this.Cities.find(city => city.Name === name)?.Id;
+  }
 
-    getCityId(name) {
-        return this.Cities.find(city => city.Name === name)?.Id;
-    }
+  selectCity(value) {
+    let city = this.Cities.find(city => city.Name === value) ||
+      this.Cities.find(city => city.Id === value);
+    this.SelectedCity = { Id: city?.Id, Name: city?.Name };
+  }
 
-    selectCity(value) {
-        let city = this.Cities.find(city => city.Name === value);
-        if (!city) {
-            city = this.Cities.find(city => city.Id === value);
-        }
-        this.SelectedCity = { Id: city?.Id, Name: city?.Name };
-    }
+  deleteCity(value) {
+    this.Cities = this.Cities.filter(
+      city => city.Id !== value && city.Name !== value
+    );
+  }
 
-    deleteCity(value) {
-        this.Cities = this.Cities.filter(city => city.Id !== value && city.Name !== value);
-    }
+  setPlayerLevel(lv) {
+    this.Level = Math.max(1, Math.min(40, parseInt(lv, 10)));
 
-    setPlayerLevel(lv) {
-        this.Level = Math.max(1, Math.min(40, parseInt(lv)));
+    this.Cities.forEach(shop => {
+      const cityDb = db.getCity(shop.Id);
+      cityDb.setPlayerLevel(lv);
+      db.setCity(cityDb);
+    });
+  }
 
-        this.Cities.forEach(shop => {
-            var cityDb = db.getCity(shop.Id);
-            cityDb.setPlayerLevel(lv);
-            db.setCity(cityDb);
-        });
-    }
+  /**
+   * Returns a fully plain-objects representation of this World,
+   * suitable for serialization and storing in Redux state.
+   */
+  serialize() {
+    return {
+      Id: this.Id,
+      Name: this.Name,
+      Level: this.Level,
+      SelectedCity: {
+        Id: this.SelectedCity.Id,
+        Name: this.SelectedCity.Name,
+      },
+      Cities: this.Cities.map(city => ({
+        Id: city.Id,
+        Name: city.Name,
+      })),
+    };
+  }
 }
 
 export default World;

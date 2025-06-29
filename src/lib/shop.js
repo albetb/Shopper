@@ -1,5 +1,5 @@
-import { loadFile, shopTypes, cap, newGuid } from './utils';
 import { newRandomItem } from './item';
+import { cap, loadFile, newGuid, shopTypes } from './utils';
 
 const BASE_ARCANE_CHANCE = 0.7;
 const REQUIRED_KEYS = ['Id', 'Name', 'Level', 'CityLevel', 'PlayerLevel', 'Reputation', 'Stock', 'Gold', 'Time', 'ArcaneChance', 'ShopType', 'ItemModifier'];
@@ -29,7 +29,7 @@ class Shop {
         this.ShopType = shop.Name;
         this.Level = Math.max(this.Level, shop['Min level']);
         this.setGold(this.baseGold(this.PlayerLevel, this.Level));
-        this.ItemModifier = shop.Modifier;
+        this.ItemModifier = { ...shop.Modifier };
         this.ArcaneChance = shop['Arcane Chance'] ?? BASE_ARCANE_CHANCE;
         this.ItemModifier.Ammo = (this.ItemModifier.Weapon ?? 0) * 0.6;
         this.ItemModifier.Shield = (this.ItemModifier.Armor ?? 0) * 0.4;
@@ -52,7 +52,7 @@ class Shop {
         this.Time = data.Time;
         this.ArcaneChance = data.ArcaneChance;
         this.ShopType = data.ShopType;
-        this.ItemModifier = data.ItemModifier;
+        this.ItemModifier = { ...data.ItemModifier };
 
         return this;
     }
@@ -301,6 +301,23 @@ class Shop {
 
         this.setGold(this.Gold + this.trueCost(updatedItem) * num);
         this.Stock = updatedInventory;
+    }
+
+    serialize() {
+        return {
+            Id: this.Id,
+            Name: this.Name,
+            Level: this.Level,
+            CityLevel: this.CityLevel,
+            PlayerLevel: this.PlayerLevel,
+            Reputation: this.Reputation,
+            Stock: this.Stock,
+            Gold: this.Gold,
+            Time: this.Time,
+            ArcaneChance: this.ArcaneChance,
+            ShopType: this.ShopType,
+            ItemModifier: this.ItemModifier,
+        };
     }
 }
 

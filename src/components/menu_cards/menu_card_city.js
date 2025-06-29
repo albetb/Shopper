@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import SelectComponent from '../common/select_component';
-import CreateComponent from '../common/create_component';
+import { useDispatch, useSelector } from 'react-redux';
 import { order } from '../../lib/utils';
 import {
-  onNewCity,
-  onSelectCity,
   onCityLevelChange,
-  onDeleteCity
-} from '../../store/appSlice';
+  onDeleteCity,
+  onNewCity,
+  onSelectCity
+} from '../../store/thunks/cityThunks';
+import CreateComponent from '../common/create_component';
+import SelectComponent from '../common/select_component';
 import '../../style/menu_cards.css';
 
 export default function MenuCardCity() {
@@ -16,8 +16,8 @@ export default function MenuCardCity() {
   const [isNewVisible, setIsNewVisible] = useState(false);
 
   // Redux state
-  const world = useSelector(state => state.app.world);
-  const city = useSelector(state => state.app.city);
+  const world = useSelector(state => state.world.world);
+  const city = useSelector(state => state.city.city);
 
   const cities = world?.Cities.map(c => c.Name) || [];
   const selectedName = city?.Name;

@@ -1,16 +1,21 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Sidebar from './components/sidebar/sidebar';
 import ShopInventory from './components/shop_inventory/shop_inventory';
+import Sidebar from './components/sidebar/sidebar';
 import * as db from './lib/storage';
+import { serialize } from './lib/utils';
 import {
-  setWorlds,
-  setSelectedWorld,
-  setWorld,
-  setCity,
+  setCity
+} from './store/slices/citySlice';
+import {
   setShop,
   setShopGenerated
-} from './store/appSlice';
+} from './store/slices/shopSlice';
+import {
+  setSelectedWorld,
+  setWorld,
+  setWorlds
+} from './store/slices/worldSlice';
 import './style/App.css';
 
 export default function App() {
@@ -39,7 +44,7 @@ export default function App() {
         (db.getShop(sh.Id).getInventory() || []).length > 0
       )
     ) ?? false;
-    dispatch(setShopGenerated(generated));
+    dispatch(setShopGenerated(serialize(generated)));
   }, [dispatch]);
 
   return (

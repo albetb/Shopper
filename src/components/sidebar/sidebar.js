@@ -1,7 +1,7 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { downloadLocalStorage, handleFileUpload } from '../../lib/storage';
+import { toggleSidebar } from '../../store/slices/appSlice';
 import MenuCards from '../menu_cards/menu_cards';
-import { handleFileUpload, downloadLocalStorage } from '../../lib/storage';
-import { toggleSidebar } from '../../store/appSlice';
 import '../../style/sidebar.css';
 
 export default function Sidebar() {
@@ -12,7 +12,7 @@ export default function Sidebar() {
   const handleUploadClick = () => document.getElementById('upload').click();
 
   return (
-    <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>      
+    <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
       <button className="toggle-button" onClick={handleToggle}>
         <span className="material-symbols-outlined">
           {isCollapsed ? 'arrow_forward' : 'arrow_back'}

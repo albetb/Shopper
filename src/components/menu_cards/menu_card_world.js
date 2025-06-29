@@ -1,15 +1,16 @@
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import LevelComponent from '../common/level_component';
-import SelectComponent from '../common/select_component';
-import CreateComponent from '../common/create_component';
+import { useDispatch, useSelector } from 'react-redux';
 import { order } from '../../lib/utils';
 import {
-  onNewWorld,
-  onSelectWorld,
   onDeleteWorld,
+  onNewWorld,
+  onPlayerLevelChange,
+  onSelectWorld,
   onWaitTime
-} from '../../store/appSlice';
+} from '../../store/thunks/worldThunks';
+import CreateComponent from '../common/create_component';
+import LevelComponent from '../common/level_component';
+import SelectComponent from '../common/select_component';
 import '../../style/menu_cards.css';
 
 export default function MenuCardWorld() {
@@ -23,10 +24,10 @@ export default function MenuCardWorld() {
   const [days, setDays] = useState('');
 
   // Redux state selectors
-  const worlds = useSelector(state => state.app.worlds);
-  const selected = useSelector(state => state.app.selectedWorld?.Name);
-  const playerLevel = useSelector(state => state.app.world?.Level) ?? 1;
-  const isShopGenerated = useSelector(state => state.app.shopGenerated);
+  const worlds = useSelector(state => state.world.worlds);
+  const selected = useSelector(state => state.world.selectedWorld?.Name);
+  const playerLevel = useSelector(state => state.world.world?.Level) ?? 1;
+  const isShopGenerated = useSelector(state => state.shop.shopGenerated);
 
   // Handlers
   const toggleNew = visible => setIsNewVisible(visible);
@@ -80,7 +81,7 @@ export default function MenuCardWorld() {
   const levelProps = {
     level: playerLevel,
     levelName: 'Player Level',
-    onLevelChange: lvl => dispatch({ type: 'app/onPlayerLevelChange', payload: lvl })
+    onLevelChange: lvl => dispatch(onPlayerLevelChange(lvl))
   };
 
   return (
