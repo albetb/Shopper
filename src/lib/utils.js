@@ -1,6 +1,6 @@
-import items from '../app_data/items.json';
-import scrolls from '../app_data/scrolls.json';
-import tables from '../app_data/tables.json';
+import items from '../data/items.json';
+import scrolls from '../data/scrolls.json';
+import tables from '../data/tables.json';
 
 export const itemTypes = [
     'Ammo',

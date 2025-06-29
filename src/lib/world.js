@@ -85,10 +85,6 @@ class World {
     });
   }
 
-  /**
-   * Returns a fully plain-objects representation of this World,
-   * suitable for serialization and storing in Redux state.
-   */
   serialize() {
     return {
       Id: this.Id,

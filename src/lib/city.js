@@ -95,11 +95,7 @@ class City {
       db.setShop(shopDb);
     });
   }
-
-  /**
-   * Returns a fully plain-object representation of this City,
-   * suitable for serialization and storing in Redux state.
-   */
+  
   serialize() {
     return {
       Id: this.Id,
