@@ -1552,20 +1552,20 @@
     "Link": "deathwatch"
   },
   {
-    "Name": "",
+    "Name": "Deep Slumber",
     "School": "Enchantment (Compulsion) [Mind-Affecting]",
     "Level": "Brd 3, Sor/Wiz 3",
     "Range": "Close (25 ft. + 5 ft./2 levels)",
     "Description": "<p>This spell functions like <a href=\"spellsS.html#sleep\" style=\"color: #579eb6\">sleep</a>, except that it affects 10 HD of creatures.</p>",
-    "Link": ""
+    "Link": "deep-slumber"
   },
   {
-    "Name": "",
+    "Name": "Deeper Darkness",
     "School": "Evocation [Darkness]",
     "Level": "Clr 3",
     "Duration": "One day/level (D)",
     "Description": "<p>This spell functions like <a href=\"#darkness\" style=\"color: #579eb5\">darkness</a>, except that the object radiates shadowy illumination in a 60-foot radius and the darkness lasts longer.</p><p>Daylight brought into an area of deeper darkness (or vice versa) is temporarily negated, so that the otherwise prevailing light conditions exist in the overlapping areas of effect.</p><p>Deeper darkness counters and dispels any light spell of equal or lower level, including daylight and light.</p>",
-    "Link": ""
+    "Link": "deeper-darkness"
   },
   {
     "Name": "Delay Poison",
@@ -2979,12 +2979,6 @@
     "Link": "grease"
   },
   {
-    "Name": "Greater (Spell Name)",
-    "School": "Any spell whose name begins with greater is alphabetized in this chapter according to the second word of the spell name. Thus, the description of a greater spell appears near the description of the spell on which it is based. Spell chains that have greater spells in them include those based on the spells arcane sight, command, dispel magic, glyph of warding, invisibility, magic fang, magic weapon, planar ally, planar binding, prying eyes, restoration, scrying, shadow conjuration, shadow evocation, shout, and teleport.",
-    "Description": "",
-    "Link": "greater-(spell-name)"
-  },
-  {
     "Name": "Guards and Wards",
     "School": "Abjuration",
     "Level": "Sor/Wiz 6",
@@ -3808,12 +3802,6 @@
     "Link": "legend-lore"
   },
   {
-    "Name": "Lesser (Spell Name)",
-    "School": "Any spell whose name begins with lesser is alphabetized in this chapter according to the second word of the spell name. Thus, the description of a lesser spell appears near the description of the spell on which it is based. Spell chains that have lesser spells in them include those based on the spells confusion, geas, globe of invulnerability, planar ally, planar binding, and restoration.",
-    "Description": "",
-    "Link": "lesser-(spell-name)"
-  },
-  {
     "Name": "Levitate",
     "School": "Transmutation",
     "Level": "Sor/Wiz 2",
@@ -4242,12 +4230,6 @@
     "Spell Resistance": "Yes",
     "Description": "<p>You draw an indelible mark on the subject and state some behavior on the part of the subject that will activate the mark. When activated, the mark curses the subject. Typically, you designate some sort of criminal behavior that activates the mark, but you can pick any act you please. The effect of the mark is identical with the effect of bestow curse.</p><p>Since this spell takes 10 minutes to cast and involves writing on the target, you can cast it only on a creature that is willing or restrained.</p><p>Like the effect of bestow curse, a mark of justice cannot be dispelled, but it can be removed with a break enchantment, limited wish, miracle, remove curse, or wish spell. Remove curse works only if its caster level is equal to or higher than your mark of justice caster level. These restrictions apply regardless of whether the mark has activated.</p>",
     "Link": "mark-of-justice"
-  },
-  {
-    "Name": "Mass (Spell Name)",
-    "School": "Any spell whose name begins with mass is alphabetized in this chapter according to the second word of the spell name. Thus, the description of a mass spell appears near the description of the spell on which it is based. Spell chains that have mass spells in them include those based on the spells bear’s endurance, bull’s strength, cat’s grace, charm monster, cure critical wounds, cure light wounds, cure moderate wounds, cure serious wounds, eagle’s splendor, enlarge person, fox’s cunning, heal, hold monster, hold person, inflict critical wounds, inflict light wounds, inflict moderate wounds, inflict serious wounds, invisibility, owl’s wisdom, reduce person, and suggestion.",
-    "Description": "",
-    "Link": "mass-(spell-name)"
   },
   {
     "Name": "Maze",
