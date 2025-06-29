@@ -17,6 +17,7 @@ import {
   setWorlds
 } from './store/slices/worldSlice';
 import './style/App.css';
+import InfoSidebar from './components/sidebar/info_sidebar';
 
 export default function App() {
   const dispatch = useDispatch();
@@ -50,6 +51,7 @@ export default function App() {
   return (
     <div className="app">
       <Sidebar />
+      <InfoSidebar />
       <header className="app-header">
         <ShopInventory />
       </header>

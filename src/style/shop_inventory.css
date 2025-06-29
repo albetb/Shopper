@@ -81,7 +81,7 @@ h2 {
   color: #d5d5d5;
 }
 
-p {
+h4 {
   font-size: 0.63em;
   color: #d5d5d5;
 }
@@ -230,6 +230,22 @@ select.modern-input {
 
 .modern-input.no-padding {
   padding-left: 0;
+}
+
+.button-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: #d5d5d5;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button-link:hover {
+  color: #d5d5d5;
+  text-decoration: underline;
 }
 
 

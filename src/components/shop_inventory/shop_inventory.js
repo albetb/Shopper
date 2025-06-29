@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Shop from '../../lib/shop';
 import { isMobile, trimLine } from '../../lib/utils';
 import { updateShop } from '../../store/slices/shopSlice';
+import { addCardByLink } from '../../store/slices/appSlice';
 import useLongPress from '../hooks/use_long_press';
 import AddItemForm from './add_item_form';
 import DeletePopup from './delete_popup';
@@ -57,7 +58,7 @@ export default function ShopInventory() {
 
   const longPressEvent = useLongPress(
     (_name, _type, number) => handleLongPressDelete(_name, _type, number),
-    () => { },
+    () => {},
     { shouldPreventDefault: true, delay: LONGPRESS_TIME }
   );
 
@@ -87,11 +88,11 @@ export default function ShopInventory() {
         <div className="label-container">
           <h2>{shopLabel()}</h2>
           <div className="space-left">
-            <p>{cityLabel()}</p>
+            <h4>{cityLabel()}</h4>
           </div>
         </div>
         <div className="money-box">
-          <p><b>Gold: {formatNumber(gold)}</b></p>
+          <h4><b>Gold: {formatNumber(gold)}</b></h4>
         </div>
       </div>
 
@@ -117,10 +118,17 @@ export default function ShopInventory() {
               <tr key={idx} className={deletingItems[key] ? 'deleting' : ''}>
                 <td className="align-right">{item.Number}</td>
                 <td>
-                  {item.Link
-                    ? <a href={item.Link} target="_blank" rel="noopener noreferrer">{item.Name}</a>
-                    : item.Name
-                  }
+                  {item.Link ? (
+                    <button
+                      type="button"
+                      className="button-link"
+                      onClick={() => dispatch(addCardByLink(item.Link))}
+                    >
+                      {item.Name}
+                    </button>
+                  ) : (
+                    item.Name
+                  )}
                 </td>
                 <td>{abbrevType}</td>
                 <td>{formatNumber(item.Cost)}</td>
@@ -146,10 +154,11 @@ export default function ShopInventory() {
         </tbody>
       </table>
 
-      {showAddItemForm
-        ? <AddItemForm onAddItem={handleAddItem} items={items} setShowAddItemForm={setShowAddItemForm} />
-        : <button className="add-item-button" onClick={() => setShowAddItemForm(true)}>Add Item</button>
-      }
+      {showAddItemForm ? (
+        <AddItemForm onAddItem={handleAddItem} items={items} setShowAddItemForm={setShowAddItemForm} />
+      ) : (
+        <button className="add-item-button" onClick={() => setShowAddItemForm(true)}>Add Item</button>
+      )}
 
       {popup.visible && (
         <DeletePopup

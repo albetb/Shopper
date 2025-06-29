@@ -1,6 +1,7 @@
 import items from '../data/items.json';
 import scrolls from '../data/scrolls.json';
 import tables from '../data/tables.json';
+import spells from '../data/spells.json';
 
 export const itemTypes = [
     'Ammo',
@@ -28,12 +29,24 @@ export function loadFile(fileName) {
                 return scrolls;
             case 'tables':
                 return tables;
+            case 'spells':
+                return spells;
             default:
                 return null
         }
     } catch (error) {
         return null;
     }
+}
+
+export function getSpellByLink(link) {
+  try {
+    const spells = loadFile('spells');
+    const spell = spells.find(s => s.Link === link);
+    return spell ? [spell] : [];
+  } catch (err) {
+    return [];
+  }
 }
 
 export function weightedRandom(weights) {

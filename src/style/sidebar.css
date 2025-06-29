@@ -12,6 +12,15 @@
   z-index: 2;
 }
 
+.info-sidebar {
+  box-shadow: -2px 0px 5px 1px rgba(1, 89, 116, 0.7);
+  position: fixed;
+  left: auto;
+  right: 0;
+  padding-left: auto;
+  padding-right: 0.4rem;
+}
+
 .sidebar.collapsed {
   width: 2.6rem;
 }
@@ -30,6 +39,12 @@
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.info-toggle-button {
+  position: absolute;
+  right: auto;
+  left: 0;
 }
 
 .saving-button {
@@ -54,6 +69,26 @@
 .deleting {
   transition: opacity 0.3s ease;
   opacity: 0;
+}
+
+.info-card-row {
+  width: fit-content;
+  text-align: left;
+  align-items: left;
+  margin-left: 3px;
+  margin-right: 2px;
+}
+
+span.info-card {
+  color: rgb(0, 0, 0);
+  font-size: small;
+  text-align: left;
+}
+
+p {
+  color: rgb(20, 20, 18);
+  font-size: small;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {
