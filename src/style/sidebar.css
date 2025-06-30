@@ -19,6 +19,7 @@
   right: 0;
   height: 100vh;
   overflow-y: auto;
+  scrollbar-width: thin;
   padding-left: auto;
   padding-right: 0.4rem;
 }

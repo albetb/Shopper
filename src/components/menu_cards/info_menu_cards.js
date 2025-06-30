@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../../style/menu_cards.css';
 
-export default function InfoMenuCards({ cardsData }) {
+export default function InfoMenuCards({ cardsData, closeCard }) {
   const [cardStates, setCardStates] = useState(
     cardsData.map((_, idx) => ({ id: idx, collapsed: idx !== 0 }))
   );
@@ -30,11 +30,16 @@ export default function InfoMenuCards({ cardsData }) {
           <div key={idx} className={`card ${state.collapsed ? 'collapsed' : ''}`}>
             <div className="card-side-div card-expand-div">
               <h3 className="card-title">{title}</h3>
-              <button className="collapse-button" onClick={() => toggleCard(idx)}>
-                <span className="material-symbols-outlined">
-                  {state.collapsed ? 'expand_more' : 'expand_less'}
-                </span>
-              </button>
+              <div className="card-actions">
+                <button className="close-button" onClick={() => closeCard(data)}>
+                  <span className="material-symbols-outlined">close_small</span>
+                </button>
+                <button className="collapse-button" onClick={() => toggleCard(idx)}>
+                  <span className="material-symbols-outlined">
+                    {state.collapsed ? 'expand_more' : 'expand_less'}
+                  </span>
+                </button>
+              </div>
             </div>
             {!state.collapsed && (
               <div className="card-content">

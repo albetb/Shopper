@@ -33,6 +33,11 @@ export const appSlice = createSlice({
       }
     },
 
+    removeCard(state, action) {
+      const card = action.payload;
+      state.infoCards = state.infoCards.filter(c => c.Link !== card.Link && c.Name !== card.Name);
+    },
+
     clearInfoCards(state) {
       state.infoCards = [];
     }
@@ -43,6 +48,7 @@ export const {
   toggleSidebar,
   toggleInfoSidebar,
   addCardByLink,
+  removeCard,
   clearInfoCards
 } = appSlice.actions;
 
