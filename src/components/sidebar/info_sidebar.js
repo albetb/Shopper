@@ -6,13 +6,14 @@ import '../../style/sidebar.css';
 export default function InfoSidebar() {
   const dispatch = useDispatch();
   const isCollapsed = useSelector(state => state.app.infoSidebarCollapsed);
+  const otherBarIsCollapsed = useSelector(state => state.app.sidebarCollapsed);
   const cardsData = useSelector(state => state.app.infoCards);
 
   const handleToggle = () => dispatch(toggleInfoSidebar());
   const handleClearInfoCards = () => dispatch(clearInfoCards());
   const handleCloseCard = (card) => dispatch(removeCard(card));
 
-  if (cardsData.length === 0) return <></>;
+  if (cardsData.length === 0 || !otherBarIsCollapsed) return <></>;
 
   return (
     <div className={`sidebar info-sidebar ${isCollapsed ? 'collapsed' : ''}`}>

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getSpellByLink, getItemByLink } from '../../lib/utils';
+import { getSpellByLink, getItemByLink, isMobile } from '../../lib/utils';
 
 const initialState = {
   sidebarCollapsed: false,
@@ -13,10 +13,16 @@ export const appSlice = createSlice({
   reducers: {
     toggleSidebar(state) {
       state.sidebarCollapsed = !state.sidebarCollapsed;
+      if (isMobile() && state.sidebarCollapsed){
+        state.infoSidebarCollapsed = true;
+      }
     },
 
     toggleInfoSidebar(state) {
       state.infoSidebarCollapsed = !state.infoSidebarCollapsed;
+      if (isMobile() && state.infoSidebarCollapsed){
+        state.sidebarCollapsed = true;
+      }
     },
 
     addCardByLink(state, action) {
@@ -32,6 +38,9 @@ export const appSlice = createSlice({
         }
         if (cards.length) {
           state.infoCards.unshift(...cards);
+        }
+        if (isMobile()) {
+          state.infoSidebarCollapsed = false;
         }
       }
     },
