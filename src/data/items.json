@@ -3687,7 +3687,7 @@
       "Major": 4,
       "Cost": 12000,
       "Link": "rod-of-wonder",
-      "Description": "<p>A rod of wonder is a strange and unpredictable device that randomly generates any number of weird effects each time it is used. (Activating the rod is a standard action.) Typical powers of the rod include the following.</p>"
+      "Description": "<p>A rod of wonder is a strange and unpredictable device that randomly generates any number of weird effects each time it is used. (Activating the rod is a standard action.) Typical powers of the rod include the following.</p> <a id='table-rod-of-wonder'></a><table border='0' cellpadding='1' cellspacing='0' style='width: 100%'> <tbody> <tr> <th style='width: 8%'>d%</th> <th style='width: 92%'>Wondrous Effect</th> </tr> <tr class='odd-row'> <td>01–05</td> <td>Slow creature pointed at for 10 rounds (Will DC 15 negates).</td> </tr> <tr> <td>06–10</td> <td>Faerie fire surrounds the target.</td> </tr> <tr class='odd-row'> <td>11–15</td> <td>Deludes wielder for 1 round into believing the rod functions as indicated by a second die roll (no save).</td> </tr> <tr> <td>16–20</td> <td>Gust of wind, but at windstorm force (Fortitude DC 14 negates).</td> </tr> <tr class='odd-row'> <td>21–25</td> <td>Wielder learns target’s surface thoughts (as with detect thoughts) for 1d4 rounds (no save).</td> </tr> <tr> <td>26–30</td> <td>Stinking cloud at 30-ft. range (Fortitude DC 15 negates).</td> </tr> <tr class='odd-row'> <td>31–33</td> <td>Heavy rain falls for 1 round in 60-ft. radius centered on rod wielder.</td> </tr> <tr> <td>34–36</td> <td>Summon an animal—a rhino (01–25 on d%), elephant (26–50), or mouse (51–100).</td> </tr> <tr class='odd-row'> <td>37–46</td> <td>Lightning bolt (70 ft. long, 5 ft. wide), 6d6 damage (Reflex DC 15 half).</td> </tr> <tr> <td>47–49</td> <td>Stream of 600 large butterflies pours forth and flutters around for 2 rounds, blinding everyone (including wielder) within 25 ft. (Reflex DC 14 negates).</td> </tr> <tr class='odd-row'> <td>50–53</td> <td>Enlarge person if within 60 ft. of rod (Fortitude DC 13 negates).</td> </tr> <tr> <td>54–58</td> <td>Darkness, 30-ft.-diameter hemisphere, centered 30 ft. away from rod.</td> </tr> <tr class='odd-row'> <td>59–62</td> <td>Grass grows in 160-sq.-ft. area before the rod, or grass existing there grows to ten times normal size.</td> </tr> <tr> <td>63–65</td> <td>Turn ethereal any nonliving object of up to 1,000 lb. mass and up to 30 cu. ft. in size.</td> </tr> <tr class='odd-row'> <td>66–69</td> <td>Reduce wielder to 1/12 height (no save).</td> </tr> <tr> <td>70–79</td> <td>Fireball at target or 100 ft. straight ahead, 6d6 damage (Reflex DC 15 half).</td> </tr> <tr class='odd-row'> <td>80–84</td> <td>Invisibility covers rod wielder.</td> </tr> <tr> <td>85–87</td> <td>Leaves grow from target if within 60 ft. of rod. These last 24 hours.</td> </tr> <tr class='odd-row'> <td>88–90</td> <td>10–40 gems, value 1 gp each, shoot forth in a 30-ft.-long stream. Each gem deals 1 point of damage to any creature in its path: Roll 5d4 for the number of hits and divide them among the available targets.</td> </tr> <tr> <td>91–95</td> <td>Shimmering colors dance and play over a 40-ft.-by-30-ft. area in front of rod. Creatures therein are blinded for 1d6 rounds (Fortitude DC 15 negates).</td> </tr> <tr class='odd-row'> <td>96–97</td> <td>Wielder (50% chance) or target (50% chance) turns permanently blue, green, or purple (no save).</td> </tr> <tr> <td class='last-row'>98–100</td> <td class='last-row'>Flesh to stone (or stone to flesh if target is stone already) if target is within 60 ft. (Fortitude DC 18 negates).</td> </tr> </tbody> </table> <p>Moderate enchantment; CL 10th; Craft Rod, confusion, creator must be chaotic; Price 12,000 gp.</p>"
     },
     {
       "Name": "Rod of Python",
@@ -4849,7 +4849,7 @@
     },
     {
       "Id": 18,
-      "Link": "bag-of-tricks",
+      "Link": "bag-of-tricks-gray",
       "Name": "Bag of tricks, gray",
       "Cost": 900,
       "Type": "Minor",
@@ -4865,7 +4865,7 @@
     },
     {
       "Id": 20,
-      "Link": "bracers-of-armor",
+      "Link": "bracers-of-armor-1",
       "Name": "Bracers of armor +1",
       "Cost": 1000,
       "Type": "Minor",
@@ -4873,7 +4873,7 @@
     },
     {
       "Id": 21,
-      "Link": "cloak-of-resistance",
+      "Link": "cloak-of-resistance-1",
       "Name": "Cloak of resistance +1",
       "Cost": 1000,
       "Type": "Minor",
@@ -4881,7 +4881,7 @@
     },
     {
       "Id": 22,
-      "Link": "pearl-of-power",
+      "Link": "pearl-of-power-1",
       "Name": "Pearl of power, 1st-level spell",
       "Cost": 1000,
       "Type": "Minor",
@@ -4985,7 +4985,7 @@
     },
     {
       "Id": 35,
-      "Link": "amulet-of-natural-armor",
+      "Link": "amulet-of-natural-armor-1",
       "Name": "Amulet of natural armor +1",
       "Cost": 2000,
       "Type": "Minor",
@@ -5105,7 +5105,7 @@
     },
     {
       "Id": 50,
-      "Link": "bag-of-tricks",
+      "Link": "bag-of-tricks-rust",
       "Name": "Bag of tricks, rust",
       "Cost": 3000,
       "Type": "Minor",
@@ -5177,7 +5177,7 @@
     },
     {
       "Id": 59,
-      "Link": "amulet-of-health",
+      "Link": "amulet-of-health-2",
       "Name": "Amulet of health +2",
       "Cost": 4000,
       "Type": "Minor",
@@ -5185,7 +5185,7 @@
     },
     {
       "Id": 60,
-      "Link": "bracers-of-armor",
+      "Link": "bracers-of-armor-2",
       "Name": "Bracers of armor +2",
       "Cost": 4000,
       "Type": "Minor",
@@ -5193,7 +5193,7 @@
     },
     {
       "Id": 61,
-      "Link": "cloak-of-charisma",
+      "Link": "cloak-of-charisma-2",
       "Name": "Cloak of Charisma +2",
       "Cost": 4000,
       "Type": "Minor",
@@ -5201,7 +5201,7 @@
     },
     {
       "Id": 62,
-      "Link": "cloak-of-resistance",
+      "Link": "cloak-of-resistance-2",
       "Name": "Cloak of resistance +2",
       "Cost": 4000,
       "Type": "Minor",
@@ -5225,7 +5225,7 @@
     },
     {
       "Id": 65,
-      "Link": "gloves-of-dexterity",
+      "Link": "gloves-of-dexterity-2",
       "Name": "Gloves of Dexterity +2",
       "Cost": 4000,
       "Type": "Minor",
@@ -5233,7 +5233,7 @@
     },
     {
       "Id": 66,
-      "Link": "headband-of-intellect",
+      "Link": "headband-of-intellect-2",
       "Name": "Headband of intellect +2",
       "Cost": 4000,
       "Type": "Minor",
@@ -5241,7 +5241,7 @@
     },
     {
       "Id": 67,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-clear-spindle",
       "Name": "Ioun stone, clear spindle",
       "Cost": 4000,
       "Type": "Minor",
@@ -5265,7 +5265,7 @@
     },
     {
       "Id": 70,
-      "Link": "pearl-of-power",
+      "Link": "pearl-of-power-2",
       "Name": "Pearl of power, 2nd-level spell",
       "Cost": 4000,
       "Type": "Minor",
@@ -5273,7 +5273,7 @@
     },
     {
       "Id": 71,
-      "Link": "periapt-of-wisdom",
+      "Link": "periapt-of-wisdom-2",
       "Name": "Periapt of Wisdom +2",
       "Cost": 4000,
       "Type": "Minor",
@@ -5337,7 +5337,7 @@
     },
     {
       "Id": 79,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-dusty-rose-prism",
       "Name": "Ioun stone, dusty rose prism",
       "Cost": 5000,
       "Type": "Minor",
@@ -5409,7 +5409,7 @@
     },
     {
       "Id": 88,
-      "Link": "amulet-of-mighty-fists",
+      "Link": "amulet-of-mighty-fists-1",
       "Name": "Amulet of mighty fists +1",
       "Cost": 6000,
       "Type": "Minor",
@@ -5441,7 +5441,7 @@
     },
     {
       "Id": 92,
-      "Link": "bag-of-tricks",
+      "Link": "bag-of-tricks-tan",
       "Name": "Bag of tricks, tan",
       "Cost": 6300,
       "Type": "Minor",
@@ -5529,7 +5529,7 @@
     },
     {
       "Id": 3,
-      "Link": "amulet-of-natural-armor",
+      "Link": "amulet-of-natural-armor-2",
       "Name": "Amulet of natural armor +2",
       "Cost": 8000,
       "Type": "Medium",
@@ -5553,7 +5553,7 @@
     },
     {
       "Id": 6,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-deep-red-sphere",
       "Name": "Ioun stone, deep red sphere",
       "Cost": 8000,
       "Type": "Medium",
@@ -5561,7 +5561,7 @@
     },
     {
       "Id": 7,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-incandescent-blue-sphere",
       "Name": "Ioun stone, incandescent blue sphere",
       "Cost": 8000,
       "Type": "Medium",
@@ -5569,7 +5569,7 @@
     },
     {
       "Id": 8,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-pale-blue-rhomboid",
       "Name": "Ioun stone, pale blue rhomboid",
       "Cost": 8000,
       "Type": "Medium",
@@ -5577,7 +5577,7 @@
     },
     {
       "Id": 9,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-pink-and-green-sphere",
       "Name": "Ioun stone, pink and green sphere",
       "Cost": 8000,
       "Type": "Medium",
@@ -5585,7 +5585,7 @@
     },
     {
       "Id": 10,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-pink-rhomboid",
       "Name": "Ioun stone, pink rhomboid",
       "Cost": 8000,
       "Type": "Medium",
@@ -5593,7 +5593,7 @@
     },
     {
       "Id": 11,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-scarlet-and-blue-sphere",
       "Name": "Ioun stone, scarlet and blue sphere",
       "Cost": 8000,
       "Type": "Medium",
@@ -5633,7 +5633,7 @@
     },
     {
       "Id": 16,
-      "Link": "bracers-of-armor",
+      "Link": "bracers-of-armor-3",
       "Name": "Bracers of armor +3",
       "Cost": 9000,
       "Type": "Medium",
@@ -5641,7 +5641,7 @@
     },
     {
       "Id": 17,
-      "Link": "cloak-of-resistance",
+      "Link": "cloak-of-resistance-3",
       "Name": "Cloak of resistance +3",
       "Cost": 9000,
       "Type": "Medium",
@@ -5665,7 +5665,7 @@
     },
     {
       "Id": 20,
-      "Link": "pearl-of-power",
+      "Link": "pearl-of-power-3",
       "Name": "Pearl of power, 3rd-level spell",
       "Cost": 9000,
       "Type": "Medium",
@@ -5689,7 +5689,7 @@
     },
     {
       "Id": 23,
-      "Link": "strand-of-prayer-beads",
+      "Link": "strand-of-prayer-beads-lesser",
       "Name": "Strand of prayer beads, lesser",
       "Cost": 9600,
       "Type": "Medium",
@@ -5729,7 +5729,7 @@
     },
     {
       "Id": 28,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-dark-blue-rhomboid",
       "Name": "Ioun stone, dark blue rhomboid",
       "Cost": 10000,
       "Type": "Medium",
@@ -5785,7 +5785,7 @@
     },
     {
       "Id": 35,
-      "Link": "golem-manual",
+      "Link": "golem-manual-clay",
       "Name": "Golem manual, clay",
       "Cost": 12000,
       "Type": "Medium",
@@ -5849,7 +5849,7 @@
     },
     {
       "Id": 43,
-      "Link": "stone-horse",
+      "Link": "stone-horse-destrier",
       "Name": "Stone horse, destrier",
       "Cost": 14800,
       "Type": "Medium",
@@ -5897,7 +5897,7 @@
     },
     {
       "Id": 49,
-      "Link": "amulet-of-health",
+      "Link": "amulet-of-health-4",
       "Name": "Amulet of health +4",
       "Cost": 16000,
       "Type": "Medium",
@@ -5905,7 +5905,7 @@
     },
     {
       "Id": 50,
-      "Link": "belt-of-giant-strength",
+      "Link": "belt-of-giant-strength-4",
       "Name": "Belt of giant Strength +4",
       "Cost": 16000,
       "Type": "Medium",
@@ -5921,7 +5921,7 @@
     },
     {
       "Id": 52,
-      "Link": "bracers-of-armor",
+      "Link": "bracers-of-armor-4",
       "Name": "Bracers of armor +4",
       "Cost": 16000,
       "Type": "Medium",
@@ -5929,7 +5929,7 @@
     },
     {
       "Id": 53,
-      "Link": "cloak-of-charisma",
+      "Link": "cloak-of-charisma-4",
       "Name": "Cloak of Charisma +4",
       "Cost": 16000,
       "Type": "Medium",
@@ -5937,7 +5937,7 @@
     },
     {
       "Id": 54,
-      "Link": "cloak-of-resistance",
+      "Link": "cloak-of-resistance-4",
       "Name": "Cloak of resistance +4",
       "Cost": 16000,
       "Type": "Medium",
@@ -5945,7 +5945,7 @@
     },
     {
       "Id": 55,
-      "Link": "gloves-of-dexterity",
+      "Link": "gloves-of-dexterity-4",
       "Name": "Gloves of Dexterity +4",
       "Cost": 16000,
       "Type": "Medium",
@@ -5953,7 +5953,7 @@
     },
     {
       "Id": 56,
-      "Link": "headband-of-intellect",
+      "Link": "headband-of-intellect-4",
       "Name": "Headband of intellect +4",
       "Cost": 16000,
       "Type": "Medium",
@@ -5961,7 +5961,7 @@
     },
     {
       "Id": 57,
-      "Link": "pearl-of-power",
+      "Link": "pearl-of-power-4",
       "Name": "Pearl of power, 4th-level spell",
       "Cost": 16000,
       "Type": "Medium",
@@ -5969,7 +5969,7 @@
     },
     {
       "Id": 58,
-      "Link": "periapt-of-wisdom",
+      "Link": "periapt-of-wisdom-4",
       "Name": "Periapt of Wisdom +4",
       "Cost": 16000,
       "Type": "Medium",
@@ -6017,7 +6017,7 @@
     },
     {
       "Id": 64,
-      "Link": "amulet-of-natural-armor",
+      "Link": "amulet-of-natural-armor-3",
       "Name": "Amulet of natural armor +3",
       "Cost": 18000,
       "Type": "Medium",
@@ -6025,7 +6025,7 @@
     },
     {
       "Id": 65,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-iridescent-spindle",
       "Name": "Ioun stone, iridescent spindle",
       "Cost": 18000,
       "Type": "Medium",
@@ -6041,7 +6041,7 @@
     },
     {
       "Id": 67,
-      "Link": "carpet-of-flying",
+      "Link": "carpet-of-flying-5-5",
       "Name": "Carpet of flying, 5 by 5",
       "Cost": 20000,
       "Type": "Medium",
@@ -6057,7 +6057,7 @@
     },
     {
       "Id": 69,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-pale-lavender-ellipsoid",
       "Name": "Ioun stone, pale lavender ellipsoid",
       "Cost": 20000,
       "Type": "Medium",
@@ -6065,7 +6065,7 @@
     },
     {
       "Id": 70,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-pearly-white-spindle",
       "Name": "Ioun stone, pearly white spindle",
       "Cost": 20000,
       "Type": "Medium",
@@ -6105,7 +6105,7 @@
     },
     {
       "Id": 75,
-      "Link": "golem-manual",
+      "Link": "golem-manual-stone",
       "Name": "Golem manual, stone",
       "Cost": 22000,
       "Type": "Medium",
@@ -6137,7 +6137,7 @@
     },
     {
       "Id": 79,
-      "Link": "amulet-of-mighty-fists",
+      "Link": "amulet-of-mighty-fists-2",
       "Name": "Amulet of mighty fists +2",
       "Cost": 24000,
       "Type": "Medium",
@@ -6169,7 +6169,7 @@
     },
     {
       "Id": 83,
-      "Link": "bracers-of-armor",
+      "Link": "bracers-of-armor-5",
       "Name": "Bracers of armor +5",
       "Cost": 25000,
       "Type": "Medium",
@@ -6177,7 +6177,7 @@
     },
     {
       "Id": 84,
-      "Link": "cloak-of-resistance",
+      "Link": "cloak-of-resistance-5",
       "Name": "Cloak of resistance +5",
       "Cost": 25000,
       "Type": "Medium",
@@ -6193,7 +6193,7 @@
     },
     {
       "Id": 86,
-      "Link": "pearl-of-power",
+      "Link": "pearl-of-power-5",
       "Name": "Pearl of power, 5th-level spell",
       "Cost": 25000,
       "Type": "Medium",
@@ -6265,7 +6265,7 @@
     },
     {
       "Id": 95,
-      "Link": "manual-of-bodily-health",
+      "Link": "manual-of-bodily-health-1",
       "Name": "Manual of bodily health +1",
       "Cost": 27500,
       "Type": "Medium",
@@ -6273,7 +6273,7 @@
     },
     {
       "Id": 96,
-      "Link": "manual-of-gainful-exercise",
+      "Link": "manual-of-gainful-exercise-1",
       "Name": "Manual of gainful exercise +1",
       "Cost": 27500,
       "Type": "Medium",
@@ -6281,7 +6281,7 @@
     },
     {
       "Id": 97,
-      "Link": "manual-of-quickness-in-action",
+      "Link": "manual-of-quickness-in-action-1",
       "Name": "Manual of quickness in action +1",
       "Cost": 27500,
       "Type": "Medium",
@@ -6289,7 +6289,7 @@
     },
     {
       "Id": 98,
-      "Link": "tome-of-clear-thought",
+      "Link": "tome-of-clear-thought-1",
       "Name": "Tome of clear thought +1",
       "Cost": 27500,
       "Type": "Medium",
@@ -6297,7 +6297,7 @@
     },
     {
       "Id": 99,
-      "Link": "tome-of-leadership-and-influence",
+      "Link": "tome-of-leadership-and-influence-1",
       "Name": "Tome of leadership and influence +1",
       "Cost": 27500,
       "Type": "Medium",
@@ -6305,7 +6305,7 @@
     },
     {
       "Id": 100,
-      "Link": "tome-of-understanding",
+      "Link": "tome-of-understanding-1",
       "Name": "Tome of understanding +1",
       "Cost": 27500,
       "Type": "Medium",
@@ -6337,7 +6337,7 @@
     },
     {
       "Id": 4,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-orange",
       "Name": "Ioun stone, orange",
       "Cost": 30000,
       "Type": "Major",
@@ -6345,7 +6345,7 @@
     },
     {
       "Id": 5,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-pale-green-prism",
       "Name": "Ioun stone, pale green prism",
       "Cost": 30000,
       "Type": "Major",
@@ -6369,7 +6369,7 @@
     },
     {
       "Id": 8,
-      "Link": "amulet-of-natural-armor",
+      "Link": "amulet-of-natural-armor-4",
       "Name": "Amulet of natural armor +4",
       "Cost": 32000,
       "Type": "Major",
@@ -6385,7 +6385,7 @@
     },
     {
       "Id": 10,
-      "Link": "carpet-of-flying",
+      "Link": "carpet-of-flying-5-10",
       "Name": "Carpet of flying, 5 by 10",
       "Cost": 35000,
       "Type": "Major",
@@ -6393,7 +6393,7 @@
     },
     {
       "Id": 11,
-      "Link": "golem-manual",
+      "Link": "golem-manual-iron",
       "Name": "Golem manual, iron",
       "Cost": 35000,
       "Type": "Major",
@@ -6401,7 +6401,7 @@
     },
     {
       "Id": 12,
-      "Link": "amulet-of-health",
+      "Link": "amulet-of-health-6",
       "Name": "Amulet of health +6",
       "Cost": 36000,
       "Type": "Major",
@@ -6409,7 +6409,7 @@
     },
     {
       "Id": 13,
-      "Link": "belt-of-giant-strength",
+      "Link": "belt-of-giant-strength-6",
       "Name": "Belt of giant Strength +6",
       "Cost": 36000,
       "Type": "Major",
@@ -6417,7 +6417,7 @@
     },
     {
       "Id": 14,
-      "Link": "bracers-of-armor",
+      "Link": "bracers-of-armor-6",
       "Name": "Bracers of armor +6",
       "Cost": 36000,
       "Type": "Major",
@@ -6425,7 +6425,7 @@
     },
     {
       "Id": 15,
-      "Link": "cloak-of-charisma",
+      "Link": "cloak-of-charisma-6",
       "Name": "Cloak of Charisma +6",
       "Cost": 36000,
       "Type": "Major",
@@ -6433,7 +6433,7 @@
     },
     {
       "Id": 16,
-      "Link": "gloves-of-dexterity",
+      "Link": "gloves-of-dexterity-6",
       "Name": "Gloves of Dexterity +6",
       "Cost": 36000,
       "Type": "Major",
@@ -6441,7 +6441,7 @@
     },
     {
       "Id": 17,
-      "Link": "headband-of-intellect",
+      "Link": "headband-of-intellect-6",
       "Name": "Headband of intellect +6",
       "Cost": 36000,
       "Type": "Major",
@@ -6449,7 +6449,7 @@
     },
     {
       "Id": 18,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-vibrant-purple-prism",
       "Name": "Ioun stone, vibrant purple prism",
       "Cost": 36000,
       "Type": "Major",
@@ -6457,7 +6457,7 @@
     },
     {
       "Id": 19,
-      "Link": "pearl-of-power",
+      "Link": "pearl-of-power-6",
       "Name": "Pearl of power, 6th-level spell",
       "Cost": 36000,
       "Type": "Major",
@@ -6465,7 +6465,7 @@
     },
     {
       "Id": 20,
-      "Link": "periapt-of-wisdom",
+      "Link": "periapt-of-wisdom-6",
       "Name": "Periapt of Wisdom +6",
       "Cost": 36000,
       "Type": "Major",
@@ -6481,7 +6481,7 @@
     },
     {
       "Id": 22,
-      "Link": "ioun-stones",
+      "Link": "ioun-stones-lavender-and-green-ellipsoid",
       "Name": "Ioun stone, lavender and green ellipsoid",
       "Cost": 40000,
       "Type": "Major",
@@ -6505,7 +6505,7 @@
     },
     {
       "Id": 25,
-      "Link": "golem-manual",
+      "Link": "golem-manual-greater-stone",
       "Name": "Golem manual, greater stone",
       "Cost": 44000,
       "Type": "Major",
@@ -6529,7 +6529,7 @@
     },
     {
       "Id": 28,
-      "Link": "bracers-of-armor",
+      "Link": "bracers-of-armor-7",
       "Name": "Bracers of armor +7",
       "Cost": 49000,
       "Type": "Major",
@@ -6537,7 +6537,7 @@
     },
     {
       "Id": 29,
-      "Link": "pearl-of-power",
+      "Link": "pearl-of-power-7",
       "Name": "Pearl of power, 7th-level spell",
       "Cost": 49000,
       "Type": "Major",
@@ -6545,7 +6545,7 @@
     },
     {
       "Id": 30,
-      "Link": "amulet-of-natural-armor",
+      "Link": "amulet-of-natural-armor-5",
       "Name": "Amulet of natural armor +5",
       "Cost": 50000,
       "Type": "Major",
@@ -6561,7 +6561,7 @@
     },
     {
       "Id": 32,
-      "Link": "crystal-ball",
+      "Link": "crystal-ball-invisibility",
       "Name": "Crystal ball with see invisibility",
       "Cost": 50000,
       "Type": "Major",
@@ -6577,7 +6577,7 @@
     },
     {
       "Id": 34,
-      "Link": "crystal-ball",
+      "Link": "crystal-ball-detect-thoughts",
       "Name": "Crystal ball with detect thoughts",
       "Cost": 51000,
       "Type": "Major",
@@ -6585,7 +6585,7 @@
     },
     {
       "Id": 35,
-      "Link": "carpet-of-flying",
+      "Link": "carpet-of-flying-6-9",
       "Name": "Carpet of flying, 6 by 9",
       "Cost": 53000,
       "Type": "Major",
@@ -6593,7 +6593,7 @@
     },
     {
       "Id": 36,
-      "Link": "amulet-of-mighty-fists",
+      "Link": "amulet-of-mighty-fists-3",
       "Name": "Amulet of mighty fists +3",
       "Cost": 54000,
       "Type": "Major",
@@ -6625,7 +6625,7 @@
     },
     {
       "Id": 40,
-      "Link": "manual-of-bodily-health",
+      "Link": "manual-of-bodily-health-2",
       "Name": "Manual of bodily health +2",
       "Cost": 55000,
       "Type": "Major",
@@ -6633,7 +6633,7 @@
     },
     {
       "Id": 41,
-      "Link": "manual-of-gainful-exercise",
+      "Link": "manual-of-gainful-exercise-2",
       "Name": "Manual of gainful exercise +2",
       "Cost": 55000,
       "Type": "Major",
@@ -6641,7 +6641,7 @@
     },
     {
       "Id": 42,
-      "Link": "manual-of-quickness-in-action",
+      "Link": "manual-of-quickness-in-action-2",
       "Name": "Manual of quickness in action +2",
       "Cost": 55000,
       "Type": "Major",
@@ -6649,7 +6649,7 @@
     },
     {
       "Id": 43,
-      "Link": "tome-of-clear-thought",
+      "Link": "tome-of-clear-thought-2",
       "Name": "Tome of clear thought +2",
       "Cost": 55000,
       "Type": "Major",
@@ -6657,7 +6657,7 @@
     },
     {
       "Id": 44,
-      "Link": "tome-of-leadership-and-influence",
+      "Link": "tome-of-leadership-and-influence-2",
       "Name": "Tome of leadership and influence +2",
       "Cost": 55000,
       "Type": "Major",
@@ -6665,7 +6665,7 @@
     },
     {
       "Id": 45,
-      "Link": "tome-of-understanding",
+      "Link": "tome-of-understanding-2",
       "Name": "Tome of understanding +2",
       "Cost": 55000,
       "Type": "Major",
@@ -6689,7 +6689,7 @@
     },
     {
       "Id": 48,
-      "Link": "carpet-of-flying",
+      "Link": "carpet-of-flying-10-10",
       "Name": "Carpet of flying, 10 by 10",
       "Cost": 60000,
       "Type": "Major",
@@ -6713,7 +6713,7 @@
     },
     {
       "Id": 51,
-      "Link": "bracers-of-armor",
+      "Link": "bracers-of-armor-8",
       "Name": "Bracers of armor +8",
       "Cost": 64000,
       "Type": "Major",
@@ -6721,7 +6721,7 @@
     },
     {
       "Id": 52,
-      "Link": "pearl-of-power",
+      "Link": "pearl-of-power-8",
       "Name": "Pearl of power, 8th-level spell",
       "Cost": 64000,
       "Type": "Major",
@@ -6729,7 +6729,7 @@
     },
     {
       "Id": 53,
-      "Link": "crystal-ball",
+      "Link": "crystal-ball-telepathy",
       "Name": "Crystal ball with telepathy",
       "Cost": 70000,
       "Type": "Major",
@@ -6737,7 +6737,7 @@
     },
     {
       "Id": 54,
-      "Link": "horn-of-blasting",
+      "Link": "horn-of-blasting-greater",
       "Name": "Horn of blasting, greater",
       "Cost": 70000,
       "Type": "Major",
@@ -6745,7 +6745,7 @@
     },
     {
       "Id": 55,
-      "Link": "pearl-of-power",
+      "Link": "pearl-of-power-two-spells",
       "Name": "Pearl of power, two spells",
       "Cost": 70000,
       "Type": "Major",
@@ -6785,7 +6785,7 @@
     },
     {
       "Id": 60,
-      "Link": "crystal-ball",
+      "Link": "crystal-ball-true-seeing",
       "Name": "Crystal ball with true seeing",
       "Cost": 80000,
       "Type": "Major",
@@ -6793,7 +6793,7 @@
     },
     {
       "Id": 61,
-      "Link": "pearl-of-power",
+      "Link": "pearl-of-power-9",
       "Name": "Pearl of power, 9th-level spell",
       "Cost": 81000,
       "Type": "Major",
@@ -6809,7 +6809,7 @@
     },
     {
       "Id": 63,
-      "Link": "manual-of-bodily-health",
+      "Link": "manual-of-bodily-health-3",
       "Name": "Manual of bodily health +3",
       "Cost": 82500,
       "Type": "Major",
@@ -6817,7 +6817,7 @@
     },
     {
       "Id": 64,
-      "Link": "manual-of-gainful-exercise",
+      "Link": "manual-of-gainful-exercise-3",
       "Name": "Manual of gainful exercise +3",
       "Cost": 82500,
       "Type": "Major",
@@ -6825,7 +6825,7 @@
     },
     {
       "Id": 65,
-      "Link": "manual-of-quickness-in-action",
+      "Link": "manual-of-quickness-in-action-3",
       "Name": "Manual of quickness in action +3",
       "Cost": 82500,
       "Type": "Major",
@@ -6833,7 +6833,7 @@
     },
     {
       "Id": 66,
-      "Link": "tome-of-clear-thought",
+      "Link": "tome-of-clear-thought-3",
       "Name": "Tome of clear thought +3",
       "Cost": 82500,
       "Type": "Major",
@@ -6841,7 +6841,7 @@
     },
     {
       "Id": 67,
-      "Link": "tome-of-leadership-and-influence",
+      "Link": "tome-of-leadership-and-influence-3",
       "Name": "Tome of leadership and influence +3",
       "Cost": 82500,
       "Type": "Major",
@@ -6849,7 +6849,7 @@
     },
     {
       "Id": 68,
-      "Link": "tome-of-understanding",
+      "Link": "tome-of-understanding-3",
       "Name": "Tome of understanding +3",
       "Cost": 82500,
       "Type": "Major",
@@ -6881,7 +6881,7 @@
     },
     {
       "Id": 72,
-      "Link": "strand-of-prayer-beads",
+      "Link": "strand-of-prayer-beads-greater",
       "Name": "Strand of prayer beads, greater",
       "Cost": 95800,
       "Type": "Major",
@@ -6889,7 +6889,7 @@
     },
     {
       "Id": 73,
-      "Link": "amulet-of-mighty-fists",
+      "Link": "amulet-of-mighty-fists-4",
       "Name": "Amulet of mighty fists +4",
       "Cost": 96000,
       "Type": "Major",
@@ -6937,7 +6937,7 @@
     },
     {
       "Id": 79,
-      "Link": "manual-of-bodily-health",
+      "Link": "manual-of-bodily-health-4",
       "Name": "Manual of bodily health +4",
       "Cost": 110000,
       "Type": "Major",
@@ -6945,7 +6945,7 @@
     },
     {
       "Id": 80,
-      "Link": "manual-of-gainful-exercise",
+      "Link": "manual-of-gainful-exercise-4",
       "Name": "Manual of gainful exercise +4",
       "Cost": 110000,
       "Type": "Major",
@@ -6953,7 +6953,7 @@
     },
     {
       "Id": 81,
-      "Link": "manual-of-quickness-in-action",
+      "Link": "manual-of-quickness-in-action-4",
       "Name": "Manual of quickness in action +4",
       "Cost": 110000,
       "Type": "Major",
@@ -6961,7 +6961,7 @@
     },
     {
       "Id": 82,
-      "Link": "tome-of-clear-thought",
+      "Link": "tome-of-clear-thought-4",
       "Name": "Tome of clear thought +4",
       "Cost": 110000,
       "Type": "Major",
@@ -6969,7 +6969,7 @@
     },
     {
       "Id": 83,
-      "Link": "tome-of-leadership-and-influence",
+      "Link": "tome-of-leadership-and-influence-4",
       "Name": "Tome of leadership and influence +4",
       "Cost": 110000,
       "Type": "Major",
@@ -6977,7 +6977,7 @@
     },
     {
       "Id": 84,
-      "Link": "tome-of-understanding",
+      "Link": "tome-of-understanding-4",
       "Name": "Tome of understanding +4",
       "Cost": 110000,
       "Type": "Major",
@@ -7009,7 +7009,7 @@
     },
     {
       "Id": 88,
-      "Link": "manual-of-bodily-health",
+      "Link": "manual-of-bodily-health-5",
       "Name": "Manual of bodily health +5",
       "Cost": 137500,
       "Type": "Major",
@@ -7017,7 +7017,7 @@
     },
     {
       "Id": 89,
-      "Link": "manual-of-gainful-exercise",
+      "Link": "manual-of-gainful-exercise-5",
       "Name": "Manual of gainful exercise +5",
       "Cost": 137500,
       "Type": "Major",
@@ -7025,7 +7025,7 @@
     },
     {
       "Id": 90,
-      "Link": "manual-of-quickness-in-action",
+      "Link": "manual-of-quickness-in-action-5",
       "Name": "Manual of quickness in action +5",
       "Cost": 137500,
       "Type": "Major",
@@ -7033,7 +7033,7 @@
     },
     {
       "Id": 91,
-      "Link": "tome-of-clear-thought",
+      "Link": "tome-of-clear-thought-5",
       "Name": "Tome of clear thought +5",
       "Cost": 137500,
       "Type": "Major",
@@ -7041,7 +7041,7 @@
     },
     {
       "Id": 92,
-      "Link": "tome-of-leadership-and-influence",
+      "Link": "tome-of-leadership-and-influence-5",
       "Name": "Tome of leadership and influence +5",
       "Cost": 137500,
       "Type": "Major",
@@ -7049,7 +7049,7 @@
     },
     {
       "Id": 93,
-      "Link": "tome-of-understanding",
+      "Link": "tome-of-understanding-5",
       "Name": "Tome of understanding +5",
       "Cost": 137500,
       "Type": "Major",
@@ -7065,7 +7065,7 @@
     },
     {
       "Id": 95,
-      "Link": "amulet-of-mighty-fists",
+      "Link": "amulet-of-mighty-fists-5",
       "Name": "Amulet of mighty fists +5",
       "Cost": 150000,
       "Type": "Major",

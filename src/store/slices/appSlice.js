@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getSpellByLink } from '../../lib/utils';
+import { getSpellByLink, getItemByLink } from '../../lib/utils';
 
 const initialState = {
   sidebarCollapsed: false,
@@ -26,7 +26,10 @@ export const appSlice = createSlice({
         state.infoCards = state.infoCards.filter(c => c.Link !== link);
         state.infoCards.unshift(card);
       } else {
-        const cards = getSpellByLink(link);
+        let cards = getSpellByLink(link);
+        if (!cards.length) {
+          cards = getItemByLink(link);
+        }
         if (cards.length) {
           state.infoCards.unshift(...cards);
         }

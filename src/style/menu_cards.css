@@ -133,6 +133,12 @@ h3 {
   text-shadow: 1px 1px #12121366;
 }
 
+th,
+td,
+tr {
+  color: #0d0d0d;
+  font-size: 0.85em;
+}
 
 @media (max-width: 768px) {
   .cards {

@@ -99,10 +99,10 @@ export default function ShopInventory() {
       <table>
         <thead>
           <tr>
-            <th className="number-size">#</th>
-            <th className="name-size">Name</th>
-            <th className="type-size">Type</th>
-            <th className="cost-size">Cost</th>
+            <th className="number-size" style={{color: "#d5d5d5", fontSize: "0.73em"}}>#</th>
+            <th className="name-size" style={{color: "#d5d5d5", fontSize: "0.73em"}}>Name</th>
+            <th className="type-size" style={{color: "#d5d5d5", fontSize: "0.73em"}}>Type</th>
+            <th className="cost-size" style={{color: "#d5d5d5", fontSize: "0.73em"}}>Cost</th>
             <th className="action-size"></th>
           </tr>
         </thead>
@@ -116,12 +116,13 @@ export default function ShopInventory() {
 
             return (
               <tr key={idx} className={deletingItems[key] ? 'deleting' : ''}>
-                <td className="align-right">{item.Number}</td>
-                <td>
+                <td className="align-right" style={{color: "#d5d5d5", fontSize: "0.73em"}}>{item.Number}</td>
+                <td style={{color: "#d5d5d5", fontSize: "0.73em"}}>
                   {item.Link ? (
                     <button
                       type="button"
                       className="button-link"
+                      color="#d5d5d5"
                       onClick={() => dispatch(addCardByLink(item.Link))}
                     >
                       {item.Name}
@@ -130,8 +131,8 @@ export default function ShopInventory() {
                     item.Name
                   )}
                 </td>
-                <td>{abbrevType}</td>
-                <td>{formatNumber(item.Cost)}</td>
+                <td style={{color: "#d5d5d5", fontSize: "0.73em"}}>{abbrevType}</td>
+                <td style={{color: "#d5d5d5", fontSize: "0.73em"}}>{formatNumber(item.Cost)}</td>
                 <td>
                   <button
                     className="item-number-button"

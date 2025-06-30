@@ -49,6 +49,28 @@ export function getSpellByLink(link) {
   }
 }
 
+export function getItemByLink(link) {
+  try {
+    const items = loadFile('items');
+    const types = [
+      "Good", "Ammo", "Weapon", "Specific Weapon", "Armor",
+      "Specific Armor", "Shield", "Specific Shield", "Potion",
+      "Ring", "Rod", "Staff", "Wand", "Wondrous Item"
+    ];
+
+    const allItems = types.flatMap(type => items[type] || []);
+
+    const found = allItems.find(item => item.Link === link);
+    if (!found) return [];
+
+    const { Minor, Medium, Major, Chance, Id, Type, Cost, ...cleaned } = found;
+
+    return cleaned ? [cleaned] : [];
+  } catch (err) {
+    return [];
+  }
+}
+
 export function weightedRandom(weights) {
     const totalWeight = weights.reduce((acc, val) => acc + val, 0);
     const randomNum = Math.random() * totalWeight;

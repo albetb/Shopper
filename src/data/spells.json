@@ -3167,7 +3167,7 @@
     "Saving Throw": "None",
     "Spell Resistance": "No",
     "Description": "<p>You bring forth a great feast, including a magnificent table, chairs, service, and food and drink. The feast takes 1 hour to consume, and the beneficial effects do not set in until this hour is over. Every creature partaking of the feast is cured of all diseases, sickness, and nausea; becomes immune to poison for 12 hours; and gains 1d8 temporary hit points +1 point per two caster levels (maximum +10) after imbibing the nectar-like beverage that is part of the feast. The ambrosial food that is consumed grants each creature that partakes a +1 morale bonus on attack rolls and Will saves and immunity to fear effects for 12 hours.</p><p>If the feast is interrupted for any reason, the spell is ruined and all effects of the spell are negated.</p>",
-    "Link": "heroes’-feast"
+    "Link": "heroes-feast"
   },
   {
     "Name": "Heroism",
@@ -5320,7 +5320,7 @@
     "Saving Throw": "Fortitude negates (harmless)",
     "Spell Resistance": "Yes (harmless)",
     "Description": "<p>Remove blindness/deafness cures <a href=\"abilitiesAndConditions.html#blinded\" style=\"color: rgb(87, 158, 182);\">blindness</a> or <a href=\"abilitiesAndConditions.html#deafened\" style=\"color: rgb(87, 158, 182);\">deafness</a> (your choice), whether the effect is normal or magical in nature. The spell does not restore ears or eyes that have been lost, but it repairs them if they are damaged.</p><p>Remove blindness/deafness counters and dispels blindness/deafness.</p>",
-    "Link": "remove-blindness/deafness"
+    "Link": "remove-blindness-deafness"
   },
   {
     "Name": "Remove Curse",
