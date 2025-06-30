@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import InfoMenuCards from '../menu_cards/info_menu_cards';
 import { toggleInfoSidebar, clearInfoCards, removeCard } from '../../store/slices/appSlice';
 import '../../style/sidebar.css';
+import { isMobile } from '../../lib/utils';
 
 export default function InfoSidebar() {
   const dispatch = useDispatch();
@@ -13,7 +14,8 @@ export default function InfoSidebar() {
   const handleClearInfoCards = () => dispatch(clearInfoCards());
   const handleCloseCard = (card) => dispatch(removeCard(card));
 
-  if (cardsData.length === 0 || !otherBarIsCollapsed) return <></>;
+  if (cardsData.length === 0
+    || (isMobile() && !otherBarIsCollapsed)) return null;
 
   return (
     <div className={`sidebar info-sidebar ${isCollapsed ? 'collapsed' : ''}`}>

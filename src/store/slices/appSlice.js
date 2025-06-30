@@ -13,16 +13,10 @@ export const appSlice = createSlice({
   reducers: {
     toggleSidebar(state) {
       state.sidebarCollapsed = !state.sidebarCollapsed;
-      if (isMobile() && state.sidebarCollapsed){
-        state.infoSidebarCollapsed = true;
-      }
     },
 
     toggleInfoSidebar(state) {
       state.infoSidebarCollapsed = !state.infoSidebarCollapsed;
-      if (isMobile() && state.infoSidebarCollapsed){
-        state.sidebarCollapsed = true;
-      }
     },
 
     addCardByLink(state, action) {
