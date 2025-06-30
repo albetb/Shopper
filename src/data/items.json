@@ -3191,7 +3191,7 @@
       "Medium": 0,
       "Major": 0,
       "Cost": 2000,
-      "Link": "ring-of-protection",
+      "Link": "ring-of-protection-1",
       "Description": "<p>This ring offers continual magical protection in the form of a deflection bonus of +1 to +5 to AC.</p> <p>Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level at least three times greater than the bonus of the ring; Price 2,000 gp (ring +1); 8,000 gp (ring +2); 18,000 gp (ring +3); 32,000 gp (ring +4); 50,000 gp (ring +5).</p>"
     },
     {
@@ -3263,7 +3263,7 @@
       "Medium": 10,
       "Major": 0,
       "Cost": 8000,
-      "Link": "ring-of-protection",
+      "Link": "ring-of-protection-2",
       "Description": "<p>This ring offers continual magical protection in the form of a deflection bonus of +1 to +5 to AC.</p> <p>Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level at least three times greater than the bonus of the ring; Price 2,000 gp (ring +1); 8,000 gp (ring +2); 18,000 gp (ring +3); 32,000 gp (ring +4); 50,000 gp (ring +5).</p>"
     },
     {
@@ -3353,7 +3353,7 @@
       "Medium": 5,
       "Major": 5,
       "Cost": 18000,
-      "Link": "ring-of-protection",
+      "Link": "ring-of-protection-3",
       "Description": "<p>This ring offers continual magical protection in the form of a deflection bonus of +1 to +5 to AC.</p> <p>Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level at least three times greater than the bonus of the ring; Price 2,000 gp (ring +1); 8,000 gp (ring +2); 18,000 gp (ring +3); 32,000 gp (ring +4); 50,000 gp (ring +5).</p>"
     },
     {
@@ -3380,7 +3380,7 @@
       "Medium": 4,
       "Major": 4,
       "Cost": 20000,
-      "Link": "ring-of-wizardry",
+      "Link": "ring-of-wizardry-1",
       "Description": "<p>This special ring comes in four kinds (ring of wizardry I, ring of wizardry II, ring of wizardry III, and ring of wizardry IV), all of them useful only to arcane spellcasters. The wearer’s arcane spells per day are doubled for one specific spell level. A ring of wizardry I doubles 1st-level spells, a ring of wizardry II doubles 2nd-level spells, a ring of wizardry III doubles 3rd-level spells, and a ring of wizardry IV doubles 4th-level spells. Bonus spells from high ability scores or school specialization are not doubled.</p> <p>Moderate (wizardry I) or strong (wizardry II–IV) (no school); CL 11th (I), 14th (II), 17th (III), 20th (IV); Forge Ring, limited wish; Price 20,000 gp (I), 40,000 gp (II), 70,000 gp (III), 100,000 gp (IV).</p>"
     },
     {
@@ -3425,7 +3425,7 @@
       "Medium": 0,
       "Major": 10,
       "Cost": 32000,
-      "Link": "ring-of-protection",
+      "Link": "ring-of-protection-4",
       "Description": "<p>This ring offers continual magical protection in the form of a deflection bonus of +1 to +5 to AC.</p> <p>Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level at least three times greater than the bonus of the ring; Price 2,000 gp (ring +1); 8,000 gp (ring +2); 18,000 gp (ring +3); 32,000 gp (ring +4); 50,000 gp (ring +5).</p>"
     },
     {
@@ -3434,7 +3434,7 @@
       "Medium": 0,
       "Major": 6,
       "Cost": 40000,
-      "Link": "ring-of-wizardry",
+      "Link": "ring-of-wizardry-2",
       "Description": "<p>This special ring comes in four kinds (ring of wizardry I, ring of wizardry II, ring of wizardry III, and ring of wizardry IV), all of them useful only to arcane spellcasters. The wearer’s arcane spells per day are doubled for one specific spell level. A ring of wizardry I doubles 1st-level spells, a ring of wizardry II doubles 2nd-level spells, a ring of wizardry III doubles 3rd-level spells, and a ring of wizardry IV doubles 4th-level spells. Bonus spells from high ability scores or school specialization are not doubled.</p> <p>Moderate (wizardry I) or strong (wizardry II–IV) (no school); CL 11th (I), 14th (II), 17th (III), 20th (IV); Forge Ring, limited wish; Price 20,000 gp (I), 40,000 gp (II), 70,000 gp (III), 100,000 gp (IV).</p>"
     },
     {
@@ -3470,7 +3470,7 @@
       "Medium": 0,
       "Major": 5,
       "Cost": 50000,
-      "Link": "ring-of-protection",
+      "Link": "ring-of-protection-5",
       "Description": "<p>This ring offers continual magical protection in the form of a deflection bonus of +1 to +5 to AC.</p> <p>Faint abjuration; CL 5th; Forge Ring, shield of faith, caster must be of a level at least three times greater than the bonus of the ring; Price 2,000 gp (ring +1); 8,000 gp (ring +2); 18,000 gp (ring +3); 32,000 gp (ring +4); 50,000 gp (ring +5).</p>"
     },
     {
@@ -3497,7 +3497,7 @@
       "Medium": 0,
       "Major": 4,
       "Cost": 70000,
-      "Link": "ring-of-wizardry",
+      "Link": "ring-of-wizardry-3",
       "Description": "<p>This special ring comes in four kinds (ring of wizardry I, ring of wizardry II, ring of wizardry III, and ring of wizardry IV), all of them useful only to arcane spellcasters. The wearer’s arcane spells per day are doubled for one specific spell level. A ring of wizardry I doubles 1st-level spells, a ring of wizardry II doubles 2nd-level spells, a ring of wizardry III doubles 3rd-level spells, and a ring of wizardry IV doubles 4th-level spells. Bonus spells from high ability scores or school specialization are not doubled.</p> <p>Moderate (wizardry I) or strong (wizardry II–IV) (no school); CL 11th (I), 14th (II), 17th (III), 20th (IV); Forge Ring, limited wish; Price 20,000 gp (I), 40,000 gp (II), 70,000 gp (III), 100,000 gp (IV).</p>"
     },
     {
@@ -3542,7 +3542,7 @@
       "Medium": 0,
       "Major": 2,
       "Cost": 100000,
-      "Link": "ring-of-wizardry",
+      "Link": "ring-of-wizardry-4",
       "Description": "<p>This special ring comes in four kinds (ring of wizardry I, ring of wizardry II, ring of wizardry III, and ring of wizardry IV), all of them useful only to arcane spellcasters. The wearer’s arcane spells per day are doubled for one specific spell level. A ring of wizardry I doubles 1st-level spells, a ring of wizardry II doubles 2nd-level spells, a ring of wizardry III doubles 3rd-level spells, and a ring of wizardry IV doubles 4th-level spells. Bonus spells from high ability scores or school specialization are not doubled.</p> <p>Moderate (wizardry I) or strong (wizardry II–IV) (no school); CL 11th (I), 14th (II), 17th (III), 20th (IV); Forge Ring, limited wish; Price 20,000 gp (I), 40,000 gp (II), 70,000 gp (III), 100,000 gp (IV).</p>"
     },
     {
@@ -3560,7 +3560,7 @@
       "Medium": 0,
       "Major": 1,
       "Cost": 200000,
-      "Link": "ring-of-elemental-command",
+      "Link": "ring-of-elemental-command-air",
       "Description": "<p>All four kinds of elemental command rings are very powerful. Each appears to be nothing more than a lesser magic ring until fully activated (by meeting a special condition, such as single-handedly slaying an elemental of the appropriate type or exposure to a sacred material of the appropriate element), but each has certain other powers as well as the following common properties.</p> <p>Elementals of the plane to which the ring is attuned can’t attack the wearer, or even approach within 5 feet of him. If the wearer desires, he may forego this protection and instead attempt to charm the elemental (as charm monster, Will DC 17 negates). If the charm attempt fails, however, absolute protection is lost and no further attempt at charming can be made.</p> <p>Creatures from the plane to which the ring is attuned who attack the wearer take a –1 penalty on their attack rolls. The ring wearer makes applicable saving throws from the extraplanar creature’s attacks with a +2 resistance bonus. He gains a +4 morale bonus on all attack rolls against such creatures. Any weapon he uses bypasses the damage reduction of such creatures, regardless of any qualities the weapon may or may not have.</p> <p>The wearer of the ring is able to converse with creatures from the plane to which his ring is attuned. These creatures recognize that he wears the ring. They show a healthy respect for the wearer if alignments are similar. If alignments are opposed, creatures fear the wearer if he is strong. If he is weak, they hate and desire to slay him.</p> <p>The possessor of a ring of elemental command takes a saving throw penalty as follows: </p>"
     },
     {
