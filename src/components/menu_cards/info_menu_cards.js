@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import parse, { domToReact } from 'html-react-parser';
+import SpellLink from '../common/spell_link';
 import '../../style/menu_cards.css';
 
 export default function InfoMenuCards({ cardsData, closeCard }) {
@@ -15,10 +17,33 @@ export default function InfoMenuCards({ cardsData, closeCard }) {
 
   const toggleCard = id => {
     setCardStates(states =>
-      states.map(s =>
-        s.id === id ? { ...s, collapsed: !s.collapsed } : s
-      )
+      states.map(s => (s.id === id ? { ...s, collapsed: !s.collapsed } : s))
     );
+  };
+
+  // Options to replace any <a href="*.html#slug" or "#slug" with our SpellLink
+  const descriptionOptions = {
+    replace: domNode => {
+      if (
+        domNode.name === 'a' &&
+        domNode.attribs?.href
+      ) {
+        const href = domNode.attribs.href;
+        let slug = null;
+        if (href.includes('.html#')) {
+          [, slug] = href.split('#');
+        } else if (href.startsWith('#')) {
+          slug = href.slice(1);
+        }
+        if (slug) {
+          return (
+            <SpellLink key={href} link={slug}>
+              {domToReact(domNode.children, descriptionOptions)}
+            </SpellLink>
+          );
+        }
+      }
+    }
   };
 
   return (
@@ -49,10 +74,9 @@ export default function InfoMenuCards({ cardsData, closeCard }) {
                       <span className="info-key info-card">{key}: </span>
                     )}
                     {key === 'Description' ? (
-                      <span
-                        className="info-value info-card"
-                        dangerouslySetInnerHTML={{ __html: value }}
-                      />
+                      <span className="info-value info-card">
+                        {parse(value, descriptionOptions)}
+                      </span>
                     ) : key === 'Link' || key === 'Name' ? null : (
                       <span className="info-value info-card">{value}</span>
                     )}
@@ -68,7 +92,8 @@ export default function InfoMenuCards({ cardsData, closeCard }) {
 }
 
 InfoMenuCards.propTypes = {
-  cardsData: PropTypes.arrayOf(PropTypes.object)
+  cardsData: PropTypes.arrayOf(PropTypes.object).isRequired,
+  closeCard: PropTypes.func.isRequired
 };
 
 InfoMenuCards.defaultProps = {
