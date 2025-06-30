@@ -123,6 +123,10 @@ h3 {
   opacity: 0.5;
 }
 
+.info-key {
+  text-shadow: 1px 1px #12121366;
+}
+
 
 @media (max-width: 768px) {
   .cards {

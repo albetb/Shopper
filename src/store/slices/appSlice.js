@@ -25,7 +25,7 @@ export const appSlice = createSlice({
       if (!existingLinks.includes(link)) {
         const cards = getSpellByLink(link);
         if (cards.length) {
-          state.infoCards.push(...cards);
+          state.infoCards.unshift(...cards);
         }
       }
     },

@@ -55,11 +55,18 @@
   margin-top: 0.51rem;
 }
 
-.toggle-button .saving-button {
+.toggle-button,
+.saving-button {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+}
+
+.delete-info-button {
+  position: absolute;
+  right: 0.8rem;
+  left: auto;
 }
 
 .saving-button-margin {
