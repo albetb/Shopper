@@ -21,8 +21,11 @@ export const appSlice = createSlice({
 
     addCardByLink(state, action) {
       const link = action.payload;
-      const existingLinks = state.infoCards.map(card => card.Link);
-      if (!existingLinks.includes(link)) {
+      const card = state.infoCards.find(card => card.Link === link);
+      if (card) {
+        state.infoCards = state.infoCards.filter(c => c.Link !== link);
+        state.infoCards.unshift(card);
+      } else {
         const cards = getSpellByLink(link);
         if (cards.length) {
           state.infoCards.unshift(...cards);
