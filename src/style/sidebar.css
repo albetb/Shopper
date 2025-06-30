@@ -17,6 +17,8 @@
   position: fixed;
   left: auto;
   right: 0;
+  height: 100vh;
+  overflow-y: auto;
   padding-left: auto;
   padding-right: 0.4rem;
 }
