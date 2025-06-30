@@ -22,6 +22,12 @@
   height: 2.35rem;
 }
 
+.close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .collapse-button {
   background-color: transparent;
   border: none;

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import InfoMenuCards from '../menu_cards/info_menu_cards';
-import { toggleInfoSidebar, clearInfoCards } from '../../store/slices/appSlice';
+import { toggleInfoSidebar, clearInfoCards, removeCard } from '../../store/slices/appSlice';
 import '../../style/sidebar.css';
 
 export default function InfoSidebar() {
@@ -10,6 +10,7 @@ export default function InfoSidebar() {
 
   const handleToggle = () => dispatch(toggleInfoSidebar());
   const handleClearInfoCards = () => dispatch(clearInfoCards());
+  const handleCloseCard = (card) => dispatch(removeCard(card));
 
   if (cardsData.length === 0) return <></>;
 
@@ -27,7 +28,7 @@ export default function InfoSidebar() {
               <span className="material-symbols-outlined">delete</span>
           </button>
 
-          <InfoMenuCards cardsData={cardsData} />
+          <InfoMenuCards cardsData={cardsData} closeCard={handleCloseCard} />
         </>
       )}
     </div>

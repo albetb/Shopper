@@ -66,7 +66,7 @@ const SelectComponent = ({ props }) => {
       )}
 
       {!confirmDelete && (
-        <button className={isSavedEmpty ? 'modern-button' : 'levels-button large'} onClick={handleNewClick}>
+        <button title="New" className={isSavedEmpty ? 'modern-button' : 'levels-button large'} onClick={handleNewClick}>
           <span className="material-symbols-outlined">
             new_window
           </span>
@@ -77,19 +77,19 @@ const SelectComponent = ({ props }) => {
         <>
           {confirmDelete ? (
             <>
-              <button className='levels-button large' onClick={handleDelete}>
+              <button title="Confirm" className='levels-button large' onClick={handleDelete}>
                 <span className="material-symbols-outlined">
                   delete
                 </span>
               </button>
-              <button className='levels-button large' onClick={handleCancelClick}>
+              <button title="Back" className='levels-button large' onClick={handleCancelClick}>
                 <span className="material-symbols-outlined">
                   close
                 </span>
               </button>
             </>
           ) : (
-            <button className='levels-button large' onClick={handleConfirmClick}>
+            <button title="Delete" className='levels-button large' onClick={handleConfirmClick}>
               <span className="material-symbols-outlined">
                 delete
               </span>
