@@ -44,7 +44,9 @@ export const onSelectWorld = (name) => (dispatch, getState) => {
 
   const cDb = db.getCity(w.SelectedCity.Id);
   dispatch(setCity(cDb));
-  dispatch(setShop(db.getShop(cDb.SelectedShop.Id)));
+  
+  const shop = cDb?.SelectedShop != null ? db.getShop(cDb.SelectedShop.Id) : null;
+  dispatch(setShop(shop ? shop : null));
 
   const hasInventory = w.Cities.some(c =>
     db.getCity(c.Id).Shops.some(s => (db.getShop(s.Id).getInventory() || []).length > 0)
