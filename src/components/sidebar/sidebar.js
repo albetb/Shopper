@@ -21,7 +21,7 @@ export default function Sidebar() {
 
       {!isCollapsed && (
         <>
-          <button className="saving-button" onClick={downloadLocalStorage}>
+          <button className="saving-button" onClick={downloadLocalStorage} title="Export save file">
             <span className="material-symbols-outlined">download</span>
           </button>
 
@@ -35,6 +35,7 @@ export default function Sidebar() {
           <button
             className="saving-button saving-button-margin"
             onClick={handleUploadClick}
+            title="Import save file"
           >
             <span className="material-symbols-outlined">drive_folder_upload</span>
           </button>
