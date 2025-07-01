@@ -10,6 +10,7 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
   const [cost, setCost] = useState(1);
   const [suggestions, setSuggestions] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
+  const [link, setLink] = useState('');
 
   const MAX_NUMBER = 99;
   const MAX_COST = 999999999;
@@ -32,7 +33,7 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
   }, [itemName, itemType, items]);
 
   const handleAddItemClick = () => {
-    onAddItem(itemName, itemType, cost, number);
+    onAddItem(itemName, itemType, cost, number, link);
     setNumber(1);
     setItemName('');
     setItemType('Good');
@@ -44,6 +45,7 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
     setItemName(suggestion.Name);
     setItemType(suggestion.ItemType);
     setCost(suggestion.Cost);
+    setLink(suggestion.Link);
     setSuggestions([]);
     setIsFocused(false);
   };

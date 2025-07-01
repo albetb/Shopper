@@ -63,7 +63,15 @@ export function getItemByLink(link) {
     const found = allItems.find(item => item.Link === link);
     if (!found) return [];
 
-    const { Minor, Medium, Major, Chance, Id, Type, Cost, ...cleaned } = found;
+    let { Minor, Medium, Major, Chance, Id, Type, Cost, ...cleaned } = found;
+    
+    if (cleaned.Weight !== null && typeof cleaned.Weight === 'number') {
+        cleaned.Weight = cleaned.Weight + " kg";
+    }
+    
+    if (cleaned.Range !== null && typeof cleaned.Range === 'number' && cleaned.Range === 0) {
+        cleaned.Range = "—";
+    }
 
     return cleaned ? [cleaned] : [];
   } catch (err) {

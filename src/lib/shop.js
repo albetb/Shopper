@@ -256,7 +256,7 @@ class Shop {
 
     //#region buy / sell
 
-    buy(itemName, itemType, cost = 1, number = 1) {
+    buy(itemName, itemType, cost = 1, number = 1, link = "") {
         if (itemName.trim() === '' || number <= 0) return;
         let updatedInventory = [...this.Stock];
         const savedName = itemName.length > 64 ? cap(itemName).slice(0, 64) : cap(itemName);
@@ -277,7 +277,8 @@ class Shop {
                 ItemType: itemType,
                 Cost: savedCost,
                 Number: savedNumber,
-                PriceModifier: 0
+                PriceModifier: 0,
+                Link: link
             };
             updatedInventory.push(newItem);
             this.setGold(this.Gold - savedCost * savedNumber);

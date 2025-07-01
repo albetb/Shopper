@@ -51,8 +51,8 @@ export default function ShopInventory() {
     }, LONGPRESS_TIME);
   };
 
-  const handleAddItem = (name, type, cost, number) => {
-    dispatch(updateShop(['buy', name, type, cost, number]));
+  const handleAddItem = (name, type, cost, number, link) => {
+    dispatch(updateShop(['buy', name, type, cost, number, link]));
     setShowAddItemForm(false);
   };
 
