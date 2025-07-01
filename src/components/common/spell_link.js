@@ -5,7 +5,7 @@ export default function SpellLink({ link, children }) {
   const dispatch = useDispatch();
   const handleClick = e => {
     e.preventDefault();
-    dispatch(addCardByLink(link));
+    dispatch(addCardByLink({ links: link }));
   };
 
   return (

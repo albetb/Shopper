@@ -20,30 +20,56 @@ export const appSlice = createSlice({
     },
 
     addCardByLink(state, action) {
-      let links = action.payload;
-      if (!Array.isArray(links)) {
-        links = [links]
-      }
+      const { links: rawLinks, bonus = 0 } = action.payload;
+
+      const links = Array.isArray(rawLinks) ? rawLinks : [rawLinks];
 
       links.forEach(link => {
         const card = state.infoCards.find(card => card.Link === link);
-        if (card) {
+        if (card) { // Always rebuild the card
           state.infoCards = state.infoCards.filter(c => c.Link !== link);
-          state.infoCards.unshift(card);
-        } else {
-          let cards = getSpellByLink(link);
-          if (!cards.length) {
-            cards = getItemByLink(link);
+        }
+
+        let cards = getSpellByLink(link);
+        if (!cards.length) cards = getItemByLink(link);
+        if (!cards.length) cards = getEffectByLink(link);
+
+        if (cards.length && bonus === -1) { // Perfect
+          if (cards[0]["Armor Check Penalty"]) {
+            cards[0]["Armor Check Penalty"] = cards[0]["Armor Check Penalty"] + " (+1)";
           }
-          if (!cards.length) {
-            cards = getEffectByLink(link);
+
+          cards[0]["Name"] = cards[0]["Name"] + ", perfect";
+        }
+
+        if (cards.length && bonus > 0) {
+          if (cards[0]["Dmg (S)"] && !cards[0]["Armor/Shield Bonus"]) {
+            cards[0]["Dmg (S)"] = cards[0]["Dmg (S)"] + " (+" + bonus + ")";
           }
-          if (cards.length) {
-            state.infoCards.unshift(...cards);
+
+          if (cards[0]["Dmg (M)"] && !cards[0]["Armor/Shield Bonus"]) {
+            cards[0]["Dmg (M)"] = cards[0]["Dmg (M)"] + " (+" + bonus + ")";
           }
-          if (isMobile()) {
-            state.infoSidebarCollapsed = false;
+
+          if (cards[0]["Armor/Shield Bonus"]) {
+            cards[0]["Armor/Shield Bonus"] = cards[0]["Armor/Shield Bonus"] + " (+" + bonus + ")";
           }
+
+          if (cards[0]["Armor Check Penalty"] && parseInt(cards[0]["Armor Check Penalty"], 10) < 0) {
+            cards[0]["Armor Check Penalty"] = cards[0]["Armor Check Penalty"] + " (+1)";
+          }
+
+          if (cards[0]["Dmg (S)"] || cards[0]["Dmg (M)"] || cards[0]["Armor/Shield Bonus"]) {
+            cards[0]["Name"] = cards[0]["Name"] + " +" + bonus;
+          }
+        }
+
+        if (cards.length) {
+          state.infoCards.unshift(...cards);
+        }
+
+        if (isMobile()) {
+          state.infoSidebarCollapsed = false;
         }
       });
     },

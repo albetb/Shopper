@@ -40,61 +40,65 @@ export function loadFile(fileName) {
 }
 
 export function getSpellByLink(link) {
-  try {
-    const spells = loadFile('spells');
-    const spell = spells.find(s => s.Link === link);
-    return spell ? [spell] : [];
-  } catch (err) {
-    return [];
-  }
+    try {
+        const spells = loadFile('spells');
+        const spell = spells.find(s => s.Link === link);
+        return spell ? [spell] : [];
+    } catch (err) {
+        return [];
+    }
 }
 
 export function getItemByLink(link) {
-  try {
-    const items = loadFile('items');
-    const types = [
-      "Good", "Ammo", "Weapon", "Specific Weapon", "Armor",
-      "Specific Armor", "Shield", "Specific Shield", "Potion",
-      "Ring", "Rod", "Staff", "Wand", "Wondrous Item"
-    ];
+    try {
+        const items = loadFile('items');
+        const types = [
+            "Good", "Ammo", "Weapon", "Specific Weapon", "Armor",
+            "Specific Armor", "Shield", "Specific Shield", "Potion",
+            "Ring", "Rod", "Staff", "Wand", "Wondrous Item"
+        ];
 
-    const allItems = types.flatMap(type => items[type] || []);
+        const allItems = types.flatMap(type => items[type] || []);
 
-    const found = allItems.find(item => item.Link === link);
-    if (!found) return [];
+        const found = allItems.find(item => item.Link === link);
+        if (!found) return [];
 
-    let { Minor, Medium, Major, Chance, Id, Type, Cost, ...cleaned } = found;
-    
-    if (cleaned.Weight !== null && typeof cleaned.Weight === 'number') {
-        cleaned.Weight = cleaned.Weight + " kg";
+        let { Minor, Medium, Major, Chance, Id, Type, Cost, ...cleaned } = found;
+
+        if (cleaned.Weight !== null && typeof cleaned.Weight === 'number') {
+            cleaned.Weight = cleaned.Weight + " kg";
+        }
+
+        if (cleaned.Range !== null && typeof cleaned.Range === 'number') {
+            cleaned.Range = cleaned.Range + " ft.";
+        }
+
+        if (cleaned.Range !== null && typeof cleaned.Range === 'number' && cleaned.Range === 0) {
+            cleaned.Range = "—";
+        }
+
+        return cleaned ? [cleaned] : [];
+    } catch (err) {
+        return [];
     }
-    
-    if (cleaned.Range !== null && typeof cleaned.Range === 'number' && cleaned.Range === 0) {
-        cleaned.Range = "—";
-    }
-
-    return cleaned ? [cleaned] : [];
-  } catch (err) {
-    return [];
-  }
 }
 
 export function getEffectByLink(link) {
-  try {
-    const types = ["Magic Melee Weapon", "Magic Ranged Weapon", "Magic Shield", "Magic Armor"];
+    try {
+        const types = ["Magic Melee Weapon", "Magic Ranged Weapon", "Magic Shield", "Magic Armor"];
 
-    const effectsRaw = loadFile('tables');
-    const effects = types.flatMap(type => effectsRaw[type] || []);
+        const effectsRaw = loadFile('tables');
+        const effects = types.flatMap(type => effectsRaw[type] || []);
 
-    const found = effects.find(item => item.Link === link);
-    if (!found) return [];
+        const found = effects.find(item => item.Link === link);
+        if (!found) return [];
 
-    const { Minor, Medium, Major, "Cost Modifier": costModifier, ...cleaned } = found;
+        const { Minor, Medium, Major, "Cost Modifier": costModifier, ...cleaned } = found;
 
-    return cleaned ? [cleaned] : [];
-  } catch (err) {
-    return [];
-  }
+        return cleaned ? [cleaned] : [];
+    } catch (err) {
+        return [];
+    }
 }
 
 export function weightedRandom(weights) {

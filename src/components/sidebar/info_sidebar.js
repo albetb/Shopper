@@ -28,7 +28,7 @@ export default function InfoSidebar() {
       {!isCollapsed && (
         <>
           <button className="saving-button delete-info-button" onClick={handleClearInfoCards}>
-              <span className="material-symbols-outlined">delete</span>
+            <span className="material-symbols-outlined">delete</span>
           </button>
 
           <InfoMenuCards cardsData={cardsData} closeCard={handleCloseCard} />
