@@ -259,8 +259,7 @@ function newMagicWeapon(shopLevel, quality) {
     weapon.Name = `${weapon.Name} +${baseBonus}`;
 
     if (weapon.Ability && weapon.Ability.length > 0) {
-        weapon.Link = [...weapon.Ability.flatMap(item => item.Link), weapon.Link].reverse();
-        console.log(weapon.Link);
+        weapon.Link = [weapon.Link, ...weapon.Ability.flatMap(item => item.Link)];
     }
 
     weapon.Cost += 300 + 2000 * bonus ** 2;
@@ -373,7 +372,7 @@ function newMagicArmor(shopLevel, quality) {
     armor.Name = `${armor.Name} +${baseBonus}`;
 
     if (armor.Ability && armor.Ability.length > 0) {
-        armor.Link = [...armor.Ability.flatMap(item => item.Link), armor.Link].reverse();
+        armor.Link = [armor.Link, ...armor.Ability.flatMap(item => item.Link)];
     }
 
     armor.Cost += 300 + 2000 * bonus ** 2;

@@ -20,58 +20,36 @@ export const appSlice = createSlice({
     },
 
     addCardByLink(state, action) {
-      const { links: rawLinks, bonus = 0 } = action.payload;
+      const { links: raw, bonus = 0 } = action.payload;
+      const links = Array.isArray(raw) ? raw : [raw];
 
-      const links = Array.isArray(rawLinks) ? rawLinks : [rawLinks];
+      state.infoCards = state.infoCards.filter(c => c.Link !== links[0]);
 
-      links.forEach(link => {
-        const card = state.infoCards.find(card => card.Link === link);
-        if (card) { // Always rebuild the card
-          state.infoCards = state.infoCards.filter(c => c.Link !== link);
-        }
+      let cards = getSpellByLink(links[0]);
 
-        let cards = getSpellByLink(link);
-        if (!cards.length) cards = getItemByLink(link);
-        if (!cards.length) cards = getEffectByLink(link);
+      if (cards.length) {
+        state.infoCards.unshift(...cards);
+        if (isMobile()) state.infoSidebarCollapsed = false;
+        return;
+      }
 
-        if (cards.length && bonus === -1) { // Perfect
-          if (cards[0]["Armor Check Penalty"]) {
-            cards[0]["Armor Check Penalty"] = cards[0]["Armor Check Penalty"] + " (+1)";
-          }
+      cards = getItemByLink(links[0], bonus);
 
-          cards[0]["Name"] = cards[0]["Name"] + ", perfect";
-        }
-
-        if (cards.length && bonus > 0) {
-          if (cards[0]["Dmg (S)"] && !cards[0]["Armor/Shield Bonus"]) {
-            cards[0]["Dmg (S)"] = cards[0]["Dmg (S)"] + " (+" + bonus + ")";
-          }
-
-          if (cards[0]["Dmg (M)"] && !cards[0]["Armor/Shield Bonus"]) {
-            cards[0]["Dmg (M)"] = cards[0]["Dmg (M)"] + " (+" + bonus + ")";
-          }
-
-          if (cards[0]["Armor/Shield Bonus"]) {
-            cards[0]["Armor/Shield Bonus"] = cards[0]["Armor/Shield Bonus"] + " (+" + bonus + ")";
-          }
-
-          if (cards[0]["Armor Check Penalty"] && parseInt(cards[0]["Armor Check Penalty"], 10) < 0) {
-            cards[0]["Armor Check Penalty"] = cards[0]["Armor Check Penalty"] + " (+1)";
-          }
-
-          if (cards[0]["Dmg (S)"] || cards[0]["Dmg (M)"] || cards[0]["Armor/Shield Bonus"]) {
-            cards[0]["Name"] = cards[0]["Name"] + " +" + bonus;
-          }
-        }
-
-        if (cards.length) {
-          state.infoCards.unshift(...cards);
-        }
-
-        if (isMobile()) {
-          state.infoSidebarCollapsed = false;
-        }
+      console.log(links[0]);
+      links.slice(1).forEach(link => {
+        const effect = getEffectByLink(link);
+        
+        if (effect)
+          console.log(effect);
+          console.log(cards[0]);
+          cards[0].Description = cards[0].Description + "<p><b>" + effect.Name + "</b></p>" + effect.Description;
+          cards[0].Name = composeNameWithEffect(cards[0].Name, effect.Name);
       });
+
+      if (cards.length) {
+        state.infoCards.unshift(...cards);
+        if (isMobile()) state.infoSidebarCollapsed = false;
+      }
     },
 
     removeCard(state, action) {
@@ -84,6 +62,24 @@ export const appSlice = createSlice({
     }
   }
 });
+
+function composeNameWithEffect(name, effect) {
+  const suffixMatch = name.match(/(,perfect|\+[1-5])$/);
+  const suffix = suffixMatch ? suffixMatch[1] : '';
+  
+  const base = suffixMatch
+    ? name.slice(0, suffixMatch.index)
+    : name;
+  
+  const trimmedBase   = base.trim();
+  const trimmedEffect = effect.trim();
+  const joined        = trimmedBase
+    ? `${trimmedBase}, ${trimmedEffect}`
+    : trimmedEffect;
+  const space = suffix.includes("+") ? " " : "";
+
+  return `${joined}${space}${suffix}`;
+}
 
 export const {
   toggleSidebar,
