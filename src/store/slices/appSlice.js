@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getSpellByLink, getItemByLink, isMobile } from '../../lib/utils';
+import { getSpellByLink, getItemByLink, isMobile, getEffectByLink } from '../../lib/utils';
 
 const initialState = {
   sidebarCollapsed: false,
@@ -20,23 +20,32 @@ export const appSlice = createSlice({
     },
 
     addCardByLink(state, action) {
-      const link = action.payload;
-      const card = state.infoCards.find(card => card.Link === link);
-      if (card) {
-        state.infoCards = state.infoCards.filter(c => c.Link !== link);
-        state.infoCards.unshift(card);
-      } else {
-        let cards = getSpellByLink(link);
-        if (!cards.length) {
-          cards = getItemByLink(link);
-        }
-        if (cards.length) {
-          state.infoCards.unshift(...cards);
-        }
-        if (isMobile()) {
-          state.infoSidebarCollapsed = false;
-        }
+      let links = action.payload;
+      if (!Array.isArray(links)) {
+        links = [links]
       }
+
+      links.forEach(link => {
+        const card = state.infoCards.find(card => card.Link === link);
+        if (card) {
+          state.infoCards = state.infoCards.filter(c => c.Link !== link);
+          state.infoCards.unshift(card);
+        } else {
+          let cards = getSpellByLink(link);
+          if (!cards.length) {
+            cards = getItemByLink(link);
+          }
+          if (!cards.length) {
+            cards = getEffectByLink(link);
+          }
+          if (cards.length) {
+            state.infoCards.unshift(...cards);
+          }
+          if (isMobile()) {
+            state.infoSidebarCollapsed = false;
+          }
+        }
+      });
     },
 
     removeCard(state, action) {

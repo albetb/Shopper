@@ -79,6 +79,24 @@ export function getItemByLink(link) {
   }
 }
 
+export function getEffectByLink(link) {
+  try {
+    const types = ["Magic Melee Weapon", "Magic Ranged Weapon", "Magic Shield", "Magic Armor"];
+
+    const effectsRaw = loadFile('tables');
+    const effects = types.flatMap(type => effectsRaw[type] || []);
+
+    const found = effects.find(item => item.Link === link);
+    if (!found) return [];
+
+    const { Minor, Medium, Major, "Cost Modifier": costModifier, ...cleaned } = found;
+
+    return cleaned ? [cleaned] : [];
+  } catch (err) {
+    return [];
+  }
+}
+
 export function weightedRandom(weights) {
     const totalWeight = weights.reduce((acc, val) => acc + val, 0);
     const randomNum = Math.random() * totalWeight;
