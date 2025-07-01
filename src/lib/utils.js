@@ -74,6 +74,10 @@ export function getItemByLink(link, bonus = 0) {
         card["Armor Check Penalty"] += ' (+1)';
       }
       card.Name += ', perfect';
+      if ((card["Dmg (S)"] || card["Dmg (M)"]) && !card["Armor/Shield Bonus"]) {
+        const desc = card.Description ? card.Description : "";
+        card.Description = "<p><i>+1 to attack rolls when used in combat.</i></p>" + desc;
+      }
     } else if (bonus > 0) {
       // +bonus
       if (card["Dmg (S)"] && !card["Armor/Shield Bonus"]) {
@@ -90,6 +94,10 @@ export function getItemByLink(link, bonus = 0) {
       }
       if (card["Dmg (S)"] || card["Dmg (M)"] || card["Armor/Shield Bonus"]) {
         card.Name += ` +${bonus}`;
+      }
+      if ((card["Dmg (S)"] || card["Dmg (M)"]) && !card["Armor/Shield Bonus"]) {
+        const desc = card.Description ? card.Description : "";
+        card.Description = `<p><i>+${bonus} to attack rolls when used in combat.</i></p>` + desc;
       }
     }
 
