@@ -173,10 +173,7 @@ export default function ShopInventory() {
           itemNumber={popup.itemNumber}
           position={popup.position}
           onClose={() => setPopup({ ...popup, visible: false })}
-          onDelete={() => {
-            dispatch(updateShop(['sell', popup.itemName, popup.itemType, popup.itemNumber]));
-            setPopup({ ...popup, visible: false });
-          }}
+          onDelete={(itemName, itemType, num) => dispatch(updateShop(['sell', itemName, itemType, num]))}
         />
       )}
     </>
