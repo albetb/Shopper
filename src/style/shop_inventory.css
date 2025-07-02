@@ -13,7 +13,7 @@ td {
 }
 
 th {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #d5d5d5;
 }
 
 td {
@@ -21,7 +21,7 @@ td {
 }
 
 tr {
-  font-size: 0.63em;
+  font-size: medium;
   color: #d5d5d5;
 }
 
@@ -77,12 +77,12 @@ a:hover {
 }
 
 h2 {
-  font-size: 1em;
+  font-size: medium;
   color: #d5d5d5;
 }
 
 h4 {
-  font-size: 0.63em;
+  font-size: medium;
   color: #d5d5d5;
 }
 
@@ -95,7 +95,7 @@ h4 {
   font-weight: bold;
   height: 3.1em;
   width: 5em;
-  font-size: 0.73em;
+  font-size: medium;
 }
 
 .item-number-button {
@@ -114,13 +114,13 @@ h4 {
 .add-item-button {
   width: 10em;
   margin: 1.2rem 0;
-  font-size: 0.6em;
+  font-size: medium;
   min-height: 2.3rem;
 }
 
 .modern-input {
   height: 2.25em;
-  font-size: 0.9em;
+  font-size: medium;
   padding-left: 0.4em;
 }
 
@@ -248,6 +248,7 @@ select.modern-input {
   padding: 0;
   margin: 0;
   font: inherit;
+  font-size: medium;
   color: #d5d5d5;
   text-decoration: underline;
   cursor: pointer;
@@ -304,20 +305,20 @@ select.modern-input {
   }
 
   tr {
-    font-size: 0.78em;
+    font-size: medium;
   }
 
   h2 {
-    font-size: 1em;
+    font-size: medium;
   }
 
   .add-item-button {
     width: 9em;
-    font-size: 0.9em;
+    font-size: medium;
   }
 
   p {
-    font-size: 0.8em;
+    font-size: medium;
   }
 
   .header-container {

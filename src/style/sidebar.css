@@ -149,13 +149,13 @@
 
 span.info-card {
   color: rgb(0, 0, 0);
-  font-size: small;
+  font-size: medium;
   text-align: left;
 }
 
 p {
   color: rgb(20, 20, 18);
-  font-size: small;
+  font-size: medium;
   text-align: justify;
 }
 
