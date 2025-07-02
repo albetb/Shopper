@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import Shop from '../../lib/shop';
 import * as db from '../../lib/storage';
-import { serialize } from '../../lib/utils';
+import { isMobile, serialize } from '../../lib/utils';
 
 const initialState = {
   shop: null,            // full serialized shop
@@ -49,6 +49,9 @@ export const shopSlice = createSlice({
           (db.getShop(s2.Id).getInventory() || []).length > 0
         )
       );
+
+      if (isMobile())
+        state.sidebarCollapsed = true;
     },
   },
 });
