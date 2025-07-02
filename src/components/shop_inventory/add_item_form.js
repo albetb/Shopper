@@ -144,7 +144,7 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
         />
       </td>
       <td className='action-size no-border-top'>
-        <button className='item-number-button' onClick={handleAddItemClick}>
+        <button className='item-number-button add-item-height' onClick={handleAddItemClick}>
           <span className='material-symbols-outlined'>
             add_shopping_cart
           </span>

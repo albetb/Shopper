@@ -50,7 +50,7 @@ export default function InfoMenuCards({ cardsData, closeCard }) {
     <div className="cards">
       {cardsData.map((data, idx) => {
         const state = cardStates.find(s => s.id === idx) || { collapsed: idx !== 0 };
-        const title = (state.collapsed ? trimLine(data.Name, 25) : data.Name) || `Card ${idx + 1}`;
+        const title = (state.collapsed ? trimLine(data.Name, 22) : data.Name) || `Card ${idx + 1}`;
         return (
           <div key={idx} className={`card ${state.collapsed ? 'collapsed' : ''}`}>
             <div className="card-side-div card-expand-div">

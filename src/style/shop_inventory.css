@@ -98,15 +98,24 @@ h4 {
   font-size: 0.73em;
 }
 
+.item-number-button {
+  height: 1.95rem;
+}
+
 .item-number-button.small {
   height: 2em;
   width: 3em;
+}
+
+.add-item-height {
+  height: 3.1em;
 }
 
 .add-item-button {
   width: 10em;
   margin: 1.2rem 0;
   font-size: 0.6em;
+  min-height: 2.3rem;
 }
 
 .modern-input {
@@ -173,6 +182,7 @@ select.modern-input {
   width: 99%;
   border: 1px solid #ccc;
   background-color: #282c34;
+  color: #d5d5d5;
   max-height: 30rem;
   overflow-y: auto;
   margin: 0;

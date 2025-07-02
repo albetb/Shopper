@@ -48,7 +48,7 @@ export const appSlice = createSlice({
 
       if (cards.length) {
         state.infoCards.unshift(...cards);
-        if (isMobile()) state.infoSidebarCollapsed = false;
+        state.infoSidebarCollapsed = false;
       }
     },
 

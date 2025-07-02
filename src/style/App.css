@@ -13,14 +13,25 @@
   overflow: hidden;
 }
 
+.app-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
 .app-header {
+  background-color: #282c34;
+  height: calc(100vh - var(--menu-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: #333333;
   flex: 1;
   overflow: auto;
 }
 
-.app-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-link {
+  color: #61dafb;
 }
 
 body {
@@ -90,20 +101,6 @@ body {
   .app-logo {
     animation: app-logo-spin infinite 2s linear;
   }
-}
-
-.app-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.app-link {
-  color: #61dafb;
 }
 
 @keyframes app-logo-spin {
