@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { order, shopTypes } from '../../lib/utils';
+import { isMobile, order, shopTypes } from '../../lib/utils';
 import {
   onCreateShop,
   updateShop
@@ -14,6 +14,7 @@ import CreateComponent from '../common/create_component';
 import LevelComponent from '../common/level_component';
 import SelectComponent from '../common/select_component';
 import '../../style/menu_cards.css';
+import { toggleSidebar } from '../../store/slices/appSlice';
 
 export default function MenuCardShop() {
   const dispatch = useDispatch();
@@ -39,7 +40,12 @@ export default function MenuCardShop() {
   const handleLevelChange = lvl => dispatch(updateShop(['setShopLevel', lvl]));
   const handleReputationChange = lvl => dispatch(updateShop(['setReputation', lvl]));
   const handleTypeChange = event => dispatch(updateShop(['setShopType', event.target.value]));
-  const handleGenerate = () => dispatch(onCreateShop());
+  const handleGenerate = () => {
+    dispatch(onCreateShop());
+    if (isMobile()) {
+      dispatch(toggleSidebar());
+    }
+  };
 
   if (isNewVisible) {
     return (
