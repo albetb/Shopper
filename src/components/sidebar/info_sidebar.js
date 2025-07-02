@@ -21,7 +21,7 @@ export default function InfoSidebar() {
     <div className={`info-sidebar ${isCollapsed ? 'collapsed' : ''}`}>
       <button className="info-toggle-button" onClick={handleToggle}>
         <span className="material-symbols-outlined">
-          {isCollapsed ? 'app_registration' : 'arrow_forward_ios'}
+          {isCollapsed ? 'manage_search' : 'arrow_forward_ios'}
         </span>
       </button>
 
