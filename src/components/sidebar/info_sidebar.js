@@ -18,10 +18,10 @@ export default function InfoSidebar() {
     || (isMobile() && !otherBarIsCollapsed)) return null;
 
   return (
-    <div className={`sidebar info-sidebar ${isCollapsed ? 'collapsed' : ''}`}>
-      <button className="toggle-button info-toggle-button" onClick={handleToggle}>
+    <div className={`info-sidebar ${isCollapsed ? 'collapsed' : ''}`}>
+      <button className="info-toggle-button" onClick={handleToggle}>
         <span className="material-symbols-outlined">
-          {!isCollapsed ? 'arrow_forward' : 'arrow_back'}
+          {isCollapsed ? 'app_registration' : 'arrow_forward_ios'}
         </span>
       </button>
 

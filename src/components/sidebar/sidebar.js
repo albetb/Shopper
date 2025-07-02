@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { downloadLocalStorage, handleFileUpload } from '../../lib/storage';
 import { toggleSidebar } from '../../store/slices/appSlice';
 import MenuCards from '../menu_cards/menu_cards';
 import '../../style/sidebar.css';
@@ -9,37 +8,17 @@ export default function Sidebar() {
   const isCollapsed = useSelector(state => state.app.sidebarCollapsed);
 
   const handleToggle = () => dispatch(toggleSidebar());
-  const handleUploadClick = () => document.getElementById('upload').click();
 
   return (
     <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
       <button className="toggle-button" onClick={handleToggle}>
         <span className="material-symbols-outlined">
-          {isCollapsed ? 'arrow_forward' : 'arrow_back'}
+          {isCollapsed ? 'menu_open' : 'arrow_back_ios'}
         </span>
       </button>
 
       {!isCollapsed && (
         <>
-          <button className="saving-button" onClick={downloadLocalStorage} title="Export save file">
-            <span className="material-symbols-outlined">download</span>
-          </button>
-
-          <input
-            type="file"
-            id="upload"
-            style={{ display: 'none' }}
-            accept="application/json"
-            onChange={handleFileUpload}
-          />
-          <button
-            className="saving-button saving-button-margin"
-            onClick={handleUploadClick}
-            title="Import save file"
-          >
-            <span className="material-symbols-outlined">drive_folder_upload</span>
-          </button>
-
           <MenuCards />
         </>
       )}

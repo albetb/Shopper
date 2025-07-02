@@ -1,5 +1,21 @@
+:root {
+  --menu-height: 7vh;
+  /* or use px if you’d rather */
+}
+
 .app {
   text-align: center;
+  padding-top: var(--menu-height);
+  display: flex;
+  /* so sidebars + content sit side by side */
+  height: calc(100vh - var(--menu-height));
+  width: 100%;
+  overflow: hidden;
+}
+
+.app-header {
+  flex: 1;
+  overflow: auto;
 }
 
 .app-logo {

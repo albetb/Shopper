@@ -16,8 +16,9 @@ import {
   setWorld,
   setWorlds
 } from './store/slices/worldSlice';
-import './style/App.css';
 import InfoSidebar from './components/sidebar/info_sidebar';
+import TopMenu from './components/sidebar/top_menu';
+import './style/App.css';
 
 export default function App() {
   const dispatch = useDispatch();
@@ -50,6 +51,7 @@ export default function App() {
 
   return (
     <div className="app">
+      <TopMenu />
       <Sidebar />
       <InfoSidebar />
       <header className="app-header">
