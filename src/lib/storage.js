@@ -3,7 +3,7 @@ import World from './world';
 import City from './city';
 import Shop from './shop';
 
-const CURRENT_STORAGE_VERSION = 1000;
+const CURRENT_STORAGE_VERSION = 250702; // last modified date as yymmdd
 
 //#region get
 
