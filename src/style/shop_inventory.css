@@ -252,6 +252,7 @@ select.modern-input {
   color: #d5d5d5;
   text-decoration: underline;
   cursor: pointer;
+  text-align: left;
 }
 
 .button-link:hover {
