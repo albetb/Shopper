@@ -318,6 +318,14 @@ select.modern-input {
     font-size: medium;
   }
 
+  .item-number-button {
+    width: 3.2em;
+  }
+
+  .add-item-height {
+    height: 2.5em;
+  }
+
   p {
     font-size: medium;
   }
