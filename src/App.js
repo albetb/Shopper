@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ShopInventory from './components/shop_inventory/shop_inventory';
 import Sidebar from './components/sidebar/sidebar';
 import * as db from './lib/storage';
 import { serialize } from './lib/utils';
+import {
+  setStateCurrentTab
+} from './store/slices/appSlice';
 import {
   setCity
 } from './store/slices/citySlice';
@@ -19,6 +22,8 @@ import {
 import InfoSidebar from './components/sidebar/info_sidebar';
 import TopMenu from './components/sidebar/top_menu';
 import './style/App.css';
+import MainPage from './components/main_page/main_page';
+import Spellbook from './components/spellbook/spellbook';
 
 export default function App() {
   const dispatch = useDispatch();
@@ -32,6 +37,7 @@ export default function App() {
     const w = db.getWorld(selW?.Id);
     const c = db.getCity(w?.SelectedCity?.Id);
     const s = db.getShop(c?.SelectedShop?.Id);
+    const ct = db.getCurrentTab();
 
     // Populate Redux
     dispatch(setWorlds(worldsDb));
@@ -39,6 +45,7 @@ export default function App() {
     dispatch(setWorld(w));
     dispatch(setCity(c));
     dispatch(setShop(s));
+    dispatch(setStateCurrentTab(ct));
 
     // Compute shopGenerated flag
     const generated = w?.Cities?.some(ci =>
@@ -49,14 +56,40 @@ export default function App() {
     dispatch(setShopGenerated(serialize(generated)));
   }, [dispatch]);
 
+  const currentTab = useSelector(state => state.app.currentTab);
+
+  const mainPage = <>
+    <header className="app-header">
+      <MainPage />
+    </header>
+  </>;
+
+  const shopper = <>
+    <Sidebar />
+    <InfoSidebar />
+    <header className="app-header">
+      <ShopInventory />
+    </header>
+  </>;
+
+  const spellbook = <>
+    <header className="app-header">
+      <Spellbook />
+    </header>
+  </>;
+
+  const tabPages = {
+    0: mainPage,
+    1: shopper,
+    2: spellbook
+  };
+
+  const currentTabContent = tabPages[currentTab] ?? mainPage;
+
   return (
     <div className="app">
       <TopMenu />
-      <Sidebar />
-      <InfoSidebar />
-      <header className="app-header">
-        <ShopInventory />
-      </header>
+      {currentTabContent}
     </div>
   );
 }

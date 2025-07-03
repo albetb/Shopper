@@ -1,19 +1,52 @@
 import { useState, useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { isMobile } from '../../lib/utils';
 import { downloadLocalStorage, handleFileUpload } from '../../lib/storage';
+import { setStateCurrentTab } from '../../store/slices/appSlice';
 import logo from '../../data/logo-shopperino.png';
 import '../../style/sidebar.css';
 
 export default function TopMenu() {
+    const dispatch = useDispatch();
+
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const handleUploadClick = () => document.getElementById('upload').click();
+    const [optionsOpen, setOptionsOpen] = useState(false);
+
+    const handleLogoClick = () => dispatch(setStateCurrentTab(0));
+    const handleShopClick = () => {
+        dispatch(setStateCurrentTab(1));
+        setMobileMenuOpen(false);
+    };
+    const handleSpellbookClick = () => {
+        dispatch(setStateCurrentTab(2));
+        setMobileMenuOpen(false);
+    };
+
+    const handleUploadClick = () => {
+        document.getElementById('upload').click();
+        setOptionsOpen(false);
+    };
+    const handleDownloadClick = () => {
+        downloadLocalStorage();
+        setOptionsOpen(false);
+    };
     const handleToggleMobileMenu = () => setMobileMenuOpen(prev => !prev);
+    const handleToggleOptions = () => setOptionsOpen(prev => !prev);
+
+    const currentTab = useSelector(state => state.app.currentTab);
+
+    const optionsButtonRef = useRef(null);
+    const optionsBoxRef = useRef(null);
     const menuButtonRef = useRef(null);
     const menuBoxRef = useRef(null);
 
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (mobileMenuOpen && menuButtonRef.current && !menuButtonRef.current.contains(event.target) && !menuBoxRef.current.contains(event.target)) {
+        const handleClickOutside = event => {
+            if (mobileMenuOpen
+                && menuButtonRef.current
+                && !menuButtonRef.current.contains(event.target)
+                && !menuBoxRef.current.contains(event.target)
+            ) {
                 handleToggleMobileMenu();
             }
         };
@@ -24,50 +57,46 @@ export default function TopMenu() {
             document.removeEventListener('mousedown', handleClickOutside);
             document.removeEventListener('touchstart', handleClickOutside);
         };
-    }, [menuButtonRef, menuBoxRef, handleToggleMobileMenu]);
+    });
 
-    const buttons = <>
+    useEffect(() => {
+        const handleClickOutside = event => {
+            if (optionsOpen
+                && optionsButtonRef.current
+                && !optionsButtonRef.current.contains(event.target)
+                && !optionsBoxRef.current.contains(event.target)
+            ) {
+                handleToggleOptions();
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
+    });
+
+    const topLogo =
+        <img
+            src={logo}
+            alt="Shopperino"
+            className="top-logo"
+            onClick={handleLogoClick}
+        />;
+
+    const exportButton =
         <button
             className="modern-dropdown small"
-            onClick={downloadLocalStorage}
+            onClick={handleDownloadClick}
             title="Export save file"
         >
             <span className="material-symbols-outlined">download</span>
-        </button>
+        </button>;
 
-        <input
-            type="file"
-            id="upload"
-            style={{ display: 'none' }}
-            accept="application/json"
-            onChange={handleFileUpload}
-        />
-        <button
-            className="modern-dropdown small"
-            onClick={handleUploadClick}
-            title="Import save file"
-        >
-            <span className="material-symbols-outlined">drive_folder_upload</span>
-        </button>
-    </>;
-
-    const mobileButtons = <>
-        <div className="menu-side-by-side">
-
-            <p style={{ fontSize: "medium", textShadow: "1px 1px #12121366" }}>Export save</p>
-            <button
-                className="modern-dropdown small"
-                onClick={downloadLocalStorage}
-                title="Export save file"
-            >
-                <span className="material-symbols-outlined">download</span>
-            </button>
-        </div>
-
-        <hr style={{ width: "90%" }}></hr>
-
-        <div className="menu-side-by-side">
-            <p style={{ fontSize: "medium", textShadow: "1px 1px #12121366" }}>Import save</p>
+    const importButton =
+        <>
             <input
                 type="file"
                 id="upload"
@@ -82,37 +111,115 @@ export default function TopMenu() {
             >
                 <span className="material-symbols-outlined">drive_folder_upload</span>
             </button>
-        </div>
-    </>;
+        </>;
 
-    // Render mobile view
+    const shopButton =
+        <button
+            className={`modern-dropdown small ${currentTab === 1 ? "opacity-50" : ""}`}
+            onClick={handleShopClick}
+            title="Shop generator"
+            disabled={currentTab === 1}
+        >
+            <span className="material-symbols-outlined">shopping_cart</span>
+        </button>
+
+    const spellbookButton =
+        <button
+            className={`modern-dropdown small ${currentTab === 2 ? "opacity-50" : ""}`}
+            onClick={handleSpellbookClick}
+            title="Spellbook"
+            disabled={currentTab === 2}
+        >
+            <span className="material-symbols-outlined">menu_book</span>
+        </button>
+
+    const buttons = (
+        <>
+            {shopButton}
+            {spellbookButton}
+        </>
+    );
+
+    const mobileButtons = (
+        <>
+            <div className="menu-side-by-side">
+                <p style={{ textShadow: "1px 1px #12121366" }}>Shop generator</p>
+                {shopButton}
+            </div>
+            <div className="menu-side-by-side">
+                <p style={{ textShadow: "1px 1px #12121366" }}>Spellbook</p>
+                {spellbookButton}
+            </div>
+        </>
+    );
+
+    const optionsButtons = (
+        <>
+            <div className="menu-side-by-side">
+                <p style={{ textShadow: "1px 1px #12121366" }}>Export save</p>
+                {exportButton}
+            </div>
+
+            <div className="menu-side-by-side">
+                <p style={{ textShadow: "1px 1px #12121366" }}>Import save</p>
+                {importButton}
+            </div>
+        </>
+    );
+
+    const optionsButton =
+        <>
+            <button
+                className="modern-dropdown small"
+                onClick={handleToggleOptions}
+                title="Open options"
+                ref={optionsButtonRef}
+            >
+                <span className="material-symbols-outlined">settings</span>
+            </button>
+            {optionsOpen && (
+                <div className="mobile-dropdown" ref={optionsBoxRef}>
+                    {optionsButtons}
+                </div>
+            )}
+        </>;
+
+    const mobileMenuButton =
+        <>
+            <button
+                className="mobile-menu-button modern-dropdown small"
+                onClick={handleToggleMobileMenu}
+                title="Open menu"
+                ref={menuButtonRef}
+            >
+                <span className="material-symbols-outlined">menu</span>
+            </button>
+            {mobileMenuOpen && (
+                <div className="mobile-dropdown" ref={menuBoxRef}>
+                    {mobileButtons}
+                </div>
+            )}
+        </>;
+
     if (isMobile()) {
         return (
             <div className="top-menu">
-                <img src={logo} alt="Shopperino" className="top-logo" />
-                <button
-                    className="mobile-menu-button modern-dropdown small"
-                    onClick={handleToggleMobileMenu}
-                    title="Open menu"
-                    ref={menuButtonRef}
-                >
-                    <span className="material-symbols-outlined">menu</span>
-                </button>
-                {mobileMenuOpen && (
-                    <div className="mobile-dropdown" ref={menuBoxRef}>
-                        {mobileButtons}
-                    </div>
-                )}
+                {topLogo}
+
+                {mobileMenuButton}
+
+                {optionsButton}
             </div>
         );
     }
 
-    // Render desktop view
     return (
         <div className="top-menu">
-            <img src={logo} alt="Shopperino" className="top-logo" />
+            {topLogo}
             <div className="top-menu-button-container">
                 {buttons}
+                <br></br>
+                {optionsButton}
             </div>
         </div>
     );

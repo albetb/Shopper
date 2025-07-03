@@ -47,6 +47,11 @@ export function getIsShopCollapsed() {
     return value ? JSON.parse(decompressFromUTF16(value)) : false;
 }
 
+export function getCurrentTab() {
+    const value = localStorage.getItem('CurrentTab');
+    return value ? JSON.parse(decompressFromUTF16(value)) : 0;
+}
+
 //#endregion
 
 //#region set
@@ -81,6 +86,10 @@ export function setIsCityCollapsed(value) {
 
 export function setIsShopCollapsed(value) {
     localStorage.setItem('IsShopCollapsed', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setCurrentTab(value) {
+    localStorage.setItem('CurrentTab', compressToUTF16(JSON.stringify(value)));
 }
 
 //#endregion
@@ -134,7 +143,7 @@ export const downloadLocalStorage = () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'ShopperStorageData.json';
+    a.download = 'ShopperinoStorageData.json';
     a.click();
     URL.revokeObjectURL(url);
 };

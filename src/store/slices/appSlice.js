@@ -1,10 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getSpellByLink, getItemByLink, isMobile, getEffectByLink } from '../../lib/utils';
+import * as db from '../../lib/storage';
 
 const initialState = {
   sidebarCollapsed: false,
   infoSidebarCollapsed: false,
-  infoCards: []
+  infoCards: [],
+  currentTab: 0
 };
 
 export const appSlice = createSlice({
@@ -59,6 +61,11 @@ export const appSlice = createSlice({
 
     clearInfoCards(state) {
       state.infoCards = [];
+    },
+
+    setStateCurrentTab(state, action) {
+      state.currentTab = action.payload;
+      db.setCurrentTab(action.payload);
     }
   }
 });
@@ -86,7 +93,8 @@ export const {
   toggleInfoSidebar,
   addCardByLink,
   removeCard,
-  clearInfoCards
+  clearInfoCards,
+  setStateCurrentTab
 } = appSlice.actions;
 
 export default appSlice.reducer;

@@ -38,23 +38,21 @@
 .top-logo {
   height: 90%;
   max-height: 3rem;
-  margin-right: 1rem;
+  margin-right: auto;
+  cursor: pointer;
 }
 
 .top-menu-button-container {
-  width: 90%;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: end;
-  gap: 1vw;
-  margin-right: 2vw;
+  gap: 1.5vw;
+  margin-right: 3vw;
 }
 
 .menu-side-by-side {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: medium;
   align-items: center;
 }
@@ -68,18 +66,20 @@
 .mobile-dropdown {
   position: absolute;
   top: var(--menu-height);
-  width: 60vw;
-  margin-right: 4vw;
-  right: 4vw;
+  width: 15vw;
+  margin-right: 2vw;
+  right: 2vw;
   background-color: rgb(1, 116, 116);
   box-shadow: 0 0 20px rgba(1, 89, 116, 0.7);
   border-radius: 1rem;
   border: 2px solid rgba(1, 89, 116, 0.7);
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0.8rem;
   z-index: 1001;
+  padding-right: 2vw;
+  padding-left: 2vw;
 }
 
 .sidebar.collapsed,
@@ -199,9 +199,19 @@ p {
     gap: 2vw;
     margin-right: 4vw;
   }
-  
+
+  .top-menu {
+    width: 95vw;
+    padding-left: 2vw;
+    padding-right: 4vw;
+  }
+
   .mobile-dropdown {
-    display: flex;
+    width: 60vw;
+    margin-right: 4vw;
+    right: 4vw;
+    padding-right: 7vw;
+    padding-left: 7vw;
   }
 }
 
