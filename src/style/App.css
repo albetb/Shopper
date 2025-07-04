@@ -1,15 +1,16 @@
 :root {
   --menu-height: 7vh;
-  --dark-grey1: #282c34;
-  --dark-grey2: #333333;
-  --dark-grey3: #444a57;
-  --white1: #f9f9f9;
+
+  --white: #f9f9f9;
   --white2: #c0c0c0;
-  --white3: #d5d5d5;
-  --white-t: #c0c0c0cc;
-  --blue1: #017474;
-  --blu-t: #015974b3;
+  --dark-grey: #333333;
   --black: #0d0d0d;
+  --blue: #017474;
+  --white-t: #c0c0c0cc;
+  --grey-t: #444a577e;
+  --black-t: #0d0d0d1a;
+  --blue-t: #015974b3;
+  --blue-t2: #01597443;
 }
 
 .app {
@@ -28,19 +29,19 @@
 }
 
 .app-header {
-  background-color: #282c34;
+  background-color: var(--dark-grey);
   height: calc(100vh - var(--menu-height));
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: medium;
-  color: #d5d5d5;
+  color: var(--white);
   flex: 1;
   overflow: auto;
 }
 
 .app-link {
-  color: #61dafb;
+  color: var(--blue);
 }
 
 body {
@@ -64,13 +65,13 @@ code {
 .modern-dropdown,
 .modern-button,
 .levels-button {
-  background-color: #f9f9f9;
-  color: #333333;
-  border: 1px solid #c0c0c0;
+  background-color: var(--white);
+  color: var(--dark-grey);
+  border: 1px solid var(--white2);
   border-radius: 0.58rem;
   cursor: pointer;
-  box-shadow: 3px 3px 2px 0px rgba(1, 89, 116, 0.264),
-    inset -3px -3px 5px 0px rgba(185, 207, 255, 0.625);
+  box-shadow: 3px 3px 2px 0px var(--blue-t2),
+    inset -3px -3px 5px 0px var(--white-t);
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -86,24 +87,24 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #444a57;
+  background: var(--dark-grey);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #017474;
+  background: var(--blue);
   border-radius: 1rem;
-  border: 3px transparent #6969691c;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border: 3px transparent var(--dark-grey);
+  -webkit-box-shadow: inset 0 0 6px var(--black-t);
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #0159749a;
+  background: var(--blue-t);
 }
 
 /* Firefox */
 body {
   scrollbar-width: thin;
-  scrollbar-color: #017474 #444a57;
+  scrollbar-color: var(--blue) var(--dark-grey);
 }
 
 @media (prefers-reduced-motion: no-preference) {

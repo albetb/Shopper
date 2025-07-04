@@ -5,7 +5,7 @@
   width: 20vw;
   top: var(--menu-height);
   height: calc(100vh - var(--menu-height));
-  background-color: rgb(1, 116, 116);
+  background-color: var(--blue);
   z-index: 900;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -13,12 +13,12 @@
 }
 
 .sidebar {
-  box-shadow: 2px 0px 5px 1px rgba(1, 89, 116, 0.7);
+  box-shadow: 2px 0px 5px 1px var(--blue-t);
   left: 0;
 }
 
 .info-sidebar {
-  box-shadow: -2px 0px 5px 1px rgba(1, 89, 116, 0.7);
+  box-shadow: -2px 0px 5px 1px var(--blue-t);
   right: 0;
 }
 
@@ -30,7 +30,7 @@
   left: 0;
   width: 100%;
   height: var(--menu-height);
-  background-color: rgb(1, 116, 116);
+  background-color: var(--blue);
   align-items: center;
   padding: 0 0.4rem;
 }
@@ -69,10 +69,10 @@
   width: 15vw;
   margin-right: 2vw;
   right: 2vw;
-  background-color: rgb(1, 116, 116);
-  box-shadow: 0 0 20px rgba(1, 89, 116, 0.7);
+  background-color: var(--blue);
+  box-shadow: 0 0 20px var(--blue-t);
   border-radius: 1rem;
-  border: 2px solid rgba(1, 89, 116, 0.7);
+  border: 2px solid var(--blue-t);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,7 +93,7 @@
 
 .toggle-button,
 .info-toggle-button {
-  color: white;
+  color: var(--white);
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -148,13 +148,13 @@
 }
 
 span.info-card {
-  color: rgb(0, 0, 0);
+  color: var(--black);
   font-size: medium;
   text-align: left;
 }
 
 p {
-  color: rgb(20, 20, 18);
+  color: var(--black);
   font-size: medium;
   text-align: justify;
 }
