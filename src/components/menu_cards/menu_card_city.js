@@ -61,7 +61,7 @@ export default function MenuCardCity() {
         <div className="card-side-div margin-top">
           <label className="modern-label">City Level:</label>
           <select
-            className="modern-dropdown"
+            className="modern-dropdown small-long"
             value={cityLevel}
             onChange={e => handleLevelChange(Number(e.target.value))}
           >

@@ -22,12 +22,7 @@
   height: 2.35rem;
 }
 
-.close-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
+.close-button,
 .collapse-button {
   background-color: transparent;
   border: none;
@@ -59,51 +54,19 @@
   margin-top: 0.6rem;
 }
 
-.modern-button {
-  width: 100%;
-  max-width: 8rem;
-}
-
-.modern-button.small {
-  max-width: 6.6rem;
-}
-
 .levels-div {
-  width: 100%;
-  max-width: 11rem;
+  width: 55%;
+  max-width: 55%;
   display: flex;
   justify-content: space-around;
 }
 
-.levels-button {
-  width: 100%;
-  max-width: 3.1rem;
-}
-
-.levels-button.large {
-  width: 100%;
-  max-width: 3.4rem;
-}
-
 .modern-dropdown {
-  width: 100%;
-  max-width: 10rem;
   padding-left: 4.5px;
-}
-
-.modern-dropdown,
-.modern-button,
-.levels-button {
-  height: 1.95rem;
-  font-size: medium;
 }
 
 .padding-left {
   padding-left: 0.5em;
-}
-
-.modern-dropdown.small {
-  width: 4rem;
 }
 
 .level-frame {
@@ -144,21 +107,5 @@ tr {
     top: 3.9rem;
     margin-left: 2%;
     width: 92%;
-  }
-
-  .levels-div {
-    width: 55%;
-  }
-
-  .levels-button.large {
-    max-width: 3.9rem;
-  }
-
-  .modern-dropdown {
-    max-width: 9.8rem;
-  }
-
-  .modern-button {
-    max-width: 8rem;
   }
 }

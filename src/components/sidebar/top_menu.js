@@ -88,7 +88,7 @@ export default function TopMenu() {
 
     const exportButton =
         <button
-            className="modern-dropdown small"
+            className="modern-dropdown small-middle"
             onClick={handleDownloadClick}
             title="Export save file"
         >
@@ -105,7 +105,7 @@ export default function TopMenu() {
                 onChange={handleFileUpload}
             />
             <button
-                className="modern-dropdown small"
+                className="modern-dropdown small-middle"
                 onClick={handleUploadClick}
                 title="Import save file"
             >
@@ -113,9 +113,11 @@ export default function TopMenu() {
             </button>
         </>;
 
+    const buttonDimension = isMobile() ? "small-middle" : "small-long";
+
     const shopButton =
         <button
-            className={`modern-dropdown small ${currentTab === 1 ? "opacity-50" : ""}`}
+            className={`modern-dropdown ${buttonDimension} ${currentTab === 1 ? "opacity-50" : ""}`}
             onClick={handleShopClick}
             title="Shop generator"
             disabled={currentTab === 1}
@@ -125,7 +127,7 @@ export default function TopMenu() {
 
     const spellbookButton =
         <button
-            className={`modern-dropdown small ${currentTab === 2 ? "opacity-50" : ""}`}
+            className={`modern-dropdown ${buttonDimension} ${currentTab === 2 ? "opacity-50" : ""}`}
             onClick={handleSpellbookClick}
             title="Spellbook"
             disabled={currentTab === 2}
@@ -187,7 +189,7 @@ export default function TopMenu() {
     const mobileMenuButton =
         <>
             <button
-                className="mobile-menu-button modern-dropdown small"
+                className="mobile-menu-button modern-dropdown small-middle"
                 onClick={handleToggleMobileMenu}
                 title="Open menu"
                 ref={menuButtonRef}

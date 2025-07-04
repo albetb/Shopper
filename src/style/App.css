@@ -51,31 +51,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue) var(--dark-grey);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.saving-button,
-.item-number-button,
-.add-item-button,
-.modern-input,
-.modern-dropdown,
-.modern-button,
-.levels-button {
-  background-color: var(--white);
-  color: var(--dark-grey);
-  border: 1px solid var(--white2);
-  border-radius: 0.58rem;
-  cursor: pointer;
-  box-shadow: 3px 3px 2px 0px var(--blue-t2),
-    inset -3px -3px 5px 0px var(--white-t);
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 
 /* Webkit (Chrome, Safari, newer versions of Opera) */
@@ -99,12 +82,6 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background: var(--blue-t);
-}
-
-/* Firefox */
-body {
-  scrollbar-width: thin;
-  scrollbar-color: var(--blue) var(--dark-grey);
 }
 
 @media (prefers-reduced-motion: no-preference) {

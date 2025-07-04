@@ -11,7 +11,7 @@ export const onNewCity = (nameRaw) => (dispatch, getState) => {
   const name = cap(nameRaw);
   const { world } = state.world;
 
-  if (!world || world.Cities.some(c => c.Name === name)) return;
+  if (!world || world.Cities.some(c => c.Name === name) || name.trim().length === 0) return;
 
   const c = new City(name, world.Level);
   db.setCity(c);

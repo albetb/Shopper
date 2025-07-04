@@ -51,7 +51,7 @@ const SelectComponent = ({ props }) => {
       {!isSavedEmpty && (
         <>
           <select
-            className='modern-dropdown'
+            className='modern-dropdown small-long'
             onChange={handleDropdownChange}
             onClick={handleDropdownClick}
             value={props.saved?.[0] || ''}
@@ -66,7 +66,7 @@ const SelectComponent = ({ props }) => {
       )}
 
       {!confirmDelete && (
-        <button title="New" className={isSavedEmpty ? 'modern-button' : 'levels-button large'} onClick={handleNewClick}>
+        <button title="New" className={isSavedEmpty ? 'modern-button small-long' : 'levels-button small-middle'} onClick={handleNewClick}>
           <span className="material-symbols-outlined">
             new_window
           </span>
@@ -77,19 +77,19 @@ const SelectComponent = ({ props }) => {
         <>
           {confirmDelete ? (
             <>
-              <button title="Confirm" className='levels-button large' onClick={handleDelete}>
+              <button title="Confirm" className='levels-button small' onClick={handleDelete}>
                 <span className="material-symbols-outlined">
                   delete
                 </span>
               </button>
-              <button title="Back" className='levels-button large' onClick={handleCancelClick}>
+              <button title="Back" className='levels-button small-middle' onClick={handleCancelClick}>
                 <span className="material-symbols-outlined">
                   close
                 </span>
               </button>
             </>
           ) : (
-            <button title="Delete" className='levels-button large' onClick={handleConfirmClick}>
+            <button title="Delete" className='levels-button small' onClick={handleConfirmClick}>
               <span className="material-symbols-outlined">
                 delete
               </span>

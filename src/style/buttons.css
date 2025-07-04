@@ -1,0 +1,99 @@
+:root {
+  --btn-height-sm: 2rem;
+  --btn-height-md: 2.4rem;
+  --btn-height-lg: 3.1rem;
+
+  --btn-width-sm: 2.7vw;
+  --btn-width-md: 3.883rem;
+  --btn-width-lg: 5.015rem;
+}
+
+.saving-button,
+.item-number-button,
+.add-item-button,
+.modern-button,
+.levels-button,
+.modern-input,
+.modern-dropdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 3px 3px 2px 0px var(--blue-t2),
+    inset -3px -3px 5px 0px var(--white-t);
+  user-select: none;
+  font-size: 1rem;
+  background-color: var(--white);
+  color: var(--dark-grey);
+  border: 1px solid var(--white2);
+  border-radius: 0.58rem;
+
+  height: var(--btn-height-md);
+  width: var(--btn-width-md);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Size modifiers */
+.small {
+  height: var(--btn-height-sm) !important;
+  width: var(--btn-width-sm) !important;
+}
+
+.small-short {
+  height: var(--btn-height-sm) !important;
+  width: calc(var(--btn-width-sm) / 2) !important;
+}
+
+.small-middle {
+  height: var(--btn-height-sm) !important;
+  width: calc(var(--btn-width-sm) * 1.7) !important;
+}
+
+.small-long {
+  height: var(--btn-height-sm) !important;
+  width: calc(var(--btn-width-sm) * 3.2) !important;
+}
+
+.small-longer {
+  height: var(--btn-height-sm) !important;
+  width: calc(var(--btn-width-sm) * 4) !important;
+}
+
+.medium {
+  height: var(--btn-height-md) !important;
+  width: var(--btn-width-md) !important;
+}
+
+.medium-short {
+  height: var(--btn-height-md) !important;
+  width: var(--btn-width-sm) !important;
+}
+
+.medium-long {
+  height: var(--btn-height-md) !important;
+  width: calc(var(--btn-width-md) * 2.5) !important;
+}
+
+.large {
+  height: var(--btn-height-lg) !important;
+  width: var(--btn-width-lg) !important;
+}
+
+.full {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --btn-width-sm: 13vw;
+  }
+
+  .small-long {
+    height: var(--btn-height-sm) !important;
+    width: calc(var(--btn-width-sm) * 3.3) !important;
+  }
+}

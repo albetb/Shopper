@@ -103,7 +103,7 @@ export default function MenuCardWorld() {
                   max={23}
                   onChange={e => setHours(e.target.value)}
                   onBlur={() => handleBlur(hours, setHours, 23)}
-                  className="modern-dropdown small padding-left"
+                  className="modern-dropdown small-middle padding-left"
                   disabled={!isShopGenerated}
                 />
                 <input
@@ -114,12 +114,12 @@ export default function MenuCardWorld() {
                   max={7}
                   onChange={e => setDays(e.target.value)}
                   onBlur={() => handleBlur(days, setDays, 7)}
-                  className="modern-dropdown small padding-left"
+                  className="modern-dropdown small-middle padding-left"
                   disabled={!isShopGenerated}
                 />
                 <button
                   onClick={handleWait}
-                  className={`modern-dropdown small ${isTransitioning ? 'transition' : ''}`}
+                  className={`modern-dropdown small-middle ${isTransitioning ? 'transition' : ''}`}
                   disabled={!isShopGenerated}
                 >
                   {buttonIcon}

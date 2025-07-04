@@ -8,7 +8,7 @@ import { setSelectedWorld, setWorld, setWorlds } from '../slices/worldSlice';
 export const onNewWorld = (nameRaw) => (dispatch, getState) => {
   const name = cap(nameRaw);
   const { worlds } = getState().world;
-  if (!name || worlds.some(w => w.Name === name)) return;
+  if (!name || worlds.some(w => w.Name === name) || name.trim().length === 0) return;
 
   const w = new World(name);
   db.setWorld(w);

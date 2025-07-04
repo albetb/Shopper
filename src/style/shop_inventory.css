@@ -88,44 +88,24 @@ h4 {
 
 .item-number-button,
 .add-item-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   transition-duration: 0.3s;
   font-weight: bold;
-  height: 3.1em;
-  width: 5em;
-  font-size: medium;
-}
-
-.item-number-button {
-  height: 1.95rem;
-}
-
-.item-number-button.small {
-  height: 2em;
-  width: 3em;
 }
 
 .add-item-height {
-  height: 3.1em;
+  min-height: var(--btn-height-sm);
+  height: var(--btn-height-sm);
+  max-height: var(--btn-height-sm);
 }
 
 .add-item-button {
-  width: 10em;
   margin: 1.2rem 0;
-  font-size: medium;
-  min-height: 2.3rem;
+  min-height: var(--btn-height-sm);
+  height: var(--btn-height-sm);
 }
 
 .modern-input {
-  height: 2.25em;
-  font-size: medium;
   padding-left: 0.4em;
-}
-
-select.modern-input {
-  height: 2.5em;
 }
 
 .header-container {
@@ -219,16 +199,6 @@ select.modern-input {
   box-shadow: 0 2px 10px var(--black-t);
 }
 
-.item-number-button.small {
-  height: 1.9rem;
-  width: 3.8rem;
-}
-
-.item-number-button.medium {
-  height: 2rem;
-  width: 4rem;
-}
-
 .small-scrollbar {
   height: 1.45rem;
   width: 6rem;
@@ -305,41 +275,11 @@ select.modern-input {
     width: 3.3rem;
   }
 
-  tr {
-    font-size: medium;
-  }
-
-  h2 {
-    font-size: medium;
-  }
-
-  .add-item-button {
-    width: 9em;
-    font-size: medium;
-  }
-
-  .item-number-button {
-    width: 3.2em;
-  }
-
-  .add-item-height {
-    height: 2.5em;
-  }
-
-  p {
-    font-size: medium;
-  }
-
   .header-container {
     width: 62vw;
   }
 
   .suggestions {
     max-height: 18rem;
-  }
-
-  .item-number-button.small {
-    height: 2.4em;
-    width: 4.3em;
   }
 }

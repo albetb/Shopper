@@ -10,7 +10,7 @@ export const onNewShop = (nameRaw) => (dispatch, getState) => {
   const { city } = getState().city;
   const { world } = getState().world;
 
-  if (!city || city.Shops.some(s => s.Name === name)) return;
+  if (!city || city.Shops.some(s => s.Name === name) || name.trim().length === 0) return;
 
   const s = new Shop(name, city.Level, world.Level);
   db.setShop(s);

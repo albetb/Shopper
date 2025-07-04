@@ -31,7 +31,7 @@ const CreateComponent = ({ props }) => {
 
       <input
         ref={inputRef}
-        className='modern-dropdown padding-left'
+        className='modern-dropdown small-longer padding-left'
         type='text'
         placeholder={placeholder()}
         value={name}
@@ -39,7 +39,7 @@ const CreateComponent = ({ props }) => {
         onKeyDown={handleKeyDown}
       />
 
-      <button className='modern-button small' onClick={handleOkClick}>
+      <button className='modern-button small-middle' onClick={handleOkClick}>
         <span className='material-symbols-outlined'>
           check
         </span>

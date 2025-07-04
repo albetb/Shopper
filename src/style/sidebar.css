@@ -96,7 +96,8 @@
   color: var(--white);
   cursor: pointer;
   background-color: transparent;
-  border: none;
+  border: transparent;
+  box-shadow: none;
   width: 3rem;
   height: 3rem;
   position: absolute;
@@ -113,19 +114,7 @@
 }
 
 .saving-button {
-  height: 2.5rem;
-  width: 100%;
-  max-width: 5.6rem;
   margin-top: 0.51rem;
-}
-
-.toggle-button,
-.info-toggle-button,
-.saving-button {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 
 .delete-info-button {

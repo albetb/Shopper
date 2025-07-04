@@ -140,7 +140,7 @@ export default function ShopInventory() {
                 <td style={{ color: "#d5d5d5", fontSize: "0.73em" }}>{formatNumber(item.Cost)}</td>
                 <td>
                   <button
-                    className="item-number-button"
+                    className="item-number-button small"
                     onClick={e => handleDeleteItemClick(e, item.Name, item.ItemType, item.Number)}
                     onMouseDown={e => longPressEvent.onMouseDown(e, [item.Name, item.ItemType, item.Number])}
                     onTouchStart={e => longPressEvent.onTouchStart(e, [item.Name, item.ItemType, item.Number])}
@@ -163,7 +163,7 @@ export default function ShopInventory() {
       {showAddItemForm ? (
         <AddItemForm onAddItem={handleAddItem} items={items} setShowAddItemForm={setShowAddItemForm} />
       ) : (
-        <button className="add-item-button" onClick={() => setShowAddItemForm(true)}>Add Item</button>
+        <button className="add-item-button medium-long" onClick={() => setShowAddItemForm(true)}>Add Item</button>
       )}
 
       {popup.visible && (

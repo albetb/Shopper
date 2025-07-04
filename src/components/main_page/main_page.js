@@ -21,13 +21,13 @@ export default function MainPage() {
       <p style={{ color: "#f9f9f9", width: "90%", textAlign: "center" }}>A collection of tools for Dungeons and Dragons 3.5</p>
 
       <div className="card" style={{ width: ww, padding: pp, paddingLeft: plr, paddingRight: plr, cursor: "pointer" }} onClick={handleShopClick}>
-        <p style={{ textShadow: "1px 1px #0d0d0d1a" }}>Shop generator</p>
+        <p style={{ textShadow: "1px 1px #0d0d0d1a" }}><b>Shop generator</b></p>
         <span className="material-symbols-outlined" style={{ color: "#0d0d0d" }}>shopping_cart</span>
         <p style={{ textAlign: "center" }}>Generates randomized shops whose inventory dynamically scales to the player’s level.</p>
       </div>
 
       <div className="card" style={{ width: ww, padding: pp, paddingLeft: plr, paddingRight: plr, cursor: "pointer" }} onClick={handleSpellbookClick}>
-        <p style={{ textShadow: "1px 1px #0d0d0d1a" }}>Spellbook</p>
+        <p style={{ textShadow: "1px 1px #0d0d0d1a" }}><b>Spellbook</b></p>
         <span className="material-symbols-outlined" style={{ color: "#0d0d0d" }}>menu_book</span>
         <p style={{ textAlign: "center" }}>A spellbook that lets players organize and track their learned spells.</p>
       </div>

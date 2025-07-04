@@ -21,9 +21,10 @@ import {
 } from './store/slices/worldSlice';
 import InfoSidebar from './components/sidebar/info_sidebar';
 import TopMenu from './components/sidebar/top_menu';
-import './style/App.css';
 import MainPage from './components/main_page/main_page';
 import Spellbook from './components/spellbook/spellbook';
+import './style/App.css';
+import './style/buttons.css';
 
 export default function App() {
   const dispatch = useDispatch();

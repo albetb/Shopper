@@ -84,7 +84,7 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
 
   return (
     <tr className='add-item'>
-      <td className='number-size no-border-top'>
+      <td className='no-border-top'>
         <input
           type='number'
           min={0}
@@ -92,7 +92,8 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
           value={number}
           onChange={(e) => setNumber(e.target.value)}
           onBlur={handleNumberBlur}
-          className='number-size modern-input'
+          className='modern-input add-item-height'
+          style={{ width: "80%" }}
         />
       </td>
       <td className='name-size name-small no-border-top'>
@@ -103,7 +104,8 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
           onChange={(e) => setItemName(e.target.value)}
           onFocus={() => setIsFocused(true)}
           onBlur={handleNameBlur}
-          className='name-size modern-input'
+          className='name-size modern-input add-item-height'
+          style={{ width: "98%" }}
         />
         {shouldShowSuggestions && (
           <ul className='suggestions'>
@@ -123,7 +125,8 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
         <select
           value={itemType}
           onChange={(e) => setItemType(e.target.value)}
-          className='type-size modern-input'
+          className='type-size modern-input add-item-height'
+          style={{ width: "104%", height: "2.26rem", maxHeight: "2.26rem" }}
         >
           {itemTypes.map((type, index) => (
             <option key={index} value={type}>
@@ -140,11 +143,11 @@ const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {
           max={MAX_COST}
           onChange={(e) => setCost(e.target.value)}
           onBlur={handleCostBlur}
-          className='cost-size modern-input'
+          className='cost-size modern-input add-item-height'
         />
       </td>
       <td className='action-size no-border-top'>
-        <button className='item-number-button add-item-height' onClick={handleAddItemClick}>
+        <button className='item-number-button medium-short' style={{ height: "2.26rem !important", maxHeight: "2.26rem !important" }} onClick={handleAddItemClick}>
           <span className='material-symbols-outlined'>
             add_shopping_cart
           </span>
