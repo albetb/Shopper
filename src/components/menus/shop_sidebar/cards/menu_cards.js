@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import * as db from '../../lib/storage';
-import { isMobile, trimLine } from '../../lib/utils';
+import * as db from '../../../../lib/storage';
+import { isMobile, trimLine } from '../../../../lib/utils';
 import MenuCardCity from './menu_card_city';
 import MenuCardShop from './menu_card_shop';
 import MenuCardWorld from './menu_card_world';
-import '../../style/menu_cards.css';
+import '../../../../style/menu_cards.css';
 
-export default function MenuCards() {
+export default function ShopMenuCards() {
   const [cardStates, setCardStates] = useState([
     { id: 1, collapsed: false },
     { id: 2, collapsed: false },

@@ -84,6 +84,12 @@ body::-webkit-scrollbar-thumb:hover {
   background: var(--blue-t);
 }
 
+table {
+  border-collapse: collapse;
+  box-shadow: 0 0 20px var(--black-t);
+  border-radius: 0.9em;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .app-logo {
     animation: app-logo-spin infinite 2s linear;

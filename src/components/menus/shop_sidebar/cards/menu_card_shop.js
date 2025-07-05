@@ -1,20 +1,20 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { isMobile, order, shopTypes } from '../../lib/utils';
+import { isMobile, order, shopTypes } from '../../../../lib/utils';
 import {
   onCreateShop,
   updateShop
-} from '../../store/slices/shopSlice';
+} from '../../../../store/slices/shopSlice';
 import {
   onDeleteShop,
   onNewShop,
   onSelectShop
-} from '../../store/thunks/shopThunks';
-import CreateComponent from '../common/create_component';
-import LevelComponent from '../common/level_component';
-import SelectComponent from '../common/select_component';
-import '../../style/menu_cards.css';
-import { toggleSidebar } from '../../store/slices/appSlice';
+} from '../../../../store/thunks/shopThunks';
+import CreateComponent from '../../../common/create_component';
+import LevelComponent from '../../../common/level_component';
+import SelectComponent from '../../../common/select_component';
+import '../../../../style/menu_cards.css';
+import { toggleSidebar } from '../../../../store/slices/appSlice';
 
 export default function MenuCardShop() {
   const dispatch = useDispatch();

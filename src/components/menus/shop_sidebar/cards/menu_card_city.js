@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { order } from '../../lib/utils';
+import { order } from '../../../../lib/utils';
 import {
   onCityLevelChange,
   onDeleteCity,
   onNewCity,
   onSelectCity
-} from '../../store/thunks/cityThunks';
-import CreateComponent from '../common/create_component';
-import SelectComponent from '../common/select_component';
-import '../../style/menu_cards.css';
+} from '../../../../store/thunks/cityThunks';
+import CreateComponent from '../../../common/create_component';
+import SelectComponent from '../../../common/select_component';
+import '../../../../style/menu_cards.css';
 
 export default function MenuCardCity() {
   const dispatch = useDispatch();

@@ -37,13 +37,10 @@ export const appSlice = createSlice({
 
       cards = getItemByLink(links[0], bonus);
 
-      console.log(links[0]);
       links.slice(1).forEach(link => {
         const effect = getEffectByLink(link);
         
         if (effect)
-          console.log(effect);
-          console.log(cards[0]);
           cards[0].Description = cards[0].Description + "<p><b>" + effect.Name + "</b></p>" + effect.Description;
           cards[0].Name = composeNameWithEffect(cards[0].Name, effect.Name);
       });

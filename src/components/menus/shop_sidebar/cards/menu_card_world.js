@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { order } from '../../lib/utils';
+import { order } from '../../../../lib/utils';
 import {
   onDeleteWorld,
   onNewWorld,
   onPlayerLevelChange,
   onSelectWorld,
   onWaitTime
-} from '../../store/thunks/worldThunks';
-import CreateComponent from '../common/create_component';
-import LevelComponent from '../common/level_component';
-import SelectComponent from '../common/select_component';
+} from '../../../../store/thunks/worldThunks';
+import CreateComponent from '../../../common/create_component';
+import LevelComponent from '../../../common/level_component';
+import SelectComponent from '../../../common/select_component';
 
 export default function MenuCardWorld() {
   const dispatch = useDispatch();

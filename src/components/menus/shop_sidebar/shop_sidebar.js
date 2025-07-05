@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleSidebar } from '../../store/slices/appSlice';
-import MenuCards from '../menu_cards/menu_cards';
-import '../../style/sidebar.css';
+import { toggleSidebar } from '../../../store/slices/appSlice';
+import '../../../style/sidebar.css';
+import ShopMenuCards from './cards/menu_cards';
 
-export default function Sidebar() {
+export default function ShopSidebar() {
   const dispatch = useDispatch();
   const isCollapsed = useSelector(state => state.app.sidebarCollapsed);
 
@@ -19,7 +19,7 @@ export default function Sidebar() {
 
       {!isCollapsed && (
         <>
-          <MenuCards />
+          <ShopMenuCards />
         </>
       )}
     </div>

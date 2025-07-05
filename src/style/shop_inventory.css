@@ -1,8 +1,5 @@
-table {
+.shop-table {
   width: 50vw;
-  border-collapse: collapse;
-  box-shadow: 0 0 20px var(--black-t);
-  border-radius: 0.9em;
 }
 
 th,

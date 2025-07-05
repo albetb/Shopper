@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import InfoMenuCards from '../menu_cards/info_menu_cards';
-import { toggleInfoSidebar, clearInfoCards, removeCard } from '../../store/slices/appSlice';
-import '../../style/sidebar.css';
-import { isMobile } from '../../lib/utils';
+import { toggleInfoSidebar, clearInfoCards, removeCard } from '../../../store/slices/appSlice';
+import '../../../style/sidebar.css';
+import { isMobile } from '../../../lib/utils';
+import InfoMenuCards from './cards/info_menu_cards';
 
 export default function InfoSidebar() {
   const dispatch = useDispatch();

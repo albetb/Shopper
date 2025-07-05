@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import parse, { domToReact } from 'html-react-parser';
-import SpellLink from '../common/spell_link';
-import { trimLine } from '../../lib/utils';
-import '../../style/menu_cards.css';
+import SpellLink from '../../../common/spell_link';
+import { trimLine } from '../../../../lib/utils';
+import '../../../../style/menu_cards.css';
 
 export default function InfoMenuCards({ cardsData, closeCard }) {
   const [cardStates, setCardStates] = useState(

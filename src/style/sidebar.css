@@ -32,6 +32,7 @@
   height: var(--menu-height);
   background-color: var(--blue);
   align-items: center;
+  justify-content: space-between;
   padding: 0 0.4rem;
 }
 
@@ -146,6 +147,29 @@ p {
   color: var(--black);
   font-size: medium;
   text-align: justify;
+}
+
+/* table inside item descriptions */
+.description-content {
+  overflow-x: auto;
+  overflow-y: auto;
+  font-size: small;
+}
+
+.description-content table {
+  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: small;
+}
+
+.description-content th,
+.description-content td {
+  padding: 0.25rem 0.5rem;
+  text-align: left;
+  font-size: small;
 }
 
 @media (max-width: 768px) {

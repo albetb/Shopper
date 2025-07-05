@@ -96,7 +96,7 @@ export default function ShopInventory() {
         </div>
       </div>
 
-      <table>
+      <table className="shop-table">
         <thead>
           <tr>
             <th className="number-size" style={{ color: "#d5d5d5", fontSize: "0.73em" }}>#</th>
