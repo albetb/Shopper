@@ -10,14 +10,22 @@ export const onNewShop = (nameRaw) => (dispatch, getState) => {
   const { city } = getState().city;
   const { world } = getState().world;
 
-  if (!city || city.Shops.some(s => s.Name === name) || name.trim().length === 0) return;
+  if (!city || name.trim().length === 0) return;
+  if (city.Shops.some(w => w.Name === name)) { // If name already present select that item
+    const found = city.Shops.find(w => w.Name === name)
+    const c = new City().load(city);
+    c.selectShop(found.Id);
+
+    const s = db.getShop(found.Id);
+    dispatch(setShop(s));
+    dispatch(setCity(c));
+    return;
+  };
 
   const s = new Shop(name, city.Level, world.Level);
-  db.setShop(s);
 
   const c = new City().load(city);
   c.addShop(s.Id, s.Name);
-  db.setCity(c);
 
   dispatch(setCity(c));
   dispatch(setShop(s));
@@ -32,7 +40,6 @@ export const onSelectShop = (name) => (dispatch, getState) => {
 
   const c = new City().load(city);
   c.selectShop(shopMeta.Id);
-  db.setCity(c);
 
   dispatch(setCity(c));
   dispatch(setShop(db.getShop(shopMeta.Id)));
@@ -50,7 +57,6 @@ export const onDeleteShop = () => (dispatch, getState) => {
   const nextMeta = c.Shops.find(s => s.Id !== shop.Id);
   c.selectShop(nextMeta?.Id);
   c.deleteShop(shop.Id);
-  db.setCity(c);
 
   dispatch(setCity(c));
   dispatch(setShop(nextMeta ? db.getShop(nextMeta.Id) : null));

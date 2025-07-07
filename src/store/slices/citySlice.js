@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { serialize } from '../../lib/utils';
+import * as db from '../../lib/storage';
 
 const initialState = {
-  city: null,  // full serialized city
+  city: null,
 };
 
 export const citySlice = createSlice({
@@ -11,6 +12,7 @@ export const citySlice = createSlice({
   reducers: {
     setCity: {
       reducer(state, action) {
+        db.setCity(action.payload);
         state.city = action.payload;
       },
       prepare(cityInstance) {

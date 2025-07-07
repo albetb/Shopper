@@ -87,7 +87,6 @@ function itemChoice(name, val = {}) {
 
         return removeUnusedAttributes(chosenItem);
     } catch (error) {
-        console.error(error);
         return null;
     }
 }

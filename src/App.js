@@ -21,10 +21,12 @@ import {
 } from './store/slices/worldSlice';
 import TopMenu from './components/menus/top_menu';
 import MainPage from './components/main_page/main_page';
-import Spellbook from './components/spellbook/spellbook';
+import InfoSidebar from './components/menus/info_sidebar/info_sidebar';
+import SpellbookSidebar from './components/menus/spellbook_sidebar/spellbook_sidebar';
+import { setIsEditingSpellbook, setIsSpellTableCollapsed, setSelectedSpellbook, setSpellbook, setSpellbooks } from './store/slices/spellbookSlice';
+import SpellbookTable from './components/spellbook/spellbook_table';
 import './style/App.css';
 import './style/buttons.css';
-import InfoSidebar from './components/menus/info_sidebar/info_sidebar';
 
 export default function App() {
   const dispatch = useDispatch();
@@ -39,6 +41,11 @@ export default function App() {
     const c = db.getCity(w?.SelectedCity?.Id);
     const s = db.getShop(c?.SelectedShop?.Id);
     const ct = db.getCurrentTab();
+    const sbs = db.getSpellbooks();
+    const ssb = db.getSelectedSpellbook();
+    const sb = db.getSpellbook(ssb?.Id);
+    const ie = db.getIsEditingSpellbook();
+    const stc = db.getIsSpellTableCollapsed();
 
     // Populate Redux
     dispatch(setWorlds(worldsDb));
@@ -47,6 +54,11 @@ export default function App() {
     dispatch(setCity(c));
     dispatch(setShop(s));
     dispatch(setStateCurrentTab(ct));
+    dispatch(setSpellbooks(sbs));
+    dispatch(setSelectedSpellbook(ssb));
+    dispatch(setSpellbook(sb));
+    dispatch(setIsEditingSpellbook(ie));
+    dispatch(setIsSpellTableCollapsed(stc));
 
     // Compute shopGenerated flag
     const generated = w?.Cities?.some(ci =>
@@ -74,8 +86,10 @@ export default function App() {
   </>;
 
   const spellbook = <>
+    <SpellbookSidebar />
+    <InfoSidebar />
     <header className="app-header">
-      <Spellbook />
+      <SpellbookTable />
     </header>
   </>;
 

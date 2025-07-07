@@ -2,8 +2,9 @@ import { compressToUTF16, decompressFromUTF16 } from 'lz-string';
 import World from './world';
 import City from './city';
 import Shop from './shop';
+import Spellbook from './spellbook';
 
-const CURRENT_STORAGE_VERSION = 250702; // last modified date as yymmdd
+const CURRENT_STORAGE_VERSION = 250705; // last modified date as yymmdd
 
 //#region get
 
@@ -52,6 +53,45 @@ export function getCurrentTab() {
     return value ? JSON.parse(decompressFromUTF16(value)) : 0;
 }
 
+//#region Spellbook
+
+export function getSpellbooks() {
+    const value = localStorage.getItem('Spellbooks');
+    return value ? JSON.parse(decompressFromUTF16(value)) : [];
+}
+
+export function getSpellbook(id) {
+    const value = localStorage.getItem(`Spellbook/${id}`);
+    return value ? new Spellbook().load(JSON.parse(decompressFromUTF16(value))) : new Spellbook();
+}
+
+export function getSelectedSpellbook() {
+    const value = localStorage.getItem('SelectedSpellbook');
+    return value ? JSON.parse(decompressFromUTF16(value)) : { Id: null, Name: null };
+}
+
+export function getIsPlayerCollapsed() {
+    const value = localStorage.getItem('IsPlayerCollapsed');
+    return value ? JSON.parse(decompressFromUTF16(value)) : false;
+}
+
+export function getIsSearchCollapsed() {
+    const value = localStorage.getItem('IsSearchCollapsed');
+    return value ? JSON.parse(decompressFromUTF16(value)) : false;
+}
+
+export function getIsSpellTableCollapsed() {
+    const value = localStorage.getItem('IsSpellTableCollapsed');
+    return value ? JSON.parse(decompressFromUTF16(value)) : [false, false, false, false, false, false, false, false, false, false];
+}
+
+export function getIsEditingSpellbook() {
+    const value = localStorage.getItem('IsEditingSpellbook');
+    return value ? JSON.parse(decompressFromUTF16(value)) : true;
+}
+
+//#endregion
+
 //#endregion
 
 //#region set
@@ -92,6 +132,38 @@ export function setCurrentTab(value) {
     localStorage.setItem('CurrentTab', compressToUTF16(JSON.stringify(value)));
 }
 
+//#region Spellbook
+
+export function setSpellbooks(value) {
+    localStorage.setItem('Spellbooks', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setSpellbook(value) {
+    localStorage.setItem(`Spellbook/${value?.Id}`, compressToUTF16(JSON.stringify(value)));
+}
+
+export function setSelectedSpellbook(value) {
+    localStorage.setItem('SelectedSpellbook', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setIsPlayerCollapsed(value) {
+    localStorage.setItem('IsPlayerCollapsed', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setIsSearchCollapsed(value) {
+    localStorage.setItem('IsSearchCollapsed', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setIsSpellTableCollapsed(value) {
+    localStorage.setItem('IsSpellTableCollapsed', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setIsEditingSpellbook(value) {
+    localStorage.setItem('IsEditingSpellbook', compressToUTF16(JSON.stringify(value)));
+}
+
+//#endregion
+
 //#endregion
 
 //#region delete
@@ -106,6 +178,10 @@ export function deleteCity(value) {
 
 export function deleteShop(value) {
     localStorage.removeItem(`Shop/${value}`);
+}
+
+export function deleteSpellbook(value) {
+    localStorage.removeItem(`Spellbook/${value}`);
 }
 
 export function validateDb() {

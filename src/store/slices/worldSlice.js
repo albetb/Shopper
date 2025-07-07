@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { serialize } from '../../lib/utils';
+import * as db from '../../lib/storage';
 
 const initialState = {
   worlds: [],            // array of { Id, Name }
   selectedWorld: null,   // { Id, Name }
-  world: null,           // full serialized world
+  world: null,
 };
 
 export const worldSlice = createSlice({
@@ -13,13 +14,16 @@ export const worldSlice = createSlice({
   reducers: {
 
     setWorlds(state, action) {
+      db.setWorlds(action.payload);
       state.worlds = action.payload;
     },
     setSelectedWorld(state, action) {
+      db.setSelectedWorld(action.payload);
       state.selectedWorld = action.payload;
     },
     setWorld: {
       reducer(state, action) {
+        db.setWorld(action.payload);
         state.world = action.payload;
       },
       prepare(worldInstance) {

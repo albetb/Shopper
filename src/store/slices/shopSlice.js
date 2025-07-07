@@ -4,7 +4,7 @@ import * as db from '../../lib/storage';
 import { serialize } from '../../lib/utils';
 
 const initialState = {
-  shop: null,            // full serialized shop
+  shop: null,
   shopGenerated: false,
 };
 
@@ -14,6 +14,7 @@ export const shopSlice = createSlice({
   reducers: {
     setShop: {
       reducer(state, action) {
+        db.setShop(action.payload);
         state.shop = action.payload;
       },
       prepare(shopInstance) {
@@ -42,7 +43,6 @@ export const shopSlice = createSlice({
       db.setShop(s);
       state.shop = serialize(s);
 
-      // recompute flag (example logic, adjust as needed)
       const w = db.getWorld(db.getSelectedWorld().Id);
       state.shopGenerated = w.Cities.some(c =>
         db.getCity(c.Id).Shops.some(s2 =>

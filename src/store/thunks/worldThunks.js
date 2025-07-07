@@ -8,15 +8,19 @@ import { setSelectedWorld, setWorld, setWorlds } from '../slices/worldSlice';
 export const onNewWorld = (nameRaw) => (dispatch, getState) => {
   const name = cap(nameRaw);
   const { worlds } = getState().world;
-  if (!name || worlds.some(w => w.Name === name) || name.trim().length === 0) return;
+  if (!name || name.trim().length === 0) return;
+  if (worlds.some(w => w.Name === name)) { // If name already present select that item
+    const found = worlds.find(w => w.Name === name)
+    const w = db.getWorld(found.Id);
+    dispatch(setWorld(w));
+    dispatch(setSelectedWorld(found));
+    return;
+  };
 
   const w = new World(name);
-  db.setWorld(w);
   const entry = { Id: w.Id, Name: w.Name };
 
   const newWorlds = [...worlds, entry];
-  db.setWorlds(newWorlds);
-  db.setSelectedWorld(entry);
 
   dispatch(setWorld(w));
   dispatch(setWorlds(newWorlds));
@@ -36,7 +40,6 @@ export const onSelectWorld = (name) => (dispatch, getState) => {
   const entry = worlds.find(w => w.Name === name);
   if (!entry) return;
 
-  db.setSelectedWorld(entry);
   dispatch(setSelectedWorld(entry));
 
   const w = db.getWorld(entry.Id);
@@ -44,7 +47,7 @@ export const onSelectWorld = (name) => (dispatch, getState) => {
 
   const cDb = db.getCity(w.SelectedCity.Id);
   dispatch(setCity(cDb));
-  
+
   const shop = cDb?.SelectedShop != null ? db.getShop(cDb.SelectedShop.Id) : null;
   dispatch(setShop(shop ? shop : null));
 
@@ -60,7 +63,6 @@ export const onPlayerLevelChange = (level) => (dispatch, getState) => {
 
   const w = new World().load(world);
   w.setPlayerLevel(level);
-  db.setWorld(w);
   dispatch(setWorld(w));
 
   const c = db.getCity(w.SelectedCity.Id);
@@ -85,9 +87,6 @@ export const onDeleteWorld = () => (dispatch, getState) => {
 
   const updatedWorlds = worlds.filter(w => w.Id !== old.Id);
   const next = updatedWorlds[0] || null;
-
-  db.setSelectedWorld(next);
-  db.setWorlds(updatedWorlds);
 
   dispatch(setWorlds(updatedWorlds));
   dispatch(setSelectedWorld(next));

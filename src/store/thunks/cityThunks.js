@@ -11,14 +11,22 @@ export const onNewCity = (nameRaw) => (dispatch, getState) => {
   const name = cap(nameRaw);
   const { world } = state.world;
 
-  if (!world || world.Cities.some(c => c.Name === name) || name.trim().length === 0) return;
+  if (!world  || name.trim().length === 0) return;
+  if (world.Cities.some(w => w.Name === name)) { // If name already present select that item
+    const found = world.Cities.find(w => w.Name === name)
+    const w = new World().load(world);
+    w.selectCity(found.Id);
+
+    const c = db.getCity(found.Id);
+    dispatch(setCity(c));
+    dispatch(setWorld(w));
+    return;
+  };
 
   const c = new City(name, world.Level);
-  db.setCity(c);
 
   const w = new World().load(world);
   w.addCity(c.Id, c.Name);
-  db.setWorld(w);
 
   dispatch(setWorld(w));
   dispatch(setCity(c));
@@ -34,7 +42,6 @@ export const onSelectCity = (name) => (dispatch, getState) => {
 
   const w = new World().load(world);
   w.selectCity(cityMeta.Id);
-  db.setWorld(w);
 
   const c = db.getCity(cityMeta.Id);
   const shop = db.getShop(c.SelectedShop.Id);
@@ -50,7 +57,6 @@ export const onCityLevelChange = (level) => (dispatch, getState) => {
 
   const c = new City().load(city);
   c.setCityLevel(level);
-  db.setCity(c);
 
   const shop = db.getShop(c.SelectedShop.Id);
   dispatch(setCity(c));
@@ -70,7 +76,6 @@ export const onDeleteCity = () => (dispatch, getState) => {
   const nextCityMeta = w.Cities.find(c => c.Id !== city.Id);
   w.selectCity(nextCityMeta?.Id);
   w.deleteCity(city.Id);
-  db.setWorld(w);
 
   dispatch(setWorld(w));
 

@@ -18,6 +18,10 @@
   position: relative;
 }
 
+.card-width-spellbook {
+  width: 52%;
+}
+
 .card.collapsed {
   height: 2.35rem;
 }
@@ -106,6 +110,10 @@ tr {
   .cards {
     top: 3.9rem;
     margin-left: 2%;
+    width: 92%;
+  }
+
+  .card-width-spellbook {
     width: 92%;
   }
 }

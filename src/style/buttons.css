@@ -19,8 +19,8 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 3px 3px 2px 0px var(--blue-t2),
-    inset -3px -3px 5px 0px var(--white-t);
+  box-shadow: 2px 2px 1.5px 0px var(--blue-t2),
+    inset -2px -2px 5px 0px var(--white-t);
   user-select: none;
   font-size: 1rem;
   background-color: var(--white);

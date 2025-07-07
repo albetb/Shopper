@@ -1,0 +1,53 @@
+import { createSlice } from '@reduxjs/toolkit';
+import { serialize } from '../../lib/utils';
+import * as db from '../../lib/storage';
+
+const initialState = {
+  spellbooks: [],
+  selectedSpellbook: null,
+  spellbook: null,
+  isEditingSpellbook: true,
+  isSpellTableCollapsed: [false, false, false, false, false, false, false, false, false, false]
+};
+
+export const spellbookSlice = createSlice({
+  name: 'spellbook',
+  initialState,
+  reducers: {
+    setSpellbooks(state, action) {
+      db.setSpellbooks(action.payload);
+      state.spellbooks = action.payload;
+    },
+    setSelectedSpellbook(state, action) {
+      db.setSelectedSpellbook(action.payload);
+      state.selectedSpellbook = action.payload;
+    },
+    setSpellbook: {
+      reducer(state, action) {
+        db.setSpellbook(action.payload);
+        state.spellbook = action.payload;
+      },
+      prepare(spellbookInstance) {
+        return { payload: serialize(spellbookInstance) };
+      }
+    },
+    setIsEditingSpellbook(state, action) {
+      db.setIsEditingSpellbook(action.payload);
+      state.isEditingSpellbook = action.payload;
+    },
+    setIsSpellTableCollapsed(state, action) {
+      db.setIsSpellTableCollapsed(action.payload);
+      state.isSpellTableCollapsed = action.payload;
+    }
+  }
+});
+
+export const {
+  setSpellbooks,
+  setSelectedSpellbook,
+  setSpellbook,
+  setIsEditingSpellbook,
+  setIsSpellTableCollapsed
+} = spellbookSlice.actions;
+
+export default spellbookSlice.reducer;

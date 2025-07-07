@@ -22,7 +22,7 @@ export const itemTypes = [
 
 export function loadFile(fileName) {
     try {
-        switch (fileName) {
+        switch (fileName.toLowerCase()) {
             case 'items':
                 return items;
             case 'scrolls':
