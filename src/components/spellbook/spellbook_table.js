@@ -16,6 +16,7 @@ export default function SpellbookTable() {
   const learned = inst.getLearnedSpells();
   const spells = isInEditing ? all_spells : learned;
   const spells_per_day = inst.getSpellsPerDay();
+  const char_bonus = inst.getCharBonus();
 
   const classKeyMap = {
     Sorcerer: 'Sor/Wiz',
