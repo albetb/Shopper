@@ -62,7 +62,7 @@ export default function SpellbookTable() {
         return (
           <div key={lvl} className={`card card-width-spellbook ${isCollapsed ? 'collapsed' : ''}`}>
             <div className="card-side-div card-expand-div">
-              <h3 className="card-title">Level {lvl} (Max {spells_per_day[lvl]})</h3>
+              <h3 className="card-title">Lv{lvl} ({spells_per_day[lvl]}/day) CD {10 + char_bonus + lvl}</h3>
               <button
                 className="collapse-button"
                 onClick={() => dispatch(onCollapseSpellTable(lvl))}
