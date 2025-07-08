@@ -7,6 +7,7 @@ const initialState = {
   selectedSpellbook: null,
   spellbook: null,
   isEditingSpellbook: true,
+  isSpellbookSidebarCollapsed: false,
   isSpellTableCollapsed: [false, false, false, false, false, false, false, false, false, false]
 };
 
@@ -38,6 +39,10 @@ export const spellbookSlice = createSlice({
     setIsSpellTableCollapsed(state, action) {
       db.setIsSpellTableCollapsed(action.payload);
       state.isSpellTableCollapsed = action.payload;
+    },
+    setIsSpellbookSidebarCollapsed(state, action) {
+      db.setIsSpellbookSidebarCollapsed(action.payload);
+      state.isSpellbookSidebarCollapsed = action.payload;
     }
   }
 });
@@ -47,7 +52,8 @@ export const {
   setSelectedSpellbook,
   setSpellbook,
   setIsEditingSpellbook,
-  setIsSpellTableCollapsed
+  setIsSpellTableCollapsed,
+  setIsSpellbookSidebarCollapsed
 } = spellbookSlice.actions;
 
 export default spellbookSlice.reducer;

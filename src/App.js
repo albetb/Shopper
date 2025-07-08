@@ -23,7 +23,14 @@ import TopMenu from './components/menus/top_menu';
 import MainPage from './components/main_page/main_page';
 import InfoSidebar from './components/menus/info_sidebar/info_sidebar';
 import SpellbookSidebar from './components/menus/spellbook_sidebar/spellbook_sidebar';
-import { setIsEditingSpellbook, setIsSpellTableCollapsed, setSelectedSpellbook, setSpellbook, setSpellbooks } from './store/slices/spellbookSlice';
+import {
+  setIsEditingSpellbook,
+  setIsSpellTableCollapsed,
+  setSelectedSpellbook,
+  setSpellbook,
+  setSpellbooks,
+  setIsSpellbookSidebarCollapsed
+} from './store/slices/spellbookSlice';
 import SpellbookTable from './components/spellbook/spellbook_table';
 import './style/App.css';
 import './style/buttons.css';
@@ -46,6 +53,7 @@ export default function App() {
     const sb = db.getSpellbook(ssb?.Id);
     const ie = db.getIsEditingSpellbook();
     const stc = db.getIsSpellTableCollapsed();
+    const ssc = db.getIsSpellbookSidebarCollapsed();
 
     // Populate Redux
     dispatch(setWorlds(worldsDb));
@@ -59,6 +67,7 @@ export default function App() {
     dispatch(setSpellbook(sb));
     dispatch(setIsEditingSpellbook(ie));
     dispatch(setIsSpellTableCollapsed(stc));
+    dispatch(setIsSpellbookSidebarCollapsed(ssc));
 
     // Compute shopGenerated flag
     const generated = w?.Cities?.some(ci =>

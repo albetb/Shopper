@@ -85,6 +85,11 @@ export function getIsSpellTableCollapsed() {
     return value ? JSON.parse(decompressFromUTF16(value)) : [false, false, false, false, false, false, false, false, false, false];
 }
 
+export function getIsSpellbookSidebarCollapsed() {
+    const value = localStorage.getItem('IsSpellbookSidebarCollapsed');
+    return value ? JSON.parse(decompressFromUTF16(value)) : false;
+}
+
 export function getIsEditingSpellbook() {
     const value = localStorage.getItem('IsEditingSpellbook');
     return value ? JSON.parse(decompressFromUTF16(value)) : true;
@@ -156,6 +161,10 @@ export function setIsSearchCollapsed(value) {
 
 export function setIsSpellTableCollapsed(value) {
     localStorage.setItem('IsSpellTableCollapsed', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setIsSpellbookSidebarCollapsed(value) {
+    localStorage.setItem('IsSpellbookSidebarCollapsed', compressToUTF16(JSON.stringify(value)));
 }
 
 export function setIsEditingSpellbook(value) {

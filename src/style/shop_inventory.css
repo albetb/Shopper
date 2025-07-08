@@ -225,6 +225,9 @@ h4 {
   text-decoration: underline;
   cursor: pointer;
   text-align: left;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .button-link:hover {
@@ -234,7 +237,8 @@ h4 {
 
 
 @media (max-width: 768px) {
-  table {
+  .shop-table,
+  .spellbook-table {
     width: 100%;
     max-width: 96vw;
   }
