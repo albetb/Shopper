@@ -75,45 +75,40 @@ export default function SpellbookTable() {
             {!isCollapsed && (
               <table className="spellbook-table">
                 <tbody>
-                  {byLevel[lvl].map((item, i) => {
-                    const bonus = item.Name.includes('+')
-                      ? parseInt(item.Name.split('+')[1], 10)
-                      : 0;
-                    return (
-                      <tr key={i}>
-                        <td style={{ width: 'var(--btn-width-sm)' }} className={i === 0 ? 'first' : ''}>
-                          <button className="item-number-button small">
-                            <span
-                              className="material-symbols-outlined"
-                              onClick={() =>
-                                dispatch(
-                                  addCardByLink({ links: item.Link, bonus })
-                                )
-                              }
-                            >
-                              bookmark_add
-                            </span>
-                          </button>
-                        </td>
-                        <td style={{ width: 'auto' }} className={i === 0 ? 'first' : ''}>
-                          <button
-                            className="button-link"
-                            style={{ color: 'var(--black)' }}
+                  {byLevel[lvl].map((item, i) =>
+                    <tr key={i}>
+                      <td style={{ width: 'var(--btn-width-sm)' }} className={i === 0 ? 'first' : ''}>
+                        <button className="item-number-button small">
+                          <span
+                            className="material-symbols-outlined"
                             onClick={() =>
                               dispatch(
-                                addCardByLink({ links: item.Link, bonus })
+                                addCardByLink({ links: item.Link, bonus: 0 })
                               )
                             }
                           >
-                            {item.Name}
-                          </button>
-                        </td>
-                        <td style={{ width: '30%', fontSize: 'small' }} className={i === 0 ? 'first' : ''}>
-                          {item.School.split(' ')[0]}
-                        </td>
-                      </tr>
-                    );
-                  })}
+                            bookmark_add
+                          </span>
+                        </button>
+                      </td>
+                      <td style={{ width: 'auto' }} className={i === 0 ? 'first' : ''}>
+                        <button
+                          className="button-link"
+                          style={{ color: 'var(--black)' }}
+                          onClick={() =>
+                            dispatch(
+                              addCardByLink({ links: item.Link, bonus: 0 })
+                            )
+                          }
+                        >
+                          {item.Name}
+                        </button>
+                      </td>
+                      <td style={{ width: '30%', fontSize: 'small' }} className={i === 0 ? 'first' : ''}>
+                        {item.School.split(' ')[0]}
+                      </td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
             )}

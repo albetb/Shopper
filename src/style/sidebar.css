@@ -192,6 +192,7 @@ p {
   .info-sidebar.collapsed {
     margin: 1rem;
     padding-left: 0;
+    z-index: 800;
   }
 
   .saving-button {

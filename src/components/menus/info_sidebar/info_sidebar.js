@@ -7,7 +7,11 @@ import InfoMenuCards from './cards/info_menu_cards';
 export default function InfoSidebar() {
   const dispatch = useDispatch();
   const isCollapsed = useSelector(state => state.app.infoSidebarCollapsed);
-  const otherBarIsCollapsed = useSelector(state => state.app.sidebarCollapsed);
+  const shopBarIsCollapsed = useSelector(state => state.app.sidebarCollapsed);
+  const spellBarIsCollapsed = useSelector(state => state.spellbook.isSpellbookSidebarCollapsed);
+  const currentTab = useSelector(state => state.app.currentTab);
+  const otherBarIsCollapsed = currentTab === 1 ? shopBarIsCollapsed
+    : currentTab === 2 ? spellBarIsCollapsed : false;
   const cardsData = useSelector(state => state.app.infoCards);
 
   const handleToggle = () => dispatch(toggleInfoSidebar());

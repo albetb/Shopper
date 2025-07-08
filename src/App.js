@@ -86,19 +86,17 @@ export default function App() {
     </header>
   </>;
 
-  const shopper = <>
-    <ShopSidebar />
-    <InfoSidebar />
+  const spellbook = <>
+    <SpellbookSidebar />
     <header className="app-header">
-      <ShopInventory />
+      <SpellbookTable />
     </header>
   </>;
 
-  const spellbook = <>
-    <SpellbookSidebar />
-    <InfoSidebar />
+  const shopper = <>
+    <ShopSidebar />
     <header className="app-header">
-      <SpellbookTable />
+      <ShopInventory />
     </header>
   </>;
 
@@ -113,6 +111,7 @@ export default function App() {
   return (
     <div className="app">
       <TopMenu />
+      {tabPages !== 0 && <InfoSidebar />}
       {currentTabContent}
     </div>
   );

@@ -4,7 +4,7 @@ import City from './city';
 import Shop from './shop';
 import Spellbook from './spellbook';
 
-const CURRENT_STORAGE_VERSION = 250705; // last modified date as yymmdd
+const CURRENT_STORAGE_VERSION = 250707; // last modified date as yymmdd
 
 //#region get
 
