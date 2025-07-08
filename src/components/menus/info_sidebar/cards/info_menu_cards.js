@@ -54,7 +54,7 @@ export default function InfoMenuCards({ cardsData, closeCard }) {
         return (
           <div key={idx} className={`card ${state.collapsed ? 'collapsed' : ''}`}>
             <div className="card-side-div card-expand-div">
-              <h3 className="card-title">{title}</h3>
+              <h3 className="card-title" onClick={() => toggleCard(idx)}>{title}</h3>
               <div className="card-actions">
                 <button className="close-button" onClick={() => closeCard(data)}>
                   <span className="material-symbols-outlined">close_small</span>

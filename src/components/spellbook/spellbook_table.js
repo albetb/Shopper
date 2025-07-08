@@ -62,11 +62,13 @@ export default function SpellbookTable() {
         const isCollapsed = isSpellTableCollapsed?.[lvl] ?? false;
         return (
           <div key={lvl} className={`card card-width-spellbook ${isCollapsed ? 'collapsed' : ''}`}>
-            <div className="card-side-div card-expand-div">
+            <div
+              className="card-side-div card-expand-div"
+              onClick={() => dispatch(onCollapseSpellTable(lvl))}
+            >
               <h3 className="card-title">Lv{lvl} ({spells_per_day[lvl]}/day) CD {10 + char_bonus + lvl}</h3>
               <button
                 className="collapse-button"
-                onClick={() => dispatch(onCollapseSpellTable(lvl))}
               >
                 <span className="material-symbols-outlined">
                   {isCollapsed ? 'expand_more' : 'expand_less'}

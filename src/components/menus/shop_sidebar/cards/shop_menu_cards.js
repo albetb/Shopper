@@ -73,9 +73,9 @@ export default function ShopMenuCards() {
         if (card.id === 3 && cities.length === 0) return null;
         return (
           <div key={card.id} className={`card ${state.collapsed ? 'collapsed' : ''}`}>
-            <div className="card-side-div card-expand-div">
+            <div className="card-side-div card-expand-div" onClick={() => toggleCard(card.id)}>
               <h3 className="card-title">{formatTitle(card)}</h3>
-              <button className="collapse-button" onClick={() => toggleCard(card.id)}>
+              <button className="collapse-button">
                 <span className="material-symbols-outlined">
                   {state.collapsed ? 'expand_more' : 'expand_less'}
                 </span>
