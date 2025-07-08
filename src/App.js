@@ -106,7 +106,8 @@ export default function App() {
     2: spellbook
   };
 
-  const currentTabContent = tabPages[currentTab] ?? mainPage;
+  const currentTabContent = tabPages[currentTab] ??
+    <header className="app-header"></header>;
 
   return (
     <div className="app">

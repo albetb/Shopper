@@ -6,7 +6,7 @@ const initialState = {
   sidebarCollapsed: false,
   infoSidebarCollapsed: false,
   infoCards: [],
-  currentTab: 0
+  currentTab: 100
 };
 
 export const appSlice = createSlice({
