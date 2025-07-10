@@ -86,7 +86,7 @@ export default function MenuCardPlayer() {
       {saved.length > 0 && (
         <>
           <div className="card-side-div margin-top">
-            <label className="modern-label">Class</label>
+            <label className="modern-label">Class:</label>
             <select
               className="modern-dropdown small-long"
               value={playerClass}

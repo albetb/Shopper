@@ -33,6 +33,11 @@
   cursor: pointer;
 }
 
+.close-button.no-margin-right {
+    padding-inline: 0px;
+    padding-left: 6px;
+}
+
 .card-title {
   margin: 0.7rem;
 }

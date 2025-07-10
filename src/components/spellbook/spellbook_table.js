@@ -64,10 +64,10 @@ export default function SpellbookTable() {
       </div>
 
       {searchSpellName && (
-        <div className="money-box">
+        <div className="filter-box">
           <div className="card-side-div card-expand-div" style={{ width: "100%" }}>
             <p style={{ color: "var(--white)" }}>Filter by name: <b>{searchSpellName}</b></p>
-            <button className="close-button" onClick={() => dispatch(setSearchSpellName(""))}>
+            <button className="close-button no-margin-right" onClick={() => dispatch(setSearchSpellName(""))}>
               <span style={{ color: "var(--white)" }} className="material-symbols-outlined">close_small</span>
             </button>
           </div>
@@ -75,10 +75,10 @@ export default function SpellbookTable() {
       )}
 
       {searchSpellSchool && (
-        <div className="money-box">
+        <div className="filter-box">
           <div className="card-side-div card-expand-div" style={{ width: "100%" }}>
             <p style={{ color: "var(--white)" }}>Filter by school: <b>{searchSpellSchool}</b></p>
-            <button className="close-button" onClick={() => dispatch(setSearchSpellSchool(""))}>
+            <button className="close-button no-margin-right" onClick={() => dispatch(setSearchSpellSchool(""))}>
               <span style={{ color: "var(--white)" }} className="material-symbols-outlined">close_small</span>
             </button>
           </div>
