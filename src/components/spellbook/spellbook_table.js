@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Spellbook from '../../lib/spellbook';
 import { isMobile, trimLine } from '../../lib/utils';
 import { addCardByLink } from '../../store/slices/appSlice';
-import { setIsClassDescriptionCollapsed } from '../../store/slices/spellbookSlice';
+import { setIsClassDescriptionCollapsed, setSearchSpellName, setSearchSpellSchool } from '../../store/slices/spellbookSlice';
 import { onCollapseSpellTable } from '../../store/thunks/spellbookThunks';
 import '../../style/shop_inventory.css';
 
@@ -62,6 +62,28 @@ export default function SpellbookTable() {
           Spellbook of {trimLine(spellbook.Name, isMobile() ? 20 : 30)}
         </h4>
       </div>
+
+      {searchSpellName && (
+        <div className="money-box">
+          <div className="card-side-div card-expand-div" style={{ width: "100%" }}>
+            <p style={{ color: "var(--white)" }}>Filter by name: <b>{searchSpellName}</b></p>
+            <button className="close-button" onClick={() => dispatch(setSearchSpellName(""))}>
+              <span style={{ color: "var(--white)" }} className="material-symbols-outlined">close_small</span>
+            </button>
+          </div>
+        </div>
+      )}
+
+      {searchSpellSchool && (
+        <div className="money-box">
+          <div className="card-side-div card-expand-div" style={{ width: "100%" }}>
+            <p style={{ color: "var(--white)" }}>Filter by school: <b>{searchSpellSchool}</b></p>
+            <button className="close-button" onClick={() => dispatch(setSearchSpellSchool(""))}>
+              <span style={{ color: "var(--white)" }} className="material-symbols-outlined">close_small</span>
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className={`card card-width-spellbook ${isClassDescriptionCollapsed ? 'collapsed' : ''}`}>
         <div
