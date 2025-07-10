@@ -1,7 +1,7 @@
 import Spellbook from '../../lib/spellbook';
-import { cap } from '../../lib/utils';
 import * as db from '../../lib/storage';
-import { setSpellbook, setSelectedSpellbook, setSpellbooks, setIsSpellTableCollapsed } from '../slices/spellbookSlice';
+import { cap } from '../../lib/utils';
+import { setIsSpellTableCollapsed, setSelectedSpellbook, setSpellbook, setSpellbooks } from '../slices/spellbookSlice';
 
 export const onNewSpellbook = nameRaw => (dispatch, getState) => {
   const name = cap(nameRaw);

@@ -142,7 +142,7 @@ class Spellbook {
         }[this.Class];
 
         const lvl = Math.min(Math.max(this.Level, 1), 20);
-        const base = _baseSpellsPerDay[lvl - 1];
+        let base = _baseSpellsPerDay[lvl - 1];
 
         const mod = this.getCharBonus();
 
@@ -151,6 +151,10 @@ class Spellbook {
         }
 
         let bonus = _bonusSpells[mod] || _bonusSpells[17];
+
+        if (this.Class === "Ranger" || this.Class === "Paladin")
+            base = [0].concat(base);
+
         bonus = bonus.map((v, i) => base[i] < 0 ? 0 : v);
 
         let spellNumberArray = base.map((v, i) => v < 0 ? 0 : v);

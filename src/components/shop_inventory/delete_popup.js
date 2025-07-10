@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import '../../style/shop_inventory.css';
 
 const DeletePopup = ({ itemName, itemType, itemNumber, onClose, onDelete, position }) => {

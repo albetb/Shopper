@@ -53,7 +53,7 @@ export default function SpellbookTable() {
     .map(Number)
     .sort((a, b) => a - b);
 
-  if (!levels.length) return null;
+  if (!spellbook.Class) return null;
 
   return (
     <>

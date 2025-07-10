@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getSpellByLink, getItemByLink, isMobile, getEffectByLink } from '../../lib/utils';
 import * as db from '../../lib/storage';
+import { getEffectByLink, getItemByLink, getSpellByLink, isMobile } from '../../lib/utils';
 
 const initialState = {
   sidebarCollapsed: false,
@@ -39,10 +39,11 @@ export const appSlice = createSlice({
 
       links.slice(1).forEach(link => {
         const effect = getEffectByLink(link);
-        
-        if (effect)
+
+        if (effect) {
           cards[0].Description = cards[0].Description + "<p><b>" + effect.Name + "</b></p>" + effect.Description;
           cards[0].Name = composeNameWithEffect(cards[0].Name, effect.Name);
+        }
       });
 
       if (cards.length) {
@@ -70,14 +71,14 @@ export const appSlice = createSlice({
 function composeNameWithEffect(name, effect) {
   const suffixMatch = name.match(/(,perfect|\+[1-5])$/);
   const suffix = suffixMatch ? suffixMatch[1] : '';
-  
+
   const base = suffixMatch
     ? name.slice(0, suffixMatch.index)
     : name;
-  
-  const trimmedBase   = base.trim();
+
+  const trimmedBase = base.trim();
   const trimmedEffect = effect.trim();
-  const joined        = trimmedBase
+  const joined = trimmedBase
     ? `${trimmedBase}, ${trimmedEffect}`
     : trimmedEffect;
   const space = suffix.includes("+") ? " " : "";

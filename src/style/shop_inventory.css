@@ -239,12 +239,13 @@ h4 {
   width: 95%;
 }
 
-.class-desc > p {
+.class-desc>p {
   font-size: small;
 }
 
 
 @media (max-width: 768px) {
+
   .shop-table,
   .spellbook-table {
     width: 100%;

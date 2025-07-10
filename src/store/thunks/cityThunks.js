@@ -11,7 +11,7 @@ export const onNewCity = (nameRaw) => (dispatch, getState) => {
   const name = cap(nameRaw);
   const { world } = state.world;
 
-  if (!world  || name.trim().length === 0) return;
+  if (!world || name.trim().length === 0) return;
   if (world.Cities.some(w => w.Name === name)) { // If name already present select that item
     const found = world.Cities.find(w => w.Name === name)
     const w = new World().load(world);

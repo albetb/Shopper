@@ -58,7 +58,7 @@ export default function SpellbookMenuCards() {
     <div className="cards">
       {cards.map(card => {
         const state = cardStates.find(s => s.id === card.id);
-        if (card.id === 2 && spellbooks.length === 0) return null;
+        if (card.id === 2 && !playerClass) return null;
         return (
           <div key={card.id} className={`card ${state.collapsed ? 'collapsed' : ''}`}>
             <div className="card-side-div card-expand-div" onClick={() => toggleCard(card.id)}>

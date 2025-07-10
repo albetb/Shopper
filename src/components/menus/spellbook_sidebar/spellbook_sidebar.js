@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsSpellbookSidebarCollapsed } from '../../../store/slices/spellbookSlice';
-import '../../../style/sidebar.css';
 import SpellbookMenuCards from './cards/spellbook_menu_cards';
+import '../../../style/sidebar.css';
 
 export default function SpellbookSidebar() {
   const dispatch = useDispatch();

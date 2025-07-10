@@ -1,7 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ShopInventory from './components/shop_inventory/shop_inventory';
+import MainPage from './components/main_page/main_page';
+import InfoSidebar from './components/menus/info_sidebar/info_sidebar';
 import ShopSidebar from './components/menus/shop_sidebar/shop_sidebar';
+import SpellbookSidebar from './components/menus/spellbook_sidebar/spellbook_sidebar';
+import TopMenu from './components/menus/top_menu';
+import ShopInventory from './components/shop_inventory/shop_inventory';
+import SpellbookTable from './components/spellbook/spellbook_table';
 import * as db from './lib/storage';
 import { serialize } from './lib/utils';
 import {
@@ -15,26 +20,21 @@ import {
   setShopGenerated
 } from './store/slices/shopSlice';
 import {
+  setIsClassDescriptionCollapsed,
+  setIsEditingSpellbook,
+  setIsSpellbookSidebarCollapsed,
+  setIsSpellTableCollapsed,
+  setSearchSpellName,
+  setSearchSpellSchool,
+  setSelectedSpellbook,
+  setSpellbook,
+  setSpellbooks
+} from './store/slices/spellbookSlice';
+import {
   setSelectedWorld,
   setWorld,
   setWorlds
 } from './store/slices/worldSlice';
-import TopMenu from './components/menus/top_menu';
-import MainPage from './components/main_page/main_page';
-import InfoSidebar from './components/menus/info_sidebar/info_sidebar';
-import SpellbookSidebar from './components/menus/spellbook_sidebar/spellbook_sidebar';
-import {
-  setIsEditingSpellbook,
-  setIsSpellTableCollapsed,
-  setSelectedSpellbook,
-  setSpellbook,
-  setSpellbooks,
-  setIsSpellbookSidebarCollapsed,
-  setIsClassDescriptionCollapsed,
-  setSearchSpellName,
-  setSearchSpellSchool
-} from './store/slices/spellbookSlice';
-import SpellbookTable from './components/spellbook/spellbook_table';
 import './style/App.css';
 import './style/buttons.css';
 

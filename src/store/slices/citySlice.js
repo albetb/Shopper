@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { serialize } from '../../lib/utils';
 import * as db from '../../lib/storage';
+import { serialize } from '../../lib/utils';
 
 const initialState = {
   city: null,
