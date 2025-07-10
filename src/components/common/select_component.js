@@ -47,7 +47,7 @@ const SelectComponent = ({ props }) => {
   const isSavedEmpty = !Array.isArray(props.saved) || props.saved.length === 0;
 
   return (
-    <div ref={selectRef} className='card-side-div'>
+    <div ref={selectRef} className='card-side-div' style={{justifyContent: `${isSavedEmpty ? "center" : ""}`}}>
       {!isSavedEmpty && (
         <>
           <select

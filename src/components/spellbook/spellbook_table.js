@@ -15,6 +15,8 @@ export default function SpellbookTable() {
   const searchSpellName = useSelector(s => s.spellbook.searchSpellName);
   const searchSpellSchool = useSelector(s => s.spellbook.searchSpellSchool);
 
+  if (!spellbook?.Class) return null;
+
   const inst = new Spellbook().load(spellbook);
   const all_spells = inst.getAllSpells({ name: searchSpellName, school: searchSpellSchool });
   const learned = inst.getLearnedSpells({ name: searchSpellName, school: searchSpellSchool });
@@ -52,8 +54,6 @@ export default function SpellbookTable() {
   const levels = Object.keys(byLevel)
     .map(Number)
     .sort((a, b) => a - b);
-
-  if (!spellbook.Class) return null;
 
   return (
     <>

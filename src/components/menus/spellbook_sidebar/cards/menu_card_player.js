@@ -23,7 +23,6 @@ export default function MenuCardPlayer() {
   // Redux state
   const spellbook = useSelector(state => state.spellbook.spellbook);
   const spellbooks = useSelector(state => state.spellbook.spellbooks);
-  const isInEditing = useSelector(state => state.spellbook.isEditingSpellbook);
 
   const selectedName = spellbook?.Name;
   const saved = order(spellbooks.map(w => w.Name), selectedName);
@@ -42,7 +41,6 @@ export default function MenuCardPlayer() {
   const handleLevelChange = lvl => dispatch(onPlayerLevelChange(lvl));
   const handleClassChange = cls => dispatch(onPlayerClassChange(cls));
   const handleCharChange = char => dispatch(onPlayerCharacteristicChange(char));
-  const handleEditingChange = val => dispatch(setIsEditingSpellbook(val));
 
   const classList = CLASSES;
 
