@@ -41,17 +41,19 @@
   margin-top: 0.3rem;
   margin-bottom: 0.65rem;
   width: 96%;
+  justify-items: center;
 }
 
 .card-side-div {
-  width: 100%;
+  width: 92%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card-expand-div {
   justify-content: space-between;
+  width: 99%;
 }
 
 .margin-top {
@@ -59,10 +61,10 @@
 }
 
 .levels-div {
-  width: 55%;
-  max-width: 55%;
+  width: calc(var(--btn-width-sm) * 3.2);
+  max-width: calc(var(--btn-width-sm) * 3.2);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .modern-dropdown {

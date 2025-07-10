@@ -104,7 +104,7 @@ export default function MenuCardShop() {
             </select>
           </div>
 
-          <div className="card-side-div margin-top">
+          <div className="card-side-div margin-top" style={{justifyContent: "center"}}>
             <button
               className="modern-button small-long"
               onClick={handleGenerate}

@@ -1,20 +1,19 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Spellbook, { CLASSES } from '../../../../lib/spellbook';
 import { order } from '../../../../lib/utils';
-import CreateComponent from '../../../common/create_component';
-import SelectComponent from '../../../common/select_component';
+import { setIsEditingSpellbook } from '../../../../store/slices/spellbookSlice';
 import {
-  onSelectSpellbook,
   onDeleteSpellbook,
   onNewSpellbook,
   onPlayerCharacteristicChange,
   onPlayerClassChange,
-  onPlayerLevelChange
+  onPlayerLevelChange,
+  onSelectSpellbook
 } from '../../../../store/thunks/spellbookThunks';
-import Spellbook from '../../../../lib/spellbook';
-import { CLASSES } from '../../../../lib/spellbook';
+import CreateComponent from '../../../common/create_component';
 import LevelComponent from '../../../common/level_component';
-import { setIsEditingSpellbook } from '../../../../store/slices/spellbookSlice';
+import SelectComponent from '../../../common/select_component';
 import '../../../../style/menu_cards.css';
 
 export default function MenuCardPlayer() {
@@ -86,8 +85,6 @@ export default function MenuCardPlayer() {
 
       {saved.length > 0 && (
         <>
-          <LevelComponent props={levelProps} />
-
           <div className="card-side-div margin-top">
             <label className="modern-label">Class</label>
             <select
@@ -103,6 +100,8 @@ export default function MenuCardPlayer() {
               ))}
             </select>
           </div>
+
+          <LevelComponent props={levelProps} />
 
           <LevelComponent props={charProps} />
 

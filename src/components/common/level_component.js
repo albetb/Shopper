@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../style/menu_cards.css';
 
 const LevelComponent = ({ props }) => {

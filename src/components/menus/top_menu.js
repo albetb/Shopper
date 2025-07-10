@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { isMobile } from '../../lib/utils';
-import { downloadLocalStorage, handleFileUpload } from '../../lib/storage';
-import { setStateCurrentTab } from '../../store/slices/appSlice';
 import logo from '../../data/logo-shopperino.png';
+import { downloadLocalStorage, handleFileUpload } from '../../lib/storage';
+import { isMobile } from '../../lib/utils';
+import { setStateCurrentTab } from '../../store/slices/appSlice';
 import '../../style/sidebar.css';
 
 export default function TopMenu() {

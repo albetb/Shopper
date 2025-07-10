@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
+import Spellbook from '../../lib/spellbook';
 import { isMobile, trimLine } from '../../lib/utils';
 import { addCardByLink } from '../../store/slices/appSlice';
-import Spellbook from '../../lib/spellbook';
-import '../../style/shop_inventory.css';
-import { onCollapseSpellTable } from '../../store/thunks/spellbookThunks';
 import { setIsClassDescriptionCollapsed } from '../../store/slices/spellbookSlice';
+import { onCollapseSpellTable } from '../../store/thunks/spellbookThunks';
+import '../../style/shop_inventory.css';
 
 export default function SpellbookTable() {
   const dispatch = useDispatch();
@@ -12,12 +12,12 @@ export default function SpellbookTable() {
   const isInEditing = useSelector(s => s.spellbook.isEditingSpellbook);
   const isSpellTableCollapsed = useSelector(s => s.spellbook.isSpellTableCollapsed);
   const isClassDescriptionCollapsed = useSelector(s => s.spellbook.isClassDescriptionCollapsed);
-    const searchSpellName = useSelector(s => s.spellbook.searchSpellName);
+  const searchSpellName = useSelector(s => s.spellbook.searchSpellName);
   const searchSpellSchool = useSelector(s => s.spellbook.searchSpellSchool);
 
   const inst = new Spellbook().load(spellbook);
-  const all_spells = inst.getAllSpells({name: searchSpellName, school: searchSpellSchool});
-  const learned = inst.getLearnedSpells({name: searchSpellName, school: searchSpellSchool});
+  const all_spells = inst.getAllSpells({ name: searchSpellName, school: searchSpellSchool });
+  const learned = inst.getLearnedSpells({ name: searchSpellName, school: searchSpellSchool });
   const spells = isInEditing ? all_spells : learned;
   const spells_per_day = inst.getSpellsPerDay();
   const char_bonus = inst.getCharBonus();

@@ -1,18 +1,10 @@
-import { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import '../../../../style/menu_cards.css';
-import { setSearchSpellName, setSearchSpellSchool } from '../../../../store/slices/spellbookSlice';
 import { MAGICSCHOOLS } from '../../../../lib/spellbook';
+import { setSearchSpellName, setSearchSpellSchool } from '../../../../store/slices/spellbookSlice';
+import '../../../../style/menu_cards.css';
 
 export default function MenuCardSearch() {
   const dispatch = useDispatch();
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, []);
 
   const searchSpellName = useSelector(s => s.spellbook.searchSpellName);
   const searchSpellSchool = useSelector(state => state.spellbook.searchSpellSchool);
@@ -24,7 +16,6 @@ export default function MenuCardSearch() {
       <div className="card-side-div">
         <label className="modern-label">Name</label>
         <input
-          ref={inputRef}
           className='modern-dropdown small-longer padding-left'
           type='text'
           placeholder={"Search spells name"}

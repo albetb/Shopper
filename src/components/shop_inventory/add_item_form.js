@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { itemTypes } from '../../lib/utils';
+import { useEffect, useState } from 'react';
 import { getItem } from '../../lib/item';
+import { itemTypes } from '../../lib/utils';
 import '../../style/shop_inventory.css';
 
 const AddItemForm = ({ onAddItem, items, setShowAddItemForm }) => {

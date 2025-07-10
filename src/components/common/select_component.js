@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import '../../style/menu_cards.css';
 
 const SelectComponent = ({ props }) => {

@@ -12,14 +12,14 @@ const CLASSCHARMAP = {
     "Paladin": 'Wisdom'
 };
 export const MAGICSCHOOLS = [
-  "Abjuration",
-  "Conjuration",
-  "Divination",
-  "Enchantment",
-  "Evocation",
-  "Illusion",
-  "Necromancy",
-  "Transmutation"
+    "Abjuration",
+    "Conjuration",
+    "Divination",
+    "Enchantment",
+    "Evocation",
+    "Illusion",
+    "Necromancy",
+    "Transmutation"
 ];
 
 class Spellbook {
