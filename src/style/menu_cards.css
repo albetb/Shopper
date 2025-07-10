@@ -118,4 +118,8 @@ tr {
   .card-width-spellbook {
     width: 92%;
   }
+
+  .card-side-div {
+    width: 97%;
+  }
 }
