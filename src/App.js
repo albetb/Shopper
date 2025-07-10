@@ -29,7 +29,10 @@ import {
   setSelectedSpellbook,
   setSpellbook,
   setSpellbooks,
-  setIsSpellbookSidebarCollapsed
+  setIsSpellbookSidebarCollapsed,
+  setIsClassDescriptionCollapsed,
+  setSearchSpellName,
+  setSearchSpellSchool
 } from './store/slices/spellbookSlice';
 import SpellbookTable from './components/spellbook/spellbook_table';
 import './style/App.css';
@@ -54,6 +57,9 @@ export default function App() {
     const ie = db.getIsEditingSpellbook();
     const stc = db.getIsSpellTableCollapsed();
     const ssc = db.getIsSpellbookSidebarCollapsed();
+    const cdc = db.getIsClassDescriptionCollapsed();
+    const ssn = db.getSearchSpellName();
+    const sss = db.getSearchSpellSchool();
 
     // Populate Redux
     dispatch(setWorlds(worldsDb));
@@ -68,6 +74,9 @@ export default function App() {
     dispatch(setIsEditingSpellbook(ie));
     dispatch(setIsSpellTableCollapsed(stc));
     dispatch(setIsSpellbookSidebarCollapsed(ssc));
+    dispatch(setIsClassDescriptionCollapsed(cdc));
+    dispatch(setSearchSpellName(ssn));
+    dispatch(setSearchSpellSchool(sss));
 
     // Compute shopGenerated flag
     const generated = w?.Cities?.some(ci =>

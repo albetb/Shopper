@@ -44,7 +44,7 @@ export default function SpellbookMenuCards() {
 
   const cards = [
     { id: 1, title: 'Spellbook', saved: spellbooks?.map(w => w.Name), selected: selectedSpellbook, level: playerLevel, _class: playerClass },
-    //{ id: 2, title: 'Search', saved: null, selected: null, level: null, class: null }
+    { id: 2, title: 'Filter', saved: null, selected: null, level: null, class: null }
   ];
 
   const trimLength = isMobile() ? 23 : 10;

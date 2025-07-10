@@ -235,6 +235,14 @@ h4 {
   text-decoration: underline;
 }
 
+.class-desc {
+  width: 95%;
+}
+
+.class-desc > p {
+  font-size: small;
+}
+
 
 @media (max-width: 768px) {
   .shop-table,

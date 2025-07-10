@@ -8,7 +8,10 @@ const initialState = {
   spellbook: null,
   isEditingSpellbook: true,
   isSpellbookSidebarCollapsed: false,
-  isSpellTableCollapsed: [false, false, false, false, false, false, false, false, false, false]
+  isSpellTableCollapsed: [false, false, false, false, false, false, false, false, false, false],
+  isClassDescriptionCollapsed: false,
+  searchSpellName: false,
+  searchSpellSchool: false,
 };
 
 export const spellbookSlice = createSlice({
@@ -43,6 +46,18 @@ export const spellbookSlice = createSlice({
     setIsSpellbookSidebarCollapsed(state, action) {
       db.setIsSpellbookSidebarCollapsed(action.payload);
       state.isSpellbookSidebarCollapsed = action.payload;
+    },
+    setIsClassDescriptionCollapsed(state, action) {
+      db.setIsClassDescriptionCollapsed(action.payload);
+      state.isClassDescriptionCollapsed = action.payload;
+    },
+    setSearchSpellName(state, action) {
+      db.setSearchSpellName(action.payload);
+      state.searchSpellName = action.payload;
+    },
+    setSearchSpellSchool(state, action) {
+      db.setSearchSpellSchool(action.payload);
+      state.searchSpellSchool = action.payload;
     }
   }
 });
@@ -53,7 +68,10 @@ export const {
   setSpellbook,
   setIsEditingSpellbook,
   setIsSpellTableCollapsed,
-  setIsSpellbookSidebarCollapsed
+  setIsSpellbookSidebarCollapsed,
+  setIsClassDescriptionCollapsed,
+  setSearchSpellName,
+  setSearchSpellSchool
 } = spellbookSlice.actions;
 
 export default spellbookSlice.reducer;

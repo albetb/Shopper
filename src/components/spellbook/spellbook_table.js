@@ -4,19 +4,24 @@ import { addCardByLink } from '../../store/slices/appSlice';
 import Spellbook from '../../lib/spellbook';
 import '../../style/shop_inventory.css';
 import { onCollapseSpellTable } from '../../store/thunks/spellbookThunks';
+import { setIsClassDescriptionCollapsed } from '../../store/slices/spellbookSlice';
 
 export default function SpellbookTable() {
   const dispatch = useDispatch();
   const spellbook = useSelector(s => s.spellbook.spellbook);
   const isInEditing = useSelector(s => s.spellbook.isEditingSpellbook);
   const isSpellTableCollapsed = useSelector(s => s.spellbook.isSpellTableCollapsed);
+  const isClassDescriptionCollapsed = useSelector(s => s.spellbook.isClassDescriptionCollapsed);
+    const searchSpellName = useSelector(s => s.spellbook.searchSpellName);
+  const searchSpellSchool = useSelector(s => s.spellbook.searchSpellSchool);
 
   const inst = new Spellbook().load(spellbook);
-  const all_spells = inst.getAllSpells();
-  const learned = inst.getLearnedSpells();
+  const all_spells = inst.getAllSpells({name: searchSpellName, school: searchSpellSchool});
+  const learned = inst.getLearnedSpells({name: searchSpellName, school: searchSpellSchool});
   const spells = isInEditing ? all_spells : learned;
   const spells_per_day = inst.getSpellsPerDay();
   const char_bonus = inst.getCharBonus();
+  const class_desc = inst.getClassDescription();
 
   const classKeyMap = {
     Sorcerer: 'Sor/Wiz',
@@ -56,6 +61,27 @@ export default function SpellbookTable() {
         <h4>
           Spellbook of {trimLine(spellbook.Name, isMobile() ? 20 : 30)}
         </h4>
+      </div>
+
+      <div className={`card card-width-spellbook ${isClassDescriptionCollapsed ? 'collapsed' : ''}`}>
+        <div
+          className="card-side-div card-expand-div"
+          onClick={() => dispatch(setIsClassDescriptionCollapsed(!isClassDescriptionCollapsed))}
+        >
+          <h3 className="card-title">{spellbook.Class}</h3>
+          <button
+            className="collapse-button"
+          >
+            <span className="material-symbols-outlined">
+              {isClassDescriptionCollapsed ? 'expand_more' : 'expand_less'}
+            </span>
+          </button>
+        </div>
+        {!isClassDescriptionCollapsed &&
+          <div
+            className="class-desc"
+            dangerouslySetInnerHTML={{ __html: class_desc }}
+          />}
       </div>
 
       {levels.map(lvl => {

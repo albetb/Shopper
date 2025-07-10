@@ -95,6 +95,21 @@ export function getIsEditingSpellbook() {
     return value ? JSON.parse(decompressFromUTF16(value)) : true;
 }
 
+export function getIsClassDescriptionCollapsed() {
+    const value = localStorage.getItem('IsClassDescriptionCollapsed');
+    return value ? JSON.parse(decompressFromUTF16(value)) : false;
+}
+
+export function getSearchSpellName() {
+    const value = localStorage.getItem('SearchSpellName');
+    return value ? JSON.parse(decompressFromUTF16(value)) : "";
+}
+
+export function getSearchSpellSchool() {
+    const value = localStorage.getItem('SearchSpellSchool');
+    return value ? JSON.parse(decompressFromUTF16(value)) : "";
+}
+
 //#endregion
 
 //#endregion
@@ -169,6 +184,18 @@ export function setIsSpellbookSidebarCollapsed(value) {
 
 export function setIsEditingSpellbook(value) {
     localStorage.setItem('IsEditingSpellbook', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setIsClassDescriptionCollapsed(value) {
+    localStorage.setItem('IsClassDescriptionCollapsed', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setSearchSpellName(value) {
+    localStorage.setItem('SearchSpellName', compressToUTF16(JSON.stringify(value)));
+}
+
+export function setSearchSpellSchool(value) {
+    localStorage.setItem('SearchSpellSchool', compressToUTF16(JSON.stringify(value)));
 }
 
 //#endregion
